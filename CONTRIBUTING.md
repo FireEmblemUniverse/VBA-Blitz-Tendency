@@ -13,9 +13,10 @@ both I (the organizer) and the contributors must follow the following rules:
  - Adding any new assets must be done through a branch and pull request.
  - Each pull request should pass tests. See "Testing".
  - For consistency's sake, new lines will use '\n\r'.
- 
-3) Only open source assets will be used.
+
+3) Only newly created open source assets will be used (with exceptions).
  - See subpoints on #1.
+ - Engine hacks, the base project, and resources from VBA1 may be used.
 
 ## Testing
 
