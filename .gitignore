@@ -6,7 +6,6 @@ ups
 
 # Build output
 *.ups
-Tables/FE8 Nightmare modules/*.event
 
 # Windows image file caches
 Thumbs.db
