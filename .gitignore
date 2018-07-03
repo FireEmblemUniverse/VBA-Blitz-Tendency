@@ -6,7 +6,10 @@ ups
 
 # Build output
 *.ups
+Maps/*.event
 Maps/*.dmp
+Text/_textentries/*.txt
+Tables/FE8 Nightmare modules/*.event
 
 # Windows image file caches
 Thumbs.db
