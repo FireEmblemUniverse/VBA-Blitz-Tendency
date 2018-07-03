@@ -7,7 +7,7 @@ both I (the organizer) and the contributors must follow the following rules:
 1) Any insertable resource made will be in the final game.
  - Edits may be made to improve quality later.
  - Only up to so many submissions will be used. For example, if 40 maps are submitted, only the first 30 will be used.
- - All resources submitted should under a creative commons license, and will be available for public use post-blitz.
+ - All resources submitted should be under a creative commons license, and will be available for public use post-blitz.
 
 2) Strict version control will be used.
  - Adding any new assets must be done through a branch and pull request.
