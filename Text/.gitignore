@@ -1,36 +1,8 @@
 # Tools that should not be part of the repo.
-Event Assembler
-devkitARM
-ups
 *.exe
 
 # Build output
-*.ups
-Tables/FE8 Nightmare modules/*.event
-
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-#rom stuff
-*.gba
-*.sav
-*.sgm
+_textentries
 
 # =========================
 # Operating System Files
