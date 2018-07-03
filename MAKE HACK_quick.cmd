@@ -1,6 +1,6 @@
 cd %~dp0
 
-copy FE8_clean.gba SkillsTest.gba
+copy FE8_clean.gba VBA-BT.gba
 
 cd "%~dp0Event Assembler"
 
