@@ -3,7 +3,21 @@
 
 #define TABLE_DEFINITIONS
 
-#include eastdlib.event
+#ifndef CharacterTable
+    #define CharacterTable 0x803D30
+#endif
+#ifndef ClassTable
+  #define ClassTable 0x807110
+#endif
+#ifndef ItemTable
+  #define ItemTable 0x809B10
+#endif
+#ifndef DebuffTable
+  #define DebuffTable 0x203f100
+#endif
+//#ifndef PersonalMusicTable
+  //#define PersonalMusicTable 0x758a60
+//#endif
 
 //Weapon Ability 1 definitions:
 #define IsWeapon 0x1
@@ -40,6 +54,9 @@
   #define LynLock 0x10
   #define AthosLock 0x20
 #endif
+
+//Weapon Ability 4 definitions
+#define CannotDoubleEffect 0xC
 
 //Character/Class Ability 1 definitions:
 #define MountedAid 0x1
@@ -94,6 +111,37 @@
   #define UnlockLock4 0x80
 #endif
 
-//Custom definitions go here:
+//weapon types
+/*
+#define Swords 0x0
+#define Lances 0x1
+#define Axes 0x2
+#define Bows 0x3
+#define Staves 0x4
+#define Tomes 0x5
+#define Shurikens 0x6
+#define Stones 0x7
+#define ItemType 0x9
+*/
+
+#define NoRank 0x0
+#define ERank 0x1
+#define DRank 0x1F
+#define CRank 0x47
+#define BRank 0x79
+#define ARank 0xB5
+#define SRank 0xFB
+
+#define negateByte(byte) "0x100-byte"
+#define IsPointer 0x8000000
+
+  #define defWTAAdvantage(attackingType, defendingType) "BYTE attackingType defendingType"//"BYTE attackingType defendingType 0x0F 0x01"
+  #define defWTADisadvantage(attackingType, defendingType) "BYTE defendingType attackingType" //"BYTE attackingType defendingType 0xF1 0xFF"
+  #define endWTATable "BYTE 0xFF 0xFF"
+
+  #define defStatBoosts(hp, str, mag, skl, spd, luk, def, res) "BYTE hp str skl spd def res luk mag"
+  #define defWeaponDebuffs(str, mag, skl, spd, luk, def, res) "BYTE (str|(skl<<4)) (spd|(def<<4)) (res|(luk<<4)) mag"
 
 #endif
+
+#include "External Tables.event"

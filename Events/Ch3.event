@@ -17,13 +17,13 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 Units:
-UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [15,1] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [16,0] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [14,2] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [13,1] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [14,1] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [12,0] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [16,2] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [15,1] 0x00 0x00 0x0 0x00 [Reginleif] NoAI 
+UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [16,0] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
+UNIT Gilliam EphraimLord 0x00 Level(1, Ally, 0) [14,2] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
+UNIT Franz EphraimLord 0x00 Level(1, Ally, 0) [13,1] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
+UNIT Vanessa EphraimLord 0x00 Level(1, Ally, 0) [14,1] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
+UNIT Garcia EphraimLord 0x00 Level(1, Ally, 0) [12,0] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
+UNIT Ross EphraimLord 0x00 Level(1, Ally, 0) [16,2] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
 UNIT
 
 
@@ -36,6 +36,8 @@ END_MAIN
 LocationBasedEvents:
 Village(0x7,UnitGet,8,3)
 Seize(2,2)
+Armory(Ch3Armoury,5,2)
+Vendor(Ch3Vendor,6,2)
 END_MAIN
 
 MiscBasedEvents:
@@ -58,7 +60,7 @@ ALIGN 4
 BeginningScene:
 LOAD1 0x01 Bad
 ENUN
-LOAD2 0x01 Units
+LOAD1 0x01 Units //Should be LOAD2, but is LOAD1 for testing purposes.
 ENUN
 //Text(PLACEHOLDER_SLOT)
 ENDA
@@ -69,7 +71,7 @@ MNCH 4
 ENDA
 
 // Events
-JayGet:
+UnitGet:
 //MUSC 0x30 //recruitment
 LOAD1 0x1 NewGuy
 ENUN
@@ -84,24 +86,31 @@ ENDA
 
 // Units
 Bad:
-UNIT Breguet Mage Breguet Level(5, Enemy, 0) [2,2] 0x00 0x00 0x0 0x00 [Fire] GuardTileAI 
-UNIT Orson_Boss Brigand Breguet Level(3, Enemy, 0) [2,10] 0x00 0x00 0x0 0x00 [IronAxe] BrigandAI 
-UNIT Orson_Boss Knight Breguet Level(1, Enemy, 1) [7,6] 0x00 0x00 0x0 0x00 [IronLance] GuardTileAI 
-UNIT Orson_Boss Cavalier Breguet Level(3, Enemy, 1) [7,0] 0x00 0x00 0x0 0x00 [IronSword] AttackInRangeAI 
-UNIT Orson_Boss Fighter Breguet Level(3, Enemy, 1) [11,5] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
-UNIT Orson_Boss Fighter Breguet Level(3, Enemy, 1) [15,4] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
-UNIT Orson_Boss Fighter Breguet Level(3, Enemy, 1) [13,7] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
-UNIT Orson_Boss Soldier Breguet Level(3, Enemy, 1) [0,4] 0x00 0x00 0x0 0x00 [IronLance] ChaseOnceApproachedAI 
-UNIT Orson_Boss Soldier Breguet Level(3, Enemy, 1) [3,6] 0x00 0x00 0x0 0x00 [IronLance] ChaseOnceApproachedAI 
-UNIT Orson_Boss Mercenary Breguet Level(3, Enemy, 1) [8,11] 0x2 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
-UNIT Orson_Boss PegasusKnight Breguet Level(3, Enemy, 1) [14,10] 0x00 0x00 0x0 0x00 [SlimLance] PursueWithoutHeedAI 
+UNIT Breguet Mage Breguet Level(5, Enemy, 0) [2,2] 0x00 0x00 0x0 0x00 [Fire] NeverMoveAI 
+UNIT 0x86 Brigand Breguet Level(3, Enemy, 0) [2,10] 0x00 0x00 0x0 0x00 [IronAxe] BrigandAI 
+UNIT 0x86 Knight Breguet Level(1, Enemy, 1) [7,6] 0x00 0x00 0x0 0x00 [IronLance] NeverMoveAI 
+UNIT 0x86 Cavalier Breguet Level(3, Enemy, 1) [7,0] 0x00 0x00 0x0 0x00 [IronSword] AttackInRangeAI 
+UNIT 0x86 Fighter Breguet Level(3, Enemy, 1) [11,5] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT 0x86 Fighter Breguet Level(3, Enemy, 1) [15,4] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT 0x86 Fighter Breguet Level(3, Enemy, 1) [13,7] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT 0x86 Soldier Breguet Level(3, Enemy, 1) [0,4] 0x00 0x00 0x0 0x00 [IronLance] ChaseOnceApproachedAI 
+UNIT 0x86 Soldier Breguet Level(3, Enemy, 1) [3,6] 0x00 0x00 0x0 0x00 [IronLance] ChaseOnceApproachedAI 
+UNIT 0x86 Mercenary Breguet Level(3, Enemy, 1) [8,11] 0x2 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
+UNIT 0x86 PegasusKnight Breguet Level(3, Enemy, 1) [14,10] 0x00 0x00 0x0 0x00 [SlimLance] PursueWithoutHeedAI 
+UNIT 0x86 Archer Breguet Level(3, Enemy, 1) [9,0] 0x00 0x00 0x00 0x00 [IronBow] AttackInRangeAI
 UNIT
 
 NewGuy:
-UNIT Neimi Knight Eirika Level(4, NPC, 1) [8,3] 0x00 0x00 0x0 0x00 [IronLance] NoAI 
+UNIT Neimi Knight Eirika Level(4, Ally, 1) [8,3] 0x00 0x00 0x0 0x00 [IronLance] NoAI 
 UNIT
 
 
 // Shop Data
+Ch3Armoury:
+SHLI IronSword IronLance IronAxe IronBow
+
+Ch3Vendor:
+SHLI Vulnerary PureWater
+ALIGN 4
 
 MESSAGE Events end at offset currentOffset
