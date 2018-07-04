@@ -30,6 +30,7 @@ $RECYCLE.BIN/
 *.gba
 *.sav
 *.sgm
+*.ini
 
 # =========================
 # Operating System Files

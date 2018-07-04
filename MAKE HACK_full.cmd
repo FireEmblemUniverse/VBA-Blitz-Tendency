@@ -12,7 +12,7 @@ echo: | (textprocess_v2 text_buildfile.txt)
 
 cd "%~dp0Maps"
 
-echo: | (tmx2ea)
+echo: | (tmx2ea -s)
 
 cd "%~dp0Event Assembler"
 
