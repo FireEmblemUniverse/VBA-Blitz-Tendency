@@ -16,7 +16,7 @@
     MESSAGE Used hax space ends at currentOffset
 
     //Events
-    #include "Events/Release_map.event"
+    #include "Events/Master Events Installer.event"
     #include "Events/World Map Events Installer.event"
 
     //Maps
