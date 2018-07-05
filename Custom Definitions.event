@@ -16,4 +16,17 @@
 
 #include "Engine Hacks/Skill System/skill_definitions.event"
 
+// Unit definitions
+#define Vedge 0x1
+#define Null 0x2
+#define Naught 0x3
+#define Chiva 0x4
+#define Verge 0x5
+
+//Item definitions
+#define BlitzAxe Rapier
+#define ExtraBow ShortBow
+#define PiercingBow 0xBC
+#define HuntersBow 0xBD
+
 // #define __DEBUG__ // Uncomment to get the Debug startup menu :p

@@ -1,0 +1,87 @@
+//Made by CrazyColorz5 of Fire Emblem Universe
+//Based off of Camtech75's Skeleton
+#include EAstdlib.event
+
+EventPointerTable(0x7, Prologue_ThisChapter)
+
+Prologue_ThisChapter:
+
+POIN Prologue_TurnBasedEvents
+POIN Prologue_CharacterBasedEvents
+POIN Prologue_LocationBasedEvents
+POIN Prologue_MiscBasedEvents
+POIN Prologue_Dunno Prologue_Dunno Prologue_Dunno
+POIN Prologue_Tutorial
+POIN Prologue_Ballista1 Prologue_Ballista2
+POIN Prologue_Units1 Prologue_Units1
+POIN $0 $0 $0 $0 $0 $0
+POIN Prologue_BeginningScene Prologue_EndingScene
+
+Prologue_TurnBasedEvents:
+TURN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+Prologue_CharacterBasedEvents:
+CHAR
+
+Prologue_LocationBasedEvents:
+LOCA
+
+Prologue_MiscBasedEvents:
+CauseGameOverIfLordDies
+//Add Win Condition
+AFEV
+
+Prologue_Dunno:
+//DO NOT TOUCH
+BYTE $00
+ALIGN 4
+
+Prologue_Tutorial:
+//DO NOT TOUCH
+BYTE $00
+ALIGN 4
+
+Prologue_Ballista1:
+BLST
+
+Prologue_Ballista2:
+BLST
+ALIGN 4
+
+Prologue_Units1:
+UNIT Vedge EirikaLord 0x00 Level(1, Ally, 1) [17, 11] 0x00 0x00 0x0 0x00 [BlitzAxe, Vulnerary, MoonBracelet] NoAI
+UNIT Null Cavalier Vedge Level(1, Ally, 1) [17, 10] 0 0 0 0 [IronSword, SteelLance] NoAI
+UNIT Naught Cavalier Vedge Level(1, Ally, 1) [16, 12] 0 0 0 0 [SteelSword, IronLance] NoAI
+UNIT Chiva Archer_F Vedge Level(2, Ally, 1) [16, 11] 0 0 0 0 [ExtraBow, PiercingBow, HuntersBow, Vulnerary] NoAI
+UNIT Verge Swordmaster Vedge Level(1, Ally, 1) [14, 11] 0 0 0 0 [Shamshir, SilverSword] NoAI
+UNIT
+
+EnemyUnits:
+UNIT 0x40 Knight 0x0 Level(5, Enemy, 1) [1, 2] 0 0 0 0 [Javelin, SteelLance] [0x3, 0x3] 0 0
+UNIT
+
+Prologue_BeginningScene:
+CHECK_TUTORIAL
+BEQ 0x0 0xC 0x0
+ENUT 0xb0 //turn on casual mode if easy
+LABEL 0x0
+//Text(Ch0IntroTalk)
+LOAD1 0x1 Prologue_Units1 //0x0 instead of 0x1 seems to be for allies on maps with prep screens
+ENUN
+LOAD1 0x1 EnemyUnits
+ENUN
+FADU 0x8
+ENDB
+
+
+Prologue_EndingScene:
+
+MNC2 0x01 //TODO: Replace with proper code for next chapter.
+NoFade
+ENDA
+
+
+#ifndef InlineEvents
+  MESSAGE Events end at offset currentOffset
+#endif

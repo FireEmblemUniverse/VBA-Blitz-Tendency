@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="19" height="14" tilewidth="16" tileheight="16" infinite="0" nextobjectid="1">
+ <tileset firstgid="1" source="01000203.tsx"/>
+ <layer name="Tile Layer 1" width="19" height="14">
+  <properties>
+   <property name="ChapterID" value="0"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="6"/>
+   <property name="MapID" value="4"/>
+   <property name="ObjectType1" value="1"/>
+   <property name="PaletteID" value="2"/>
+   <property name="TileConfig" value="3"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJy7wsTAcAWKNZgZGDSBWAuILzIhcAoDKoapX4eGtYH6dIBYF4g9gNgTiL2YMfXjwzCzvIH6fIDYF4gzgDgTiLPwmCWIQ24d1K2TGBFiyGxizELng/QjY0L6l5IYBrj8g8uP2NQRq5Zct8DiiRRz0MMB2VwQm1TzCMUZKeEF8xO6XDIR+q4wIfhLsLgH5m987lGFuvcKE3Y7SA0LmFno5pEbpgCKaGmh
+  </data>
+ </layer>
+ <layer name="Village Door" width="19" height="14">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="4"/>
+   <property name="Y" value="2"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgaoJt5oF0wCkbByAUA9TQAjw==
+  </data>
+ </layer>
+</map>

@@ -6,6 +6,7 @@
     //Text first for Text ID definitions
     #include "Text/Install Text Data.event"
     MESSAGE Used text space ends at currentOffset
+    ALIGN 4
 
     //CSV tables
     #include "Tables/Table Installer.event"
@@ -16,7 +17,7 @@
     MESSAGE Used hax space ends at currentOffset
 
     //Events
-    #include "Events/Release_map.event"
+    #include "Events/Master Events Installer.event"
     #include "Events/World Map Events Installer.event"
 
     //Maps
