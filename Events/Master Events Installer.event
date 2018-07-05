@@ -14,7 +14,7 @@ ALIGN 4
 }
 ALIGN 4
 {
-//  #include "Ch3.event"
+  #include "Ch3.event"
 }
 ALIGN 4
 {
