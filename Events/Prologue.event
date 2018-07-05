@@ -1,55 +1,47 @@
-//Made by CrazyColorz5 of Fire Emblem Universe
-//Based off of Camtech75's Skeleton
-#include EAstdlib.event
+EventPointerTable(0x7, PointerList)
 
-EventPointerTable(0x7, Prologue_ThisChapter)
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+POIN $0 $0 $0
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
 
-Prologue_ThisChapter:
+TurnBasedEvents:
+END_MAIN
 
-POIN Prologue_TurnBasedEvents
-POIN Prologue_CharacterBasedEvents
-POIN Prologue_LocationBasedEvents
-POIN Prologue_MiscBasedEvents
-POIN Prologue_Dunno Prologue_Dunno Prologue_Dunno
-POIN Prologue_Tutorial
-POIN Prologue_Ballista1 Prologue_Ballista2
-POIN Prologue_Units1 Prologue_Units1
-POIN $0 $0 $0 $0 $0 $0
-POIN Prologue_BeginningScene Prologue_EndingScene
+CharacterBasedEvents:
+END_MAIN
 
-Prologue_TurnBasedEvents:
-TURN
-ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+LocationBasedEvents:
+Seize(1,2)
+#ifdef __DEBUG__
+  Seize(17,11)
+#endif
+END_MAIN
 
-Prologue_CharacterBasedEvents:
-CHAR
-
-Prologue_LocationBasedEvents:
-LOCA
-
-Prologue_MiscBasedEvents:
+MiscBasedEvents:
 CauseGameOverIfLordDies
-//Add Win Condition
-AFEV
+END_MAIN
 
-Prologue_Dunno:
-//DO NOT TOUCH
-BYTE $00
-ALIGN 4
+Dunno1:
+END_MAIN
 
-Prologue_Tutorial:
-//DO NOT TOUCH
-BYTE $00
-ALIGN 4
+Dunno2:
+END_MAIN
 
-Prologue_Ballista1:
-BLST
+Dunno3:
+END_MAIN
 
-Prologue_Ballista2:
-BLST
-ALIGN 4
+Tutorial:
+END_MAIN
 
-Prologue_Units1:
+Units1:
 UNIT Vedge EirikaLord 0x00 Level(1, Ally, 1) [17, 11] 0x00 0x00 0x0 0x00 [BlitzAxe, Vulnerary, MoonBracelet] NoAI
 UNIT Null Cavalier Vedge Level(1, Ally, 1) [17, 10] 0 0 0 0 [IronSword, SteelLance] NoAI
 UNIT Naught Cavalier Vedge Level(1, Ally, 1) [16, 12] 0 0 0 0 [SteelSword, IronLance] NoAI
@@ -57,31 +49,33 @@ UNIT Chiva Archer_F Vedge Level(2, Ally, 1) [16, 11] 0 0 0 0 [ExtraBow, Piercing
 UNIT Verge Swordmaster Vedge Level(1, Ally, 1) [14, 11] 0 0 0 0 [Shamshir, SilverSword] NoAI
 UNIT
 
+
 EnemyUnits:
-UNIT 0x40 Knight 0x0 Level(5, Enemy, 1) [1, 2] 0 0 0 0 [Javelin, SteelLance] [0x3, 0x3] 0 0
+UNIT 0x40 Knight 0x0 Level(5, Enemy, 1) [1, 2] 0 0 0 0 [Javelin, SteelLance] NeverMoveAI
 UNIT
 
-Prologue_BeginningScene:
+Traps1:
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+BeginningScene:
 CHECK_TUTORIAL
 BEQ 0x0 0xC 0x0
 ENUT 0xb0 //turn on casual mode if easy
 LABEL 0x0
 //Text(Ch0IntroTalk)
-LOAD1 0x1 Prologue_Units1 //0x0 instead of 0x1 seems to be for allies on maps with prep screens
+LOAD1 0x1 Units1 //0x0 instead of 0x1 seems to be for allies on maps with prep screens
 ENUN
 LOAD1 0x1 EnemyUnits
 ENUN
-FADU 0x8
-ENDB
-
-
-Prologue_EndingScene:
-
-MNC2 0x01 //TODO: Replace with proper code for next chapter.
-NoFade
+// GotoPrepScreen
 ENDA
 
-
-#ifndef InlineEvents
-  MESSAGE Events end at offset currentOffset
-#endif
+EndingScene:
+MNC2 0x1 //go to ch1
+NoFade
+ENDA
