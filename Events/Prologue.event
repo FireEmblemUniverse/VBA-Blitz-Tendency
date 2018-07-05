@@ -1,0 +1,81 @@
+EventPointerTable(0x7, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+POIN $0 $0 $0
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Seize(1,2)
+#ifdef __DEBUG__
+  Seize(17,11)
+#endif
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno1:
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+Units1:
+UNIT Vedge EirikaLord 0x00 Level(1, Ally, 1) [17, 11] 0x00 0x00 0x0 0x00 [BlitzAxe, Vulnerary, MoonBracelet] NoAI
+UNIT Null Cavalier Vedge Level(1, Ally, 1) [17, 10] 0 0 0 0 [IronSword, SteelLance] NoAI
+UNIT Naught Cavalier Vedge Level(1, Ally, 1) [16, 12] 0 0 0 0 [SteelSword, IronLance] NoAI
+UNIT Chiva Archer_F Vedge Level(2, Ally, 1) [16, 11] 0 0 0 0 [ExtraBow, PiercingBow, HuntersBow, Vulnerary] NoAI
+UNIT Verge Swordmaster Vedge Level(1, Ally, 1) [14, 11] 0 0 0 0 [Shamshir, SilverSword] NoAI
+UNIT
+
+
+EnemyUnits:
+UNIT 0x40 Knight 0x0 Level(5, Enemy, 1) [1, 2] 0 0 0 0 [Javelin, SteelLance] NeverMoveAI
+UNIT
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+BeginningScene:
+CHECK_TUTORIAL
+BEQ 0x0 0xC 0x0
+ENUT 0xb0 //turn on casual mode if easy
+LABEL 0x0
+//Text(Ch0IntroTalk)
+LOAD1 0x1 Units1 //0x0 instead of 0x1 seems to be for allies on maps with prep screens
+ENUN
+LOAD1 0x1 EnemyUnits
+ENUN
+// GotoPrepScreen
+ENDA
+
+EndingScene:
+MNC2 0x1 //go to ch1
+NoFade
+ENDA

@@ -1,0 +1,11 @@
+## nameExtraBow
+Extra Bow[X]
+
+## nameBlitzAxe
+Blitz Axe[X]
+
+## namePiercingBow
+Piercing Bow[X]
+
+## nameHuntersBow
+Hunter's Bow[X]
