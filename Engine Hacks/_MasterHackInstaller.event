@@ -55,11 +55,16 @@ ORG FreeSpaceBLRange //defined in custom definitions
   #incbin "MSS/rtext_page4.dmp"
   POIN RText_Page4
 
+  #include "Range Fix/Range Fix BL.event"
+
 #undef inBLRange
 POP
 
 ////////////////////////////////FREE SPACE OUT OF BL RANGE
 //start of Free space
+
+  //Weapon/Staff Range Fix
+  #include "Range Fix/Range Fix Install.event"
 
   //HP Bars (and effective weapon warning)
   #include "HPbars.txt"

@@ -8,6 +8,11 @@
     ALIGN 4
     MESSAGE Used text space ends at currentOffset
 
+    //Graphics
+    #include "Graphics/Master Graphics Installer.event"
+    ALIGN 4
+    #include "Mugs/Mug Installer.event"
+
     //CSV tables
     #include "Tables/Table Installer.event"
     MESSAGE Used table space ends at currentOffset

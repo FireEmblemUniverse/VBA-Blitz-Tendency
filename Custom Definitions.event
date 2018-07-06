@@ -16,6 +16,9 @@
 
 #include "Engine Hacks/Skill System/skill_definitions.event"
 
+//Class definitions
+#define BlitzLord 0x2
+
 // Unit definitions
 #define Vedge 0x1
 #define Null 0x2
@@ -27,6 +30,10 @@
 #define BlitzAxe Rapier
 #define ExtraBow ShortBow
 #define PiercingBow 0xBC
+#define PiercingBowIconID 0xAD
 #define HuntersBow 0xBD
+#define HuntersBowIconID 0xAE
+#define RunicBow 0xBE
+#define RunicBowIconID PiercingBowIconID //TODO
 
 // #define __DEBUG__ // Uncomment to get the Debug startup menu :p
