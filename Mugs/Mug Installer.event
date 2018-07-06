@@ -1,0 +1,17 @@
+#include "Tools/Tool Helpers.txt"
+
+Null_Mug:
+#incext PortraitFormatter "Null.png"
+setMugEntry(0x4, Null_Mug, 3, 5, 3, 3)
+
+Naught_Mug:
+#incext PortraitFormatter "Naught.png"
+setMugEntry(0x5, Naught_Mug, 3, 5, 3, 3)
+
+Chiva_Mug:
+#incext PortraitFormatter "Chiva.png"
+setMugEntry(0x6, Chiva_Mug, 2, 5, 3, 3)
+
+Verge_Mug:
+#incext PortraitFormatter "Verge.png"
+setMugEntry(0x7, Verge_Mug, 4, 5, 4, 3)

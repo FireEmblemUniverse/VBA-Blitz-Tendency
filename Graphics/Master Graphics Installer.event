@@ -1,0 +1,40 @@
+
+PUSH
+  ORG $AC188
+  POIN NewDifficultyButtons
+
+  ORG $8AEFE4
+  BYTE 2 //make eirika use anims for axe not swd
+  ORG $8AEFFC
+  BYTE 2 //same for promo
+
+  ORG $aac58c //clearing dragon palette to only use 1 colour
+  BYTE $90 $42 $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A
+POP
+
+NewDifficultyButtons:
+#incext Png2Dmp "difficulty.png" --lz77
+
+PUSH
+ORG 0x5926F4+(0x80*0x8)
+#incext Png2Dmp "BlitzAxe.png"
+ORG 0x5926F4+(0x80*PiercingBowIconID)
+#incext Png2Dmp "PiercingBow.png"
+ORG 0x5926F4+(0x80*HuntersBowIconID)
+#incext Png2Dmp "HuntersBow.png"
+POP
+
+/* Custom Tileset
+SnowObjectType:
+#incbin "SnowObject_LZ.bin"
+
+SnowPalette:
+#incbin "SnowPalette_FE8.bin"
+
+SnowTileConfig:
+#incbin "SnowTileConfig_LZ.bin"
+
+EventPointerTable(0x8b, SnowObjectType)
+EventPointerTable(0x8c, SnowPalette)
+EventPointerTable(0x8d, SnowTileConfig)
+*/
