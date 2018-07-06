@@ -9,3 +9,9 @@ Piercing Bow[X]
 
 ## nameHuntersBow
 Hunter's Bow[X]
+
+## nameRunicBow
+Runic Bow[X]
+
+## descRunicBow
+Effective against magic users.[X]

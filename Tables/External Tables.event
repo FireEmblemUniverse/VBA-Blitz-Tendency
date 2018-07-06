@@ -5,3 +5,10 @@ defWeaponDebuffs(0,2,0,0,0,3,3) //0x2: Iron Shuriken debuff.
 defWeaponDebuffs(3,0,0,0,0,4,4) //0x3: Steel Shuriken debuff.
 defWeaponDebuffs(0,0,0,4,0,4,4) //0x4: Silver Shuriken debuff.
 defWeaponDebuffs(4,0,0,4,0,4,4) //0x5: Pebble debuff.
+
+MagicEffectiveness:
+BYTE Mage Mage_F Sage Sage_F MageKnight MageKnight_F
+BYTE Bishop Bishop_F Shaman Shaman_F Druid Druid_F Summoner Summoner_F
+BYTE Pupil_1 Pupil_2 Pupil_3 Monk Priest Cleric Troubadour Valkyrie Necromancer
+BYTE Mogall ArchMogall Gorgon
+BYTE 0
