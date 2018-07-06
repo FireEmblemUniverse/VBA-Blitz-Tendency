@@ -621,3 +621,16 @@ always hit the enemy.[X]
 ##SD_Solidarity
 Solidarity: Critical and Critical[N]
 Avoid +10 to adjacent allies.[X]
+
+##SD_FortressDefense
+Fortress Defense:[N]
++5 Def, -3 Atk/Mag[X]
+
+##SD_FortressResistance
+Fortress Resistance:[N]
++5 Res, -3 Atk/Mag[X]
+
+##SD_Foresight
+Foresight: Avoid the damage[N]
+from enemy Critical Hits and[N]
+Skill Activations.[X]
