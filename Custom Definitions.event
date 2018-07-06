@@ -16,6 +16,9 @@
 
 #include "Engine Hacks/Skill System/skill_definitions.event"
 
+//Class definitions
+#define BlitzLord 0x2
+
 // Unit definitions
 #define Vedge 0x1
 #define Null 0x2
