@@ -1,0 +1,146 @@
+#include EAstdlib.event
+#define RightSwitchFlag 0
+#define LeftSwitchFlag 0
+
+EventPointerTable(0x2D,Chapter9)
+
+Chapter9:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN PlayerUnits PlayerUnits
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+PlayerUnits:
+UNIT Eirika EirikaLord Eirika Level(1, Ally, 0) [10,23] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Paladin Eirika Level(1, Ally, 0)  [14,23] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT
+
+// Units
+EnemyUnits:
+UNIT 0x92 Bonewalker Carlyle Level(12, Enemy, 1) [7,21] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
+UNIT 0x92 Bonewalker_Bow Carlyle Level(12, Enemy, 1) [6,19] 0x00 0x00 0x0 0x00 [PoisonBow] AttackInRangeAI 
+UNIT 0x92 Bael Carlyle Level(12, Enemy, 1) [16,22] 0x00 0x00 0x0 0x00 [FetidClaw] AttackInRangeAI 
+UNIT 0x92 Mauthedoog Carlyle Level(13, Enemy, 1) [18,20] 0x00 0x00 0x0 0x00 [HellFang] AttackInRangeAI 
+UNIT 0x92 Mogall Carlyle Level(12, Enemy, 1) [19,15] 0x00 0x00 0x0 0x00 [EvilEye] AttackInRangeAI 
+UNIT 0x92 Mogall Carlyle Level(12, Enemy, 1) [20,13] 0x00 0x00 0x0 0x00 [EvilEye] AttackInRangeAI 
+UNIT 0x92 Mogall Carlyle Level(12, Enemy, 1) [18,11] 0x00 0x00 0x0 0x00 [EvilEye] AttackInRangeAI 
+UNIT 0x92 Gargoyle Carlyle Level(12, Enemy, 1) [4,14] 0x2 0x00 0x0 0x00 [Axereaver] AttackInRangeAI 
+UNIT 0x92 Gargoyle Carlyle Level(12, Enemy, 1) [6,12] 0x00 0x00 0x0 0x00 [Javelin] AttackInRangeAI 
+UNIT 0x92 Tarvos Carlyle Level(12, Enemy, 1) [5,16] 0x2 0x00 0x0 0x00 [DevilAxe] AttackInRangeAI 
+UNIT
+
+NoRoof:
+UNIT 0x92 Mauthedoog Carlyle Level(13, Enemy, 1) [11,10] 0x2 0x00 0x0 0x00 [HellFang, DoorKey] AttackInRangeAI 
+UNIT 0x92 Mauthedoog Carlyle Level(13, Enemy, 1) [13,13] 0x2 0x00 0x0 0x00 [FireFang, ChestKey] AttackInRangeAI 
+UNIT 0x92 Bonewalker Carlyle Level(13, Enemy, 1) [14,9] 0x2 0x00 0x0 0x00 [SteelBlade, ChestKey] AttackInRangeAI 
+UNIT 0x92 Gargoyle Carlyle Level(13, Enemy, 1) [10,13] 0x2 0x00 0x0 0x00 [KillerLance, DoorKey] AttackInRangeAI 
+UNIT
+
+TopEnemy:
+UNIT 0x92 Tarvos Carlyle Level(13, Enemy, 1) [11,4] 0x00 0x00 0x0 0x00 [HandAxe] AttackInRangeAI 
+UNIT 0x92 ArchMogall Carlyle Level(1, Enemy, 1) [13,4] 0x00 0x00 0x0 0x00 [EvilEye] AttackInRangeAI 
+UNIT
+
+Boss:
+UNIT Carlyle Druid Carlyle Level(1, Enemy, 0) [12,2] 0x2 0x00 0x0 0x00 [Eclipse, Nosferatu] GuardTileAI 
+UNIT
+
+NewUnit:
+UNIT 0xE Mage_F	0x0 Level(12, Ally, 0) [14,23] 0x00 0x00 0x0 0x00 [Elfire] NoAI
+UNIT 
+
+TurnBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Chest(Speedwings,1,15)
+Chest(BlueGem,23,15)
+Door(12,15)
+Door(12,7)
+Seize(12,2)
+//LOCA 8 LeftSwitch [7,12] 3
+//LOCA 9 RightSwitch [17,12] 3
+//RANGE EVENTS AND CONDITIONAL EVENT IN MISC
+END_MAIN
+
+MiscBasedEvents:
+//LeftSwitch
+AREA 8 LeftSwitch [7,12] [7,12] 
+//RightSwitch
+AREA 9 RightSwitch [17,12] [17,12]
+//RoofGone
+AFEV 0xA RoofGone 8
+AFEV 0xB RoofGone 9
+END_MAIN
+
+Dunno:
+//DO NOT TOUCH
+WORD $00
+
+Tutorial:
+//DO NOT TOUCH
+WORD $00
+
+TrapData:
+END_MAIN
+
+ALIGN 4
+
+BeginningScene:
+SETVAL 0xA 1
+SETVAL 0xB 1
+SETVAL 0x3 3
+LOAD1 0x1 EnemyUnits
+LOAD1 0x1 Boss 
+EVBIT_T 1
+LOAD2 0x1 PlayerUnits
+LOAD1 0x1 NewUnit
+ENUN
+//Text(PlaceholderText)
+GotoPrepScreen
+
+EndingScene:
+//Text(PlaceholderText)
+MNC2 0x11
+ENDA 
+
+
+RoofGone:
+BEQ 0 0xA 0x3
+GOTO 2
+LABEL 0
+BEQ 1 0xB 0x3
+GOTO 2
+LABEL 1
+SOUN 0x11A
+TILECHANGE 0x0
+LOAD1 0x1 NoRoof
+LABEL 2
+ENDA
+
+LeftSwitch:
+SOUN 0xCD
+//text blurb
+SETVAL 0xA 0x3
+//BEQ 
+LABEL 0
+ENDA
+
+RightSwitch:
+SOUN 0xCD
+//text blurb
+SETVAL 0xB 0x3
+//BEQ 
+LABEL 0
+ENDA
+
+
