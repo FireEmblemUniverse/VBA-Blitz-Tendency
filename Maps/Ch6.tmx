@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="17" height="12" tilewidth="16" tileheight="16" infinite="0" nextobjectid="1">
+ <tileset firstgid="1" source="2e002f30.tsx"/>
+ <layer name="Tile Layer 1" width="17" height="12">
+  <properties>
+   <property name="ChapterID" value="0x7"/>
+   <property name="Main" value=""/>
+   <property name="MapID" value="0x22"/>
+   <property name="ObjectType1" value="0x2E"/>
+   <property name="PaletteID" value="0x2F"/>
+   <property name="TileConfig" value="0x30"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxdUr0uhEEUvd9MpViFKKlEp9FSisIDkAhBglewtqEQpQeg2cZXKNYbbGwnq+ABrG39NR5gC+fknpv5KE7O3J8592emzmZrZtYCX1Vm18lsUb5H+Q7N0Uuex9gl+AJcgxfAc8nB801y3CfXmMD3aq77DO5Cs4/YPrDXqNcEa3WkdySwHvsZg+eBQeW+AHXYX/TJ3JdU9M6UtwH/LJBlM3ZQOe/oPCNwvmnFavXJOiupzBw1B8pj/Bt5y7DfwF/Ap3kvvVRm5K7ZY+vf/Ouwb83B/CnkPOE8BDZh7wJt3Y078QbMz/LV0jnVnb722U0F7VTef0uzER3p8/4IOId9nIt26FPjHbzEmYG7xiyRS42JNFj/RDsbq5f4A7HHofQ+s2t/aI6HynccefEvR6qVNUf8B55ZK97qJ5ed9NJfjeiv29jVamMf2+rxF+LUWwE=
+  </data>
+ </layer>
+</map>

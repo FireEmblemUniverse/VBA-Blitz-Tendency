@@ -1,0 +1,5 @@
+4
+0x01 Eirika (Prologue - Ch8)
+0x02 Eirika (Ch9 - end)
+0x03 Ephraim (Ch9 - end)
+0xFF All
