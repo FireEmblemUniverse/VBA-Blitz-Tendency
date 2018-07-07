@@ -1,0 +1,79 @@
+#ifndef CHAPTER6_EVENTS_EVENT
+#define CHAPTER6_EVENTS_EVENT
+
+EventPointerTable(0x24, PointerList)
+
+PointerList:
+  POIN TurnEvents
+  POIN CharacterEvents
+  POIN LocationEvents
+  POIN ActionEvents
+  POIN Dunno Dunno Dunno Tutorial
+  POIN Traps1 Traps2
+  POIN Units1 Units1 // This unit group determines the number and position of deployment slots when there is a prep screen
+  POIN $0 $0 $0
+  POIN $0 $0 $0
+  POIN BeginningScene EndingScene
+
+TurnEvents:
+END_MAIN
+
+CharacterEvents:
+END_MAIN
+
+LocationEvents:
+  Seize(0, 11)
+#ifdef __DEBUG__
+  Seize(16, 0) //for testing
+#endif
+END_MAIN
+
+ActionEvents:
+  CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+Tutorial:
+END_MAIN
+
+Units1:
+UNIT Vedge EirikaLord 0x00 Level(1, Ally, 1) [16, 0] 0 0 0 0 [] NoAI
+UNIT 0xB PegasusKnight Vedge Level(6, Ally, 1) [16, 3] 0 0 0 0 [] NoAI
+UNIT Null Cavalier Vedge Level(1, Ally, 1) [15, 0] 0 0 0 0 [] NoAI
+UNIT Naught Cavalier Vedge Level(1, Ally, 1) [14, 0] 0 0 0 0 [] NoAI
+UNIT Chiva Archer_F Vedge Level(1, Ally, 1) [16, 5] 0 0 0 0 [] NoAI
+UNIT Verge Swordmaster Vedge Level(1, Ally, 1) [16, 1] 0 0 0 0 [] NoAI
+UNIT
+
+Recruitable:
+UNIT 0xB PegasusKnight Vedge Level(6, Ally, 1) [16, 3] 0 0 0 0 [IronLance, Axereaver] NoAI
+UNIT
+
+StartingEnemies:
+UNIT 0x4C Warrior 0 Level(1, Enemy, 1) [0, 11] 0 0 0 0 [SteelAxe, ExtraBow] NeverMoveAI
+UNIT
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+BeginningScene:
+  LOAD1 0x1 StartingEnemies
+  ENUN
+
+  LOAD1 0x0 Recruitable
+  ENUN
+
+  GotoPrepScreen
+ENDA
+
+EndingScene:
+  MNCH 0x7
+  NoFade
+ENDA
+
+#endif // CHAPTER6_EVENTS_EVENT
