@@ -66,7 +66,7 @@ Swap positions with adjacent[N]
 ally.[X]
 
 ## UMText_Win
-Win[X]
+ Win[X]
 
 ## UMDesc_Win
 This is your win button.[X]
