@@ -51,6 +51,9 @@ Village(0x8,GemVillage,1,10)
 Seize(16,2)
 END_MAIN
 
+VillageGem:
+VillageEventItem(VillageText, Village, RedGem)
+
 AnnaVillage:
 Text(VillageText)
 LOAD1 0x1 CoinChick
@@ -104,7 +107,7 @@ UNIT 0x80 Shaman Jazzak Level(4, Enemy, 1) [14,6] 0x00 0x00 0x0 0x00 [Nosferatu]
 UNIT 0x80 Shaman Jazzak Level(4, Enemy, 1) [1,5] 0x00 0x00 0x0 0x00 [Flux] AttackInRangeAI 
 UNIT 0x80 Shaman Jazzak Level(4, Enemy, 1) [5,11] 0x00 0x00 0x0 0x00 [Flux] AttackInRangeAI 
 UNIT 0x80 Shaman Jazzak Level(4, Enemy, 1) [16,3] 0x00 0x00 0x0 0x00 [Nosferatu] GuardTileAI 
-UNIT Jazzak Fighter 0x00 Level(5, Enemy, 1) [16,2] 0x00 0x00 0x0 0x00 [HandAxe] GuardTileAI 
+UNIT Jazzak Fighter 0x00 Level(5, Enemy, 0) [16,2] 0x00 0x00 0x0 0x00 [HandAxe] GuardTileAI 
 UNIT
 
 Wave1:
