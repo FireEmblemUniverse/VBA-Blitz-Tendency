@@ -52,7 +52,7 @@ Seize(16,2)
 END_MAIN
 
 VillageGem:
-VillageEventItem(VillageText, Village, RedGem)
+VillageEventItem(PlaceholderText, Village, RedGem)
 
 AnnaVillage:
 Text(VillageText)
