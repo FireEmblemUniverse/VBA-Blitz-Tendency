@@ -55,7 +55,7 @@ VillageGem:
 VillageEventItem(PlaceholderText, Village, RedGem)
 
 AnnaVillage:
-Text(VillageText)
+Text(PlaceholderText)
 LOAD1 0x1 CoinChick
 ENUN
 NoFade
