@@ -22,6 +22,9 @@
 #define Naught 0x3
 #define Chiva 0x4
 #define Verge 0x5
+#define Anna 0x6
+
+#define Jazzak 0x42
 
 //Item definitions
 #define BlitzAxe Rapier
