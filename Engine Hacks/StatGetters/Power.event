@@ -4,7 +4,7 @@
 #include "_Common.event"
 
 pPowerModifiers: // Power
-	POIN prAddUnitPower prDebuffStr prAddEquipPower prRallyStr prLifeAndDeathBonus prSkillFury prFortressDefensePow prFortressResistancePow
+	POIN prAddUnitPower prDebuffStr prAddEquipPower prRallyStr prLifeAndDeathBonus prSkillFury prFortressDefensePow prFortressResistancePow prMinZero
 WORD 0
 
 prAddUnitPower:
@@ -27,10 +27,10 @@ prLifeAndDeathBonus:
 prSkillFury:
   rIfUnitHasSkill(FuryID)
     rAddConst(2)
-    
+
 prFortressDefensePow:
 	_testSkill(FortressDefenseID,0,3)
-	
+
 prFortressResistancePow:
 	_testSkill(FortressResistanceID,0,3)
 

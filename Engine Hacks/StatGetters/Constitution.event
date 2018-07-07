@@ -4,15 +4,15 @@
 #include "_Common.event"
 
 pConModifiers: // Consitition
-	POIN prAddUnitBaseCon prAddUnitConBonus
+	POIN prAddUnitBaseCon prAddUnitConBonus prMinZero
 WORD 0
 
 prAddUnitBaseCon:
 {
 	rCallSequence(_prAddClassCon _prAddCharConBonus)
-	
+
 _prAddClassCon: // byte 0x11 in ROM char data is class consition
-	rAdd(rForWordAt(UNIT_ROMCLASS, rSByteAt(0x11))) 
+	rAdd(rForWordAt(UNIT_ROMCLASS, rSByteAt(0x11)))
 
 _prAddCharConBonus: // byte 0x13 in ROM char data is personal consition bonus
 	rAdd(rForWordAt(UNIT_ROMCHAR, rSByteAt(0x13)))

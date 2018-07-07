@@ -4,11 +4,11 @@
 #include "_Common.event"
 
 pMovModifiers: // Movement
-	POIN prAddUnitBaseMov prAddUnitMovBonus prRallyMov prSkillCelerity prNullifyIfGuardAI prNullifyIfFreeze
+	POIN prAddUnitBaseMov prAddUnitMovBonus prRallyMov prSkillCelerity prNullifyIfGuardAI prNullifyIfFreeze prMinZero
 WORD 0
 
 prAddUnitBaseMov: // byte 0x12 in ROM class data is base class movement
-	rAdd(rForWordAt(UNIT_ROMCLASS, rSByteAt(0x12))) 
+	rAdd(rForWordAt(UNIT_ROMCLASS, rSByteAt(0x12)))
 
 prAddUnitMovBonus:
 	rAdd(rSByteAt(UNIT_MOV_BONUS))
