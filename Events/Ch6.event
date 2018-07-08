@@ -16,6 +16,23 @@ PointerList:
   POIN BeginningScene EndingScene
 
 TurnEvents:
+  TurnEventPlayer(0x00, SpawnPirates, 3)
+  TurnEventPlayer(0x00, SpawnPirates, 6)
+
+  TurnEventPlayer(0x00, SpawnRightSoldier, 2, 3)
+
+  TurnEventPlayer(0x00, SpawnLeftCav, 2)
+  TurnEventPlayer(0x00, SpawnLeftMerc, 3)
+  TurnEventPlayer(0x00, SpawnLeftCav, 4)
+
+  TurnEventPlayer(0x00, SpawnCornerSoldier, 4, 6)
+
+  TurnEventPlayer(0x00, SpawnEnemyFighter, 5)
+  TurnEventPlayer(0x00, SpawnEnemyFighter, 7)
+  TurnEventPlayer(0x00, SpawnEnemyFighter, 8)
+
+  TurnEventPlayer(0x00, SpawnHQMonk, 6)
+  TurnEventPlayer(0x00, SpawnHQMonk, 9)
 END_MAIN
 
 CharacterEvents:
@@ -23,6 +40,10 @@ END_MAIN
 
 LocationEvents:
   Seize(0, 11)
+  Vendor(VendorList, 16, 5)
+  Armory(ArmoryList, 14, 0)
+  Village(0x6, LabVillage, 3, 8)
+  Village(0x7, RightVillage, 16, 11)
 #ifdef __DEBUG__
   Seize(16, 0) //for testing
 #endif
@@ -50,8 +71,65 @@ UNIT 0xB PegasusKnight Vedge Level(6, Ally, 1) [16, 3] 0 0 0 0 [IronLance, Axere
 UNIT
 
 StartingEnemies:
-UNIT 0x4C Warrior 0 Level(1, Enemy, 1) [0, 11] 0 0 0 0 [SteelAxe, ExtraBow] NeverMoveAI
+UNIT 0x4C Warrior 0 Level(1, Enemy, 1) [0, 11] 0x2 0 0 0 [SteelAxe, Longbow] NeverMoveAI
+UNIT 0x8D Archer 0x4C Level(9, Enemy, 1) [6, 8] 0 0 0 0 [IronBow] AttackInRangeAI
+UNIT 0x8D Fighter 0x4C Level(9, Enemy, 1) [0, 6] 0 0 0 0 [IronAxe, Vulnerary] AttackInRangeAI
+UNIT 0x8D Shaman 0x4C Level(10, Enemy, 1) [0, 2] 0 0 0 0 [Flux] AttackInRangeAI
+UNIT 0x8D Cavalier 0x4C Level(9, Enemy, 1) [1, 0] 0 0 0 0 [IronSword] PursueWithoutHeedAI
 UNIT
+
+PortPirates:
+UNIT 0x8C Pirate 0x4C Level(9, Enemy, 1) [7, 8] 0 0 1 PirateReda [IronAxe] PursueWithoutHeedAI
+UNIT 0x8C Pirate 0x4C Level(9, Enemy, 1) [7, 8] 0 0 0 0 [IronAxe, HandAxe] PursueWithoutHeedAI
+UNIT
+
+RightBaseSoldier:
+UNIT 0x8C Soldier 0x4C Level(9, Enemy, 1) [7, 4] 0 0 0 0 [IronLance] PursueWithoutHeedAI
+UNIT
+
+LeftBaseCav:
+UNIT 0x8C Cavalier 0x4C Level(9, Enemy, 1) [4, 4] 0 0 0 0 [IronSword, IronLance] PursueWithoutHeedAI
+UNIT
+
+LeftBaseMerc:
+UNIT 0x8C Mercenary 0x4C Level(9, Enemy, 1) [4, 4] 0 0 0 0 [IronSword] PursueWithoutHeedAI
+UNIT
+
+CornerBaseSoldier:
+UNIT 0x8C Soldier 0x4C Level(9, Enemy, 1) [0, 0] 0 0 0 0 [IronLance] PursueWithoutHeedAI
+UNIT
+
+EnemyBaseFighter:
+UNIT 0x8C Fighter 0x4C Level(9, Enemy, 1) [0, 7] 0 0 0 0 [IronAxe] PursueWithoutHeedAI
+UNIT
+
+EnemyHQMonk:
+UNIT 0x8C Monk 0x4C Level(9, Enemy, 1) [1, 22] 0 0 0 0 [Lightning] PursueWithoutHeedAI
+UNIT
+
+PirateReda:
+REDA [7,7] 0 0 0 0
+
+SpawnPirates:
+ReinforcementEvent(PortPirates)
+
+SpawnRightSoldier:
+ReinforcementEvent(RightBaseSoldier)
+
+SpawnLeftCav:
+ReinforcementEventLeftBaseCav)
+
+SpawnLeftMerc:
+ReinforcementEventLeftBaseMerc)
+
+SpawnCornerSoldier:
+ReinforcementEventCornerBaseSoldier)
+
+SpawnEnemyFighter:
+ReinforcementEvent(EnemyBaseFighter)
+
+SpawnHQMonk:
+ReinforcementEvent(EnemyHQMonk)
 
 Traps1:
 ENDTRAP
@@ -75,5 +153,19 @@ EndingScene:
   MNCH 0x7
   NoFade
 ENDA
+
+ArmoryList:
+SHLI IronSword SteelSword IronLance SteelLance Javelin IronAxe SteelAxe HandAxe IronBow SteelBow PiercingBow HuntersBow RunicBow
+
+VendorList:
+SHLI Fire Thunder Lightning Shine Flux Heal Vulnerary PureWater
+
+ALIGN 4
+
+LabVillage:
+VillageEventItem(PlaceholderText, 0x0, KnightsCrest)
+
+RightVillage:
+VillageEventMoney(PlaceholderText, 0x0, 2500)
 
 #endif // CHAPTER6_EVENTS_EVENT
