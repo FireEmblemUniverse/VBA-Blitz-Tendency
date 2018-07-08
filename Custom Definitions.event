@@ -10,6 +10,10 @@
 #ifndef DebuffTable
     #define DebuffTable 0x203F100
 #endif
+#ifndef ClassTable
+  #define ClassTable 0x807110
+#endif
+
 
 #define LunarBrace MoonBracelet
 #define SolarBrace SunBracelet
@@ -18,6 +22,8 @@
 
 //Class definitions
 #define BlitzLord 0x2
+#define VoidMonster 0x3
+#define VoidMaster 0x4
 
 // Unit definitions
 #define Vedge 0x1
