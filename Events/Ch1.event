@@ -92,7 +92,7 @@ UNIT Chiva Archer Vedge Level(1, Ally, 0) [10,1] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT
 
 CoinChick:
-UNIT Anna Thief Vedge Level(4, Ally, 0) [2,13] 0x00 0x00 0x0 0x00 [IronSword, Lockpick] NoAI
+UNIT Anna Thief Vedge Level(4, Ally, 0) [1,2] 0x00 0x00 0x0 0x00 [IronSword, Lockpick] NoAI
 UNIT
 
 Bad:
