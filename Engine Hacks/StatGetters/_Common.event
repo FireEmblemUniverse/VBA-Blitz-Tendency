@@ -7,7 +7,6 @@ prHalveIfRescuing:
 			rHalved
 
 prMinZero:
-MESSAGE "prMinZero at " currentOffset
 {
 	rIf(Check)
 	ConstantZero:
