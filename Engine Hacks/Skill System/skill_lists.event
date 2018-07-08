@@ -1,32 +1,10 @@
-EphraimLordSkillList:
-// BYTE 1 OddRhythmID
-//BYTE 10 BondID
-BYTE 10 HeroesDeathBlowID
-BYTE 20 AetherID
-BYTE 00 00
-ALIGN 4
-
 EirikaLordSkillList:
-BYTE 255 MoonbowID
-// BYTE 10 EvenRhythmID
 BYTE 10 RightfulKingID
-BYTE 20 BondID
+BYTE 20 SolID
 BYTE 00 00
 ALIGN 4
 
-EphraimGreatLordSkillList:
-BYTE 255 BondID
-BYTE 255 AetherID //255 means "automatically given to prepromotes"
-// BYTE 255 SmiteID
-BYTE 5 RallySpectrumID
-BYTE 15 AxebreakerID
-BYTE 00 00
-ALIGN 4
-
-EirikaGreatLordSkillList:
-BYTE 255 BondID
-BYTE 255 AetherID
-// BYTE 255 SmiteID
+VoidPromotionSkillList:
 BYTE 5 NihilID
 BYTE 15 LancebreakerID
 BYTE 00 00
@@ -36,6 +14,7 @@ CavalierSkillList:
 BYTE 1 DisciplineID
 BYTE 10 ElbowRoomID
 BYTE 00 00
+ALIGN 4
 
 PaladinSkillList:
 BYTE 255 DisciplineID //learned if spawning
@@ -103,24 +82,24 @@ BYTE 00 00
 ALIGN 4
 
 ArcherSkillList:
-BYTE 1 CertainBlowID
-BYTE 10 SureShotID
+BYTE 1 BowRangeUpID
+BYTE 10 CertainBlowID
 BYTE 00 00
 ALIGN 4
 
 SniperSkillList:
+BYTE 255 BowRangeUpID
 BYTE 255 CertainBlowID
-BYTE 255 SureShotID
 BYTE 5 BowfaireID
-BYTE 15 GaleforceID
+BYTE 15 SD_Dazzle
 BYTE 00 00
 ALIGN 4
 
 RangerSkillList:
+BYTE 255 BowRangeUpID
 BYTE 255 CertainBlowID
-BYTE 255 SureShotID
 BYTE 5 CantoPlusID
-BYTE 15 BowbreakerID
+BYTE 15 GaleforceID
 BYTE 00 00
 ALIGN 4
 

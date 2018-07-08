@@ -117,13 +117,13 @@ SpawnRightSoldier:
 ReinforcementEvent(RightBaseSoldier)
 
 SpawnLeftCav:
-ReinforcementEventLeftBaseCav)
+ReinforcementEvent(LeftBaseCav)
 
 SpawnLeftMerc:
-ReinforcementEventLeftBaseMerc)
+ReinforcementEvent(LeftBaseMerc)
 
 SpawnCornerSoldier:
-ReinforcementEventCornerBaseSoldier)
+ReinforcementEvent(CornerBaseSoldier)
 
 SpawnEnemyFighter:
 ReinforcementEvent(EnemyBaseFighter)
