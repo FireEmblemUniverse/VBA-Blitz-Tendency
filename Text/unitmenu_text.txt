@@ -72,13 +72,13 @@ ally.[X]
 This is your win button.[X]
 
 ## UMText_Transform
- Transform
+ Transform[X]
 
-## UMText_TransferDesc
+## UMText_TransformDesc
 Unleash the power of the void.[X]
 
 ## UMText_Revert
- Revert
+ Revert[X]
 
 ## UMText_RevertDesc
 Regain control of the void.[X]
