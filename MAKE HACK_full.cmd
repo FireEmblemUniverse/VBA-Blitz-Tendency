@@ -20,7 +20,7 @@ Core A FE8 "-output:%~dp0VBA-BT.gba" "-input:%~dp0ROM Buildfile.event"
 
 if exist "%~dp0ups/ups.exe" (
     cd "%~dp0ups"
-    ups diff -b "%~dp0FE8_clean.gba" -m "%~dp0VBA-BT.gba" -o "%~dp0SkillsTest.ups"
+    ups diff -b "%~dp0FE8_clean.gba" -m "%~dp0VBA-BT.gba" -o "%~dp0VBA-BT.ups"
 )
 
 pause

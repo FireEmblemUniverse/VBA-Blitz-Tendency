@@ -15,25 +15,19 @@ Learned  [X]
 
 #include "unitmenu_text.txt"
 
-#0x903 HouseText
+#0x903 PlaceholderText
 #first text ID in the free block
-[MidRight][LoadFace][CurrentPortrait]Nothing to see here.[A][X]
-
-## VillageText
-[MidRight][LoadFace][CurrentPortrait]These look useful.[A][X]
-
-## DV1Desc
-Freeze all enemies[N]
-for one turn[X]
+[OpenMidLeft][LoadFace][VedgePortrait]This is placeholder text![A][X]
 
 ## nameCamus
-#for identity problems
 Camus[X]
-
-## nameSirius
-Sirius[X]
 
 ## nameZeke
 Zeke[X]
 
+## nameSirius
+Sirius[X]
+
+#include "character_text.txt"
+#include "item_text.txt"
 #include "skilldesc_text.txt"

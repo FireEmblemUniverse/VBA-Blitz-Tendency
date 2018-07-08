@@ -1,0 +1,137 @@
+
+////////////////////////////////////////////////////
+//                                                //
+// Disassembled with Nintenlord's Event Assembler //
+// Version: 11.0.0.0                              //
+// Game: FE8                                      //
+// File: FE8_clean.gba                            //
+// Offset: $9EC66C                                //
+//                                                //
+////////////////////////////////////////////////////
+
+EventPointerTable(0xa, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+POIN $0 $0 $0
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TURN 0x0 WaveFirst[3,0] 0x0
+TURN 0x0 WaveSecond[5,0] 0x0
+TURN 0x0 WaveThird[9,0] 0x0
+END_MAIN
+
+WaveFirst:
+ReinforcementEvent(Wave1)
+ENDA
+
+WaveSecond:
+ReinforcementEvent(Wave2)
+ENDA
+
+WaveThird:
+ReinforcementEvent(Wave3)
+ENDA
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Chest(SteelAxe,11,9)
+Village(0x7,AnnaVillage,1,1)
+Village(0x8,VillageGem,1,10)
+Seize(16,2)
+END_MAIN
+
+VillageGem:
+VillageEventItem(PlaceholderText, Village, RedGem)
+
+AnnaVillage:
+Text(PlaceholderText)
+LOAD1 0x1 CoinChick
+ENUN
+NoFade
+ENDA
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno1:
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Traps1:
+END_MAIN
+
+Traps2:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+Units1:
+UNIT Vedge EphraimLord 0x00 Level(1, Ally, 0) [11,1] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge Swordmaster Vedge Level(1, Ally, 0) [12,2] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Null Cavalier Vedge Level(1, Ally, 0) [10,0] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Naught Cavalier Vedge Level(1, Ally, 0) [11,2] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Chiva Archer Vedge Level(1, Ally, 0) [10,1] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT
+
+CoinChick:
+UNIT Anna Thief Vedge Level(4, Ally, 0) [2,13] 0x00 0x00 0x0 0x00 [IronSword, Lockpick] NoAI
+UNIT
+
+Bad:
+UNIT 0x80 Pirate Jazzak Level(4, Enemy, 1) [6,2] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI
+UNIT 0x80 Pirate Jazzak Level(4, Enemy, 1) [2,7] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI
+UNIT 0x80 Pirate Jazzak Level(4, Enemy, 1) [9,8] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI
+UNIT 0x80 Pirate Jazzak Level(4, Enemy, 1) [11,11] 0x00 0x00 0x0 0x00 [HandAxe] AttackInRangeAI
+UNIT 0x80 Pirate Jazzak Level(4, Enemy, 1) [14,5] 0x00 0x00 0x0 0x00 [HandAxe] GuardTileAI
+UNIT 0x80 Mercenary Jazzak Level(4, Enemy, 1) [6,3] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI
+UNIT 0x80 Mercenary Jazzak Level(4, Enemy, 1) [12,7] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI
+UNIT 0x80 Shaman Jazzak Level(4, Enemy, 1) [14,6] 0x00 0x00 0x0 0x00 [Nosferatu] GuardTileAI
+UNIT 0x80 Shaman Jazzak Level(4, Enemy, 1) [1,5] 0x00 0x00 0x0 0x00 [Flux] AttackInRangeAI
+UNIT 0x80 Shaman Jazzak Level(4, Enemy, 1) [5,11] 0x00 0x00 0x0 0x00 [Flux] AttackInRangeAI
+UNIT 0x80 Shaman Jazzak Level(4, Enemy, 1) [16,3] 0x00 0x00 0x0 0x00 [Nosferatu] GuardTileAI
+UNIT Jazzak Fighter 0x00 Level(5, Enemy, 0) [16,2] 0x00 0x00 0x0 0x00 [HandAxe] GuardTileAI
+UNIT
+
+Wave1:
+UNIT 0x80 Brigand Jazzak Level(4, Enemy, 1) [15,9] 0x00 0x00 0x0 0x00 [SteelAxe] BrigandAI
+UNIT
+
+Wave2:
+UNIT 0x80 Thief Jazzak Level(4, Enemy, 1) [17,9] 0x00 0x00 0x0 0x00 [SteelSword] LootingThiefAI
+UNIT
+
+Wave3:
+UNIT 0x80 WyvernRider Jazzak Level(5, Enemy, 1) [0,0] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT 0x80 WyvernRider Jazzak Level(5, Enemy, 1) [0,3] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT
+
+BeginningScene:
+LOAD2 0x1 Units1
+ENUN
+LOAD1 0x1 Bad
+ENUN
+NoFade
+ENDA
+
+EndingScene:
+MNC2 Ch2
+NoFade
+ENDA

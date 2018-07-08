@@ -1,0 +1,127 @@
+//World Map Events Installer
+// #define WorldMapIntroPointerTable(id,offset) "PUSH; ORG 0x8B3ad8+(4*id); POIN offset; POP"
+ALIGN 4
+{
+  #include "Prologue.event"
+}
+ALIGN 4
+{
+  #include "Ch1.event"
+}
+ALIGN 4
+{
+//  #include "Ch2.event"
+}
+ALIGN 4
+{
+  #include "Ch3.event"
+}
+ALIGN 4
+{
+//  #include "Ch4.event"
+}
+ALIGN 4
+{
+//  #include "Ch5.event"
+}
+ALIGN 4
+{
+  #include "Ch6.event"
+}
+ALIGN 4
+{
+//  #include "Ch7.event"
+}
+ALIGN 4
+{
+//  #include "Ch8.event"
+}
+ALIGN 4
+{
+//  #include "Ch9.event"
+}
+ALIGN 4
+{
+//  #include "Ch10.event"
+}
+ALIGN 4
+{
+//  #include "Ch11.event"
+}
+ALIGN 4
+{
+//  #include "Ch12.event"
+}
+ALIGN 4
+{
+//  #include "Ch13.event"
+}
+ALIGN 4
+{
+//  #include "Ch14.event"
+}
+ALIGN 4
+{
+//  #include "Ch15.event"
+}
+ALIGN 4
+{
+//  #include "Ch16.event"
+}
+ALIGN 4
+{
+//  #include "Ch17.event"
+}
+ALIGN 4
+{
+//  #include "Ch18.event"
+}
+ALIGN 4
+{
+//  #include "Ch19.event"
+}
+ALIGN 4
+{
+//  #include "Ch20.event"
+}
+ALIGN 4
+{
+//  #include "Ch21.event"
+}
+ALIGN 4
+{
+//  #include "Ch22.event"
+}
+ALIGN 4
+{
+//  #include "Ch23.event"
+}
+ALIGN 4
+{
+//  #include "Ch24.event"
+}
+ALIGN 4
+{
+//  #include "Ch25.event"
+}
+ALIGN 4
+{
+//  #include "Ch26.event"
+}
+ALIGN 4
+{
+//  #include "Ch27.event"
+}
+ALIGN 4
+{
+//  #include "Ch28.event"
+}
+ALIGN 4
+{
+//  #include "Ch29.event"
+}
+ALIGN 4
+{
+//  #include "Ch30.event"
+}
+ALIGN 4
