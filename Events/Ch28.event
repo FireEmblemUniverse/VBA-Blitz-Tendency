@@ -1,6 +1,7 @@
 #include EAstdlib.event
 
-EventPointerTable(0x7F,ThisChapter)
+//EventPointerTable(0x7F,ThisChapter)
+EventPointerTable(0x07,ThisChapter)
 
 //ORG 0xE80000
 
@@ -20,15 +21,15 @@ Units:
 UNIT Eirika EphraimMasterLord 0x00 Level(10, Ally, 0) [15,28] 0x00 0x00 0x0 0x00 [Reginleif] NoAI 
 UNIT Seth Swordmaster 0x00 Level(10, Ally, 0) [14,29] 0x00 0x00 0x0 0x00 [SilverSword] NoAI 
 UNIT Gilliam Paladin 0x00 Level(10, Ally, 0) [15,29] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
-UNIT Gilliam Paladin 0x00 Level(10, Ally, 0) [14,28] 0x00 0x00 0x0 0x00 [Spear] NoAI 
-UNIT Gilliam Sniper 0x00 Level(10, Ally, 0) [15,27] 0x00 0x00 0x0 0x00 [SilverBow] NoAI 
+UNIT Ross Paladin 0x00 Level(10, Ally, 0) [14,28] 0x00 0x00 0x0 0x00 [Spear] NoAI 
+UNIT Colm Sniper 0x00 Level(10, Ally, 0) [15,27] 0x00 0x00 0x0 0x00 [SilverBow] NoAI 
 UNIT Vanessa Bishop 0x00 Level(10, Ally, 0) [12,29] 0x00 0x00 0x0 0x00 [Physic, Lightning] NoAI 
-UNIT Vanessa WyvernLord 0x00 Level(10, Ally, 0) [17,28] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
+UNIT Lute WyvernLord 0x00 Level(10, Ally, 0) [17,28] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
 UNIT Vanessa General 0x00 Level(10, Ally, 0) [16,27] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI 
 UNIT Neimi Rogue 0x00 Level(10, Ally, 0) [17,27] 0x00 0x00 0x0 0x00 [KillingEdge] NoAI 
-UNIT Neimi Hero 0x00 Level(10, Ally, 0) [16,28] 0x00 0x00 0x0 0x00 [HandAxe, Armourslayer] NoAI 
+UNIT Artur Hero 0x00 Level(10, Ally, 0) [16,28] 0x00 0x00 0x0 0x00 [HandAxe, Armourslayer] NoAI 
 UNIT Garcia Sage 0x00 Level(10, Ally, 0) [16,29] 0x00 0x00 0x0 0x00 [Elfire] NoAI 
-UNIT Garcia Warrior 0x00 Level(10, Ally, 0) [17,29] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI 
+UNIT Natasha Warrior 0x00 Level(10, Ally, 0) [17,29] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI 
 UNIT
 
 
@@ -61,9 +62,14 @@ ALIGN 4
 
 BeginningScene:
 LOAD2 0x1 Units
+ENUN
 LOAD1 0x1 Bad
+ENUN
 LOAD1 0x1 Bad2
+ENUN
 LOAD1 0x1 Bad3
+ENUN
+LOAD1 0x1 FillerGuy
 ENDB
 
 EndingScene:
@@ -139,6 +145,10 @@ UNIT Lyon_Ch17 General Lyon_Final Level(10, Enemy, 1) [15,24] 0x00 0x00 0x0 0x00
 UNIT Lyon_Ch17 ArchMogall Lyon_Final Level(10, Enemy, 1) [22,23] 0x00 0x00 0x0 0x00 [BloodyEye] AttackInRangeAI 
 UNIT Lyon_Ch17 ArchMogall Lyon_Final Level(10, Enemy, 1) [30,22] 0x00 0x00 0x0 0x00 [BloodyEye] AttackInRangeAI 
 UNIT
+
+FillerGuy:
+UNIT Eirika Hero Riev Level(20, Ally, 0) [31,31] 0x00 0x00 0x0 0x00 [SilverAxe] GuardTileAI 
+
 
 
 // Shop Data
