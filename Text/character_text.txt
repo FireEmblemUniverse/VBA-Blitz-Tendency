@@ -34,3 +34,24 @@ Verge[X]
 ## descVerge
 A mentor to Vedge. Some say[N]
 he's been a bad influence.[X]
+
+## FanniName
+Fanni[X]
+
+## FanniDesc
+Flunked out of knight school. At[N]
+least she knows what the best stat is.[X]
+
+## ErsatzName
+Ersatz[X]
+
+## ErsatzDesc
+The last of a manakete tribe.[N]
+Claims to be a strategist.[X]
+
+## DennisName
+Dennis[X]
+
+## DennisDesc
+A former philanthropist tasked[N]
+with exterminating manakete tribes.[X]
