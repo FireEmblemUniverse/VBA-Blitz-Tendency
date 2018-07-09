@@ -106,6 +106,15 @@ POP
 
   ORG $31650 //Usable in chapter 6
   SHORT 0x46C0
+
+  //Change poison damage
+  //Set constant damage to 4
+  ORG 0x25A3E
+  SHORT 0x3304
+  //Set variable damage to 0
+  ORG 0x25A36
+  SHORT 0x2000
+
   POP
 
 
