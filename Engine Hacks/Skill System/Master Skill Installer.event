@@ -317,15 +317,22 @@ CriticalIDList:
 BYTE CriticalForceID KillingMachineID
 ALIGN 4
 
+AxefaithHit:
+#incbin "Blade Skills/Axefaith.dmp"
+POIN SkillTester
+WORD AxeFaithID
+
 LethalitySkill:
 #incbin "Other Skills/LethalitySkill.dmp"
 POIN SkillTester
 WORD LethalityID
 
 Armsthrift:
-#incbin "Other Skills/Armsthrift.dmp"
+AxefaithArmsthrift:
+ArmsthriftAxefaith:
+#incbin "Other Skills/ArmsthriftAxefaith.dmp"
 POIN SkillTester|1
-WORD ArmsthriftID
+WORD ArmsthriftID AxeFaithID
 
 CritUpSkill:
 #incbin "Other Skills/CritUpSkill.dmp"

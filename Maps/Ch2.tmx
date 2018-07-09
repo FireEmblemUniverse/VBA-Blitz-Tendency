@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="22" height="12" tilewidth="16" tileheight="16" infinite="0" nextobjectid="1">
- <tileset firstgid="1" name="FE8 - Temple - 8800898a" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
-  <image source="../../../FEMapCreator/Tilesets/FE8 - Temple - 8800898a.png" trans="ffffff" width="512" height="512"/>
- </tileset>
  <layer name="Tile Layer 1" width="22" height="12">
   <properties>
    <property name="ChapterID" value="2"/>

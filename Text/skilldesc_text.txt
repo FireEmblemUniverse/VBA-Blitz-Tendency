@@ -636,5 +636,8 @@ from enemy Critical Hits and[N]
 Skill Activations.[X]
 
 ##SD_Axefaith
-Axefaith: Axes can't break, and[N]
-Hit+ Luck*1.5 when wielding them.[X]
+Axefaith: Axes can't lose durability, and[N]
+grants Hit = Luck*1.5 when wielding axes.[X]
+
+
+

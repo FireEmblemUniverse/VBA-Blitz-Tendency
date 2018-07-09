@@ -48,4 +48,21 @@
 #define RunicBow 0xBE
 #define RunicBowIconID PiercingBowIconID //TODO
 
+//Equip definitions
+#define WTYPE_SWORD    0x00
+#define WTYPE_BLADE    0x00
+#define WTYPE_LANCE    0x01
+#define WTYPE_SPEAR    0x01
+#define WTYPE_AXE      0x02
+#define WTYPE_BOW      0x03
+#define WTYPE_STAFF    0x04
+#define WTYPE_ANIMA    0x05
+#define WTYPE_LIGHT    0x06
+#define WTYPE_ELDER    0x07
+#define WTYPE_DARK     0x07
+
 // #define __DEBUG__ // Uncomment to get the Debug startup menu :p
+
+
+
+

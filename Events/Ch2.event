@@ -1,6 +1,6 @@
 #include EAstdlib.event
 
-#define ThrThrD_ID 0x02 //This... -is- chapter 2, right?
+#define ThrThrD_ID 0x0D //"Ch 2 events", right.
 EventPointerTable(ThrThrD_ID, ThrThrD_ThisChapter)
 
 #define TTD_Level 3
@@ -28,7 +28,7 @@ POIN ThrThrD_BeginningScene ThrThrD_EndingScene
 ALIGN 4
 ThrThrD_TurnBasedEvents:
 TURN 0x9 UnsetEventA [3, 3] 0
-TURN 0xA RandomTimedSpawns 0
+TURN 0xA RandomTimedSpawns  0
 TURN 0xB SetEventA [15, 15] 0
 END_MAIN
 
@@ -39,9 +39,9 @@ END_MAIN
 
 ALIGN 4
 ThrThrD_LocationBasedEvents:
-Chest(PoisonBow,   9, 1)
-Chest(PoisonSword, 2, 6)
-Chest(ToxinLance, 20,10)
+Chest(Shadowkiller,  9,  1)
+Chest(ToxinLance,    2,  6)
+Chest(Elixir,       20, 10)
 END_MAIN
 
 ALIGN 4
@@ -79,57 +79,57 @@ UNIT Verge Swordmaster Vedge Level(1, Ally, 1) [ 9,11] 0x00 0x00 0x0 0x00 [IronS
 UNIT Null Cavalier Vedge Level(2, Ally, 1)     [ 9,10] 0x00 0x00 0x0 0x00 [SteelSword, IronLance, IronBlade, Vulnerary] NoAI
 UNIT Naught Cavalier Vedge Level(2, Ally, 1)   [11,10] 0x00 0x00 0x0 0x00 [ExtraBow, PiercingBow, HuntersBow, IronBow] NoAI
 UNIT Chiva Archer Vedge Level(3, Ally, 1)      [11, 9] 0x00 0x00 0x0 0x00 [SteelBlade, Shamshir, SilverSword, Vulnerary] NoAI
-UNIT Anna Thief Vedge Level(4, Ally, 1)        [11,11] 0x00 0x00 0x0 0x00 [IronSword, KillingEdge, Lockpick, WhiteGem] NoAI
+UNIT Anna Thief Vedge Level(4, Ally, 1)        [11,11] 0x00 0x00 0x0 0x00 [IronSword, Armorslayer, Lockpick, WhiteGem] NoAI
 UNIT
 
 ALIGN 4
 ThrThrD_Axeboy:
-UNIT 0x7 Brigand Vedge Level(4, Ally, 1)       [ 9, 9] 0x00 0x00 0x0 0x00 [PoisonAxe, IronAxe, Hatchet, Antitoxin] NoAI
+UNIT 0x7 Brigand Vedge Level(4, Ally, 1)       [ 9, 9] 0x00 0x00 0x0 0x00 [PoisonAxe, Fiendcleaver, IronAxe, Hatchet] NoAI
 UNIT
 
 ALIGN 4
 ThrThrD_EnemyLeft:
-UNIT 0x44 Tarvos 0x00 Level(TTD_Level+8, Enemy, 1)   [ 4, 2] 0x02 0x00 0x00 0x00 [DevilAxe, DevilAxe, DevilAxe] GuardTileAI
-UNIT 0x84 Bonewalker 0x44 Level(TTD_Level+3, Enemy, 1) [3,1] 0x00 0x00 0x00 0x00 [WindSword] [0x03, 0x00]
+UNIT 0x44 Tarvos 0x00 Level(TTD_Level+7, Enemy, 1)   [ 4, 2] 0x02 0x00 0x00 0x00 [DevilAxe, DevilAxe, DevilAxe] GuardTileAI
+UNIT 0x84 Bonewalker 0x44 Level(TTD_Level+3, Enemy, 1) [3,1] 0x00 0x00 0x00 0x00 [WindSword, Vulnerary] [0x03, 0x00]
 UNIT 0x84 Bonewalker_Bow 0x44 Level(TTD_Level+3, Enemy, 1) [3,0] 0x02 0x00 0x00 0x00 [PoisonBow] [0x03, 0x00]
 UNIT 0x84 Bael 0x44 Level(TTD_Level+3, Enemy, 1) [3,0] 0x00 0x00 0x00 0x00 [PoisonClaw] AttackInRangeAI
-UNIT 0x84 Gargoyle 0x44 Level(TTD_Level+2, Enemy, 1) [9,4] 0x02 0x00 0x00 0x00 [ToxinLance] [0x03, 0x00]
-UNIT 0x84 Tarvos 0x44 Level(TTD_Level+2, Enemy, 1) [1,7] 0x02 0x00 0x00 0x00 [PoisonAxe] AttackInRangeAI
+UNIT 0x84 Gargoyle 0x44 Level(TTD_Level+2, Enemy, 1) [9,4] 0x00 0x00 0x00 0x00 [Horseslayer] [0x03, 0x00]
+UNIT 0x84 Tarvos 0x44 Level(TTD_Level+2, Enemy, 1) [1,7] 0x02 0x00 0x00 0x00 [PoisonAxe, Antitoxin] AttackInRangeAI
 UNIT
 
 ALIGN 4
 ThrThrD_EnemyRight:
-UNIT 0x45 Monk 0x00 Level(TTD_Level+4, Enemy, 1)   [19, 1] 0x02 0x00 0x00 0x00 [DemonSurge, Fiendcleaver] GuardTileAI
-UNIT 0x85 Fighter 0x45 Level(TTD_Level+3, Enemy, 1)  [18, 2] 0x00 0x00 0x00 0x00 [HandAxe] AttackInRangeAI
-UNIT 0x85 Cavalier 0x45 Level(TTD_Level+3, Enemy, 1)  [19, 2] 0x02 0x00 0x00 0x00 [PoisonSword] AttackInRangeAI
-UNIT 0x85 Knight 0x45 Level(TTD_Level+3, Enemy, 1)  [18, 3] 0x00 0x00 0x00 0x00 [SteelLance] [0x0C, 0x03]
-UNIT 0x85 Fighter 0x45 Level(TTD_Level+2, Enemy, 1)  [15, 8] 0x00 0x00 0x00 0x00 [SteelAxe, Vulnerary] [0x03, 0x00]
-UNIT 0x85 Archer 0x45 Level(TTD_Level+2, Enemy, 1)  [20, 7] 0x00 0x00 0x00 0x00 [ExtraBow] GuardTileAI
+UNIT 0x45 Monk 0x00 Level(TTD_Level+4, Enemy, 1)   [19, 1] 0x02 0x00 0x00 0x00 [DemonSurge, BrightLance] GuardTileAI
+UNIT 0x85 Fighter 0x45 Level(TTD_Level+2, Enemy, 1)  [18, 2] 0x00 0x00 0x00 0x00 [HandAxe] AttackInRangeAI
+UNIT 0x85 Cavalier 0x45 Level(TTD_Level+2, Enemy, 1)  [19, 2] 0x02 0x00 0x00 0x00 [PoisonSword] AttackInRangeAI
+UNIT 0x85 Knight 0x45 Level(TTD_Level+2, Enemy, 1)  [18, 3] 0x00 0x00 0x00 0x00 [SteelLance] [0x0C, 0x03]
+UNIT 0x85 Fighter 0x45 Level(TTD_Level+1, Enemy, 1)  [15, 8] 0x00 0x00 0x00 0x00 [SteelAxe, Vulnerary] [0x03, 0x00]
+UNIT 0x85 Archer 0x45 Level(TTD_Level+1, Enemy, 1)  [20, 7] 0x00 0x00 0x00 0x00 [ExtraBow] GuardTileAI
 UNIT
 
 ALIGN 4
 ThrThrD_ReinLeft:
-UNIT 0x84 MautheDoog 0x44 Level(TTD_Level, Enemy, 1)   [ 4, 0] 0x00 0x00 0x00 0x00 [PoisonClaw] PursueWithoutHeedAI
+UNIT 0x84 MautheDoog 0x44 Level(TTD_Level, Enemy, 1)   [ 4, 0] 0x02 0x00 0x00 0x00 [PoisonClaw, Item50G] PursueWithoutHeedAI
 UNIT
 
 ALIGN 4
 ThrThrD_ReinBotLeft:
-UNIT 0x84 Gargoyle 0x44 Level(TTD_Level+1, Enemy, 1)   [ 0,10] 0x00 0x00 0x00 0x00 [IronLance] PursueWithoutHeedAI
+UNIT 0x84 Gargoyle 0x44 Level(TTD_Level, Enemy, 1)   [ 0,10] 0x00 0x00 0x00 0x00 [IronLance] PursueWithoutHeedAI
 UNIT
 
 ALIGN 4
 ThrThrD_ReinMid:
-UNIT 0x84 Revenant 0x44 Level(TTD_Level+1, Enemy, 1)   [10, 7] 0x00 0x00 0x00 0x00 [RottenClaw, Antitoxin] PursueWithoutHeedAI
+UNIT 0x84 Revenant 0x44 Level(TTD_Level+2, Enemy, 1)   [10, 7] 0x00 0x00 0x00 0x00 [RottenClaw, Antitoxin] PursueWithoutHeedAI
 UNIT
 
 ALIGN 4
 ThrThrD_ReinUpMid:
-UNIT 0x85 Archer 0x45 Level(TTD_Level, Enemy, 1)   [12, 0] 0x02 0x00 0x00 0x00 [PoisonBow, Antitoxin] PursueWithoutHeedAI
+UNIT 0x85 Archer 0x45 Level(TTD_Level-1, Enemy, 1)   [12, 0] 0x02 0x00 0x00 0x00 [PoisonBow, Antitoxin] PursueWithoutHeedAI
 UNIT
 
 ALIGN 4
 ThrThrD_ReinRight:
-UNIT 0x85 Cavalier 0x45 Level(TTD_Level+1, Enemy, 1)   [21, 2] 0x00 0x00 0x00 0x00 [IronSword] PursueWithoutHeedAI
+UNIT 0x85 Cavalier 0x45 Level(TTD_Level, Enemy, 1)   [21, 2] 0x02 0x00 0x00 0x00 [IronSword, Item50G] PursueWithoutHeedAI
 UNIT
 
 ALIGN 4

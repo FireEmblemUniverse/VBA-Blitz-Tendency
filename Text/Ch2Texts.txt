@@ -17,7 +17,7 @@ Zealot[X]
 
 ##descZealot
 Devouts of the cloth who praise[NL]
-the evil darkness in hearts and minds.[X]
+evil darkness in hearts and minds.[X]
 
 ##nameMonster
 Monster[X]
@@ -29,3 +29,15 @@ to fuel desires of awful evil.[X]
 ##descMonsterBoss0x44
 A powerful monster that[NL]
 inherited some lunacy...[X]
+
+
+
+
+
+
+
+
+
+
+
+
