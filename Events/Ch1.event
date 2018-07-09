@@ -69,6 +69,8 @@ SHLI IronSword SteelSword IronLance IronAxe IronBow SteelBow Longbow
 VendorList:
 SHLI Vulnerary ChestKey Lockpick LightRune
 
+ALIGN 4
+
 MiscBasedEvents:
 CauseGameOverIfLordDies
 END_MAIN
