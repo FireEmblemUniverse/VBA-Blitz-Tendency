@@ -634,3 +634,7 @@ Fortress Resistance:[N]
 Foresight: Avoid the damage[N]
 from enemy Critical Hits and[N]
 Skill Activations.[X]
+
+##SD_Axefaith
+Axefaith: Axes can't break, and[N]
+Hit+ Luck*1.5 when wielding them.[X]

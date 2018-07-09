@@ -15,3 +15,7 @@ setMugEntry(0x6, Chiva_Mug, 2, 5, 3, 3)
 Verge_Mug:
 #incext PortraitFormatter "Verge.png"
 setMugEntry(0x7, Verge_Mug, 4, 5, 4, 3)
+
+Monkeyboy_Mug:
+#incext PortraitFormatter "HeroWarrior.png"
+setMugEntry(0x9, Monkeyboy_Mug, 2, 5, 2, 3)

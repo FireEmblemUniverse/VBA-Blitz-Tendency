@@ -6,6 +6,7 @@ _ReturnLocation = 0x0802B828+1
 
 LUnitHasSkill      = EALiterals+0x00
 LArmsthriftSkillID = EALiterals+0x04
+LAxefaithSkillID   = EALiterals+0x08
 
 @ Hook from 0802B7F8
 ArmsthriftHook:
@@ -34,7 +35,7 @@ NonMiss:
 	bl BXR3
 
 	cmp r0, #0        @ compare result
-	beq NonArmsthrift @ goto NonArmsthrift if zero (unit doesn't have armsthrift)
+	beq NonArmsthrift @ goto NonArmsthrift if zero (unit does not have armsthrift)
 
 	@ Getting Armsthrift proc chance (=luck)
 	ldrb r0, [r5, #0x19] @ BattleUnit.luck
@@ -49,6 +50,25 @@ NonMiss:
 
 NonArmsthrift:
 	@ ACTUAL ARMSTHRIFT CHECK END
+
+	@2wb: begin AxeFaith check
+	mov r0, r5                 @ arg r0 = (Battle) Unit
+	ldr r1, LAxefaithSkillID @ arg r1 = Skill Index
+
+	ldr r3, LUnitHasSkill
+	bl BXR3
+
+	cmp r0, #0        @ compare result
+	beq NonArmsthrift @ goto NonArmsthrift if zero (unit does not have axefaith)
+
+	@unit has axefaith
+	@must find out: are they using an axe
+	mov r0, #
+
+
+
+
+
 
 	mov  r4, #0x48 @ offsetof(BattleUnit.weaponAfter)
 
@@ -78,3 +98,4 @@ BXR3:
 EALiterals:
 	@ POIN SkillTester|1
 	@ WORD ArmsthriftID
+	@ WORD AxefaithID

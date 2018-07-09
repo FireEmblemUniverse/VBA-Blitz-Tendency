@@ -465,3 +465,6 @@ ORG SkillIcon(HawkeyeID)
 
 ORG SkillIcon(SolidarityID)
 #incext Png2Dmp "Skill Icons\Solidarity.png"
+
+ORG SkillIcon(AxefaithID)
+#incext Png2Dmp "Skill Icons\Axefaith.png"
