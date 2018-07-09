@@ -1,7 +1,7 @@
 
 ## Ch5OpenningText
 [OpenMidLeft][LoadVedge]
-What? There's no bridge? Looks[NL]	
+What? There's no bridge? Looks[NL]
 like we have a fight on our[A][NL]
 hands regardless.[A][X]
 
