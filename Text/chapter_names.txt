@@ -9,7 +9,7 @@ Prologue: IT BEGINS AGAIN[X]
 2: Throne Throwdown[X]
 
 #0x163
-3: [X]
+3: Script Writing[X]
 
 #0x164
 4: Dangerous Duo[X]
