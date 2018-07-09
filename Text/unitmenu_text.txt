@@ -70,3 +70,15 @@ ally.[X]
 
 ## UMDesc_Win
 This is your win button.[X]
+
+## UMText_Transform
+ Transform[X]
+
+## UMText_TransformDesc
+Unleash the power of the void.[X]
+
+## UMText_Revert
+ Revert[X]
+
+## UMText_RevertDesc
+Regain control of the void.[X]

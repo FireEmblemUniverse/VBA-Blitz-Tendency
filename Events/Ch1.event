@@ -48,6 +48,8 @@ LocationBasedEvents:
 Chest(SteelAxe,11,9)
 Village(0x7,AnnaVillage,1,1)
 Village(0x8,VillageGem,1,10)
+Vendor(VendorList, 4, 6)
+Armory(ArmoryList, 7, 6)
 Seize(16,2)
 END_MAIN
 
@@ -60,6 +62,14 @@ LOAD1 0x1 CoinChick
 ENUN
 NoFade
 ENDA
+
+ArmoryList:
+SHLI IronSword SteelSword IronLance IronAxe IronBow SteelBow Longbow
+
+VendorList:
+SHLI Vulnerary ChestKey Lockpick LightRune
+
+ALIGN 4
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
@@ -92,7 +102,7 @@ UNIT Chiva Archer Vedge Level(1, Ally, 0) [10,1] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT
 
 CoinChick:
-UNIT Anna Thief Vedge Level(4, Ally, 0) [2,13] 0x00 0x00 0x0 0x00 [IronSword, Lockpick] NoAI
+UNIT Anna Thief Vedge Level(4, Ally, 0) [1,2] 0x00 0x00 0x0 0x00 [IronSword, Lockpick] NoAI
 UNIT
 
 Bad:

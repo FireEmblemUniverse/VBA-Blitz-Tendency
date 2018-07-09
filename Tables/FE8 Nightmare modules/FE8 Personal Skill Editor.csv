@@ -12,7 +12,7 @@ Colm,RallySpdID
 Garcia,ColossusID
 Innes,LightWeightID
 Lute,ParagonID
-Natasha,SealLukID
+Fanni,CelerityID
 Cormag,RallyStrID
 Ephraim,InspirationID
 Forde,SpurSpdID
@@ -30,7 +30,7 @@ Dozla,PivotID
 Rennac,SpurSpdID
 Duessel,RepositionID
 Myrrh,DragonsBloodID
-Knoll,VoiceOfPeaceID
+Ersatz,StrongRiposteID
 Joshua,GambleID
 Syrene,TantivyID
 Tana,LilysPoiseID
@@ -79,7 +79,7 @@ Murray (Ch 7),QuickDrawID
 Tirado (Ch 8),SealDefID
 Binks (Ch 9A),BowfaireID
 Pablo (Ch 10A),DartingBlowID
-Maelduin (Ch 12A),0x0
+Dennis (Ch8),SealLukID
 Aias (Ch 13A),SavageBlowID
 Carlyle (Ch 14A),SealSpdID
 Caellach (Ch 15),0x0

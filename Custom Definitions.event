@@ -10,6 +10,10 @@
 #ifndef DebuffTable
     #define DebuffTable 0x203F100
 #endif
+#ifndef ClassTable
+  #define ClassTable 0x807110
+#endif
+
 
 #define LunarBrace MoonBracelet
 #define SolarBrace SunBracelet
@@ -18,6 +22,8 @@
 
 //Class definitions
 #define BlitzLord 0x2
+#define VoidMonster 0x3
+#define VoidMaster 0x4
 
 // Unit definitions
 #define Vedge 0x1
@@ -26,8 +32,11 @@
 #define Chiva 0x4
 #define Verge 0x5
 #define Anna 0x6
+#define Fanni 0xD
+#define Ersatz 0x1F
 
 #define Jazzak 0x42
+#define Dennis 0x50
 
 //Item definitions
 #define BlitzAxe Rapier
