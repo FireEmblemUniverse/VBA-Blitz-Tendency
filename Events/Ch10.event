@@ -1,0 +1,241 @@
+//#include EAstdlib.event
+
+EventPointerTable(0x33, ThisChapter)
+
+EscapePointPointerTable(0x0B, Ch10EscapePoint)
+
+
+Ch10EscapePoint:
+//EscapePoint(0, 0, MoveUp)
+EscapePoint(3, 8, NoMove)
+EscapePointEnd
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0,EnterPirate,1)
+TurnEventPlayer(0,FirstFlood,3)
+TurnEventPlayer(0,SecondFlood,4)
+TurnEventPlayer(0,ThirdFlood,5)
+TurnEventPlayer(0,FourthFlood,6)
+
+TurnEventPlayer(0,Rising1,8)
+TurnEventPlayer(0,Rising2,9)
+TurnEventPlayer(0,Rising3,10)
+
+TurnEventEnemy(0x0,TriggerRaft,9)
+TurnEventPlayer(0xA,RaftAttack,8,99)
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Seize(2,1)
+Armory(ChTenArmoury,22,1)
+Chest(BattleAxe,4,14)
+Chest(Axereaver,23,9)
+Chest(MasterSeal,5,0)
+#ifdef __DEBUG__
+Seize(22,20)
+#endif
+END_MAIN
+
+MiscBasedEvents:
+AREA 0xB CheckForBoat [0,0] [7,8]
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+//DO NOT TOUCH
+WORD $00
+
+Tutorial:
+//DO NOT TOUCH
+WORD $00
+
+TrapData:
+BLST [10,13] Ballista
+BLST [0,2] Ballista
+BLST [21,22] Ballista
+END_MAIN
+
+ALIGN 4
+
+BeginningScene:
+LOAD1 0x01 Bad
+ENUN
+LOAD2 0x01 Units
+ENUN
+STAL 10
+FlashCursor(Eirika,24)
+//Text(PLACEHOLDER)
+ENDA
+
+EndingScene:
+MNCH 0xC
+NoFade
+ENDA
+
+Units:
+UNIT 0x1 EphraimLord 0x00 Level(1, Ally, 0) [15,22] 0x00 0x00 0x0 0x00 [Reginleif] NoAI
+UNIT 0x2 EphraimLord 0x00 Level(1, Ally, 0) [17,21] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT 0x3 EphraimLord 0x00 Level(1, Ally, 0) [16,23] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT 0x4 EphraimLord 0x00 Level(1, Ally, 0) [14,23] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT 0x5 EphraimLord 0x00 Level(1, Ally, 0) [12,23] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT 0x6 EphraimLord 0x00 Level(1, Ally, 0) [13,21] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT 0x7 EphraimLord 0x00 Level(1, Ally, 0) [14,20] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT 0x8 EphraimLord 0x00 Level(1, Ally, 0) [18,23] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT 0x9 EphraimLord 0x00 Level(1, Ally, 0) [17,22] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT
+
+Bad:
+UNIT Pablo_2 General Pablo_2 Level(2,Enemy,0) [2,1] 0x0 0x0 0x0 0x0 [LightBrand,SteelLance,Elixir,0] NeverMoveAI
+UNIT 0x94 Thief Pablo_2 Level(9, Enemy, 1) [23,14] DropItem 0x00 0x0 0x00 KillingEdge EnergyRing 0 0 0x6 0x0C 0x0 0x0
+UNIT 0x94 Thief Pablo_2 Level(9, Enemy, 1) [13,13] DropItem 0x00 0x0 0x00 WindSword ChestKey ShortSpear 0 0x06 0x05 0x0 0x0
+UNIT 0x94 Cavalier Pablo_2 Level(11, Enemy, 1) [23,18] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 0x0 0x0
+UNIT 0x94 Fighter Pablo_2 Level(12, Enemy, 1) [23,19] 0x00 0x00 0x0 0x00 [Halberd] NoAI
+UNIT 0x94 Pirate Pablo_2 Level(10, Enemy, 1) [19,16] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI
+UNIT 0x94 Pirate Pablo_2 Level(11, Enemy, 1) [7,19] 0x00 0x00 0x0 0x00 [SteelAxe] NoAI
+UNIT 0x94 Pirate Pablo_2 Level(11, Enemy, 1) [6,22] 0x00 0x00 0x0 0x00 [IronAxe,HandAxe] NoAI
+UNIT 0x94 Mage Pablo_2 Level(11, Enemy, 1) [18,10] DropItem 0x00 0x0 0x00 [Thunder, Elfire] AttackInRangeAI 0x4 0x0
+UNIT 0x94 Monk Pablo_2 Level(11, Enemy, 1) [20,11] 0x00 0x00 0x0 0x00 [Shine] AttackInRangeAI 0x4 0x0
+UNIT 0x94 Mercenary Pablo_2 Level(12, Enemy, 1) [16,8] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 0x4 0x0
+UNIT 0x94 Archer Pablo_2 Level(11, Enemy, 1) [22,10] 0x00 0x00 0x0 0x00 [Longbow,SteelBow] AttackInRangeAI 0x4 0x0
+UNIT 0x94 Mercenary Pablo_2 Level(10, Enemy, 1) [17,1] 0x00 0x00 0x0 0x00 [SilverSword] ChaseOnceApproachedAI 0x4 0x0
+UNIT 0x94 Knight Pablo_2 Level(12, Enemy, 1) [20,2] 0x00 0x00 0x0 0x00 [ShortSpear] ChaseOnceApproachedAI 0x4 0x0
+UNIT 0x94 Mage Pablo_2 Level(12, Enemy, 1) [11,1] 0x00 0x00 0x0 0x00 [Elfire,Elixir] ChaseOnceApproachedAI 0x4 0x0
+UNIT 0x94 Cavalier Pablo_2 Level(11, Enemy, 1) [15,2] 0x00 0x00 0x0 0x00  Armourslayer GoddessIcon 0 0 0x0C 0x03 0x01 0x00
+UNIT 0x94 Fighter Pablo_2 Level(12, Enemy, 1) [10,5] 0x00 0x00 0x0 0x00 [SteelAxe,Hammer,0,0] AttackInRangeAI 0x04 0x00
+UNIT 0x95 Hero Pablo_2 Level(1,Enemy,1) [3,4] DropItem 0x00 0x0 0x00 [SteelSword,0,0,0] AttackInRangeAI 0x4 0x0
+UNIT 0x94 Mage 0x95 Level(11, Enemy, 1) [7,3] 0x00 0x00 0x0 0x00 [Elfire,0,0,0] MoveWithLeaderAI 0x4 0x0
+UNIT 0x94 Soldier 0x95 Level(12,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [SilverLance,Vulnerary,0,0] MoveWithLeaderAI 0x3 0x0
+UNIT 0x94 Priest Pablo_2 Level(15,Enemy,1) [4,0] 0x0 0x0 0x0 0x0 Physic PureWater 0 0 0xE 0x3 0x4 0x0
+UNIT 0x94 WyvernRider 0x95 Level(11,Enemy,1) [0,20] 0x0 0x0 0x0 0x0 [SteelLance,ShortSpear,0,0] MoveWithLeaderAI 0x4 0x0
+UNIT 0x94 WyvernRider 0x95 Level(10,Enemy,1) [0,20] 0x0 0x0 0x0 0x0 [SilverLance,Vulnerary,0,0] MoveWithLeaderAI 0x0 0x0
+UNIT 0x94 Shaman Pablo_2 Level(12,Enemy,1) [1,1] 0x0 0x0 0x0 0x0 Nosferatu 0 0 0 0x0C 0x03 0x03 0x00
+UNIT 0x94 Mercenary 0x95 Level(11,Enemy,1) [0,11] 0x0 0x0 0x0 0x0 [Lancereaver] MoveWithLeaderAI 0x4 0x0
+UNIT 0x94 Soldier Pablo_2 Level(11,Enemy,1) [5,10] 0x0 0x0 0x0 0x0 [BraveLance] MoveWithLeaderAI 0x4 0x0
+UNIT 0x94 Fighter 0x95 Level(10,Enemy,1) [1,16] 0x0 0x0 0x0 0x0 SteelAxe Vulnerary 0 0 0x0 0x7 0x3 0x0
+UNIT 0x94 Archer Pablo_2 Level(12,Enemy,1) [10,12] 0x0 0x0 0x0 0x0 [SteelBow] AttackInRangeAI 0x4 0x0
+UNIT 0x94 Fighter Pablo_2 Level(10,Enemy,1) [12,11] 0x0 0x0 0x0 0x0 [Tomahawk] NoAI
+UNIT
+
+NewRecruit:
+UNIT Ephraim Pirate 0x00 Level(11, Ally, 0) [20,23] 0x00 0x00 0x1 PirateMove [SteelAxe,Hatchet,Vulnerary] NoAI
+UNIT
+
+RaftSquad:
+UNIT 0x94 Fighter Pablo_2 Level(10,Enemy,1) [11,13] 0x0 0x0 0x1 Tenner0 [SilverAxe] NoAI
+UNIT 0x94 Knight Pablo_2 Level(11,Enemy,1) [11,13] 0x0 0x0 0x1 Tenner1 [SteelLance] NoAI
+UNIT 0x94 Knight Pablo_2 Level(11,Enemy,1) [11,13] 0x0 0x0 0x1 Tenner2 [SteelLance] NoAI
+UNIT 0x94 Cavalier Pablo_2 Level(11,Enemy,1) [11,13] 0x0 0x0 0x1 Tenner3 [SilverBlade] NoAI
+UNIT 0x94 Cavalier Pablo_2 Level(11,Enemy,1) [11,13] 0x0 0x0 0x1 Tenner4 [SteelLance] NoAI
+UNIT 0x94 Myrmidon Pablo_2 Level(11,Enemy,1) [11,13] 0x0 0x0 0x1 Tenner5 [SteelSword] NoAI
+UNIT
+
+Tenner0:
+REDA [11,11] 0 0 0 0
+Tenner1:
+REDA [8,11] 0 0 0 1
+Tenner2:
+REDA [8,12] 0 0 0 1
+Tenner3:
+REDA [14,11] 0 0 0 3
+Tenner4:
+REDA [14,12] 0 0 0 3
+Tenner5:
+REDA [12,12] 0 0 0 0
+PirateMove:
+REDA [20,21] 0 0 0 0
+
+ALIGN 4
+
+PirateEntry:
+ReinforcementEvent(NewRecruit)
+STAL 10
+FlashCursor(Ephraim,18)
+//Text(PLACEHOLDER)
+NoFade
+ENDA
+
+CheckForBoat:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x5 0xC 0x0
+
+ENUF 0xA
+GOTO 0x6
+
+LABEL 0x5
+ENUF 0xB
+
+LABEL 0x6
+NoFade
+ENDA
+
+TriggerRaft:
+ENUT 0xB
+ENUF 0xA
+NoFade
+ENDA
+
+RaftAttack:
+TILECHANGE 0x3
+STAL 24
+LoadReinforcements(RaftSquad)
+EVBIT_T 0x7
+ENDA
+
+FirstFlood:
+TILECHANGE 0x2
+NoFade
+ENDA
+
+SecondFlood:
+TILECHANGE 0x1
+NoFade
+ENDA
+
+ThirdFlood:
+TILECHANGE 0x5
+NoFade
+ENDA
+
+FourthFlood:
+TILECHANGE 0x6
+NoFade
+ENDA
+
+Rising1:
+TILEREVERSE 0x6
+CAM1 [11,8]
+STAL 12
+TILEREVERSE 0x1
+TILEREVERSE 0x2
+NoFade
+ENDA
+
+Rising2:
+TILEREVERSE 0x5
+NoFade
+ENDA
+
+Rising3:
+TILECHANGE 0x3
+NoFade
+ENDA
+
+
+ChTenArmoury:
+SHLI SteelSword SteelBlade SteelLance Javelin SteelAxe HandAxe SteelBow Longbow PiercingBow HuntersBow RunicBow
+ALIGN 4

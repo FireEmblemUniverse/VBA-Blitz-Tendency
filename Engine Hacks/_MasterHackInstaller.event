@@ -156,7 +156,38 @@ POP
   #include "IconRework/IconRework.event"   // Allows using standard Icon routines to draw skill icons
   // #include "PopupRework/PopupRework.event" // Allows to expand on vanilla popups by adding components
 
-ALIGN 4
+  ALIGN 4
+
+  Win_Usability:
+  #incbin "winbuttonusability.dmp"
+
+  Offscreen_Levelup:
+  #incbin "autolevel.dmp"
+  ALIGN 4
+
+  Win_Effect:
+  #incbin "winbutton.dmp"
+  POIN Offscreen_Levelup
+
+  // DismountMount hack
+  ALIGN 4
+  DismountRoutine:
+  #incbin "DismountMount Code/Dismount Routine.dmp"
+  POIN ClassTable
+  POIN MountedClassTable
+
+  DismountUsability:
+  #incbin "DismountMount Code/Dismount Usability Routine.dmp"
+  POIN MountedClassTable
+
+  MountRoutine:
+  #incbin "DismountMount Code/Mount Routine.dmp"
+  POIN ClassTable
+  POIN MountedClassTable
+
+  MountUsability:
+  #incbin "DismountMount Code/Mount Usability Routine.dmp"
+  POIN MountedClassTable
 
 
   //Repoint Unit Menu
@@ -232,8 +263,16 @@ ALIGN 4
   // MenuCommand(UMText_Switch,UMText_SwitchDesc,GreenText,SwitchUsability,SwitchCommand)   //switch
   UM_Drop
 
+  MenuCommand(UMText_Transform, UMText_TransformDesc, BlueText, DismountUsability, DismountRoutine)
+  MenuCommand(UMText_Revert, UMText_RevertDesc, BlueText, MountUsability, MountRoutine)
+
   UM_Item
   UM_Trade
   UM_Supply
+
+  #ifdef __DEBUG__
+  MenuCommand(UMText_Win, UMDesc_Win, GreenText, Win_Usability, Win_Effect)
+  #endif
+
   UM_Wait
   UM_Separator

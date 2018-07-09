@@ -10,7 +10,7 @@ Ross,ParagonID
 Neimi,RallyLukID
 Colm,RallySpdID
 Garcia,ColossusID
-Innes,BowRangeUpID
+Innes,LightWeightID
 Lute,ParagonID
 Natasha,SealLukID
 Cormag,RallyStrID
@@ -75,7 +75,7 @@ Bazba (Ch 3),SwordbreakerID
 Entombed (Ch 4),0x0
 Saar (Ch 5),AxebreakerID
 Novala (Ch 6),IgnisID
-Murray (Ch 7),LifeAndDeathID
+Murray (Ch 7),QuickDrawID
 Tirado (Ch 8),SealDefID
 Binks (Ch 9A),BowfaireID
 Pablo (Ch 10A),DartingBlowID
