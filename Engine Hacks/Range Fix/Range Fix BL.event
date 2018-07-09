@@ -1,0 +1,22 @@
+All_Weapons_All_Squares:
+#incbin "All Weapons All Squares.dmp"
+POIN All_Moveable_Squares|1
+
+ALIGN 4
+All_Staffs_All_Squares:
+#incbin "All Staffs All Squares.dmp"
+POIN All_Moveable_Squares|1
+
+ALIGN 4
+Non_Unlock_Jump: //ldr r3, bx r3
+SHORT 0x4B00 0x4718
+POIN Target_Routine_For_Non_Unlock|1
+
+Fortify_Jump:
+SHORT 0x4B00 0x4718
+POIN Target_Routine_For_Fortify|1
+
+ALIGN 4
+Can_Attack_Target:
+#incbin "Can Attack Target.dmp"
+POIN ItemTable

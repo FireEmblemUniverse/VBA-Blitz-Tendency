@@ -12,14 +12,25 @@
 #ifndef DebuffTable
     #define DebuffTable 0x203F100
 #endif
+#ifndef ClassTable
+  #define ClassTable 0x807110
+#endif
+#ifndef BattleQuoteTable
+  #define BattleQuoteTable 0x9EC6BC
+#endif
+#ifndef DeathQuoteTable
+  #define DeathQuoteTable 0x9ECD4C
+#endif
 
 #define LunarBrace MoonBracelet
 #define SolarBrace SunBracelet
 
 #include "Engine Hacks/Skill System/skill_definitions.event"
 
-#define BattleQuoteTable 0x9EC6BC
-#define DeathQuoteTable 0x9ECD4C
+//Class definitions
+#define BlitzLord 0x2
+#define VoidMonster 0x3
+#define VoidMaster 0x4
 
 // Unit definitions
 #define Vedge 0x1
@@ -27,6 +38,13 @@
 #define Naught 0x3
 #define Chiva 0x4
 #define Verge 0x5
+#define Anna 0x6
+#define Fanni 0xD
+#define Murat 0xF
+#define Ersatz 0x1F
+
+#define Jazzak 0x42
+#define Dennis 0x50
 
 #define Ximena 0xA
 
@@ -37,18 +55,19 @@
 #define BlitzAxe Rapier
 #define ExtraBow ShortBow
 #define PiercingBow 0xBC
+#define PiercingBowIconID 0xAD
 #define HuntersBow 0xBD
+#define HuntersBowIconID 0xAE
+#define RunicBow 0xBE
+#define RunicBowIconID PiercingBowIconID //TODO
 #define PowerGem BlackGem
 
 //Chapter definitions
-
 #define Chapter5 0x6
 #define Chapter5Map 0x1F
 #define Chapter5Changes 0x20
 #define Chapter5Events 0x21
 #define Chapter6 0x7
-
-// #define __DEBUG__ // Uncomment to get the Debug startup menu :p
 
 #define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
 #define TileChange(X,Y) "SETVAL 0xB Coords(X,Y) ; TILECHANGE 0xFFFF"

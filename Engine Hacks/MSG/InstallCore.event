@@ -12,6 +12,7 @@
 
 #include "3rdParty/InjectMovGetters.event"
 #include "3rdParty/InjectConGetters.event"
+#include "3rdParty/Comparators.event"
 
 PUSH
 	ORG 0x19190
@@ -49,12 +50,12 @@ PUSH
 	ORG 0x189B8
 	prGotoAidGetter:
 		jumpToHack(prAidGetter)
-	
+
 	// Replaces part of old spd getter
 	ORG 0x19224
 	prGotoMovGetter:
 		jumpToHack(prMovGetter)
-	
+
 	// Replaces part of old res getter
 	ORG 0x19284
 	prGotoConGetter:
