@@ -1,0 +1,210 @@
+//Made by CrazyColorz5 of Fire Emblem Universe
+//Based off of Camtech75's Skeleton
+#include EAstdlib.event
+
+#define ThrThrD_ID 0x02 //This... -is- chapter 2, right?
+EventPointerTable(ThrThrD_ID, ThrThrD_ThisChapter)
+
+#define TTD_Level 3
+
+ThrThrD_ThisChapter:
+
+POIN ThrThrD_TurnBasedEvents
+POIN ThrThrD_CharacterBasedEvents
+POIN ThrThrD_LocationBasedEvents
+POIN ThrThrD_MiscBasedEvents
+POIN ThrThrD_Dunno ThrThrD_Dunno ThrThrD_Dunno
+POIN ThrThrD_Tutorial
+POIN ThrThrD_Ballista1 ThrThrD_Ballista2
+POIN ThrThrD_Units ThrThrD_Units
+POIN $0 $0 $0 $0 $0 $0
+POIN ThrThrD_BeginningScene ThrThrD_EndingScene
+
+ALIGN 4
+ThrThrD_TurnBasedEvents:
+TURN 0x9 SetEventA [0, 0] 0
+TURN 0xA 
+END_MAIN
+
+ALIGN 4
+ThrThrD_CharacterBasedEvents:
+//CHAR
+END_MAIN
+
+ALIGN 4
+ThrThrD_LocationBasedEvents:
+Chest(PoisonBow,   9, 1)
+Chest(PoisonSword, 2, 6)
+Chest(ToxinLance, 20,10)
+END_MAIN
+
+ALIGN 4
+ThrThrD_MiscBasedEvents:
+AREA 0x0 VictoryCheck [ 4, 2] [ 4, 2]
+AREA 0x0 VictoryCheck [19, 1] [19, 1]
+AREA 0x0 VictoryCheck [10,10] [10,10]
+CauseGameOverIfLordDies
+//AFEV
+END_MAIN
+
+
+ALIGN 4
+ThrThrD_Dunno:
+END_MAIN
+
+ALIGN 4
+ThrThrD_Tutorial:
+END_MAIN
+
+ALIGN 4
+ThrThrD_Ballista1:
+BLST
+END_MAIN
+
+ALIGN 4
+ThrThrD_Ballista2:
+BLST
+END_MAIN
+
+ALIGN 4
+ThrThrD_Units:
+UNIT Vedge BlitzLord 0x00 Level(3, Ally, 1)   [10,10] 0x00 0x00 0x0 0x00 [SteelAxe, BlitzAxe, Elixir, MoonBracelet] NoAI
+UNIT Verge Swordmaster Vedge Level(1, Ally, 1) [ 9,11] 0x00 0x00 0x0 0x00 [IronSword, SteelLance, Javelin, Vulnerary] NoAI
+UNIT Null Cavalier Vedge Level(2, Ally, 1)     [ 9,10] 0x00 0x00 0x0 0x00 [SteelSword, IronLance, IronBlade, Vulnerary] NoAI
+UNIT Naught Cavalier Vedge Level(2, Ally, 1)   [11,10] 0x00 0x00 0x0 0x00 [ExtraBow, PiercingBow, HuntersBow, IronBow] NoAI
+UNIT Chiva Archer Vedge Level(3, Ally, 1)      [11, 9] 0x00 0x00 0x0 0x00 [SteelBlade, Shamshir, SilverSword, Vulnerary] NoAI
+UNIT Anna Thief Vedge Level(4, Ally, 1)        [11,11] 0x00 0x00 0x0 0x00 [IronSword, KillingEdge, Lockpick, WhiteGem] NoAI
+UNIT
+
+ALIGN 4
+ThrThrD_Axeboy:
+UNIT 0x7 Brigand Vedge Level(3, Ally, 1)       [ 9, 9] 0x00 0x00 0x0 0x00 [PoisonAxe, IronAxe, Hatchet, Antitoxin] NoAI
+UNIT
+
+ALIGN 4
+ThrThrD_EnemyLeft:
+UNIT 0x44 Tarvos 0x00 Level(TTD_Level+8, Enemy, 1)   [ 4, 2] 0x02 0x00 0x00 0x00 [DevilAxe, DevilAxe, DevilAxe] GuardTileAI
+UNIT 0x84 Bonewalker 0x44 Level(TTD_Level+3, Enemy, 1) [3,1] 0x00 0x00 0x00 0x00 [WindSword] AttackInRangeAI
+UNIT 0x84 Bonewalker_Bow 0x44 Level(TTD_Level+3, Enemy, 1) [3,0] 0x00 0x00 0x00 0x00 [IronBow] AttackInRangeAI
+UNIT 0x84 Bael 0x44 Level(TTD_Level+3, Enemy, 1) [3,0] 0x00 0x00 0x00 0x00 [PoisonClaw] AttackInRangeAI
+UNIT 0x84 Gargoyle 0x44 Level(TTD_Level+3, Enemy, 1) [9,4] 0x00 0x00 0x00 0x00 [Horseslayer] AttackInRangeAI
+UNIT 0x84 Tarvos 0x44 Level(TTD_Level+3, Enemy, 1) [1,7] 0x00 0x00 0x00 0x00 [PoisonAxe, Antitoxin] AttackInRangeAI
+UNIT
+
+ALIGN 4
+ThrThrD_EnemyRight:
+UNIT 0x45 Monk 0x00 Level(TTD_Level+4, Enemy, 1)   [19, 1] 0x02 0x00 0x00 0x00 [DemonSurge, Fiendcleaver] GuardTileAI
+UNIT 0x85 Soldier 0x45 Level(TTD_Level+5, Enemy, 1)  [18, 2] 0x00 0x00 0x00 0x00 [ShortSpear] AttackInRangeAI
+UNIT 0x85 Cavalier 0x45 Level(TTD_Level+3, Enemy, 1)  [19, 2] 0x00 0x00 0x00 0x00 [IronSword] AttackInRangeAI
+UNIT 0x85 Knight 0x45 Level(TTD_Level+3, Enemy, 1)  [18, 3] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT 0x85 Fighter 0x45 Level(TTD_Level+3, Enemy, 1)  [15, 8] 0x00 0x00 0x00 0x00 [SteelAxe, Vulnerary] GuardTileAI
+UNIT 0x85 Archer 0x45 Level(TTD_Level+3, Enemy, 1)  [20, 7] 0x00 0x00 0x00 0x00 [ExtraBow] GuardTileAI
+UNIT
+
+ALIGN 4
+ThrThrD_ReinLeft:
+UNIT 0x84 Tarvos 0x44 Level(TTD_Level, Enemy, 1)   [ 4, 0] 0x00 0x00 0x00 0x00 [IronAxe] PursueWithoutHeedAI
+UNIT
+
+ALIGN 4
+ThrThrD_ReinBotLeft:
+UNIT 0x84 Bonewalker 0x44 Level(TTD_Level, Enemy, 1)   [ 0,10] 0x00 0x00 0x00 0x00 [IronSword] PursueWithoutHeedAI
+UNIT
+
+ALIGN 4
+ThrThrD_ReinMid:
+UNIT 0x84 Revenant 0x44 Level(TTD_Level, Enemy, 1)   [10, 7] 0x00 0x00 0x00 0x00 [RottenClaw] PursueWithoutHeedAI
+UNIT
+
+ALIGN 4
+ThrThrD_ReinUpMid:
+UNIT 0x85 Bonewalker_Bow 0x45 Level(TTD_Level, Enemy, 1)   [12, 0] 0x02 0x00 0x00 0x00 [PoisonBow, Antitoxin] PursueWithoutHeedAI
+UNIT
+
+ALIGN 4
+ThrThrD_ReinRight:
+UNIT 0x85 Cavalier 0x45 Level(TTD_Level, Enemy, 1)   [21, 2] 0x00 0x00 0x00 0x00 [IronSword] PursueWithoutHeedAI
+UNIT
+
+ALIGN 4
+ThrThrD_ReinRightRoom:
+UNIT 0x85 Knight 0x45 Level(TTD_Level, Enemy, 1)   [16,11] 0x00 0x00 0x00 0x00 [SlimLance] PursueWithoutHeedAI
+UNIT
+
+ALIGN 4
+VictoryCheck:
+//#Stores the char id of unit at given position into Slot 0xC 
+//CHECK_AT, 0x2E20, 4, -game:FE8 -indexMode:8
+//    Position, 2, 2, -coordinates:2 -preferredBase:10
+
+SVAL 0xB 0x020004 //represents tile [4, 2]
+CHECK_ALLEGIANCE 0xFFFE //msC = 0x0 if unit at coord defined by slot 0xB is a Player unit
+BNE 0x10 0xC 0x0 //branch to Label 0x10 if slot C is not 0
+  SVAL 0xB 0x010013 //represents tile [19, 1]
+  CHECK_ALLEGIANCE 0xFFFE //msC = 0x0 ...
+  BNE 0x10 0xC 0x0 //branch...
+    SVAL 0xB 0x0A000A //represents tile [10, 10]
+    CHECK_ALLEGIANCE 0xFFFE //msC = 0x0 ...
+    BNE 0x10 0xC 0x0 //branch...
+CALL ThrThrD_EndingScene
+LABEL 0x10
+ENDB
+
+ALIGN 4
+RandomTimedSpawns: //as stolen from circles
+  RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
+  //Now get remainder mod 9
+  SMOV r1 0x9
+  SDIV slotsParam(r2, rC, r1) //r2 = rC/9
+  SMUL slotsParam(r1, r2)     //r1 = r2*9
+  SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
+  BNE 0x0 r1 0
+  ReinforcementEvent(ThrThrD_ReinUpRight)    //Remainder was 0 (right)
+  LABEL 0x0
+  SMOV r2 1
+  BNE 0x1 r1 r2
+  ReinforcementEvent(ThrThrD_ReinUpLeft) //R = 1
+  LABEL 0x1
+  SMOV r2 2
+  BNE 0x2 r1 r2
+  ReinforcementEvent(ThrThrD_ReinMid) // r = 2
+  LABEL 0x2
+  SMOV r2 3
+  BNE 0x3 r1 r2
+  ReinforcementEvent(ThrThrD_ReinRightRoom) // r =3
+  LABEL 0x3
+  SMOV r2 4
+  BNE 0x4 r1 r2
+  ReinforcementEvent(ThrThrD_ReinUpMid) // r = 4
+  LABEL 0x4
+  SMOV r2 4
+  BNE 0x5 r1 r2
+  ReinforcementEvent(ThrThrD_ReinBotLeft) // r = 5
+  LABEL 0x5
+  //no reinforcement. r = 6, 7, 8
+  NoFade
+LABEL 0x8
+
+ENDA
+
+ALIGN 4
+ThrThrD_BeginningScene:
+VCWF 0
+LOAD1 0x1 ThrThrD_EnemyLeft
+ENUN
+LOAD1 0x1 ThrThrD_EnemyRight
+ENUN
+LOAD2 0x1 ThrThrD_Units
+LOAD1 0x1 ThrThrD_Axeboy
+ENUN
+TEXTSHOW PlaceholderText
+//text??????
+ENDB
+
+
+ThrThrD_EndingScene:
+TEXTSHOW PlaceholderText
+//text?????????
+MNC2 0x03 //TODO: Replace with proper code for next chapter.
+ENDA
+
