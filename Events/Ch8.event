@@ -330,7 +330,7 @@ HasteMakesWaste12:
 //if Ersatz is alive and has not spoken with Fanni,
 //random chance that he gives you a superfluous warning.
 
-//CHECK_EVENTID 0x14 //if talk not activated
+CHECK_EVENTID 0x14 //if talk not activated
 BEQ 0x1 0xC 0x0 //if the result of this check is not 1; i.e. false
 
 CHECK_ALIVE 0x1f
