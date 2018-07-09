@@ -9,3 +9,11 @@ Piercing Bow[X]
 
 ## nameHuntersBow
 Hunter's Bow[X]
+
+## namePowerGem
+Power Gem[X]
+
+##descPowerGem
+A mysterious gem giving[NL]
+its weilder special ability[X]
+
