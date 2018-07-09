@@ -6,7 +6,7 @@ Prologue: IT BEGINS AGAIN[X]
 1: Pirate Peril[X]
 
 #0x162
-2: [X]
+2: Throne Throwdown[X]
 
 #0x163
 3: [X]
