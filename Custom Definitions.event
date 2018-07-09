@@ -33,6 +33,7 @@
 #define Verge 0x5
 #define Anna 0x6
 #define Fanni 0xD
+#define Murat 0xF
 #define Ersatz 0x1F
 
 #define Jazzak 0x42
