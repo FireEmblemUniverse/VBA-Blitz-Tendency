@@ -50,5 +50,7 @@
 [CurrentPortrait] = [0xFF][0xFF]
 [LoadCurrent] = [LoadFace][0xFF][0xFF]
 
-[LoadVedge] = [LoadFace][0x1][0x1]
+[VedgePortrait] = [0x2][0x1]
+
+[LoadVedge] = [LoadFace][VedgePortrait]
 [LoadXimena] = [LoadFace][0xA][0x1]

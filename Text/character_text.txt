@@ -1,17 +1,39 @@
 ## nameVedge
 Vedge[X]
 
+## descVedge
+The edgy son of the legendary[N]
+hero Void. Here for vengeance.[X]
+
 ## nameNull
 Null[X]
+
+## descNull
+Grew up with very little.[N]
+He says it didn't affect[N]
+him very much.[X]
 
 ## nameNaught
 Naught[X]
 
+## descNaught
+Although well-performing in his[N]
+ranks, his peers describe him as[N]
+having a boring personality.[X]
+
 ## nameChiva
 Chiva[X]
 
+## descChiva
+An archer who has been honing[N]
+her craft for years. That's all.[X]
+
 ## nameVerge
 Verge[X]
+
+## descVerge
+A mentor to Vedge. Some say[N]
+he's been a bad influence.[X]
 
 ## nameXimena
 Ximena[X]
@@ -19,3 +41,31 @@ Ximena[X]
 ## descXimena
 A quiet Shaman from[NL]
 a secluded village.[X]
+
+## FanniName
+Fanni[X]
+
+## FanniDesc
+Flunked out of knight school. At[N]
+least she knows what the best stat is.[X]
+
+## ErsatzName
+Ersatz[X]
+
+## ErsatzDesc
+The last of a manakete tribe.[N]
+Claims to be a strategist.[X]
+
+## DennisName
+Dennis[X]
+
+## DennisDesc
+A former philanthropist tasked[N]
+with exterminating manakete tribes.[X]
+
+## MuratName
+Murat[X]
+
+## MuratDesc
+Lives on the open ocean, apparently. Comes [N]
+ashore only to terrorize landlubbers.[X]
