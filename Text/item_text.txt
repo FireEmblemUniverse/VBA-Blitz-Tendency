@@ -14,6 +14,5 @@ Hunter's Bow[X]
 Power Gem[X]
 
 ##descPowerGem
-A mysterious gem giving[NL]
-its weilder special ability[X]
-
+A mysterious gem giving its[NL]
+weilder special ability. +10 crit[X]

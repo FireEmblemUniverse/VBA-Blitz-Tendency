@@ -12,3 +12,10 @@ Chiva[X]
 
 ## nameVerge
 Verge[X]
+
+## nameXimena
+Ximena[X]
+
+## descXimena
+A quiet Shaman from[NL]
+a secluded village.[X]
