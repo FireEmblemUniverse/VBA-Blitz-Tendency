@@ -49,7 +49,7 @@
 #define Ximena 0xA
 
 #define Grudge 0x4A
-#define Ch5Generic 0x4B
+#define Ch5Generic 0x8A
 
 //Item definitions
 #define BlitzAxe Rapier
