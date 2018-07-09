@@ -34,3 +34,9 @@ Verge[X]
 ## descVerge
 A mentor to Vedge. Some say[N]
 he's been a bad influence.[X]
+
+## nameAnna
+Anna[X]
+
+## nameFaust
+Faust[X]

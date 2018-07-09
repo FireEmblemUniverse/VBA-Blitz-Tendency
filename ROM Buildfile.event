@@ -28,6 +28,9 @@
     //Maps
     #include "Maps/Master Map Installer.event"
 
+    //Palettes
+    #include "Battle Palettes/Palette Setup.event"
+
     MESSAGE Used free space ends at currentOffset
     MESSAGE Proc_Counter
 #else
