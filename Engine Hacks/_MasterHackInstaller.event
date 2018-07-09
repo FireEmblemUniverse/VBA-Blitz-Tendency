@@ -169,6 +169,26 @@ POP
   #incbin "winbutton.dmp"
   POIN Offscreen_Levelup
 
+  // DismountMount hack
+  ALIGN 4
+  DismountRoutine:
+  #incbin "DismountMount Code/Dismount Routine.dmp"
+  POIN ClassTable
+  POIN MountedClassTable
+
+  DismountUsability:
+  #incbin "DismountMount Code/Dismount Usability Routine.dmp"
+  POIN MountedClassTable
+
+  MountRoutine:
+  #incbin "DismountMount Code/Mount Routine.dmp"
+  POIN ClassTable
+  POIN MountedClassTable
+
+  MountUsability:
+  #incbin "DismountMount Code/Mount Usability Routine.dmp"
+  POIN MountedClassTable
+
 
   //Repoint Unit Menu
   PUSH
@@ -242,6 +262,9 @@ POP
   // MenuCommand(UMText_Transfer,UMText_TransferDesc,GreenText,TransferUsability,TransferTarget) //transfer
   // MenuCommand(UMText_Switch,UMText_SwitchDesc,GreenText,SwitchUsability,SwitchCommand)   //switch
   UM_Drop
+
+  MenuCommand(UMText_Transform, UMText_TransformDesc, BlueText, DismountUsability, DismountRoutine)
+  MenuCommand(UMText_Revert, UMText_RevertDesc, BlueText, MountUsability, MountRoutine)
 
   UM_Item
   UM_Trade
