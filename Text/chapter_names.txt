@@ -21,7 +21,7 @@ Prologue: IT BEGINS AGAIN[X]
 6: Toy Box[X]
 
 #0x168
-7: [X]
+7: The Chests are to Blame[X]
 
 #0x169
 8: Know Thine Enemy...[X]
