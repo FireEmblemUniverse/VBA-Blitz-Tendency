@@ -3,6 +3,7 @@
 //EventPointerTable(0x7F,ThisChapter)
 EventPointerTable(0x07,ThisChapter)
 
+
 ThisChapter:
 POIN TurnBasedEvents
 POIN CharacterBasedEvents
@@ -16,18 +17,18 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 Units:
-UNIT Eirika EphraimMasterLord 0x00 Level(10, Ally, 0) [15,28] 0x00 0x00 0x0 0x00 [Reginleif] NoAI 
-UNIT Seth Swordmaster 0x00 Level(10, Ally, 0) [14,29] 0x00 0x00 0x0 0x00 [SilverSword] NoAI 
-UNIT Gilliam Paladin 0x00 Level(10, Ally, 0) [15,29] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
-UNIT Ross Paladin 0x00 Level(10, Ally, 0) [14,28] 0x00 0x00 0x0 0x00 [Spear] NoAI 
-UNIT Colm Sniper 0x00 Level(10, Ally, 0) [15,27] 0x00 0x00 0x0 0x00 [SilverBow] NoAI 
-UNIT Vanessa Bishop 0x00 Level(10, Ally, 0) [12,29] 0x00 0x00 0x0 0x00 [Physic, Lightning] NoAI 
-UNIT Lute WyvernLord 0x00 Level(10, Ally, 0) [17,28] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
-UNIT Vanessa General 0x00 Level(10, Ally, 0) [16,27] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI 
-UNIT Neimi Rogue 0x00 Level(10, Ally, 0) [17,27] 0x00 0x00 0x0 0x00 [KillingEdge] NoAI 
-UNIT Artur Hero 0x00 Level(10, Ally, 0) [16,28] 0x00 0x00 0x0 0x00 [HandAxe, Armourslayer] NoAI 
-UNIT Garcia Sage 0x00 Level(10, Ally, 0) [16,29] 0x00 0x00 0x0 0x00 [Elfire] NoAI 
-UNIT Natasha Warrior 0x00 Level(10, Ally, 0) [17,29] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI 
+UNIT Eirika EphraimMasterLord 0x00 Level(10, Ally, 1) [15,28] 0x00 0x00 0x0 0x00 [Reginleif] NoAI 
+UNIT Seth Swordmaster 0x00 Level(10, Ally, 1) [14,29] 0x00 0x00 0x0 0x00 [SilverSword] NoAI 
+UNIT Gilliam Paladin 0x00 Level(10, Ally, 1) [15,29] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
+UNIT Ross Paladin 0x00 Level(10, Ally, 1) [14,28] 0x00 0x00 0x0 0x00 [Spear] NoAI 
+UNIT Colm Sniper 0x00 Level(10, Ally, 1) [15,27] 0x00 0x00 0x0 0x00 [SilverBow] NoAI 
+UNIT Vanessa Bishop 0x00 Level(10, Ally, 1) [12,29] 0x00 0x00 0x0 0x00 [Physic, Lightning] NoAI 
+UNIT Lute WyvernLord 0x00 Level(10, Ally, 1) [17,28] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
+UNIT Vanessa General 0x00 Level(10, Ally, 1) [16,27] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI 
+UNIT Neimi Rogue 0x00 Level(10, Ally, 1) [17,27] 0x00 0x00 0x0 0x00 [KillingEdge] NoAI 
+UNIT Artur Hero 0x00 Level(10, Ally, 1) [16,28] 0x00 0x00 0x0 0x00 [HandAxe, Armourslayer] NoAI 
+UNIT Garcia Sage 0x00 Level(10, Ally, 1) [16,29] 0x00 0x00 0x0 0x00 [Elfire] NoAI 
+UNIT Natasha Warrior 0x00 Level(10, Ally, 1) [17,29] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI 
 UNIT
 
 
@@ -39,6 +40,11 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+House(0x0,EndingScene,20,18) //arrive, assuming you can visit a gate
+Village(0x7,ChannelingXavier,29,5)
+Village(0x8,SilverAxeVillage,2,25)
+Chest(IronSword,12,11) //the Chest of Loss, everyone's "favourite" meme *shrug*
+//make it the legendary sword
 END_MAIN
 
 MiscBasedEvents:
@@ -87,6 +93,20 @@ EventAfterExitingPrepScreen:
 Text(PlaceholderText)
 ENDA
 
+SilverAxeVillage:
+Text(PlaceholderText)
+SVAL 0x3 SilverAxe
+GIVEITEMTO 0xFFFF
+ENDA
+
+ChannelingXavier:
+Text(PlaceholderText)
+LOAD1 0x01 XavierPeople
+REMA
+ENDA
+
+
+
 
 // Manual Movement
 
@@ -94,73 +114,79 @@ ENDA
 
 // Units
 MetalGear:
-UNIT Hayden Assassin Hayden Level(20, Enemy, 0) [11,2] 0x00 0x00 0x0 0x00 [KillingEdge, PoisonSword] GuardTileAI 
-UNIT HaydenCC Berserker Hayden Level(20, Enemy, 1) [13,1] 0x00 0x00 0x0 0x00 [PoisonAxe] ChaseOnceApproachedAI 
-UNIT HaydenCC Berserker Hayden Level(20, Enemy, 1) [12,5] 0x00 0x00 0x0 0x00 [PoisonAxe] ChaseOnceApproachedAI 
-UNIT HaydenCC WyvernLord Hayden Level(20, Enemy, 1) [12,8] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI 
-UNIT HaydenCC WyvernLord Hayden Level(20, Enemy, 1) [9,11] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI 
-UNIT HaydenCC WyvernLord Hayden Level(20, Enemy, 1) [15,11] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI 
-//UNIT HaydenCC Sniper Hayden Level(20, Enemy, 1) [13,6] 0x00 0x00 0x0 0x00 [PoisonBow] AttackInRangeAI 
-UNIT HaydenCC Sniper Hayden Level(20, Enemy, 1) [6,0] 0x00 0x00 0x0 0x00 [PoisonBow] AttackInRangeAI 
-UNIT HaydenCC Rogue Hayden Level(20, Enemy, 1) [3,3] 0x00 0x00 0x0 0x00 [PoisonSword] StealingThiefAI 
-UNIT HaydenCC Rogue Hayden Level(20, Enemy, 1) [7,4] 0x00 0x00 0x0 0x00 [PoisonSword] StealingThiefAI 
-UNIT HaydenCC Rogue Hayden Level(20, Enemy, 1) [16,1] 0x00 0x00 0x0 0x00 [PoisonSword] StealingThiefAI 
-UNIT Joshua Thief Hayden Level(9, Enemy, 1) [10,5] 0x00 0x00 0x0 0x00 [BodyRing, GoldGem, GoldGem, GoldGem] LootingThiefAI 
+UNIT 0x23 Assassin Hayden Level(20, Enemy, 0) [18,9] 0x00 0x00 0x0 0x00 [KillingEdge, PoisonSword] GuardTileAI //Kojima, or "Nanomachines"
+UNIT 0xB6 Berserker Hayden Level(20, Enemy, 1) [23,10] 0x00 0x00 0x0 0x00 [PoisonAxe] ChaseOnceApproachedAI 
+UNIT 0xB6 Berserker Hayden Level(20, Enemy, 1) [11,0] 0x00 0x00 0x0 0x00 [PoisonAxe] ChaseOnceApproachedAI 
+UNIT 0xB6 WyvernLord Hayden Level(20, Enemy, 1) [12,8] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI 
+UNIT 0xB6 WyvernLord Hayden Level(20, Enemy, 1) [9,11] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI 
+UNIT 0xB6 WyvernLord Hayden Level(20, Enemy, 1) [15,11] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI 
+UNIT 0xB6 Sniper Hayden Level(20, Enemy, 1) [17,7] 0x00 0x00 0x0 0x00 [IronBallista] AttackInRangeAI 
+UNIT 0xB6 Sniper Hayden Level(20, Enemy, 1) [18,8] 0x00 0x00 0x0 0x00 [IronBallista] AttackInRangeAI 
+UNIT 0xB6 Rogue Hayden Level(20, Enemy, 1) [18,3] 0x00 0x00 0x0 0x00 [PoisonSword] StealingThiefAI 
+UNIT 0xB6 Rogue Hayden Level(20, Enemy, 1) [25,5] 0x00 0x00 0x0 0x00 [PoisonSword] StealingThiefAI 
+UNIT 0xB6 Rogue Hayden Level(20, Enemy, 1) [29,10] 0x00 0x00 0x0 0x00 [PoisonSword] StealingThiefAI 
+UNIT Joshua Thief Hayden Level(9, Enemy, 1) [0,5] 0x00 0x00 0x0 0x00 [BodyRing, GoldGem, GoldGem, GoldGem] LootingThiefAI //Inafune, or Con Man
 UNIT
 
 FinalFantasy:
-UNIT Riev Sage Riev Level(20, Enemy, 1) [8,16] 0x00 0x00 0x0 0x00 [Forblaze] GuardTileAI 
-UNIT RievCC Sage Riev Level(20, Enemy, 1) [6,14] 0x00 0x00 0x0 0x00 [Fimbulvetr] AttackInRangeAI 
-UNIT RievCC Sage Riev Level(20, Enemy, 1) [8,19] 0x00 0x00 0x0 0x00 [Bolting] GuardTileAI 
-UNIT RievCC Hero Riev Level(10, Enemy, 1) [1,19] 0x00 0x00 0x0 0x00 [SilverSword] GuardTileAI 
-UNIT RievCC Hero Riev Level(10, Enemy, 1) [4,28] 0x00 0x00 0x0 0x00 [SilverSword] GuardTileAI 
-UNIT RievCC Paladin Riev Level(10, Enemy, 1) [0,22] 0x00 0x00 0x0 0x00 [LightBrand] ChaseOnceApproachedAI 
-UNIT RievCC Paladin Riev Level(10, Enemy, 1) [5,21] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
-UNIT RievCC Summoner Riev Level(10, Enemy, 1) [0,26] 0x00 0x00 0x0 0x00 [Luna, Flux] AttackInRangeAI 
-UNIT RievCC Bishop Riev Level(10, Enemy, 1) [0,17] 0x00 0x00 0x0 0x00 [Fortify, Purge] HealUnits 
-UNIT RievCC Bard Riev Level(10, Enemy, 1) [10,15] 0x00 0x00 0x0 0x00 [0x00] DoNothing 
-UNIT RievCC Warrior Riev Level(10, Enemy, 1) [4,12] 0x00 0x00 0x0 0x00 [SilverAxe] PursueWithoutHeedAI 
-UNIT RievCC Cleric Riev Level(1, Enemy, 1) [4,24] 0x00 0x00 0x0 0x00 [Heal] HealUnits 
-UNIT RievCC Mage Riev Level(1, Enemy, 1) [5,24] 0x00 0x00 0x0 0x00 [Fire] PursueWithoutHeedAI 
-UNIT RievCC Berserker Riev Level(10, Enemy, 1) [0,14] 0x00 0x00 0x0 0x00 [Hammer] PursueWithoutHeedAI 
-UNIT RievCC Assassin Riev Level(10, Enemy, 1) [7,8] 0x00 0x00 0x0 0x00 [SteelSword] StealingThiefAI 
-UNIT RievCC Druid Riev Level(10, Enemy, 1) [5,16] 0x00 0x00 0x0 0x00 [Berserk, Flux] AttackInRangeAI 
+UNIT 0x24 Sage Riev Level(20, Enemy, 0) [8,16] 0x00 0x00 0x0 0x00 [Forblaze] GuardTileAI //Sakaguchi, whose fantasy was far from final
+UNIT 0xB7 Sage Riev Level(10, Enemy, 1) [6,14] 0x00 0x00 0x0 0x00 [Fimbulvetr] AttackInRangeAI 
+//UNIT 0xB7 Sage Riev Level(10, Enemy, 1) [8,19] 0x00 0x00 0x0 0x00 [Bolting] GuardTileAI 
+//UNIT 0xB7 Hero Riev Level(10, Enemy, 1) [1,19] 0x00 0x00 0x0 0x00 [SilverSword] GuardTileAI 
+//UNIT 0xB7 Hero Riev Level(10, Enemy, 1) [4,28] 0x00 0x00 0x0 0x00 [SilverSword] GuardTileAI 
+UNIT 0xB7 Paladin Riev Level(10, Enemy, 1) [0,20] 0x00 0x00 0x0 0x00 [LightBrand] ChaseOnceApproachedAI 
+UNIT 0xB7 WyvernKnight Riev Level(10, Enemy, 1) [6,21] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
+UNIT 0xB7 Summoner Riev Level(10, Enemy, 1) [2,25] 0x00 0x00 0x0 0x00 [Luna, Flux] AttackInRangeAI 
+UNIT 0xB7 Bishop Riev Level(10, Enemy, 1) [1,20] 0x00 0x00 0x0 0x00 [Fortify, Purge] HealUnits 
+UNIT 0xB7 Bard Riev Level(10, Enemy, 1) [0,1] 0x00 0x00 0x0 0x00 [0x00] DoNothing 
+UNIT 0xB7 Warrior Riev Level(10, Enemy, 1) [5,13] 0x00 0x00 0x0 0x00 [SilverAxe] PursueWithoutHeedAI 
+UNIT 0xB7 Cleric Riev Level(1, Enemy, 1) [0,5] 0x00 0x00 0x0 0x00 [Heal] HealUnits 
+UNIT 0xB7 Mage Riev Level(1, Enemy, 1) [1,5] 0x00 0x00 0x0 0x00 [Fire] PursueWithoutHeedAI 
+UNIT 0xB7 Berserker Riev Level(10, Enemy, 1) [4,17] 0x00 0x00 0x0 0x00 [Hammer] PursueWithoutHeedAI 
+UNIT 0xB7 Assassin Riev Level(10, Enemy, 1) [6,8] 0x00 0x00 0x0 0x00 [SteelSword] StealingThiefAI 
+UNIT 0xB7 Druid Riev Level(10, Enemy, 1) [3,3] 0x00 0x00 0x0 0x00 [Berserk, Flux] AttackInRangeAI 
 UNIT
 
 Castlevania1:
-UNIT Lyon_Final Hero Riev Level(20, Enemy, 0) [31,31] 0x00 0x00 0x0 0x00 [SilverAxe] GuardTileAI 
-UNIT Lyon_Ch17 Entombed Lyon_Final Level(10, Enemy, 1) [30,31] 0x00 0x00 0x0 0x00 [SharpClaw] AttackInRangeAI 
-UNIT Lyon_Ch17 Entombed Lyon_Final Level(10, Enemy, 1) [31,30] 0x00 0x00 0x0 0x00 [SharpClaw] AttackInRangeAI 
-UNIT Lyon_Ch17 Wight_Bow Lyon_Final Level(10, Enemy, 1) [31,24] 0x00 0x00 0x0 0x00 [SilverBow] AttackInRangeAI 
-UNIT Lyon_Ch17 Wight_Bow Lyon_Final Level(10, Enemy, 1) [18,22] 0x00 0x00 0x0 0x00 [Ballista] GuardTileAI 
-UNIT Lyon_Ch17 Deathgoyle Lyon_Final Level(10, Enemy, 1) [24,15] 0x00 0x00 0x0 0x00 [KillerLance] PursueWithoutHeedAI 
-UNIT Lyon_Ch17 Deathgoyle Lyon_Final Level(10, Enemy, 1) [25,16] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
-//UNIT Lyon_Ch17 Deathgoyle Lyon_Final Level(10, Enemy, 1) [24,17] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
-UNIT Lyon_Ch17 Deathgoyle Lyon_Final Level(10, Enemy, 1) [28,15] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
-UNIT Lyon_Ch17 Deathgoyle Lyon_Final Level(10, Enemy, 1) [29,16] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
-//UNIT Lyon_Ch17 Deathgoyle Lyon_Final Level(10, Enemy, 1) [28,17] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
-UNIT Lyon_Ch17 Entombed Lyon_Final Level(10, Enemy, 1) [28,24] 0x00 0x00 0x0 0x00 [SharpClaw] PursueWithoutHeedAI 
-UNIT Lyon_Ch17 Entombed Lyon_Final Level(10, Enemy, 1) [28,27] 0x00 0x00 0x0 0x00 [SharpClaw] PursueWithoutHeedAI 
-UNIT Lyon_Ch17 Entombed Lyon_Final Level(10, Enemy, 1) [25,25] 0x00 0x00 0x0 0x00 [SharpClaw] PursueWithoutHeedAI 
+UNIT 0x25 Hero Riev Level(20, Enemy, 0) [25,29] 0x00 0x00 0x0 0x00 [SilverAxe] GuardTileAI //Iga, who put the "vania" in Metroidvania
+UNIT 0x87 Entombed Lyon_Final Level(10, Enemy, 1) [27,28] 0x00 0x00 0x0 0x00 [SharpClaw] AttackInRangeAI 
+UNIT 0x87 Entombed Lyon_Final Level(10, Enemy, 1) [31,26] 0x00 0x00 0x0 0x00 [SharpClaw] AttackInRangeAI 
+UNIT 0x87 Wight_Bow Lyon_Final Level(10, Enemy, 1) [26,24] 0x00 0x00 0x0 0x00 [SilverBow] AttackInRangeAI 
+UNIT 0x87 Gwyllgi Lyon_Final Level(10, Enemy, 1) [31,26] 0x00 0x00 0x0 0x00 [HellFang] PursueWithoutHeedAI 
+UNIT 0x87 Gorgon Lyon_Final Level(10, Enemy, 1) [29,31] 0x00 0x00 0x0 0x00 [DemonSurge, Stone] PursueWithoutHeedAI 
+UNIT 0x87 Maelduin Lyon_Final Level(10, Enemy, 1) [22,31] 0x00 0x00 0x0 0x00 [SilverAxe, SilverBow] PursueWithoutHeedAI 
+UNIT 0x87 ElderBael Lyon_Final Level(10, Enemy, 1) [23,28] 0x00 0x00 0x0 0x00 [SharpClaw] PursueWithoutHeedAI 
 UNIT
 
 SimonsQuest:
-UNIT Lyon_Ch17 Gwyllgi Lyon_Final Level(10, Enemy, 1) [29,29] 0x00 0x00 0x0 0x00 [HellFang] PursueWithoutHeedAI 
-UNIT Lyon_Ch17 Gwyllgi Lyon_Final Level(10, Enemy, 1) [11,20] 0x00 0x00 0x0 0x00 [HellFang] PursueWithoutHeedAI 
-UNIT Lyon_Ch17 Gwyllgi Lyon_Final Level(10, Enemy, 1) [16,20] 0x00 0x00 0x0 0x00 [HellFang] PursueWithoutHeedAI 
-UNIT Lyon_Ch17 Gwyllgi Lyon_Final Level(10, Enemy, 1) [24,28] 0x00 0x00 0x0 0x00 [HellFang] PursueWithoutHeedAI 
-UNIT Lyon_Ch17 General Lyon_Final Level(10, Enemy, 1) [25,29] 0x00 0x00 0x0 0x00 [Tomahawk] GuardTileAI 
-UNIT Lyon_Ch17 General Lyon_Final Level(10, Enemy, 1) [17,24] 0x00 0x00 0x0 0x00 [Tomahawk] GuardTileAI 
-UNIT Lyon_Ch17 General Lyon_Final Level(10, Enemy, 1) [16,24] 0x00 0x00 0x0 0x00 [Tomahawk] GuardTileAI 
-UNIT Lyon_Ch17 General Lyon_Final Level(10, Enemy, 1) [15,24] 0x00 0x00 0x0 0x00 [Tomahawk] GuardTileAI 
-UNIT Lyon_Ch17 ArchMogall Lyon_Final Level(10, Enemy, 1) [22,23] 0x00 0x00 0x0 0x00 [BloodyEye] AttackInRangeAI 
-UNIT Lyon_Ch17 ArchMogall Lyon_Final Level(10, Enemy, 1) [30,22] 0x00 0x00 0x0 0x00 [BloodyEye] AttackInRangeAI 
+UNIT 0x87 Wight_Bow Lyon_Final Level(10, Enemy, 1) [18,22] 0x00 0x00 0x0 0x00 [Ballista] GuardTileAI 
+UNIT 0x87 Gwyllgi Lyon_Final Level(10, Enemy, 1) [15,21] 0x00 0x00 0x0 0x00 [HellFang] PursueWithoutHeedAI 
+UNIT 0x87 Gwyllgi Lyon_Final Level(10, Enemy, 1) [10,21] 0x00 0x00 0x0 0x00 [HellFang] PursueWithoutHeedAI 
+UNIT 0x87 General Lyon_Final Level(10, Enemy, 1) [18,18] 0x00 0x00 0x0 0x00 [Tomahawk] GuardTileAI 
+UNIT 0x87 General Lyon_Final Level(10, Enemy, 1) [14,24] 0x00 0x00 0x0 0x00 [Tomahawk] GuardTileAI 
+UNIT 0x87 General Lyon_Final Level(10, Enemy, 1) [16,24] 0x00 0x00 0x0 0x00 [Tomahawk] GuardTileAI 
+UNIT 0x87 General Lyon_Final Level(10, Enemy, 1) [15,24] 0x00 0x00 0x0 0x00 [Tomahawk] GuardTileAI 
+UNIT 0x87 ArchMogall Lyon_Final Level(10, Enemy, 1) [22,23] 0x00 0x00 0x0 0x00 [BloodyEye] AttackInRangeAI 
+UNIT 0x87 ArchMogall Lyon_Final Level(10, Enemy, 1) [19,20] 0x00 0x00 0x0 0x00 [BloodyEye] AttackInRangeAI 
+UNIT 0x87 Deathgoyle Lyon_Final Level(10, Enemy, 1) [24,15] 0x00 0x00 0x0 0x00 [KillerLance] PursueWithoutHeedAI 
+UNIT 0x87 Deathgoyle Lyon_Final Level(10, Enemy, 1) [25,16] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
+UNIT 0x87 Deathgoyle Lyon_Final Level(10, Enemy, 1) [29,16] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
 UNIT
+//UNIT 0x87 Deathgoyle Lyon_Final Level(10, Enemy, 1) [28,15] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
+//UNIT 0x87 Deathgoyle Lyon_Final Level(10, Enemy, 1) [24,17] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
+//UNIT 0x87 Gwyllgi Lyon_Final Level(10, Enemy, 1) [16,20] 0x00 0x00 0x0 0x00 [HellFang] PursueWithoutHeedAI 
+//UNIT 0x87 Deathgoyle Lyon_Final Level(10, Enemy, 1) [28,17] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
+
 
 FillerGuy:
 UNIT Eirika Hero Riev Level(20, Ally, 0) [31,31] 0x00 0x00 0x0 0x00 [Sieglind] GuardTileAI 
+UNIT
 
-
+XavierPeople:
+UNIT 0x76 Civilian 0x0 Level(1, NPC, 0) [28,6] 0x00 0x00 0x0 0x00 [0x00] NoAI //dammit MC there isn't the AI for what you want in FE8 as far as I can tell
+UNIT 0x77 Civilian 0x0 Level(1, NPC, 0) [29,6] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT 0x47 Civilian 0x0 Level(1, NPC, 0) [30,6] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT
 
 // Shop Data
 

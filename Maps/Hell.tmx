@@ -1040,7 +1040,7 @@
    <tile gid="945"/>
   </data>
  </layer>
- <layer name="SilverAxeDestroyed" width="32" height="32">
+ <layer name="SilverAxeDestroyed" width="32" height="32" visible="0">
   <properties>
    <property name="Height" value="3"/>
    <property name="ID" value="1"/>
@@ -2075,7 +2075,7 @@
    <tile/>
   </data>
  </layer>
- <layer name="SilverAxeSaved" width="32" height="32">
+ <layer name="SilverAxeSaved" width="32" height="32" visible="0">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="2"/>
