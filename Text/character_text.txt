@@ -35,6 +35,13 @@ Verge[X]
 A mentor to Vedge. Some say[N]
 he's been a bad influence.[X]
 
+## BooName
+Boo[X]
+
+## BooDesc
+A renegade translator from days gone by.[N]
+He deciphered the Scripts of Seisen.[X]
+
 ## FanniName
 Fanni[X]
 
