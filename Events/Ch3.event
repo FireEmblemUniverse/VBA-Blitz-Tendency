@@ -60,7 +60,7 @@ ALIGN 4
 BeginningScene:
 LOAD1 0x01 Bad
 ENUN
-LOAD2 0x01 Units //Should be LOAD2, but is LOAD1 for testing purposes.
+LOAD2 0x01 Units
 ENUN
 Text(PlaceholderText)
 ENDA
@@ -101,7 +101,7 @@ UNIT 0x86 Archer Breguet Level(3, Enemy, 1) [9,0] 0x00 0x00 0x00 0x00 [IronBow] 
 UNIT
 
 NewGuy:
-UNIT Boo Knight Eirika Level(3, Ally, 0) [8,3] 0x00 0x00 0x0 0x00 [SteelLance] NoAI 
+UNIT Boo Knight Eirika Level(3, Ally, 0) [8,3] 0x00 0x00 0x0 0x00 [SteelLance, IronLance] NoAI 
 UNIT
 
 
