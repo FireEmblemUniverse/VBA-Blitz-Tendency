@@ -56,13 +56,13 @@ NonArmsthrift:
 
 	@2wb: begin AxeFaith check
 	mov r0, r5                 @ arg r0 = (Battle) Unit
-	ldr r1, LAxeFaithSkillID @ arg r1 = Skill Index
+	ldr r1, LAxeFaithSkillID   @ arg r1 = Skill Index
 
 	ldr r3, LUnitHasSkill
 	bl BXR3
 
 	cmp r0, #0        @ compare result
-	beq NonArmsthrift @ goto NonArmsthrift if zero (unit does not have axefaith)
+	beq NonAxeFaith   @ goto NonAxeFaith if zero (unit does not have axefaith)
 
 	@ Unit has axefaith
 	@ Are they using an axe?
@@ -73,10 +73,10 @@ NonArmsthrift:
 	ldr r3, =GetWeaponType
 	bl BXR3
 
-	cmp r0, #WTYPE_AXE  @ #0x02 
+	cmp r0, #WTYPE_AXE @ #0x02 
 	beq End            @ goto End if true (AxeFaith triggers)
 
-
+NonAxeFaith:
 	mov  r4, #0x48 @ offsetof(BattleUnit.weaponAfter)
 
 	ldrh r0, [r5, r4] @ Load weapon

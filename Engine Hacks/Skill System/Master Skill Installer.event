@@ -328,9 +328,9 @@ POIN SkillTester
 WORD LethalityID
 
 Armsthrift:
-AxefaithArmsthrift:
-ArmsthriftAxefaith:
-#incbin "Other Skills/ArmsthriftAxefaith.dmp"
+AxeFaithArmsthrift:
+ArmsthriftAxeFaith:
+#incbin "Other Skills/ArmsthriftAxeFaith.dmp"
 POIN SkillTester|1
 WORD ArmsthriftID AxeFaithID
 
