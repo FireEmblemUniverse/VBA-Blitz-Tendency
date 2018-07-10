@@ -56,6 +56,13 @@ Boo[X]
 A renegade translator from days gone by.[N]
 He deciphered the Scripts of Seisen.[X]
 
+## nameXimena
+Ximena[X]
+
+## descXimena
+A quiet Shaman from[NL]
+a secluded village.[X]
+
 ## FanniName
 Fanni[X]
 

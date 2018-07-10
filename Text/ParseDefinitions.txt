@@ -16,6 +16,7 @@
 [.7] = [.......]
 [Beat] = [ToggleMouthMove]...[.4][ToggleMouthMove]
 [Event] = [LoadOverworldFaces]
+[CloseSpeech] = [CloseSpeechSlow][.....]
 
 [FarFarLeft] = [OpenFarFarLeft]
 [FarLeft] = [OpenFarLeft]
@@ -47,5 +48,9 @@
 [.......v] = [FarFarRight]
 
 [CurrentPortrait] = [0xFF][0xFF]
+[LoadCurrent] = [LoadFace][0xFF][0xFF]
 
 [VedgePortrait] = [0x2][0x1]
+
+[LoadVedge] = [LoadFace][VedgePortrait]
+[LoadXimena] = [LoadFace][0xA][0x1]
