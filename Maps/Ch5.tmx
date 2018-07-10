@@ -18,16 +18,16 @@
    eJyNlLFKA0EQhvd2BcEmlWKCWERCEFErNVpqESvRQkURQVMYEcQmWkgKE4M2wr2CEBEF0Ve4BLS08gHUB8gr+A87y002F7D4uLvJ/8/MTuaupJQqMSfgEWyIGDEGvpgqxyLTrXH+Y7AOVkV8VPgXRTzF1yutVE3b+yfw7OXdE/4Fjk3x9YF9kY71JlBqILD3GeEliqAMcvi9rnvPkPKex4V3lmM/nq/O/R/xuXNce194nfYgiHuWfOv4TEsJPbt5NnR3riaep3EfggLY9bzU0yBYA/fQtrX1/ILbwOY+o5lxDTmvFvtPVW+/smZV/B9uV6Q2izoVXM+ZeTDBvaa5xgz44F1xvgpr5Xkuhd7p2l49f36OtJx3wpkKfXxV7uUiweP6JN0m2ALbffLMiRm4OVB82MtHM9j5Rz5i0vQyZOJdofci0yfXJ3ShB+14i3fsOmFPRzhPFrxBnwevoGPs/rSEh2pHCfMKWS+9tEsNfjeavJtO/w6WoVkxcd2i8JZZdwduVPf3h3bjkOZh7Hk7Jq7fEd+wF2W/XfQu5IW/Bk09YcZyzhL6foVe7A/D6qCT
   </data>
  </layer>
- <layer name="Close Village" width="15" height="23" visible="0">
+ <layer name="Destroy Village" width="15" height="23" visible="0">
   <properties>
-   <property name="Height" value="1"/>
+   <property name="Height" value="3"/>
    <property name="ID" value="4"/>
-   <property name="Width" value="1"/>
-   <property name="X" value="14"/>
-   <property name="Y" value="21"/>
+   <property name="Width" value="2"/>
+   <property name="X" value="13"/>
+   <property name="Y" value="19"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRgAsoUqgfAA2kACI=
+   eJxjYBgFo2AUjILBDRYxMzAsZiZP7yGgvsNk6n0E1PeYTL0wAAAuqASi
   </data>
  </layer>
  <layer name="Chest 2" width="15" height="23" visible="0">
@@ -42,16 +42,16 @@
    eJxjYBgFo2AUjIKhAZgG2gFkAAAGzAAD
   </data>
  </layer>
- <layer name="Destroy Village" width="15" height="23" visible="0">
+ <layer name="Close Village" width="15" height="23" visible="0">
   <properties>
-   <property name="Height" value="3"/>
+   <property name="Height" value="1"/>
    <property name="ID" value="2"/>
-   <property name="Width" value="2"/>
-   <property name="X" value="13"/>
-   <property name="Y" value="19"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="14"/>
+   <property name="Y" value="21"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjILBDRYxMzAsZiZP7yGgvsNk6n0E1PeYTL0wAAAuqASi
+   eJxjYBgFo2AUjIJRgAsoUqgfAA2kACI=
   </data>
  </layer>
  <layer name="Chest 1" width="15" height="23" visible="0">
