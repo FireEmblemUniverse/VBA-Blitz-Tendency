@@ -116,7 +116,7 @@ ENDA
 //Label Artifact Stuff
 ArtifactGot:
 Text(Ch5ArtifactGotText)
-FlashCursor(11,17,10)
+FlashCursor(11,17,60)
 NoFade
 EndA2
 
