@@ -1,43 +1,31 @@
-##nameMonkeyboy
+## nameMonkeyboy
 Keanu[X]
 
-##descMonkeyboy
+## descMonkeyboy
 A goldhearted pious muscle mountain man that[NL]
 avoids conflict and delivers blessings.[X]
 
-##nameCortez
+## nameCortez
 Cortez[X]
 
-##descCortez
+## descCortez
 A devout seeking to create[NL]
 monsters in the Throne Pit.[X]
 
-##nameZealot
+## nameZealot
 Zealot[X]
 
-##descZealot
+## descZealot
 Devouts of the cloth who praise[NL]
 evil darkness in hearts and minds.[X]
 
-##nameMonster
+## nameMonster
 Monster[X]
 
-##descMonsterC2
+## descMonsterC2
 An unstable ritual birthed this abomination,[NL]
 to fuel desires of awful evil.[X]
 
-##descMonsterBoss0x44
+## descMonsterBoss0x44
 A powerful monster that[NL]
 inherited some lunacy...[X]
-
-
-
-
-
-
-
-
-
-
-
-
