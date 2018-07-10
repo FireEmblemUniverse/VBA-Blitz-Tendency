@@ -35,6 +35,20 @@ Verge[X]
 A mentor to Vedge. Some say[N]
 he's been a bad influence.[X]
 
+## nameHecwood
+Hecwood[X]
+
+## descHecwood
+Marquess Ostia's younger brother.[N]
+Just and honourable.[X]
+
+## nameElitor
+Elitor[X]
+
+## descElitor
+Marquess Pherae's young son.[N]
+Reckless, but loyal.[X]
+
 ## BooName
 Boo[X]
 
@@ -75,3 +89,4 @@ Anna[X]
 
 ## nameFaust
 Faust[X]
+

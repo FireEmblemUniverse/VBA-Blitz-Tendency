@@ -22,6 +22,7 @@
 
 //Class definitions
 #define BlitzLord 0x2
+#define VedgeLord BlitzLord
 #define VoidMonster 0x3
 #define VoidMaster 0x4
 
@@ -33,11 +34,14 @@
 #define Verge 0x5
 #define Anna 0x6
 #define Boo 0x8
+#define Aggie 0x9
 #define Fanni 0xD
 #define Murat 0xF
 #define Ersatz 0x1F
 
 #define Jazzak 0x42
+#define Hecwood 0x48
+#define Elitor 0x49
 #define Dennis 0x50
 
 //Item definitions
