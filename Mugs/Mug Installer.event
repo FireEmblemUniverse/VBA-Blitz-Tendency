@@ -15,3 +15,11 @@ setMugEntry(0x6, Chiva_Mug, 2, 5, 3, 3)
 Verge_Mug:
 #incext PortraitFormatter "Verge.png"
 setMugEntry(0x7, Verge_Mug, 4, 5, 4, 3)
+
+FE3AnnaMug:
+#incext PortraitFormatter "fe3anna.png"
+setMugEntry(0x13,FE3AnnaMug,6,6,2,5)
+
+FaustMug:
+#incext PortraitFormatter "Faust.png"
+setMugEntry(0x3c,FaustMug,2,5,2,3)

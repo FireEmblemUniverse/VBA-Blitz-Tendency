@@ -106,6 +106,15 @@ POP
 
   ORG $31650 //Usable in chapter 6
   SHORT 0x46C0
+
+  //Change poison damage
+  //Set constant damage to 4
+  ORG 0x25A3E
+  SHORT 0x3304
+  //Set variable damage to 0
+  ORG 0x25A36
+  SHORT 0x2000
+
   POP
 
 
@@ -168,6 +177,26 @@ POP
   Win_Effect:
   #incbin "winbutton.dmp"
   POIN Offscreen_Levelup
+
+  // DismountMount hack
+  ALIGN 4
+  DismountRoutine:
+  #incbin "DismountMount Code/Dismount Routine.dmp"
+  POIN ClassTable
+  POIN MountedClassTable
+
+  DismountUsability:
+  #incbin "DismountMount Code/Dismount Usability Routine.dmp"
+  POIN MountedClassTable
+
+  MountRoutine:
+  #incbin "DismountMount Code/Mount Routine.dmp"
+  POIN ClassTable
+  POIN MountedClassTable
+
+  MountUsability:
+  #incbin "DismountMount Code/Mount Usability Routine.dmp"
+  POIN MountedClassTable
 
 
   //Repoint Unit Menu
@@ -242,6 +271,9 @@ POP
   // MenuCommand(UMText_Transfer,UMText_TransferDesc,GreenText,TransferUsability,TransferTarget) //transfer
   // MenuCommand(UMText_Switch,UMText_SwitchDesc,GreenText,SwitchUsability,SwitchCommand)   //switch
   UM_Drop
+
+  MenuCommand(UMText_Transform, UMText_TransformDesc, BlueText, DismountUsability, DismountRoutine)
+  MenuCommand(UMText_Revert, UMText_RevertDesc, BlueText, MountUsability, MountRoutine)
 
   UM_Item
   UM_Trade

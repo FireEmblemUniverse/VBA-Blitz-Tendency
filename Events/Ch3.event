@@ -60,24 +60,24 @@ ALIGN 4
 BeginningScene:
 LOAD1 0x01 Bad
 ENUN
-LOAD1 0x01 Units //Should be LOAD2, but is LOAD1 for testing purposes.
+LOAD2 0x01 Units
 ENUN
-//Text(PLACEHOLDER_SLOT)
+Text(PlaceholderText)
 ENDA
 
 EndingScene:
-//Text(ALSO_A_PLACEHOLDER)
+Text(PlaceholderText)
 MNCH 4
 ENDA
 
 // Events
 UnitGet:
-//MUSC 0x30 //recruitment
+MUSC 0x30 //recruitment
 LOAD1 0x1 NewGuy
 ENUN
-//Text(GettingJay)
-//REMA
-//NoFade
+Text(PlaceholderText)
+REMA
+NoFade
 ENDA
 
 // Manual Movement
@@ -101,7 +101,7 @@ UNIT 0x86 Archer Breguet Level(3, Enemy, 1) [9,0] 0x00 0x00 0x00 0x00 [IronBow] 
 UNIT
 
 NewGuy:
-UNIT Neimi Knight Eirika Level(4, Ally, 1) [8,3] 0x00 0x00 0x0 0x00 [IronLance] NoAI 
+UNIT Boo Knight Eirika Level(3, Ally, 0) [8,3] 0x00 0x00 0x0 0x00 [SteelLance, IronLance] NoAI 
 UNIT
 
 
