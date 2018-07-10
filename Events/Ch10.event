@@ -2,10 +2,10 @@
 
 EventPointerTable(0x33, ThisChapter)
 
-EscapePointPointerTable(0x0B, Ch16EscapePoint)
+EscapePointPointerTable(0x0B, Ch10EscapePoint)
 
 
-Ch16EscapePoint:
+Ch10EscapePoint:
 //EscapePoint(0, 0, MoveUp)
 EscapePoint(3, 8, NoMove)
 EscapePointEnd
@@ -23,6 +23,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0,PirateEntry,1)
 TurnEventPlayer(0,FirstFlood,3)
 TurnEventPlayer(0,SecondFlood,4)
 TurnEventPlayer(0,ThirdFlood,5)
@@ -100,7 +101,7 @@ UNIT
 
 Bad:
 UNIT Pablo_2 General Pablo_2 Level(2,Enemy,0) [2,1] 0x0 0x0 0x0 0x0 [LightBrand,SteelLance,Elixir,0] NeverMoveAI
-UNIT 0x94 Thief Pablo_2 Level(9, Enemy, 1) [23,14] DropItem 0x00 0x0 0x00 KillingEdge MasterSeal 0 0 0x6 0x0C 0x0 0x0
+UNIT 0x94 Thief Pablo_2 Level(9, Enemy, 1) [23,14] DropItem 0x00 0x0 0x00 KillingEdge EnergyRing 0 0 0x6 0x0C 0x0 0x0
 UNIT 0x94 Thief Pablo_2 Level(9, Enemy, 1) [13,13] DropItem 0x00 0x0 0x00 WindSword ChestKey ShortSpear 0 0x06 0x05 0x0 0x0
 UNIT 0x94 Cavalier Pablo_2 Level(11, Enemy, 1) [23,18] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 0x0 0x0
 UNIT 0x94 Fighter Pablo_2 Level(12, Enemy, 1) [23,19] 0x00 0x00 0x0 0x00 [Halberd] NoAI
@@ -131,7 +132,7 @@ UNIT 0x94 Fighter Pablo_2 Level(10,Enemy,1) [12,11] 0x0 0x0 0x0 0x0 [Tomahawk] N
 UNIT
 
 NewRecruit:
-UNIT Ephraim Pirate 0x00 Level(11, Ally, 0) [20,23] 0x00 0x00 0x0 0x00 [SteelAxe,Hatchet,Vulnerary] NoAI
+UNIT Ephraim Pirate 0x00 Level(11, Ally, 0) [20,23] 0x00 0x00 0x1 PirateMove [SteelAxe,Hatchet,Vulnerary] NoAI
 UNIT
 
 RaftSquad:
@@ -155,8 +156,18 @@ Tenner4:
 REDA [14,12] 0 0 0 3
 Tenner5:
 REDA [12,12] 0 0 0 0
+PirateMove:
+REDA [20,21] 0 0 0 0
 
 ALIGN 4
+
+PirateEntry:
+ReinforcementEvent(NewRecruit)
+STAL 10
+FlashCursor(Ephraim,18)
+//Text(PLACEHOLDER)
+NoFade
+ENDA
 
 CheckForBoat:
 CHECK_ALLEGIANCE 0xFFFF

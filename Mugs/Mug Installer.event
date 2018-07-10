@@ -24,3 +24,12 @@ setMugEntry(0x33, Hecwood_Mug, 2, 5, 3, 3)
 Elitor_Mug:
 #incext PortraitFormatter "Elitor.png"
 setMugEntry(ElitorPortrait, Elitor_Mug, 2, 4, 2, 2)
+
+FE3AnnaMug:
+#incext PortraitFormatter "fe3anna.png"
+setMugEntry(0x13,FE3AnnaMug,6,6,2,5)
+
+FaustMug:
+#incext PortraitFormatter "Faust.png"
+setMugEntry(0x3c,FaustMug,2,5,2,3)
+

@@ -9,12 +9,9 @@ Read CONTRIBUTING.md for an overview on rules and regulations.
 
 Phases are *very* flexible but the general outline is something like this:
 
-1) Map / Portrait Blitz
-2) Eventing Blitz 1 (10-15 chapters) / Music Blitz
-3) Writing / Balance Blitz 1 / Polish Blitz 1 (fill in missing or additional required assets)
-4) Eventing Blitz 2
-5) Writing / Balance Blitz 2
-6) Polish Blitz 2
+1) Blitz Part 1 (1 week, 10 chapters) / Resource Blitz (collect as many resources for the whole process as possible)
+2) Blitz Part 2 (1 week, remainder of game)
+3) Polish Blitz (1-2 weeks, make the game fun and presentable)
 
 Feel free to do anything out of order, as long as it's with proper version control.
 

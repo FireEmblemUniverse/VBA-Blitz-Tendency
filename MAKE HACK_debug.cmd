@@ -14,6 +14,10 @@ cd "%~dp0Maps"
 
 echo: | (tmx2ea -s)
 
+cd "%~dp0Battle Palettes"
+
+echo: | (pal2ea "%~dp0Battle Palettes/Battle Palettes.txt")
+
 cd "%~dp0Event Assembler"
 
 Core A FE8 "-output:%~dp0VBA-BT.gba" "-input:%~dp0Debug.event"

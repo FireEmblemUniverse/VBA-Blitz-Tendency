@@ -1,0 +1,13 @@
+## nameVoidMaster
+Void Master[X]
+
+## descVoidMaster
+One who has mastered control[N]
+over the powers of the void.[X]
+
+## nameVoidMonster
+Void Monster[X]
+
+## descVoidMonster
+One who has unleashed the powers[N]
+of the void to transform.[X]
