@@ -6,4 +6,5 @@ Rename it `Core.exe` and use it to replace the `Core.exe` in `Event Assembler`.
 3) Download [NMM2EA](http://feuniverse.us/t/nmm2csv-edit-tables-with-excel-instead-of-nightmare-updated-to-v1-0/1748?u=crazycolorz5). Extract c2ea and place it the `Tables` folder.
 4) Download [TextProcess](http://feuniverse.us/t/text-processor-for-use-with-ea-v10-1-updated-to-v2-1/1776?u=crazycolorz5) and place it in the `Text` folder.
 5) Download [TMX2EA](http://feuniverse.us/t/tmx2ea-v2-0-released-insert-tiled-maps-using-event-assembler/1830?u=crazycolorz5) and place it in the `Maps` folder.
-6) Make sure [lyn](http://feuniverse.us/t/ea-asm-tool-lyn-elf2ea-if-you-will/2986?u=crazycolorz5) is an available tool for EA to use (i.e. it's in the Event Assembler/Tools directory).
+6) Download [PAL2EA](http://feuniverse.us/t/pal2ea-the-buildfile-palette-inserter/2646?u=crazycolorz5) and place it in the `Battle Palettes` folder.
+7) Make sure [lyn](http://feuniverse.us/t/ea-asm-tool-lyn-elf2ea-if-you-will/2986?u=crazycolorz5) is an available tool for EA to use (i.e. it's in the Event Assembler/Tools directory).

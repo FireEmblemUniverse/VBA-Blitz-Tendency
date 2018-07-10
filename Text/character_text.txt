@@ -35,6 +35,27 @@ Verge[X]
 A mentor to Vedge. Some say[N]
 he's been a bad influence.[X]
 
+## nameHecwood
+Hecwood[X]
+
+## descHecwood
+Marquess Ostia's younger brother.[N]
+Just and honourable.[X]
+
+## nameElitor
+Elitor[X]
+
+## descElitor
+Marquess Pherae's young son.[N]
+Reckless, but loyal.[X]
+
+## BooName
+Boo[X]
+
+## BooDesc
+A renegade translator from days gone by.[N]
+He deciphered the Scripts of Seisen.[X]
+
 ## nameXimena
 Ximena[X]
 
@@ -69,3 +90,10 @@ Murat[X]
 ## MuratDesc
 Lives on the open ocean, apparently. Comes [N]
 ashore only to terrorize landlubbers.[X]
+
+## nameAnna
+Anna[X]
+
+## nameFaust
+Faust[X]
+
