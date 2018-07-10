@@ -35,6 +35,38 @@ Verge[X]
 A mentor to Vedge. Some say[N]
 he's been a bad influence.[X]
 
+## nameMonkeyboy
+Keanu[X]
+
+## descMonkeyboy
+A goldhearted pious muscle mountain man that[NL]
+avoids conflict and delivers blessings.[X]
+
+## nameCortez
+Cortez[X]
+
+## descCortez
+A devout seeking to create[NL]
+monsters in the Throne Pit.[X]
+
+## nameZealot
+Zealot[X]
+
+## descZealot
+Devouts of the cloth who praise[NL]
+evil darkness in hearts and minds.[X]
+
+## nameMonster
+Monster[X]
+
+## descMonsterC2
+An unstable ritual birthed this abomination,[NL]
+to fuel desires of awful evil.[X]
+
+## descMonsterBoss0x44
+A powerful monster that[NL]
+inherited some lunacy...[X]
+
 ## FanniName
 Fanni[X]
 
