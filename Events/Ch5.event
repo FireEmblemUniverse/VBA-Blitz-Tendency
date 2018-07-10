@@ -170,7 +170,11 @@ UNIT Vedge 0x0 Vedge Level(1,Ally,True) [11,20] 0x00 0x00 0x00 0x00 [0] NoAI
 UNIT
 
 LoadXimena:
-UNIT Ximena Shaman_F Ximena Level(6,Ally,True) [14,21] 0x00 0x00 0x1 REDA12R22 [Flux,Vulnerary,PowerGem] NoAI // Not intended to spawn with the power gem.
+#ifdef __DEBUG__
+  UNIT Ximena Shaman_F Ximena Level(6,Ally,True) [14,21] 0x00 0x00 0x1 REDA12R22 [Flux,Vulnerary,PowerGem] NoAI
+#else
+  UNIT Ximena Shaman_F Ximena Level(6,Ally,True) [14,21] 0x00 0x00 0x1 REDA12R22 [Flux,Vulnerary] NoAI
+#endif
 EndUnit
 
 //Label Meanies
