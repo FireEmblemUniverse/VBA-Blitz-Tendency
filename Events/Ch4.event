@@ -1,14 +1,3 @@
-
-////////////////////////////////////////////////////
-//                                                //
-// Disassembled with Nintenlord's Event Assembler //
-// Version: 11.0.0.0                              //
-// Game: FE8                                      //
-// File: FE8_clean.gba                            //
-// Offset: $9EC66C                                //
-//                                                //
-////////////////////////////////////////////////////
-
 EventPointerTable(0x17, PointerList)
 
 PointerList:
@@ -181,6 +170,6 @@ NoFade
 ENDA
 
 EndingScene:
-MNC2 Ch5
+MNCH 5
 NoFade
 ENDA

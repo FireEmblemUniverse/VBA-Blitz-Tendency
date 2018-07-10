@@ -83,7 +83,7 @@ FlashCursor(Eirika,24)
 ENDA
 
 EndingScene:
-MNCH 0xC
+MNCH 0x11
 NoFade
 ENDA
 
