@@ -58,12 +58,12 @@ Tutorial:
 END_MAIN
 
 Units1:
-UNIT Vedge EirikaLord 0x00 Level(1, Ally, 1) [16, 0] 0 0 0 0 [] NoAI
-UNIT 0xB PegasusKnight Vedge Level(6, Ally, 1) [16, 3] 0 0 0 0 [] NoAI
-UNIT Null Cavalier Vedge Level(1, Ally, 1) [15, 0] 0 0 0 0 [] NoAI
-UNIT Naught Cavalier Vedge Level(1, Ally, 1) [14, 0] 0 0 0 0 [] NoAI
-UNIT Chiva Archer_F Vedge Level(1, Ally, 1) [16, 5] 0 0 0 0 [] NoAI
-UNIT Verge Swordmaster Vedge Level(1, Ally, 1) [16, 1] 0 0 0 0 [] NoAI
+UNIT Vedge EirikaLord 0x00 Level(1, Ally, 1) [16, 0] 0 0 0 0 [0] NoAI
+UNIT 0xB PegasusKnight Vedge Level(6, Ally, 1) [16, 3] 0 0 0 0 [0] NoAI
+UNIT Null Cavalier Vedge Level(1, Ally, 1) [15, 0] 0 0 0 0 [0] NoAI
+UNIT Naught Cavalier Vedge Level(1, Ally, 1) [14, 0] 0 0 0 0 [0] NoAI
+UNIT Chiva Archer_F Vedge Level(1, Ally, 1) [16, 5] 0 0 0 0 [0] NoAI
+UNIT Verge Swordmaster Vedge Level(1, Ally, 1) [16, 1] 0 0 0 0 [0] NoAI
 UNIT
 
 Recruitable:

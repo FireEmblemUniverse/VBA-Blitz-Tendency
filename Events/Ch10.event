@@ -68,7 +68,7 @@ TrapData:
 BLST [10,13] Ballista
 BLST [0,2] Ballista
 BLST [21,22] Ballista
-END_MAIN
+ENDTRAP
 
 ALIGN 4
 
