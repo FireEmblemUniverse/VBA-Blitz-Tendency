@@ -52,14 +52,14 @@ END_MAIN
 LocationBasedEvents:
 Chest(KillerBow,13,8)
 Chest(Horseslayer,13,9)
-Village(0x7,VillageGem,8,5)
+Village(0x7,VillageBow,8,5)
 Village(0x8,VillageBarrier,13,5)
 Vendor(VendorList, 13, 12)
 Armory(ArmoryList, 1, 5)
 END_MAIN
 
-VillageGem:
-VillageEventItem(PlaceholderText, Village, RedGem)
+VillageBow:
+VillageEventItem(PlaceholderText, Village, ExtraBow)
 
 VillageBarrier:
 VillageEventItem(PlaceholderText, Village, Barrier)
