@@ -62,7 +62,3 @@
 #define WTYPE_DARK     0x07
 
 // #define __DEBUG__ // Uncomment to get the Debug startup menu :p
-
-
-
-
