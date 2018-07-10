@@ -62,8 +62,7 @@ GotoPrepScreen
 //Label EndingScene
 EndingScene:
 FADI 0x5
-SVAL 0xB Coords(14,21)
-TILEREVERSE 0xFFFF
+TILEREVERSE 0x4
 MUSC Victory
 CAM1 [4,5]
 CLEA 0x0
@@ -92,7 +91,7 @@ STAL 0x20
 FadeOutMusic
 CAM1 [4,5]
 Text(Ch5VillageGoneText)
-MNC2 Chapter6
+MNCH Chapter6
 ENDA
 
 //Label Visit Village

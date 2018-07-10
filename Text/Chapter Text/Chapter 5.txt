@@ -58,7 +58,7 @@ You keep it. Hold it, and it[A][NL]
 will make you stronger.[A][X]
 
 ## Ch5BanditText
-[OpenFarRight][LoadFace][0x4C]
+[OpenFarRight][LoadFace][0x4C][0x01]
 Look, boys! Here's our chance![NL]
 Sack the village! No survivors![A][X]
 
