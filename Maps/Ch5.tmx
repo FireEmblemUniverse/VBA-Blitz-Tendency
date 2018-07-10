@@ -8,7 +8,7 @@
    <property name="Anims" value="_6CAnims"/>
    <property name="ChapterID" value="Chapter5"/>
    <property name="Main" value=""/>
-   <property name="MapChangesID" value="Chapter5Changes"/>
+   <property name="MapChangesID" value="0x20"/>
    <property name="MapID" value="Chapter5Map"/>
    <property name="ObjectType" value="0x6C"/>
    <property name="PaletteID" value="0xA3"/>
