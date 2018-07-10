@@ -67,8 +67,12 @@ VillageEventItem(PlaceholderText, Village, Barrier)
 ArmoryList:
 SHLI IronSword SteelSword IronLance SteelLance IronAxe IronBow SteelBow Longbow
 
+ALIGN 2
+
 VendorList:
 SHLI Heal Mend Vulnerary ChestKey Lockpick LightRune
+
+ALIGN 4
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
