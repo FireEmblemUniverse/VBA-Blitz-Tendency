@@ -20,19 +20,18 @@ POIN ThrThrD_LocationBasedEvents
 POIN ThrThrD_MiscBasedEvents
 POIN ThrThrD_Dunno ThrThrD_Dunno ThrThrD_Dunno
 POIN ThrThrD_Tutorial
-POIN ThrThrD_Ballista1 ThrThrD_Ballista2
+POIN ThrThrD_Ballista ThrThrD_Ballista
 POIN ThrThrD_Units ThrThrD_Units
 POIN $0 $0 $0 $0 $0 $0
 POIN ThrThrD_BeginningScene ThrThrD_EndingScene
 
 ALIGN 4
+
 ThrThrD_TurnBasedEvents:
-TURN 0x9 UnsetEventA [3, 3] 0
-TURN 0xA RandomTimedSpawns  0
-TURN 0xB SetEventA [15, 15] 0
+TURN 0x0 RandomTimedSpawns [3, 15]  0
 END_MAIN
 
-ALIGN 4
+ALIGN 32
 ThrThrD_CharacterBasedEvents:
 //CHAR
 END_MAIN
@@ -63,16 +62,11 @@ ThrThrD_Tutorial:
 END_MAIN
 
 ALIGN 4
-ThrThrD_Ballista1:
-BLST
+ThrThrD_Ballista:
 END_MAIN
 
 ALIGN 4
-ThrThrD_Ballista2:
-BLST
-END_MAIN
 
-ALIGN 4
 ThrThrD_Units:
 UNIT Vedge BlitzLord 0x00 Level(3, Ally, 1)    [10,10] 0x00 0x00 0x0 0x00 [SteelAxe, BlitzAxe, Elixir, MoonBracelet] NoAI
 UNIT Verge Swordmaster Vedge Level(1, Ally, 1) [ 9,11] 0x00 0x00 0x0 0x00 [IronSword, SteelLance, Javelin, Vulnerary] NoAI
@@ -109,7 +103,7 @@ UNIT
 
 ALIGN 4
 ThrThrD_ReinLeft:
-UNIT 0x84 MautheDoog 0x44 Level(TTD_Level, Enemy, 1)   [ 4, 0] 0x02 0x00 0x00 0x00 [PoisonClaw, Item50G] PursueWithoutHeedAI
+UNIT 0x84 Mauthedoog 0x44 Level(TTD_Level, Enemy, 1)   [ 4, 0] 0x02 0x00 0x00 0x00 [PoisonClaw, Item50G] PursueWithoutHeedAI
 UNIT
 
 ALIGN 4
@@ -139,7 +133,7 @@ UNIT
 
 ALIGN 4
 VictoryCheck:
-//#Stores the char id of unit at given position into Slot 0xC 
+//#Stores the char id of unit at given position into Slot 0xC
 //CHECK_AT, 0x2E20, 4, -game:FE8 -indexMode:8
 //    Position, 2, 2, -coordinates:2 -preferredBase:10
 
@@ -157,18 +151,7 @@ LABEL 0x10
 ENDB
 
 ALIGN 4
-SetEventA:
-ENUT 0xA
-ENDA
-
-ALIGN 4
-UnsetEventA:
-ENUF 0xA
-ENDA
-
-ALIGN 4
 RandomTimedSpawns: //as stolen from circles
-  ENUF 0xA
   RANDOMNUMBER 0x7       //Sets slot C to a number from 0 to 7? smilies says 8
   //Now get remainder mod 9
   //SMOV r1 0x9
@@ -176,11 +159,11 @@ RandomTimedSpawns: //as stolen from circles
   //SMUL slotsParam(r1, r2)     //r1 = r2*9
   //SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
   BNE 0x0 r1 0
-  ReinforcementEvent(ThrThrD_ReinUpRight)    //Remainder was 0 (right)
+  ReinforcementEvent(ThrThrD_ReinRight)    //Remainder was 0 (right)
   LABEL 0x0
   SMOV r2 1
   BNE 0x1 r1 r2
-  ReinforcementEvent(ThrThrD_ReinUpLeft) //R = 1
+  ReinforcementEvent(ThrThrD_ReinLeft) //R = 1
   LABEL 0x1
   SMOV r2 2
   BNE 0x2 r1 r2
@@ -206,7 +189,6 @@ ENDA
 
 ALIGN 4
 ThrThrD_BeginningScene:
-VCWF 0
 LOAD1 0x1 ThrThrD_EnemyLeft
 ENUN
 LOAD1 0x1 ThrThrD_EnemyRight
@@ -214,14 +196,15 @@ ENUN
 LOAD2 0x1 ThrThrD_Units
 LOAD1 0x1 ThrThrD_Axeboy
 ENUN
-TEXTSHOW PlaceholderText
-//text??????
+Text(PlaceholderText)
+//TODO
+NoFade
 ENDB
 
 
 ThrThrD_EndingScene:
-TEXTSHOW PlaceholderText
-//text?????????
+Text(PlaceholderText)
+//TODO
 MNC2 0x03 //TODO: Replace with proper code for next chapter.
+NoFade
 ENDA
-
