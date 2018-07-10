@@ -51,6 +51,9 @@
 [LoadCurrent] = [LoadFace][0xFF][0xFF]
 
 [VedgePortrait] = [0x2][0x1]
+[Fanni] = [0x11]
+[Ersatz] = [0x29]
+[Dennis] = [0x70]
 
 [LoadVedge] = [LoadFace][VedgePortrait]
 [LoadXimena] = [LoadFace][0xA][0x1]
