@@ -27,6 +27,7 @@
 
     //Maps
     #include "Maps/Master Map Installer.event"
+    #include "Maps/FixedValni.event"
 
     //Palettes
     #include "Battle Palettes/Palette Setup.event"

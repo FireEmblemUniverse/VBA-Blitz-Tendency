@@ -1,0 +1,4 @@
+PUSH
+ORG 0x1A0514
+#incbin "FixedValni.dmp"
+POP
