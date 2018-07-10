@@ -1,4 +1,2 @@
-PUSH
-ORG 0x1A0514
+ValniTileConfig:
 #incbin "FixedValni.dmp"
-POP

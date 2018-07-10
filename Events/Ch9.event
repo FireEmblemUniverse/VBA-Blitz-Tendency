@@ -81,6 +81,8 @@ AREA 9 RightSwitch [17,12] [17,12]
 //RoofGone
 AFEV 0xA RoofGone 0x8
 AFEV 0xB RoofGone 0x9
+
+CauseGameOverIfLordDies
 END_MAIN
 
 Dunno:
@@ -131,12 +133,14 @@ ENDA
 
 LeftSwitch:
 SOUN 0xCD
+STAL 0x20
 //text blurb
 NoFade
 ENDA
 
 RightSwitch:
 SOUN 0xCD
+STAL 0x20
 //text blurb
 NoFade
 ENDA
