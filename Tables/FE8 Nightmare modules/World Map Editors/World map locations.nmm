@@ -1,0 +1,103 @@
+1
+World map event table by jjl2357, edited by Vennobennu
+0x2060B0
+29
+32
+World map locations.txt
+NULL
+
+Flags
+0
+2
+NDHU
+Flags.txt
+
+Map Icon
+2
+2
+NDHU
+World map icons.txt
+
+Eirika Mode Chapter ID
+4
+1
+NDHU
+Chapter List.txt
+
+Ephraim Mode Chapter ID
+5
+1
+NDHU
+Chapter List.txt
+
+Event ID for Alternate Destination
+6
+2
+NEHU
+NULL
+
+Next location for ID not set (Eirika)
+8
+1
+NDHU
+Places.txt
+
+Next location for ID not set (Ephraim)
+9
+1
+NDHU
+Places.txt
+
+Next location for ID set (Eirika)
+10
+1
+NDHU
+Places.txt
+
+Next location for ID set (Ephraim)
+11
+1
+NDHU
+Places.txt
+
+Armory Pointer
+12
+4
+NEHU
+NULL
+
+Shop Pointer
+16
+4
+NEHU
+NULL
+
+Secret Shop Pointer
+20
+4
+NEHU
+NULL
+
+X Coordinate
+24
+2
+NEHU
+NULL
+
+Y Coordinate
+26
+2
+NEHU
+NULL
+
+Text
+28
+2
+NEHU
+NULL
+
+Ship Travel
+30
+2
+NDHU
+OnOff.txt

@@ -1,0 +1,7 @@
+6
+0x0100 Has a Chapter Title?
+0x0101 Revisitable?
+0x0200 Skirmishes Enabled
+0x0202 Skirmish with events?
+0x0300 Skirmish with Chapter Title?
+0x0303 Dungeon

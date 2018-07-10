@@ -110,7 +110,7 @@ GotoPrepScreen
 
 EndingScene:
 Text(PlaceholderText)
-MNC2 11
+MNCH 12
 ENDA
 
 

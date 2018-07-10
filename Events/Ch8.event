@@ -190,7 +190,7 @@ TurnAlly(Fanni)
 LABEL 0xb
 
 FADI 5
-MNC2 Ch9Eirika
+MNCH 0x9
 ENDA
 
 // Events
