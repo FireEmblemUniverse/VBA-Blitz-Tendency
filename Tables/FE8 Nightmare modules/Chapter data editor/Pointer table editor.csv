@@ -137,7 +137,7 @@
 0x87 Final Ephraim events 2,0x89eb4d4
 0x88 Tower of Valni Object type,0x81609bc
 0x89 Tower of Valni map palette,0x81ad570
-0x8A Tower of Valni Tile configuration,0x81a0514
+0x8A Tower of Valni Tile configuration,ValniTileConfig|IsPointer
 0x8B Tower of Valni 1 Map,0x81b2a60
 0X8C Tower of Valni 1 Map changes,0x8a1f0f4
 0x8D Tower of Valni 1 events,0x89eb574
