@@ -18,6 +18,7 @@
 
 //Class definitions
 #define BlitzLord 0x2
+#define VedgeLord BlitzLord
 
 // Unit definitions
 #define Vedge 0x1
