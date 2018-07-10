@@ -91,7 +91,7 @@ STAL 0x20
 FadeOutMusic
 CAM1 [4,5]
 Text(Ch5VillageGoneText)
-MNC2 0x7
+MNCH Chapter6
 ENDA
 
 //Label Visit Village
