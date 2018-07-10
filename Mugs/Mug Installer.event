@@ -33,3 +33,15 @@ FaustMug:
 #incext PortraitFormatter "Faust.png"
 setMugEntry(0x3c,FaustMug,2,5,2,3)
 
+FanniMug:
+#incext PortraitFormatter "Fanni.png"
+setMugEntry(0x11,FanniMug,2,6,3,4)
+
+ErsatzMug:
+#incext PortraitFormatter "Ersatz.png"
+setMugEntry(0x29,ErsatzMug,2,6,2,4)
+
+#define DennisPortrait 0x70
+DennisMug:
+#incext PortraitFormatter "Dennis.png"
+setMugEntry(DennisPortrait,DennisMug,2,6,2,4)
