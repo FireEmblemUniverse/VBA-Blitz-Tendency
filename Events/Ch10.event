@@ -79,7 +79,7 @@ LOAD2 0x01 Units
 ENUN
 STAL 10
 FlashCursor(Eirika,72)
-//Text(PLACEHOLDER)
+Text(PlaceholderText)
 ENDA
 
 EndingScene:
@@ -165,7 +165,7 @@ PirateEntry:
 ReinforcementEvent(NewRecruit)
 STAL 10
 FlashCursor(Ephraim,60)
-//Text(PLACEHOLDER)
+Text(PlaceholderText)
 NoFade
 ENDA
 
