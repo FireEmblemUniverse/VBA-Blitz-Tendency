@@ -17,6 +17,30 @@
    eJxlUi1PA0EUfLerEEUQwFBHcBgsNBiC4A80gYSEBPofaCCYppIfgKGGa4I4fkJbR4oAhwMLBYPBM5M3m70UMZm3+2bnfdyV0WzPzBrg68LsKJht6O5Rd6fmqILrmOuDe+ASvA5uBgfjS3AbeAjuMYbHpHDfZ+QHiFeBX8QXluvVwVpd+Z0JrMd+3sHH5p49y6AP+0t9UvsSst+VdAe4XwaizsydFM7si/GSwPkWlSvVJ+tshzxzqjmRjvlv6LZwfgN/ATPzXqqQZ7wJ3mNjbv59nO/MQf0CNE+Ip8AYWMF5pF2kN+kbUB91V8qnpXecjbrXGkaWv39bsxFd9cb3Q/PddWL2Tv70+ABvcmbgvjZL0iaPpvpcU72Berid+3ZT+c2ie3/G7DG0rEv/ZV+1onLpf2C8Cz6HtgX8xLyTKvz34F4TuJed2j4Og8//BwQFWAk=
   </data>
  </layer>
+ <layer name="LeftWall" width="17" height="12">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="3"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="10"/>
+   <property name="Y" value="8"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4BykDzQDqATAABc6ABk
+  </data>
+ </layer>
+ <layer name="RightWall" width="17" height="12">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="4"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="13"/>
+   <property name="Y" value="9"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2DwgeSBdgAOAAA9+ABk
+  </data>
+ </layer>
  <layer name="LeftHouse" width="17" height="12">
   <properties>
    <property name="Height" value="1"/>
