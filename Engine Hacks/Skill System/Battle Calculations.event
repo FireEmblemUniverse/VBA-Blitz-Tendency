@@ -38,7 +38,7 @@ POIN LethalitySkill NonGBALethalitySkill Bane
 POIN CriticalCheck
 
 //add any new ones before here
-POIN 0
+WORD 0
 
 rewriteRangeMap:
 #incbin "Internals/rewriteRangeMap.dmp"
