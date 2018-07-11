@@ -18,8 +18,6 @@ POIN Units Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
-//Todo: Set wall HP to 15, make objective display show "defend for 12 turns"
-
 TurnBasedEvents:
 TurnEventPlayer(0x0, ThiefSpawn, 4)
 TurnEventPlayer(0x0, Surprise, 10)
