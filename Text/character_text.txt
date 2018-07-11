@@ -49,6 +49,12 @@ Cortez[X]
 A devout seeking to create[NL]
 monsters in the Throne Pit.[X]
 
+## nameJazzak
+Jazzak[X]
+
+## descJazzak
+A fearful pirate.[X]
+
 ## nameZealot
 Zealot[X]
 
@@ -128,4 +134,3 @@ Anna[X]
 
 ## nameFaust
 Faust[X]
-
