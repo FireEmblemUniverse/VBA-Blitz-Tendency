@@ -45,6 +45,7 @@
 #define Aggie 0x9
 #define Fanni 0xD
 #define Murat 0xF
+#define Nichol 0x16
 #define Ersatz 0x1F
 
 #define Jazzak 0x42
@@ -74,6 +75,9 @@
 #define Chapter5Changes 0x20
 #define Chapter5Events 0x21
 #define Chapter6 0x7
+#define C17MapID 0x4D
+#define C17MapChangesID 0x4E
+#define C17EventID 0x4F
 
 #define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
 #define TileChange(X,Y) "SETVAL 0xB Coords(X,Y) ; TILECHANGE 0xFFFF"
