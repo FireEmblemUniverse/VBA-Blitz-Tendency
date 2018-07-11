@@ -69,7 +69,7 @@ GotoPrepScreen
 ENDA
 
 EndingScene:
-MNC2 0x8
+MNCH 0x8
 ENDA
 
 // Events
@@ -99,7 +99,7 @@ UNIT 0x8E Cavalier 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [3,4] 0x00 0x00 0x0 
 UNIT 0x8E Cavalier 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [14,12] 0x00 0x00 0x0 0x00 [IronSword, IronLance] ChaseOnceApproachedAI
 UNIT 0x8E Cavalier 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [10,9] 0x00 0x00 0x0 0x00 [IronSword, IronLance] ChaseOnceApproachedAI
 UNIT 0x8E Myrmidon 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [14,9] 0x00 0x00 0x0 0x00 [IronSword] ChaseOnceApproachedAI
-UNIT 0x8E Myrmidon 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [10,12] 0x00 0x00 0x0 0x00 [IronSword] ChaseOnceApproachedAI 
+UNIT 0x8E Myrmidon 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [10,12] 0x00 0x00 0x0 0x00 [IronSword] ChaseOnceApproachedAI
 UNIT 0x8E Myrmidon 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [15,4] 0x00 0x00 0x0 0x00 [IronSword] ChaseOnceApproachedAI
 UNIT 0x8E Myrmidon 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [3,8] 0x00 0x00 0x0 0x00 [IronSword] ChaseOnceApproachedAI
 UNIT 0x8E Soldier 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [12,11] 0x00 0x00 0x0 0x00 [Javelin] ChaseOnceApproachedAI

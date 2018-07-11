@@ -16,19 +16,22 @@ POIN Units Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
+ALIGN 4
 Units:
-UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [15,1] 0x00 0x00 0x0 0x00 [Reginleif] NoAI
-UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [16,0] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
-UNIT Gilliam EphraimLord 0x00 Level(1, Ally, 0) [14,2] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
-UNIT Franz EphraimLord 0x00 Level(1, Ally, 0) [13,1] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
-UNIT Vanessa EphraimLord 0x00 Level(1, Ally, 0) [14,1] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
-UNIT Garcia EphraimLord 0x00 Level(1, Ally, 0) [12,0] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
-UNIT Ross EphraimLord 0x00 Level(1, Ally, 0) [16,2] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT Vedge EphraimLord 0x00 Level(1, Ally, 0) [15,1] 0x00 0x00 0x0 0x00 [Reginleif] NoAI
+UNIT Null EphraimLord Vedge Level(1, Ally, 0) [16,0] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT Naught EphraimLord Vedge Level(1, Ally, 0) [14,2] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT Chiva EphraimLord Vedge Level(1, Ally, 0) [13,1] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT Verge EphraimLord Vedge Level(1, Ally, 0) [14,1] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT Anna EphraimLord Vedge Level(1, Ally, 0) [12,0] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT Keanu EphraimLord Vedge Level(1, Ally, 0) [16,2] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
 UNIT
 
 
 TurnBasedEvents:
 END_MAIN
+
+ALIGN 32
 
 CharacterBasedEvents:
 END_MAIN

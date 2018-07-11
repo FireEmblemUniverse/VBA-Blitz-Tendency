@@ -54,6 +54,8 @@
 [Fanni] = [0x11]
 [Ersatz] = [0x29]
 [Dennis] = [0x70]
+[Elitor] = [0x69]
+[Hecwood] = [0x33]
 
 [LoadVedge] = [LoadFace][VedgePortrait]
 [LoadXimena] = [LoadFace][0xA][0x1]

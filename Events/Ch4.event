@@ -70,7 +70,7 @@ AFEV 0xb Boss2Killed 0x11
 END_MAIN
 
 Boss1Killed:
-CHECK_EVENTID 0x10
+CHECK_EVENTID 0x11
 BEQ 0x0 0xc 0x0
   //if boss 2 is also dead
   CALL EndingScene
@@ -79,7 +79,7 @@ NoFade
 ENDA
 
 Boss2Killed:
-CHECK_EVENTID 0x11
+CHECK_EVENTID 0x10
 BEQ 0x0 0xc 0x0
   //if boss 1 is also dead
   CALL EndingScene

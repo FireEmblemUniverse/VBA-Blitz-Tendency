@@ -62,7 +62,12 @@ GotoPrepScreen
 //Label EndingScene
 EndingScene:
 FADI 0x5
-TILEREVERSE 0x4
+TILEREVERSE 0x2
+//If we didn't make the bridge, make it now
+CHECK_EVENTID 0x12
+BNE 1 0xC 0x0
+TileChange(0, 6)
+LABEL 1
 MUSC Victory
 CAM1 [4,5]
 CLEA 0x0

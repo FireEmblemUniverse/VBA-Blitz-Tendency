@@ -65,9 +65,9 @@ Knoll's Summon,0x0
 Ewan's Summon,0x0
 Lyon (Ch 17),0x0
 Morva (Ch 20),FrenzyID
-Monster Ch2,RenewalID
+Ch1 Boss,0x0
 Cortez Ch2,TraceID
-Selena (Ch 10B & 13B),0x0
+Monster Ch2,RenewalID
 Valter (Prologue),0x0
 Breguet (Ch 1),CounterMagicID
 Bone (Ch 2),AxefaireID
@@ -129,10 +129,10 @@ Orson (Ch 16),0x0
 Grado Soldier (Special),0x0
 Grado Soldier 1 (Normal),0x0
 Grado Soldier 2,0x0
+Ch1 Generic 1,0x0
+Ch1 Generic 2,0x0
 Generic Monster Ch 2,FuryID
 Generic Zealot Ch 2,FuryID
-Grado Soldier 5,0x0
-Grado Soldier 6,0x0
 Grado Soldier 7,0x0
 Grado Soldier 8,0x0
 Grado Soldier 9,0x0

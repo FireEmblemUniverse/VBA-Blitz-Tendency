@@ -45,13 +45,11 @@ END_MAIN
 
 ALIGN 4
 ThrThrD_MiscBasedEvents:
-AREA 0x0 VictoryCheck [ 4, 2] [ 4, 2]
-AREA 0x0 VictoryCheck [19, 1] [19, 1]
-AREA 0x0 VictoryCheck [10,10] [10,10]
+AREA 0 VictoryCheck_4_2 [ 4, 2] [ 4, 2]
+AREA 0 VictoryCheck_19_1 [19, 1] [19, 1]
+AREA 0 VictoryCheck_10_10 [10,10] [10,10]
 CauseGameOverIfLordDies
-//AFEV
 END_MAIN
-
 
 ALIGN 4
 ThrThrD_Dunno:
@@ -83,7 +81,7 @@ UNIT
 
 ALIGN 4
 ThrThrD_EnemyLeft:
-UNIT 0x44 Tarvos 0x00 Level((TTD_Level+7), Enemy, 1)   [ 4, 2] 0x02 0x00 0x00 0x00 [DevilAxe, DevilAxe, DevilAxe] GuardTileAI
+UNIT 0x44 Tarvos 0x00 Level((TTD_Level+7), Enemy, 1)   [ 4, 2] 0x02 0x00 0x00 0x00 [HandAxe, Vulnerary] GuardTileAI
 UNIT 0x84 Bonewalker 0x44 Level((TTD_Level+3), Enemy, 1) [3,1] 0x00 0x00 0x00 0x00 [WindSword, Vulnerary] [0x03, 0x00]
 UNIT 0x84 Bonewalker_Bow 0x44 Level((TTD_Level+3), Enemy, 1) [3,0] 0x02 0x00 0x00 0x00 [PoisonBow] [0x03, 0x00]
 UNIT 0x84 Bael 0x44 Level((TTD_Level+3), Enemy, 1) [3,0] 0x00 0x00 0x00 0x00 [PoisonClaw] AttackInRangeAI
@@ -132,22 +130,73 @@ UNIT 0x85 Fighter 0x45 Level(TTD_Level, Enemy, 1)   [16,11] 0x00 0x00 0x00 0x00 
 UNIT
 
 ALIGN 4
-VictoryCheck:
-//#Stores the char id of unit at given position into Slot 0xC
-//CHECK_AT, 0x2E20, 4, -game:FE8 -indexMode:8
-//    Position, 2, 2, -coordinates:2 -preferredBase:10
 
+VictoryCheck_4_2:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x10 0xC 0x0 //Skip the event if not a player triggering.
+
+CHECK_AT [19, 1]
+BEQ 0x10 0xC 0x0
+SVAL 0xB 0x010013 //represents tile [19, 1]
+CHECK_ALLEGIANCE 0xFFFE //msC = 0x0 ...
+BNE 0x10 0xC 0x0 //branch...
+
+CHECK_AT [10, 10]
+BEQ 0x10 0xC 0x0
+SVAL 0xB 0x0A000A //represents tile [10, 10]
+CHECK_ALLEGIANCE 0xFFFE //msC = 0x0 ...
+BNE 0x10 0xC 0x0 //branch...
+
+CALL ThrThrD_EndingScene
+LABEL 0x10
+
+NoFade
+ENDB
+
+
+VictoryCheck_19_1:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x10 0xC 0x0 //Skip the event if not a player triggering.
+
+CHECK_AT [4, 2]
+BEQ 0x10 0xC 0x0
 SVAL 0xB 0x020004 //represents tile [4, 2]
 CHECK_ALLEGIANCE 0xFFFE //msC = 0x0 if unit at coord defined by slot 0xB is a Player unit
 BNE 0x10 0xC 0x0 //branch to Label 0x10 if slot C is not 0
-  SVAL 0xB 0x010013 //represents tile [19, 1]
-  CHECK_ALLEGIANCE 0xFFFE //msC = 0x0 ...
-  BNE 0x10 0xC 0x0 //branch...
-    SVAL 0xB 0x0A000A //represents tile [10, 10]
-    CHECK_ALLEGIANCE 0xFFFE //msC = 0x0 ...
-    BNE 0x10 0xC 0x0 //branch...
+
+CHECK_AT [10, 10]
+BEQ 0x10 0xC 0x0
+SVAL 0xB 0x0A000A //represents tile [10, 10]
+CHECK_ALLEGIANCE 0xFFFE //msC = 0x0 ...
+BNE 0x10 0xC 0x0 //branch...
+
 CALL ThrThrD_EndingScene
 LABEL 0x10
+
+NoFade
+ENDB
+
+
+VictoryCheck_10_10:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x10 0xC 0x0 //Skip the event if not a player triggering.
+
+CHECK_AT [4, 2]
+BEQ 0x10 0xC 0x0
+SVAL 0xB 0x020004 //represents tile [4, 2]
+CHECK_ALLEGIANCE 0xFFFE //msC = 0x0 if unit at coord defined by slot 0xB is a Player unit
+BNE 0x10 0xC 0x0 //branch to Label 0x10 if slot C is not 0
+
+CHECK_AT [19, 1]
+BEQ 0x10 0xC 0x0
+SVAL 0xB 0x010013 //represents tile [19, 1]
+CHECK_ALLEGIANCE 0xFFFE //msC = 0x0 ...
+BNE 0x10 0xC 0x0 //branch...
+
+CALL ThrThrD_EndingScene
+LABEL 0x10
+
+NoFade
 ENDB
 
 ALIGN 4
@@ -158,27 +207,27 @@ RandomTimedSpawns: //as stolen from circles
   //SDIV slotsParam(r2, rC, r1) //r2 = rC/9
   //SMUL slotsParam(r1, r2)     //r1 = r2*9
   //SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
-  BNE 0x0 r1 0
+  BNE 0x0 rC 0
   ReinforcementEvent(ThrThrD_ReinRight)    //Remainder was 0 (right)
   LABEL 0x0
   SMOV r2 1
-  BNE 0x1 r1 r2
+  BNE 0x1 rC r2
   ReinforcementEvent(ThrThrD_ReinLeft) //R = 1
   LABEL 0x1
   SMOV r2 2
-  BNE 0x2 r1 r2
+  BNE 0x2 rC r2
   ReinforcementEvent(ThrThrD_ReinMid) // r = 2
   LABEL 0x2
   SMOV r2 3
-  BNE 0x3 r1 r2
+  BNE 0x3 rC r2
   ReinforcementEvent(ThrThrD_ReinRightRoom) // r =3
   LABEL 0x3
   SMOV r2 4
-  BNE 0x4 r1 r2
+  BNE 0x4 rC r2
   ReinforcementEvent(ThrThrD_ReinUpMid) // r = 4
   LABEL 0x4
-  SMOV r2 4
-  BNE 0x5 r1 r2
+  SMOV r2 5
+  BNE 0x5 rC r2
   ReinforcementEvent(ThrThrD_ReinBotLeft) // r = 5
   LABEL 0x5
   //no reinforcement. r = 6, 7
@@ -205,6 +254,6 @@ ENDA
 ThrThrD_EndingScene:
 Text(PlaceholderText)
 //TODO
-MNC2 0x03 //TODO: Replace with proper code for next chapter.
+MNCH 0x03
 NoFade
 ENDA
