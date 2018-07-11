@@ -85,7 +85,7 @@
 #define EndUnit UNIT
 #define EndConvo "CALL $9EE2C4"
 
-#define DeathQuote(Character,Chapter,EventID,TextID) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID 0 0"
+//#define DeathQuote(Character,Chapter,EventID,TextID) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID 0 0"
 #define AllChapters 0xFF
 
 //Equip definitions

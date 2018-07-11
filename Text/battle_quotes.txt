@@ -1,0 +1,7 @@
+## ElitorDeath
+Mother... Father...[N]
+Tell my brother...[X]
+
+## HecwoodDeath
+No! Not here! Not now... Forgive me,[N]
+Please... forgive me...[X]
