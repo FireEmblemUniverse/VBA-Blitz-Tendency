@@ -1,7 +1,9 @@
 ## ElitorDeath
+[OpenMidRight][LoadFace][Elitor][0x1]
 Mother... Father...[N]
-Tell my brother...[X]
+Tell my brother...[A][X]
 
 ## HecwoodDeath
+[OpenMidRight][LoadFace][Hecwood][0x1]
 No! Not here! Not now... Forgive me,[N]
-Please... forgive me...[X]
+Please... forgive me...[A][X]
