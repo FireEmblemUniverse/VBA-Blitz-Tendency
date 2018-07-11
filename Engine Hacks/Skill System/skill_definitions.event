@@ -156,3 +156,5 @@
 #define FortressDefenseID 155 //DONE
 #define FortressResistanceID 156 //DONE
 #define ForesightID 157 //DONE
+#define AxeFaithID 158 //DONE
+#define AxefaithID AxeFaithID //Alias

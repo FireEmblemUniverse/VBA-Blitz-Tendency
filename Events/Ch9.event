@@ -109,8 +109,8 @@ ENUN
 GotoPrepScreen
 
 EndingScene:
-//Text(PlaceholderText)
-MNC2 0x11
+Text(PlaceholderText)
+MNCH 12
 ENDA
 
 

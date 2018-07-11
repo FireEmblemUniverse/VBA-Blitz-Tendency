@@ -1,0 +1,228 @@
+﻿
+EventPointerTable(Chapter5Events,ThisChapter)
+
+//Label ThisChapter
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN EndMainPointer EndMainPointer EndMainPointer
+POIN EndMainPointer
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+//EndLabel
+
+//Label TurnBasedEvents
+TurnBasedEvents:
+TurnEventPlayer(0x0,CheckFliers,0x00,0xFF)
+END_MAIN
+
+//Label CharacterBasedEvents
+ALIGN 32
+CharacterBasedEvents:
+END_MAIN
+
+//Label LocationBasedEvents
+LocationBasedEvents:
+Village(0x13,VisitVillage,14,21)
+Chest(ChestKey,0,20)
+CHES 0x10 PowerGem [0,18] 0x14
+END_MAIN
+
+//Label MiscBasedEvents
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
+AFEV 0x11 ArtifactGot 0x10
+AREA 0x12 MakeBridge [9,17] [12,18]
+END_MAIN
+
+//Label TrapData
+TrapData:
+BLST [5,6] 0x35
+ENDTRAP
+ALIGN 4
+
+//Label BeginingScene
+BeginningScene:
+MUSC Into_the_Shadow_of_Victory
+LOAD1 0x1 EnemyUnits
+LOAD2 0x1 StartingPeople
+ENUN
+CAM1 [7,18]
+STAL 0x10
+FADU 0x5
+STAL 0x20
+Text(Ch5OpenningText)
+GotoPrepScreen
+
+//Label EndingScene
+EndingScene:
+FADI 0x5
+TILEREVERSE 0x2
+//If we didn't make the bridge, make it now
+CHECK_EVENTID 0x12
+BNE 1 0xC 0x0
+TileChange(0, 6)
+LABEL 1
+MUSC Victory
+CAM1 [4,5]
+CLEA 0x0
+CLEE 0x0
+LOAD2 0x1 EndingPeople
+ENUN
+STAL 0x10
+FADU 0x5
+STAL 0x20
+Text(Ch5BattleDoneText)
+FadeOutMusic
+CAM1 [10,12]
+LOAD1 0x1 BanditMeanies
+ENUN
+Text(Ch5BanditText)
+MUSC Tension
+MOVE 0x0 0x80 [14,21]
+MOVE 0x0 0x81 [11,21]
+MOVE 0x0 0x82 [12,22]
+STAL 0x10
+CAM1 [10,18]
+ENUN
+STAL 0x8
+TileChange(13,19)
+STAL 0x20
+FadeOutMusic
+CAM1 [4,5]
+Text(Ch5VillageGoneText)
+MNCH 0x06
+ENDA
+
+//Label Visit Village
+VisitVillage:
+MUSI
+SetBackground(0x1)
+TEXTSHOW Ch5VillageText
+TEXTEND
+MUSS Comrades
+TEXTCONT
+TEXTEND
+EndConvo
+MURE 0x5
+MUNO
+LOAD1 0x1 LoadXimena
+ENUN
+GiveItem(ChestKey,Ximena)
+NoFade
+ENDA
+
+//Label Artifact Stuff
+ArtifactGot:
+Text(Ch5ArtifactGotText)
+FlashCursor(11,17,60)
+NoFade
+EndA2
+
+MakeBridge:
+SVAL 0x1 PowerGem
+ASMC CheckItem|1
+BEQ 0x0 0x0 0xC
+	// Unit has the item
+	STAL 0x10
+	TileChange(0,6)
+	STAL 0x10
+	Text(Ch5MakeBridgeText)
+	GOTO 0x1
+LABEL 0x0
+	// Unit does not have the item
+	ENUF 0x12
+LABEL 0x1
+NoFade
+ENDA
+
+//Label Calculate Turn Skipping
+CheckFliers:
+CHECK_EVENTID 0x12
+BEQ 0x2 0x0 0xC
+	Every3Turns(0x3,0x4,0x5,0x14,0x15,GimmeFliers)
+LABEL 0x2
+NoFade
+EndA2
+
+GimmeFliers:
+LOAD1 0x1 LoadFliers
+ENUN
+NoFade
+ENDA
+
+EndMainPointer:
+END_MAIN
+
+	/*UNIT DATA*/
+
+//Label Player Units
+Units:
+UNIT Vedge 0x0 Vedge Level(1,Ally,True) [9,20] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Vedge 0x0 Vedge Level(1,Ally,True) [8,21] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Vedge 0x0 Vedge Level(1,Ally,True) [9,22] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Vedge 0x0 Vedge Level(1,Ally,True) [11,22] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Vedge 0x0 Vedge Level(1,Ally,True) [12,21] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Vedge 0x0 Vedge Level(1,Ally,True) [10,21] 0x00 0x00 0x00 0x00 [0] NoAI
+StartingPeople:
+UNIT Vedge 0x0 Vedge Level(1,Ally,True) [11,20] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+LoadXimena:
+#ifdef __DEBUG__
+  UNIT Ximena Shaman_F Ximena Level(6,Ally,True) [14,21] 0x00 0x00 0x1 REDA12R22 [Flux,Vulnerary,PowerGem] NoAI
+#else
+  UNIT Ximena Shaman_F Ximena Level(6,Ally,True) [14,21] 0x00 0x00 0x1 REDA12R22 [Flux,Vulnerary] NoAI
+#endif
+EndUnit
+
+//Label Meanies
+EnemyUnits:
+UNIT Grudge Knight Grudge Level(9,Enemy,True) [1,1] 0x00 0x00 0x00 0x00 [Spear] GuardAI
+UNIT Ch5Generic Knight Grudge Level(9,Enemy,True) [4,20] 0x00 0x00 0x00 0x00 [Javelin] GuardAI
+UNIT Ch5Generic Knight Grudge Level(9,Enemy,True) [4,18] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
+UNIT Ch5Generic Myrmidon Grudge Level(9,Enemy,True) [2,21] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
+UNIT Ch5Generic Mage Grudge Level(9,Enemy,True) [1,18] 0x00 0x00 0x00 0x00 [Thunder] AttackInRangeAI
+UNIT Ch5Generic Soldier Grudge Level(9,Enemy,True) [1,17] 0x00 0x00 0x00 0x00 [IronLance] NoAI
+UNIT Ch5Generic Mercenary Grudge Level(9,Enemy,True) [3,20] 0x00 0x00 0x00 0x00 [IronBlade] NoAI
+UNIT Ch5Generic Fighter Grudge Level(9,Enemy,True) [5,21] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
+UNIT Ch5Generic Archer Grudge Level(9,Enemy,True) [7,18] 0x00 0x00 0x00 0x00 [SteelBow] NoAI
+UNIT Ch5Generic WyvernRider Grudge Level(9,Enemy,True) [13,1] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
+UNIT Ch5Generic Pirate Grudge Level(9,Enemy,True) [9,12] 0x00 0x00 0x00 0x00 [DevilAxe] NoAI
+UNIT Ch5Generic Soldier Grudge Level(9,Enemy,True) [12,13] 0x00 0x00 0x00 0x00 [Axereaver] NoAI
+UNIT Ch5Generic Soldier Grudge Level(9,Enemy,True) [12,19] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+UNIT Ch5Generic Monk Grudge Level(9,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [Lightning] AttackInRangeAI
+UNIT Ch5Generic Knight Grudge Level(9,Enemy,True) [8,8] 0x00 0x00 0x00 0x00 [SteelLance] GuardAI
+UNIT Ch5Generic Mercenary Grudge Level(9,Enemy,True) [5,9] 0x00 0x00 0x00 0x00 [LightBrand] GuardAI
+UNIT Ch5Generic Fighter Grudge Level(9,Enemy,True) [9,5] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
+UNIT Ch5Generic Mage Grudge Level(9,Enemy,True) [6,4] 0x00 0x00 0x00 0x00 [Elfire] NoAI
+UNIT Ch5Generic Archer Grudge Level(9,Enemy,True) [5,6] 0x00 0x00 0x00 0x00 [IronBow] AttackInRangeAI
+UNIT Ch5Generic Archer Grudge Level(9,Enemy,True) [4,7] 0x00 0x00 0x00 0x00 [Longbow] AttackInRangeAI
+UNIT Ch5Generic Myrmidon Grudge Level(9,Enemy,True) [2,10] 0x00 0x00 0x00 0x00 [KillingEdge] ChaseOnceApproachedAI
+UNIT Ch5Generic Cavalier Grudge Level(9,Enemy,True) [0,11] 0x00 0x00 0x00 0x00 [IronSword,SteelLance] ChaseOnceApproachedAI
+UNIT Ch5Generic Cavalier Grudge Level(9,Enemy,True) [0,8] 0x00 0x00 0x00 0x00 [ShortSpear] AttackInRangeAI
+UNIT Ch5Generic Pirate Grudge Level(9,Enemy,True) [1,6] 0x00 0x00 0x00 0x00 [IronAxe] NoAI
+UNIT Ch5Generic Cavalier Grudge Level(9,Enemy,True) [9,2] 0x00 0x00 0x00 0x00 [SteelBlade] NoAI
+UNIT Ch5Generic Soldier Grudge Level(9,Enemy,True) [6,1] 0x00 0x00 0x00 0x00 [SteelLance] AttackInRangeAI
+UNIT
+
+LoadFliers:
+UNIT Ch5Generic PegasusKnight Grudge Level(9,Enemy,True) [14,0] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
+EndUnit
+
+//Label Cutscene People
+EndingPeople:
+UNIT Vedge Shaman_F Ximena Level(6,Ally,True) [1,2] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT Ximena Shaman_F Ximena Level(6,Ally,True) [2,1] 0x00 0x00 0x00 0x00 [0] NoAI
+UNIT
+
+BanditMeanies:
+UNIT 0x80 Brigand 0x80 Level(1,Enemy,True) [14,12] 0x00 0x00 0x1 REDA11R12 [0] NoAI
+UNIT 0x81 Brigand 0x81 Level(1,Enemy,True) [14,12] 0x00 0x00 0x1 REDA13R11 [0] NoAI
+UNIT 0x82 Brigand 0x82 Level(1,Enemy,True) [14,11] 0x00 0x00 0x1 REDA13R13 [0] NoAI
+EndUnit

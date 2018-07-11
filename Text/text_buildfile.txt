@@ -30,4 +30,6 @@ Sirius[X]
 #include "character_text.txt"
 #include "item_text.txt"
 #include "skilldesc_text.txt"
+#include "Chapter Text/Chapter_text.txt"
 #include "class_text.txt"
+#include "battle_quotes.txt"

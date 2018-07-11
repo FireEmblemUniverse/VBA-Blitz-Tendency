@@ -126,6 +126,7 @@ ELSE 0x9
 LABEL 0x8
 LOAD1 0x1 Bads12
 LABEL 0x9
+CAM1 [7,5]
 MUSC 0x25
 FADU 10
 STAL 30
@@ -146,7 +147,6 @@ VCWF 5
 LOAD2 0x1 Units12
 
 CHECK_HARD
-
 IFNOTEQUAL 0x6 0xC 0x0 //if the result of this check is not 0; i.e. true
 LOAD1 0x1 BadsMore12H
 ELSE 0x7
@@ -156,11 +156,11 @@ LABEL 0x7
 ENUN
 DISA 0x66
 FAWU 5
-STAL 10
+STAL 40
 SOUN 0xbd
 TILEREVERSE 0x1
 TILECHANGE 0x0
-STAL 10
+STAL 20
 CAM1 [7,5]
 FlashCursor(Ersatz,50)
 Text(ChEightIntroThree)
@@ -170,7 +170,7 @@ GotoPrepScreen
 ENDA
 
 EndingScene12:
-MUSC 0x32 //victory
+MUSC 0x31 //victory
 
 CHECK_ALIVE Ersatz
 BEQ 0x4 0xc 0x1 //do this if 0xc is true i.e. Ersatz is alive
@@ -190,7 +190,7 @@ TurnAlly(Fanni)
 LABEL 0xb
 
 FADI 5
-MNC2 0x0a
+MNCH 0x9
 ENDA
 
 // Events
@@ -308,21 +308,25 @@ STAL 20
 SOUN 0x130
 FAWI 5
 VCWF 0
+FAWU 5
+STAL 30
+
 CAM1 [7,5]
+STAL 30
 EARTHQUAKE_START 0x100
 STAL 50
 SOUN 0xe7
 LOAD1 0x1 Doom1201
-STAL 30
+STAL 40
 SOUN 0xe7
 LOAD1 0x1 Doom1202
-STAL 30
+STAL 40
 SOUN 0xe7
 LOAD1 0x1 Doom1203
 ENUN
 STAL 30
 EARTHQUAKE_END
-STAL 20
+STAL 50
 NoFade
 ENDA
 
@@ -337,11 +341,11 @@ CHECK_ALIVE Ersatz
 BEQ 0x3 0xc 0x1 //do this if 0xc is true i.e. Ersatz is alive
 
 SVAL 0x2 0x8 //set 0x2 to 8
-RANDOMNUMBER 0x20 //RN btwn 0 and 64 to 0xc
+RANDOMNUMBER 0x30 //RN btwn 0 and 30 to 0xc
 BLT 0x2 0x2 0xC //if 0x2's content is less than 0xc's contents, do label 0x2
 CAM1 Ersatz
 FlashCursor(0x1f,50)
-Text(ChSixHasty)
+Text(ChEightHasty)
 
 LABEL 0x2
 LABEL 0x3
@@ -357,7 +361,7 @@ ENDA
 // Units
 
 Bads12:
-UNIT Dennis Sage 0x00 Level(1, Enemy, 1) [23,8] 0x00 0x00 0x0 0x00 [Shine, 1G] AttackInRangeAI
+UNIT Dennis Sage 0x00 Level(1, Enemy, 1) [23,8] 0x00 0x00 0x0 0x00 [Shine, _1G] AttackInRangeAI
 UNIT 0x90 Soldier Dennis Level(7, Enemy, 1) [19,3] 0x00 0x00 0x0 0x00 [0x8D] AttackInRangeAI
 UNIT 0x90 Fighter Dennis Level(7, Enemy, 1) [19,6] 0x00 0x00 0x0 0x00 [DragonAxe] AttackInRangeAI
 UNIT 0x90 Fighter Dennis Level(7, Enemy, 1) [22,4] 0x00 0x00 0x0 0x00 [DragonAxe] AttackInRangeAI
@@ -380,7 +384,7 @@ UNIT
 
 
 Bads12H:
-UNIT Dennis Sage 0x00 Level(1, Enemy, 1) [23,8] 0x00 0x00 0x0 0x00 [Shine, 1G] AttackInRangeAI
+UNIT Dennis Sage 0x00 Level(1, Enemy, 1) [23,8] 0x00 0x00 0x0 0x00 [Shine, _1G] AttackInRangeAI
 UNIT 0x90 Soldier Dennis Level(8, Enemy, 1) [19,3] 0x00 0x00 0x0 0x00 [DragonSpear, HeavySpear] AttackInRangeAI
 UNIT 0x90 Pirate Dennis Level(8, Enemy, 1) [19,6] 0x00 0x00 0x0 0x00 [DragonAxe] AttackInRangeAI
 UNIT 0x90 Pirate Dennis Level(7, Enemy, 1) [22,4] 0x00 0x00 0x0 0x00 [DragonAxe, Halberd] AttackInRangeAI
@@ -401,9 +405,9 @@ UNIT
 
 NPCUnits12:
 UNIT Fanni Knight_F 0x00 Level(6, NPC, 0) [5,8] 0x00 0x00 0x0 0x00 [IronLance, Javelin, Antidote] PursueWithoutHeedAI
-UNIT Ersatz Manakete_F 0x00 Level(1, NPC, 0) [4,8] 0x00 0x00 0x0 0x00 [HolyDragonStone, Vulnerary, AngelicRobe] AttackInRangeAI
+UNIT Ersatz Manakete_2_F 0x00 Level(1, NPC, 0) [4,8] 0x00 0x00 0x0 0x00 [HolyDragonStone, Vulnerary, AngelicRobe] AttackInRangeAI
 UNIT
-//use of manakete_f is intentional; just "manakete" is the Morva dragon zombie
+//use of manakete_2_f is intentional; just "manakete_2" is the Morva dragon zombie (and manakete doesn't load properly)
 
 Rein1201:
 UNIT 0x90 Myrmidon Dennis Level(7, Enemy, 1) [16,9] 0x2 0x00 0x0 0x00 [Lancereaver, IronSword] AttackInRangeAI

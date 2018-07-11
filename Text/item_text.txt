@@ -15,3 +15,10 @@ Runic Bow[X]
 
 ## descRunicBow
 Effective against magic users.[X]
+
+## namePowerGem
+Power Gem[X]
+
+##descPowerGem
+A mysterious gem giving its[NL]
+wielder special ability. +10 crit[X]

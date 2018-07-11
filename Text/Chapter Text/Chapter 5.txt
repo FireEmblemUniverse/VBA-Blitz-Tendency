@@ -1,0 +1,73 @@
+
+## Ch5OpenningText
+[OpenMidLeft][LoadVedge]
+What? There's no bridge? Looks[NL]
+like we have a fight on our[A][NL]
+hands regardless.[A][X]
+
+## Ch5VillageText
+[OpenMidRight][LoadCurrent][OpenMidLeft][LoadXimena]
+Who are you? I bet you're looking for[NL]
+a way across, aren't you? Sorry, but[A][NL]
+I don't think you'll be able to find[NL]
+it here... or anywhere within three[A][NL]
+days distance upstream or downstream.[NL]
+See, my ancestors here were persecuted[A][NL]
+relentlessly by mauraders across the[NL]
+stream, [.]and-[A]
+[OpenMidRight]Look. I don't care. Just[NL]
+tell us the best way across.[A][NL]
+It's very important.[A][CloseSpeech]
+[OpenMidLeft][MoveLeft][OpenFarLeft][LoadFace][0x5F][0x01]
+Important you say? Go to the temple[NL]
+just west of here. Just inside, you[A][NL]
+will find a chest with an artifact.[NL]
+Bring that artifact to the water,[A][NL]
+and the path will be clear. Ximena[NL]
+will show you the way.[A][Events][CloseSpeech][OpenMidRight][MoveFarRight][OpenLeft][MoveRight][ClearFace][LoadXimena]
+Grandmother, we can't infiltrate[NL]
+the sanctity of the temple. You[A][NL]
+know that better than anyone![A][CloseSpeech][OpenFarLeft][MoveMidLeft]
+Child, they are clearly on an an[NL]
+important quest. Those bandits[A][NL]
+left decades ago. There is[NL]
+no danger anymore whatsoever.[A]
+[OpenRight]But-[A]
+[OpenMidLeft]Take this and go![A][X]
+
+## Ch5ArtifactGotText
+[OpenLeft][LoadXimena]
+Now that we have the artifact[NL]
+grandmother says all we need[A][NL]
+to do is bring it near the water.[NL]
+Over there should do, I suppose.[A][X]
+
+## Ch5MakeBridgeText
+[OpenLeft][LoadXimena]
+Incredible! You should be[NL]
+able to cross now![A][X]
+
+## Ch5BattleDoneText
+[OpenMidLeft][LoadVedge][OpenMidRight][LoadXimena]
+Incredible. Our legends tell of[NL]
+something forged to keep the water[A][NL]
+level up for our protection. I[NL]
+had no idea that it still existed.[A][NL]
+We have no need for it now.[NL]
+You keep it. Hold it, and it[A][NL]
+will make you stronger.[A][X]
+
+## Ch5BanditText
+[OpenFarRight][LoadFace][0x4C][0x01]
+Look, boys! Here's our chance![NL]
+Sack the village! No survivors![A][X]
+
+## Ch5VillageGoneText
+[OpenMidLeft][LoadVedge][OpenMidRight][LoadXimena]
+My home! Grandmother![A]
+[OpenMidLeft]You clearly have a[NL]
+conflicted past now. You[A][NL]
+sound like a good character[NL]
+for our party. What say you?[A]
+[OpenMidRight]I'm hesitent, but there's[NL]
+nothing else to do, so okay.[A][X]

@@ -19,10 +19,10 @@
    eJx9lctrFEEQxrtrXVfXEPXgJesLj0FcESEkiop6UqMIgkYUfCTxFKMHjclFNNlVZCMGfCWCpwjrP+AjuQoKHtSbiBeFFfEQkoOnZKNf2dVMTe84hx893V3zVU11VU/RGvOJjDlvjJnDWMR8L577MsZ0gx7QC5qx1429bRRfZ7uadczgvUmMk7DpAb2iNwWbm9ir4PmCdWv83ggogTLYAtsRrD+18XW2q4j+bWjcAW9gWwJl0f8Cm8N4HhVtr89jJ9Zz5Gyaxea56Hm7c9b54Pk76G/C+F58eb2P6vke+xP9quitgPYSkCennZPYRvnbrfPN85/QWYZxOciqeNNYincPgm/W6Yf7/G1HZJ1zdMu4eJlsgn3IjHXn1kpR3Ek+ktZz8r1TmSiHGs5VvzCWieZj/9ELqUpuz0rtaR8t0LiIsR9clpG5JPOC8sF5P0DRuXO8efneJnADayV1TkwXbL7aiPvgiZofV/oVqX3WvKtqqibxD9t4ja4NtBfwfh0sgj+mUZ/rslXi75Oa4j6t2qi+df23K/0C+wPrwHqwAWz0e8qH72PW30quprKUXEMLFOnvADut621mN9iTkCOv38nnJvheqQX6Oj8t4BTYpWiXvXmK6/9Sfpgsxed87tPgs9LvkLj5/Ifl2evr/Pg+yQea2g+fCdeS1t8OfmO9C+MJsAYcU2d/mqL4N1N6/CvJxaf1r4CrYABcA4NgSOnPUzz/Ok++hw8JRWrMzwPwEDwCj8E4mJC9Ntj9wLfVTKTN9e7zxPqrwT4875c69fkZxHwIFMALrL0Er8BrFXvdxnvL+/B5mpN7uYyxZOL1OQ4mKN5nIZwb7q3v6n7QsN9VtrH+w/71nMR6R8aNdYri8/exPodicN767tX9dZ2cpq71f/UoeXlmGuML72ftM/She1TD/5IP4G2KfpgvvXeGXOxhH82m6Ol3F1VekvT5fh6QGmoT/aMpZxaeHdfdXzgSDbU=
   </data>
  </layer>
- <layer name="Flood4" width="24" height="24" visible="0">
+ <layer name="Flood4" width="24" height="24">
   <properties>
    <property name="Height" type="int" value="6"/>
-   <property name="ID" type="int" value="6"/>
+   <property name="ID" type="int" value="9"/>
    <property name="Width" type="int" value="24"/>
    <property name="X" type="int" value="0"/>
    <property name="Y" type="int" value="18"/>
@@ -34,7 +34,7 @@
  <layer name="Flood1" width="24" height="24">
   <properties>
    <property name="Height" type="int" value="7"/>
-   <property name="ID" type="int" value="5"/>
+   <property name="ID" type="int" value="8"/>
    <property name="Width" type="int" value="20"/>
    <property name="X" type="int" value="4"/>
    <property name="Y" type="int" value="17"/>
@@ -43,10 +43,22 @@
    eJztkDsOwjAMhp1kY2IHboDUmZtwEyQWxF3gCjxOwMiKKIipK4IZWmHLjhJMqFjY8kuf3CaOHz9AVlZWVlbW/3V0AHMDcMB4MkzPAqwwrpENsjXhjhhg7gJjB/MqwwzlW6swzEXVIErpFZ+BZRq6c6G+J1W/7z5rp6ix7l3ePKWv7qFFtR8/1D4jV2BfltJj5Pi8iNCiHO1BzEz88L7v8Xcnc5F/tew/dryLFu1ZtnmC3CD40Qjf8lP+01u/wwTj1L57Tp50TZilbZ4XSQ1hpg==
   </data>
  </layer>
+ <layer name="Chest3" width="24" height="24">
+  <properties>
+   <property name="Height" type="int" value="1"/>
+   <property name="ID" type="int" value="7"/>
+   <property name="Width" type="int" value="1"/>
+   <property name="X" type="int" value="4"/>
+   <property name="Y" type="int" value="14"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRQA3gONAOGAWjYBQQDQD4sABC
+  </data>
+ </layer>
  <layer name="Gangplanks" width="24" height="24">
   <properties>
    <property name="Height" type="int" value="2"/>
-   <property name="ID" type="int" value="4"/>
+   <property name="ID" type="int" value="6"/>
    <property name="Width" type="int" value="11"/>
    <property name="X" type="int" value="6"/>
    <property name="Y" type="int" value="11"/>
@@ -55,10 +67,22 @@
    eJxjYBgFo2AUjALSQDsjA0MGFHcAsQ0Qp0OxPSNCHiRHDfNjgNgOCVNq/igYBaNgFAAATzkJIg==
   </data>
  </layer>
- <layer name="TideIn" width="24" height="24" visible="0">
+ <layer name="Chest2" width="24" height="24">
+  <properties>
+   <property name="Height" type="int" value="1"/>
+   <property name="ID" type="int" value="5"/>
+   <property name="Width" type="int" value="1"/>
+   <property name="X" type="int" value="23"/>
+   <property name="Y" type="int" value="9"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDEXgONAOGAWjYBSMgiEMAF9TAEI=
+  </data>
+ </layer>
+ <layer name="TideIn" width="24" height="24">
   <properties>
    <property name="Height" type="int" value="19"/>
-   <property name="ID" type="int" value="3"/>
+   <property name="ID" type="int" value="4"/>
    <property name="Width" type="int" value="18"/>
    <property name="X" type="int" value="6"/>
    <property name="Y" type="int" value="7"/>
@@ -70,7 +94,7 @@
  <layer name="Flood3" width="24" height="24">
   <properties>
    <property name="Height" type="int" value="4"/>
-   <property name="ID" type="int" value="2"/>
+   <property name="ID" type="int" value="3"/>
    <property name="Width" type="int" value="3"/>
    <property name="X" type="int" value="5"/>
    <property name="Y" type="int" value="7"/>
@@ -82,13 +106,25 @@
  <layer name="Flood2" width="24" height="24">
   <properties>
    <property name="Height" type="int" value="5"/>
-   <property name="ID" type="int" value="1"/>
+   <property name="ID" type="int" value="2"/>
    <property name="Width" type="int" value="4"/>
    <property name="X" type="int" value="15"/>
    <property name="Y" type="int" value="6"/>
   </properties>
   <data encoding="base64" compression="zlib">
    eJxjYBgFo2BggAwzA8M/RgaGe0AszUx986WZINgKaPZfJtqZD3J7D/WNh5sfDjT/BA3N/w3E+ow0sGAUjIJRMAoGMQAAARAHOQ==
+  </data>
+ </layer>
+ <layer name="Chest1" width="24" height="24">
+  <properties>
+   <property name="Height" type="int" value="1"/>
+   <property name="ID" type="int" value="1"/>
+   <property name="Width" type="int" value="1"/>
+   <property name="X" type="int" value="5"/>
+   <property name="Y" type="int" value="0"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYMAEjljERsEoGAWjYBSMglEwCoYLAABNCgBC
   </data>
  </layer>
 </map>

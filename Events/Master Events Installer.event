@@ -10,7 +10,7 @@ ALIGN 4
 }
 ALIGN 4
 {
-//  #include "Ch2.event"
+  #include "Ch2.event"
 }
 ALIGN 4
 {
@@ -18,11 +18,11 @@ ALIGN 4
 }
 ALIGN 4
 {
-//  #include "Ch4.event"
+  #include "Ch4.event"
 }
 ALIGN 4
 {
-//  #include "Ch5.event"
+  #include "Ch5.event"
 }
 ALIGN 4
 {
@@ -30,11 +30,11 @@ ALIGN 4
 }
 ALIGN 4
 {
-//  #include "Ch7.event"
+  #include "Ch7.event"
 }
 ALIGN 4
 {
-//  #include "Ch8.event"
+  #include "Ch8.event"
 }
 ALIGN 4
 {
@@ -124,4 +124,6 @@ ALIGN 4
 {
 //  #include "Ch30.event"
 }
+ALIGN 4
+#include "REDAs.event"
 ALIGN 4

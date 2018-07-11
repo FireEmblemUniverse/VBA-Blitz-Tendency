@@ -1,0 +1,37 @@
+1
+World map path connections editor, by Vennobennu
+0x206674
+31
+12
+Paths.txt
+NULL
+
+Path Graphic Pointer
+0
+4
+NEHU
+NULL
+
+First Location
+4
+1
+NDHU
+Places.txt
+
+Second Location
+5
+1
+NDHU
+Places.txt
+
+Always zero?
+6
+2
+NEHU
+NULL
+
+Path data pointer
+8
+4
+NEHU
+NULL
