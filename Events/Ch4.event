@@ -1,0 +1,175 @@
+EventPointerTable(0x17, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+POIN $0 $0 $0
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TURN 0x0 WaveFirst[1,0] 0x0
+TURN 0x0 WaveSecond[3,0] 0x0
+TURN 0x0 WaveThird[6,0] 0x0
+TURN 0x0 WaveFourth[9,0] 0x0
+END_MAIN
+
+WaveFirst:
+ReinforcementEvent(Wave1)
+ENDA
+
+WaveSecond:
+ReinforcementEvent(Wave2)
+ENDA
+
+WaveThird:
+ReinforcementEvent(Wave3)
+ENDA
+
+WaveFourth:
+ReinforcementEvent(Wave4)
+ENDA
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Chest(KillerBow,13,8)
+Chest(Horseslayer,13,9)
+Village(0x7,VillageBow,8,5)
+Village(0x8,VillageBarrier,13,5)
+Vendor(VendorList, 13, 12)
+Armory(ArmoryList, 1, 5)
+END_MAIN
+
+VillageBow:
+VillageEventItem(PlaceholderText, Village, ExtraBow)
+
+VillageBarrier:
+VillageEventItem(PlaceholderText, Village, Barrier)
+
+ArmoryList:
+SHLI IronSword SteelSword IronLance SteelLance IronAxe IronBow SteelBow Longbow
+
+ALIGN 2
+
+VendorList:
+SHLI Heal Mend Vulnerary ChestKey Lockpick LightRune
+
+ALIGN 4
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+AFEV 0xa Boss1Killed 0x10
+AFEV 0xb Boss2Killed 0x11
+END_MAIN
+
+Boss1Killed:
+CHECK_EVENTID 0x10
+BEQ 0x0 0xc 0x0
+  //if boss 2 is also dead
+  CALL EndingScene
+LABEL 0x0
+NoFade
+ENDA
+
+Boss2Killed:
+CHECK_EVENTID 0x11
+BEQ 0x0 0xc 0x0
+  //if boss 1 is also dead
+  CALL EndingScene
+LABEL 0x0
+NoFade
+ENDA
+
+Dunno1:
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Traps1:
+END_MAIN
+
+Traps2:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+Units1:
+UNIT Vedge VedgeLord 0x00 Level(1, Ally, 0) [4,11] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Null Cavalier Vedge Level(1, Ally, 0) [3,13] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Naught Cavalier Vedge Level(1, Ally, 0) [3,12] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Chiva Archer Vedge Level(1, Ally, 0) [4,12] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge Swordmaster Vedge Level(1, Ally, 0) [4,13] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Anna Thief Vedge Level(1, Ally, 0) [5,11] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Ross Fighter Vedge Level(1, Ally, 0) [5,13] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Neimi Knight Vedge Level(1, Ally, 0) [5,12] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT
+
+MagicalGirl:
+UNIT Aggie Cleric Vedge Level(4, Ally, 0) [3,11] 0x00 0x00 0x0 0x00 [Heal, Vulnerary] NoAI
+UNIT
+
+Bad:
+UNIT Hecwood Mercenary 0x00 Level(6, Enemy, 1) [4,0] 0x00 0x00 0x0 0x00 [Runesword, Longsword, Armourslayer] AttackInRangeAI
+UNIT Elitor Fighter Hecwood Level(6, Enemy, 1) [5,0] 0x00 0x00 0x0 0x00 [HandAxe, Hammer, Swordreaver] AttackInRangeAI
+UNIT 0x80 Knight Hecwood Level(5, Enemy, 1) [6,6] 0x00 0x00 0x0 0x00 [Javelin] GuardTileAI
+UNIT 0x80 Knight Hecwood Level(5, Enemy, 1) [10,4] 0x2 0x00 0x0 0x00 [Javelin] GuardTileAI
+UNIT 0x80 Shaman Hecwood Level(5, Enemy, 1) [11,4] 0x00 0x00 0x0 0x00 [Nosferatu] GuardTileAI
+UNIT 0x80 Archer Hecwood Level(5, Enemy, 1) [3,4] 0x00 0x00 0x0 0x00 [Longbow, _100G] AttackInRangeAI
+UNIT 0x80 Archer Hecwood Level(5, Enemy, 1) [11,1] 0x00 0x00 0x0 0x00 [SteelBow] AttackInRangeAI
+UNIT 0x80 Archer Hecwood Level(5, Enemy, 1) [10,1] 0x00 0x00 0x0 0x00 [SteelBow] AttackInRangeAI
+UNIT 0x80 Cavalier Hecwood Level(4, Enemy, 1) [12,7] 0x00 0x00 0x0 0x00 [IronLance, _100G] AttackInRangeAI
+UNIT 0x80 Cavalier Hecwood Level(4, Enemy, 1) [8,7] 0x00 0x00 0x0 0x00 [IronLance, _100G] AttackInRangeAI
+UNIT 0x80 Fighter Hecwood Level(4, Enemy, 1) [7,10] 0x00 0x00 0x0 0x00 [HandAxe] AttackInRangeAI
+UNIT 0x80 Mage Hecwood Level(4, Enemy, 1) [13,10] 0x00 0x00 0x0 0x00 [Thunder, _100G] AttackInRangeAI
+UNIT 0x80 WyvernRider Hecwood Level(4, Enemy, 1) [2,0] 0x00 0x00 0x0 0x00 [IronLance] PursueWithoutHeedAI
+UNIT 0x80 WyvernRider Hecwood Level(4, Enemy, 1) [1,0] 0x00 0x00 0x0 0x00 [IronLance] PursueWithoutHeedAI
+UNIT 0x80 Cavalier Hecwood Level(4, Enemy, 1) [11,12] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI
+UNIT 0x80 Cavalier Hecwood Level(4, Enemy, 1) [10,12] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI
+UNIT 0x80 Fighter Hecwood Level(4, Enemy, 1) [7,1] 0x00 0x00 0x0 0x00 [IronAxe, _100G] AttackInRangeAI
+UNIT 0x80 Priest Hecwood Level(4, Enemy, 1) [1,3] 0x00 0x00 0x0 0x00 [Physic] HealUnits
+UNIT
+
+Wave1:
+UNIT 0x80 Thief Hecwood Level(4, Enemy, 1) [13,0] 0x00 0x00 0x0 0x00 [IronSword] LootingThiefAI
+UNIT
+
+Wave2:
+UNIT 0x80 Brigand Hecwood Level(4, Enemy, 1) [13,0] 0x00 0x00 0x0 0x00 [SteelAxe] BrigandAI
+UNIT 0x80 Brigand Hecwood Level(4, Enemy, 1) [8,0] 0x00 0x00 0x0 0x00 [SteelAxe] BrigandAI
+UNIT
+
+Wave3:
+UNIT 0x80 Archer Hecwood Level(5, Enemy, 1) [0,12] 0x00 0x00 0x0 0x00 [HuntersBow, SteelBow] PursueWithoutHeedAI
+UNIT
+
+Wave4:
+UNIT 0x80 WyvernRider Hecwood Level(5, Enemy, 1) [0,12] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT 0x80 WyvernRider Hecwood Level(5, Enemy, 1) [0,13] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT
+
+BeginningScene:
+LOAD2 0x1 Units1
+ENUN
+LOAD1 0x1 MagicalGirl
+ENUN
+LOAD1 0x1 Bad
+ENUN
+NoFade
+ENDA
+
+EndingScene:
+MNCH 5
+NoFade
+ENDA

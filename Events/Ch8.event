@@ -190,7 +190,7 @@ TurnAlly(Fanni)
 LABEL 0xb
 
 FADI 5
-MNC2 0x0a
+MNCH 0x9
 ENDA
 
 // Events
@@ -341,7 +341,7 @@ RANDOMNUMBER 0x20 //RN btwn 0 and 64 to 0xc
 BLT 0x2 0x2 0xC //if 0x2's content is less than 0xc's contents, do label 0x2
 CAM1 Ersatz
 FlashCursor(0x1f,50)
-Text(ChSixHasty)
+Text(ChEightHasty)
 
 LABEL 0x2
 LABEL 0x3
@@ -357,7 +357,7 @@ ENDA
 // Units
 
 Bads12:
-UNIT Dennis Sage 0x00 Level(1, Enemy, 1) [23,8] 0x00 0x00 0x0 0x00 [Shine, 1G] AttackInRangeAI
+UNIT Dennis Sage 0x00 Level(1, Enemy, 1) [23,8] 0x00 0x00 0x0 0x00 [Shine, _1G] AttackInRangeAI
 UNIT 0x90 Soldier Dennis Level(7, Enemy, 1) [19,3] 0x00 0x00 0x0 0x00 [0x8D] AttackInRangeAI
 UNIT 0x90 Fighter Dennis Level(7, Enemy, 1) [19,6] 0x00 0x00 0x0 0x00 [DragonAxe] AttackInRangeAI
 UNIT 0x90 Fighter Dennis Level(7, Enemy, 1) [22,4] 0x00 0x00 0x0 0x00 [DragonAxe] AttackInRangeAI
@@ -380,7 +380,7 @@ UNIT
 
 
 Bads12H:
-UNIT Dennis Sage 0x00 Level(1, Enemy, 1) [23,8] 0x00 0x00 0x0 0x00 [Shine, 1G] AttackInRangeAI
+UNIT Dennis Sage 0x00 Level(1, Enemy, 1) [23,8] 0x00 0x00 0x0 0x00 [Shine, _1G] AttackInRangeAI
 UNIT 0x90 Soldier Dennis Level(8, Enemy, 1) [19,3] 0x00 0x00 0x0 0x00 [DragonSpear, HeavySpear] AttackInRangeAI
 UNIT 0x90 Pirate Dennis Level(8, Enemy, 1) [19,6] 0x00 0x00 0x0 0x00 [DragonAxe] AttackInRangeAI
 UNIT 0x90 Pirate Dennis Level(7, Enemy, 1) [22,4] 0x00 0x00 0x0 0x00 [DragonAxe, Halberd] AttackInRangeAI
@@ -401,9 +401,9 @@ UNIT
 
 NPCUnits12:
 UNIT Fanni Knight_F 0x00 Level(6, NPC, 0) [5,8] 0x00 0x00 0x0 0x00 [IronLance, Javelin, Antidote] PursueWithoutHeedAI
-UNIT Ersatz Manakete_F 0x00 Level(1, NPC, 0) [4,8] 0x00 0x00 0x0 0x00 [HolyDragonStone, Vulnerary, AngelicRobe] AttackInRangeAI
+UNIT Ersatz Manakete_2_F 0x00 Level(1, NPC, 0) [4,8] 0x00 0x00 0x0 0x00 [HolyDragonStone, Vulnerary, AngelicRobe] AttackInRangeAI
 UNIT
-//use of manakete_f is intentional; just "manakete" is the Morva dragon zombie
+//use of manakete_2_f is intentional; just "manakete_2" is the Morva dragon zombie (and manakete doesn't load properly)
 
 Rein1201:
 UNIT 0x90 Myrmidon Dennis Level(7, Enemy, 1) [16,9] 0x2 0x00 0x0 0x00 [Lancereaver, IronSword] AttackInRangeAI

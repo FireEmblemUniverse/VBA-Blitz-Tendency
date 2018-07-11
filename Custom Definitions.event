@@ -1,3 +1,5 @@
+
+
 #define FreeSpace 0xb2a610
 #define FreeSpaceBLRange 0x1c1ec0
 
@@ -13,7 +15,12 @@
 #ifndef ClassTable
   #define ClassTable 0x807110
 #endif
-
+#ifndef BattleQuoteTable
+  #define BattleQuoteTable 0x9EC6BC
+#endif
+#ifndef DeathQuoteTable
+  #define DeathQuoteTable 0x9ECD4C
+#endif
 
 #define LunarBrace MoonBracelet
 #define SolarBrace SunBracelet
@@ -22,6 +29,7 @@
 
 //Class definitions
 #define BlitzLord 0x2
+#define VedgeLord BlitzLord
 #define VoidMonster 0x3
 #define VoidMaster 0x4
 
@@ -32,11 +40,21 @@
 #define Chiva 0x4
 #define Verge 0x5
 #define Anna 0x6
+#define Boo 0x8
+#define Aggie 0x9
 #define Fanni 0xD
+#define Murat 0xF
 #define Ersatz 0x1F
 
 #define Jazzak 0x42
+#define Hecwood 0x48
+#define Elitor 0x49
 #define Dennis 0x50
+
+#define Ximena 0xA
+
+#define Grudge 0x4A
+#define Ch5Generic 0x8A
 
 //Item definitions
 #define BlitzAxe Rapier
@@ -47,6 +65,27 @@
 #define HuntersBowIconID 0xAE
 #define RunicBow 0xBE
 #define RunicBowIconID PiercingBowIconID //TODO
+#define PowerGem BlackGem
+
+//Chapter definitions
+#define Chapter5 0x6
+#define Chapter5Map 0x1F
+#define Chapter5Changes 0x20
+#define Chapter5Events 0x21
+#define Chapter6 0x7
+
+#define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
+#define TileChange(X,Y) "SETVAL 0xB Coords(X,Y) ; TILECHANGE 0xFFFF"
+#define Every3Turns(CondID1,CondID2,CondID3,EventID1,EventID2,Pointer) "CHECK_EVENTID EventID1;BNE CondID1 0x0 0xC;CHECK_EVENTID EventID2;BNE CondID2 0x0 0xC;CALL Pointer;ENUT EventID1;ENUT EventID2;GOTO CondID3;LABEL CondID2;ENUF EventID2;GOTO CondID3;LABEL CondID1;ENUF EventID1;LABEL CondID3"
+#define FadeOutMusic "MUSCMID 0x7FFF"
+#define GiveItem(Item,Character) "SMOV 0x3 Item ; GIVEITEMTO Character"
+#define GuardAI GuardTileAI
+#define EndA2 ENDA
+#define EndUnit UNIT
+#define EndConvo "CALL $9EE2C4"
+
+#define DeathQuote(Character,Chapter,EventID,TextID) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID 0 0"
+#define AllChapters 0xFF
 
 //Equip definitions
 #define WTYPE_SWORD    0x00
@@ -62,3 +101,6 @@
 #define WTYPE_DARK     0x07
 
 // #define __DEBUG__ // Uncomment to get the Debug startup menu :p
+#define SpecifiedBattleConvo(Character1,Character2,Chapter,EventID,TextID) "BYTE Character1 0x0 Character2 0x0 Chapter 0x0 0x0 EventID ; SHORT TextID 0x0 0x0 0x0"
+#define UnspecifiedBattleConvo(Character,Chapter,EventID,TextID) "BYTE Character 0x0 0x0 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0 ; BYTE 0x0 0x0 Character 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0"
+

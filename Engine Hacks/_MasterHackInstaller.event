@@ -63,8 +63,12 @@ POP
 ////////////////////////////////FREE SPACE OUT OF BL RANGE
 //start of Free space
 
+  //Check if current character has the specified item: (Written for chapter 5)
+  #inctext lyn "CheckItem.elf"
+
   //Weapon/Staff Range Fix
   #include "Range Fix/Range Fix Install.event"
+
 
   //HP Bars (and effective weapon warning)
   #include "HPbars.txt"

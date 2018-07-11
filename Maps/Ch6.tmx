@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="17" height="12" tilewidth="16" tileheight="16" infinite="0" nextobjectid="1">
- <tileset firstgid="1" source="2e002f30.tsx"/>
+ <tileset firstgid="1" name="2e002f30" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="2e002f30.png" width="512" height="512"/>
+ </tileset>
  <layer name="Tile Layer 1" width="17" height="12">
   <properties>
    <property name="ChapterID" value="0x7"/>

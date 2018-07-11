@@ -68,7 +68,7 @@ TrapData:
 BLST [10,13] Ballista
 BLST [0,2] Ballista
 BLST [21,22] Ballista
-END_MAIN
+ENDTRAP
 
 ALIGN 4
 
@@ -78,12 +78,12 @@ ENUN
 LOAD2 0x01 Units
 ENUN
 STAL 10
-FlashCursor(Eirika,24)
-//Text(PLACEHOLDER)
+FlashCursor(Eirika,72)
+Text(PlaceholderText)
 ENDA
 
 EndingScene:
-MNCH 0xC
+MNCH 0x11
 NoFade
 ENDA
 
@@ -164,8 +164,8 @@ ALIGN 4
 PirateEntry:
 ReinforcementEvent(NewRecruit)
 STAL 10
-FlashCursor(Ephraim,18)
-//Text(PLACEHOLDER)
+FlashCursor(Ephraim,60)
+Text(PlaceholderText)
 NoFade
 ENDA
 
@@ -190,48 +190,48 @@ NoFade
 ENDA
 
 RaftAttack:
-TILECHANGE 0x3
+TILECHANGE 0x6
 STAL 24
 LoadReinforcements(RaftSquad)
 EVBIT_T 0x7
 ENDA
 
 FirstFlood:
-TILECHANGE 0x2
+TILECHANGE 0x3
 NoFade
 ENDA
 
 SecondFlood:
-TILECHANGE 0x1
+TILECHANGE 0x2
 NoFade
 ENDA
 
 ThirdFlood:
-TILECHANGE 0x5
+TILECHANGE 0x8
 NoFade
 ENDA
 
 FourthFlood:
-TILECHANGE 0x6
+TILECHANGE 0x9
 NoFade
 ENDA
 
 Rising1:
-TILEREVERSE 0x6
+TILEREVERSE 0x9
 CAM1 [11,8]
 STAL 12
-TILEREVERSE 0x1
 TILEREVERSE 0x2
+TILEREVERSE 0x3
 NoFade
 ENDA
 
 Rising2:
-TILEREVERSE 0x5
+TILEREVERSE 0x8
 NoFade
 ENDA
 
 Rising3:
-TILECHANGE 0x3
+TILECHANGE 0x4
 NoFade
 ENDA
 
