@@ -153,6 +153,10 @@ POP
   #incbin "ASM/freezeall.dmp"
 
   ALIGN 4
+  //We are installing new descriptions/icons.
+  #define __USE_ICON_MACROS__
+  //But do not inline the table (we have a .csv for that)
+  //#define __INLINE_SKILL_ICON_TABLE__
   #include "Skill System/Master Skill Installer.event"
 
   ALIGN 4

@@ -87,5 +87,20 @@
 #define DeathQuote(Character,Chapter,EventID,TextID) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID 0 0"
 #define AllChapters 0xFF
 
+//Equip definitions
+#define WTYPE_SWORD    0x00
+#define WTYPE_BLADE    0x00
+#define WTYPE_LANCE    0x01
+#define WTYPE_SPEAR    0x01
+#define WTYPE_AXE      0x02
+#define WTYPE_BOW      0x03
+#define WTYPE_STAFF    0x04
+#define WTYPE_ANIMA    0x05
+#define WTYPE_LIGHT    0x06
+#define WTYPE_ELDER    0x07
+#define WTYPE_DARK     0x07
+
+// #define __DEBUG__ // Uncomment to get the Debug startup menu :p
 #define SpecifiedBattleConvo(Character1,Character2,Chapter,EventID,TextID) "BYTE Character1 0x0 Character2 0x0 Chapter 0x0 0x0 EventID ; SHORT TextID 0x0 0x0 0x0"
 #define UnspecifiedBattleConvo(Character,Chapter,EventID,TextID) "BYTE Character 0x0 0x0 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0 ; BYTE 0x0 0x0 Character 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0"
+

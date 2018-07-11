@@ -6,7 +6,7 @@ Naught,SlowBurnID
 Chiva,SealDefID
 Verge,GambleID
 Vanessa,SpurSpdID
-Ross,ParagonID
+Monkeyboy/UnaddedName,AxefaithID
 Boo,VantageID
 Colm,RallySpdID
 Garcia,ColossusID
@@ -65,8 +65,8 @@ Knoll's Summon,0x0
 Ewan's Summon,0x0
 Lyon (Ch 17),0x0
 Morva (Ch 20),FrenzyID
-Orson (Ch 5x),0x0
-Valter (Ch 15),0x0
+Monster Ch2,RenewalID
+Cortez Ch2,TraceID
 Selena (Ch 10B & 13B),0x0
 Valter (Prologue),0x0
 Breguet (Ch 1),CounterMagicID
@@ -129,8 +129,8 @@ Orson (Ch 16),0x0
 Grado Soldier (Special),0x0
 Grado Soldier 1 (Normal),0x0
 Grado Soldier 2,0x0
-Grado Soldier 3,0x0
-Grado Soldier 4,0x0
+Generic Monster Ch 2,FuryID
+Generic Zealot Ch 2,FuryID
 Grado Soldier 5,0x0
 Grado Soldier 6,0x0
 Grado Soldier 7,0x0
