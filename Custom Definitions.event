@@ -40,6 +40,7 @@
 #define Chiva 0x4
 #define Verge 0x5
 #define Anna 0x6
+#define Keanu 0x7
 #define Boo 0x8
 #define Aggie 0x9
 #define Fanni 0xD
@@ -103,4 +104,3 @@
 // #define __DEBUG__ // Uncomment to get the Debug startup menu :p
 #define SpecifiedBattleConvo(Character1,Character2,Chapter,EventID,TextID) "BYTE Character1 0x0 Character2 0x0 Chapter 0x0 0x0 EventID ; SHORT TextID 0x0 0x0 0x0"
 #define UnspecifiedBattleConvo(Character,Chapter,EventID,TextID) "BYTE Character 0x0 0x0 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0 ; BYTE 0x0 0x0 Character 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0"
-
