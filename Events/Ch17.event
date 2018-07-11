@@ -167,6 +167,7 @@ ENUN
 LOAD2 0x1 Foes3
 ENUN
 LOAD2 0x1 Foes4
+GotoPrepScreen
 ENUN
 ENDA
 
