@@ -205,6 +205,6 @@ ENDA
 ThrThrD_EndingScene:
 Text(PlaceholderText)
 //TODO
-MNC2 0x03 //TODO: Replace with proper code for next chapter.
+MNCH 0x03
 NoFade
 ENDA
