@@ -79,7 +79,7 @@ FADU 0x5
 STAL 0x20
 Text(Ch5BattleDoneText)
 FadeOutMusic
-CAM1 [10,12]
+CAM1 [10,9]
 LOAD1 0x1 BanditMeanies
 ENUN
 Text(Ch5BanditText)
