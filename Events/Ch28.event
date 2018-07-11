@@ -17,18 +17,18 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 Units:
-UNIT Eirika EphraimMasterLord 0x00 Level(10, Ally, 1) [15,28] 0x00 0x00 0x0 0x00 [Reginleif] NoAI 
-UNIT Seth Swordmaster 0x00 Level(10, Ally, 1) [14,29] 0x00 0x00 0x0 0x00 [SilverSword] NoAI 
-UNIT Gilliam Paladin 0x00 Level(10, Ally, 1) [15,29] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
-UNIT Ross Paladin 0x00 Level(10, Ally, 1) [14,28] 0x00 0x00 0x0 0x00 [Spear] NoAI 
-UNIT Colm Sniper 0x00 Level(10, Ally, 1) [15,27] 0x00 0x00 0x0 0x00 [SilverBow] NoAI 
-UNIT Vanessa Bishop 0x00 Level(10, Ally, 1) [12,29] 0x00 0x00 0x0 0x00 [Physic, Lightning] NoAI 
-UNIT Lute WyvernLord 0x00 Level(10, Ally, 1) [17,28] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
-UNIT Vanessa General 0x00 Level(10, Ally, 1) [16,27] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI 
-UNIT Neimi Rogue 0x00 Level(10, Ally, 1) [17,27] 0x00 0x00 0x0 0x00 [KillingEdge] NoAI 
-UNIT Artur Hero 0x00 Level(10, Ally, 1) [16,28] 0x00 0x00 0x0 0x00 [HandAxe, Armourslayer] NoAI 
-UNIT Garcia Sage 0x00 Level(10, Ally, 1) [16,29] 0x00 0x00 0x0 0x00 [Elfire] NoAI 
-UNIT Natasha Warrior 0x00 Level(10, Ally, 1) [17,29] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI 
+UNIT Eirika EphraimMasterLord 0x00 Level(20, Ally, 1) [15,28] 0x00 0x00 0x0 0x00 [Reginleif] NoAI 
+UNIT Seth Swordmaster 0x00 Level(20, Ally, 1) [14,29] 0x00 0x00 0x0 0x00 [SilverSword] NoAI 
+UNIT Gilliam Paladin 0x00 Level(20, Ally, 1) [15,29] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
+UNIT Ross Paladin 0x00 Level(20, Ally, 1) [14,28] 0x00 0x00 0x0 0x00 [Spear] NoAI 
+UNIT Colm Sniper 0x00 Level(20, Ally, 1) [15,27] 0x00 0x00 0x0 0x00 [SilverBow] NoAI 
+UNIT Vanessa Bishop 0x00 Level(20, Ally, 1) [12,29] 0x00 0x00 0x0 0x00 [Physic, Lightning, Warp] NoAI 
+UNIT Lute WyvernLord 0x00 Level(20, Ally, 1) [17,28] 0x00 0x00 0x0 0x00 [SilverLance, Spear, DelphiShield, ChestKey] NoAI 
+UNIT Vanessa General 0x00 Level(20, Ally, 1) [16,27] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI 
+UNIT Neimi Rogue 0x00 Level(20, Ally, 1) [17,27] 0x00 0x00 0x0 0x00 [KillingEdge] NoAI 
+UNIT Artur Hero 0x00 Level(20, Ally, 1) [16,28] 0x00 0x00 0x0 0x00 [HandAxe, Armourslayer] NoAI 
+UNIT Garcia Sage 0x00 Level(20, Ally, 1) [16,29] 0x00 0x00 0x0 0x00 [Elfire] NoAI 
+UNIT Natasha Warrior 0x00 Level(20, Ally, 1) [17,29] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI 
 UNIT
 
 
@@ -45,6 +45,8 @@ Village(0x7,ChannelingXavier,29,5)
 Village(0x8,SilverAxeVillage,2,25)
 Chest(IronSword,12,11) //the Chest of Loss, everyone's "favourite" meme *shrug*
 //make it the legendary sword
+Armory(Ch28Armoury,21,14)
+Vendor(Ch28Vendor,22,13)
 END_MAIN
 
 MiscBasedEvents:
@@ -60,6 +62,9 @@ Tutorial:
 WORD $00
 
 TrapData:
+BLST [17,7] IronBallista
+BLST [18,8] IronBallista
+BLST [18,22] Ballista
 END_MAIN
 
 ALIGN 4
@@ -120,8 +125,8 @@ UNIT 0xB6 Berserker Hayden Level(20, Enemy, 1) [11,0] 0x00 0x00 0x0 0x00 [Poison
 UNIT 0xB6 WyvernLord Hayden Level(20, Enemy, 1) [12,8] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI 
 UNIT 0xB6 WyvernLord Hayden Level(20, Enemy, 1) [9,11] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI 
 UNIT 0xB6 WyvernLord Hayden Level(20, Enemy, 1) [15,11] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI 
-UNIT 0xB6 Sniper Hayden Level(20, Enemy, 1) [17,7] 0x00 0x00 0x0 0x00 [IronBallista] AttackInRangeAI 
-UNIT 0xB6 Sniper Hayden Level(20, Enemy, 1) [18,8] 0x00 0x00 0x0 0x00 [IronBallista] AttackInRangeAI 
+UNIT 0xB6 Sniper Hayden Level(20, Enemy, 1) [17,7] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI //ballistician
+UNIT 0xB6 Sniper Hayden Level(20, Enemy, 1) [18,8] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI //ballistician
 UNIT 0xB6 Rogue Hayden Level(20, Enemy, 1) [18,3] 0x00 0x00 0x0 0x00 [PoisonSword] StealingThiefAI 
 UNIT 0xB6 Rogue Hayden Level(20, Enemy, 1) [25,5] 0x00 0x00 0x0 0x00 [PoisonSword] StealingThiefAI 
 UNIT 0xB6 Rogue Hayden Level(20, Enemy, 1) [29,10] 0x00 0x00 0x0 0x00 [PoisonSword] StealingThiefAI 
@@ -189,5 +194,13 @@ UNIT 0x47 Civilian 0x0 Level(1, NPC, 0) [30,6] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT
 
 // Shop Data
+Ch28Armoury:
+SHLI SilverSword BraveSword SilverLance BraveLance SilverAxe BraveAxe SilverBow BraveBow
+ALIGN 4
+
+Ch28Vendor:
+SHLI Elixir Physic Fortify Warp Rescue Sleep Silence Berserk
+ALIGN 4
+
 
 MESSAGE Events end at offset currentOffset
