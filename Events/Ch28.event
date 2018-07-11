@@ -37,14 +37,17 @@ TurnEventPlayer(0x0,EventAfterExitingPrepScreen,1)
 END_MAIN
 
 CharacterBasedEvents:
+CharacterEventBothWays(0x9,KojimaGet,Kojima,KojimaNPC)
+CharacterEventBothWays(0x9,SakaguchiGet,Sakaguchi,SakaguchiNPC)
+CharacterEventBothWays(0x9,IgaGet,Iga,IgaNPC)
 END_MAIN
 
 LocationBasedEvents:
-House(0x0,EndingScene,20,18) //arrive, assuming you can visit a gate
+House(0x0,EndingScene,20,18) //Visit the throne and the chapter is complete. A mock arrive, so to say.
 Village(0x7,ChannelingXavier,29,5)
 Village(0x8,SilverAxeVillage,2,25)
-Chest(IronSword,12,11) //the Chest of Loss, everyone's "favourite" meme *shrug*
-//make it the legendary sword
+Chest(Audhulma,12,11) //the Chest of Loss, located in that random chest formation
+//give it some fancy effect later
 Armory(Ch28Armoury,21,14)
 Vendor(Ch28Vendor,22,13)
 END_MAIN
@@ -110,6 +113,20 @@ LOAD1 0x01 XavierPeople
 REMA
 ENDA
 
+KojimaGet:
+Text(PlaceholderText)
+TurnAlly(Kojima)
+ENDA
+
+SakaguchiGet:
+Text(PlaceholderText)
+TurnAlly(Sakaguchi)
+ENDA
+
+IgaGet:
+Text(PlaceholderText)
+TurnAlly(Iga)
+ENDA
 
 
 
@@ -119,22 +136,22 @@ ENDA
 
 // Units
 MetalGear:
-UNIT 0x23 Assassin Hayden Level(20, Enemy, 0) [18,9] 0x00 0x00 0x0 0x00 [KillingEdge, PoisonSword] GuardTileAI //Kojima, or "Nanomachines"
+UNIT Kojima Assassin Hayden Level(20, Enemy, 0) [18,9] 0x00 0x00 0x0 0x00 [KillingEdge, PoisonSword] GuardTileAI
 UNIT 0xB6 Berserker Hayden Level(20, Enemy, 1) [23,10] 0x00 0x00 0x0 0x00 [PoisonAxe] ChaseOnceApproachedAI 
 UNIT 0xB6 Berserker Hayden Level(20, Enemy, 1) [11,0] 0x00 0x00 0x0 0x00 [PoisonAxe] ChaseOnceApproachedAI 
 UNIT 0xB6 WyvernLord Hayden Level(20, Enemy, 1) [12,8] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI 
 UNIT 0xB6 WyvernLord Hayden Level(20, Enemy, 1) [9,11] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI 
 UNIT 0xB6 WyvernLord Hayden Level(20, Enemy, 1) [15,11] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI 
-UNIT 0xB6 Sniper Hayden Level(20, Enemy, 1) [17,7] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI //ballistician
-UNIT 0xB6 Sniper Hayden Level(20, Enemy, 1) [18,8] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI //ballistician
+UNIT 0xB6 Sniper Hayden Level(20, Enemy, 1) [17,7] 0x00 0x00 0x0 0x00 [PoisonBow] AttackInRangeAI //ballistician
+UNIT 0xB6 Sniper Hayden Level(20, Enemy, 1) [18,8] 0x00 0x00 0x0 0x00 [PoisonBow] AttackInRangeAI //ballistician
 UNIT 0xB6 Rogue Hayden Level(20, Enemy, 1) [18,3] 0x00 0x00 0x0 0x00 [PoisonSword] StealingThiefAI 
 UNIT 0xB6 Rogue Hayden Level(20, Enemy, 1) [25,5] 0x00 0x00 0x0 0x00 [PoisonSword] StealingThiefAI 
 UNIT 0xB6 Rogue Hayden Level(20, Enemy, 1) [29,10] 0x00 0x00 0x0 0x00 [PoisonSword] StealingThiefAI 
-UNIT Joshua Thief Hayden Level(9, Enemy, 1) [0,5] 0x00 0x00 0x0 0x00 [BodyRing, GoldGem, GoldGem, GoldGem] LootingThiefAI //Inafune, or Con Man
+UNIT Inafune Thief Hayden Level(9, Enemy, 1) [0,5] 0x00 0x00 0x0 0x00 [BodyRing, GoldGem, GoldGem, GoldGem] LootingThiefAI
 UNIT
 
 FinalFantasy:
-UNIT 0x24 Sage Riev Level(20, Enemy, 0) [8,16] 0x00 0x00 0x0 0x00 [Forblaze] GuardTileAI //Sakaguchi, whose fantasy was far from final
+UNIT Sakaguchi Sage Riev Level(20, Enemy, 0) [8,16] 0x00 0x00 0x0 0x00 [Forblaze] GuardTileAI
 UNIT 0xB7 Sage Riev Level(10, Enemy, 1) [6,14] 0x00 0x00 0x0 0x00 [Fimbulvetr] AttackInRangeAI 
 //UNIT 0xB7 Sage Riev Level(10, Enemy, 1) [8,19] 0x00 0x00 0x0 0x00 [Bolting] GuardTileAI 
 //UNIT 0xB7 Hero Riev Level(10, Enemy, 1) [1,19] 0x00 0x00 0x0 0x00 [SilverSword] GuardTileAI 
@@ -153,7 +170,7 @@ UNIT 0xB7 Druid Riev Level(10, Enemy, 1) [3,3] 0x00 0x00 0x0 0x00 [Berserk, Flux
 UNIT
 
 Castlevania1:
-UNIT 0x25 Hero Riev Level(20, Enemy, 0) [25,29] 0x00 0x00 0x0 0x00 [SilverAxe] GuardTileAI //Iga, who put the "vania" in Metroidvania
+UNIT Iga Hero Riev Level(20, Enemy, 0) [25,29] 0x00 0x00 0x0 0x00 [SilverAxe] GuardTileAI
 UNIT 0x87 Entombed Lyon_Final Level(10, Enemy, 1) [27,28] 0x00 0x00 0x0 0x00 [SharpClaw] AttackInRangeAI 
 UNIT 0x87 Entombed Lyon_Final Level(10, Enemy, 1) [31,26] 0x00 0x00 0x0 0x00 [SharpClaw] AttackInRangeAI 
 UNIT 0x87 Wight_Bow Lyon_Final Level(10, Enemy, 1) [26,24] 0x00 0x00 0x0 0x00 [SilverBow] AttackInRangeAI 
@@ -188,9 +205,10 @@ UNIT Eirika Hero Riev Level(20, Ally, 0) [31,31] 0x00 0x00 0x0 0x00 [Sieglind] G
 UNIT
 
 XavierPeople:
-UNIT 0x76 Civilian 0x0 Level(1, NPC, 0) [28,6] 0x00 0x00 0x0 0x00 [0x00] NoAI //dammit MC there isn't the AI for what you want in FE8 as far as I can tell
-UNIT 0x77 Civilian 0x0 Level(1, NPC, 0) [29,6] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT 0x47 Civilian 0x0 Level(1, NPC, 0) [30,6] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT KojimaNPC Civilian 0x0 Level(1, NPC, 0) [28,6] 0x00 0x00 0x0 0x00 [0x00] [0x00 0x0B 0x00 0x00] //the intended AI's meant to be "talk to respective unit so they're recruited"
+//but I haven't messed around with the AI yet to have three such AI2 0x0B options, according to the FE7 version of it anyway
+UNIT SakaguchiNPC Civilian 0x0 Level(1, NPC, 0) [29,6] 0x00 0x00 0x0 0x00 [0x00] [0x00 0x0B 0x00 0x00]
+UNIT IgaNPC Civilian 0x0 Level(1, NPC, 0) [30,6] 0x00 0x00 0x0 0x00 [0x00] [0x00 0x0B 0x00 0x00]
 UNIT
 
 // Shop Data
