@@ -17,11 +17,6 @@ mov     r0, #0x50      @Move to the attacking unit weapon type.
 ldrb    r0, [r4, r0]   @Load the attacking unit weapon type.
 cmp     r0, #2         @Is it Axe?
 bne     NoSkill        @If not, goto end
-ldr     r3,SkillTester @If it is,
-mov     lr, r3         
-.short 0xf800          @Call Skill Tester.
-cmp r0, #0             @Check if unit has the corresponding skill.
-beq     NoSkill
 
 @Add to Hit
 mov     r0, #0x19

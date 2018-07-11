@@ -637,4 +637,4 @@ Skill Activations.[X]
 
 ## SD_Axefaith
 Axefaith: Axes can't lose durability, and[N]
-grants Hit = Luck*1.5 when wielding axes.[X]
+grants +Luck*1.5 Hit when wielding axes.[X]
