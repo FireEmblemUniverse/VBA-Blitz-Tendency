@@ -2,9 +2,8 @@
 
 EventPointerTable(Chatper24Events,ThisChapter)
 #define Ch24GenLvlT1, 16 //level of generic unpromoted units
-#define Ch24GenLvlT2, 5 //level of generic promoted units
+#define Ch24GenLvlT2 5 //level of generic promoted units
 #define CH24GenID, 0x71 //character id for generics
-ORG 0xE80000
 
 ThisChapter:
 POIN TurnBasedEvents
