@@ -73,7 +73,7 @@ ENUN
 ENDB
 
 EndingScene:
-MNCH 0x3e	//goes to where chapter 25 is in vanilla; let me know if we move ch25 somewhere else
+MNCH 0x3e	//goes to where chapter 25 is in vba1; let me know if we move ch25 somewhere else
 ENDA
 
 // Events
