@@ -118,4 +118,3 @@ UNIT
 Ch24Armory:
 SHLI IronSword SteelSword SilverSword IronLance SteelLance SilverLance IronAxe SteelAxe SilverAxe IronBow SteelBow SilverBow
 
-MESSAGE Events end at offset currentOffset
