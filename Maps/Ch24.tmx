@@ -18,8 +18,6 @@
  </tileset>
  <layer name="Main" width="16" height="21">
   <properties>
-   <property name="Anims1" value="0x5"/>
-   <property name="Anims2" value="0x0"/>
    <property name="ChapterID" value="Chapter24"/>
    <property name="Main" value=""/>
    <property name="MapChangesID" value="Chapter24Changes"/>
