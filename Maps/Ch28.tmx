@@ -8,13 +8,14 @@
  </tileset>
  <layer name="Tile Layer 1" width="32" height="32" opacity="0.45">
   <properties>
-   <property name="ChapterID" value="0"/>
+   <property name="Anims1" value="0x05"/>
+   <property name="ChapterID" value="27"/>
    <property name="Main" value=""/>
-   <property name="MapChangesID" value="6"/>
-   <property name="MapID" value="4"/>
-   <property name="ObjectType1" value="1"/>
-   <property name="PaletteID" value="2"/>
-   <property name="TileConfig" value="3"/>
+   <property name="MapChangesID" value="0x7E"/>
+   <property name="MapID" value="0x7C"/>
+   <property name="ObjectType" value="0x01"/>
+   <property name="PaletteID" value="0x02"/>
+   <property name="TileConfig" value="0x03"/>
   </properties>
   <data>
    <tile gid="67"/>
