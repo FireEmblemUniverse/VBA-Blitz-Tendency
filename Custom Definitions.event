@@ -74,7 +74,7 @@
 #define Chapter5Changes 0x20
 #define Chapter5Events 0x21
 #define Chapter6 0x7
-#define Chapter24 0x71	//values for ch24 were copied from vba1
+#define Chapter24 24
 #define Chapter24Map 0x6F
 #define Chatper24Events 0x71
 #define Chapter24Changes 0x70
