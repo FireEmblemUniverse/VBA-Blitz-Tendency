@@ -42,7 +42,7 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
-Armory(Ch24Armory,0,0)
+Armory(Ch24Armory,10,14)
 END_MAIN
 
 MiscBasedEvents:
