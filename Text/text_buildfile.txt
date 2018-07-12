@@ -27,6 +27,11 @@ Zeke[X]
 ## nameSirius
 Sirius[X]
 
+## RaisingBridge
+#Note: This should be in a "Ch28.txt" file. I'll write proper story text in a seperate branch later; this text is just important for gameplay.
+[OpenMidLeft][LoadFace][CurrentPortrait]
+Raising the bridge.[A][X]
+
 #include "character_text.txt"
 #include "item_text.txt"
 #include "skilldesc_text.txt"

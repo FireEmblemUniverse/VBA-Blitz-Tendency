@@ -50,6 +50,7 @@ Chest(Audhulma,12,11) //the Chest of Loss, located in that random chest formatio
 //give it some fancy effect later
 Armory(Ch28Armoury,21,14)
 Vendor(Ch28Vendor,22,13)
+Village(0xA,RaiseBridge,10,27)
 END_MAIN
 
 MiscBasedEvents:
@@ -146,6 +147,10 @@ TurnEnemy(SakaguchiNPC)
 TurnNPC(IgaNPC)
 ENDA
 
+RaiseBridge:
+Text(RaisingBridge)
+TILECHANGE 6
+ENDA
 
 
 // Manual Movement
