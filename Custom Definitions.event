@@ -44,6 +44,7 @@
 #define Boo 0x8
 #define Aggie 0x9
 #define Ximena 0xA
+#define Jen 0xC
 #define Fanni 0xD
 #define Murat 0xF
 #define Ersatz 0x1F
@@ -57,6 +58,7 @@
 #define Hecwood 0x48
 #define Elitor 0x49
 #define Grudge 0x4A
+#define Edgelard 0x4E
 #define Dennis 0x50
 
 #define KojimaNPC 0x76
@@ -81,6 +83,7 @@
 #define Chapter5Changes 0x20
 #define Chapter5Events 0x21
 #define Chapter6 0x7
+#define Chapter7 0x8
 #define AllChapters 0xFF
 
 #define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
