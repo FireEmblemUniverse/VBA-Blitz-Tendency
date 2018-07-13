@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="28" height="22" tilewidth="16" tileheight="16" nextobjectid="1">
  <tileset firstgid="1" name="FE8 - Mountainous - 6c006d6e" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
-  <image source="../../../../Emulation/VBA/Hacking/FEMapCreator/Tilesets/FE8 - Mountainous - 6c006d6e.png" trans="ffffff" width="512" height="512"/>
+  <image source="./6c006d6e.png" trans="ffffff" width="512" height="512"/>
  </tileset>
  <layer name="Tile Layer 1" width="28" height="22">
   <properties>
    <property name="Anims1" value="5"/>
-   <property name="ChapterID" value="8"/>
+   <property name="ChapterID" value="17"/>
    <property name="Main" value=""/>
    <property name="MapChangesID" value="C17MapChangesID"/>
    <property name="MapID" value="C17MapID"/>
    <property name="ObjectType" value="0x6c"/>
-   <property name="PaletteID" value="0x00"/>
+   <property name="PaletteID" value="0x6d"/>
    <property name="TileConfig" value="0x6e"/>
   </properties>
   <data encoding="base64" compression="zlib">
