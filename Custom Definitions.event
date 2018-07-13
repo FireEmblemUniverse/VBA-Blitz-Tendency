@@ -47,6 +47,7 @@
 #define Jen 0xC
 #define Fanni 0xD
 #define Murat 0xF
+#define Nichol 0x16
 #define Ersatz 0x1F
 #define Inafune 0x20
 #define Kojima 0x23
@@ -84,6 +85,9 @@
 #define Chapter5Events 0x21
 #define Chapter6 0x7
 #define Chapter7 0x8
+#define C17MapID 0x4D
+#define C17MapChangesID 0x4E
+#define C17EventID 0x4F
 #define AllChapters 0xFF
 
 #define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"

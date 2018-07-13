@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="28" height="22" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="FE8 - Mountainous - 6c006d6e" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../../../../Emulation/VBA/Hacking/FEMapCreator/Tilesets/FE8 - Mountainous - 6c006d6e.png" trans="ffffff" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="28" height="22">
+  <properties>
+   <property name="Anims1" value="5"/>
+   <property name="ChapterID" value="8"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="C17MapChangesID"/>
+   <property name="MapID" value="C17MapID"/>
+   <property name="ObjectType" value="0x6c"/>
+   <property name="PaletteID" value="0x00"/>
+   <property name="TileConfig" value="0x6e"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJx9lUtIVVEUhve5JxPnJaRUl8RH80hzIHiTrO4oeswqKENBoRqkTWxQFnRtIARNghSiiJK689QyUAcNmqSDVHSSPSa3iYIY0v+z/91ZHrLBx1nn3L3Wvx5771sXO/fL0ABKYBAcBCdld4KmyLkufRsS9Mk5/3yotUOpmKdi70fqttEL8fj+xqwn9aBofBaQx0bk7VH5hxzIdRPP6t0FFaBcNRT/o/cdFLTmd7Q1Pu1CnBB+K0hvCswo9idT15SeRZMfaZfeS7APbGZ8fg+kV9Jvgavgmuy0XlE9aVBs1nvC1MtYjyKv99H41IIysFMELcaeVvy03iEzlwY9xyI/nxCXvSO21mKq310pLau3C7w18y5pjs9ll4w+494Al51nPkr2ou03v6drK0ivFX4dImgyNu2SfPntjPJ6hnU1sHeAGHwFK+AbyJr87NyCFqFOE2OA6oyfwzFTW0n6OXAUtIEPWLeiGltdklvW+PxULjOyA9SqBmOwR0z/bXzGucQ+Mj/Gyfg8qcd6c9Kt0L7ivPlbm/N5tWkt696LZx70w16U1kgqPvVugztgALzA+leGvGCdWe0p5tMOToPjzu879uk87G7wmuuluZSKn42TGXdofV61dBt/1sm18+Ad6MR7uQj7Yk2za4F9T2uXZLPH49w7mWT2PNuEd1CdyWOSe1F6P0Qf3q+4rXfl4cjrPc749xrp10t7WTE5B8ab0awn4uRusfSoR+/BLemHM817oizeWp/Vm814ep3P9e+5UQ941kfxflPfc+KL0WsxOQW9Uc2d9T01s62CPQcq8T6LZ6PiTktjXWeJvx1RT0M+E/JfN2w4P4cxnen7skuyuYfpc1aw942qP/4HNdJdUE8nVOOaoTdK5lkuyrQXxuQ3bvJdVdxV1U52R/7J7/3Su6ieV6b0wp0X7oVOae7Xflk0ZyS/TV2W0FvOm37N0nmiHlGjNk7+d6kd/lM3lCf9NmN/j1dqX1WZ+gI1Ju45vYdZ7AHDcaIXejge+XuZ+ynUyDNxQ/PuE82qJcQfNnOd1Czo1+aSc8y8B1N6A85zwNwVy5r7nHqzaubBefU4//uiS+7/zzpL7C1jXJDeH+fvUug=
+  </data>
+ </layer>
+ <layer name="Door open 3" width="28" height="22" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="9"/>
+   <property name="Width" value="2"/>
+   <property name="X" value="10"/>
+   <property name="Y" value="12"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRQEuQDMWjYBSMglFALAAAS5EAxw==
+  </data>
+ </layer>
+ <layer name="Door open 2" width="28" height="22" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="8"/>
+   <property name="Width" value="2"/>
+   <property name="X" value="23"/>
+   <property name="Y" value="7"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AU0AMcZWZgOM480K4YBaNgFIyCUTAUAADEoQGT
+  </data>
+ </layer>
+ <layer name="Door open 1" width="28" height="22" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="7"/>
+   <property name="Width" value="2"/>
+   <property name="X" value="25"/>
+   <property name="Y" value="3"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFQw3cYWRg2M040K4YBaNgFIyCUTAKRgGtAACvbgGa
+  </data>
+ </layer>
+ <layer name="Wall destroyed 2" width="28" height="22" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="6"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="6"/>
+   <property name="Y" value="16"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGAQzsZhxoF4yCUcDAAADljgC9
+  </data>
+ </layer>
+ <layer name="Wall destroyed 1" width="28" height="22" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="5"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="3"/>
+   <property name="Y" value="16"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGNtjLONAuGAWjABUAAPOGAL8=
+  </data>
+ </layer>
+ <layer name="Chest open" width="28" height="22" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="4"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="6"/>
+   <property name="Y" value="21"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwSgYBeQAJhqZCwAKUAAD
+  </data>
+ </layer>
+ <layer name="Village destroyed 2" width="28" height="22" visible="0">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="3"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="6"/>
+   <property name="Y" value="9"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjHSwiJmBYTEQL2Gmj32HgPYcBuIjdLLvEdCex0D8hE72jYJRMApGAaUAAIASBvc=
+  </data>
+ </layer>
+ <layer name="Village 2 closed" width="28" height="22" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="2"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="7"/>
+   <property name="Y" value="11"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjILhDxQH2gGjYBSMglFAAgAApNQAIg==
+  </data>
+ </layer>
+ <layer name="Village destroyed" width="28" height="22" visible="0">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="10"/>
+   <property name="Y" value="8"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDHawiJmBYTEQL2Gmj32HgPYcBuIjdLLvEdCex0D8hE72jYJRMApGwWAHABx/Bvc=
+  </data>
+ </layer>
+ <layer name="Village1 saved" width="28" height="22" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="11"/>
+   <property name="Y" value="10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIKBB4oD7YBRMApGwSgYRAAAsTQAIg==
+  </data>
+ </layer>
+</map>
