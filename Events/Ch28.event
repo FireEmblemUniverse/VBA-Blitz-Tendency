@@ -89,7 +89,6 @@ LOAD1 0x1 Units
 ENUN
 Text(PlaceholderText)
 GotoPrepScreen
-ENDA
 
 EndingScene:
 Text(PlaceholderText)
@@ -98,10 +97,7 @@ BEQ  0x1 0xC 0x0
 	TurnNPC(KojimaNPC)
 	TurnNPC(SakaguchiNPC)
 	TurnNPC(IgaNPC)
-GOTO 0x2
 LABEL 0x1
-	GOTO 0x2
-LABEL 0x2
 MNCH 29
 ENDA
 
