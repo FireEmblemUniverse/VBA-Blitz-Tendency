@@ -43,18 +43,28 @@
 #define Keanu 0x7
 #define Boo 0x8
 #define Aggie 0x9
+#define Ximena 0xA
+#define Jen 0xC
 #define Fanni 0xD
 #define Murat 0xF
+#define Nichol 0x16
 #define Ersatz 0x1F
+#define Inafune 0x20
+#define Kojima 0x23
+#define Sakaguchi 0x24
+#define Iga 0x25
 
 #define Jazzak 0x42
+#define IgaNPC 0x47
 #define Hecwood 0x48
 #define Elitor 0x49
+#define Grudge 0x4A
+#define Edgelard 0x4E
 #define Dennis 0x50
 
-#define Ximena 0xA
+#define KojimaNPC 0x76
+#define SakaguchiNPC 0x77
 
-#define Grudge 0x4A
 #define Ch5Generic 0x8A
 
 //Item definitions
@@ -74,10 +84,15 @@
 #define Chapter5Changes 0x20
 #define Chapter5Events 0x21
 #define Chapter6 0x7
+#define Chapter7 0x8
+#define C17MapID 0x4D
+#define C17MapChangesID 0x4E
+#define C17EventID 0x4F
 #define Chapter24 24
 #define Chapter24Map 0x6F
 #define Chatper24Events 0x71
 #define Chapter24Changes 0x70
+#define AllChapters 0xFF
 
 #define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
 #define TileChange(X,Y) "SETVAL 0xB Coords(X,Y) ; TILECHANGE 0xFFFF"
@@ -88,9 +103,6 @@
 #define EndA2 ENDA
 #define EndUnit UNIT
 #define EndConvo "CALL $9EE2C4"
-
-//#define DeathQuote(Character,Chapter,EventID,TextID) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID 0 0"
-#define AllChapters 0xFF
 
 //Equip definitions
 #define WTYPE_SWORD    0x00
@@ -104,7 +116,3 @@
 #define WTYPE_LIGHT    0x06
 #define WTYPE_ELDER    0x07
 #define WTYPE_DARK     0x07
-
-// #define __DEBUG__ // Uncomment to get the Debug startup menu :p
-#define SpecifiedBattleConvo(Character1,Character2,Chapter,EventID,TextID) "BYTE Character1 0x0 Character2 0x0 Chapter 0x0 0x0 EventID ; SHORT TextID 0x0 0x0 0x0"
-#define UnspecifiedBattleConvo(Character,Chapter,EventID,TextID) "BYTE Character 0x0 0x0 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0 ; BYTE 0x0 0x0 Character 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0"

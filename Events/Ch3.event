@@ -2,7 +2,7 @@
 
 EventPointerTable(0x14,ThisChapter)
 
-ORG 0xE80000
+//ORG 0xE80000
 
 ThisChapter:
 POIN TurnBasedEvents
