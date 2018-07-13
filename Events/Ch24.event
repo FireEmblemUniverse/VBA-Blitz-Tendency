@@ -42,6 +42,10 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Seize(0,0)
+Seize(0,1)
+Seize(1,0)
+Seize(1,1)
 Armory(Ch24Armory,10,14)
 END_MAIN
 
@@ -73,7 +77,7 @@ ENUN
 ENDB
 
 EndingScene:
-MNCH 0x3e	//goes to where chapter 25 is in vba1; let me know if we move ch25 somewhere else
+MNCH 0x3e	//goes to where chapter 25 was in vba1; let me know if we move ch25 somewhere else
 ENDA
 
 // Events
