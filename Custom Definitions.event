@@ -88,6 +88,10 @@
 #define C17MapID 0x4D
 #define C17MapChangesID 0x4E
 #define C17EventID 0x4F
+#define Chapter24 24
+#define Chapter24Map 0x6F
+#define Chatper24Events 0x71
+#define Chapter24Changes 0x70
 #define AllChapters 0xFF
 
 #define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"

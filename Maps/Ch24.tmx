@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="21" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="FE8 - Fields - 01000203" tilewidth="16" tileheight="16" tilecount="1024">
+  <image source="01000203.png" trans="ffffff" width="512" height="512"/>
+  <tile id="900">
+   <properties>
+    <property name="Anims1" value=""/>
+    <property name="Anims2" value=""/>
+    <property name="ChapterID" value=""/>
+    <property name="Main" value=""/>
+    <property name="MapChangesID" value=""/>
+    <property name="MapID" value=""/>
+    <property name="ObjectType1" value=""/>
+    <property name="PaletteID" value=""/>
+    <property name="TileConfig" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Main" width="16" height="21">
+  <properties>
+   <property name="ChapterID" value="Chapter24"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="Chapter24Changes"/>
+   <property name="MapID" value="Chapter24Map"/>
+   <property name="ObjectType1" value="0x01"/>
+   <property name="PaletteID" value="0x02"/>
+   <property name="TileConfig" value="0x03"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxtVE9L1UEUvb8ZrBaCYASFy5elmRW11J3voUaYGv1x08YX+VyUG3tBK5FAA//gN5CX4aY2fQgfuPJt/AgKQa2CAhee05xh5j1aHOY3d+be37n33Du/ndlfoMebNbGOmdkXoArMA8uw1V3ajwMLFu4eAVfgdw14BaxasPFuvw8x6TMH23UL+7uKE1HXv1su+O8BB8Clwqy7SBxGxGPeUtyn2L/Q2TOdHQE7RUCT8XB3DeujLJf3QAn75y7xWFYMxh6G7wPg1AKn18Ad/e+Da/cbwP1B4JZPXGJOeZ70fZfxZ41OsJ/A9yTw0Ifa5fmSIzGK75eK+Vi5rIBfBbYF2GrAYsf/vuLsxEIO/J5TbOYyBTzBflf5TarWrN0s1pZ0nrD2+tSzvMm/oVx+8H4RbNG+BdxU3ZjXN9euY+yPWKuyfKlXQzwX5bvnU191ZfXpk/6M0SVevEf/ivqx5RLfqvLNNSv/p7/IlTX7CfxySa+q4ueaNZRvjMMYUZtDrDNYN7J+4L1cs/vAFHUFpn3Q6Z60uSwem8BHcY098l0zQtsbnL0Flnzi0GPtsxJrkPOowf8z1k3YtoBt1ZkchmDfJ5esjuUO7feV1x+sx3pHGM9Lv9vS/x8PYCbjEvPg/auwn7nwjsReK1nSYxjY1gzFuYh6lZULe4TvRrOjZznT8c3ysteATzo/xHoRdegFbhRhZjgDF4r0dg1l80ve64rH/54DFbiKkw==
+  </data>
+ </layer>
+ <layer name="Village 1 Closed" width="16" height="21">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0x1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="1"/>
+   <property name="Y" value="7"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFQx10Mw+0C0bBKBiZAAD0FACP
+  </data>
+ </layer>
+ <layer name="Village 2 Closed" width="16" height="21">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0x2"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="14"/>
+   <property name="Y" value="13"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AU0Bt0Mw+0C0YBNQAAAjwAjw==
+  </data>
+ </layer>
+ <layer name="Village 1 Destroyed" width="16" height="21">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="0x3"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="0"/>
+   <property name="Y" value="5"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFlIAOZgaGTiDuYiZP/wqgvpVAvIpM/SeA+k4C8Sky9Y+CUTAKyAcAaycGDQ==
+  </data>
+ </layer>
+ <layer name="Village 2 Destroyed" width="16" height="21">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="0x4"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="13"/>
+   <property name="Y" value="11"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2BkgQ5mBoZOIO5iJk//CqC+lUC8ikz9J4D6TgLxKTL1j4LBAwAeIQYN
+  </data>
+ </layer>
+ <layer name="Snag Bridge 1" width="16" height="21">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="0x5"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="2"/>
+   <property name="Y" value="11"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2DoAw4K9WtQqJ+HQv2jYGgCAIlgAD0=
+  </data>
+ </layer>
+ <layer name="Snag Bridge 2" width="16" height="21">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="0x6"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="12"/>
+   <property name="Y" value="8"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4B4wEGhfg0K9fNQqH8UjAJqAgCtAAA9
+  </data>
+ </layer>
+ <layer name="Snag Bridge 3" width="16" height="21">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0x7"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="8"/>
+   <property name="Y" value="1"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYKAtYAFiVSB2o7E9o2AUjIJRQG8AAB+6AHA=
+  </data>
+ </layer>
+</map>
