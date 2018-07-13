@@ -76,6 +76,7 @@
 #define Chapter5Changes 0x20
 #define Chapter5Events 0x21
 #define Chapter6 0x7
+#define Chapter7 0x8
 
 #define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
 #define TileChange(X,Y) "SETVAL 0xB Coords(X,Y) ; TILECHANGE 0xFFFF"
