@@ -3,21 +3,22 @@
  <tileset firstgid="1" name="FE8 - Village - 0e000f10" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
   <image source="../../../Tools/FEMapCreator/Tilesets/FE8 - Village - 0e000f10.png" width="512" height="512"/>
  </tileset>
- <layer name="Main" width="30" height="20" opacity="0.41">
+ <layer name="Main" width="30" height="20" opacity="0.46">
   <properties>
    <property name="Anims1" value="0x12"/>
    <property name="ChapterID" value="22"/>
    <property name="Main" value=""/>
+   <property name="MapChangesID" value="0x66"/>
    <property name="MapID" value="0x65"/>
    <property name="ObjectType" value="0xe"/>
    <property name="PaletteID" value="0x72"/>
    <property name="TileConfig" value="0x10"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJzVlFtOAjEUhoc2Kl6WwJuJuBJ1Icqjlz0o+1AR8fLAFhS8oQkswguii/CbDE2GcijtMDz48CWTtjNfz98zLakoKgXShIdCwnsKM5aej2kLhDptr4SZ39BRVIZNPe6fp3cL3zbs5Oj9gE/4sp6lnKXMs3oXqGERlvTosyuHPLyubx+pUXoqH++BgM95z3q+07L08fYZ+4YB/MDv8NuX0IAr6E6ocZZ6i/TCMqzAKqzpxPsEz/DicZ5Z6pXWTdt/CNfUcQO30FFur8HO17X2lPkzOLfWdfC9wptO6vbxhuR7x9p7aDneSXt32cceVKDG+AXUPe6drOdsvMf4TqAK7dgDj5a3q8bvAon9uDfgsCDP9wJzbmb4xyfdc1LOppftXpqHN52zq+68vb798N+960P3H1rtM5M=
+   eJy9lFlOwzAQQJNY7Byhf0jADeAEwBE4AOSvQtwBeg/29aNXAFqWgkQPQdjPgHhRYsl1xo5KUj6eFNmu38y4M40oCBpD0oZumPFioNfM/ZSOwLBO05vkdC30/rwKggVYVEV/Va/tNL0r+FZhrUZvAq/wZn1LdTZrU9U7Rg7jMKEGv1NHUxV9ujZ11NnFdjRI3zhfxbsl4ItDx1nlfZdU8d6mkt/S531n7QM+4Qu+8/tP4BTO4NmRoy/fMu8ksU7BNMzArMq8d3APD56+MfNKHLi8Uox2/LqO9n2uuWHunfPbC7iEXlT0SnfY9XX1Rsoe+/twYMXcw/cITyrL2/SWzTspD/v8FWev4caKz75PezeIYxNiOGT9CI49c2cYpHfW3h18u9CCTuqBW8Mb5/W2Z4HEMnesw08o7/eF9/X1e/sPs8U156Q6x6Hcl6PwmnV29f4ovGX/if/02n1Sp3cud/8Cq+I4FA==
   </data>
  </layer>
- <layer name="WhoNeedsAnArena" width="30" height="20">
+ <layer name="WhoNeedsAnArena" width="30" height="20" visible="0">
   <properties>
    <property name="Height" value="2"/>
    <property name="ID" value="1"/>
@@ -41,7 +42,7 @@
    eJztzcEJACAMwMBQUfcfUl3DTlFEcpB34D8rYGcnar+9wchmq/1KkqS3XBYZAtQ=
   </data>
  </layer>
- <layer name="VillageSaved" width="30" height="20">
+ <layer name="VillageSaved" width="30" height="20" visible="0">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="3"/>
@@ -51,6 +52,78 @@
   </properties>
   <data encoding="base64" compression="zlib">
    eJxjYBgF1ATczAPtglEwCkbBKBgFo2AUDDQAAHo9AA8=
+  </data>
+ </layer>
+ <layer name="Door1" width="30" height="20" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="4"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="3"/>
+   <property name="Y" value="16"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwUCCp4wD7YJRQG0AAK3mAOc=
+  </data>
+ </layer>
+ <layer name="Door2" width="30" height="20" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="5"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="9"/>
+   <property name="Y" value="10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjILhA54yDrQLRsEoGAWjgIEBAB9jAOc=
+  </data>
+ </layer>
+ <layer name="Door3" width="30" height="20" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="6"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="17"/>
+   <property name="Y" value="7"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDAbwlHGgXTAKRsEoGAWjgFoAAEYiAOc=
+  </data>
+ </layer>
+ <layer name="Door4" width="30" height="20" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="7"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="21"/>
+   <property name="Y" value="4"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4A08JRxoF0wCkbBKBgFo2AUDG4AAHtBAOc=
+  </data>
+ </layer>
+ <layer name="Door5" width="30" height="20" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="8"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="8"/>
+   <property name="Y" value="14"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAoGP3jKONAuGAWjgHgAAHOdAOc=
+  </data>
+ </layer>
+ <layer name="BossExposed" width="30" height="20">
+  <properties>
+   <property name="Height" value="5"/>
+   <property name="ID" value="9"/>
+   <property name="Width" value="5"/>
+   <property name="X" value="8"/>
+   <property name="Y" value="3"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFgwlYMdPfzt9MDAx3gPb+YaKfnebMEDthmJ52S6PZTU8gPUD2joJRMApGwSigLwAAoToLhA==
   </data>
  </layer>
 </map>

@@ -90,7 +90,7 @@ ALIGN 4
 }
 ALIGN 4
 {
-//  #include "Ch22.event"
+  #include "Ch22.event"
 }
 ALIGN 4
 {
