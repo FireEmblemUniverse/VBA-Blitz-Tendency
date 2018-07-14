@@ -90,9 +90,7 @@ ENDA
 GetTheBlitzMan:
 Text(PlaceholderText)
 LOAD1 0x1 Blitz
-DISA Lyon_Final
-//STAL 10
-//REVEAL Lyon_Final
+DISA Kefka
 TILECHANGE 0x9
 LOAD1 0x1 Waiter
 ENDA
@@ -118,64 +116,64 @@ ENDA
 
 // Units
 Bad:
-UNIT 0xAC General Lyon_Final Level(5, Enemy, 1) [8,13] 0x00 0x00 0x0 0x00 [ShadowKiller, SilverLance] GuardTileAI 
-UNIT 0xAC General Lyon_Final Level(5, Enemy, 1) [10,10] 0x00 0x00 0x0 0x00 [SilverAxe, Horseslayer] GuardTileAI 
-UNIT 0xAC General Lyon_Final Level(5, Enemy, 1) [18,7] 0x00 0x00 0x0 0x00 [SilverSword, Wyrmslayer] GuardTileAI 
-UNIT 0xAC General Lyon_Final Level(5, Enemy, 1) [20,4] 0x00 0x00 0x0 0x00 [SilverLance] GuardTileAI 
-UNIT 0xAC Wight Lyon_Final Level(5, Enemy, 1) [15,5] 0x00 0x00 0x0 0x00 [SilverSword] PursueWithoutHeedAI 
-UNIT 0xAC Wight Lyon_Final Level(5, Enemy, 1) [18,5] 0x00 0x00 0x0 0x00 [SilverSword] PursueWithoutHeedAI 
-UNIT 0xAC Fleet Lyon_Final Level(20, Enemy, 1) [6,0] 0x00 0x00 0x0 0x00 [KillerBallista] GuardTileAI 
-UNIT 0xAC Fleet Lyon_Final Level(20, Enemy, 1) [12,17] 0x00 0x00 0x0 0x00 [KillerBallista] GuardTileAI 
-UNIT 0xAC Fleet Lyon_Final Level(20, Enemy, 1) [23,18] 0x00 0x00 0x0 0x00 [KillerBallista] GuardTileAI 
-UNIT 0xAC Fleet Lyon_Final Level(20, Enemy, 1) [19,19] 0x00 0x00 0x0 0x00 [IronBallista] PursueWithoutHeedAI 
-UNIT 0xAC Fleet Lyon_Final Level(20, Enemy, 1) [1,1] 0x00 0x00 0x0 0x00 [IronBallista] PursueWithoutHeedAI 
-UNIT 0xAC Fleet Lyon_Final Level(20, Enemy, 1) [5,9] 0x00 0x00 0x0 0x00 [IronBallista] PursueWithoutHeedAI 
-UNIT 0xAC Sage Lyon_Final Level(5, Enemy, 1) [15,10] 0x00 0x00 0x0 0x00 [Elfire] PursueWithoutHeedAI 
-UNIT 0xAC Sage Lyon_Final Level(5, Enemy, 1) [14,11] 0x00 0x00 0x0 0x00 [Elfire] PursueWithoutHeedAI 
-UNIT 0xAC Sage Lyon_Final Level(5, Enemy, 1) [13,12] 0x00 0x00 0x0 0x00 [Elfire] PursueWithoutHeedAI 
+UNIT 0xAC General Kefka Level(5, Enemy, 1) [8,13] 0x00 0x00 0x0 0x00 [ShadowKiller, SilverLance] NeverMoveAI 
+UNIT 0xAC General Kefka Level(5, Enemy, 1) [10,10] 0x00 0x00 0x0 0x00 [SilverAxe, Horseslayer] NeverMoveAI 
+UNIT 0xAC General Kefka Level(5, Enemy, 1) [18,7] 0x00 0x00 0x0 0x00 [SilverSword, Wyrmslayer] NeverMoveAI 
+UNIT 0xAC General Kefka Level(5, Enemy, 1) [20,4] 0x00 0x00 0x0 0x00 [SilverLance] NeverMoveAI 
+UNIT 0xAC Wight Kefka Level(5, Enemy, 1) [15,5] 0x00 0x00 0x0 0x00 [SilverSword] PursueWithoutHeedAI 
+UNIT 0xAC Wight Kefka Level(5, Enemy, 1) [18,5] 0x00 0x00 0x0 0x00 [SilverSword] PursueWithoutHeedAI 
+UNIT 0xAC Fleet Kefka Level(20, Enemy, 1) [6,0] 0x00 0x00 0x0 0x00 [KillerBallista] NeverMoveAI 
+UNIT 0xAC Fleet Kefka Level(20, Enemy, 1) [12,17] 0x00 0x00 0x0 0x00 [KillerBallista] NeverMoveAI 
+UNIT 0xAC Fleet Kefka Level(20, Enemy, 1) [23,18] 0x00 0x00 0x0 0x00 [KillerBallista] NeverMoveAI 
+UNIT 0xAC Fleet Kefka Level(20, Enemy, 1) [19,19] 0x00 0x00 0x0 0x00 [IronBallista] PursueWithoutHeedAI 
+UNIT 0xAC Fleet Kefka Level(20, Enemy, 1) [1,1] 0x00 0x00 0x0 0x00 [IronBallista] PursueWithoutHeedAI 
+UNIT 0xAC Fleet Kefka Level(20, Enemy, 1) [5,9] 0x00 0x00 0x0 0x00 [IronBallista] PursueWithoutHeedAI 
+UNIT 0xAC Sage Kefka Level(5, Enemy, 1) [15,10] 0x00 0x00 0x0 0x00 [Elfire] PursueWithoutHeedAI 
+UNIT 0xAC Sage Kefka Level(5, Enemy, 1) [14,11] 0x00 0x00 0x0 0x00 [Elfire] PursueWithoutHeedAI 
+UNIT 0xAC Sage Kefka Level(5, Enemy, 1) [13,12] 0x00 0x00 0x0 0x00 [Elfire] PursueWithoutHeedAI 
 UNIT
 
 Bad2:
-UNIT 0xAC Valkyrie Lyon_Final Level(5, Enemy, 1) [28,9] 0x00 0x00 0x0 0x00 [Shine, Silence] HealUnits 
-UNIT 0xAC Valkyrie Lyon_Final Level(5, Enemy, 1) [29,13] 0x00 0x00 0x0 0x00 [Shine, Sleep] HealUnits 
-UNIT 0xAC Valkyrie Lyon_Final Level(5, Enemy, 1) [28,17] 0x00 0x00 0x0 0x00 [Shine, Berserk] HealUnits 
-UNIT 0xAC Bishop Lyon_Final Level(5, Enemy, 1) [14,7] 0x00 0x00 0x0 0x00 [Aura] AttackInRangeAI 
-UNIT 0xAC Bishop Lyon_Final Level(5, Enemy, 1) [24,0] 0x00 0x00 0x0 0x00 [Aura, Purge] GuardTileAI 
-UNIT 0xAC Sage Lyon_Final Level(5, Enemy, 1) [28,8] 0x00 0x00 0x0 0x00 [Bolting] GuardTileAI 
-UNIT 0xAC MageKnight Lyon_Final Level(8, Enemy, 1) [25,11] 0x00 0x00 0x0 0x00 [Fimbulvetr] GuardTileAI 
-UNIT 0xAC MageKnight Lyon_Final Level(5, Enemy, 1) [23,10] 0x00 0x00 0x0 0x00 [Fimbulvetr] ChaseOnceApproachedAI 
-UNIT 0xAC Bishop Lyon_Final Level(5, Enemy, 1) [14,13] 0x00 0x00 0x0 0x00 [Recover] HealUnits 
-UNIT 0xAC Bishop Lyon_Final Level(5, Enemy, 1) [16,9] 0x00 0x00 0x0 0x00 [Barrier] HealUnits 
-UNIT 0xAC Valkyrie Lyon_Final Level(5, Enemy, 1) [27,6] 0x00 0x00 0x0 0x00 [Physic] HealUnits 
-UNIT 0xAC ArchMogall Lyon_Final Level(5, Enemy, 1) [3,2] 0x00 0x00 0x0 0x00 [BloodyEye] PursueWithoutHeedAI 
-UNIT 0xAC ArchMogall Lyon_Final Level(5, Enemy, 1) [8,0] 0x00 0x00 0x0 0x00 [Shadowshot] GuardTileAI 
-UNIT 0xAC ArchMogall Lyon_Final Level(5, Enemy, 1) [24,6] 0x00 0x00 0x0 0x00 [DemonSurge] GuardTileAI 
+UNIT 0xAC Valkyrie Kefka Level(5, Enemy, 1) [28,9] 0x00 0x00 0x0 0x00 [Shine, Silence] HealUnits 
+UNIT 0xAC Valkyrie Kefka Level(5, Enemy, 1) [29,13] 0x00 0x00 0x0 0x00 [Shine, Sleep] HealUnits 
+UNIT 0xAC Valkyrie Kefka Level(5, Enemy, 1) [28,17] 0x00 0x00 0x0 0x00 [Shine, Berserk] HealUnits 
+UNIT 0xAC Bishop Kefka Level(5, Enemy, 1) [14,7] 0x00 0x00 0x0 0x00 [Aura] AttackInRangeAI 
+UNIT 0xAC Bishop Kefka Level(5, Enemy, 1) [24,0] 0x00 0x00 0x0 0x00 [Aura, Purge] NeverMoveAI 
+UNIT 0xAC Sage Kefka Level(5, Enemy, 1) [28,8] 0x00 0x00 0x0 0x00 [Bolting] NeverMoveAI 
+UNIT 0xAC MageKnight Kefka Level(8, Enemy, 1) [25,11] 0x00 0x00 0x0 0x00 [Fimbulvetr] NeverMoveAI 
+UNIT 0xAC MageKnight Kefka Level(5, Enemy, 1) [23,10] 0x00 0x00 0x0 0x00 [Fimbulvetr] ChaseOnceApproachedAI 
+UNIT 0xAC Bishop Kefka Level(5, Enemy, 1) [14,13] 0x00 0x00 0x0 0x00 [Recover] HealUnits 
+UNIT 0xAC Bishop Kefka Level(5, Enemy, 1) [16,9] 0x00 0x00 0x0 0x00 [Barrier] HealUnits 
+UNIT 0xAC Valkyrie Kefka Level(5, Enemy, 1) [27,6] 0x00 0x00 0x0 0x00 [Physic] HealUnits 
+UNIT 0xAC ArchMogall Kefka Level(5, Enemy, 1) [3,2] 0x00 0x00 0x0 0x00 [BloodyEye] PursueWithoutHeedAI 
+UNIT 0xAC ArchMogall Kefka Level(5, Enemy, 1) [8,0] 0x00 0x00 0x0 0x00 [Shadowshot] NeverMoveAI 
+UNIT 0xAC ArchMogall Kefka Level(5, Enemy, 1) [24,6] 0x00 0x00 0x0 0x00 [DemonSurge] NeverMoveAI 
 UNIT
 
 BackupBad:
-UNIT 0xAC Druid Lyon_Final Level(5, Enemy, 1) [15,5] 0x00 0x00 0x0 0x00 [Nosferatu] PursueWithoutHeedAI 
-UNIT 0xAC Druid Lyon_Final Level(5, Enemy, 1) [18,5] 0x00 0x00 0x0 0x00 [Luna] PursueWithoutHeedAI 
+UNIT 0xAC Druid Kefka Level(5, Enemy, 1) [15,5] 0x00 0x00 0x0 0x00 [Nosferatu] PursueWithoutHeedAI 
+UNIT 0xAC Druid Kefka Level(5, Enemy, 1) [18,5] 0x00 0x00 0x0 0x00 [Luna] PursueWithoutHeedAI 
 UNIT
 
 Blitz:
-UNIT 0x1B Berserker 0x00 Level(10, Ally, 1) [24,3] 0x00 0x00 0x0 0x00 [KillerAxe, HandAxe, Rapier] PursueWithoutHeedAI 
+UNIT Sabin Berserker 0x00 Level(10, Ally, 1) [24,3] 0x00 0x00 0x0 0x00 [KillerAxe, HandAxe, Rapier] PursueWithoutHeedAI 
 UNIT
 
 Submariner:
-UNIT Lyon_Final Sage 0x00 Level(15, Enemy, 1) [10,4] 0x00 0x00 0x0 0x00 [Bolting, Sleep, Berserk, Elixir] AttackInRangeAI 
+UNIT Kefka Sage 0x00 Level(15, Enemy, 1) [10,4] 0x00 0x00 0x0 0x00 [Bolting, Sleep, Berserk, Elixir] AttackInRangeAI 
 UNIT
 
 Waiter:
-UNIT Lyon_Final Sage 0x00 Level(15, Enemy, 1) [10,4] 0x00 0x00 0x0 0x00 [Excalibur] PursueWithoutHeedAI 
+UNIT Kefka Sage 0x00 Level(15, Enemy, 1) [10,4] 0x00 0x00 0x0 0x00 [Excalibur] PursueWithoutHeedAI 
 UNIT
 
 
 // Shop Data
 Ch24Armoury:
-SilverSword LightBrand Runesword SilverLance SilverAxe
+SHLI SilverSword LightBrand Runesword SilverLance SilverAxe
 
 Ch24Vendor:
-Fimbulvetr Elfire Aura Divine Fenrir Nosferatu Recover
+SHLI Fimbulvetr Elfire Aura Divine Fenrir Nosferatu Recover
 
 ALIGN 4
 
