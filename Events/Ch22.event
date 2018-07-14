@@ -42,9 +42,11 @@ Village(0x7,GetTheBlitzMan,24,2)
 Village(0x8,StopReinforcements,25,11)
 Door(3,16)
 Door(8,14)
-DOOR 0x00 DoorRemoval1 [9,10] 0x12
-DOOR 0x00 DoorRemoval2 [17,7] 0x12
-DOOR 0x00 DoorRemoval3 [21,4] 0x12
+Door(9,10)
+Door(17,7)
+Door(21,4)
+Armory(Ch24Armoury,4,14)
+Vendor(Ch24Vendor,19,12)
 END_MAIN
 
 MiscBasedEvents:
@@ -89,8 +91,9 @@ GetTheBlitzMan:
 Text(PlaceholderText)
 LOAD1 0x1 Blitz
 DISA Lyon_Final
-STAL 10
-REVEAL Lyon_Final
+//STAL 10
+//REVEAL Lyon_Final
+TILECHANGE 0x9
 LOAD1 0x1 Waiter
 ENDA
 
@@ -107,15 +110,7 @@ ENDA
 ArenaBegone:
 Text(PlaceholderText)
 TILECHANGE 0x1
-
-DoorRemoval1:
-TILECHANGE 0x5
-
-DoorRemoval2:
-TILECHANGE 0x6
-
-DoorRemoval3:
-TILECHANGE 0x7
+ENDA
 
 // Manual Movement
 
@@ -176,5 +171,12 @@ UNIT
 
 
 // Shop Data
+Ch24Armoury:
+SilverSword LightBrand Runesword SilverLance SilverAxe
+
+Ch24Vendor:
+Fimbulvetr Elfire Aura Divine Fenrir Nosferatu Recover
+
+ALIGN 4
 
 MESSAGE Events end at offset currentOffset
