@@ -50,7 +50,7 @@
    <property name="Y" value="8"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo4A4wM480C4YeAAADVUACw==
+   eJxjYBgFo4A4wMY80C4YeAAADFEACg==
   </data>
  </layer>
  <layer name="RightHouse" width="17" height="12">
@@ -62,7 +62,7 @@
    <property name="Y" value="11"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUEAPYmRkYAANVAAs=
+   eJxjYBgFo2AUEAPYmBkYAANRAAo=
   </data>
  </layer>
 </map>
