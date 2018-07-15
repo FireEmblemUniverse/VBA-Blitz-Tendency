@@ -50,6 +50,7 @@ Vendor(Ch24Vendor,19,12)
 END_MAIN
 
 MiscBasedEvents:
+DefeatBoss(EndingScene)
 CauseGameOverIfLordDies
 END_MAIN
 
