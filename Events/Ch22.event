@@ -65,7 +65,7 @@ Tutorial:
 WORD $00
 
 TrapData:
-END_MAIN
+ENDTRAP
 
 ALIGN 4
 
@@ -189,5 +189,3 @@ Ch24Vendor:
 SHLI Fimbulvetr Elfire Aura Divine Fenrir Nosferatu Recover
 
 ALIGN 4
-
-MESSAGE Events end at offset currentOffset
