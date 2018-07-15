@@ -66,7 +66,7 @@ Prologue: IT BEGINS AGAIN[X]
 21: [X]
 
 # 0x0176
-22: [X]
+22: The Legendary Blitz[X]
 
 # 0x0177
 23: [X]
