@@ -24,5 +24,4 @@ phase will cause Game Over.[A][X]
 
 ## Ch22Objective
 Kill Kefka within 12 turns,[N]
-or else he'll...
-
+or else he'll...[X]
