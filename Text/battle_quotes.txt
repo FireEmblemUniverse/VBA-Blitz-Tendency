@@ -7,3 +7,19 @@ Tell my brother...[A][X]
 [OpenMidRight][LoadFace][Hecwood][0x1]
 No! Not here! Not now... Forgive me,[N]
 Please... forgive me...[A][X]
+
+## KefkaCombat
+[OpenMidLeft][LoadFace][0x4A][0x01]
+You sound like a chapter from[N]
+a self-help booklet![A][X]
+
+## KefkaDeath
+[OpenMidLeft][LoadFace][0x4A][0x01]
+I HATE HATE HATE HATE HATE[N]
+HATE HATE HATE HATE HATE HATE[AN]
+HATE HATE HATE HATE HATE HATE[N]
+HATE HATE HATE HATE HATE HATE[AN]
+HATE HATE HATE HATE HATE HATE[N]
+HATE HATE HATE HATE HATE HATE[AN]
+HATE HATE HATE HATE HATE HATE[N]
+HATE HATE HATE HATE HATE YOU![A][X]

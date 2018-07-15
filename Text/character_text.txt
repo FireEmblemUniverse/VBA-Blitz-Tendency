@@ -134,3 +134,17 @@ Anna[X]
 
 ## nameFaust
 Faust[X]
+
+## SabinName
+Sabin[X]
+
+## SabinDesc
+A student of blitzes. Renowned for[N]
+suplexing the Phantom Train.[X]
+
+## KefkaName
+Kefka[X]
+
+## KefkaDesc
+A crazy clown from a distant land.[N]
+Remarkably fond of one-liners.[X]
