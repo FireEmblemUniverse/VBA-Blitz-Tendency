@@ -32,6 +32,8 @@ TurnBasedEvents:
 TurnEventPlayer(0x0,EventAfterExitingPrepScreen,1)
 TurnEventEnemy(0x9,ReinforcementsArrive,3)
 TurnEventEnemy(0x0,ArenaBegone,8)
+TurnEventPlayer(0x0,LastTurn,12)
+TurnEventEnemy(0x0,TimesUp,12)
 END_MAIN
 
 CharacterBasedEvents:
@@ -89,7 +91,7 @@ Text(PlaceholderText)
 ENDA
 
 GetTheBlitzMan:
-Text(PlaceholderText)
+Text(SabinGet)
 LOAD1 0x1 Blitz
 DISA Kefka
 TILECHANGE 0x9
@@ -102,14 +104,24 @@ ENUF 0x9
 ENDA
 
 StopReinforcements:
-Text(PlaceholderText)
+Text(ReinforcementsStopped)
 ENUT 0x9
 ENDA
 
 ArenaBegone:
-Text(PlaceholderText)
+Text(ArenaDestroyed)
 TILECHANGE 0x1
 ENDA
+
+TimesUp:
+Text(TimeUp)
+GameOver
+ENDA
+
+LastTurn:
+Text(FinalPhase)
+ENDA
+
 
 // Manual Movement
 
