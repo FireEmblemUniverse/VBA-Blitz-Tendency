@@ -1,0 +1,720 @@
+#define Ch11Level 10
+#define LeaderID 0x56
+#define MiscID 0x57
+#define EnemyID 0x96
+#define LuAlly 0x97
+#define SLuUID 0x10
+#define C11E(Class) EnemyID Class Level(Ch11Level, Enemy, 1)
+#define NoTh 0 0 0 0
+#define Drop 10b 0 0 0
+
+#define SLu_ID 0x33 //this should be ch 10 events
+EventPointerTable(SLu_ID, SLu_ThisChapter)
+
+EscapePointPointerTable(11,SweetLuutRunners)
+
+ALIGN 4
+SweetLuutRunners:
+    EscapePoint(22, 12, 01) //exit right
+    EscapePoint( 1, 10, 00) //exit left
+    TerminateEscapePoints
+
+//All Excaliburs have 20 base crit.
+//Anima: Flying effectiveness, 1 weight
+//Light: Flying, magic effectivenesses
+//Sword: Flying, Armor, Magic effectivenesses; hits res
+//Bow  : Brave, +10 crit, flying effectiveness
+//Monk, Mage, Myrmidon, Archer
+//Bishop, Sage, Mage Knight, Assassin, Swordmaster, Sniper, Ranger
+
+//Pupil, Mage, Shaman
+//Mage Knight, Sage, Summoner, Druid
+
+ALIGN 4
+SLu_ThisChapter:
+POIN SLu_TurnBasedEvents
+POIN SLu_CharacterBasedEvents
+POIN SLu_LocationBasedEvents
+POIN SLu_MiscBasedEvents
+POIN SLu_Dunno SLu_Dunno SLu_Dunno
+POIN SLu_Tutorial
+POIN SLu_Ballista SLu_Ballista
+POIN SLu_Units SLu_UnitsH
+POIN $0 $0 $0 $0 $0 $0
+POIN SLu_BeginningScene SLu_EndingScene
+
+SLu_TurnBasedEvents:
+TURN 0x0 ThiefTop[ 5, 0] 0x0
+TURN 0x0 ThiefBot[ 3, 5] 0x0
+TURN 0x0 ThiefRgt[ 8, 0] 0x0
+TURN 0x0 ThiefTop[10, 0] 0x0
+//TURN 0x0 Label [Start, End] 0 (8 for jerk)
+END_MAIN
+
+ALIGN 32
+SLu_CharacterBasedEvents:
+CharacterEvent(0x8,SweetLu_Recruit,Vedge,Luut)
+END_MAIN
+
+ALIGN 4
+SLu_LocationBasedEvents: //TODO: New loot?
+Chest(MasterSeal,   17,  5)
+Chest(Speedwings,   19,  4)
+CHES 0x30 Wyrmslayer [19, 6] 0x14
+Chest(MetissTome,   21, 17)
+Chest(Physic,       16, 17)
+Chest(Berserk,      14,  9)
+CHES 0x31 DragonAxe [10,10] 0x14
+Chest(OceanSeal,     3,  6)
+Seize(9,2)
+END_MAIN
+
+ALIGN 4
+SLu_MiscBasedEvents:
+AREA  0xA SLu_Spawn         [ 4,14] [21,18]
+AREA  0xB EdwardsAttack     [ 8,10] [18,18]
+AREA    0 ThroneSpawners    [ 0, 0] [13, 8]
+AREA    0 ReinLeftIfInRight [14, 8] [22,23]
+AREA    0 ReinRightIfInLeft [ 0, 7] [10,20]
+AFEV    0 Chesdrake_19_6 0x30
+AFEV    0 Chesdrake_10_10 0x31
+CauseGameOverIfLordDies
+END_MAIN
+
+/*TurnEventPlayer(0x00, SpawnPirates, 3)
+SpawnPirates:
+ReinforcementEvent(PortPirates)
+UNIT 0x8C Pirate 0x4C Level(9, Enemy, 1) [7, 8] 0 0 1 PirateReda [IronAxe] PursueWithoutHeedAI
+UNIT 0x8C Pirate 0x4C Level(9, Enemy, 1) [7, 8] 0 0 0 0 [IronAxe, HandAxe] PursueWithoutHeedAI
+UNIT*/
+
+ALIGN 4
+SLu_Dunno:
+END_MAIN
+
+ALIGN 4
+SLu_Tutorial:
+END_MAIN
+
+ALIGN 4
+SLu_Ballista:
+END_MAIN
+
+ALIGN 4
+SLu_Units:
+SLu_UnitsH:
+UNIT 0x1 Paladin 0 Level(20, Ally, True) [ 8, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x2 Paladin 0 Level(20, Ally, True) [ 7, 25] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x3 Paladin 0 Level(20, Ally, True) [ 6, 25] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x4 Paladin 0 Level(20, Ally, True) [ 5, 25] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x5 Paladin 0 Level(20, Ally, True) [ 4, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x6 Valkyrie 0 Level(20, Ally, True) [5, 23] 0b 0x00 0 0x0 [Physic, Purge, Divine, Elixir] NoAI
+UNIT 0x7 Warrior 0 Level(20, Ally, True) [ 6, 23] 0b 0x00 0 0x0 [Tomahawk, Longbow, KillerAxe,  Elixir] NoAI
+UNIT 0x8 Paladin 0 Level(20, Ally, True) [ 7, 23] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT
+
+ALIGN 4
+SLu_Enemies:
+UNIT LeaderID Druid 0 Level(3, Enemy, 1) [ 9,  2] 0b 0x00 0 0x0 [Elfire, Eclipse, Physic] NeverMoveAI
+
+UNIT C11E(Mage)   [12, 13] NoTh [Thunder] AttackInRangeAI
+UNIT C11E(Shaman) [13, 12] NoTh [Nosferatu] AttackInRangeAI
+
+UNIT C11E(Archer) [21,  9] NoTh [SilverBow] AttackInRangeAI
+UNIT C11E(Knight) [20, 10] NoTh [Horseslayer] AttackInRangeAI
+
+UNIT C11E(Monk)   [ 3, 10] NoTh [Divine] AttackInRangeAI
+UNIT C11E(Knight) [ 5,  9] NoTh [SteelLance] GuardTileAI
+
+UNIT EnemyID Paladin LeaderID Level(1,Enemy,True)  [17, 14] NoTh [IronSword] AttackInRangeAI
+
+UNIT C11E(Fighter) [ 6, 16] Drop [Hammer] AttackInRangeAI
+UNIT C11E(Cavalier) [ 4, 16] NoTh [IronSword] AttackInRangeAI
+
+UNIT C11E(Mercenary) [20, 19] NoTh [SteelBlade] AttackInRangeAI
+UNIT C11E(Fighter)   [20, 22] NoTh [BattleAxe] AttackInRangeAI
+
+UNIT EnemyID Manakete_F_2 LeaderID Level(3, Enemy, 1) [12, 10] NoTh [Dragonshard] AttackInRangeAI
+UNIT
+
+SLu_Manakete_19_6:
+UNIT EnemyID Manakete_F_2 LeaderID Level(3, Enemy, 1) [19, 6] 0b 0x00 1 REDA19R6 [Dragonshard] AttackInRangeAI
+UNIT
+
+SLu_Manakete_10_10:
+UNIT EnemyID Manakete_F_2 LeaderID Level(3, Enemy, 1) [10, 10] 0b 0x00 1 REDA10R10 [Dragonshard] AttackInRangeAI
+UNIT
+
+SLu_Edwards:
+UNIT EnemyID Cavalier LeaderID Level(Ch11Level, Enemy, True) [ 9,  6] 0b 0x00 0 0x0 [BraveLance]    PursueWithoutHeedAI
+UNIT EnemyID Cavalier LeaderID Level(Ch11Level, Enemy, True) [ 8,  5] 0b 0x00 0 0x0 [Armorslayer]   PursueWithoutHeedAI
+UNIT EnemyID Ranger   LeaderID Level(        1, Enemy, True) [10,  5] 0b 0x00 0 0x0 [SteelBow]      PursueWithoutHeedAI
+UNIT EnemyID MageKnight LeaderID Level(      1, Enemy, True) [ 9,  4] 0b 0x00 0 0x0 [Thunder, Heal] PursueWithoutHeedAI
+UNIT
+
+ALIGN 4
+Chesdrake_10_10:
+LoadReinforcements(SLuManakete_10_10)
+NoFade
+ENDA
+
+ALIGN 4
+Chesdrake_19_6:
+LoadReinforcements(SLuManakete_19_6)
+NoFade
+ENDA
+
+ALIGN 4
+ThiefRgt:
+LoadReinforcements(RgtThief)
+NoFade
+ENDA
+
+ALIGN 4
+ThiefBot:
+LoadReinforcements(BotThief)
+NoFade
+ENDA
+
+ALIGN 4
+ThiefTop:
+LoadReinforcements(TopThief)
+NoFade
+ENDA
+
+TopThief:
+UNIT C11E(Thief)   [19, 0] 0b 0x00 1 REDA16R0 [SilverSword, ChestKey] [0x06, 0x05]
+UNIT
+
+BotThief:
+UNIT C11E(Thief)   [19,25] 0b 0x00 1 REDA15R25 [SilverSword, ChestKey] [0x06, 0x05]
+UNIT
+
+RgtThief:
+UNIT C11E(Thief)   [22,12] 0b 0x00 1 REDA20R11 [SilverSword, ChestKey] [0x06, 0x05]
+UNIT
+
+ThroneMages1:
+UNIT C11E(Mage)   [ 8, 1] 0b 0x00 1 REDA8R2 [Fire] PursueWithoutHeedAI
+UNIT C11E(Monk)   [10, 1] 0b 0x00 1 REDA10R2 [Lightning] PursueWithoutHeedAI
+UNIT
+
+ThroneMages2:
+UNIT C11E(Shaman)   [ 8, 1] 0b 0x00 1 REDA8R2 [Flux] PursueWithoutHeedAI
+UNIT C11E(Monk)   [10, 1] 0b 0x00 1 REDA10R2 [Lightning] PursueWithoutHeedAI
+UNIT
+
+ThroneMages3:
+UNIT C11E(Shaman)   [ 8, 1] 0b 0x00 1 REDA8R2 [Flux] PursueWithoutHeedAI
+UNIT C11E(Mage)   [10, 1] 0b 0x00 1 REDA10R2 [Fire] PursueWithoutHeedAI
+UNIT
+
+ThroneMages4:
+UNIT C11E(Mage)   [ 8, 1] 0b 0x00 1 REDA8R2 [Fire] PursueWithoutHeedAI
+UNIT C11E(Shaman)   [10, 1] 0b 0x00 1 REDA10R2 [Flux] PursueWithoutHeedAI
+UNIT
+
+ALIGN 4
+SweetLu_Recruit:
+MUSI 
+TEXTSTART
+TEXTSHOW LuutConversation
+TEXTEND
+MUSS Comrades
+TEXTCONT
+TEXTEND
+TurnAlly(Luut)
+NoFade
+ENDA
+
+//If you like not smashing your head in, you may want to stop reading ahead.
+    ReinLeftIfInRight:
+    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
+    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
+    SMOV r1 0x4
+    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
+    SMUL slotsParam(r1, r2)     //r1 = r2*4
+    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
+    BNE 0x24 rC 0
+        LoadReinforcements(RD0)    //Remainder was 0
+        GOTO 0x27
+    LABEL 0x24
+    SMOV r2 1
+    BNE 0x25 rC r2
+        LoadReinforcements(RD1) //r = 1
+        GOTO 0x27
+    LABEL 0x25
+    SMOV r2 2
+    BNE 0x26 rC r2
+        LoadReinforcements(RD2) // r = 2
+        GOTO 0x27
+    LABEL 0x26
+        LoadReinforcements(RD3) // r =3
+    LABEL 0x27
+
+    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
+    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
+    SMOV r1 0x4
+    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
+    SMUL slotsParam(r1, r2)     //r1 = r2*4
+    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
+    BNE 0x28 rC 0
+        LoadReinforcements(RD0)    //Remainder was 0
+        GOTO 0x2B
+    LABEL 0x28
+    SMOV r2 1
+    BNE 0x29 rC r2
+        LoadReinforcements(RD1) //r = 1
+        GOTO 0x2B
+    LABEL 0x29
+    SMOV r2 2
+    BNE 0x2A rC r2
+        LoadReinforcements(RD2) // r = 2
+        GOTO 0x2B
+    LABEL 0x2A
+        LoadReinforcements(RD3) // r =3
+    LABEL 0x2B
+
+    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
+    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
+    SMOV r1 0x4
+    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
+    SMUL slotsParam(r1, r2)     //r1 = r2*4
+    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
+    BNE 0x2C rC 0
+        LoadReinforcements(RD0)    //Remainder was 0
+        GOTO 0x2F
+    LABEL 0x2C
+    SMOV r2 1
+    BNE 0x2D rC r2
+        LoadReinforcements(RD1) //r = 1
+        GOTO 0x2F
+    LABEL 0x2D
+    SMOV r2 2
+    BNE 0x2E rC r2
+        LoadReinforcements(RD2) // r = 2
+        GOTO 0x2F
+    LABEL 0x2E
+        LoadReinforcements(RD3) // r =3
+    LABEL 0x2F
+
+    NoFade
+    ENDA
+
+
+    ReinRightIfInLeft:
+    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
+    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
+    SMOV r1 0x4
+    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
+    SMUL slotsParam(r1, r2)     //r1 = r2*4
+    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
+    BNE 0x14 rC 0
+        LoadReinforcements(RU0)    //Remainder was 0
+        GOTO 0x17
+    LABEL 0x14
+    SMOV r2 1
+    BNE 0x11 rC r2
+        LoadReinforcements(RU1) //r = 1
+        GOTO 0x17
+    LABEL 0x15
+    SMOV r2 2
+    BNE 0x12 rC r2
+        LoadReinforcements(RU2) // r = 2
+        GOTO 0x17
+    LABEL 0x16
+        LoadReinforcements(RU3) // r =3
+    LABEL 0x17
+
+    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
+    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
+    SMOV r1 0x4
+    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
+    SMUL slotsParam(r1, r2)     //r1 = r2*4
+    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
+    BNE 0x18 rC 0
+        LoadReinforcements(RL0)    //Remainder was 0
+        GOTO 0x1B
+    LABEL 0x18
+    SMOV r2 1
+    BNE 0x19 rC r2
+        LoadReinforcements(RL1) //r = 1
+        GOTO 0x1B
+    LABEL 0x19
+    SMOV r2 2
+    BNE 0x1A rC r2
+        LoadReinforcements(RL2) // r = 2
+        GOTO 0x1B
+    LABEL 0x1A
+        LoadReinforcements(RL3) // r =3
+    LABEL 0x1B
+
+    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
+    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
+    SMOV r1 0x4
+    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
+    SMUL slotsParam(r1, r2)     //r1 = r2*4
+    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
+    BNE 0x20 rC 0
+        LoadReinforcements(RD0)    //Remainder was 0
+        GOTO 0x23
+    LABEL 0x20
+    SMOV r2 1
+    BNE 0x21 rC r2
+        LoadReinforcements(RD1) //r = 1
+        GOTO 0x23
+    LABEL 0x21
+    SMOV r2 2
+    BNE 0x22 rC r2
+        LoadReinforcements(RD2) // r = 2
+        GOTO 0x23
+    LABEL 0x22
+        LoadReinforcements(RD3) // r =3
+    LABEL 0x23
+
+    NoFade
+    ENDA
+
+    SLu_Company:
+    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
+    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
+    SMOV r1 0x4
+    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
+    SMUL slotsParam(r1, r2)     //r1 = r2*4
+    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
+    BNE 0x0 rC 0
+        LoadReinforcements(SweetLu_0)    //Remainder was 0
+        GOTO 0x3
+    LABEL 0x0
+    SMOV r2 1
+    BNE 0x1 rC r2
+        LoadReinforcements(SweetLu_1) //r = 1
+        GOTO 0x3
+    LABEL 0x1
+    SMOV r2 2
+    BNE 0x2 rC r2
+        LoadReinforcements(SweetLu_2) // r = 2
+        GOTO 0x3
+    LABEL 0x2
+        LoadReinforcements(SweetLu_3) // r =3
+    LABEL 0x3
+
+    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
+    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
+    SMOV r1 0x4
+    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
+    SMUL slotsParam(r1, r2)     //r1 = r2*4
+    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
+    BNE 0x4 rC 0
+        LoadReinforcements(LT_a0)    //Remainder was 0
+        GOTO 0x7
+    LABEL 0x4
+    SMOV r2 1
+    BNE 0x5 rC r2
+        LoadReinforcements(LT_a1) //r = 1
+        GOTO 0x7
+    LABEL 0x5
+    SMOV r2 2
+    BNE 0x6 rC r2
+        LoadReinforcements(LT_a2) // r = 2
+        GOTO 0x7
+    LABEL 0x6
+        LoadReinforcements(LT_a3) // r =3
+    LABEL 0x7
+
+    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
+    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
+    SMOV r1 0x4
+    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
+    SMUL slotsParam(r1, r2)     //r1 = r2*4
+    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
+    BNE 0x8 rC 0
+        LoadReinforcements(LT_b0)    //Remainder was 0
+        GOTO 0xB
+    LABEL 0x8
+    SMOV r2 1
+    BNE 0x9 rC r2
+        LoadReinforcements(LT_b1) //r = 1
+        GOTO 0xB
+    LABEL 0x9
+    SMOV r2 2
+    BNE 0xA rC r2
+        LoadReinforcements(LT_b2) // r = 2
+        GOTO 0xB
+    LABEL 0xA
+        LoadReinforcements(LT_b3) // r =3
+    LABEL 0xB
+
+    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
+    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
+    SMOV r1 0x4
+    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
+    SMUL slotsParam(r1, r2)     //r1 = r2*4
+    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
+    BNE 0xC rC 0
+        LoadReinforcements(LT_c0)    //Remainder was 0
+        GOTO 0xF
+    LABEL 0xC
+    SMOV r2 1
+    BNE 0xD rC r2
+        LoadReinforcements(LT_c1) //r = 1
+        GOTO 0xF
+    LABEL 0xD
+    SMOV r2 2
+    BNE 0xE rC r2
+        LoadReinforcements(LT_c2) // r = 2
+        GOTO 0xF
+    LABEL 0xE
+        LoadReinforcements(LT_c3) // r =3
+    LABEL 0xF
+
+    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
+    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
+    SMOV r1 0x4
+    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
+    SMUL slotsParam(r1, r2)     //r1 = r2*4
+    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
+    BNE 0x10 rC 0
+        LoadReinforcements(LT_d0)    //Remainder was 0
+        GOTO 0x13
+    LABEL 0x10
+    SMOV r2 1
+    BNE 0x11 rC r2
+        LoadReinforcements(LT_d1) //r = 1
+        GOTO 0x13
+    LABEL 0x11
+    SMOV r2 2
+    BNE 0x12 rC r2
+        LoadReinforcements(LT_d2) // r = 2
+        GOTO 0x13
+    LABEL 0x12
+        LoadReinforcements(LT_d3) // r =3
+    LABEL 0x13
+
+    NoFade
+    ENDA
+
+
+//start reading again maybe?
+SweetLu_Mage:
+SweetLu_0:
+UNIT SLuUID Mage 0 Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R1 [AnimaCalibur, Elfire, Vulnerary] NoAI
+UNIT
+
+SweetLu_Monk:
+SweetLu_1:
+UNIT SLuUID Monk 0 Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R1 [LightCalibur, Divine, Vulnerary] NoAI
+UNIT
+
+SweetLu_Myrm:
+SweetLu_2:
+UNIT SLuUID Myrmidon 0 Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R1 [SwordCalibur, KillingEdge, Vulnerary] NoAI
+UNIT
+
+SweetLu_Archer:
+SweetLu_3:
+UNIT SLuUID Archer 0 Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R1 [BowCalibur, RunicBow, Vulnerary] NoAI
+UNIT
+
+LT_a0:
+UNIT LuAlly Monk SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R2 [Purge, Lightning] NoAI
+UNIT
+
+LT_a1:
+UNIT LuAlly Mage SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R2 [Bolting, Fire] NoAI
+UNIT
+
+LT_a2:
+UNIT LuAlly Archer SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R2 [Ballista, IronBow] NoAI
+UNIT
+
+LT_a3:
+UNIT LuAlly Warrior SLuUID Level(1, NPC, 1) [22, 0] 0b 0x00 1 REDA18R2 [Longbow, IronAxe] NoAI
+UNIT
+
+LT_b0:
+UNIT LuAlly Troubadour SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Recover, Vulnerary] NoAI
+UNIT
+
+LT_b2:
+UNIT LuAlly Cleric SLuUID Level((Ch11Level+6), NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Physic, Vulnerary] NoAI
+UNIT
+
+LT_b3:
+UNIT LuAlly Druid SLuUID Level(1, NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Sleep, Heal, Vulnerary] NoAI
+UNIT
+
+LT_b4:
+UNIT LuAlly Cleric SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Fortify, Vulnerary] NoAI
+UNIT
+
+LT_c0:
+UNIT LuAlly Shaman SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 [Nosferatu] NoAI
+UNIT
+
+LT_c1:
+UNIT LuAlly ArcherF SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 [ExtraBow, Vulnerary] NoAI
+UNIT
+
+LT_c2:
+UNIT LuAlly Fighter SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 [SilverAxe, Elixir] NoAI
+UNIT
+
+LT_c3:
+UNIT LuAlly General SLuUID Level(1, NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 [ShortSpear, SteelBlade] NoAI
+UNIT
+
+LT_d0:
+UNIT LuAlly Cavalier SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R2 [SteelSword, Vulnerary] NoAI
+UNIT
+
+LT_d1:
+UNIT LuAlly Cavalier SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R2 [SteelLance, Vulnerary] NoAI
+UNIT
+
+LT_d2:
+UNIT LuAlly Tarvos SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R2 [SteelAxe, Vulnerary] NoAI
+UNIT
+
+LT_d3:
+UNIT LuAlly Ranger SLuUID Level(1, NPC, 1) [22, 0] 0b 0x00 1 REDA19R2 [SteelBow, Vulnerary] NoAI
+UNIT
+
+//REDA(X)R(Y) for reinforcement data movement pointers.
+//don't keep the ()s.
+
+MonkLeftUp:
+LU1:
+UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R9 [Divine] PursueWithoutHeedAI
+UNIT
+
+MageLeftUp:
+LU2:
+UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R9 [Elfire] PursueWithoutHeedAI
+UNIT
+
+ShamanLeftUp:
+LU3:
+UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R9 [Nosferatu] PursueWithoutHeedAI
+UNIT
+
+MiscLeftUp:
+LU0:
+UNIT EnemyID Mercenary LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R9 [Zanbato] PursueWithoutHeedAI
+UNIT
+
+
+
+MonkLeftRight:
+LR1:
+UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA2R10 [Lightning] PursueWithoutHeedAI
+UNIT
+
+MageLeftRight:
+LR2:
+UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA2R10 [Fire] PursueWithoutHeedAI
+UNIT
+
+ShamanLeftRight:
+LR3:
+UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA2R10 [Flux] PursueWithoutHeedAI
+UNIT
+
+MiscLeftRight:
+LR0:
+UNIT EnemyID PegasusKnight LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA2R10 [IronLance] PursueWithoutHeedAI
+UNIT
+
+
+
+MonkLeftDown:
+LD1:
+UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R11 [Shine] PursueWithoutHeedAI
+UNIT
+
+MageLeftDown:
+LD2:
+UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R11 [Thunder] PursueWithoutHeedAI
+UNIT
+
+ShamanLeftDown:
+LD3:
+UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R11 [Luna] PursueWithoutHeedAI
+UNIT
+
+MiscLeftDown:
+LD0:
+UNIT EnemyID Fighter LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R11 [SteelAxe] PursueWithoutHeedAI
+UNIT
+
+
+
+MonkRightUp:
+RU1:
+UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R11 [Divine] PursueWithoutHeedAI
+UNIT
+
+MageRightUp:
+RU2:
+UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R11 [Elfire] PursueWithoutHeedAI
+UNIT
+
+ShamanRightUp:
+RU3:
+UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R11 [Nosferatu] PursueWithoutHeedAI
+UNIT
+
+MiscRightUp:
+RU0:
+UNIT EnemyID Myrmidon LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R11 [Armorslayer] PursueWithoutHeedAI
+UNIT
+
+
+
+
+MonkRightLeft:
+RL1:
+UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA20R12 [Lightning] PursueWithoutHeedAI
+UNIT
+
+MageRightLeft:
+RL2:
+UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA20R12 [Fire] PursueWithoutHeedAI
+UNIT
+
+ShamanRightLeft:
+RL3:
+UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA20R12 [Flux] PursueWithoutHeedAI
+UNIT
+
+MiscRightLeft:
+RL0:
+UNIT EnemyID Pirate LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA20R12 [HandAxe] PursueWithoutHeedAI
+UNIT
+
+
+
+
+
+MonkRightDown:
+LD1:
+UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [Shine] PursueWithoutHeedAI
+UNIT
+
+MageRightDown:
+LD2:
+UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [Thunder] PursueWithoutHeedAI
+UNIT
+
+ShamanRightDown:
+LD3:
+UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [Luna] PursueWithoutHeedAI
+UNIT
+
+MiscRightDown:
+LD0:
+UNIT EnemyID Archer LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [SteelBow] PursueWithoutHeedAI
+UNIT
+
+
+

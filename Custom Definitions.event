@@ -43,6 +43,7 @@
 #define Keanu 0x7
 #define Boo 0x8
 #define Aggie 0x9
+#define Luut 0x10
 #define Fanni 0xD
 #define Murat 0xF
 #define Ersatz 0x1F
@@ -67,6 +68,19 @@
 #define RunicBow 0xBE
 #define RunicBowIconID PiercingBowIconID //TODO
 #define PowerGem BlackGem
+#define Dragonshard 0xC3
+#define DragonshardIconID 0xC4 //TODO
+
+#define AnimaCalibur 0xBF
+#define LightCalibur 0xC0
+#define SwordCalibur 0xC1
+#define BowCalibur 0xC2
+
+#define AnimaCaliburIconID 0x3C //TODO
+#define LightCaliburIconID 0x3C //TODO
+#define SwordCaliburIconID 0xB0 //TODO
+#define BowCaliburIconID 0x35 //TODO
+
 
 //Chapter definitions
 #define Chapter5 0x6
