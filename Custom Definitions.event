@@ -81,6 +81,8 @@
 #define SwordCaliburIconID 0xB0 //TODO
 #define BowCaliburIconID 0x35 //TODO
 
+//Class Definitions
+#define Witch 0x77
 
 //Chapter definitions
 #define Chapter5 0x6
