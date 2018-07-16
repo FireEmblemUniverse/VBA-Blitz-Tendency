@@ -72,7 +72,7 @@ Prologue: IT BEGINS AGAIN[X]
 23: Solomon Shrine[X]
 
 # 0x0178
-24: [X]
+24: Recoil River[X]
 
 # 0x019B
 25: Stud Contact[X]
