@@ -248,6 +248,8 @@ scGetNextMonsterIndex: {
 	BNE inc rC r1
 
 	COUNTER_SET cntMonsterCycle 0
+	
+	GOTO end
 
 LABEL inc
 	// EA Raw is broken, there's only one argument and it's the counted id
@@ -272,6 +274,8 @@ scGetNextHumanGroupIndex: {
 	BNE inc rC r1
 
 	COUNTER_SET cntHumanCycle 0
+	
+	GOTO end
 
 LABEL inc
 	// EA Raw is broken, there's only one argument and it's the counted id
@@ -986,10 +990,10 @@ mclShift3:
 	SHORT (-1)
 
 mclShift4:
-	SHORT 4  False
-	SHORT 42 False
-	SHORT 5  True
-	SHORT 52 True
+	SHORT 40 False
+	SHORT 41 False
+	SHORT 50 True
+	SHORT 51 True
 	SHORT (-1)
 
 mclShift5:
