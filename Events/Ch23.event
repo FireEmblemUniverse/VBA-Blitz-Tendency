@@ -49,7 +49,7 @@ GotoPrepScreen
 ENDA
 
 EndingScene:
-MNC2 24
+MNCH 24
 ENDA
 
 // Events
