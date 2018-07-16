@@ -156,3 +156,9 @@ Adolgi[X]
 Dogi ate roo adol.[NL]
 When adol became a human,[NL]
 bad things happened.[X]
+
+## nameDeuxnids
+Deuxnids[X]
+
+## descDeuxnids
+Not to be confused with Dennis.[X]

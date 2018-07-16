@@ -65,7 +65,7 @@ POP
 
   //Check if current character has the specified item: (Written for chapter 5)
   #inctext lyn "CheckItem.elf"
-
+  
   //Weapon/Staff Range Fix
   #include "Range Fix/Range Fix Install.event"
 
@@ -152,6 +152,13 @@ POP
   FreezeAllASMC:
   #incbin "ASM/freezeall.dmp"
 
+  // Chapter 27 ASMC-able functions
+  ALIGN 4
+  gChapter27FogLevel:
+    WORD Ch27FogLevel
+  
+  #include "CCBlitzChapter27Asmcs.lyn.event"
+  
   ALIGN 4
   //We are installing new descriptions/icons.
   #define __USE_ICON_MACROS__
