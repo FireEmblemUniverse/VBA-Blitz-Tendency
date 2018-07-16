@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" infinite="0" nextobjectid="1">
  <tileset firstgid="1" name="1800571a" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
-  <image source="../WeeklyBlitz/Maps/FE8/1800571a.png" width="512" height="512"/>
+  <image source="./1800571a.png" width="512" height="512"/>
  </tileset>
  <layer name="Main" width="20" height="15">
   <properties>
    <property name="Anims1" value="0"/>
-   <property name="ChapterID" value="0x0d"/>
+   <property name="ChapterID" value="0x0C"/>
    <property name="Main" value=""/>
-   <property name="MapChangesID" value="0x3a"/>
-   <property name="MapID" value="0x39"/>
+   <property name="MapChangesID" value="0x36"/>
+   <property name="MapID" value="0x35"/>
    <property name="ObjectType" value="0x18"/>
    <property name="PaletteID" value="0x57"/>
    <property name="TileConfig" value="0x1a"/>
