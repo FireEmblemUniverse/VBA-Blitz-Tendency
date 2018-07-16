@@ -54,6 +54,7 @@ ENDTRAP
 ALIGN 4
 Units:
 UNIT 0x01 0x0 0x0 Level(1,Ally,0) [2,1] 0 0 0 0 [0x0] NoAI
+UNIT Nichol WyvernLord 0x0 Level(5, Ally, 1) [7,1] 0 0 0 0 [Runesword, SteelLance] NoAI
 UNIT 0x80 0x0 0x0 Level(1,Ally,0) [1,1] 0 0 0 0 [0x0] NoAI
 UNIT 0x80 0x0 0x0 Level(1,Ally,0) [3,1] 0 0 0 0 [0x0] NoAI
 UNIT 0x80 0x0 0x0 Level(1,Ally,0) [2,0] 0 0 0 0 [0x0] NoAI
@@ -154,9 +155,9 @@ VillageEventItem(PlaceholderText, HouseBG, Spear)
 ENDA
 
 BeginningScene:
-LOAD2 0x1 Units
-ENUN
 LOAD1 0x1 NicholRecruit
+ENUN
+LOAD2 0x1 Units
 ENUN
 LOAD2 0x1 Foes
 ENUN
