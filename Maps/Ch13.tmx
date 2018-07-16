@@ -12,6 +12,7 @@
    <property name="ObjectType" value="0x50"/>
    <property name="PaletteID" value="0x51"/>
    <property name="TileConfig" value="0x52"/>
+   <property name="map_changes" value="0x3A"/>
   </properties>
   <data>
    <tile gid="723"/>
@@ -766,7 +767,7 @@
    <tile gid="68"/>
   </data>
  </layer>
- <layer name="20,1" width="30" height="25">
+ <layer name="tc_20_1" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="1"/>
@@ -1527,12 +1528,12 @@
    <tile/>
   </data>
  </layer>
- <layer name="28,1" width="30" height="25">
+ <layer name="tc_28_1" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="2"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
+   <property name="X" value="28"/>
    <property name="Y" value="1"/>
   </properties>
   <data>
@@ -2288,13 +2289,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="13,2" width="30" height="25">
+ <layer name="tc_13_2" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="3"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="13"/>
+   <property name="Y" value="2"/>
   </properties>
   <data>
    <tile/>
@@ -3049,13 +3050,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="20,3" width="30" height="25">
+ <layer name="tc_20_3" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="4"/>
    <property name="Width" value="1"/>
    <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="Y" value="3"/>
   </properties>
   <data>
    <tile/>
@@ -3810,13 +3811,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="28,3" width="30" height="25">
+ <layer name="tc_28_3" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="5"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="28"/>
+   <property name="Y" value="3"/>
   </properties>
   <data>
    <tile/>
@@ -4571,13 +4572,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="15,4" width="30" height="25">
+ <layer name="tc_15_4" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="6"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="15"/>
+   <property name="Y" value="4"/>
   </properties>
   <data>
    <tile/>
@@ -5332,13 +5333,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="5,5" width="30" height="25">
+ <layer name="tc_5_5" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="7"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="5"/>
+   <property name="Y" value="5"/>
   </properties>
   <data>
    <tile/>
@@ -6093,13 +6094,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="14,7" width="30" height="25">
+ <layer name="tc_14_7" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="8"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="14"/>
+   <property name="Y" value="7"/>
   </properties>
   <data>
    <tile/>
@@ -6854,13 +6855,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="8,8" width="30" height="25">
+ <layer name="tc_8_8" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="9"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="8"/>
+   <property name="Y" value="8"/>
   </properties>
   <data>
    <tile/>
@@ -7615,13 +7616,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="17,10" width="30" height="25">
+ <layer name="tc_17_10" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="10"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="17"/>
+   <property name="Y" value="10"/>
   </properties>
   <data>
    <tile/>
@@ -8376,13 +8377,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="22,11" width="30" height="25">
+ <layer name="tc_22_11" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="11"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="22"/>
+   <property name="Y" value="11"/>
   </properties>
   <data>
    <tile/>
@@ -9137,13 +9138,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="8,12" width="30" height="25">
+ <layer name="tc_8_12" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="12"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="8"/>
+   <property name="Y" value="12"/>
   </properties>
   <data>
    <tile/>
@@ -9898,13 +9899,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="10,12" width="30" height="25">
+ <layer name="tc_10_12" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="13"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="10"/>
+   <property name="Y" value="12"/>
   </properties>
   <data>
    <tile/>
@@ -10659,13 +10660,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="26,12" width="30" height="25">
+ <layer name="tc_26_12" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="14"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="26"/>
+   <property name="Y" value="12"/>
   </properties>
   <data>
    <tile/>
@@ -11420,13 +11421,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="15,13" width="30" height="25">
+ <layer name="tc_15_13" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="15"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="15"/>
+   <property name="Y" value="13"/>
   </properties>
   <data>
    <tile/>
@@ -12181,13 +12182,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="20,14" width="30" height="25">
+ <layer name="tc_20_14" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="16"/>
    <property name="Width" value="1"/>
    <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="Y" value="14"/>
   </properties>
   <data>
    <tile/>
@@ -12942,13 +12943,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="5,15" width="30" height="25">
+ <layer name="tc_5_15" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="17"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="5"/>
+   <property name="Y" value="15"/>
   </properties>
   <data>
    <tile/>
@@ -13703,13 +13704,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="7,16" width="30" height="25">
+ <layer name="tc_7_16" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="18"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="7"/>
+   <property name="Y" value="16"/>
   </properties>
   <data>
    <tile/>
@@ -14464,13 +14465,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="12,16" width="30" height="25">
+ <layer name="tc_12_16" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="19"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="12"/>
+   <property name="Y" value="16"/>
   </properties>
   <data>
    <tile/>
@@ -15225,13 +15226,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="25,16" width="30" height="25">
+ <layer name="tc_25_16" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="20"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="25"/>
+   <property name="Y" value="16"/>
   </properties>
   <data>
    <tile/>
@@ -15986,13 +15987,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="17,17" width="30" height="25">
+ <layer name="tc_17_17" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="21"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="17"/>
+   <property name="Y" value="17"/>
   </properties>
   <data>
    <tile/>
@@ -16747,13 +16748,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="4,18" width="30" height="25">
+ <layer name="tc_4_18" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="22"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="4"/>
+   <property name="Y" value="18"/>
   </properties>
   <data>
    <tile/>
@@ -17508,13 +17509,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="27,18" width="30" height="25">
+ <layer name="tc_27_18" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="23"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="27"/>
+   <property name="Y" value="18"/>
   </properties>
   <data>
    <tile/>
@@ -18269,13 +18270,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="13,19" width="30" height="25">
+ <layer name="tc_13_19" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="24"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="13"/>
+   <property name="Y" value="19"/>
   </properties>
   <data>
    <tile/>
@@ -19030,13 +19031,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="24,21" width="30" height="25">
+ <layer name="tc_24_21" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="25"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="24"/>
+   <property name="Y" value="21"/>
   </properties>
   <data>
    <tile/>
@@ -19791,13 +19792,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="5,22" width="30" height="25">
+ <layer name="tc_5_22" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="26"/>
    <property name="Width" value="1"/>
-   <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="X" value="5"/>
+   <property name="Y" value="22"/>
   </properties>
   <data>
    <tile/>
@@ -20552,13 +20553,13 @@
    <tile/>
   </data>
  </layer>
- <layer name="20,23" width="30" height="25">
+ <layer name="tc_20_23" width="30" height="25">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="27"/>
    <property name="Width" value="1"/>
    <property name="X" value="20"/>
-   <property name="Y" value="1"/>
+   <property name="Y" value="23"/>
   </properties>
   <data>
    <tile/>

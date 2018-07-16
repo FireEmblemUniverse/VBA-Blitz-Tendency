@@ -32,6 +32,7 @@
 #define VedgeLord BlitzLord
 #define VoidMonster 0x3
 #define VoidMaster 0x4
+#define Witch 0x77
 
 // Unit definitions
 #define Vedge 0x1

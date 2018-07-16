@@ -53,3 +53,10 @@ setMugEntry(0x16,LuutMug,3,6,3,4)
 DennisMug:
 #incext PortraitFormatter "Dennis.png"
 setMugEntry(DennisPortrait,DennisMug,2,6,2,4)
+
+/*TODO: portrait ID unknown
+#define IgaPortrait 0x??
+IgaMug:
+#incext PortraitFormatter "Iga.png"
+setMugEntry(IgaPortrait,IgaMug,3,5,3,3)
+*/

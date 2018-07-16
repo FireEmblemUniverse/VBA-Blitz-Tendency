@@ -8,40 +8,44 @@ defWeaponDebuffs(4,0,0,4,0,4,4) //0x5: Pebble debuff.
 
 ALIGN 4
 
-#define ArmorClasses BYTE $09 $0A $0B $0C $35 $36
+#define ArmorClasses "$09 $0A $0B $0C $35 $36"
 
-#define FlyingClasses BYTE $48 $49 $1F $20 $21 $22 $23 $24
+#define FlyingClasses "$48 $49 $1F $20 $21 $22 $23 $24 Witch"
 
-#define MonsterClasses BYTE $52 $53 $54 $55 $56 $57 $58 $59 $5A $5B $5C $5D $5E $5F $60 $61 $62 $63 $64 $65 $66 $3B $7C $7D $51 VoidMonster
+#define MonsterClasses "$52 $53 $54 $55 $56 $57 $58 $59 $5A $5B $5C $5D $5E $5F $60 $61 $62 $63 $64 $65 $66 $3B $7C $7D $51 VoidMonster"
 
-#define MagicClasses BYTE Mage Mage_F Sage Sage_F MageKnight MageKnight_F Bishop Bishop_F Shaman Shaman_F Druid Druid_F Summoner Summoner_F Pupil_1 Pupil_2 Pupil_3 Monk Priest Cleric Troubadour Valkyrie Necromancer Mogall ArchMogall Gorgon
+#define MagicClasses "Mage Mage_F Sage Sage_F MageKnight MageKnight_F Bishop Bishop_F Shaman Shaman_F Druid Druid_F Summoner Summoner_F Pupil_1 Pupil_2 Pupil_3 Monk Priest Cleric Troubadour Valkyrie Necromancer Mogall ArchMogall Gorgon"
 
-#define MountedClasses BYTE $4B $4C $05 $06 $07 $08 $1D $1E $29 $2A $35 $36 $5D $5E
+#define MountedClasses "$4B $4C $05 $06 $07 $08 $1D $1E $29 $2A $35 $36 $5D $5E"
 //Vanilla list minus Eirika/Ephraim lord
 
 
 ArmorFlyingMagicEffectiveness:
-ArmorClasses
+BYTE ArmorClasses
 //Continues into flying+magic effectiveness
 FlyingMagicEffectiveness:
-FlyingClasses
+BYTE FlyingClasses
 //Continues into magic effectiveness
 MagicEffectiveness:
-MagicClasses
+BYTE MagicClasses
 BYTE 0
 
 MountedArmorEffectiveness:
-ArmorClasses
+BYTE ArmorClasses
 //Continues into mounted effectiveness
 MountedEffectiveness:
-MountedClasses
+BYTE MountedClasses
 BYTE 0
 
 FlyingMonsterEffectiveness:
-FlyingClasses
-//Continues into monster effectiveness
+BYTE FlyingClasses
+//Continues into monster effectiveness.
 MonsterEffectiveness:
-MonsterClasses
+BYTE MonsterClasses
+BYTE 0
+
+FlyingEffectiveness:
+BYTE FlyingClasses
 BYTE 0
 
 HalfStoneBonuses:

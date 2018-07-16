@@ -1,20 +1,21 @@
 #define SetSkills(character, first, second, third, fourth) "SETVAL 0x2 first; SETVAL 0x3 (0x203e885+(character*16)); SETVAL 0x4 0x2; ASMC EventWriter+1;SETVAL 0x2 (second + (third*0x100)); SETVAL 0x3 (0x203e886+(character*16)); SETVAL 0x4 0x1; ASMC EventWriter+1;SETVAL 0x2 fourth; SETVAL 0x3 (0x203e888+(character*16)); SETVAL 0x4 0x2; ASMC EventWriter+1;"
 
+#define c13Lv 13
 
 ALIGN 4
-SLu_ThisChapter:
-POIN SLu_TurnBasedEvents
-POIN SLu_CharacterBasedEvents
-POIN SLu_LocationBasedEvents
-POIN SLu_MiscBasedEvents
-POIN SLu_Dunno SLu_Dunno SLu_Dunno
-POIN SLu_Tutorial
-POIN SLu_Ballista SLu_Ballista
-POIN SLu_Units SLu_UnitsH
+SimLog_ThisChapter:
+POIN SimLog_TurnBasedEvents
+POIN SimLog_CharacterBasedEvents
+POIN SimLog_LocationBasedEvents
+POIN SimLog_MiscBasedEvents
+POIN SimLog_Dunno SimLog_Dunno SimLog_Dunno
+POIN SimLog_Tutorial
+POIN SimLog_Ballista SimLog_Ballista
+POIN SimLog_Units SimLog_UnitsH
 POIN $0 $0 $0 $0 $0 $0
-POIN SLu_BeginningScene SLu_EndingScene
+POIN SimLog_BeginningScene SimLog_EndingScene
 
-SLu_TurnBasedEvents:
+SimLog_TurnBasedEvents:
 TURN 0x0 ThiefTop[ 5, 0] 0x0
 TURN 0x0 ThiefBot[ 3, 5] 0x0
 TURN 0x0 ThiefRgt[ 8, 0] 0x0
@@ -23,17 +24,17 @@ TURN 0x0 ThiefTop[10, 0] 0x0
 END_MAIN
 
 ALIGN 32
-SLu_CharacterBasedEvents:
-CharacterEvent(0x8,SweetLu_Recruit,Vedge,Luut)
+SimLog_CharacterBasedEvents:
+CharacterEvent(0x8,Mealy_Recruit,Vedge,Mealy)
 END_MAIN
 
 ALIGN 4
-SLu_LocationBasedEvents: //TODO: New loot?
+SimLog_LocationBasedEvents: //TODO: New loot?
 CHES 0x10 Vulnerary    [ 5,22] 0x14
 CHES 0x11 Elixir       [ 4,18] 0x14
 CHES 0x12 ChestKey_5   [ 5,15] 0x14
 CHES 0x13 Fiendcleaver [ 7,16] 0x14
-CHES 0x14 Dracoshield [ 7,16] 0x14
+CHES 0x14 Dracoshield  [ 7,16] 0x14
 CHES 0x15 Fiendcleaver [ 7,16] 0x14
 CHES 0x16 Fiendcleaver [ 7,16] 0x14
 CHES 0x17 Fiendcleaver [ 7,16] 0x14
@@ -41,43 +42,86 @@ Seize(24,3)
 END_MAIN
 
 ALIGN 4
-SLu_MiscBasedEvents:
-AREA  0xA Thieves1 [ 4,14] [21,18]
-AREA    0 ThroneSpawners    [ 0, 0] [13, 8]
+SimLog_MiscBasedEvents:
+AREA  0xA Thieves1 [ 4,10] [21,18]
+AREA    0 ThroneSpawners    [ 5, 9] [15, 16]
+AREA  0xB SEFlank [11,0] [22, 13]
 AFEV    0 Chesdrake_19_6 0x30
 AFEV    0 MealySpawn 0x14
 CauseGameOverIfLordDies
 END_MAIN
 
-/*TurnEventPlayer(0x00, SpawnPirates, 3)
-SpawnPirates:
-ReinforcementEvent(PortPirates)
-UNIT 0x8C Pirate 0x4C Level(9, Enemy, 1) [7, 8] 0 0 1 PirateReda [IronAxe] PursueWithoutHeedAI
-UNIT 0x8C Pirate 0x4C Level(9, Enemy, 1) [7, 8] 0 0 0 0 [IronAxe, HandAxe] PursueWithoutHeedAI
-UNIT*/
+ALIGN 4
+SimLog_BeginningScene:
+LOAD2 0x1 SimLog_Units
+ENUN
+LOAD1 0x1 DefaultEnemies
+ENUN
+GotoPrepScreen
+ENDA
 
 ALIGN 4
-SLu_Dunno:
+SimLog_EndingScene:
+TEXTSTART
+TEXTSHOW PlaceholderText
+TEXTEND
+MNCH 14
+ENDA
+
+ALIGN 4
+ThroneSpawners:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
+CHECK_TURNS
+SMOV r1 0x3 //If before turn 3, don't reinforce
+BLT 0x0 rC r1
+    //only reinforce if even turn
+LABEL 0x0
+NoFade
+ENDA
+
+DefaultEnemies:
+UNIT 0x9A Thief 0x5A Level(c13Lv, Enemy, 1) [22, 5] 0 0 0 0 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
+UNIT 0x9A Thief 0x5A Level(c13Lv, Enemy, 1) [26, 3] 0 0 0 0 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
+
+ThroneStairs:
+UNIT 0x9A Thief 0x5A Level(c13Lv, Enemy, 1) [22, 3] 0 0 1 REDA22R5 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
+UNIT 0x9A Thief 0x5A Level(c13Lv, Enemy, 1) [26, 3] 0 0 1 REDA26R5 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
+UNIT 
+
+ALIGN 4
+SimLog_Dunno:
 END_MAIN
 
 ALIGN 4
-SLu_Tutorial:
+SimLog_Tutorial:
 END_MAIN
 
 ALIGN 4
-SLu_Ballista:
+SimLog_Ballista:
 END_MAIN
 
 ALIGN 4
-SLu_Units:
-SLu_UnitsH:
+SimLog_Units:
+SimLog_UnitsH:
+UNIT 0x1 Paladin 0 Level(20, Ally, True) [ 5, 23] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
+UNIT 0x2 Paladin 0 Level(20, Ally, True) [ 6, 22] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
+UNIT 0x3 Paladin 0 Level(20, Ally, True) [ 6, 23] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
+UNIT 0x4 Paladin 0 Level(20, Ally, True) [ 6, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
+UNIT 0x5 Paladin 0 Level(20, Ally, True) [ 4, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
+UNIT 0x6 Valkyrie 0 Level(20, Ally, True) [4, 23] 0b 0x00 0 0x0 [Physic, Purge, Divine, ChestKey] NoAI
+UNIT 0x7 Warrior 0 Level(20, Ally, True) [ 4, 22] 0b 0x00 0 0x0 [Tomahawk, Longbow, KillerAxe,  ChestKey] NoAI
+UNIT 0x8 Paladin 0 Level(20, Ally, True) [ 5, 21] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
+UNIT 0x9 Paladin 0 Level(20, Ally, True) [ 5, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
+UNIT 0xA Paladin 0 Level(20, Ally, True) [ 5, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
+UNIT
 
 BonePrize:
-UNIT Mealy Bonewalker 0 Level(5, Ally, True) [12,16] 0b 0x00 1 REDA12R16 [0x00, 0x00, 0x00, 0x00] NoAI
+UNIT Mealy Hero 0 Level(5, NPC, True) [12,16] 0b 0x00 1 REDA12R16 [0x00, 0x00, 0x00, 0x00] NoAI
 UNIT
 
 MealySpawn:
 LoadReinforcements(BonePrize)
 NoFade
-SetSkills(Mealy, ForesightID, SealSpdID, SwordfaireID, SaviorID) //Personal is Smite (shove 2 tiles).
+SetSkills(Mealy, DesperationID, SealSpdID, SolID) //Personal is Smite (shove 2 tiles).
 ENDA

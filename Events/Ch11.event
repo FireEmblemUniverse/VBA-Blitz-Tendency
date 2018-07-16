@@ -4,9 +4,6 @@
 #define EnemyID 0x96
 #define LuAlly 0x97
 #define SLuUID 0x10
-#define C11E(Class) EnemyID Class Level(Ch11Level, Enemy, 1)
-#define NoTh 0 0 0 0
-#define Drop 10b 0 0 0
 
 #define SLu_ID 0xD1 //this should be ch 11/0xB events
 EventPointerTable(SLu_ID, SLu_ThisChapter)
@@ -81,13 +78,6 @@ AFEV    0 Chesdrake_10_10 0x31
 CauseGameOverIfLordDies
 END_MAIN
 
-/*TurnEventPlayer(0x00, SpawnPirates, 3)
-SpawnPirates:
-ReinforcementEvent(PortPirates)
-UNIT 0x8C Pirate 0x4C Level(9, Enemy, 1) [7, 8] 0 0 1 PirateReda [IronAxe] PursueWithoutHeedAI
-UNIT 0x8C Pirate 0x4C Level(9, Enemy, 1) [7, 8] 0 0 0 0 [IronAxe, HandAxe] PursueWithoutHeedAI
-UNIT*/
-
 ALIGN 4
 SLu_Dunno:
 END_MAIN
@@ -99,6 +89,20 @@ END_MAIN
 ALIGN 4
 SLu_Ballista:
 ENDTRAP
+
+SLu_BeginningScene:
+LOAD2 0x1 SLu_Units
+ENUN
+LOAD1 0x1 SLu_Enemies
+ENUN
+GotoPrepScreen
+ENDA
+
+SLu_Spawn:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
+LABEL 0x0
+ENDA
 
 ALIGN 4
 SLu_Units:
@@ -117,24 +121,24 @@ ALIGN 4
 SLu_Enemies:
 UNIT LeaderID Druid 0 Level(3, Enemy, 1) [ 9,  2] 0b 0x00 0 0x0 [Elfire, Eclipse, Physic] NeverMoveAI
 
-UNIT C11E(Mage)   [12, 13] NoTh [Thunder] AttackInRangeAI
-UNIT C11E(Shaman) [13, 12] NoTh [Nosferatu] AttackInRangeAI
+UNIT EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [12, 13] 0b 0x0 0 0 [Thunder] AttackInRangeAI
+UNIT EnemyID Shaman 0 Level(Ch11Level, Enemy, 1) [13, 12] 0b 0x0 0 0 [Nosferatu] AttackInRangeAI
 
-UNIT C11E(Archer) [21,  9] NoTh [SilverBow] AttackInRangeAI
-UNIT C11E(Knight) [20, 10] NoTh [Horseslayer] AttackInRangeAI
+UNIT EnemyID Archer 0 Level(Ch11Level, Enemy, 1) [21,  9] 0b 0x0 0 0 [SilverBow] AttackInRangeAI
+UNIT EnemyID Knight 0 Level(Ch11Level, Enemy, 1) [20, 10] 0b 0x0 0 0 [Horseslayer] AttackInRangeAI
 
-UNIT C11E(Monk)   [ 3, 10] NoTh [Divine] AttackInRangeAI
-UNIT C11E(Knight) [ 5,  9] NoTh [SteelLance] GuardTileAI
+UNIT EnemyID Monk 0 Level(Ch11Level, Enemy, 1)  [ 3, 10] 0b 0x0 0 0 [Divine] AttackInRangeAI
+UNIT EnemyID Knight 0 Level(Ch11Level, Enemy, 1) [ 5,  9] 0b 0x0 0 0 [SteelLance] GuardTileAI
 
-UNIT EnemyID Paladin LeaderID Level(1,Enemy,True)  [17, 14] NoTh [IronSword] AttackInRangeAI
+UNIT EnemyID Paladin LeaderID Level(1,Enemy,True)  [17, 14] 0b 0x0 0 0 [IronSword] AttackInRangeAI
 
-UNIT C11E(Fighter) [ 6, 16] Drop [Hammer] AttackInRangeAI
-UNIT C11E(Cavalier) [ 4, 16] NoTh [IronSword] AttackInRangeAI
+UNIT EnemyID Fighter 0 Level(Ch11Level, Enemy, 1) [ 6, 16] 10b 0x0 0 0 [Hammer] AttackInRangeAI
+UNIT EnemyID Cavalier 0 Level(Ch11Level, Enemy, 1)[ 4, 16] 0b 0x0 0 0 [IronSword] AttackInRangeAI
 
-UNIT C11E(Mercenary) [20, 19] NoTh [SteelBlade] AttackInRangeAI
-UNIT C11E(Fighter)   [20, 22] NoTh [BattleAxe] AttackInRangeAI
+UNIT EnemyID Mercenary 0 Level(Ch11Level, Enemy, 1) [20, 19] 0b 0x0 0 0 [SteelBlade] AttackInRangeAI
+UNIT EnemyID Fighter 0 Level(Ch11Level, Enemy, 1)   [20, 22] 0b 0x0 0 0 [BattleAxe] AttackInRangeAI
 
-UNIT EnemyID Manakete_F_2 LeaderID Level(3, Enemy, 1) [12, 10] NoTh [Dragonshard] AttackInRangeAI
+UNIT EnemyID Manakete_F_2 LeaderID Level(3, Enemy, 1) [12, 10] 0b 0x0 0 0 [Dragonshard] AttackInRangeAI
 UNIT
 
 SLu_Manakete_19_6:
@@ -145,6 +149,13 @@ SLu_Manakete_10_10:
 UNIT EnemyID Manakete_F_2 LeaderID Level(3, Enemy, 1) [10, 10] 0b 0x00 1 REDA10R10 [Dragonshard] AttackInRangeAI
 UNIT
 
+ALIGN 4
+EdwardsAttack:
+LoadReinforcements(SLu_Edwards)
+NoFade
+ENDB
+
+ALIGN 4
 SLu_Edwards:
 UNIT EnemyID Cavalier LeaderID Level(Ch11Level, Enemy, True) [ 9,  6] 0b 0x00 0 0x0 [BraveLance]    PursueWithoutHeedAI
 UNIT EnemyID Cavalier LeaderID Level(Ch11Level, Enemy, True) [ 8,  5] 0b 0x00 0 0x0 [Armorslayer]   PursueWithoutHeedAI
@@ -183,35 +194,35 @@ NoFade
 ENDB
 
 TopThief:
-UNIT C11E(Thief)   [19, 0] 0b 0x00 1 REDA16R0 [SilverSword, ChestKey] [0x06, 0x05]
+UNIT EnemyID Thief 0 Level(Ch11Level, Enemy, 1)   [19, 0] 0b 0x00 1 REDA16R0 [SilverSword, ChestKey] [0x06, 0x05]
 UNIT
 
 BotThief:
-UNIT C11E(Thief)   [19,25] 0b 0x00 1 REDA15R25 [SilverSword, ChestKey] [0x06, 0x05]
+UNIT EnemyID Thief 0 Level(Ch11Level, Enemy, 1)   [19,25] 0b 0x00 1 REDA15R25 [SilverSword, ChestKey] [0x06, 0x05]
 UNIT
 
 RgtThief:
-UNIT C11E(Thief)   [22,12] 0b 0x00 1 REDA20R11 [SilverSword, ChestKey] [0x06, 0x05]
+UNIT EnemyID Thief 0 Level(Ch11Level, Enemy, 1)   [22,12] 0b 0x00 1 REDA20R11 [SilverSword, ChestKey] [0x06, 0x05]
 UNIT
 
 ThroneMages1:
-UNIT C11E(Mage)   [ 8, 1] 0b 0x00 1 REDA8R2 [Fire] PursueWithoutHeedAI
-UNIT C11E(Monk)   [10, 1] 0b 0x00 1 REDA10R2 [Lightning] PursueWithoutHeedAI
+UNIT EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Fire] PursueWithoutHeedAI
+UNIT EnemyID Monk 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Lightning] PursueWithoutHeedAI
 UNIT
 
 ThroneMages2:
-UNIT C11E(Shaman)   [ 8, 1] 0b 0x00 1 REDA8R2 [Flux] PursueWithoutHeedAI
-UNIT C11E(Monk)   [10, 1] 0b 0x00 1 REDA10R2 [Lightning] PursueWithoutHeedAI
+UNIT EnemyID Shaman 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Flux] PursueWithoutHeedAI
+UNIT EnemyID Monk 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Lightning] PursueWithoutHeedAI
 UNIT
 
 ThroneMages3:
-UNIT C11E(Shaman)   [ 8, 1] 0b 0x00 1 REDA8R2 [Flux] PursueWithoutHeedAI
-UNIT C11E(Mage)   [10, 1] 0b 0x00 1 REDA10R2 [Fire] PursueWithoutHeedAI
+UNIT EnemyID Shaman 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Flux] PursueWithoutHeedAI
+UNIT EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Fire] PursueWithoutHeedAI
 UNIT
 
 ThroneMages4:
-UNIT C11E(Mage)   [ 8, 1] 0b 0x00 1 REDA8R2 [Fire] PursueWithoutHeedAI
-UNIT C11E(Shaman)   [10, 1] 0b 0x00 1 REDA10R2 [Flux] PursueWithoutHeedAI
+UNIT EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Fire] PursueWithoutHeedAI
+UNIT EnemyID Shaman 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Flux] PursueWithoutHeedAI
 UNIT
 
 ALIGN 4
@@ -226,6 +237,14 @@ TEXTEND
 TurnAlly(Luut)
 NoFade
 ENDB
+
+ALIGN 4
+SLu_EndingScene:
+TEXTSTART
+TEXTSHOW PlaceholderText
+TEXTEND
+MNCH 12
+ENDA
 
 #define Poin(x) "(x | 0x08000000)"
 //If you like not smashing your head in, you may want to stop reading ahead.
@@ -275,6 +294,7 @@ NoFade
 ENDB
 
 SLu_Company:
+SLu_Spawn:
 
     SMOV r1 Poin(SweetLu_0)
     SMOV r2 Poin(SweetLu_1)
@@ -531,7 +551,7 @@ RD0:
 UNIT EnemyID Archer LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [SteelBow] PursueWithoutHeedAI
 UNIT
 
-# r1-r4 are pointers to units.
+// r1-r4 are pointers to units.
 LoadOneOfFour:
     RANDOMNUMBER 0x4       //Sets slot C to a number from 0 to 4.
     SMOV r5 0x0
