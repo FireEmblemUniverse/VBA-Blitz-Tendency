@@ -27,24 +27,13 @@ UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [18,18] 0x00 0x00 0x0 0x00 [0x00] N
 UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [17,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
 UNIT
 
-/*Units:
-UNIT Eirika EirikaMasterLord 0x00 Level(6, Ally, 1) [17,17] 0x00 0x00 0x0 0x00 [IronSword,SteelSword,LightBrand,Vulnerary] NoAI 
-UNIT Seth Paladin 0x00 Level(6, Ally, 1) [16,16] 0x00 0x00 0x0 0x00 [Horseslayer,SteelLance,IronSword,SilverSword] NoAI 
-UNIT Gilliam General 0x00 Level(6, Ally, 1) [17,16] 0x00 0x00 0x0 0x00 [HeavySpear,IronLance,Javelin,Vulnerary] NoAI 
-UNIT Franz GreatKnight 0x00 Level(6, Ally, 1) [18,16] 0x00 0x00 0x0 0x00 [IronAxe,SilverLance,IronSword,HandAxe] NoAI 
-UNIT Moulder Bishop 0x00 Level(6, Ally, 1) [16,17] 0x00 0x00 0x0 0x00 [Shine,Mend,Restore,Sleep] NoAI 
-UNIT Garcia Hero 0x00 Level(6, Ally, 1) [18,17] 0x00 0x00 0x0 0x00 [SteelAxe,HandAxe,Vulnerary,PureWater] NoAI 
-UNIT Neimi Ranger_F 0x00 Level(6, Ally, 1) [16,18] 0x00 0x00 0x0 0x00 [KillerBow,IronSword,Longbow,Vulnerary] NoAI 
-UNIT Lute Sage_F 0x00 Level(6, Ally, 1) [17,18] 0x00 0x00 0x0 0x00 [Elfire,Fire,Lightning,Heal] NoAI 
-UNIT Joshua Swordmaster 0x00 Level(6, Ally, 1) [18,18] 0x00 0x00 0x0 0x00 [KillingEdge,LightBrand,IronSword,Elixir] NoAI 
-UNIT Knoll Druid 0x00 Level(6, Ally, 1) [17,19] 0x00 0x00 0x0 0x00 [Flux,Luna,Vulnerary,Vulnerary] NoAI 
-UNIT*/
-
 MariyaGroup:
-UNIT 0x15 WyvernKnight_F 0x00 Level(1, Ally, 0) [3,19] 0x00 0x00 0x1 MariyaREDA [ShortSpear,IronLance,PureWater] NoAI
+UNIT Mariya WyvernKnight_F 0x00 Level(1, Ally, 0) [3,19] 0x00 0x00 0x1 MariyaREDA [ShortSpear,IronLance,PureWater] NoAI
 UNIT
 MariyaREDA:
 REDA [3,19] 0x0 0x0 0x0 0x0
+
+ALIGN 4
 
 TurnBasedEvents:
 END_MAIN
@@ -89,12 +78,11 @@ LOAD1 0x0 Units
 ENUN
 LOAD1 0x1 Enemies
 ENUN
-SVAL 0x2 0x34
-SVAL 0x3 BeginningTextCh16
-CALL 0x9EE310
+LOAD1 0x1 Enemies2
+ENUN
+Text(Temple_Ruins_Inside,BeginningTextCh16)
 REMA
 GotoPrepScreen
-ENDA
 
 EndingScene:
 MUSS 0x32
@@ -103,26 +91,25 @@ CUMO 0x1
 STAL 60
 CURE
 Text(VedgeWinsCh16)
+REMA
 FADI 4
-SVAL 0x2 0x2C
 CHECK_ALIVE 0x15 //checks if mariya is alive
 BEQ 0x1400 0xC 0x0 //if not alive, send to label 1400
-SVAL 0x3 MariyaAliveCh16
+Text(Shrine,MariyaAliveCh16)
 GOTO 0x3531
 LABEL 0x1400
-SVAL 0x3 MariyaDEADCh16
+Text(Shrine,MariyaDEADCh16)
 LABEL 0x3531
-CALL 0x9EE310
 REMA
-MNC2 0x11
-EVBIT_T 0x7
+MNCH 0x11
+NoFade
 ENDA
 
 MariyaLoad:
 SVAL 0x2 0x0
-CALL 0x9EE1B8
+CALL 0x9EE1B8 //only triggers the area if it's player phase (i believe)
 LOAD1 0x1 MariyaGroup
-_MUSICSOMETHING 32767
+_MUSICSOMETHING 32767 //fades out music
 MUSS 0x30
 CAM1 0x15
 CUMO 0x15
@@ -130,14 +117,14 @@ STAL 60
 CURE
 Text(MariyaAppearsCh16)
 REMA
-EVBIT_T 0x7
+NoFade
 ENDA
 
 MariyaTalk:
 MUSS 0x30
 Text(MariyaVedgeTalkCh16)
 REMA
-EVBIT_T 0x7
+NoFade
 ENDA
 
 // Events
@@ -163,6 +150,9 @@ UNIT 0xa0 Pirate 0x0 Level(19,Enemy,1) [4,11] DropItem 0x0 0x0 0x0 [SteelAxe] [0
 UNIT 0xa0 Soldier 0x0 Level(20,Enemy,1) [6,12] 0x0 0x0 0x0 0x0 [SteelLance] [0x0,0x3,0x4,0x0]
 UNIT 0xa0 Sage_F 0x0 Level(1,Enemy,1) [10,8] 0x0 0x0 0x0 0x0 [Elfire,Lightning] [0x0,0x3,0x4,0x0]
 UNIT 0xa0 Paladin 0x0 Level(2,Enemy,1) [8,4] 0x0 0x0 0x0 0x0 [IronBlade,SteelLance] [0x0,0x3,0x4,0x0]
+UNIT
+
+Enemies2:
 UNIT 0xa0 Monk 0x0 Level(18,Enemy,1) [3,7] 0x0 0x0 0x0 0x0 [Divine] [0x0,0x3,0x4,0x0]
 UNIT 0xa0 Warrior 0x0 Level(1,Enemy,1) [12,11] DropItem 0x0 0x0 0x0 [HandAxe,IronBow,ChestKey] [0x0,0x3,0x4,0x0]
 UNIT 0xa0 Mercenary 0x0 Level(19,Enemy,1) [11,7] 0x0 0x0 0x0 0x0 [SteelSword] [0x0,0x3,0x4,0x0]
@@ -176,5 +166,3 @@ UNIT
 
 
 // Shop Data
-
-MESSAGE Events end at offset currentOffset

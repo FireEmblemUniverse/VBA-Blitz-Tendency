@@ -52,6 +52,7 @@
 #define Jet 0x11
 #define Splenda 0x13
 #define Zane 0x14		//teq ch15 recruitable 1
+#define Mariya 0x15
 #define Nichol 0x16
 #define Adolgi 0x17
 #define Donna 0x1A

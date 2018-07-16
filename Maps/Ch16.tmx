@@ -5,7 +5,14 @@
  </tileset>
  <layer name="Tile Layer 1" width="20" height="20">
   <properties>
+   <property name="Anims1" value="0xE8"/>
+   <property name="ChapterID" value="0x10"/>
    <property name="Main" value=""/>
+   <property name="MapChangesId" value="0x4A"/>
+   <property name="MapID" value="0x49"/>
+   <property name="ObjectType1" value="0xE4"/>
+   <property name="PaletteId" value="0xE5"/>
+   <property name="TileConfig" value="0xE7"/>
   </properties>
   <data encoding="base64" compression="zlib">
    eJxtlMtKHEEYhbta40ZfQkczgs/gIo4TB3wKle4ZDCYoiEhWOubuIAiSZCkzTVbREEiyCFlMvMCgidmLK8XHCDkndSrzp3XxUZeuOv+t/l6KomgbfANz4gEYdFG0G/3PIUhABzwE78Ee2AePwAewJBbBa1ABVXAPenPUBLOuq9+H8RTjGPgBfoIz6Z0YPfp4Ia0h0APquNsG687rt8Bd5/2Ypk0wAWbBFvhl9D6Cr6AGitQCC6AASsBBZxjcd/7eqeiYsZPzjzHvgDfgLRhVvsrgEkw6P6+aXFtGc/4tGsadP9OQJuNmnVL5HzSOsT9l1lbrE/gMvoDlnN0n0kq09wpsMh/Qa0qzJa3fYFW1zXSnrnVTY01xv8zFWILWgfN1b0hrBdzBuhe841waz5SrsFeVnZaxE3J7JT/OI58XvrUhcI35QIz3AnpBf+z3nHyYMu+pqP3w3mPMH8sO39qE6+a6opzRpx7dSfX9hfYPops9FPJtaxb2GqoB33EGnjofJ3NzdItW0KP9Q80XNDJHJd3dVX7KxlcL81TQfrBzZXxjrIVb7lqfvqu3h5Un1nnEnGdf9sW+jswb57yTGtvWn7Zgz6TyvaxzmfqSdQx15bytnP2zrf8B/aHNSbChXD838dBeopoU9T3V+T1o78fedlt2i9KpKz8bqvmM4gn27NtnXdgTY7Ff13LfK+HdCtZuTfFkip8+2d7+G0vcfT9V3eMZ/ge4bpr3xXhCX2eqQ2LsVuRfWRqJ6h56gvVmj84bH/4AdS2uEA==
