@@ -156,31 +156,31 @@ ALIGN 4
 Chesdrake_10_10:
 LoadReinforcements(SLuManakete_10_10)
 NoFade
-ENDA
+ENDB
 
 ALIGN 4
 Chesdrake_19_6:
 LoadReinforcements(SLuManakete_19_6)
 NoFade
-ENDA
+ENDB
 
 ALIGN 4
 ThiefRgt:
 LoadReinforcements(RgtThief)
 NoFade
-ENDA
+ENDB
 
 ALIGN 4
 ThiefBot:
 LoadReinforcements(BotThief)
 NoFade
-ENDA
+ENDB
 
 ALIGN 4
 ThiefTop:
 LoadReinforcements(TopThief)
 NoFade
-ENDA
+ENDB
 
 TopThief:
 UNIT C11E(Thief)   [19, 0] 0b 0x00 1 REDA16R0 [SilverSword, ChestKey] [0x06, 0x05]
@@ -216,7 +216,7 @@ UNIT
 
 ALIGN 4
 SweetLu_Recruit:
-MUSI 
+MUSI
 TEXTSTART
 TEXTSHOW LuutConversation
 TEXTEND
@@ -225,274 +225,89 @@ TEXTCONT
 TEXTEND
 TurnAlly(Luut)
 NoFade
-ENDA
+ENDB
 
+#define Poin(x) "(x | 0x08000000)"
 //If you like not smashing your head in, you may want to stop reading ahead.
-    ReinLeftIfInRight:
-    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
-    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
-    SMOV r1 0x4
-    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
-    SMUL slotsParam(r1, r2)     //r1 = r2*4
-    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
-    BNE 0x24 rC 0
-        LoadReinforcements(RD0)    //Remainder was 0
-        GOTO 0x27
-    LABEL 0x24
-    SMOV r2 1
-    BNE 0x25 rC r2
-        LoadReinforcements(RD1) //r = 1
-        GOTO 0x27
-    LABEL 0x25
-    SMOV r2 2
-    BNE 0x26 rC r2
-        LoadReinforcements(RD2) // r = 2
-        GOTO 0x27
-    LABEL 0x26
-        LoadReinforcements(RD3) // r =3
-    LABEL 0x27
+ReinLeftIfInRight:
+    SMOV r1 Poin(RD0)
+    SMOV r2 Poin(RD1)
+    SMOV r3 Poin(RD2)
+    SMOV r4 Poin(RD3)
+    CALL LoadOneOfFour
 
-    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
-    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
-    SMOV r1 0x4
-    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
-    SMUL slotsParam(r1, r2)     //r1 = r2*4
-    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
-    BNE 0x28 rC 0
-        LoadReinforcements(RD0)    //Remainder was 0
-        GOTO 0x2B
-    LABEL 0x28
-    SMOV r2 1
-    BNE 0x29 rC r2
-        LoadReinforcements(RD1) //r = 1
-        GOTO 0x2B
-    LABEL 0x29
-    SMOV r2 2
-    BNE 0x2A rC r2
-        LoadReinforcements(RD2) // r = 2
-        GOTO 0x2B
-    LABEL 0x2A
-        LoadReinforcements(RD3) // r =3
-    LABEL 0x2B
+    SMOV r1 Poin(RD0)
+    SMOV r2 Poin(RD1)
+    SMOV r3 Poin(RD2)
+    SMOV r4 Poin(RD3)
+    CALL LoadOneOfFour
 
-    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
-    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
-    SMOV r1 0x4
-    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
-    SMUL slotsParam(r1, r2)     //r1 = r2*4
-    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
-    BNE 0x2C rC 0
-        LoadReinforcements(RD0)    //Remainder was 0
-        GOTO 0x2F
-    LABEL 0x2C
-    SMOV r2 1
-    BNE 0x2D rC r2
-        LoadReinforcements(RD1) //r = 1
-        GOTO 0x2F
-    LABEL 0x2D
-    SMOV r2 2
-    BNE 0x2E rC r2
-        LoadReinforcements(RD2) // r = 2
-        GOTO 0x2F
-    LABEL 0x2E
-        LoadReinforcements(RD3) // r =3
-    LABEL 0x2F
+    SMOV r1 Poin(RD0)
+    SMOV r2 Poin(RD1)
+    SMOV r3 Poin(RD2)
+    SMOV r4 Poin(RD3)
+    CALL LoadOneOfFour
 
-    NoFade
-    ENDA
+NoFade
+ENDB
 
 
-    ReinRightIfInLeft:
-    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
-    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
-    SMOV r1 0x4
-    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
-    SMUL slotsParam(r1, r2)     //r1 = r2*4
-    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
-    BNE 0x14 rC 0
-        LoadReinforcements(RU0)    //Remainder was 0
-        GOTO 0x17
-    LABEL 0x14
-    SMOV r2 1
-    BNE 0x11 rC r2
-        LoadReinforcements(RU1) //r = 1
-        GOTO 0x17
-    LABEL 0x15
-    SMOV r2 2
-    BNE 0x12 rC r2
-        LoadReinforcements(RU2) // r = 2
-        GOTO 0x17
-    LABEL 0x16
-        LoadReinforcements(RU3) // r =3
-    LABEL 0x17
+ReinRightIfInLeft:
+    SMOV r1 Poin(RU0)
+    SMOV r2 Poin(RU1)
+    SMOV r3 Poin(RU2)
+    SMOV r4 Poin(RU3)
+    CALL LoadOneOfFour
 
-    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
-    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
-    SMOV r1 0x4
-    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
-    SMUL slotsParam(r1, r2)     //r1 = r2*4
-    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
-    BNE 0x18 rC 0
-        LoadReinforcements(RL0)    //Remainder was 0
-        GOTO 0x1B
-    LABEL 0x18
-    SMOV r2 1
-    BNE 0x19 rC r2
-        LoadReinforcements(RL1) //r = 1
-        GOTO 0x1B
-    LABEL 0x19
-    SMOV r2 2
-    BNE 0x1A rC r2
-        LoadReinforcements(RL2) // r = 2
-        GOTO 0x1B
-    LABEL 0x1A
-        LoadReinforcements(RL3) // r =3
-    LABEL 0x1B
+    SMOV r1 Poin(RL0)
+    SMOV r2 Poin(RL1)
+    SMOV r3 Poin(RL2)
+    SMOV r4 Poin(RL3)
+    CALL LoadOneOfFour
 
-    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
-    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
-    SMOV r1 0x4
-    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
-    SMUL slotsParam(r1, r2)     //r1 = r2*4
-    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
-    BNE 0x20 rC 0
-        LoadReinforcements(RD0)    //Remainder was 0
-        GOTO 0x23
-    LABEL 0x20
-    SMOV r2 1
-    BNE 0x21 rC r2
-        LoadReinforcements(RD1) //r = 1
-        GOTO 0x23
-    LABEL 0x21
-    SMOV r2 2
-    BNE 0x22 rC r2
-        LoadReinforcements(RD2) // r = 2
-        GOTO 0x23
-    LABEL 0x22
-        LoadReinforcements(RD3) // r =3
-    LABEL 0x23
+    SMOV r1 Poin(RD0)
+    SMOV r2 Poin(RD1)
+    SMOV r3 Poin(RD2)
+    SMOV r4 Poin(RD3)
+    CALL LoadOneOfFour
 
-    NoFade
-    ENDA
+NoFade
+ENDB
 
-    SLu_Company:
-    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
-    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
-    SMOV r1 0x4
-    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
-    SMUL slotsParam(r1, r2)     //r1 = r2*4
-    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
-    BNE 0x0 rC 0
-        LoadReinforcements(SweetLu_0)    //Remainder was 0
-        GOTO 0x3
-    LABEL 0x0
-    SMOV r2 1
-    BNE 0x1 rC r2
-        LoadReinforcements(SweetLu_1) //r = 1
-        GOTO 0x3
-    LABEL 0x1
-    SMOV r2 2
-    BNE 0x2 rC r2
-        LoadReinforcements(SweetLu_2) // r = 2
-        GOTO 0x3
-    LABEL 0x2
-        LoadReinforcements(SweetLu_3) // r =3
-    LABEL 0x3
+SLu_Company:
 
-    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
-    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
-    SMOV r1 0x4
-    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
-    SMUL slotsParam(r1, r2)     //r1 = r2*4
-    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
-    BNE 0x4 rC 0
-        LoadReinforcements(LT_a0)    //Remainder was 0
-        GOTO 0x7
-    LABEL 0x4
-    SMOV r2 1
-    BNE 0x5 rC r2
-        LoadReinforcements(LT_a1) //r = 1
-        GOTO 0x7
-    LABEL 0x5
-    SMOV r2 2
-    BNE 0x6 rC r2
-        LoadReinforcements(LT_a2) // r = 2
-        GOTO 0x7
-    LABEL 0x6
-        LoadReinforcements(LT_a3) // r =3
-    LABEL 0x7
+    SMOV r1 Poin(SweetLu_0)
+    SMOV r2 Poin(SweetLu_1)
+    SMOV r3 Poin(SweetLu_2)
+    SMOV r4 Poin(SweetLu_3)
+    CALL LoadOneOfFour
 
-    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
-    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
-    SMOV r1 0x4
-    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
-    SMUL slotsParam(r1, r2)     //r1 = r2*4
-    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
-    BNE 0x8 rC 0
-        LoadReinforcements(LT_b0)    //Remainder was 0
-        GOTO 0xB
-    LABEL 0x8
-    SMOV r2 1
-    BNE 0x9 rC r2
-        LoadReinforcements(LT_b1) //r = 1
-        GOTO 0xB
-    LABEL 0x9
-    SMOV r2 2
-    BNE 0xA rC r2
-        LoadReinforcements(LT_b2) // r = 2
-        GOTO 0xB
-    LABEL 0xA
-        LoadReinforcements(LT_b3) // r =3
-    LABEL 0xB
+    SMOV r1 Poin(LT_a0)
+    SMOV r2 Poin(LT_a1)
+    SMOV r3 Poin(LT_a2)
+    SMOV r4 Poin(LT_a3)
+    CALL LoadOneOfFour
 
-    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
-    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
-    SMOV r1 0x4
-    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
-    SMUL slotsParam(r1, r2)     //r1 = r2*4
-    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
-    BNE 0xC rC 0
-        LoadReinforcements(LT_c0)    //Remainder was 0
-        GOTO 0xF
-    LABEL 0xC
-    SMOV r2 1
-    BNE 0xD rC r2
-        LoadReinforcements(LT_c1) //r = 1
-        GOTO 0xF
-    LABEL 0xD
-    SMOV r2 2
-    BNE 0xE rC r2
-        LoadReinforcements(LT_c2) // r = 2
-        GOTO 0xF
-    LABEL 0xE
-        LoadReinforcements(LT_c3) // r =3
-    LABEL 0xF
+    SMOV r1 Poin(LT_b0)
+    SMOV r2 Poin(LT_b1)
+    SMOV r3 Poin(LT_b2)
+    SMOV r4 Poin(LT_b3)
+    CALL LoadOneOfFour
 
-    RANDOMNUMBER 0x8       //Sets slot C to a number from 0 to 8? smilies says 9
-    //Now get remainder mod 4 (possibilities: 0, 1, 2, 3)
-    SMOV r1 0x4
-    SDIV slotsParam(r2, rC, r1) //r2 = rC/4
-    SMUL slotsParam(r1, r2)     //r1 = r2*4
-    SSUB slotsParam(r1, rC, r1)     //r1 -= rC, r1 = remainder
-    BNE 0x10 rC 0
-        LoadReinforcements(LT_d0)    //Remainder was 0
-        GOTO 0x13
-    LABEL 0x10
-    SMOV r2 1
-    BNE 0x11 rC r2
-        LoadReinforcements(LT_d1) //r = 1
-        GOTO 0x13
-    LABEL 0x11
-    SMOV r2 2
-    BNE 0x12 rC r2
-        LoadReinforcements(LT_d2) // r = 2
-        GOTO 0x13
-    LABEL 0x12
-        LoadReinforcements(LT_d3) // r =3
-    LABEL 0x13
+    SMOV r1 Poin(LT_c0)
+    SMOV r2 Poin(LT_c1)
+    SMOV r3 Poin(LT_c2)
+    SMOV r4 Poin(LT_c3)
+    CALL LoadOneOfFour
 
-    NoFade
-    ENDA
+    SMOV r1 Poin(LT_d0)
+    SMOV r2 Poin(LT_d1)
+    SMOV r3 Poin(LT_d2)
+    SMOV r4 Poin(LT_d3)
+    CALL LoadOneOfFour
+
+NoFade
+ENDB
 
 
 //start reading again maybe?
@@ -716,5 +531,32 @@ LD0:
 UNIT EnemyID Archer LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [SteelBow] PursueWithoutHeedAI
 UNIT
 
+# r1-r4 are pointers to units.
+LoadOneOfFour:
+    RANDOMNUMBER 0x4       //Sets slot C to a number from 0 to 4.
+    SMOV r5 0x0
+    BEQ 0x0 rC r5
+    SMOV r5 1
+    BEQ 0x1 rC r5
+    SMOV r5 2
+    BEQ 0x2 rC r5
 
+    SADD slotsParam(r2, r4, r0)
+    CALL $9EE274
+    GOTO 3
 
+    LABEL 0
+    SADD slotsParam(r2, r1, r0)
+    CALL $9EE274
+    GOTO 3
+
+    LABEL 1
+    CALL $9EE274
+    GOTO 3
+
+    LABEL 2
+    SADD slotsParam(r2, r3, r0)
+    CALL $9EE274
+
+    LABEL 3
+ENDA
