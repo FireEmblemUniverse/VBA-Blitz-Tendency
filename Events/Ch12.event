@@ -13,10 +13,12 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TURN 0x0 GetJet [1,0] 0x0
 TURN 0x0 WaveFirst[4,0] 0x0
 TURN 0x0 WaveSecond[6,0] 0x0
 TURN 0x0 WaveThird[8,0] 0x0
 TURN 0x0 WaveFourth[10,0] 0x0
+TURN 0x0 TimeLimit [12,0] 0x0
 END_MAIN
 
 WaveFirst:
@@ -106,8 +108,8 @@ UNIT Jet Dancer Vedge Level(1, Ally, 0) [4,0] 0x00 0x00 0x0 0x00 [ConquerorsProo
 UNIT
 
 Bad:
-UNIT Bojo Druid 0x00 Level(4, Enemy, 0) [17,13] 0x2 0x00 0x0 0x00 [Bolting, Nosferatu, Sleep, Luna] AttackInRangeAI
-UNIT Cameron Hero Bojo Level(3, Enemy, 0) [18,9] 0x00 0x00 0x0 0x00 [SteelBlade, HandAxe, Longsword, EnergyRing] AttackInRangeAI
+UNIT Bojo Druid 0x00 Level(4, Enemy, 1) [17,13] 0x2 0x00 0x0 0x00 [Bolting, Nosferatu, Sleep, Luna] AttackInRangeAI
+UNIT Cameron Hero Bojo Level(3, Enemy, 1) [18,9] 0x00 0x00 0x0 0x00 [SteelBlade, HandAxe, Longsword, EnergyRing] AttackInRangeAI
 UNIT 0x80 Sniper Bojo Level(1, Enemy, 1) [3,13] 0x00 0x00 0x0 0x00 [IronBow, PureWater] AttackInRangeAI
 UNIT 0x80 Sniper Bojo Level(1, Enemy, 1) [9,13] 0x00 0x00 0x0 0x00 [IronBow] AttackInRangeAI
 UNIT 0x80 Sniper Bojo Level(1, Enemy, 1) [18,12] 0x00 0x00 0x0 0x00 [Longbow] AttackInRangeAI
@@ -121,6 +123,9 @@ UNIT 0x80 Cavalier Bojo Level(16, Enemy, 1) [17,6] 0x00 0x00 0x0 0x00 [SteelLanc
 UNIT 0x80 Cavalier Bojo Level(16, Enemy, 1) [1,5] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
 UNIT 0x80 Cavalier Bojo Level(16, Enemy, 1) [0,5] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
 UNIT 0x80 Knight Bojo Level(16, Enemy, 1) [12,6] 0x00 0x00 0x0 0x00 [Spear] AttackInRangeAI
+UNIT
+
+Bad2:
 UNIT 0x80 Knight Bojo Level(16, Enemy, 1) [15,14] 0x00 0x00 0x0 0x00 [Spear] GuardTileAI
 UNIT 0x80 Knight Bojo Level(16, Enemy, 1) [15,13] 0x00 0x00 0x0 0x00 [Spear] GuardTileAI
 UNIT 0x80 Knight Bojo Level(16, Enemy, 1) [2,10] 0x00 0x00 0x0 0x00 [Spear] GuardTileAI
@@ -159,16 +164,23 @@ UNIT 0x80 WyvernRider Bojo Level(16, Enemy, 1) [3,1] 0x00 0x00 0x0 0x00 [BraveLa
 UNIT
 
 BeginningScene:
-LOAD2 0x1 Units1
-ENUN
-LOAD1 0x1 JetBlock
-ENUN
 LOAD1 0x1 Bad
+LOAD1 0x1 Bad2
 ENUN
+GotoPrepScreen
+
+GetJet:
+LOAD1 0x1 JetBlock
+FlashCursor(4, 0, 60)
 NoFade
 ENDA
 
 EndingScene:
 MNC2 13
+NoFade
+ENDA
+
+TimeLimit:
+GameOver
 NoFade
 ENDA
