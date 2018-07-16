@@ -57,3 +57,8 @@ setMugEntry(0x20,SabinMug,2,6,2,4)
 KefkaMug:
 #incext PortraitFormatter "Kefka.png"
 setMugEntry(0x4A,KefkaMug,3,7,2,4)
+
+DeuxnidsMug:
+#incext PortraitFormatter "Deuxnids.png"
+setMugEntry(0x3F,DeuxnidsMug, 2, 6, 2, 4)
+

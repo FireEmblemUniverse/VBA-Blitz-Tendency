@@ -1050,7 +1050,7 @@ unPlayerList:
 
 ALIGN 4
 unAllyDenis:
-	UNIT Ch27ChrDenis Bishop 0 Level(14, Ally, False) [21, 0] 0 0 1 redaDenis [Aura, Physic, Latona] NoAI
+	UNIT Ch27ChrDenis Bishop 0 Level(14, Ally, False) [21, 0] 0 0 1 redaDenis [Divine, Physic, Latona] NoAI
 	UNIT // end
 
 ALIGN 4

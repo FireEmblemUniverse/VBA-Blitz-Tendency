@@ -55,7 +55,7 @@
 #define Sakaguchi 0x24
 #define Iga 0x25
 #define Jet 0x11
-#define Deuxnids 0x46
+#define Deuxnids 0x26
 
 #define Jazzak 0x42
 #define IgaNPC 0x47
