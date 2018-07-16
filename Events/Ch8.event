@@ -173,20 +173,20 @@ EndingScene12:
 MUSC 0x31 //victory
 
 CHECK_ALIVE Ersatz
-BEQ 0x4 0xc 0x1 //do this if 0xc is true i.e. Ersatz is alive
-SetBackground(0x23)
-Text(ChEightEnd)
-TurnAlly(Ersatz)
-ELSE 0x5
+BEQ 0x4 rC r0 // Skip block if Ersatz is dead
+    SetBackground(0x23)
+    Text(ChEightEnd)
+    TurnAlly(Ersatz)
+    GOTO 0x5
 LABEL 0x4
-SetBackground(0x23)
-Text(ChEightEndNoErsatz)
-GiveMoney(5000)
+    SetBackground(0x23)
+    Text(ChEightEndNoErsatz)
+    GiveMoney(5000)
 LABEL 0x5
 
 CHECK_ALIVE Fanni
-BEQ 0xb 0xc 0x1 //if Fanni is alive
-TurnAlly(Fanni)
+BEQ 0xb rC r0 //Skip if Fanni is dead.
+    TurnAlly(Fanni)
 LABEL 0xb
 
 FADI 5
