@@ -893,9 +893,31 @@ scYouShouldntBeHere: {
 }
 
 ALIGN 4
+scTreasureCommon: {
+	SetSymbol(not_ally, 0)
+	SetSymbol(end,      1)
+
+	CHECK_ALLEGIANCE ActiveUnit
+	BNE not_ally rC r0
+
+	GIVEITEMTO ActiveUnit
+
+	GOTO end
+
+LABEL not_ally
+	CHECK_EVENTID // wtf EA Raws (there's two of those raws with the same name that do pretty different things
+	SADD slotsParam(r2, rC, r0)
+	ENUF_SLOT2
+
+LABEL end
+	NoFade
+	ENDA
+}
+
+ALIGN 4
 scTreasure1: {
 	SVAL r3 EnergyRing
-	GIVEITEMTO ActiveUnit
+	CALL scTreasureCommon
 
 	NoFade
 	ENDA
@@ -904,7 +926,7 @@ scTreasure1: {
 ALIGN 4
 scTreasure2: {
 	SVAL r3 Boots
-	GIVEITEMTO ActiveUnit
+	CALL scTreasureCommon
 
 	NoFade
 	ENDA
@@ -913,7 +935,7 @@ scTreasure2: {
 ALIGN 4
 scTreasure3: {
 	SVAL r3 Dracoshield 
-	GIVEITEMTO ActiveUnit
+	CALL scTreasureCommon
 
 	NoFade
 	ENDA
@@ -922,7 +944,7 @@ scTreasure3: {
 ALIGN 4
 scTreasure4: {
 	SVAL r3 Speedwings
-	GIVEITEMTO ActiveUnit
+	CALL scTreasureCommon
 
 	NoFade
 	ENDA
@@ -933,7 +955,7 @@ scEnding: {
 	// TODO (polish): Ending text
 
 	// move to next chapter whatever it is
-	MNC2 1
+	MNCH 0x1E // Taken from VBA Ch27
 
 	ENDA
 }
