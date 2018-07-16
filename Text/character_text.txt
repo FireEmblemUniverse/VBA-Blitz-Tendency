@@ -148,3 +148,9 @@ Kefka[X]
 ## KefkaDesc
 A crazy clown from a distant land.[N]
 Remarkably fond of one-liners.[X]
+
+## nameDeuxnids
+Deuxnids[X]
+
+## descDeuxnids
+Not to be confused with Dennis.[X]

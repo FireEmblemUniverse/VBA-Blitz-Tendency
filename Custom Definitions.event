@@ -55,12 +55,14 @@
 #define Sakaguchi 0x24
 #define Iga 0x25
 #define Jet 0x11
+#define Deuxnids 0x26
 
 #define Jazzak 0x42
 #define IgaNPC 0x47
 #define Hecwood 0x48
 #define Elitor 0x49
 #define Grudge 0x4A
+#define Ch27ChrZomboss 0x4D // dracozombie boss
 #define Edgelard 0x4E
 #define Dennis 0x50
 #define Kefka 0x6C
@@ -71,6 +73,8 @@
 #define SakaguchiNPC 0x77
 
 #define Ch5Generic 0x8A
+#define Ch27ChrMGeneric 0xC0 // Monster
+#define Ch27ChrHGeneric 0xC1 // Human
 
 //Item definitions
 #define BlitzAxe Rapier
@@ -98,8 +102,21 @@
 #define Chapter24Map 0x6F
 #define Chatper24Events 0x71
 #define Chapter24Changes 0x70
+#define Ch27Id 26
+#define Ch27Map 0x76
+#define Ch27MapChanges 0x77
+#define Ch27Events 0x78
 #define AllChapters 0xFF
 
+// Other
+#define Ch27FogLevel 5
+#define Ch27TurnsBetweenHumanReinf 2
+#define Ch27GargoylesKillCount 10
+#define Ch27HumanReinfKillCount 20
+#define Ch27MogallsKillCount 30
+#define Ch27DracoBossKillCount 40
+
+// Macros
 #define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
 #define TileChange(X,Y) "SETVAL 0xB Coords(X,Y) ; TILECHANGE 0xFFFF"
 #define Every3Turns(CondID1,CondID2,CondID3,EventID1,EventID2,Pointer) "CHECK_EVENTID EventID1;BNE CondID1 0x0 0xC;CHECK_EVENTID EventID2;BNE CondID2 0x0 0xC;CALL Pointer;ENUT EventID1;ENUT EventID2;GOTO CondID3;LABEL CondID2;ENUF EventID2;GOTO CondID3;LABEL CondID1;ENUF EventID1;LABEL CondID3"
