@@ -86,55 +86,55 @@ Tutorial:
 END_MAIN
 
 Units1:
-UNIT Vedge VedgeLord 0x00 Level(1, Ally, 0) [5,1] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [4,1] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [7,1] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [6,1] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [6,2] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [5,2] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [6,0] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [5,0] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [3,0] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [3,2] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [4,2] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [2,2] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [2,0] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Vedge VedgeLord 0x00 Level(1, Ally, 0) [5,1] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [4,1] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [7,1] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [6,1] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [6,2] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [5,2] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [6,0] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [5,0] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [3,0] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [3,2] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [4,2] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [2,2] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [2,0] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT
 
 JetBlock:
-UNIT Jet Dancer Vedge Level(1, Ally, 0) [4,0] 0x00 0x00 0x0 0x00 [ConquerorsProof] NoAI 
+UNIT Jet Dancer Vedge Level(1, Ally, 0) [4,0] 0x00 0x00 0x0 0x00 [ConquerorsProof] NoAI
 UNIT
 
 Bad:
-UNIT Bojo Druid 0x00 Level(4, Enemy, 0) [17,13] 0x2 0x00 0x0 0x00 [Bolting, Nosferatu, Sleep, Luna] AttackInRangeAI 
-UNIT Cameron Hero Bojo Level(3, Enemy, 0) [18,9] 0x00 0x00 0x0 0x00 [SteelBlade, HandAxe, Longsword, EnergyRing] AttackInRangeAI 
-UNIT 0x80 Sniper Bojo Level(1, Enemy, 1) [3,13] 0x00 0x00 0x0 0x00 [IronBow, PureWater] AttackInRangeAI 
-UNIT 0x80 Sniper Bojo Level(1, Enemy, 1) [9,13] 0x00 0x00 0x0 0x00 [IronBow] AttackInRangeAI 
-UNIT 0x80 Sniper Bojo Level(1, Enemy, 1) [18,12] 0x00 0x00 0x0 0x00 [Longbow] AttackInRangeAI 
-UNIT 0x80 Bishop_F Bojo Level(1, Enemy, 1) [7,12] 0x00 0x00 0x0 0x00 [Divine, Physic, Talisman] AttackInRangeAI 
-UNIT 0x80 Bishop_F Bojo Level(1, Enemy, 1) [5,12] 0x2 0x00 0x0 0x00 [Divine, Physic, MasterProof] AttackInRangeAI 
-UNIT 0x80 Bishop_F Bojo Level(1, Enemy, 1) [12,9] 0x00 0x00 0x0 0x00 [Divine, Physic] AttackInRangeAI 
-UNIT 0x80 Cavalier Bojo Level(16, Enemy, 1) [10,8] 0x00 0x00 0x0 0x00 [SteelLance, 200g] AttackInRangeAI 
-UNIT 0x80 Cavalier Bojo Level(16, Enemy, 1) [14,8] 0x00 0x00 0x0 0x00 [SteelLance, 200g] AttackInRangeAI 
-UNIT 0x80 Cavalier Bojo Level(16, Enemy, 1) [19,6] 0x00 0x00 0x0 0x00 [SteelLance] AttackInRangeAI 
-UNIT 0x80 Cavalier Bojo Level(16, Enemy, 1) [17,6] 0x00 0x00 0x0 0x00 [SteelLance] AttackInRangeAI 
-UNIT 0x80 Cavalier Bojo Level(16, Enemy, 1) [1,5] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI 
-UNIT 0x80 Cavalier Bojo Level(16, Enemy, 1) [0,5] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI 
-UNIT 0x80 Knight Bojo Level(16, Enemy, 1) [12,6] 0x00 0x00 0x0 0x00 [Spear] AttackInRangeAI 
-UNIT 0x80 Knight Bojo Level(16, Enemy, 1) [15,14] 0x00 0x00 0x0 0x00 [Spear] GuardTileAI 
-UNIT 0x80 Knight Bojo Level(16, Enemy, 1) [15,13] 0x00 0x00 0x0 0x00 [Spear] GuardTileAI 
-UNIT 0x80 Knight Bojo Level(16, Enemy, 1) [2,10] 0x00 0x00 0x0 0x00 [Spear] GuardTileAI 
-UNIT 0x80 Shaman Bojo Level(16, Enemy, 1) [1,10] 0x00 0x00 0x0 0x00 [Nosferatu] GuardTileAI 
-UNIT 0x80 Fighter Bojo Level(16, Enemy, 1) [7,9] 0x00 0x00 0x0 0x00 [SteelAxe] AttackInRangeAI 
-UNIT 0x80 Fighter Bojo Level(16, Enemy, 1) [17,3] 0x00 0x00 0x0 0x00 [SteelAxe, PureWater] AttackInRangeAI 
-UNIT 0x80 Fighter Bojo Level(16, Enemy, 1) [7,6] 0x00 0x00 0x0 0x00 [SteelAxe] AttackInRangeAI 
-UNIT 0x80 Mage Bojo Level(16, Enemy, 1) [6,6] 0x2 0x00 0x0 0x00 [Elfire, MasterProof] AttackInRangeAI 
-UNIT 0x80 Mage Bojo Level(16, Enemy, 1) [5,9] 0x00 0x00 0x0 0x00 [Elfire, 500g] AttackInRangeAI 
-UNIT 0x80 Mage Bojo Level(16, Enemy, 1) [15,0] 0x00 0x00 0x0 0x00 [Elfire] AttackInRangeAI 
-UNIT 0x80 WyvernRider Bojo Level(16, Enemy, 1) [3,8] 0x00 0x00 0x0 0x00 [BraveLance, 200g] PursueWithoutHeedAI 
-UNIT 0x80 WyvernRider Bojo Level(16, Enemy, 1) [0,8] 0x00 0x00 0x0 0x00 [BraveLance, 200g] PursueWithoutHeedAI 
-UNIT 0x80 WyvernRider Bojo Level(16, Enemy, 1) [16,2] 0x2 0x00 0x0 0x00 [SteelLance, MasterProof] AttackInRangeAI 
-UNIT 0x80 WyvernRider Bojo Level(16, Enemy, 1) [16,1] 0x00 0x00 0x0 0x00 [SteelLance] AttackInRangeAI 
+UNIT Bojo Druid 0x00 Level(4, Enemy, 0) [17,13] 0x2 0x00 0x0 0x00 [Bolting, Nosferatu, Sleep, Luna] AttackInRangeAI
+UNIT Cameron Hero Bojo Level(3, Enemy, 0) [18,9] 0x00 0x00 0x0 0x00 [SteelBlade, HandAxe, Longsword, EnergyRing] AttackInRangeAI
+UNIT 0x80 Sniper Bojo Level(1, Enemy, 1) [3,13] 0x00 0x00 0x0 0x00 [IronBow, PureWater] AttackInRangeAI
+UNIT 0x80 Sniper Bojo Level(1, Enemy, 1) [9,13] 0x00 0x00 0x0 0x00 [IronBow] AttackInRangeAI
+UNIT 0x80 Sniper Bojo Level(1, Enemy, 1) [18,12] 0x00 0x00 0x0 0x00 [Longbow] AttackInRangeAI
+UNIT 0x80 Bishop_F Bojo Level(1, Enemy, 1) [7,12] 0x00 0x00 0x0 0x00 [Divine, Physic, Talisman] AttackInRangeAI
+UNIT 0x80 Bishop_F Bojo Level(1, Enemy, 1) [5,12] 0x2 0x00 0x0 0x00 [Divine, Physic, MasterProof] AttackInRangeAI
+UNIT 0x80 Bishop_F Bojo Level(1, Enemy, 1) [12,9] 0x00 0x00 0x0 0x00 [Divine, Physic] AttackInRangeAI
+UNIT 0x80 Cavalier Bojo Level(16, Enemy, 1) [10,8] 0x00 0x00 0x0 0x00 [SteelLance, _200G] AttackInRangeAI
+UNIT 0x80 Cavalier Bojo Level(16, Enemy, 1) [14,8] 0x00 0x00 0x0 0x00 [SteelLance, _200G] AttackInRangeAI
+UNIT 0x80 Cavalier Bojo Level(16, Enemy, 1) [19,6] 0x00 0x00 0x0 0x00 [SteelLance] AttackInRangeAI
+UNIT 0x80 Cavalier Bojo Level(16, Enemy, 1) [17,6] 0x00 0x00 0x0 0x00 [SteelLance] AttackInRangeAI
+UNIT 0x80 Cavalier Bojo Level(16, Enemy, 1) [1,5] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT 0x80 Cavalier Bojo Level(16, Enemy, 1) [0,5] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT 0x80 Knight Bojo Level(16, Enemy, 1) [12,6] 0x00 0x00 0x0 0x00 [Spear] AttackInRangeAI
+UNIT 0x80 Knight Bojo Level(16, Enemy, 1) [15,14] 0x00 0x00 0x0 0x00 [Spear] GuardTileAI
+UNIT 0x80 Knight Bojo Level(16, Enemy, 1) [15,13] 0x00 0x00 0x0 0x00 [Spear] GuardTileAI
+UNIT 0x80 Knight Bojo Level(16, Enemy, 1) [2,10] 0x00 0x00 0x0 0x00 [Spear] GuardTileAI
+UNIT 0x80 Shaman Bojo Level(16, Enemy, 1) [1,10] 0x00 0x00 0x0 0x00 [Nosferatu] GuardTileAI
+UNIT 0x80 Fighter Bojo Level(16, Enemy, 1) [7,9] 0x00 0x00 0x0 0x00 [SteelAxe] AttackInRangeAI
+UNIT 0x80 Fighter Bojo Level(16, Enemy, 1) [17,3] 0x00 0x00 0x0 0x00 [SteelAxe, PureWater] AttackInRangeAI
+UNIT 0x80 Fighter Bojo Level(16, Enemy, 1) [7,6] 0x00 0x00 0x0 0x00 [SteelAxe] AttackInRangeAI
+UNIT 0x80 Mage Bojo Level(16, Enemy, 1) [6,6] 0x2 0x00 0x0 0x00 [Elfire, MasterProof] AttackInRangeAI
+UNIT 0x80 Mage Bojo Level(16, Enemy, 1) [5,9] 0x00 0x00 0x0 0x00 [Elfire, _200G] AttackInRangeAI
+UNIT 0x80 Mage Bojo Level(16, Enemy, 1) [15,0] 0x00 0x00 0x0 0x00 [Elfire] AttackInRangeAI
+UNIT 0x80 WyvernRider Bojo Level(16, Enemy, 1) [3,8] 0x00 0x00 0x0 0x00 [BraveLance, _200G] PursueWithoutHeedAI
+UNIT 0x80 WyvernRider Bojo Level(16, Enemy, 1) [0,8] 0x00 0x00 0x0 0x00 [BraveLance, _200G] PursueWithoutHeedAI
+UNIT 0x80 WyvernRider Bojo Level(16, Enemy, 1) [16,2] 0x2 0x00 0x0 0x00 [SteelLance, MasterProof] AttackInRangeAI
+UNIT 0x80 WyvernRider Bojo Level(16, Enemy, 1) [16,1] 0x00 0x00 0x0 0x00 [SteelLance] AttackInRangeAI
 UNIT 0x80 Fighter Bojo Level(16, Enemy, 1) [13,14] 0x00 0x00 0x0 0x00 [SilverAxe, Hammer, Halberd, Swordslayer] AttackInRangeAI
 UNIT
 
