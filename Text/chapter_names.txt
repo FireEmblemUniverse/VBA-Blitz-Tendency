@@ -54,7 +54,7 @@ Prologue: IT BEGINS AGAIN[X]
 17: Christmas Break[X]
 
 # 0x0172
-18: [X]
+18: Darm Tower[X]
 
 # 0x0173
 19: [X]
@@ -69,7 +69,7 @@ Prologue: IT BEGINS AGAIN[X]
 22: The Legendary Blitz[X]
 
 # 0x0177
-23: [X]
+23: Solomon Shrine[X]
 
 # 0x0178
 24: [X]

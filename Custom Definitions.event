@@ -47,14 +47,15 @@
 #define Jen 0xC
 #define Fanni 0xD
 #define Murat 0xF
+#define Jet 0x11
 #define Nichol 0x16
+#define Adolgi 0x17
 #define Sabin 0x1B
 #define Ersatz 0x1F
 #define Inafune 0x20
 #define Kojima 0x23
 #define Sakaguchi 0x24
 #define Iga 0x25
-#define Jet 0x11
 
 #define Jazzak 0x42
 #define IgaNPC 0x47
@@ -66,9 +67,12 @@
 #define Kefka 0x6C
 #define Cameron 0x58
 #define Bojo 0x59
-
+#define DarkFact 0x56
+#define Ch18Enemies 0x64
+#define Ch23Enemies 0x6E
 #define KojimaNPC 0x76
 #define SakaguchiNPC 0x77
+
 
 #define Ch5Generic 0x8A
 
