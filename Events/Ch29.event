@@ -1,0 +1,132 @@
+#include EAstdlib.event
+
+EventPointerTable(0x07,ThisChapter)
+
+ORG 0xE80000
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+Units:
+UNIT Eirika EphraimLord Eirika Level(1, Ally, 0) [20,18] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [19,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [21,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [10,0] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [11,2] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [8,1] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [4,13] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [6,14] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [1,21] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [22,1] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [27,0] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [2,31] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [3,30] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [5,30] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [10,30] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [30,12] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [9,20] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Morva_Ch20 Manakete_2 0x00 Level(20, Ally, 0) [25,29] 0x00 0x00 0x0 0x00 [HolyDragonStone, Elixir] GuardTileAI 
+UNIT Bandit DracoZombie 0x00 Level(10, Enemy, 1) [27,23] 0x00 0x00 0x0 0x00 [WretchedAir] AttackInRangeAI 
+UNIT Bandit DracoZombie 0x00 Level(10, Enemy, 1) [28,25] 0x00 0x00 0x0 0x00 [WretchedAir] AttackInRangeAI 
+UNIT Bandit DracoZombie 0x00 Level(10, Enemy, 1) [29,31] 0x00 0x00 0x0 0x00 [WretchedAir] AttackInRangeAI 
+UNIT Bandit DracoZombie 0x00 Level(10, Enemy, 1) [29,28] 0x00 0x00 0x0 0x00 [WretchedAir] AttackInRangeAI 
+UNIT Bandit DracoZombie 0x00 Level(10, Enemy, 1) [30,26] 0x00 0x00 0x0 0x00 [WretchedAir] AttackInRangeAI 
+UNIT Morva_Ch20 Manakete_2 0x00 Level(20, Enemy, 1) [31,29] 0x00 0x00 0x0 0x00 [WretchedAir] ChaseOnceApproachedAI 
+UNIT Bandit Swordmaster_F 0x00 Level(10, Enemy, 1) [13,29] 0x00 0x00 0x0 0x00 [SilverSword] DefaultAI 
+UNIT Bandit Swordmaster 0x00 Level(10, Enemy, 1) [0,26] 0x00 0x00 0x0 0x00 [BraveSword] PursueWithoutHeedAI 
+UNIT Bandit Hero 0x00 Level(10, Enemy, 1) [0,3] 0x00 0x00 0x0 0x00 [SilverAxe, KillingEdge] PursueWithoutHeedAI 
+UNIT Bandit WyvernLord 0x00 Level(10, Enemy, 1) [11,9] 0x00 0x00 0x0 0x00 [BraveSword, SilverLance] PursueWithoutHeedAI 
+UNIT Bandit WyvernLord 0x00 Level(8, Enemy, 1) [10,10] 0x00 0x00 0x0 0x00 [SilverBlade, Javelin] PursueWithoutHeedAI 
+UNIT Bandit WyvernLord 0x00 Level(8, Enemy, 1) [12,10] 0x00 0x00 0x0 0x00 [SilverBlade, Javelin] PursueWithoutHeedAI 
+UNIT Bandit WyvernLord 0x00 Level(8, Enemy, 1) [10,8] 0x00 0x00 0x0 0x00 [SilverBlade, Javelin] PursueWithoutHeedAI 
+UNIT Bandit WyvernLord 0x00 Level(8, Enemy, 1) [12,8] 0x00 0x00 0x0 0x00 [SilverBlade, Javelin] PursueWithoutHeedAI 
+UNIT Bandit WyvernLord 0x00 Level(12, Enemy, 1) [30,17] 0x00 0x00 0x0 0x00 [BraveSword, KillerLance] PursueWithoutHeedAI 
+UNIT Bandit WyvernLord 0x00 Level(12, Enemy, 1) [30,19] 0x00 0x00 0x0 0x00 [BraveSword, KillerLance] PursueWithoutHeedAI 
+UNIT Bandit WyvernKnight_F 0x00 Level(12, Enemy, 1) [31,18] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI 
+UNIT Bandit General 0x00 Level(20, Enemy, 1) [29,5] 0x00 0x00 0x0 0x00 [Swordslayer, BraveAxe, Hammer, Halberd] ChaseOnceApproachedAI 
+UNIT Bandit Knight 0x00 Level(20, Enemy, 1) [28,6] 0x00 0x00 0x0 0x00 [Spear, Elixir] ChaseOnceApproachedAI 
+UNIT Bandit Knight 0x00 Level(20, Enemy, 1) [30,6] 0x00 0x00 0x0 0x00 [Spear, Elixir] ChaseOnceApproachedAI 
+UNIT Bandit Knight 0x00 Level(20, Enemy, 1) [31,5] 0x00 0x00 0x0 0x00 [Spear, Elixir] ChaseOnceApproachedAI 
+UNIT Bandit Knight 0x00 Level(20, Enemy, 1) [27,5] 0x00 0x00 0x0 0x00 [Spear, Elixir] ChaseOnceApproachedAI 
+UNIT Bandit Berserker 0x00 Level(11, Enemy, 1) [6,21] 0x00 0x00 0x0 0x00 [Tomahawk, Elixir] ChaseOnceApproachedAI 
+UNIT Bandit Berserker 0x00 Level(11, Enemy, 1) [9,23] 0x00 0x00 0x0 0x00 [Tomahawk, Elixir] ChaseOnceApproachedAI 
+UNIT Bandit Berserker 0x00 Level(11, Enemy, 1) [19,25] 0x00 0x00 0x0 0x00 [Tomahawk, Elixir] ChaseOnceApproachedAI 
+UNIT Bandit Berserker 0x00 Level(11, Enemy, 1) [7,4] 0x00 0x00 0x0 0x00 [Tomahawk, Elixir] ChaseOnceApproachedAI 
+UNIT Bandit Mercenary 0x00 Level(11, Enemy, 1) [0,4] 0x00 0x00 0x0 0x00 [SilverSword, Vulnerary] AttackInRangeAI 
+UNIT Bandit Mercenary 0x00 Level(11, Enemy, 1) [1,4] 0x00 0x00 0x0 0x00 [SilverSword, Vulnerary] AttackInRangeAI 
+UNIT Bandit Mercenary 0x00 Level(11, Enemy, 1) [1,3] 0x00 0x00 0x0 0x00 [SilverSword, Vulnerary] AttackInRangeAI 
+UNIT Bandit Bishop 0x00 Level(15, Enemy, 1) [31,28] 0x00 0x00 0x0 0x00 [Physic, Recover] HealUnits 
+UNIT Bandit Bishop 0x00 Level(15, Enemy, 1) [31,30] 0x00 0x00 0x0 0x00 [Physic, Recover] HealUnits 
+UNIT Bandit Bishop 0x00 Level(15, Enemy, 1) [0,15] 0x00 0x00 0x0 0x00 [Sleep, Sleep, Sleep] GuardTileAI 
+UNIT Bandit WyvernRider 0x00 Level(15, Enemy, 1) [29,16] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
+UNIT Bandit WyvernRider 0x00 Level(15, Enemy, 1) [29,17] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
+UNIT Bandit WyvernRider 0x00 Level(15, Enemy, 1) [29,19] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
+UNIT Bandit WyvernRider 0x00 Level(15, Enemy, 1) [29,20] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
+UNIT Bandit WyvernRider 0x00 Level(15, Enemy, 1) [30,18] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
+UNIT Bandit WyvernRider 0x00 Level(15, Enemy, 1) [29,18] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
+UNIT Bandit General 0x00 Level(17, Enemy, 1) [2,13] 0x00 0x00 0x0 0x00 [Spear, Elixir] PursueWithoutHeedAI 
+UNIT Bandit General 0x00 Level(17, Enemy, 1) [1,17] 0x00 0x00 0x0 0x00 [Spear, Elixir] PursueWithoutHeedAI 
+UNIT Bandit Sage 0x00 Level(17, Enemy, 1) [0,14] 0x00 0x00 0x0 0x00 [Fimbulvetr, Physic] HealUnits 
+UNIT Bandit GreatKnight 0x00 Level(17, Enemy, 1) [24,3] 0x00 0x00 0x0 0x00 [Swordslayer, SilverSword] GuardTileAI 
+UNIT Bandit GreatKnight 0x00 Level(17, Enemy, 1) [18,1] 0x00 0x00 0x0 0x00 [BraveAxe, Runesword] GuardTileAI 
+UNIT Bandit GreatKnight 0x00 Level(17, Enemy, 1) [27,7] 0x00 0x00 0x0 0x00 [KillingEdge, Spear] GuardTileAI 
+UNIT Bandit Druid_F 0x00 Level(17, Enemy, 1) [17,8] 0x2 0x00 0x0 0x00 [Berserk, Hammerne] GuardTileAI 
+UNIT Bandit Berserker 0x00 Level(20, Enemy, 1) [15,15] 0x2 0x00 0x0 0x00 [Tomahawk, Gleipnir] PursueWithoutHeedAI 
+UNIT Bandit Druid 0x00 Level(11, Enemy, 1) [15,28] 0x00 0x00 0x0 0x00 [Nosferatu] PursueWithoutHeedAI 
+UNIT Bandit Druid 0x00 Level(11, Enemy, 1) [15,30] 0x00 0x00 0x0 0x00 [Nosferatu] PursueWithoutHeedAI 
+UNIT Bandit Mage 0x00 Level(20, Enemy, 1) [16,29] 0x00 0x00 0x0 0x00 [Bolting, Elixir] AttackInRangeAI 
+UNIT
+
+
+TurnBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+//DO NOT TOUCH
+WORD $00
+
+Tutorial:
+//DO NOT TOUCH
+WORD $00
+
+TrapData:
+END_MAIN
+
+ALIGN 4
+
+BeginningScene:
+ENDA
+
+EndingScene:
+ENDA
+
+// Events
+
+// Manual Movement
+
+// Scripted Fights
+
+// Units
+
+// Shop Data
+
+MESSAGE Events end at offset currentOffset
