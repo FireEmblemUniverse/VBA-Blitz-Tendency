@@ -52,6 +52,7 @@
 
 [VedgePortrait] = [0x2][0x1]
 [Fanni] = [0x11]
+[Luut] = [0x16]
 [Ersatz] = [0x29]
 [Dennis] = [0x70]
 [Elitor] = [0x69]

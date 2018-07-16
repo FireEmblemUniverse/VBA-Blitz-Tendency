@@ -1,0 +1,83 @@
+#define SetSkills(character, first, second, third, fourth) "SETVAL 0x2 first; SETVAL 0x3 (0x203e885+(character*16)); SETVAL 0x4 0x2; ASMC EventWriter+1;SETVAL 0x2 (second + (third*0x100)); SETVAL 0x3 (0x203e886+(character*16)); SETVAL 0x4 0x1; ASMC EventWriter+1;SETVAL 0x2 fourth; SETVAL 0x3 (0x203e888+(character*16)); SETVAL 0x4 0x2; ASMC EventWriter+1;"
+
+
+ALIGN 4
+SLu_ThisChapter:
+POIN SLu_TurnBasedEvents
+POIN SLu_CharacterBasedEvents
+POIN SLu_LocationBasedEvents
+POIN SLu_MiscBasedEvents
+POIN SLu_Dunno SLu_Dunno SLu_Dunno
+POIN SLu_Tutorial
+POIN SLu_Ballista SLu_Ballista
+POIN SLu_Units SLu_UnitsH
+POIN $0 $0 $0 $0 $0 $0
+POIN SLu_BeginningScene SLu_EndingScene
+
+SLu_TurnBasedEvents:
+TURN 0x0 ThiefTop[ 5, 0] 0x0
+TURN 0x0 ThiefBot[ 3, 5] 0x0
+TURN 0x0 ThiefRgt[ 8, 0] 0x0
+TURN 0x0 ThiefTop[10, 0] 0x0
+//TURN 0x0 Label [Start, End] 0 (8 for jerk)
+END_MAIN
+
+ALIGN 32
+SLu_CharacterBasedEvents:
+CharacterEvent(0x8,SweetLu_Recruit,Vedge,Luut)
+END_MAIN
+
+ALIGN 4
+SLu_LocationBasedEvents: //TODO: New loot?
+CHES 0x10 Vulnerary    [ 5,22] 0x14
+CHES 0x11 Elixir       [ 4,18] 0x14
+CHES 0x12 ChestKey_5   [ 5,15] 0x14
+CHES 0x13 Fiendcleaver [ 7,16] 0x14
+CHES 0x14 Dracoshield [ 7,16] 0x14
+CHES 0x15 Fiendcleaver [ 7,16] 0x14
+CHES 0x16 Fiendcleaver [ 7,16] 0x14
+CHES 0x17 Fiendcleaver [ 7,16] 0x14
+Seize(24,3)
+END_MAIN
+
+ALIGN 4
+SLu_MiscBasedEvents:
+AREA  0xA Thieves1 [ 4,14] [21,18]
+AREA    0 ThroneSpawners    [ 0, 0] [13, 8]
+AFEV    0 Chesdrake_19_6 0x30
+AFEV    0 MealySpawn 0x14
+CauseGameOverIfLordDies
+END_MAIN
+
+/*TurnEventPlayer(0x00, SpawnPirates, 3)
+SpawnPirates:
+ReinforcementEvent(PortPirates)
+UNIT 0x8C Pirate 0x4C Level(9, Enemy, 1) [7, 8] 0 0 1 PirateReda [IronAxe] PursueWithoutHeedAI
+UNIT 0x8C Pirate 0x4C Level(9, Enemy, 1) [7, 8] 0 0 0 0 [IronAxe, HandAxe] PursueWithoutHeedAI
+UNIT*/
+
+ALIGN 4
+SLu_Dunno:
+END_MAIN
+
+ALIGN 4
+SLu_Tutorial:
+END_MAIN
+
+ALIGN 4
+SLu_Ballista:
+END_MAIN
+
+ALIGN 4
+SLu_Units:
+SLu_UnitsH:
+
+BonePrize:
+UNIT Mealy Bonewalker 0 Level(5, Ally, True) [12,16] 0b 0x00 1 REDA12R16 [0x00, 0x00, 0x00, 0x00] NoAI
+UNIT
+
+MealySpawn:
+LoadReinforcements(BonePrize)
+NoFade
+SetSkills(Mealy, ForesightID, SealSpdID, SwordfaireID, SaviorID) //Personal is Smite (shove 2 tiles).
+ENDA

@@ -8,7 +8,7 @@
 #define NoTh 0 0 0 0
 #define Drop 10b 0 0 0
 
-#define SLu_ID 0x33 //this should be ch 10 events
+#define SLu_ID 0xD1 //this should be ch 11/0xB events
 EventPointerTable(SLu_ID, SLu_ThisChapter)
 
 EscapePointPointerTable(11,SweetLuutRunners)
@@ -98,7 +98,7 @@ END_MAIN
 
 ALIGN 4
 SLu_Ballista:
-END_MAIN
+ENDTRAP
 
 ALIGN 4
 SLu_Units:
@@ -512,22 +512,22 @@ UNIT
 
 
 MonkRightDown:
-LD1:
+RD1:
 UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [Shine] PursueWithoutHeedAI
 UNIT
 
 MageRightDown:
-LD2:
+RD2:
 UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [Thunder] PursueWithoutHeedAI
 UNIT
 
 ShamanRightDown:
-LD3:
+RD3:
 UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [Luna] PursueWithoutHeedAI
 UNIT
 
 MiscRightDown:
-LD0:
+RD0:
 UNIT EnemyID Archer LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [SteelBow] PursueWithoutHeedAI
 UNIT
 

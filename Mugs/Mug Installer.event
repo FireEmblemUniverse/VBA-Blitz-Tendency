@@ -45,6 +45,10 @@ ErsatzMug:
 #incext PortraitFormatter "Ersatz.png"
 setMugEntry(0x29,ErsatzMug,2,6,2,4)
 
+LuutMug:
+#incext PortraitFormatter "lu-by-lenh.png"
+setMugEntry(0x16,LuutMug,3,6,3,4)
+
 #define DennisPortrait 0x70
 DennisMug:
 #incext PortraitFormatter "Dennis.png"

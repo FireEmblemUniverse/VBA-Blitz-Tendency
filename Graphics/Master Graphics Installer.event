@@ -22,8 +22,12 @@ ORG 0x5926F4+(0x80*PiercingBowIconID)
 #incext Png2Dmp "PiercingBow.png"
 ORG 0x5926F4+(0x80*HuntersBowIconID)
 #incext Png2Dmp "HuntersBow.png"
+ORG 0x5926F4+(0x80*RunicBowIconID)
+#incext Png2Dmp "RunicBow.png"
 
-/* TODO pending: IIDs for these items
+ORG 0x5926F4+(0x80*DragonshardIconID)
+#incext Png2Dmp "Dragonshard.png"
+
 ORG 0x5926F4+(0x80*AnimaCaliburIconID)
 #incext Png2Dmp "AnimaCalibur.png"
 ORG 0x5926F4+(0x80*LightCaliburIconID)
@@ -31,7 +35,7 @@ ORG 0x5926F4+(0x80*LightCaliburIconID)
 ORG 0x5926F4+(0x80*SwordCaliburIconID)
 #incext Png2Dmp "SwordCalibur.png"
 ORG 0x5926F4+(0x80*BowCaliburIconID)
-#incext Png2Dmp "BowCalibur.png" */
+#incext Png2Dmp "BowCalibur.png"
 POP
 
 /* Custom Tileset
