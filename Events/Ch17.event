@@ -171,5 +171,3 @@ GotoPrepScreen
 EndingScene:
 MNCH 12 //Copied from Blitz 1
 ENDA
-
-MESSAGE Events end at offset CURRENTOFFSET

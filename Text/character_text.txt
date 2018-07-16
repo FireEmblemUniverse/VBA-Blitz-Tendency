@@ -149,6 +149,14 @@ Kefka[X]
 A crazy clown from a distant land.[N]
 Remarkably fond of one-liners.[X]
 
+##AdolgiName
+Adolgi[X]
+
+##AdolgiDesc
+Dogi ate roo adol.[NL]
+When adol became a human,[NL]
+bad things happened.[X]
+
 ## nameDeuxnids
 Deuxnids[X]
 

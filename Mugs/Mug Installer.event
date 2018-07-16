@@ -54,6 +54,11 @@ SabinMug:
 #incext PortraitFormatter "Sabin.png"
 setMugEntry(0x20,SabinMug,2,6,2,4)
 
+#define AdolgiPortrait 0x27
+AdolgiMug:
+#incext PortraitFormatter "Adolgi.png"
+setMugEntry(AdolgiPortrait,AdolgiMug,2,4,2,2)
+
 KefkaMug:
 #incext PortraitFormatter "Kefka.png"
 setMugEntry(0x4A,KefkaMug,3,7,2,4)

@@ -27,6 +27,9 @@ Zeke[X]
 ## nameSirius
 Sirius[X]
 
+## UM_Debug
+ Debug[X]
+
 #include "character_text.txt"
 #include "item_text.txt"
 #include "skilldesc_text.txt"
