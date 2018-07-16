@@ -76,7 +76,7 @@
 
 
 #define Ch5Generic 0x8A
-#defing Ch17Enemies 0xA2
+#define Ch17Enemies 0xA2
 #define Ch18Enemies 0xA4
 #define Ch23Enemies 0xAE
 #define Ch27ChrMGeneric 0xC0 // Monster
