@@ -12,6 +12,7 @@
    <property name="ObjectType1" value="0x2E"/>
    <property name="PaletteID" value="0x2F"/>
    <property name="TileConfig" value="0x30"/>
+   <property name="Anims" value="0x5"/>
   </properties>
   <data encoding="base64" compression="zlib">
    eJxlUi1PA0EUfLerEEUQwFBHcBgsNBiC4A80gYSEBPofaCCYppIfgKGGa4I4fkJbR4oAhwMLBYPBM5M3m70UMZm3+2bnfdyV0WzPzBrg68LsKJht6O5Rd6fmqILrmOuDe+ASvA5uBgfjS3AbeAjuMYbHpHDfZ+QHiFeBX8QXluvVwVpd+Z0JrMd+3sHH5p49y6AP+0t9UvsSst+VdAe4XwaizsydFM7si/GSwPkWlSvVJ+tshzxzqjmRjvlv6LZwfgN/ATPzXqqQZ7wJ3mNjbv59nO/MQf0CNE+Ip8AYWMF5pF2kN+kbUB91V8qnpXecjbrXGkaWv39bsxFd9cb3Q/PddWL2Tv70+ABvcmbgvjZL0iaPpvpcU72Berid+3ZT+c2ie3/G7DG0rEv/ZV+1onLpf2C8Cz6HtgX8xLyTKvz34F4TuJed2j4Og8//BwQFWAk=
