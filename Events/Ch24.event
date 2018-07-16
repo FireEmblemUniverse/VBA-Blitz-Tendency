@@ -4,8 +4,8 @@ EventPointerTable(Chatper24Events,ThisChapter)
 #define Ch24GenLvlT1 16 //level of generic unpromoted units
 #define Ch24GenLvlT2 5 //level of generic promoted units
 #define Ch24BossID 0x70 //character id of boss
-#define CH24GenID11 0xB0 //character ids for generics
-#define CH24GenID12 0xB1 //use for special snowflake generics i guess
+#define CH24GenID1 0xB0 //character ids for generics
+#define CH24GenID2 0xB1 //use for special snowflake generics i guess
 
 ThisChapter:
 POIN TurnBasedEvents
