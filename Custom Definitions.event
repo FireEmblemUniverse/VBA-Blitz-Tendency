@@ -54,6 +54,7 @@
 #define Kojima 0x23
 #define Sakaguchi 0x24
 #define Iga 0x25
+#define Jet 0x11
 
 #define Jazzak 0x42
 #define IgaNPC 0x47
@@ -63,6 +64,8 @@
 #define Edgelard 0x4E
 #define Dennis 0x50
 #define Kefka 0x6C
+#define Cameron 0x48
+#define Bojo 0x49
 
 #define KojimaNPC 0x76
 #define SakaguchiNPC 0x77
