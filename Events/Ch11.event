@@ -98,7 +98,7 @@ END_MAIN
 
 ALIGN 4
 SLu_Ballista:
-END_MAIN
+ENDTRAP
 
 ALIGN 4
 SLu_Units:
