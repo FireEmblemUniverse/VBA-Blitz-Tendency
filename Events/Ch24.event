@@ -3,7 +3,9 @@
 EventPointerTable(Chatper24Events,ThisChapter)
 #define Ch24GenLvlT1 16 //level of generic unpromoted units
 #define Ch24GenLvlT2 5 //level of generic promoted units
-#define CH24GenID 0x71 //character id for generics
+#define Ch24BossID 0x70 //character id of boss
+#define CH24GenID11 0xB0 //character ids for generics
+#define CH24GenID12 0xB1 //use for special snowflake generics i guess
 
 ThisChapter:
 POIN TurnBasedEvents
@@ -18,19 +20,19 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 Units:
-UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [2,16] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [1,17] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [3,17] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [0,18] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [2,18] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [4,18] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [1,19] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [0,20] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [3,19] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [2,20] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [4,20] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [5,19] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [6,20] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [2,16] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [1,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [3,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [0,18] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [2,18] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [4,18] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [1,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [0,20] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [3,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [2,20] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [4,20] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [5,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [6,20] 0x00 0x00 0x0 0x00 [0x00] NoAI 
 UNIT
 
 
@@ -42,11 +44,12 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Armory(Ch24Armory,10,14)
+Vendor(Ch24Vendor,6,11)
 Seize(0,0)
 Seize(0,1)
 Seize(1,0)
 Seize(1,1)
-Armory(Ch24Armory,10,14)
 END_MAIN
 
 MiscBasedEvents:
@@ -68,23 +71,23 @@ END_MAIN
 ALIGN 4
 
 BeginningScene:
-  LOAD1 0x1 Ch24Enemies
-  ENUN
-  LOAD1 0x1 Ch24Enemies2
-  ENUN
-  LOAD2 0x0 Units
-  ENUN
+	LOAD1 0x1 Ch24Enemies
+	ENUN
+	LOAD1 0x1 Ch24Enemies2
+	ENUN
+	LOAD2 0x0 Units
+	ENUN
+	NoFade
 	GotoPrepScreen
-ENDB
+ENDA
 
 EndingScene:
-  MNCH 0x3e	//goes to where chapter 25 was in vba1; let me know if we move ch25 somewhere else
+	MNCH 0x3e	//goes to where chapter 25 is in vba1; let me know if we move ch25 somewhere else
 ENDA
 
 // Events
 EventAfterExitingPrepScreen:
 ENDA
-
 
 // Manual Movement
 
@@ -92,32 +95,34 @@ ENDA
 
 // Units
 Ch24Enemies:
-UNIT CH24GenID Archer 0x00 Level(Ch24GenLvlT1, Enemy, 0) [8,15] 0x00 0x00 0x0 0x00 [SteelBow] GuardTileAI
-UNIT CH24GenID Cavalier 0x00 Level(Ch24GenLvlT1, Enemy, 0) [12,11] 0x00 0x00 0x0 0x00 [SteelLance] ChaseOnceApproachedAI
-UNIT CH24GenID Mercenary 0x00 Level(Ch24GenLvlT1, Enemy, 0) [11,16] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI
-UNIT CH24GenID Mercenary 0x00 Level(Ch24GenLvlT1, Enemy, 0) [9,17] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI
-UNIT CH24GenID Knight 0x00 Level(Ch24GenLvlT1, Enemy, 0) [10,9] 0x00 0x00 0x0 0x00 [SteelLance] AttackInRangeAI
-UNIT CH24GenID Knight 0x00 Level(Ch24GenLvlT1, Enemy, 0) [4,9] 0x00 0x00 0x0 0x00 [SteelLance] AttackInRangeAI
-UNIT CH24GenID Shaman 0x00 Level(Ch24GenLvlT1, Enemy, 0) [4,7] 0x00 0x00 0x0 0x00 [Flux] ChaseOnceApproachedAI
-UNIT CH24GenID Shaman 0x00 Level(Ch24GenLvlT1, Enemy, 0) [12,14] 0x00 0x00 0x0 0x00 [Flux] NoAI
-UNIT CH24GenID Shaman 0x00 Level(Ch24GenLvlT1, Enemy, 0) [12,19] 0x00 0x00 0x0 0x00 [Flux] NoAI
-UNIT CH24GenID Shaman 0x00 Level(Ch24GenLvlT1, Enemy, 0) [7,9] 0x00 0x00 0x0 0x00 [Flux] NoAI
-UNIT CH24GenID Shaman 0x00 Level(Ch24GenLvlT1, Enemy, 0) [14,17] 0x00 0x00 0x0 0x00 [Luna] NoAI
+UNIT CH24GenID1 Archer 0x00 Level(Ch24GenLvlT1, Enemy, 0) [8,15] 0x00 0x00 0x0 0x00 [SteelBow] GuardTileAI 
+UNIT CH24GenID1 Cavalier 0x00 Level(Ch24GenLvlT1, Enemy, 0) [12,11] 0x00 0x00 0x0 0x00 [SteelLance] ChaseOnceApproachedAI 
+UNIT CH24GenID1 Mercenary 0x00 Level(Ch24GenLvlT1, Enemy, 0) [11,16] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
+UNIT CH24GenID1 Mercenary 0x00 Level(Ch24GenLvlT1, Enemy, 0) [9,17] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
+UNIT CH24GenID1 Knight 0x00 Level(Ch24GenLvlT1, Enemy, 0) [10,9] 0x00 0x00 0x0 0x00 [SteelLance] AttackInRangeAI 
+UNIT CH24GenID1 Knight 0x00 Level(Ch24GenLvlT1, Enemy, 0) [4,9] 0x00 0x00 0x0 0x00 [SteelLance] AttackInRangeAI 
+UNIT CH24GenID1 Shaman 0x00 Level(Ch24GenLvlT1, Enemy, 0) [4,7] 0x00 0x00 0x0 0x00 [Flux] ChaseOnceApproachedAI 
+UNIT CH24GenID1 Shaman 0x00 Level(Ch24GenLvlT1, Enemy, 0) [12,14] 0x00 0x00 0x0 0x00 [Flux] NoAI 
+UNIT CH24GenID1 Shaman 0x00 Level(Ch24GenLvlT1, Enemy, 0) [12,19] 0x00 0x00 0x0 0x00 [Flux] NoAI 
+UNIT CH24GenID1 Shaman 0x00 Level(Ch24GenLvlT1, Enemy, 0) [7,9] 0x00 0x00 0x0 0x00 [Flux] NoAI 
+UNIT CH24GenID1 Shaman 0x00 Level(Ch24GenLvlT1, Enemy, 0) [14,17] 0x00 0x00 0x0 0x00 [Luna] NoAI 
 UNIT
 
 Ch24Enemies2:
-UNIT CH24GenID WyvernRider 0x00 Level(Ch24GenLvlT1, Enemy, 0) [11,0] 0x00 0x00 0x0 0x00 [SteelLance] NoAI
-UNIT CH24GenID WyvernRider 0x00 Level(Ch24GenLvlT1, Enemy, 0) [12,0] 0x00 0x00 0x0 0x00 [SteelLance] NoAI
-UNIT CH24GenID PegasusKnight 0x00 Level(Ch24GenLvlT1, Enemy, 0) [0,4] 0x00 0x00 0x0 0x00 [Javelin] AttackInRangeAI
-UNIT CH24GenID PegasusKnight 0x00 Level(Ch24GenLvlT1, Enemy, 0) [1,4] 0x00 0x00 0x0 0x00 [Javelin] AttackInRangeAI
-UNIT CH24GenID Druid 0x00 Level(Ch24GenLvlT2, Enemy, 0) [8,3] 0x00 0x00 0x0 0x00 [Flux, Eclipse] AttackInRangeAI
-UNIT CH24GenID Bishop_F 0x00 Level(Ch24GenLvlT2, Enemy, 0) [12,6] 0x00 0x00 0x0 0x00 [Sleep, Shine, Physic] AttackInRangeAI
-UNIT CH24GenID Bishop_F 0x00 Level(Ch24GenLvlT2, Enemy, 0) [1,9] 0x00 0x00 0x0 0x00 [Shine, Heal] NoAI
-UNIT CH24GenID Sniper_F 0x00 Level(Ch24GenLvlT2, Enemy, 0) [8,10] 0x00 0x00 0x0 0x00 [Longbow] GuardTileAI
-UNIT CH24GenID Knight_F 0x00 Level(Ch24GenLvlT2, Enemy, 0) [9,10] 0x00 0x00 0x0 0x00 [SilverLance] GuardTileAI
+UNIT CH24GenID1 WyvernRider 0x00 Level(Ch24GenLvlT1, Enemy, 0) [11,0] 0x00 0x00 0x0 0x00 [SteelLance] NoAI 
+UNIT CH24GenID1 WyvernRider 0x00 Level(Ch24GenLvlT1, Enemy, 0) [12,0] 0x00 0x00 0x0 0x00 [SteelLance] NoAI 
+UNIT CH24GenID1 PegasusKnight 0x00 Level(Ch24GenLvlT1, Enemy, 0) [0,4] 0x00 0x00 0x0 0x00 [Javelin] AttackInRangeAI 
+UNIT CH24GenID1 PegasusKnight 0x00 Level(Ch24GenLvlT1, Enemy, 0) [1,4] 0x00 0x00 0x0 0x00 [Javelin] AttackInRangeAI 
+UNIT CH24GenID1 Druid 0x00 Level(Ch24GenLvlT2, Enemy, 0) [8,3] 0x00 0x00 0x0 0x00 [Flux, Eclipse] AttackInRangeAI 
+UNIT CH24GenID1 Bishop_F 0x00 Level(Ch24GenLvlT2, Enemy, 0) [12,6] 0x00 0x00 0x0 0x00 [Sleep, Shine, Physic] AttackInRangeAI 
+UNIT CH24GenID1 Bishop_F 0x00 Level(Ch24GenLvlT2, Enemy, 0) [1,9] 0x00 0x00 0x0 0x00 [Shine, Heal] NoAI 
+UNIT CH24GenID1 Sniper_F 0x00 Level(Ch24GenLvlT2, Enemy, 0) [8,10] 0x00 0x00 0x0 0x00 [Longbow] GuardTileAI 
+UNIT CH24GenID1 Knight_F 0x00 Level(Ch24GenLvlT2, Enemy, 0) [9,10] 0x00 0x00 0x0 0x00 [SilverLance] GuardTileAI 
 UNIT
-
 
 // Shop Data
 Ch24Armory:
 SHLI IronSword SteelSword SilverSword IronLance SteelLance SilverLance IronAxe SteelAxe SilverAxe IronBow SteelBow SilverBow
+
+Ch24Vendor:
+SHLI Thunder Fimbulvetr Shine Aura Flux Luna Fenrir Mend Barrier Physic Elixir
