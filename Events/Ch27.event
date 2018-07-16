@@ -74,6 +74,7 @@ SetSymbol(cntHumanCounter,  5) // when the next human reinf comes
 // CHAPTER DATA
 // ============
 
+/*
 // Temporary hack because >Editing the death quote table
 // We need to have the generics have a death quote that sets eidEnemyDeath
 // And the boss to be a boss
@@ -86,6 +87,7 @@ PUSH; ORG $9ECD4C
 
 	SHORT 0xFFFF
 POP
+*/
 
 EventPointerTable(Ch27Events, ThisChapter)
 
