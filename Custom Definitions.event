@@ -54,6 +54,7 @@
 #define Kojima 0x23
 #define Sakaguchi 0x24
 #define Iga 0x25
+#define Jet 0x11
 
 #define Jazzak 0x42
 #define IgaNPC 0x47
@@ -63,6 +64,8 @@
 #define Edgelard 0x4E
 #define Dennis 0x50
 #define Kefka 0x6C
+#define Cameron 0x58
+#define Bojo 0x59
 
 #define KojimaNPC 0x76
 #define SakaguchiNPC 0x77
@@ -90,6 +93,7 @@
 #define C17MapID 0x4D
 #define C17MapChangesID 0x4E
 #define C17EventID 0x4F
+#define Chapter12 0xC
 #define Chapter24 24
 #define Chapter24Map 0x6F
 #define Chatper24Events 0x71
