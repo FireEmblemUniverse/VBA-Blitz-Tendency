@@ -157,8 +157,6 @@ ENDA
 BeginningScene:
 LOAD1 0x1 NicholRecruit
 ENUN
-LOAD2 0x1 Units
-ENUN
 LOAD2 0x1 Foes
 ENUN
 LOAD2 0x1 Foes2
