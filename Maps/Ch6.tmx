@@ -5,6 +5,7 @@
  </tileset>
  <layer name="Tile Layer 1" width="17" height="12">
   <properties>
+   <property name="Anims" value="0x5"/>
    <property name="ChapterID" value="0x7"/>
    <property name="Main" value=""/>
    <property name="MapChangesID" value="0x23"/>
@@ -12,13 +13,12 @@
    <property name="ObjectType1" value="0x2E"/>
    <property name="PaletteID" value="0x2F"/>
    <property name="TileConfig" value="0x30"/>
-   <property name="Anims" value="0x5"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxlUi1PA0EUfLerEEUQwFBHcBgsNBiC4A80gYSEBPofaCCYppIfgKGGa4I4fkJbR4oAhwMLBYPBM5M3m70UMZm3+2bnfdyV0WzPzBrg68LsKJht6O5Rd6fmqILrmOuDe+ASvA5uBgfjS3AbeAjuMYbHpHDfZ+QHiFeBX8QXluvVwVpd+Z0JrMd+3sHH5p49y6AP+0t9UvsSst+VdAe4XwaizsydFM7si/GSwPkWlSvVJ+tshzxzqjmRjvlv6LZwfgN/ATPzXqqQZ7wJ3mNjbv59nO/MQf0CNE+Ip8AYWMF5pF2kN+kbUB91V8qnpXecjbrXGkaWv39bsxFd9cb3Q/PddWL2Tv70+ABvcmbgvjZL0iaPpvpcU72Berid+3ZT+c2ie3/G7DG0rEv/ZV+1onLpf2C8Cz6HtgX8xLyTKvz34F4TuJed2j4Og8//BwQFWAk=
+   eJxlUqtOQ0EUPHdXIYoggKGO4DBYaDAEwQ80gaQJCfAPNBBMqeQDMNRw6y6f0DYpBkRxODAowGDwzOTMZm+KmMzuntk5j90ymu2ZWQN8U5gdBbMNnV3r7MQcVXAdY31wD1yC18HN4OD6EtwGHoBHxMfwmBTuO0N8gPUq8Iv1heV8dTBXV36nAvOxnndwx9yzZxn0YX2pTmpfQva7ku4A58tA1J6x48KZdXG9JLC/RcVK1ck82yH3nHJOpGP8G7ot7N/AX8CneS1VyD3eBq+xMdf/Pvb35qB+AZpnrJ+AMbCC/UizSHfSG1AfdVbKp6V77I261xpGlt+/rd6Irmrj/aH57M5i9k7+9JiCNxkDPmq9JG3yaKrONeUbqIa7ubejH//NVJ4xZo+hZV36l33lioql/8D1Lvgc2hbwE/NMqvDfg3NN4Fx2avM4DN7/H7NAVZQ=
   </data>
  </layer>
- <layer name="LeftWall" width="17" height="12">
+ <layer name="LeftWall" width="17" height="12" visible="0">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="3"/>
@@ -30,7 +30,7 @@
    eJxjYBgFo4BykDzQDqATAABc6ABk
   </data>
  </layer>
- <layer name="RightWall" width="17" height="12">
+ <layer name="RightWall" width="17" height="12" visible="0">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="4"/>
@@ -42,7 +42,7 @@
    eJxjYBgFo2DwgeSBdgAOAAA9+ABk
   </data>
  </layer>
- <layer name="LeftHouse" width="17" height="12">
+ <layer name="LeftHouse" width="17" height="12" visible="0">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="0x1"/>
@@ -54,7 +54,7 @@
    eJxjYBgFo4A4wMY80C4YeAAADFEACg==
   </data>
  </layer>
- <layer name="RightHouse" width="17" height="12">
+ <layer name="RightHouse" width="17" height="12" visible="0">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="2"/>
