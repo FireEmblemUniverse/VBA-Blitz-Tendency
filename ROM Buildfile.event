@@ -3,6 +3,7 @@
     #include "Custom Definitions.event"
 
     ORG FreeSpace
+    PROTECT EndOfFreeSpace // Prevent overflow of data.
     //Text first for Text ID definitions
     #include "Text/Install Text Data.event"
     ALIGN 4
@@ -26,8 +27,9 @@
     #include "Events/World Map Events Installer.event"
 
     //Maps
-    #include "Maps/Master Map Installer.event"
     #include "Maps/FixedValni.event"
+    #include "Maps/FE6 Snow Tileset/FE6 Snow Installer.event"
+    #include "Maps/Master Map Installer.event"
 
     //Palettes
     #include "Battle Palettes/Palette Setup.event"
