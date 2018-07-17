@@ -165,3 +165,6 @@ Not to be confused with Dennis.[X]
 
 ## nameSplenda
 Splenda[X]
+
+## nameWicky
+Wicky[X]
