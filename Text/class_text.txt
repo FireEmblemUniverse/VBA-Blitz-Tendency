@@ -11,3 +11,10 @@ Void Monster[X]
 ## descVoidMonster
 One who has unleashed the powers[N]
 of the void to transform.[X]
+
+## nameWitch
+Witch[X]
+
+## descWitch
+A sorceress who was honed her craft and[N]
+learnt to fly atop a broomstick.[X]

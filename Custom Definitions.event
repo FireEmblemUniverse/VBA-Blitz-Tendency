@@ -78,7 +78,7 @@
 #define SakaguchiNPC 0x77
 
 #define Ch5Generic 0x8A
-#define Ch14_Enemy 0x5D
+#define Ch14_Enemy 0x9C
 #define Ch18Enemies 0xA4
 #define Ch23Enemies 0xAE
 #define Ch27ChrMGeneric 0xC0 // Monster
