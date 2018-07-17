@@ -70,6 +70,7 @@ setMugEntry(0x3F,DeuxnidsMug, 2, 6, 2, 4)
 ALIGN 4
 Seibah_Mug:
 #incext PortraitFormatter "Seibah.png"
+setMugEntry(0x21, Seibah_Mug, 3, 6, 3, 4)
 ALIGN 4
 
 Rinslet_Mug:
