@@ -251,22 +251,22 @@ ENDA
 #define Poin(x) "(x | 0x08000000)"
 //If you like not smashing your head in, you may want to stop reading ahead.
 ReinLeftIfInRight:
-    SMOV r1 Poin(RD0)
-    SMOV r2 Poin(RD1)
-    SMOV r3 Poin(RD2)
-    SMOV r4 Poin(RD3)
+    SMOV r1 Poin(LU0)
+    SMOV r2 Poin(LU1)
+    SMOV r3 Poin(LU2)
+    SMOV r4 Poin(LU3)
     CALL LoadOneOfFour
 
-    SMOV r1 Poin(RD0)
-    SMOV r2 Poin(RD1)
-    SMOV r3 Poin(RD2)
-    SMOV r4 Poin(RD3)
+    SMOV r1 Poin(LR0)
+    SMOV r2 Poin(LR1)
+    SMOV r3 Poin(LR2)
+    SMOV r4 Poin(LR3)
     CALL LoadOneOfFour
 
-    SMOV r1 Poin(RD0)
-    SMOV r2 Poin(RD1)
-    SMOV r3 Poin(RD2)
-    SMOV r4 Poin(RD3)
+    SMOV r1 Poin(LD0)
+    SMOV r2 Poin(LD1)
+    SMOV r3 Poin(LD2)
+    SMOV r4 Poin(LD3)
     CALL LoadOneOfFour
 
 NoFade

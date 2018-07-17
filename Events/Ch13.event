@@ -16,10 +16,11 @@ POIN $0 $0 $0 $0 $0 $0
 POIN SimLog_BeginningScene SimLog_EndingScene
 
 SimLog_TurnBasedEvents:
-TURN 0x0 ThiefTop[ 5, 0] 0x0
-TURN 0x0 ThiefBot[ 3, 5] 0x0
-TURN 0x0 ThiefRgt[ 8, 0] 0x0
-TURN 0x0 ThiefTop[10, 0] 0x0
+TURN 0x0 ThiefBot[ 3, 0] 0x0
+TURN 0x0 ThiefRgt[ 4, 0] 0x0
+TURN 0x0 ThiefLft[ 5, 0] 0x0
+TURN 0x0 ThiefTop[ 6, 0] 0x0
+TURN 0x0 ThiefAll[ 8, 0] 0x0
 //TURN 0x0 Label [Start, End] 0 (8 for jerk)
 END_MAIN
 
@@ -47,12 +48,12 @@ CHES 0x16 Vulnerary    [ 5, 5] 0x14
     CHES 0x1D Vulnerary    [26,12] 0x14
     CHES 0x1E Vulnerary    [15,13] 0x14
     CHES 0x1F Vulnerary    [20,14] 0x14
-CHES 0x20 ChestKey_5    [ 5,15] 0x14
-CHES 0x21 Dracoshield  [ 7,16] 0x14
-    CHES 0x22 Vulnerary  [12,16] 0x14
+CHES 0x20 ChestKey_5    [ 5,15] 0x14 //Starter chest
+CHES 0x21 Dracoshield  [ 7,16] 0x14 //Starter chest
+    CHES 0x22 SteelSword  [12,16] 0x14
     CHES 0x23 Vulnerary  [25,16] 0x14
     CHES 0x24 Fiendcleaver [17,17] 0x14
-CHES 0x25 Elixir       [ 4,18] 0x14
+CHES 0x25 Elixir       [ 4,18] 0x14 //Starter chest
     CHES 0x26 Fiendcleaver [27,18] 0x14
     CHES 0x27 Fiendcleaver [13,19] 0x14
     CHES 0x28 Fiendcleaver [24,21] 0x14
@@ -66,8 +67,34 @@ SimLog_MiscBasedEvents:
 AREA  0xA Thieves1 [ 4,10] [21,18]
 AREA    0 ThroneSpawners    [ 5, 9] [15, 16]
 AREA  0xB SEFlank [11,0] [22, 13]
+AFEV    0 UpperEvent 0x10 //20, 1
+AFEV    0 UpperEvent 0x11 //28, 1
+AFEV    0 UpperEvent 0x12 //13, 2
+AFEV    0 UpperEvent 0x13 //20, 3
+AFEV    0 UpperEvent 0x14 //28, 3
+AFEV    0 UpperEvent 0x15 //15, 4
+AFEV    0 Evt5r5 0x16 // 5, 5
+AFEV    0 Evt14r7 0x17 //14, 7
+AFEV    0 Evt8r8 0x18 // 8, 8
+AFEV    0 Evt17r10 0x19 //17,10
+AFEV    0 GenericEventC 0x1A //22,11
+AFEV    0 GenericEventC 0x1B // 8,12
+AFEV    0 Evt10r12 0x1C //10,12
+AFEV    0 GenericEventA 0x1D //26,12
+AFEV    0 GenericEventB 0x1E //15,13
+AFEV    0 GenericEventD 0x1F //20,14
+AFEV    0 Evt5r15 0x20 // 5,15
+AFEV    0 Evt7r16 0x21 // 7,16
+AFEV    0 MealySpawn 0x22 //12,16
+AFEV    0 GenericEventA 0x23 //25,16
+AFEV    0 GenericEventA 0x24 //17,17
+AFEV    0 GenericEventD 0x25 // 4,18
+AFEV    0 GenericEventB 0x26 //27,18
+AFEV    0 GenericEventB 0x27 //13,19
+AFEV    0 GenericEventB 0x28 //24,21
+AFEV    0 GenericEventC 0x29 // 5,22
+AFEV    0 GenericEventC 0x2A //20,23
 AFEV    0 Chesdrake_19_6 0x30
-AFEV    0 MealySpawn 0x14
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -106,14 +133,53 @@ ENDA
 
 DefaultEnemies:
 UNIT 0x5A Manakete_F_2 0 Level((c13Lv+5), Enemy, 1) [24, 3] 0b 0x0 0 0 [Dragonshard] NeverMoveAI
-UNIT 0x9A Thief 0x5A Level(c13Lv, Enemy, 1) [22, 5] 0 0 0 0 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
-UNIT 0x9A Thief 0x5A Level(c13Lv, Enemy, 1) [26, 3] 0 0 0 0 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
-UNIT 0x9A Thief 0x5A Level(c13Lv, Enemy, 1) [12,10] 0 0 0 0 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
+UNIT 0x9A Thief 0x5A Level(c13Lv, Enemy, 1) [22, 5] 0 0 0 0 [IronSword, ChestKey, ChestKey] [0x00, 0x04, 0x00, 0x00]
+UNIT 0x9A Soldier 0x5A Level(c13Lv, Enemy, 1) [26, 3] 0 0 0 0 [IronLance, ChestKey, ChestKey] [0x00, 0x04, 0x00, 0x00]
+UNIT 0x9A Pirate 0x5A Level(c13Lv, Enemy, 1) [12,10] 0 0 0 0 [IronAxe, ChestKey, ChestKey] [0x00, 0x04, 0x00, 0x00]
+
+UNIT 0x9A Cavalier 0x5A Level(c13Lv, Enemy, 1) [13, 4] 10b 0 0 0 [Lancereaver] ChaseOnceApproachedAI
+UNIT 0x9A Myrmidon 0x5A Level(c13Lv, Enemy, 1) [17, 8] 0 0 0 0 [KillingEdge] AttackInRangeAI
+UNIT 0x9A Soldier 0x5A Level(c13Lv, Enemy, 1) [ 9,10] 0 0 0 0 [IronLance] PursueWithoutHeedAI
+UNIT 0x9A General 0x5A Level(1, Enemy, 1) [15,15] 0 0 0 0 [LightBrand] ChaseOnceApproachedAI
+UNIT 0x9A Mercenary 0x5A Level(c13Lv, Enemy, 1) [ 9,16] 0 0 0 0 [SteelSword] PursueWithoutHeedAI
+UNIT 0x9A Knight 0x5A Level(c13Lv, Enemy, 1) [10,15] 0 0 0 0 [SteelLance] ChaseOnceApproachedAI
+UNIT 0x9A Fighter 0x5A Level(c13Lv, Enemy, 1) [25,14] 0 0 0 0 [SteelAxe] ChaseOnceApproachedAI
+UNIT 0x9A Warrior 0x5A Level(c13Lv, Enemy, 1) [22,15] 0 0 0 0 [IronBow, IronAxe] AttackInRangeAI
+UNIT
 
 ThroneStairs:
-UNIT 0x9A Thief 0x5A Level(c13Lv, Enemy, 1) [22, 3] 0 0 1 REDA22R5 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
-UNIT 0x9A Thief 0x5A Level(c13Lv, Enemy, 1) [26, 3] 0 0 1 REDA26R5 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
+UNIT 0x9A Pirate 0x5A Level(c13Lv, Enemy, 1) [22, 3] 0 0 1 REDA22R5 [IronAxe,   ChestKey] [0x00, 0x04, 0x00, 0x00]
+UNIT 0x9A Thief  0x5A Level(c13Lv, Enemy, 1) [26, 3] 0 0 1 REDA26R5 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
 UNIT 
+
+SEFlank:
+CHECK_ALLEGIANCE 0xFFFF
+BEQ 0x0 0xC 0x0 //If PC triggers goto 0
+    ENUF 0xB //Unset B so this event can trigger later.
+    B 0x1
+LABEL 0x0
+LoadReinforcements(SESquad)
+LABEL 0x1
+NoFade
+ENDA
+
+SESquad:
+UNIT 0x9A Thief  0x5A Level(c13Lv, Enemy, 1) [21,24] 0 0 1 REDA19R21 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
+UNIT 0x9A Pirate 0x5A Level(c13Lv, Enemy, 1) [21,24] 0 0 1 REDA21R22 [IronAxe,   ChestKey] [0x00, 0x04, 0x00, 0x00]
+UNIT 0x9A Thief  0x5A Level(c13Lv, Enemy, 1) [21,24] 0 0 1 REDA18R24 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
+UNIT 0x9A PegasusKnight 0x5A Level(c13Lv, Enemy, 1) [21,24] 0 0 1 REDA20R20 [SteelLance] [0x00, 0x04, 0x00, 0x00]
+UNIT
+
+Thieves1:
+CHECK_ALLEGIANCE 0xFFFF
+BEQ 0x0 0xC 0x0 //If PC triggers goto 0
+    ENUF 0xB //Unset B so this event can trigger later.
+    B 0x1
+LABEL 0x0
+LoadReinforcements(ThiefFirst)
+LABEL 0x1
+NoFade
+ENDA
 
 ALIGN 4
 SimLog_Dunno:
@@ -142,6 +208,8 @@ UNIT 0x9 Paladin 0 Level(20, Ally, True) [ 5, 24] 0b 0x00 0 0x0 [Spear, Runeswor
 UNIT 0xA Paladin 0 Level(20, Ally, True) [ 5, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
 UNIT
 
+
+
 BonePrize:
 UNIT Mealy Hero 0 Level(5, NPC, True) [12,16] 0b 0x00 1 REDA12R16 [0x00, 0x00, 0x00, 0x00] NoAI
 UNIT
@@ -151,4 +219,127 @@ LoadReinforcements(BonePrize)
 NoFade
 SetSkills(Mealy, DesperationID, SealSpdID, SolID) //Personal is Smite (shove 2 tiles).
 ENDA
-//nah
+
+Evt5r5:
+LoadReinforcement(Unit5r5)
+NoFade
+ENDA
+Unit5r5:
+UNIT 0x9A Mage 0x5A Level(c13Lv, Enemy, 1) [ 5, 5] 0b 0x00 1 REDA5R5 [Bolting, Thunder] NoAI
+UNIT
+
+Evt14r7:
+LoadReinforcement(Unit14r7)
+NoFade
+ENDA
+Unit14r7:
+UNIT 0x9A Shaman 0x5A Level(c13Lv, Enemy, 1) [ 5, 5] 0b 0x00 1 REDA14R7 [Luna] NoAI
+UNIT
+
+Evt8r8:
+LoadReinforcement(Unit8r8)
+NoFade
+ENDA
+Unit8r8:
+UNIT 0x9A Archer 0x5A Level(c13Lv, Enemy, 1) [ 8, 8] 0b 0x00 1 REDA8R8 [SteelBow] NoAI
+UNIT
+
+Evt17r10:
+LoadReinforcement(Unit17r10)
+NoFade
+ENDA
+Unit17r10:
+UNIT 0x9A Archer 0x5A Level(c13Lv, Enemy, 1) [17,10] 0b 0x00 1 REDA17R10 [SteelBow] NoAI
+UNIT
+
+Evt7r16:
+LoadReinforcement(Unit7r16)
+NoFade
+ENDA
+Unit7r16:
+UNIT 0x9A Archer 0x5A Level(c13Lv, NPC, 1) [ 7,16] 0b 0x00 1 REDA7R16 [SteelBow] NoAI
+UNIT
+
+Evt5r22:
+LoadReinforcement(Unit5r22)
+NoFade
+ENDA
+Unit5r22:
+UNIT 0x9A Mercenary 0x5A Level(c13Lv, NPC, 1) [ 5,22] 0b 0x00 1 REDA5R22 [SteelBlade] NoAI
+UNIT
+
+Evt4r18:
+LoadReinforcement(Unit4r18)
+NoFade
+ENDA
+Unit4r18:
+UNIT 0x9A Cavalier 0x5A Level(c13Lv, NPC, 1) [ 7,16] 0b 0x00 1 REDA7R16 [SteelLance] NoAI
+UNIT
+
+Evt5r15:
+LoadReinforcement(Unit5r15)
+NoFade
+ENDA
+Unit4r18:
+UNIT 0x9A Myrmidon 0x5A Level(c13Lv, Enemy, 1) [ 5,15] 0b 0x00 1 REDA5R15 [KillingEdge] NoAI
+UNIT
+
+Evt10r12:
+LoadReinforcement(Unit10r12)
+NoFade
+ENDA
+Unit10r12:
+UNIT 0x9A Myrmidon 0x5A Level(c13Lv, Enemy, 1) [10,12] 0b 0x00 1 REDA10R12 [KillingEdge] NoAI
+UNIT
+
+Throneish0:
+UNIT 0x9A Archer 0x5A Level(c13Lv, Enemy, 1) [14, 3] 100b 0x00 0 0x0 [SteelBow] NoAI
+UNIT
+Throneish1:
+UNIT 0x9A Cavalier 0x5A Level(c13Lv, Enemy, 1) [27, 5] 100b 0x00 0 0x0 [SteelLance] NoAI
+UNIT
+Throneish2:
+UNIT 0x9A Fighter 0x5A Level(c13Lv, Enemy, 1) [24,7] 100b 0x00 0 0x0 [HandAxe] NoAI
+UNIT
+Throneish3:
+UNIT 0x9A Mage 0x5A Level(c13Lv, Enemy, 1) [19, 2] 100b 0x00 0 0x0 [Thunder] NoAI
+UNIT
+
+UpperEvent:
+    SMOV r1 Poin(Throneish0)
+    SMOV r2 Poin(Throneish1)
+    SMOV r3 Poin(Throneish2)
+    SMOV r4 Poin(Throneish3)
+    CALL LoadOneOfFour
+NoFade
+ENDB
+
+LoadOneOfFour:
+    RANDOMNUMBER 0x4       //Sets slot C to a number from 0 to 4.
+    SMOV r5 0x0
+    BEQ 0x0 rC r5
+    SMOV r5 1
+    BEQ 0x1 rC r5
+    SMOV r5 2
+    BEQ 0x2 rC r5
+
+    SADD slotsParam(r2, r4, r0)
+    CALL $9EE274
+    GOTO 3
+
+    LABEL 0
+    SADD slotsParam(r2, r1, r0)
+    CALL $9EE274
+    GOTO 3
+
+    LABEL 1
+    CALL $9EE274
+    GOTO 3
+
+    LABEL 2
+    SADD slotsParam(r2, r3, r0)
+    CALL $9EE274
+
+    LABEL 3
+ENDA
+
