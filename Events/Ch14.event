@@ -1,5 +1,8 @@
 EventPointerTable(Ch14_ID, Ch14_Events_Table)
 
+#define Ch14_Level1 1 //level of unpromoted enemies
+#define Ch14_Level2 1 //level of promoted enemies
+
 Ch14_Events_Table:
 POIN Ch14_TurnBasedEvents
 POIN Ch14_CharacterBasedEvents
