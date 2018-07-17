@@ -1,0 +1,314 @@
+
+#define DISABLE_TUTORIALS
+#include EAstdlib.event
+
+
+EventPointerTable(0x5A,PointersCh19)
+EventPointerTable(0x59,TileChangesCh19) 
+
+ALIGN 4
+
+PointersCh19:
+POIN Turn_eventsCh19 
+POIN Character_eventsCh19
+POIN Location_eventsCh19
+POIN Misc_eventCh19
+POIN Dunno1Ch19 Dunno2Ch19 Dunno3Ch19 TutorialCh19
+POIN Traps1Ch19 Traps2Ch19
+POIN GoodCh19 GoodCh19  //This unit group prep
+POIN $0 $0 $0
+POIN $0 $0 $0
+POIN Opening_eventCh19 Ending_eventCh19
+
+ALIGN 4
+Dunno1Ch19:
+END_MAIN
+
+ALIGN 4
+
+Dunno2Ch19:
+END_MAIN
+ALIGN 4
+
+Dunno3Ch19:
+END_MAIN
+ALIGN 4
+
+TutorialCh19:
+END_MAIN
+ALIGN 4
+
+Traps1Ch19:
+// Vein(9,23,0x0,DV1Desc) //freeze enemies
+ENDTRAP
+ALIGN 4
+
+Traps2Ch19:
+ENDTRAP
+ALIGN 4
+
+
+BadCh19:
+
+UNIT 0x66 Druid 0x0 Level(7, Enemy, False) [15,6] 0x2 0x0 0x0 0x0 [Luna,Eclipse] NeverMoveAI
+UNIT 0x67 Swordmaster 0x0 Level(3, Enemy, False) [15,7] 0x2 0x0 0x0 0x0 [KillingEdge] AttackInRangeAI
+UNIT Seibah Hero_F 0x0 Level(1, Enemy, False) [20,12] 0x2 0x0 0x0 0x0 [SilverBlade,DoorKey] AttackInRangeAI
+
+
+UNIT 0xA6 Myrmidon 0x66 Level(15, Enemy, True) [15,11] 0x0 0x00 0x0 0x0 [BraveSword] AttackInRangeAI
+
+UNIT 0xA7 Shaman 0x66 Level(15, Enemy, True) [14,12] 0x0 0x00 0x0 0x0 [Flux] AttackInRangeAI
+UNIT 0xA7 Shaman 0x66 Level(15, Enemy, True) [16,12] 0x0 0x00 0x0 0x0 [Flux] AttackInRangeAI
+
+UNIT 0xA8 Fighter 0x66 Level(16, Enemy, True) [15,13] 0x0 0x00 0x0 0x0 [IronAxe] AttackInRangeAI
+
+UNIT 0xA8 Fighter 0x66 Level(16, Enemy, True) [2,9] 0x0 0x00 0x0 0x0 [IronAxe,HandAxe] AttackInRangeAI
+UNIT 0xA8 Fighter 0x66 Level(16, Enemy, True) [6,9] 0x0 0x00 0x0 0x0 [IronAxe,HandAxe] AttackInRangeAI
+UNIT 0xA8 Fighter 0x66 Level(16, Enemy, True) [10,9] 0x0 0x00 0x0 0x0 [IronAxe,HandAxe] AttackInRangeAI
+UNIT 0xA8 Fighter 0x66 Level(16, Enemy, True) [20,9] 0x0 0x00 0x0 0x0 [IronAxe,HandAxe] AttackInRangeAI
+
+UNIT 0xA9 Knight 0x66 Level(16, Enemy, True) [2,12] 0x2 0x00 0x0 0x0 [Javelin,DoorKey] NeverMoveAI
+UNIT 0xA9 Knight 0x66 Level(16, Enemy, True) [6,12] 0x2 0x00 0x0 0x0 [Javelin,DoorKey] NeverMoveAI
+UNIT 0xA9 Knight 0x66 Level(16, Enemy, True) [10,12] 0x2 0x00 0x0 0x0 [Javelin,DoorKey] NeverMoveAI
+
+UNIT
+
+BadCh19Part2:
+
+UNIT 0xA6 Myrmidon 0x66 Level(15, Enemy, True) [3,19] 0x0 0x00 0x0 0x0 [IronSword] AttackInRangeAI
+
+UNIT 0xA7 Shaman 0x66 Level(15, Enemy, True) [2,19] 0x0 0x00 0x0 0x0 [Flux] AttackInRangeAI
+
+UNIT 0xA6 Myrmidon 0x66 Level(15, Enemy, True) [2,15] 0x0 0x00 0x0 0x0 [IronSword] AttackInRangeAI
+
+UNIT 0xA7 Shaman 0x66 Level(15, Enemy, True) [2,14] 0x0 0x00 0x0 0x0 [Flux] AttackInRangeAI
+
+
+UNIT 0xA8 Fighter 0x66 Level(16, Enemy, True) [5,19] 0x0 0x00 0x0 0x0 [HandAxe] AttackInRangeAI
+UNIT 0xA8 Fighter 0x66 Level(16, Enemy, True) [5,20] 0x0 0x00 0x0 0x0 [SteelAxe] AttackInRangeAI
+UNIT 0xA8 Fighter 0x66 Level(16, Enemy, True) [10,19] 0x0 0x00 0x0 0x0 [HandAxe] AttackInRangeAI
+UNIT 0xA8 Fighter 0x66 Level(16, Enemy, True) [10,20] 0x0 0x00 0x0 0x0 [SteelAxe] AttackInRangeAI
+
+
+UNIT
+
+ReinforcementsCh19:
+UNIT 0xA7 Mage 0x66 Level(15, Enemy, True) [0,16] 0x0 0x00 0x0 0x0 [Fire] PursueWithoutHeedAI
+UNIT 0xA6 Myrmidon 0x66 Level(15, Enemy, True) [0,17] 0x0 0x00 0x0 0x0 [SteelBlade] PursueWithoutHeedAI
+
+UNIT
+
+Reinforcements2Ch19:
+UNIT 0xA7 Mage 0x66 Level(15, Enemy, True) [22,13] 0x0 0x00 0x0 0x0 [Fire] PursueWithoutHeedAI
+UNIT 0xA6 Myrmidon 0x66 Level(15, Enemy, True) [22,14] 0x0 0x00 0x0 0x0 [SteelBlade] PursueWithoutHeedAI
+
+UNIT
+
+ALIGN 4
+
+GoodCh19:
+UNIT Eirika 0x2 0x0 Level(15, Ally, True) [14,19] 0x0 0x0 0x0 0x0 [SteelSword,IronSword,Vulnerary] NoAI
+
+UNIT 0x2 Assassin Eirika Level(7, Ally, True) [13,20] 0x0 0x0 0x0 0x0 [KillingEdge,Elixir] NoAI
+UNIT 0x3 Cavalier Eirika Level(15, Ally, True) [14,20] 0x0 0x0 0x0 0x0 [BraveLance, IronLance] NoAI
+UNIT 0x4 Cavalier Eirika Level(15, Ally, True) [15,20] 0x0 0x0 0x0 0x0 [BraveSword, IronSword] NoAI
+
+UNIT 0x5 Bishop Eirika Level(5, Ally, True) [13,21] 0x0 0x0 0x0 0x0 [Shine,Mend] NoAI
+UNIT 0x6 PegasusKnight Eirika Level(15, Ally, True) [14,21] 0x0 0x0 0x0 0x0 [SteelLance, IronLance] NoAI
+UNIT 0x7 Pirate Eirika Level(15, Ally, True) [15,21] 0x0 0x0 0x0 0x0 [SteelAxe,IronAxe] NoAI
+
+UNIT 0x8 Archer_F Eirika Level(15, Ally, True) [13,22] 0x0 0x0 0x0 0x0 [SteelBow,IronBow] NoAI
+UNIT 0x9 Valkyrie Eirika Level(5, Ally, True) [14,22] 0x0 0x0 0x0 0x0 [Recover,Lightning,Fire] NoAI
+UNIT 0xA Dancer Eirika Level(15, Ally, True) [15,22] 0x0 0x0 0x0 0x0 [Elixir,Elixir] NoAI
+
+UNIT
+
+EndChapterUnitsCh19:
+UNIT Eirika 0x1 0x0 Level(3, Ally, False) [14,4] 0x0 0x0 0x0 0x0 [LightBrand,IronSword,Vulnerary] NoAI
+
+
+UNIT
+
+
+
+
+
+ALIGN 4
+
+Turn_eventsCh19:
+TURN 0x0 CallRein1Ch19 [1,6] 0x0
+TURN 0x0 CallRein2Ch19 [5,12] 0x0
+TURN
+
+
+
+CallRein1Ch19:
+ReinforcementEvent(ReinforcementsCh19)
+ENDA
+
+CallRein2Ch19:
+ReinforcementEvent(Reinforcements2Ch19)
+ENDA
+
+
+
+Character_eventsCh19:
+CharacterEventBothWays(0x10,EirikaSeibahTalkCh19,Eirika,Seibah)
+
+
+CHAR
+
+
+EirikaSeibahTalkCh19:
+MUSC Comrades
+TEXTSHOW (PlaceholderText)
+TEXTEND
+REMA
+
+TurnAlly(Seibah)
+ENDA
+
+
+
+
+Location_eventsCh19:
+CHES 0x0 Tomahawk [2,10] 0x14
+CHES 0x0 Bolting [6,10] 0x14
+CHES 0x0 BraveSword [10,10] 0x14
+Seize(15,6)
+Door(2,11)
+Door(6,11)
+Door(10,11)
+Door(20,11)
+LOCA
+
+
+Misc_eventCh19:
+CauseGameOverIfLordDies
+
+AREA 0x7 SwitchPress [20, 10] [20, 10] 
+
+
+END_MAIN
+
+
+SwitchPress:
+
+CHECK_ALLEGIANCE 0xFFFF //Check allegiance of active character
+SETVAL 0x2 0x2//Stores 0x2 (value of enemy) to Memory slot 0x2
+IFNE 0x00 0xC 0x2 // If not enemy XD
+
+TEXTSHOW (PlaceholderText)
+TEXTEND
+REMA
+
+
+TILECHANGE 0x7//Open the right door
+STAL 0x05
+
+
+GOTO 0x1  // Else
+ENIF 0x0
+
+
+ENUF 0x7 //sets eventID as "off"
+ENIF 0x1  //End of the Else
+
+ENDA
+
+
+
+
+
+Opening_eventCh19:
+MUSC Advance
+LOAD1 0x1 GoodCh19
+ENUN
+LOAD1 0x1 BadCh19
+ENUN
+LOAD1 0x1 BadCh19Part2
+ENUN
+
+SetBackground(Shrine_3)
+TEXTSHOW (PlaceholderText)
+TEXTEND
+REMA
+CAM1 Eirika
+CALL $9EE2C4
+GotoPrepScreen
+ENDA
+
+
+
+
+
+
+Ending_eventCh19:
+// UnitClear
+MUSC Victory
+NoFade
+FADI 0x10
+CLEE 0x0
+CLEA 0x0
+LOAD2 0x1 EndChapterUnitsCh19
+ENUN
+CAM1 Eirika
+SetBackground(Shrine_3)
+FADU 0x10
+NoFade
+TEXTSHOW (PlaceholderText)
+TEXTEND
+REMA
+
+CALL $9EE2C4
+
+
+
+MNC2 20
+ENDA
+
+
+
+ALIGN 4
+TrapDataCh19:
+ENDTRAP
+
+ALIGN 4
+MESSAGE Events end at offset currentOffset
+//The map for this chapter is at offset: ????????
+
+
+ALIGN 4
+TileChangesCh19:     
+TileMap(0x00,2,10,1,1,OpenChestTempleCh19)
+TileMap(0x01,6,10,1,1,OpenChestTempleCh19)
+TileMap(0x02,10,10,1,1,OpenChestTempleCh19)
+
+TileMap(0x03,2,11,1,1,OpenDoorTempleCh19)
+TileMap(0x04,6,11,1,1,OpenDoorTempleCh19)
+TileMap(0x05,10,11,1,1,OpenDoorTempleCh19)
+TileMap(0x06,20,11,1,1,OpenDoorTempleCh19)
+
+TileMap(0x07,15,8,1,2,BridgeCh19)
+
+
+TileMapEnd
+ALIGN 4
+
+
+ALIGN 4
+
+
+
+OpenChestTempleCh19:
+SHORT 0x0110
+
+OpenDoorTempleCh19:
+SHORT 0x001C
+
+BridgeCh19:
+SHORT 0x0044
+SHORT 0x0044
+
+MESSAGE Tiles end at offset currentOffset
+

@@ -1,0 +1,33 @@
+# 0x229 SeibahName
+Seibah[X]
+
+# 0x285 SeibahDesc
+A servant looking for the[NL]
+Holy Grail.[X]
+
+
+# 0x22A RinsletName
+Rinslet[X]
+
+# 0x286 RinsletDesc
+A noblewoman from an[NL]
+alternate world.[X]
+
+# 0x249 KamitoName
+Kamito[X]
+
+# 0x2A3 KamitoDesc
+The incarnation of the Demon King[NL]
+from another world.[X]
+
+# 0x24A ClaireName
+Claire[X]
+
+# 0x2A4 ClaireDesc
+The Dark Priestress of the Demon[NL]
+King incarnation.[X]
+
+
+
+
+
