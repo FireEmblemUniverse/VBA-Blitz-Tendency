@@ -72,6 +72,7 @@
 #define Kefka 0x6C
 #define Cameron 0x58
 #define Bojo 0x59
+#define Ch17Boss 0x62
 #define DarkFact 0x64
 #define KojimaNPC 0x76
 #define SakaguchiNPC 0x77
@@ -79,6 +80,7 @@
 
 
 #define Ch5Generic 0x8A
+#define Ch17Enemies 0xA2
 #define Ch18Enemies 0xA4
 #define Ch23Enemies 0xAE
 #define Ch27ChrMGeneric 0xC0 // Monster

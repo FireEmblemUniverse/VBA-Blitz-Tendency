@@ -67,3 +67,6 @@ DeuxnidsMug:
 #incext PortraitFormatter "Deuxnids.png"
 setMugEntry(0x3F,DeuxnidsMug, 2, 6, 2, 4)
 
+NicholMug:
+#incext PortraitFormatter "Nichol.png"
+setMugEntry(0x1E, NicholMug, 3, 5, 3, 3)

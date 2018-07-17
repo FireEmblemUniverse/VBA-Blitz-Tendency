@@ -149,10 +149,10 @@ Kefka[X]
 A crazy clown from a distant land.[N]
 Remarkably fond of one-liners.[X]
 
-##AdolgiName
+## AdolgiName
 Adolgi[X]
 
-##AdolgiDesc
+## AdolgiDesc
 Dogi ate roo adol.[NL]
 When adol became a human,[NL]
 bad things happened.[X]
@@ -162,3 +162,10 @@ Deuxnids[X]
 
 ## descDeuxnids
 Not to be confused with Dennis.[X]
+
+## nameNichol
+Nichol[X]
+
+## descNichol
+A ruthless man who has two fears:[N]
+Death, and a ruined Christmas.[X]
