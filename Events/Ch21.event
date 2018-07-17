@@ -1,4 +1,4 @@
-EventPointerTable(0x85, PointerList)
+EventPointerTable(0x64, PointerList)
 
 PointerList:
 POIN TurnBasedEvents
@@ -54,27 +54,31 @@ Dunno3:
 END_MAIN
 
 Traps1:
-END_MAIN
+ENDTRAP
+
+ALIGN 4
 
 Traps2:
-END_MAIN
+ENDTRAP
+
+ALIGN 4
 
 Tutorial:
 END_MAIN
 
 Units1:
-UNIT Vedge VedgeLord 0x00 Level(1, Ally, 0) [2,9] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [3,10] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [2,10] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [1,10] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [3,9] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [1,9] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [3,8] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [2,8] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [1,8] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [4,9] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [4,8] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [0,9] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Vedge VedgeLord 0x00 Level(1, Ally, 0) [2,9] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [3,10] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [2,10] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [1,10] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [3,9] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [1,9] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [3,8] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [2,8] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [1,8] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [4,9] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [4,8] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [0,9] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT Verge EphraimMasterLord Vedge Level(1, Ally, 0) [0,8] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT
 
@@ -83,36 +87,36 @@ UNIT Donna GreatKnight_F Vedge Level(15, Ally, 0) [2,7] 0x00 0x00 0x0 0x00 [Silv
 UNIT
 
 Bad:
-UNIT Zonta General 0x00 Level(16, Enemy, 0) [15,21] 0x2 0x00 0x0 0x00 [Runesword, BraveAxe] GuardTileAI 
-UNIT 0x80 Druid Zonta Level(16, Enemy, 1) [14,19] 0x00 0x00 0x0 0x00 [Bolting, Sleep] AttackInRangeAI 
-UNIT 0x80 Bishop Zonta Level(16, Enemy, 1) [16,19] 0x00 0x00 0x0 0x00 [Purge, Physic] AttackInRangeAI 
-UNIT 0x80 GreatKnight Zonta Level(16, Enemy, 1) [3,17] 0x00 0x00 0x0 0x00 [BraveLance, Spear] GuardTileAI 
-UNIT 0x80 GreatKnight Zonta Level(16, Enemy, 1) [1,20] 0x00 0x00 0x0 0x00 [BraveLance, SilverBlade] AttackInRangeAI 
-UNIT 0x80 GreatKnight Zonta Level(16, Enemy, 1) [8,20] 0x00 0x00 0x0 0x00 [BraveLance, SilverBlade] AttackInRangeAI 
-UNIT 0x80 GreatKnight Zonta Level(16, Enemy, 1) [15,15] 0x00 0x00 0x0 0x00 [BraveLance, SilverBlade] AttackInRangeAI 
-UNIT 0x80 Hero Zonta Level(16, Enemy, 1) [10,17] 0x00 0x00 0x0 0x00 [SilverBlade] AttackInRangeAI 
-UNIT 0x80 Hero Zonta Level(16, Enemy, 1) [11,8] 0x00 0x00 0x0 0x00 [SilverBlade] AttackInRangeAI 
-UNIT 0x80 Hero Zonta Level(16, Enemy, 1) [11,10] 0x00 0x00 0x0 0x00 [SilverBlade] AttackInRangeAI 
-UNIT 0x80 Hero Zonta Level(16, Enemy, 1) [3,25] 0x00 0x00 0x0 0x00 [SilverBlade] AttackInRangeAI 
-UNIT 0x80 Hero Zonta Level(16, Enemy, 1) [11,27] 0x00 0x00 0x0 0x00 [SilverBlade] AttackInRangeAI 
-UNIT 0x80 Berserker Zonta Level(16, Enemy, 1) [11,26] 0x00 0x00 0x0 0x00 [SilverAxe] AttackInRangeAI 
-UNIT 0x80 Berserker Zonta Level(16, Enemy, 1) [0,28] 0x00 0x00 0x0 0x00 [SilverAxe] AttackInRangeAI 
-UNIT 0x80 Berserker Zonta Level(16, Enemy, 1) [18,11] 0x00 0x00 0x0 0x00 [SilverAxe] AttackInRangeAI 
+UNIT Zonta General 0x00 Level(16, Enemy, 0) [15,21] 0x2 0x00 0x0 0x00 [Runesword, BraveAxe] GuardTileAI
+UNIT 0x80 Druid Zonta Level(16, Enemy, 1) [14,19] 0x00 0x00 0x0 0x00 [Bolting, Sleep] AttackInRangeAI
+UNIT 0x80 Bishop Zonta Level(16, Enemy, 1) [16,19] 0x00 0x00 0x0 0x00 [Purge, Physic] AttackInRangeAI
+UNIT 0x80 GreatKnight Zonta Level(16, Enemy, 1) [3,17] 0x00 0x00 0x0 0x00 [BraveLance, Spear] GuardTileAI
+UNIT 0x80 GreatKnight Zonta Level(16, Enemy, 1) [1,20] 0x00 0x00 0x0 0x00 [BraveLance, SilverBlade] AttackInRangeAI
+UNIT 0x80 GreatKnight Zonta Level(16, Enemy, 1) [8,20] 0x00 0x00 0x0 0x00 [BraveLance, SilverBlade] AttackInRangeAI
+UNIT 0x80 GreatKnight Zonta Level(16, Enemy, 1) [15,15] 0x00 0x00 0x0 0x00 [BraveLance, SilverBlade] AttackInRangeAI
+UNIT 0x80 Hero Zonta Level(16, Enemy, 1) [10,17] 0x00 0x00 0x0 0x00 [SilverBlade] AttackInRangeAI
+UNIT 0x80 Hero Zonta Level(16, Enemy, 1) [11,8] 0x00 0x00 0x0 0x00 [SilverBlade] AttackInRangeAI
+UNIT 0x80 Hero Zonta Level(16, Enemy, 1) [11,10] 0x00 0x00 0x0 0x00 [SilverBlade] AttackInRangeAI
+UNIT 0x80 Hero Zonta Level(16, Enemy, 1) [3,25] 0x00 0x00 0x0 0x00 [SilverBlade] AttackInRangeAI
+UNIT 0x80 Hero Zonta Level(16, Enemy, 1) [11,27] 0x00 0x00 0x0 0x00 [SilverBlade] AttackInRangeAI
+UNIT 0x80 Berserker Zonta Level(16, Enemy, 1) [11,26] 0x00 0x00 0x0 0x00 [SilverAxe] AttackInRangeAI
+UNIT 0x80 Berserker Zonta Level(16, Enemy, 1) [0,28] 0x00 0x00 0x0 0x00 [SilverAxe] AttackInRangeAI
+UNIT 0x80 Berserker Zonta Level(16, Enemy, 1) [18,11] 0x00 0x00 0x0 0x00 [SilverAxe] AttackInRangeAI
 UNIT 0x80 Sage Zonta Level(16, Enemy, 1) [8,9] 0x00 0x00 0x0 0x00 [Fimbulvetr] AttackInRangeAI
 UNIT
 
 Bad2:
-UNIT 0x80 Sage Zonta Level(16, Enemy, 1) [14,11] 0x00 0x00 0x0 0x00 [Fimbulvetr] AttackInRangeAI 
-UNIT 0x80 Sage Zonta Level(16, Enemy, 1) [8,17] 0x00 0x00 0x0 0x00 [Fimbulvetr] AttackInRangeAI 
-UNIT 0x80 Sage Zonta Level(16, Enemy, 1) [17,26] 0x00 0x00 0x0 0x00 [Fimbulvetr] AttackInRangeAI 
-UNIT 0x80 Sage Zonta Level(16, Enemy, 1) [7,28] 0x00 0x00 0x0 0x00 [Fimbulvetr] AttackInRangeAI 
-UNIT 0x80 General Zonta Level(16, Enemy, 1) [7,1] 0x00 0x00 0x0 0x00 [Spear] AttackInRangeAI 
-UNIT 0x80 General Zonta Level(16, Enemy, 1) [7,3] 0x00 0x00 0x0 0x00 [Spear] AttackInRangeAI 
-UNIT 0x80 Swordmaster Zonta Level(16, Enemy, 1) [9,2] 0x00 0x00 0x0 0x00 [SilverSword] AttackInRangeAI 
-UNIT 0x80 Paladin Zonta Level(16, Enemy, 1) [12,3] 0x00 0x00 0x0 0x00 [SilverSword, BraveLance] AttackInRangeAI 
-UNIT 0x80 Paladin Zonta Level(16, Enemy, 1) [12,1] 0x00 0x00 0x0 0x00 [SilverSword, BraveLance] AttackInRangeAI 
-UNIT 0x80 Paladin Zonta Level(16, Enemy, 1) [17,7] 0x00 0x00 0x0 0x00 [SilverSword, BraveLance] AttackInRangeAI 
-UNIT 0x80 Paladin Zonta Level(16, Enemy, 1) [14,26] 0x00 0x00 0x0 0x00 [SilverSword, BraveLance] AttackInRangeAI 
+UNIT 0x80 Sage Zonta Level(16, Enemy, 1) [14,11] 0x00 0x00 0x0 0x00 [Fimbulvetr] AttackInRangeAI
+UNIT 0x80 Sage Zonta Level(16, Enemy, 1) [8,17] 0x00 0x00 0x0 0x00 [Fimbulvetr] AttackInRangeAI
+UNIT 0x80 Sage Zonta Level(16, Enemy, 1) [17,26] 0x00 0x00 0x0 0x00 [Fimbulvetr] AttackInRangeAI
+UNIT 0x80 Sage Zonta Level(16, Enemy, 1) [7,28] 0x00 0x00 0x0 0x00 [Fimbulvetr] AttackInRangeAI
+UNIT 0x80 General Zonta Level(16, Enemy, 1) [7,1] 0x00 0x00 0x0 0x00 [Spear] AttackInRangeAI
+UNIT 0x80 General Zonta Level(16, Enemy, 1) [7,3] 0x00 0x00 0x0 0x00 [Spear] AttackInRangeAI
+UNIT 0x80 Swordmaster Zonta Level(16, Enemy, 1) [9,2] 0x00 0x00 0x0 0x00 [SilverSword] AttackInRangeAI
+UNIT 0x80 Paladin Zonta Level(16, Enemy, 1) [12,3] 0x00 0x00 0x0 0x00 [SilverSword, BraveLance] AttackInRangeAI
+UNIT 0x80 Paladin Zonta Level(16, Enemy, 1) [12,1] 0x00 0x00 0x0 0x00 [SilverSword, BraveLance] AttackInRangeAI
+UNIT 0x80 Paladin Zonta Level(16, Enemy, 1) [17,7] 0x00 0x00 0x0 0x00 [SilverSword, BraveLance] AttackInRangeAI
+UNIT 0x80 Paladin Zonta Level(16, Enemy, 1) [14,26] 0x00 0x00 0x0 0x00 [SilverSword, BraveLance] AttackInRangeAI
 UNIT 0x80 Berserker Zonta Level(16, Enemy, 1) [18,0] 0x00 0x00 0x0 0x00 [Tomahawk] AttackInRangeAI
 UNIT
 
@@ -138,7 +142,7 @@ LOAD1 0x1 Bad2
 ENUN
 GotoPrepScreen
 
-GetJet:
+GetDonna:
 LOAD1 0x1 ArmourGirl
 FlashCursor(2, 7, 60)
 NoFade
