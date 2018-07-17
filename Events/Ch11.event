@@ -58,8 +58,11 @@ SLu_LocationBasedEvents: //TODO: New loot?
 Chest(MasterSeal,   17,  5)
 Chest(Speedwings,   19,  4)
 CHES 0x30 Wyrmslayer [19, 6] 0x14
+
 Chest(MetissTome,   21, 17)
+
 Chest(Physic,       16, 17)
+
 Chest(Berserk,      14,  9)
 CHES 0x31 DragonAxe [10,10] 0x14
 Chest(OceanSeal,     3,  6)
