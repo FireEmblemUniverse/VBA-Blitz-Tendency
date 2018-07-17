@@ -21,7 +21,7 @@ ALIGN 4
 //The tileset's palette. This must be either a .bin or .dmp file, but it must be extracted through
 //hex editors. The file in question must have a length of 140 in hex values. (Not sure why, gotta ask Pik)
 SnowPalette:
-#incbin "Tileset/SnowPalette_New.dmp"
+#incbin "SnowPalette_New.dmp"
 ALIGN 4
 
 //These are the pointers which you're going to replace. In here, for example, the tileset
