@@ -33,6 +33,7 @@
 #define VedgeLord BlitzLord
 #define VoidMonster 0x3
 #define VoidMaster 0x4
+#define Witch 0x77
 
 // Unit definitions
 #define Vedge 0x1
@@ -49,6 +50,7 @@
 #define Fanni 0xD
 #define Murat 0xF
 #define Jet 0x11
+#define Splenda 0x13
 #define Nichol 0x16
 #define Adolgi 0x17
 #define Sabin 0x1B
@@ -67,14 +69,15 @@
 #define Ch27ChrZomboss 0x4D // dracozombie boss
 #define Edgelard 0x4E
 #define Dennis 0x50
-#define Kefka 0x6C
 #define Cameron 0x58
 #define Bojo 0x59
+#define Wicky 0x5C
 #define DarkFact 0x64
+#define Kefka 0x6C
 #define KojimaNPC 0x76
 #define SakaguchiNPC 0x77
 
-
+#define Ch14_Enemy 0x5D
 #define Ch5Generic 0x8A
 #define Ch18Enemies 0xA4
 #define Ch23Enemies 0xAE
@@ -103,6 +106,7 @@
 #define C17MapChangesID 0x4E
 #define C17EventID 0x4F
 #define Chapter12 0xC
+#define Ch14_ID 0x41
 #define Chapter24 24
 #define Chapter24Map 0x6F
 #define Chatper24Events 0x71
@@ -114,6 +118,8 @@
 #define AllChapters 0xFF
 
 // Other
+#define Ch14_Level1 1 //level of unpromoted enemies
+#define Ch14_Level2 1 //level of promoted enemies
 #define Ch27FogLevel 5
 #define Ch27TurnsBetweenHumanReinf 2
 #define Ch27GargoylesKillCount 10
