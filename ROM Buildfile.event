@@ -28,6 +28,7 @@
     //Maps
     #include "Maps/Master Map Installer.event"
     #include "Maps/FixedValni.event"
+    #include "Maps/FE6 Snow Tileset/FE6 Snow Installer.event"
 
     //Palettes
     #include "Battle Palettes/Palette Setup.event"
