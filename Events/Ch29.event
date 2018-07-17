@@ -104,6 +104,8 @@ END_MAIN
 LocationBasedEvents:
 Armory(ArmoryList, 21, 14)
 //TODO: Arena on 22, 14
+Village(0x8, LeftVillage, 2, 25)
+Village(0x9, RightVillage, 29, 5)
 END_MAIN
 
 MiscBasedEvents:
@@ -137,6 +139,12 @@ EndingScene:
 MNC2 0x23
 NoFade
 ENDA
+
+LeftVillage:
+VillageEventItem(PlaceholderText, Village, Dracoshield)
+
+RightVillage:
+VillageEventItem(PlaceholderText, Village, Fortify)
 
 // Shop Data
 ArmoryList:
