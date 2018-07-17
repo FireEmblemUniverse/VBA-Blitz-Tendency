@@ -30,14 +30,34 @@ END_MAIN
 
 ALIGN 4
 SimLog_LocationBasedEvents: //TODO: New loot?
-CHES 0x10 Vulnerary    [ 5,22] 0x14
-CHES 0x11 Elixir       [ 4,18] 0x14
-CHES 0x12 ChestKey_5   [ 5,15] 0x14
-CHES 0x13 Fiendcleaver [ 7,16] 0x14
-CHES 0x14 Dracoshield  [ 7,16] 0x14
-CHES 0x15 Fiendcleaver [ 7,16] 0x14
-CHES 0x16 Fiendcleaver [ 7,16] 0x14
-CHES 0x17 Fiendcleaver [ 7,16] 0x14
+//If something is indented, that loot isn't "decided"
+CHES 0x10 Vulnerary    [20, 1] 0x14 //Nearly-impossible to get at chests, therefore really extra items for enemies
+CHES 0x11 Vulnerary    [28, 1] 0x14
+CHES 0x12 Vulnerary    [13, 2] 0x14
+CHES 0x13 Vulnerary    [20, 3] 0x14
+CHES 0x14 Vulnerary    [28, 3] 0x14
+CHES 0x15 Vulnerary    [15, 4] 0x14
+CHES 0x16 Vulnerary    [ 5, 5] 0x14
+    CHES 0x17 Vulnerary    [14, 7] 0x14
+    CHES 0x18 Vulnerary    [ 8, 8] 0x14
+    CHES 0x19 Vulnerary    [17,10] 0x14
+    CHES 0x1A Vulnerary    [22,11] 0x14
+    CHES 0x1B Vulnerary    [ 8,12] 0x14
+    CHES 0x1C Vulnerary    [10,12] 0x14
+    CHES 0x1D Vulnerary    [26,12] 0x14
+    CHES 0x1E Vulnerary    [15,13] 0x14
+    CHES 0x1F Vulnerary    [20,14] 0x14
+CHES 0x20 ChestKey_5    [ 5,15] 0x14
+CHES 0x21 Dracoshield  [ 7,16] 0x14
+    CHES 0x22 Vulnerary  [12,16] 0x14
+    CHES 0x23 Vulnerary  [25,16] 0x14
+    CHES 0x24 Fiendcleaver [17,17] 0x14
+CHES 0x25 Elixir       [ 4,18] 0x14
+    CHES 0x26 Fiendcleaver [27,18] 0x14
+    CHES 0x27 Fiendcleaver [13,19] 0x14
+    CHES 0x28 Fiendcleaver [24,21] 0x14
+CHES 0x29 Vulnerary    [ 5,22] 0x14 //Starter chest
+    CHES 0x2A Fiendcleaver [20,23] 0x14
 Seize(24,3)
 END_MAIN
 
@@ -76,13 +96,19 @@ CHECK_TURNS
 SMOV r1 0x3 //If before turn 3, don't reinforce
 BLT 0x0 rC r1
     //only reinforce if even turn
+    SMOV r1 0x1
+    SAND rC r1 //1 if odd 0 if even
+    BNE 0x0 rC 0x0
+        LoadReinforcements(ThroneStairs)
 LABEL 0x0
 NoFade
 ENDA
 
 DefaultEnemies:
+UNIT 0x5A Manakete_F_2 0 Level((c13Lv+5), Enemy, 1) [24, 3] 0b 0x0 0 0 [Dragonshard] NeverMoveAI
 UNIT 0x9A Thief 0x5A Level(c13Lv, Enemy, 1) [22, 5] 0 0 0 0 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
 UNIT 0x9A Thief 0x5A Level(c13Lv, Enemy, 1) [26, 3] 0 0 0 0 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
+UNIT 0x9A Thief 0x5A Level(c13Lv, Enemy, 1) [12,10] 0 0 0 0 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
 
 ThroneStairs:
 UNIT 0x9A Thief 0x5A Level(c13Lv, Enemy, 1) [22, 3] 0 0 1 REDA22R5 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
@@ -125,3 +151,4 @@ LoadReinforcements(BonePrize)
 NoFade
 SetSkills(Mealy, DesperationID, SealSpdID, SolID) //Personal is Smite (shove 2 tiles).
 ENDA
+//nah

@@ -68,7 +68,7 @@
 #define HuntersBow 0xBD
 #define HuntersBowIconID 0xAE
 #define RunicBow 0xBE
-#define RunicBowIconID 0xCA
+#define RunicBowIconID 0xAF
 #define PowerGem BlackGem
 
 #define Dragonshard 0xC3

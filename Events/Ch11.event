@@ -101,7 +101,9 @@ ENDA
 SLu_Spawn:
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
+    CALL SLu_Company
 LABEL 0x0
+NoFade
 ENDA
 
 ALIGN 4
@@ -294,7 +296,6 @@ NoFade
 ENDB
 
 SLu_Company:
-SLu_Spawn:
 
     SMOV r1 Poin(SweetLu_0)
     SMOV r2 Poin(SweetLu_1)
