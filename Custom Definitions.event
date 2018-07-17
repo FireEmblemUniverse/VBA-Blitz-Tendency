@@ -51,6 +51,7 @@
 #define Jet 0x11
 #define Nichol 0x16
 #define Adolgi 0x17
+#define Donna 0x1A
 #define Sabin 0x1B
 #define Ersatz 0x1F
 #define Inafune 0x20
