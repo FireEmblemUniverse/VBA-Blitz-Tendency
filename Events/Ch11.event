@@ -143,15 +143,15 @@ UNIT EnemyID Cavalier 0 Level(Ch11Level, Enemy, 1)[ 4, 16] 0b 0x0 0 0 [IronSword
 UNIT EnemyID Mercenary 0 Level(Ch11Level, Enemy, 1) [20, 19] 0b 0x0 0 0 [SteelBlade] AttackInRangeAI
 UNIT EnemyID Fighter 0 Level(Ch11Level, Enemy, 1)   [20, 22] 0b 0x0 0 0 [BattleAxe] AttackInRangeAI
 
-UNIT EnemyID Manakete_F_2 LeaderID Level(3, Enemy, 1) [12, 10] 0b 0x0 0 0 [Dragonshard] AttackInRangeAI
+UNIT EnemyID Manakete_2_F LeaderID Level(3, Enemy, 1) [12, 10] 0b 0x0 0 0 [Dragonshard] AttackInRangeAI
 UNIT
 
 SLu_Manakete_19_6:
-UNIT EnemyID Manakete_F_2 LeaderID Level(3, Enemy, 1) [19, 6] 0b 0x00 1 REDA19R6 [Dragonshard] AttackInRangeAI
+UNIT EnemyID Manakete_2_F LeaderID Level(3, Enemy, 1) [19, 6] 0b 0x00 1 REDA19R6 [Dragonshard] AttackInRangeAI
 UNIT
 
 SLu_Manakete_10_10:
-UNIT EnemyID Manakete_F_2 LeaderID Level(3, Enemy, 1) [10, 10] 0b 0x00 1 REDA10R10 [Dragonshard] AttackInRangeAI
+UNIT EnemyID Manakete_2_F LeaderID Level(3, Enemy, 1) [10, 10] 0b 0x00 1 REDA10R10 [Dragonshard] AttackInRangeAI
 UNIT
 
 ALIGN 4
@@ -170,13 +170,13 @@ UNIT
 
 ALIGN 4
 Chesdrake_10_10:
-LoadReinforcements(SLuManakete_10_10)
+LoadReinforcements(SLu_Manakete_10_10)
 NoFade
 ENDB
 
 ALIGN 4
 Chesdrake_19_6:
-LoadReinforcements(SLuManakete_19_6)
+LoadReinforcements(SLu_Manakete_19_6)
 NoFade
 ENDB
 
@@ -389,15 +389,15 @@ LT_b0:
 UNIT LuAlly Troubadour SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Recover, Vulnerary] NoAI
 UNIT
 
-LT_b2:
+LT_b1:
 UNIT LuAlly Cleric SLuUID Level((Ch11Level+6), NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Physic, Vulnerary] NoAI
 UNIT
 
-LT_b3:
+LT_b2:
 UNIT LuAlly Druid SLuUID Level(1, NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Sleep, Heal, Vulnerary] NoAI
 UNIT
 
-LT_b4:
+LT_b3:
 UNIT LuAlly Cleric SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Fortify, Vulnerary] NoAI
 UNIT
 
@@ -406,7 +406,7 @@ UNIT LuAlly Shaman SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 
 UNIT
 
 LT_c1:
-UNIT LuAlly ArcherF SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 [ExtraBow, Vulnerary] NoAI
+UNIT LuAlly Archer_F SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 [ExtraBow, Vulnerary] NoAI
 UNIT
 
 LT_c2:
