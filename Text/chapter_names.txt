@@ -81,10 +81,13 @@ Prologue: IT BEGINS AGAIN[X]
 26: ... Know Thyself[X]
 
 # 0x017A
-27: Kaga's Blessing Upon[X]
+27: [X]
 
 # 0x017B
-28: Crusader God Babby[X]
+27: Kaga's Blessing Upon[X]
 
 # 0x0182
+28: Crusader God Babby[X]
+
+# 0x0183
 Endgame: The Final Holy Blitz[X]

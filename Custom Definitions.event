@@ -54,6 +54,7 @@
 #define Sabin 0x1B
 #define Ersatz 0x1F
 #define Inafune 0x20
+#define Babby 0x21
 #define Kojima 0x23
 #define Sakaguchi 0x24
 #define Iga 0x25
@@ -73,6 +74,7 @@
 #define DarkFact 0x64
 #define KojimaNPC 0x76
 #define SakaguchiNPC 0x77
+#define Ch29Boss 0x78
 
 
 #define Ch5Generic 0x8A
@@ -80,6 +82,7 @@
 #define Ch23Enemies 0xAE
 #define Ch27ChrMGeneric 0xC0 // Monster
 #define Ch27ChrHGeneric 0xC1 // Human
+#define Ch29Generic1 0xB8
 
 //Item definitions
 #define BlitzAxe Rapier
@@ -111,6 +114,7 @@
 #define Ch27Map 0x76
 #define Ch27MapChanges 0x77
 #define Ch27Events 0x78
+#define Chapter29 0x22
 #define AllChapters 0xFF
 
 // Other
