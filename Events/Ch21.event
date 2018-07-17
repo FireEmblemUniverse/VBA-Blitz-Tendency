@@ -42,6 +42,7 @@ END_MAIN
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
 END_MAIN
 
 Dunno1:
