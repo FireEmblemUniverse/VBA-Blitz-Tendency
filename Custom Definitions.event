@@ -113,6 +113,7 @@
 #define Ch27Map 0x76
 #define Ch27MapChanges 0x77
 #define Ch27Events 0x78
+#define Chapter29 0x22
 #define AllChapters 0xFF
 
 // Other

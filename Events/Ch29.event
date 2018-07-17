@@ -94,6 +94,10 @@ Bad4:
 UNIT Ch29Generic1 Mage Ch29Boss Level(20, Enemy, 1) [16,29] 0x00 0x00 0x0 0x00 [Bolting, Elixir] AttackInRangeAI
 UNIT
 
+BabbyUnit:
+UNIT Babby Manakete_2 0x00 Level(20, Ally, 0) [25,29] 0x00 0x00 0x0 0x00 [HolyDragonStone, Elixir] GuardTileAI
+UNIT
+
 TurnBasedEvents:
 TurnEventPlayer(0,EndingScene,10)
 END_MAIN
@@ -132,6 +136,7 @@ LOAD1 0x1 Bad1
 LOAD1 0x1 Bad2
 LOAD1 0x1 Bad3
 LOAD1 0x1 Bad4
+LOAD1 0x1 BabbyUnit
 ENUN
 GotoPrepScreen
 
