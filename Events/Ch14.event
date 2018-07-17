@@ -84,8 +84,6 @@ ENUN
 LOAD1 0x1 Load_Splenda
 ENUN
 GotoPrepScreen
-NoFade
-ENDA
 
 Ch14_EndingScene:
 MNCH 15
