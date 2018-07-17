@@ -162,3 +162,6 @@ Deuxnids[X]
 
 ## descDeuxnids
 Not to be confused with Dennis.[X]
+
+## nameSplenda
+Splenda[X]
