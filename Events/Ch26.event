@@ -241,7 +241,7 @@ UNIT Inferos EirikaMasterLord 0x00 Level(10, Enemy, 1) [13,13] 0x00 0x00 0x1 0x0
 UNIT
 
 DZombie126:
-UNIT 0x91 DracoZombie Inferos Level(10, Enemy, 1) [12,13] 0x2 0x00 0x0 0x00 [WretchedAir] AttackInRangeAI 
+UNIT 0xb4 DracoZombie Inferos Level(10, Enemy, 1) [12,13] 0x2 0x00 0x0 0x00 [WretchedAir] AttackInRangeAI 
 UNIT
 
 // Shop Data
