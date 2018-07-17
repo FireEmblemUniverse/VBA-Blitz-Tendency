@@ -88,4 +88,13 @@ Claire_Mug:
 setMugEntry(0x4B, Claire_Mug, 4, 6, 4, 4)
 ALIGN 4
 
+Medea_Mug:
+#incext PortraitFormatter "Medea.png"
+setMugEntry(0x72, Medea_Mug, 2, 6, 2, 4)
+ALIGN 4
+
+AssassinServant_Mug:
+#incext PortraitFormatter "AssassinServant.png"
+setMugEntry(0x73, AssassinServant_Mug, 2, 5, 3, 3)
+ALIGN 4
 

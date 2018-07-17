@@ -1,5 +1,4 @@
 
-#define DISABLE_TUTORIALS
 #include EAstdlib.event
 
 
@@ -39,7 +38,7 @@ END_MAIN
 ALIGN 4
 
 Traps1Ch19:
-// Vein(9,23,0x0,DV1Desc) //freeze enemies
+
 ENDTRAP
 ALIGN 4
 
@@ -212,6 +211,7 @@ ENIF 0x0
 
 
 ENUF 0x7 //sets eventID as "off"
+NoFade
 ENIF 0x1  //End of the Else
 
 ENDA
@@ -228,15 +228,15 @@ LOAD1 0x1 BadCh19
 ENUN
 LOAD1 0x1 BadCh19Part2
 ENUN
-
-SetBackground(Shrine_3)
-TEXTSHOW (PlaceholderText)
-TEXTEND
-REMA
 CAM1 Eirika
-CALL $9EE2C4
+Text(Shrine_3, PlaceholderText)
+REMA
+
+CAM1 [20,10]
+FlashCursor(20,10,60)
+STAL 0x10 
+
 GotoPrepScreen
-ENDA
 
 
 
@@ -253,15 +253,10 @@ CLEA 0x0
 LOAD2 0x1 EndChapterUnitsCh19
 ENUN
 CAM1 Eirika
-SetBackground(Shrine_3)
 FADU 0x10
 NoFade
-TEXTSHOW (PlaceholderText)
-TEXTEND
+Text(Shrine_3, PlaceholderText)
 REMA
-
-CALL $9EE2C4
-
 
 
 MNC2 20
@@ -273,9 +268,6 @@ ALIGN 4
 TrapDataCh19:
 ENDTRAP
 
-ALIGN 4
-MESSAGE Events end at offset currentOffset
-//The map for this chapter is at offset: ????????
 
 
 ALIGN 4
@@ -309,6 +301,4 @@ SHORT 0x001C
 BridgeCh19:
 SHORT 0x0044
 SHORT 0x0044
-
-MESSAGE Tiles end at offset currentOffset
 

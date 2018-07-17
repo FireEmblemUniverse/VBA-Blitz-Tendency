@@ -162,3 +162,20 @@ Deuxnids[X]
 
 ## descDeuxnids
 Not to be confused with Dennis.[X]
+
+
+## SeibahName
+Seibah[X]
+
+## SeibahDesc
+A servant looking for the[NL]
+Holy Grail.[X]
+
+
+## RinsletName
+Rinslet[X]
+
+## RinsletDesc
+A noblewoman from an[NL]
+alternate world.[X]
+
