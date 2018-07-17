@@ -210,22 +210,26 @@ RgtThief:
 UNIT EnemyID Thief 0 Level(Ch11Level, Enemy, 1)   [22,12] 0b 0x00 1 REDA20R11 [SilverSword, ChestKey] [0x06, 0x05]
 UNIT
 
-ThroneMages1:
+ThroneMages0:
+TM0:
 UNIT EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Fire] PursueWithoutHeedAI
 UNIT EnemyID Monk 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Lightning] PursueWithoutHeedAI
 UNIT
 
-ThroneMages2:
+ThroneMages1:
+TM1:
 UNIT EnemyID Shaman 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Flux] PursueWithoutHeedAI
 UNIT EnemyID Monk 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Lightning] PursueWithoutHeedAI
 UNIT
 
-ThroneMages3:
+ThroneMages2:
+TM2:
 UNIT EnemyID Shaman 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Flux] PursueWithoutHeedAI
 UNIT EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Fire] PursueWithoutHeedAI
 UNIT
 
-ThroneMages4:
+ThroneMages3:
+TM3:
 UNIT EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Fire] PursueWithoutHeedAI
 UNIT EnemyID Shaman 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Flux] PursueWithoutHeedAI
 UNIT
@@ -253,6 +257,16 @@ ENDA
 
 #define Poin(x) "(x | 0x08000000)"
 //If you like not smashing your head in, you may want to stop reading ahead.
+ThroneSpawners:
+    SMOV r1 Poin(TM0)
+    SMOV r2 Poin(TM1)
+    SMOV r3 Poin(TM2)
+    SMOV r4 Poin(TM3)
+    CALL LoadOneOfFour
+
+NoFade
+ENDB
+
 ReinLeftIfInRight:
     SMOV r1 Poin(LU0)
     SMOV r2 Poin(LU1)
