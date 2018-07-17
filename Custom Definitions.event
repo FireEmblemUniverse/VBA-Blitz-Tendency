@@ -71,6 +71,7 @@
 #define Cameron 0x58
 #define Bojo 0x59
 #define DarkFact 0x64
+#define Inferos 0x74
 #define KojimaNPC 0x76
 #define SakaguchiNPC 0x77
 
