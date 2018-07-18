@@ -98,3 +98,6 @@ AssassinServant_Mug:
 setMugEntry(0x73, AssassinServant_Mug, 2, 5, 3, 3)
 ALIGN 4
 
+NicholMug:
+#incext PortraitFormatter "Nichol.png"
+setMugEntry(0x1E, NicholMug, 3, 5, 3, 3)

@@ -1,0 +1,37 @@
+//To use: Set ObjectType to 0x8b, set PaletteID to 0x8d, set TileConfig to 0x8c.
+//Note: If you don't need Valni, you could always use their pointers as assigned in
+//"Pointer Table editor.csv", included in your Nightmare Modules.
+//Credits to Pikmin1211 for the original installer and idea.
+
+//Tile Animations brought to you by Leonarth. Check that file out to set it up for installing the tile animations.
+#include "SnowAnim/SnowAnimation.event"
+
+//The Object file. It must be a .png format and a 256x256px image.
+SnowObjects:
+#incext Png2Dmp "SnowTilesetEX.png" --lz77
+ALIGN 4
+
+//The Chipset. While you can rip it through hex editors, you can also use the
+//otherwise-shitty FEBuilderGBA to rip this file for you. Not 100% sure it works, but
+//it never hurts to try.
+SnowTiles:
+#incext compress "SnowConfigEX.mapchip_config"
+ALIGN 4
+
+//The tileset's palette. This must be either a .bin or .dmp file, but it must be extracted through
+//hex editors. The file in question must have a length of 140 in hex values. (Not sure why, gotta ask Pik)
+SnowPalette:
+#incbin "SnowPalette_New.dmp"
+ALIGN 4
+
+//These are the pointers which you're going to replace. In here, for example, the tileset
+//is replacing the tile changes, map and events of Tower of Valni 1F. You could always point it
+//elsewhere, though, as long as it's not something used by other maps or events.
+
+#define SnowTileConfig 0xCA
+#define SnowObjectID 0xD6
+#define SnowPaletteID 0xD7
+
+EventPointerTable(SnowTileConfig, SnowTiles)
+EventPointerTable(SnowObjectID, SnowObjects)
+EventPointerTable(SnowPaletteID, SnowPalette)
