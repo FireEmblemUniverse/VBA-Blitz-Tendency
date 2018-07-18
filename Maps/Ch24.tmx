@@ -2,19 +2,6 @@
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="21" tilewidth="16" tileheight="16" nextobjectid="1">
  <tileset firstgid="1" name="FE8 - Fields - 01000203" tilewidth="16" tileheight="16" tilecount="1024">
   <image source="01000203.png" trans="ffffff" width="512" height="512"/>
-  <tile id="900">
-   <properties>
-    <property name="Anims1" value=""/>
-    <property name="Anims2" value=""/>
-    <property name="ChapterID" value=""/>
-    <property name="Main" value=""/>
-    <property name="MapChangesID" value=""/>
-    <property name="MapID" value=""/>
-    <property name="ObjectType1" value=""/>
-    <property name="PaletteID" value=""/>
-    <property name="TileConfig" value=""/>
-   </properties>
-  </tile>
  </tileset>
  <layer name="Main" width="16" height="21">
   <properties>

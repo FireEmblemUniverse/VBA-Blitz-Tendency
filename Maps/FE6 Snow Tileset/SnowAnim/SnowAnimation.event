@@ -1,0 +1,77 @@
+#define SnowAnimsID 0xE1
+
+EventPointerTable(SnowAnimsID, SnowAnimation)
+
+#ifndef TILESET_ANIMATION_MACRO
+#define TILESET_ANIMATION_MACRO
+    #define tilesetAnimation(speed, size, pointer)    "BYTE speed 0; SHORT size; POIN pointer"
+#endif
+
+ALIGN 4
+SnowAnimation0:
+#incext png2dmp "00 - Address 5C7914 - Interval 1C - Data Size 1000 - Map Tile to Modify 82663F4.png"
+ALIGN 4
+SnowAnimation1:
+#incext png2dmp "01 - Address 5C791C - Interval 1C - Data Size 1000 - Map Tile to Modify 82673F4.png"
+ALIGN 4
+SnowAnimation2:
+#incext png2dmp "02- Address 5C7924 - Interval 1C - Data Size 1000 - Map Tile to Modify 82683F4.png"
+ALIGN 4
+SnowAnimation3:
+#incext png2dmp "03- Address 5C792C - Interval 1C - Data Size 1000 - Map Tile to Modify 82693F4.png"
+ALIGN 4
+SnowAnimation4:
+#incext png2dmp "04- Address 5C7934 - Interval 1C - Data Size 1000 - Map Tile to Modify 826A3F4.png"
+ALIGN 4
+SnowAnimation5:
+#incext png2dmp "05- Address 5C793C - Interval 1C - Data Size 1000 - Map Tile to Modify 826B3F4.png"
+ALIGN 4
+SnowAnimation6:
+#incext png2dmp "06- Address 5C7944 - Interval 1C - Data Size 1000 - Map Tile to Modify 826C3F4.png"
+ALIGN 4
+SnowAnimation7:
+#incext png2dmp "07- Address 5C794C - Interval 1C - Data Size 1000 - Map Tile to Modify 826D3F4.png"
+ALIGN 4
+SnowAnimation8:
+#incext png2dmp "08- Address 5C7954 - Interval 1C - Data Size 1000 - Map Tile to Modify 826E3F4.png"
+ALIGN 4
+SnowAnimation9:
+#incext png2dmp "09- Address 5C795C - Interval 1C - Data Size 1000 - Map Tile to Modify 826F3F4.png"
+ALIGN 4
+SnowAnimation10:
+#incext png2dmp "A- Address 5C7964 - Interval 1C - Data Size 1000 - Map Tile to Modify 82703F4.png"
+ALIGN 4
+SnowAnimation11:
+#incext png2dmp "B - Address 5C796C - Interval 1C - Data Size 1000 - Map Tile to Modify 82713F4.png"
+ALIGN 4
+SnowAnimation12:
+#incext png2dmp "C - Address 5C7974 - Interval 1C - Data Size 1000 - Map Tile to Modify 82723F4.png"
+ALIGN 4
+SnowAnimation13:
+#incext png2dmp "D - Address 5C797C - Interval 1C - Data Size 1000 - Map Tile to Modify 82733F4.png"
+ALIGN 4
+SnowAnimation14:
+#incext png2dmp "E - Address 5C7984 - Interval 1C - Data Size 1000 - Map Tile to Modify 82743F4.png"
+ALIGN 4
+SnowAnimation15:
+#incext png2dmp "F - Address 5C798C - Interval 1C - Data Size 1000 - Map Tile to Modify 82753F4.png"
+
+ALIGN 4
+SnowAnimation:
+tilesetAnimation(0x1C,0x1000,SnowAnimation0)
+tilesetAnimation(0x1C,0x1000,SnowAnimation1)
+tilesetAnimation(0x1C,0x1000,SnowAnimation2)
+tilesetAnimation(0x1C,0x1000,SnowAnimation3)
+tilesetAnimation(0x1C,0x1000,SnowAnimation4)
+tilesetAnimation(0x1C,0x1000,SnowAnimation5)
+tilesetAnimation(0x1C,0x1000,SnowAnimation6)
+tilesetAnimation(0x1C,0x1000,SnowAnimation7)
+tilesetAnimation(0x1C,0x1000,SnowAnimation8)
+tilesetAnimation(0x1C,0x1000,SnowAnimation9)
+tilesetAnimation(0x1C,0x1000,SnowAnimation10)
+tilesetAnimation(0x1C,0x1000,SnowAnimation11)
+tilesetAnimation(0x1C,0x1000,SnowAnimation12)
+tilesetAnimation(0x1C,0x1000,SnowAnimation13)
+tilesetAnimation(0x1C,0x1000,SnowAnimation14)
+tilesetAnimation(0x1C,0x1000,SnowAnimation15)
+WORD 0 0

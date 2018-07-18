@@ -58,15 +58,15 @@ ALIGN 4
 }
 ALIGN 4
 {
-//  #include "Ch14.event"
+  #include "Ch14.event"
 }
 ALIGN 4
 {
-//  #include "Ch15.event"
+  #include "Ch15.event"
 }
 ALIGN 4
 {
-//  #include "Ch16.event"
+  #include "Ch16.event"
 }
 ALIGN 4
 {
@@ -74,19 +74,19 @@ ALIGN 4
 }
 ALIGN 4
 {
-#include "Ch18.event"
+  #include "Ch18.event"
 }
 ALIGN 4
 {
-//  #include "Ch19.event"
+  #include "Ch19.event"
 }
 ALIGN 4
 {
-//  #include "Ch20.event"
+  #include "Ch20.event"
 }
 ALIGN 4
 {
-//  #include "Ch21.event"
+  #include "Ch21.event"
 }
 ALIGN 4
 {
@@ -94,7 +94,7 @@ ALIGN 4
 }
 ALIGN 4
 {
-#include "Ch23.event"
+  #include "Ch23.event"
 }
 ALIGN 4
 {
@@ -102,7 +102,7 @@ ALIGN 4
 }
 ALIGN 4
 {
-//  #include "Ch25.event"
+  #include "Ch25.event"
 }
 ALIGN 4
 {
@@ -118,11 +118,11 @@ ALIGN 4
 }
 ALIGN 4
 {
-//  #include "Ch29.event"
+  #include "Ch29.event"
 }
 ALIGN 4
 {
-//  #include "Ch30.event"
+  #include "Endgame.event"
 }
 ALIGN 4
 #include "REDAs.event"

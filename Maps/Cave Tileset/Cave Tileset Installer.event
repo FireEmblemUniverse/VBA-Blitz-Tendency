@@ -1,0 +1,35 @@
+//No map animations for the water. To use: Set ObjectType to 0x8b, set PaletteID to 0x8d, set TileConfig to 0x8c.
+//Alternatively, refer to the event pointer list to find which pointers to use.
+
+#ifndef TILESET_ANIMATION_MACRO
+#define TILESET_ANIMATION_MACRO
+    #define tilesetAnimation(speed, size, pointer)    "BYTE speed 0; SHORT size; POIN pointer"
+#endif
+
+#include "CaveAnim/CaveAnimation.event"
+
+CaveTiles:
+#incext compress "Cave.mapchip_config"
+ALIGN 4
+
+CaveObjects:
+#incext Png2Dmp "Cave.png" --lz77
+ALIGN 4
+
+//commented unless someone else needs it
+/*CavePalette1:
+#incbin "CavePalette.dmp"
+ALIGN 4*/
+
+CavePalette2T:
+#incext Png2Dmp "CavePalette2T.png" --palette-only
+ALIGN 4
+
+//commented unless someone else needs it
+/*CavePalette3:
+#incbin "CavePalette3.dmp"
+ALIGN 4*/
+
+EventPointerTable(0xe7, CaveTiles)
+EventPointerTable(0xe4, CaveObjects)
+EventPointerTable(0xe5, CavePalette2T)
