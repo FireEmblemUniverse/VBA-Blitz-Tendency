@@ -1,6 +1,6 @@
 #include EAstdlib.event
 
-EventPointerTable(0x7f,ThisChapter26) //0x7f =ch26?
+EventPointerTable(0x75,ThisChapter26) //ch26?
 
 ALIGN 4
 
@@ -52,7 +52,7 @@ Tutorial26:
 WORD $00
 
 TrapData26:
-END_MAIN
+ENDTRAP
 
 ALIGN 4
 
@@ -112,7 +112,7 @@ FlashCursor(Inferos,50)
 //Text(ChTwentysixHellDennis)
 //FIGH Inferos Dennis HellDennisFight26 0
 //KILL Dennis
-//find out how to kill units in FE8!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//to do: find out how to kill units in FE8
 DISA Dennis
 //Text(ChTwentysixHellVoid)
 MUSC 0x00
@@ -159,12 +159,13 @@ EndingScene26:
 MUSC 0x32 //victory
 
 FADI 5
-MNC2 0x1c //ch27? I have no idea what the ch number is at this point
+MNCH 27
 ENDA
 
 // Events
 
 PostPrep26:
+Text(PlaceholderText)
 //Ersatz says something about the dzombie if he is deployed
 NoFade
 ENDA
@@ -174,18 +175,16 @@ HellMoveback26:
 //to his original place. Only Vedge can lure him out
 
 CHECK_EVENTID 0x1
-IFNOTEQUAL 0x2 0xC 0x0 //if the result of this check is not 0; i.e. true
+BEQ 0x2 0xC 0x1 //if the result of this check is 1; i.e. true
 
 CHECK_ACTIVEID 0x1
-BNE 0x3 0x1 0xc //if active unit is not Vedge
+BNE 0x2 0x1 0xc //if active unit is not Vedge
 MOVE 0x10 Inferos [12,5]
 ENUF 0x1 //set 0x1 to false so this event can run again
-
-LABEL 0x3
 LABEL 0x2
+//if this still isn't right I'll comment it out and do it later
 NoFade
 ENDA
-
 
 
 // Manual Movement
@@ -193,7 +192,7 @@ ENDA
 // Scripted Fights
 
 //HellDennisFight26:
-//need to figure out how to do scripted fights in FE8!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//to do: figure out how to do scripted fights in FE8
 //DefenderMiss(0) 
 //AttackerCritical(60,1) 
 //BLDT
@@ -206,8 +205,6 @@ UNIT 0x91 General_F Inferos Level(2, Enemy, 1) [8,17] 0x2 0x00 0x0 0x00 [Runeswo
 UNIT 0x91 General_F Inferos Level(2, Enemy, 1) [16,17] 0x2 0x00 0x0 0x00 [LightBrand] AttackInRangeAI 
 UNIT 0x91 Druid Inferos Level(2, Enemy, 1) [10,16] 0x00 0x00 0x0 0x00 [Luna, Physic] HealUnits 
 UNIT 0x91 Bishop Inferos Level(2, Enemy, 1) [14,16] 0x00 0x00 0x0 0x00 [Aura, Physic] HealUnits 
-//UNIT 0x91 Hero Inferos Level(2, Enemy, 1) [6,15] 0x00 0x00 0x0 0x00 [Halberd, FiendCleaver] AttackInRangeAI 
-//UNIT 0x91 Hero Inferos Level(2, Enemy, 1) [18,15] 0x00 0x00 0x0 0x00 [Armourslayer, ShadowKiller] AttackInRangeAI 
 UNIT 0x91 Ranger Inferos Level(2, Enemy, 1) [6,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI 
 UNIT 0x91 Ranger Inferos Level(2, Enemy, 1) [18,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI 
 UNIT
@@ -218,8 +215,6 @@ UNIT 0x91 General_F Inferos Level(15, Enemy, 1) [8,17] 0x2 0x00 0x0 0x00 [Runesw
 UNIT 0x91 General_F Inferos Level(15, Enemy, 1) [16,17] 0x2 0x00 0x0 0x00 [Runesword, Spear] AttackInRangeAI 
 UNIT 0x91 Druid Inferos Level(9, Enemy, 1) [10,16] 0x00 0x00 0x0 0x00 [Luna, Physic] HealUnits 
 UNIT 0x91 Bishop Inferos Level(9, Enemy, 1) [14,16] 0x00 0x00 0x0 0x00 [Aura, Fortify] HealUnits 
-//UNIT 0x91 Hero Inferos Level(8, Enemy, 1) [6,15] 0x00 0x00 0x0 0x00 [SilverBlade, Halberd, FiendCleaver] AttackInRangeAI 
-//UNIT 0x91 Hero Inferos Level(8, Enemy, 1) [18,15] 0x00 0x00 0x0 0x00 [Runesword, Armourslayer, ShadowKiller] AttackInRangeAI 
 UNIT 0x91 Ranger Inferos Level(5, Enemy, 1) [6,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI 
 UNIT 0x91 Ranger Inferos Level(5, Enemy, 1) [18,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI 
 UNIT
