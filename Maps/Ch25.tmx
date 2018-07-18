@@ -8,7 +8,6 @@
    <property name="Anims1" value="0x7D"/>
    <property name="ChapterID" value="0x18"/>
    <property name="Main" value=""/>
-   <property name="MapChangesId" value="0x70"/>
    <property name="MapID" value="0x49"/>
    <property name="ObjectType1" value="0x79"/>
    <property name="PaletteId" value="0x7A"/>
