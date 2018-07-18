@@ -57,11 +57,8 @@
 #define Adolgi 0x17
 #define Donna 0x1A
 #define Sabin 0x1B
-<<<<<<< HEAD
 #define Benny 0x1C		//teq ch15 recruitable 2, change this if already claimed
-=======
 #define MichealP 0x1E
->>>>>>> baseline events for ch25, text to be done in polish phase
 #define Ersatz 0x1F
 #define Inafune 0x20
 #define Babby 0x21
@@ -83,10 +80,17 @@
 #define Dennis 0x50
 #define Cameron 0x58
 #define Bojo 0x59
+<<<<<<< HEAD
 #define Wicky 0x5C
 #define Ch17Boss 0x62
 #define DarkFact 0x64
 #define Kefka 0x6C
+=======
+#define Wrath 0x60
+#define Ch17Boss 0x62
+#define DarkFact 0x64
+#define Mike 0x72
+>>>>>>> added quotes and definitions for ch16 and ch25 bosses
 #define KojimaNPC 0x76
 #define SakaguchiNPC 0x77
 #define Ch29Boss 0x78

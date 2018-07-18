@@ -81,4 +81,6 @@ INLINE NewDeathQuoteTable,Character,##UNKNOWN##,Chapter,Event ID,##UNKNOWN##,Tex
 Ch27 Generic Monster,Ch27ChrMGeneric,0xff00,Ch27Id,10,0,0,0
 Ch27 Generic Human,Ch27ChrHGeneric,0xff00,Ch27Id,10,0,0,0
 Ch27 Boss,Ch27ChrZomboss,0xff00,Ch27Id,2,0,0,0
+Ch16 Boss,Wrath,0xff00,0x18,0x2,0x0,WrathDeathQ,0x0
+Ch25 Boss,Mike,0xff00,0x18,0x2,0x0,PlaceholderText,0x0
 END,0xFF,0x00FF,0,0,0,0,0
