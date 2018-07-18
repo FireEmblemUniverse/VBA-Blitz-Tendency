@@ -54,14 +54,19 @@
 #define Zane 0x14		//teq ch15 recruitable 1
 #define Nichol 0x16
 #define Adolgi 0x17
+#define Donna 0x1A
 #define Sabin 0x1B
 #define Benny 0x1C		//teq ch15 recruitable 2, change this if already claimed
 #define Ersatz 0x1F
 #define Inafune 0x20
+#define Babby 0x21
 #define Kojima 0x23
 #define Sakaguchi 0x24
 #define Iga 0x25
 #define Deuxnids 0x26
+
+#define Seibah 0x18
+#define Rinslet 0x19
 
 #define Jazzak 0x42
 #define IgaNPC 0x47
@@ -74,18 +79,22 @@
 #define Cameron 0x58
 #define Bojo 0x59
 #define Wicky 0x5C
+#define Ch17Boss 0x62
 #define DarkFact 0x64
 #define Kefka 0x6C
 #define KojimaNPC 0x76
 #define SakaguchiNPC 0x77
+#define Ch29Boss 0x78
 
 #define Ch5Generic 0x8A
 #define Ch14_Enemy 0x9C
 #define Ch15_Enemy 0x9D
+#define Ch17Enemies 0xA2
 #define Ch18Enemies 0xA4
 #define Ch23Enemies 0xAE
 #define Ch27ChrMGeneric 0xC0 // Monster
 #define Ch27ChrHGeneric 0xC1 // Human
+#define Ch29Generic1 0xB8
 
 //Item definitions
 #define BlitzAxe Rapier
@@ -119,6 +128,7 @@
 #define Ch27Map 0x76
 #define Ch27MapChanges 0x77
 #define Ch27Events 0x78
+#define Chapter29 0x22
 #define AllChapters 0xFF
 
 // Other
