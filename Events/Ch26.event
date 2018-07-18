@@ -17,13 +17,13 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene26 EndingScene26
 
 Units26:
-UNIT Vedge EirikaLord 0x00 Level(10, Ally, 1) [12,6] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI 
-UNIT Verge Cavalier Vedge Level(10, Ally, 1) [21,15] 0x00 0x00 0x0 0x00 [SilverSword] NoAI 
-UNIT Null Cavalier Vedge Level(10, Ally, 1) [22,16] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
-UNIT Naught Cavalier Vedge Level(10, Ally, 1) [22,17] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
-UNIT Chiva Cavalier Vedge Level(10, Ally, 1) [3,15] 0x00 0x00 0x0 0x00 [SilverSword] NoAI 
-UNIT Fanni Cavalier Vedge Level(10, Ally, 1) [2,16] 0x00 0x00 0x0 0x00 [SilverSword] NoAI 
-UNIT Ersatz Manakete_F Vedge Level(10, Ally, 1) [2,17] 0x00 0x00 0x0 0x00 [SilverSword] NoAI 
+UNIT Vedge EirikaLord 0x00 Level(10, Ally, 1) [12,6] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI
+UNIT Verge Cavalier Vedge Level(10, Ally, 1) [21,15] 0x00 0x00 0x0 0x00 [SilverSword] NoAI
+UNIT Null Cavalier Vedge Level(10, Ally, 1) [22,16] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT Naught Cavalier Vedge Level(10, Ally, 1) [22,17] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT Chiva Cavalier Vedge Level(10, Ally, 1) [3,15] 0x00 0x00 0x0 0x00 [SilverSword] NoAI
+UNIT Fanni Cavalier Vedge Level(10, Ally, 1) [2,16] 0x00 0x00 0x0 0x00 [SilverSword] NoAI
+UNIT Ersatz Manakete_2_F Vedge Level(10, Ally, 1) [2,17] 0x00 0x00 0x0 0x00 [SilverSword] NoAI 
 UNIT
 
 TurnBasedEvents26:
@@ -193,30 +193,30 @@ ENDA
 
 //HellDennisFight26:
 //to do: figure out how to do scripted fights in FE8
-//DefenderMiss(0) 
-//AttackerCritical(60,1) 
+//DefenderMiss(0)
+//AttackerCritical(60,1)
 //BLDT
 
 // Units
 
 Bads26:
-UNIT Inferos EirikaMasterLord 0x00 Level(6, Enemy, 0) [12,5] 0x2 0x00 0x0 0x00 [FiendCleaver] AttackInRangeAI 
-UNIT 0xb5 General_F Inferos Level(2, Enemy, 1) [8,17] 0x2 0x00 0x0 0x00 [Runesword] AttackInRangeAI 
-UNIT 0xb5 General_F Inferos Level(2, Enemy, 1) [16,17] 0x2 0x00 0x0 0x00 [LightBrand] AttackInRangeAI 
-UNIT 0xb5 Druid Inferos Level(2, Enemy, 1) [10,16] 0x00 0x00 0x0 0x00 [Luna, Physic] HealUnits 
-UNIT 0xb5 Bishop Inferos Level(2, Enemy, 1) [14,16] 0x00 0x00 0x0 0x00 [Aura, Physic] HealUnits 
-UNIT 0xb5 Ranger Inferos Level(2, Enemy, 1) [6,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI 
-UNIT 0xb5 Ranger Inferos Level(2, Enemy, 1) [18,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI 
+UNIT Inferos EirikaMasterLord 0x00 Level(6, Enemy, 0) [12,5] 0x2 0x00 0x0 0x00 [FiendCleaver] AttackInRangeAI
+UNIT 0xb5 General_F Inferos Level(2, Enemy, 1) [8,17] 0x2 0x00 0x0 0x00 [Runesword] AttackInRangeAI
+UNIT 0xb5 General_F Inferos Level(2, Enemy, 1) [16,17] 0x2 0x00 0x0 0x00 [LightBrand] AttackInRangeAI
+UNIT 0xb5 Druid Inferos Level(2, Enemy, 1) [10,16] 0x00 0x00 0x0 0x00 [Luna, Physic] HealUnits
+UNIT 0xb5 Bishop Inferos Level(2, Enemy, 1) [14,16] 0x00 0x00 0x0 0x00 [Aura, Physic] HealUnits
+UNIT 0xb5 Ranger Inferos Level(2, Enemy, 1) [6,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI
+UNIT 0xb5 Ranger Inferos Level(2, Enemy, 1) [18,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI
 UNIT
 
 Bads26H:
-UNIT Inferos EirikaMasterLord 0x00 Level(1, Enemy, 0) [12,5] 0x2 0x00 0x0 0x00 [FiendCleaver, Swordslayer] AttackInRangeAI 
-UNIT 0xb5 General_F Inferos Level(15, Enemy, 1) [8,17] 0x2 0x00 0x0 0x00 [Runesword, Tomahawk] AttackInRangeAI 
-UNIT 0xb5 General_F Inferos Level(15, Enemy, 1) [16,17] 0x2 0x00 0x0 0x00 [Runesword, Spear] AttackInRangeAI 
-UNIT 0xb5 Druid Inferos Level(9, Enemy, 1) [10,16] 0x00 0x00 0x0 0x00 [Luna, Physic] HealUnits 
-UNIT 0xb5 Bishop Inferos Level(9, Enemy, 1) [14,16] 0x00 0x00 0x0 0x00 [Aura, Fortify] HealUnits 
-UNIT 0xb5 Ranger Inferos Level(5, Enemy, 1) [6,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI 
-UNIT 0xb5 Ranger Inferos Level(5, Enemy, 1) [18,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI 
+UNIT Inferos EirikaMasterLord 0x00 Level(1, Enemy, 0) [12,5] 0x2 0x00 0x0 0x00 [FiendCleaver, Swordslayer] AttackInRangeAI
+UNIT 0xb5 General_F Inferos Level(15, Enemy, 1) [8,17] 0x2 0x00 0x0 0x00 [Runesword, Tomahawk] AttackInRangeAI
+UNIT 0xb5 General_F Inferos Level(15, Enemy, 1) [16,17] 0x2 0x00 0x0 0x00 [Runesword, Spear] AttackInRangeAI
+UNIT 0xb5 Druid Inferos Level(9, Enemy, 1) [10,16] 0x00 0x00 0x0 0x00 [Luna, Physic] HealUnits
+UNIT 0xb5 Bishop Inferos Level(9, Enemy, 1) [14,16] 0x00 0x00 0x0 0x00 [Aura, Fortify] HealUnits
+UNIT 0xb5 Ranger Inferos Level(5, Enemy, 1) [6,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI
+UNIT 0xb5 Ranger Inferos Level(5, Enemy, 1) [18,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI
 UNIT
 
 DennisScene26:
@@ -224,19 +224,19 @@ UNIT Dennis Sage Inferos Level(10, Enemy, 1) [12,15] 0x00 0x00 0x0 0x00 [Aura, _
 UNIT
 
 VedgeScene26:
-UNIT Vedge EirikaLord 0x00 Level(10, Ally, 1) [21,17] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI 
+UNIT Vedge EirikaLord 0x00 Level(10, Ally, 1) [21,17] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI
 UNIT
 
 VedgeReal26:
-UNIT Vedge EirikaLord 0x00 Level(10, Ally, 1) [12,6] 0x00 0x00 0x0 0x00 [SilverSword] NoAI 
+UNIT Vedge EirikaLord 0x00 Level(10, Ally, 1) [12,6] 0x00 0x00 0x0 0x00 [SilverSword] NoAI
 UNIT
 
 HellScene26:
-UNIT Inferos EirikaMasterLord 0x00 Level(10, Enemy, 1) [13,13] 0x00 0x00 0x1 0x0 [FiendCleaver] NoAI 
+UNIT Inferos EirikaMasterLord 0x00 Level(10, Enemy, 1) [13,13] 0x00 0x00 0x1 0x0 [FiendCleaver] NoAI
 UNIT
 
 DZombie126:
-UNIT 0xb4 DracoZombie Inferos Level(10, Enemy, 1) [12,13] 0x2 0x00 0x0 0x00 [WretchedAir] AttackInRangeAI 
+UNIT 0xb4 DracoZombie Inferos Level(10, Enemy, 1) [12,13] 0x2 0x00 0x0 0x00 [WretchedAir] AttackInRangeAI
 UNIT
 
 // Shop Data
