@@ -132,8 +132,8 @@ ENDA
 Turn1Event:
 LOAD1 0x1 MichealPGroup
 ENUN
-CAM1 Myrrh
-CUMO Myrrh
+CAM1 MichealP
+CUMO MichealP
 STAL 60
 CURE
 Text(PlaceholderText)
@@ -217,7 +217,7 @@ UNIT 0xB2 Berserker 0x00 Level(13, Enemy, 1) [21,20] 0x00 0x00 0x0 0x00 [SilverA
 UNIT
 
 MichealPGroup:
-UNIT Myrrh Journeyman_3 0x00 Level(10, Ally, 0) [0,3] 0x00 0x00 0x0 0x00 [BraveAxe] NoAI 
+UNIT MichealP Journeyman_3 0x00 Level(10, Ally, 0) [0,3] 0x00 0x00 0x0 0x00 [BraveAxe] NoAI 
 UNIT
 MichealPREDA:
 REDA [12,2] 0x00 0x00 0x0 0x0
