@@ -95,7 +95,7 @@ SOUN 0x2f1
 STAL 30
 EARTHQUAKE_END
 MUSC 0x26 //Raid
-MOVE 0x5 0x91 [12,16]
+MOVE 0x5 0xb4 [12,16]
 TILEREVERSE 0x4
 ENUN
 STAL 10
@@ -201,22 +201,22 @@ ENDA
 
 Bads26:
 UNIT Inferos EirikaMasterLord 0x00 Level(6, Enemy, 0) [12,5] 0x2 0x00 0x0 0x00 [FiendCleaver] AttackInRangeAI 
-UNIT 0x91 General_F Inferos Level(2, Enemy, 1) [8,17] 0x2 0x00 0x0 0x00 [Runesword] AttackInRangeAI 
-UNIT 0x91 General_F Inferos Level(2, Enemy, 1) [16,17] 0x2 0x00 0x0 0x00 [LightBrand] AttackInRangeAI 
-UNIT 0x91 Druid Inferos Level(2, Enemy, 1) [10,16] 0x00 0x00 0x0 0x00 [Luna, Physic] HealUnits 
-UNIT 0x91 Bishop Inferos Level(2, Enemy, 1) [14,16] 0x00 0x00 0x0 0x00 [Aura, Physic] HealUnits 
-UNIT 0x91 Ranger Inferos Level(2, Enemy, 1) [6,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI 
-UNIT 0x91 Ranger Inferos Level(2, Enemy, 1) [18,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI 
+UNIT 0xb5 General_F Inferos Level(2, Enemy, 1) [8,17] 0x2 0x00 0x0 0x00 [Runesword] AttackInRangeAI 
+UNIT 0xb5 General_F Inferos Level(2, Enemy, 1) [16,17] 0x2 0x00 0x0 0x00 [LightBrand] AttackInRangeAI 
+UNIT 0xb5 Druid Inferos Level(2, Enemy, 1) [10,16] 0x00 0x00 0x0 0x00 [Luna, Physic] HealUnits 
+UNIT 0xb5 Bishop Inferos Level(2, Enemy, 1) [14,16] 0x00 0x00 0x0 0x00 [Aura, Physic] HealUnits 
+UNIT 0xb5 Ranger Inferos Level(2, Enemy, 1) [6,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI 
+UNIT 0xb5 Ranger Inferos Level(2, Enemy, 1) [18,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI 
 UNIT
 
 Bads26H:
 UNIT Inferos EirikaMasterLord 0x00 Level(1, Enemy, 0) [12,5] 0x2 0x00 0x0 0x00 [FiendCleaver, Swordslayer] AttackInRangeAI 
-UNIT 0x91 General_F Inferos Level(15, Enemy, 1) [8,17] 0x2 0x00 0x0 0x00 [Runesword, Tomahawk] AttackInRangeAI 
-UNIT 0x91 General_F Inferos Level(15, Enemy, 1) [16,17] 0x2 0x00 0x0 0x00 [Runesword, Spear] AttackInRangeAI 
-UNIT 0x91 Druid Inferos Level(9, Enemy, 1) [10,16] 0x00 0x00 0x0 0x00 [Luna, Physic] HealUnits 
-UNIT 0x91 Bishop Inferos Level(9, Enemy, 1) [14,16] 0x00 0x00 0x0 0x00 [Aura, Fortify] HealUnits 
-UNIT 0x91 Ranger Inferos Level(5, Enemy, 1) [6,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI 
-UNIT 0x91 Ranger Inferos Level(5, Enemy, 1) [18,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI 
+UNIT 0xb5 General_F Inferos Level(15, Enemy, 1) [8,17] 0x2 0x00 0x0 0x00 [Runesword, Tomahawk] AttackInRangeAI 
+UNIT 0xb5 General_F Inferos Level(15, Enemy, 1) [16,17] 0x2 0x00 0x0 0x00 [Runesword, Spear] AttackInRangeAI 
+UNIT 0xb5 Druid Inferos Level(9, Enemy, 1) [10,16] 0x00 0x00 0x0 0x00 [Luna, Physic] HealUnits 
+UNIT 0xb5 Bishop Inferos Level(9, Enemy, 1) [14,16] 0x00 0x00 0x0 0x00 [Aura, Fortify] HealUnits 
+UNIT 0xb5 Ranger Inferos Level(5, Enemy, 1) [6,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI 
+UNIT 0xb5 Ranger Inferos Level(5, Enemy, 1) [18,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI 
 UNIT
 
 DennisScene26:
