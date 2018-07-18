@@ -23,20 +23,3 @@ ORG 0x5926F4+(0x80*PiercingBowIconID)
 ORG 0x5926F4+(0x80*HuntersBowIconID)
 #incext Png2Dmp "HuntersBow.png"
 POP
-
-/* Custom Tileset
-SnowObjectType:
-#incbin "SnowObject_LZ.bin"
-
-SnowPalette:
-#incbin "SnowPalette_FE8.bin"
-
-SnowTileConfig:
-#incbin "SnowTileConfig_LZ.bin"
-
-EventPointerTable(0x8b, SnowObjectType)
-EventPointerTable(0x8c, SnowPalette)
-EventPointerTable(0x8d, SnowTileConfig)
-*/
-
-#include "Cave Tileset Installer.event"

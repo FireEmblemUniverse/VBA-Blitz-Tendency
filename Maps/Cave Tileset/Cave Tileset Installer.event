@@ -1,7 +1,10 @@
-//No map animations for the water. To use: Set ObjectType to 0x8b, set PaletteID to 0x8d, set TileConfig to 0x8c. 
+//No map animations for the water. To use: Set ObjectType to 0x8b, set PaletteID to 0x8d, set TileConfig to 0x8c.
 //Alternatively, refer to the event pointer list to find which pointers to use.
 
-#define tilesetAnimation(speed, size, pointer)    "BYTE speed 0; SHORT size; POIN pointer"
+#ifndef TILESET_ANIMATION_MACRO
+#define TILESET_ANIMATION_MACRO
+    #define tilesetAnimation(speed, size, pointer)    "BYTE speed 0; SHORT size; POIN pointer"
+#endif
 
 #include "CaveAnim/CaveAnimation.event"
 

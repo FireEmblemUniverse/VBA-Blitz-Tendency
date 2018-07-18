@@ -55,6 +55,8 @@
 #define Mariya 0x15
 #define Nichol 0x16
 #define Adolgi 0x17
+#define Seibah 0x18
+#define Rinslet 0x19
 #define Donna 0x1A
 #define Sabin 0x1B
 #define Benny 0x1C		//teq ch15 recruitable 2, change this if already claimed
@@ -67,9 +69,6 @@
 #define Iga 0x25
 #define Deuxnids 0x26
 
-#define Seibah 0x18
-#define Rinslet 0x19
-
 #define Jazzak 0x42
 #define IgaNPC 0x47
 #define Hecwood 0x48
@@ -81,12 +80,10 @@
 #define Cameron 0x58
 #define Bojo 0x59
 #define Wicky 0x5C
-#define Ch17Boss 0x62
-#define DarkFact 0x64
-#define Kefka 0x6C
 #define WrathBoss 0x60
 #define Ch17Boss 0x62
 #define DarkFact 0x64
+#define Kefka 0x6C
 #define Mike 0x72
 #define KojimaNPC 0x76
 #define SakaguchiNPC 0x77
