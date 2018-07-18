@@ -5,6 +5,7 @@
  </tileset>
  <layer name="Ch29" width="32" height="32">
   <properties>
+   <property name="Anims" value="0xCB"/>
    <property name="ChapterID" value="0x22"/>
    <property name="Main" value=""/>
    <property name="MapChangesID" value="0xB4"/>

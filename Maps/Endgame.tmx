@@ -5,13 +5,27 @@
  </tileset>
  <layer name="TheFinalHolyBlitz" width="35" height="30">
   <properties>
+   <property name="Anims" value="0xCB"/>
+   <property name="ChapterID" value="0x23"/>
    <property name="Main" value=""/>
+   <property name="MapChangesID" value="0xCB"/>
+   <property name="MapID" value="0xCA"/>
+   <property name="ObjectType1" value="SnowObjectID"/>
+   <property name="PaletteID" value="SnowPaletteID"/>
+   <property name="TileConfig" value="SnowTileConfig"/>
   </properties>
   <data encoding="base64" compression="zlib">
    eJxtV0FsVUUUnT8jtLIwBVrsAlREUzSYIJEKiBhTTCtpzFejYmKMSWt+i8ZgY6IuXGiLYVNFpMadYkupqW1o6cYNpiHUJgKWahvdmGBEqohUE5u40nuYc5zpx8XJvPf+zJ0z95577/xnvHPPGgYMGw03GG41XC44N0ScMXwQnDvvnCsZKgxV9t5o4y5Dq6GFo+y8aDjNtY/6+Nu0jSts3UpDdYg2XuP+eP7YxqcMbTa300U7g7QhPhjHbG59iHNK5NJh4wHDvI/fuwyjPgJ2LvnI4x37PmXjOfxm674JcYSNN7g/nsWjwVC05w2Go7b3MPmIy4eYSy7wRxP5DHA84iL6Dd3Y3/Au91geIt8/DBPkfsRHn2D/2zlH/tjnkm+PlvllKIsR1sAv43x+3MYthq0u7tNKTuIwEuL3U4Y+s/0z41lveMLs3mvjNsNm8jjGNeDSbLjN8KDha3+tT0rZPo18XmXjjOE+l/Z9oBCfz9nv/SHyaKFPdrq4ZiFDjc3/yObtDXEN/D5fiL65y9D+P1wA6GQj+VSFxOcE+eDMX/Csz1NHb5GLzt1CPuAA/AV/ZvbaXPINuOwhF8TnyUwrK+iTCqKN/vrBRZs3Gnbw+eZC5IN93jZ7Uzz3FP2zmvPARzZ1RvgF+j1s41kffXKe/pBWNoWU22ts3k20I7vwx3bDLJ8nmOtb+K5YSTdXubik35JLfpF+odke+qOK+8MniM/d5H6/zdlRiFpeQ1+fYIxmiXVZ3Gp4rpyH+LdmOao61Uwu8Ml+1o4i90ZdOG54KSRfKRe/N9TS9gJ5LJCLNIGYYe4tmU7+YVxVJ2Bv0sd31Sn5BHp7mZqbZq0ayTSjGvy3i3GY4d4z9ENLxlHnh4auMyzlObD/L7bnrz7u91hItgd80qr09h6B94MhxVU1WHqZcYlHm0sxreV36ek54/smeg736aCfEYMOxkHxVH5pT+TCOL8rp5tcqjvflfkDa7oIrPnWR74zLtWUzS71Je2js8s2ck61THVFNU41QjmtuvdffGgTNe99w6D9/plhyDAcUl3RXNh92qd6cYy8pcOdWW51ZihlvHOtbMt4XDA7J32stcft/Subc9pwxnDWcCjTOfyiviTbU9RnNf1wAPeHEHVW7hdpBONFn+qcePSz76BPojddsrm/GS4bfjeMZRqCj9SXVofYo/PzFln/kdPIrbz35Boo8q7zin3/3CceS0PkoDXQWXOIPhqjz/vD4v4BzbfTFvTRQPufsOYqp9UPVYcaqac89yvt25IQeeQc5MMrLmqsFz5jjkJPqgPQD86F+8Eh8C6z3806rZya5HvJpZ6xnHzXu1Sr6rJc3yOf++jzJeSzthA5zGY1AH4ZZo3VHQjo5r1TPlEdKlJH0vVPjOFuG7cbXvXJ9+DRSoyEpDnVrVqXajO46P7WExb3YWlLWs3vOPAl/LiV5+zysWZhRG4WQ+IAe9XU4UO2z2Smox6bW19IfHIe6jmbGPNipvdyXed3YNwJgT5ywX1oF/fEWe4JUetfGuayfHzdp3tYTRkP5HSnj/eevS717wZqH/PgF8+4is9J5o/qxFRWB7EvchV5M+dSD9Nc5RG4KLZYv49+7stiDv4tLtUZ9XL9b8l7eWWZrid98qNyVfrbTW1J76vc4nrVSx6nMr1creUh6UV9fLBMZ9hfuYSzr2Q8D2f1Abmjmiw+61zSu3j/yXsF/IN4l/cQ6aWNNWgZ7e/36b4Hrag/iccLrJm4V1/gWX9kTHs5Xz7CnXJtVtc6mUflPWSSNUK59IiPtayTcVH8VVsw59Ps/wy4gEeljdcbllGb8Mc4+ciu9NFIvZf3kLmsR2heXRYTaUV+21CWb+Aybu/rbbzDcCdrnrRVcovvmMp76GPUbBw0jNq3CXufzmqMYlJBPnWsuzqP/teopud35ibDw8j5kPqbck31NO+94HfRpRy8Qg3IL+pH4tZIrWDtnE935nZ/be3CnHnaVZ+VZv8FPafYoA==
   </data>
  </layer>
  <layer name="ChestOpen" width="35" height="30">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="13"/>
+   <property name="Y" value="11"/>
+  </properties>
   <data encoding="base64" compression="zlib">
    eJztzjEJAAAMA7Ay/6JnotAnUZAEAHZuHQAAoOoBJCgAAw==
   </data>
