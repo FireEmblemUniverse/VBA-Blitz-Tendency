@@ -38,3 +38,5 @@ EventPointerTable(0x8b, SnowObjectType)
 EventPointerTable(0x8c, SnowPalette)
 EventPointerTable(0x8d, SnowTileConfig)
 */
+
+#include "Cave Tileset Installer.event"
