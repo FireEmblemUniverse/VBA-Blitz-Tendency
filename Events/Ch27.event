@@ -1,0 +1,1376 @@
+#ifndef CCBLITZ_STAN_CH27
+#define CCBLITZ_STAN_CH27
+
+/*
+
+I hope y'all like Fog of war Desert Maps with one-tile hidden treasure =^)
+
+*/
+
+#include "EAstdlib.event"
+
+#ifndef SetSymbolDefined
+	#define SetSymbolDefined
+
+	#define SetSymbol(aName, aValue) "PUSH; ORG (aValue); aName:; POP"
+//	#define SetSymbol(aName, aValue) "aName = (aValue)"
+#endif // SetSymbolDefined
+
+#ifndef IsPointer
+	#define IsPointer 0x8000000
+#endif // IsPointer
+
+/* // :(
+#ifndef RedaPoolDefined
+	#define RedaPoolDefined
+
+	#define InlReda(aXTarget, aYTarget) "AddToPool(REDA [(aXTarget), (aYTarget)] 0 0 0 0)"
+//	#define InlReda(aXTarget, aYTarget) "REDA ## aXTarget ## R ## aYTarget" // It almost could work!
+#endif // RedaPoolDefined
+*/
+
+SetSymbol(scPrepScreen,         $591FD8) // no args
+SetSymbol(scNoSkipFadeOut,      $591F40) // no args
+SetSymbol(scLoadReinforcements, $9EE274) // args: s2 = pointer to UNITs
+
+// ==============
+// CHAPTER CONFIG
+// ==============
+
+#define Ch27ChrDenis Deuxnids // Alias for consistency
+
+// Level formulas
+#define Ch27LvBase(aLevelModifier) "Level((15 + (aLevelModifier)), Enemy, True)"
+#define Ch27LvProm(aLevelModifier) "Level((10 + (aLevelModifier)), Enemy, True)"
+#define Ch27LvBoss(aLevelModifier) "Level((15 + (aLevelModifier)), Enemy, True)"
+
+// Coords
+#define Ch27MonsterSpawnCoords "[10, 12]"
+#define Ch27MonsterSpawnCoordsRaw 0xC000A
+
+// Local Event Id Allocation
+SetSymbol(eidEnemyDeath,       10)
+SetSymbol(eidVillage,          11)
+SetSymbol(eidHumanReinf,       12)
+SetSymbol(eidHumanReinfActive, 13)
+SetSymbol(eidBoss,             14)
+SetSymbol(eidBossSummoned,     15)
+SetSymbol(eidGargoyles,        16)
+SetSymbol(eidMogalls,          17)
+SetSymbol(eidTreasure1,        18)
+SetSymbol(eidTreasure2,        19)
+SetSymbol(eidTreasure3,        20)
+SetSymbol(eidTreasure4,        21)
+
+// Event Counter Allocation
+SetSymbol(cntKillCountLo,   0) // low 4 bits of total kill count
+SetSymbol(cntKillCountHi,   1) // high 4 bits of total kill count
+SetSymbol(cntKillCountTurn, 2) // this turn's kill count
+SetSymbol(cntMonsterCycle,  3) // what's the next monster slot to load
+SetSymbol(cntHumanCycle,    4) // what's the next human slot to load
+SetSymbol(cntHumanCounter,  5) // when the next human reinf comes
+
+// ============
+// CHAPTER DATA
+// ============
+
+/*
+// Temporary hack because >Editing the death quote table
+// We need to have the generics have a death quote that sets eidEnemyDeath
+// And the boss to be a boss
+
+PUSH; ORG $9ECD4C
+	SHORT Ch27ChrMGeneric; BYTE 0xFF 0xFF; SHORT eidEnemyDeath; SHORT 0; WORD 0
+	SHORT Ch27ChrHGeneric; BYTE 0xFF 0xFF; SHORT eidEnemyDeath; SHORT 0; WORD 0
+
+	SHORT Ch27ChrZomboss; BYTE 0xFF 0xFF; SHORT 2; SHORT 0; WORD 0
+
+	SHORT 0xFFFF
+POP
+*/
+
+EventPointerTable(Ch27Events, ThisChapter)
+
+ALIGN 4
+ThisChapter:
+	POIN TurnEventList
+	POIN CharacterEventList
+	POIN LocationEventList
+	POIN ActionEventList
+	POIN DunnoList DunnoList DunnoList
+	POIN TutorialList
+	POIN TrapList TrapList2
+	POIN unPlayerList unPlayerList
+	WORD 0 0 0 0 0 0
+	POIN scBeginning scEnding
+
+ALIGN 4
+TurnEventList:
+	TURN 0 scShiftSands       [0, 0xFF] 0 // Shift sands every turn
+	TURN 0 scTurnMonsterReinf [0, 0xFF] 0 // Call monster reinf every turn
+
+	TURN eidGargoyles  scSummonGargoyles  [0, 0xFF] 0
+	TURN eidHumanReinf scHumanReinf       [0, 0xFF] 0
+	TURN eidMogalls    scSummonMogalls    [0, 0xFF] 0
+	TURN eidBoss       scBossWantsToFight [0, 0xFF] 0
+
+	TURN 0 scHumanReinfFurther [0, 0xFF] 0
+
+	END_MAIN
+
+ALIGN 4
+CharacterEventList:
+	END_MAIN
+
+ALIGN 4
+LocationEventList:
+	Village(eidVillage, scVillageVisit, 2, 4)
+	SecretShop(shopSecret, 10, 12) // Yes, this is where the monsters spawn from :)
+
+	END_MAIN
+
+ALIGN 4
+ActionEventList:
+	AFEV 0 scOnEnemyDeath eidEnemyDeath
+
+	CauseGameOverIfLordDies
+	AFEV 3 scEnding 2
+
+	AREA 0 scYouShouldntBeHere Ch27MonsterSpawnCoords Ch27MonsterSpawnCoords
+
+	// Hidden trasure!
+	// They're marked on the map!
+
+	AREA eidTreasure1 scTreasure1 [15, 17] [15, 17]
+	AREA eidTreasure2 scTreasure2 [6,  17] [6,  17]
+	AREA eidTreasure3 scTreasure3 [4,  9]  [4,  9]
+	AREA eidTreasure4 scTreasure4 [11, 3]  [11, 3]
+
+	END_MAIN
+
+ALIGN 4
+DunnoList:
+	END_MAIN
+
+ALIGN 4
+TutorialList:
+	WORD 0
+
+ALIGN 4
+TrapList:
+TrapList2:
+	ENDTRAP
+
+ALIGN 4
+scEnqueueREDAFromCoords: {
+	// Coords in sB
+
+	SVAL r1 0xFFFF
+	SAND slotsParam(r1, rB, r1)
+
+	SVAL r2 16
+	SLSR slotsParam(r2, rB, r2)
+
+	SVAL r3 6
+	SLSL slotsParam(r2, r2, r3)
+
+	// Slot1 = (Coords & 0xFFFF) | (Coords >> 16 << 6);
+	SORR slotsParam(r1, r1, r2)
+	SAVETOQUEUE
+
+	SVAL r1 0
+	SAVETOQUEUE
+
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scResetKillCount: {
+	COUNTER_SET cntKillCountLo 0
+	COUNTER_SET cntKillCountHi 0
+
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scIncKillCount: {
+	SetSymbol(inc_regular, 0)
+	SetSymbol(end,         1)
+
+	COUNTER_CHECK cntKillCountLo // sC = LoKillCount
+	SVAL r1 15 // 15 is max for any counter (because 4 bits)
+
+	BNE inc_regular rC r1
+
+	COUNTER_SET cntKillCountLo 0
+
+	// EA Raw is broken, there's only one argument and it's the counted id
+	// This is an increment instruction, not an addition
+	COUNTER_ADD cntKillCountHi 0
+
+	GOTO end
+
+LABEL inc_regular
+	COUNTER_ADD cntKillCountLo 0
+
+LABEL end
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scGetKillCount: {
+	COUNTER_CHECK cntKillCountHi
+
+	// r1 = KillCountHi << 4
+	SVAL r2 4
+	SLSL slotsParam(r1, rC, r2)
+
+	COUNTER_CHECK cntKillCountLo
+
+	// rC = (KillCountHi << 4) + KillCountLo
+	SADD slotsParam(rC, rC, r1)
+
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scGetNextMonsterIndex: {
+	SetSymbol(inc, 0)
+	SetSymbol(end, 1)
+
+	COUNTER_CHECK cntMonsterCycle
+
+	SVAL r1 15
+	BNE inc rC r1
+
+	COUNTER_SET cntMonsterCycle 0
+	
+	GOTO end
+
+LABEL inc
+	// EA Raw is broken, there's only one argument and it's the counted id
+	// This is an increment instruction, not an addition
+	COUNTER_ADD cntMonsterCycle 0
+
+LABEL end
+	COUNTER_CHECK cntMonsterCycle
+
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scGetNextHumanGroupIndex: {
+	SetSymbol(inc, 0)
+	SetSymbol(end, 1)
+
+	COUNTER_CHECK cntHumanCycle
+
+	SVAL r1 4
+	BNE inc rC r1
+
+	COUNTER_SET cntHumanCycle 0
+	
+	GOTO end
+
+LABEL inc
+	// EA Raw is broken, there's only one argument and it's the counted id
+	// This is an increment instruction, not an addition
+	COUNTER_ADD cntHumanCycle 0
+
+LABEL end
+	COUNTER_CHECK cntHumanCycle
+
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scGetMonsterCoordsForShift: {
+	// Shift index in s2
+
+	SVAL r3 (IsPointer | MonsterWalkCoordLookup)
+	ASMC LoadIndexedWordAMSC
+
+	NoFade
+	ENDA
+
+ALIGN 4
+MonsterWalkCoordLookup:
+	SHORT 15 17 // Shift 0  -> 1
+	SHORT 10 18 // Shift 1  -> 2
+	SHORT  6 16 // Shift 2  -> 3
+	SHORT  4 13 // Shift 3  -> 4
+	SHORT  5  9 // Shift 4  -> 5
+	SHORT  6  6 // Shift 5  -> 6
+	SHORT  9  3 // Shift 6  -> 7
+	SHORT 12  4 // Shift 7  -> 8
+	SHORT 14  8 // Shift 8  -> 9
+	SHORT 16 10 // Shift 9  -> 10
+	SHORT 19 12 // Shift 10 -> 11
+	SHORT 17 15 // Shift 11 -> 0
+
+}
+
+ALIGN 4
+scBeginning: {
+	VCWF Ch27FogLevel // FOG
+	WEA1 6            // SANDSTORM
+
+	// Initial tile changes
+	TILECHANGE 10
+	TILECHANGE 70
+	TILECHANGE 71
+
+	// Initial event id states
+	ENUT eidGargoyles
+	ENUT eidHumanReinf
+	ENUT eidMogalls
+	ENUT eidBoss
+
+	CALL scResetKillCount
+
+#ifdef __DEBUG__
+	LOAD1 0 unPlayerList
+#endif // __DEBUG__
+
+	LOAD1 0 unEnemyInitialMonsterGroup1
+	LOAD1 0 unEnemyInitialMonsterGroup2
+	LOAD1 0 unEnemyInitialMonsterGroup3
+	LOAD1 0 unEnemyInitialMonsterGroup4
+
+	// TODO (polish): Maybe add some more starting enemies?
+	// The map feels pretty empty initially imo
+
+	ENUN
+
+	// Uncomment if we want some dialogue before prep screen
+	// CALL scNoSkipFadeOut
+
+	// TODO (polish): Some intro text maybe
+
+	CALL scPrepScreen
+
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scVillageVisit:
+	VillageEventItem(PlaceholderText, Village, Warp)
+
+ALIGN 4
+scShiftSands: {
+	SetSymbol(not_turn1, 0)
+	SetSymbol(not_turn2, 1)
+	SetSymbol(not_turn3, 2)
+	SetSymbol(not_turn4, 3)
+	SetSymbol(not_turn5, 4)
+	SetSymbol(not_turn6, 5)
+	SetSymbol(end,       6)
+
+	ASMC SlideAllUnitsASMC
+
+	// TODO (polish): play windy sound?
+
+	CHECK_TURNS
+
+	SVAL r7 6
+	SMOD slotsParam(r1, rC, r7)
+
+	SVAL r7 1
+	BNE not_turn1 r1 r7
+
+	// Turn 1 - 7 - 13 - 19...
+
+	CAM1 [18, 12]
+
+	EARTHQUAKE_START 0
+
+	SVAL r2 (IsPointer | mclShift1)
+	ASMC MapChangeListASMC
+
+	EARTHQUAKE_END
+
+	CAM1 [4, 7]
+
+	EARTHQUAKE_START 0
+
+	SVAL r2 (IsPointer | mclShift7)
+	ASMC MapChangeListASMC
+
+	EARTHQUAKE_END
+
+	GOTO end
+
+LABEL not_turn1
+	SVAL r7 2
+	BNE not_turn2 r1 r7
+
+	// Turn 2 - 8 - 14 - 20...
+
+	CAM1 [16, 16]
+
+	EARTHQUAKE_START 0
+
+	SVAL r2 (IsPointer | mclShift2)
+	ASMC MapChangeListASMC
+
+	EARTHQUAKE_END
+
+	CAM1 [5, 5]
+
+	EARTHQUAKE_START 0
+
+	SVAL r2 (IsPointer | mclShift8)
+	ASMC MapChangeListASMC
+
+	EARTHQUAKE_END
+
+	GOTO end
+
+LABEL not_turn2
+	SVAL r7 3
+	BNE not_turn3 r1 r7
+
+	// Turn 3 - 9 - 15 - 21...
+
+	CAM1 [12, 17]
+
+	EARTHQUAKE_START 0
+
+	SVAL r2 (IsPointer | mclShift3)
+	ASMC MapChangeListASMC
+
+	EARTHQUAKE_END
+
+	CAM1 [8, 3]
+
+	EARTHQUAKE_START 0
+
+	SVAL r2 (IsPointer | mclShift9)
+	ASMC MapChangeListASMC
+
+	EARTHQUAKE_END
+
+	GOTO end
+
+LABEL not_turn3
+	SVAL r7 4
+	BNE not_turn4 r1 r7
+
+	// Turn 4 - 10 - 16 - 22...
+
+	CAM1 [8, 17]
+
+	EARTHQUAKE_START 0
+
+	SVAL r2 (IsPointer | mclShift4)
+	ASMC MapChangeListASMC
+
+	EARTHQUAKE_END
+
+	CAM1 [13, 4]
+
+	EARTHQUAKE_START 0
+
+	SVAL r2 (IsPointer | mclShift10)
+	ASMC MapChangeListASMC
+
+	EARTHQUAKE_END
+
+	GOTO end
+
+LABEL not_turn4
+	SVAL r7 5
+	BNE not_turn5 r1 r7
+
+	// Turn 5 - 11 - 17 - 23...
+
+	CAM1 [4, 15]
+
+	EARTHQUAKE_START 0
+
+	SVAL r2 (IsPointer | mclShift5)
+	ASMC MapChangeListASMC
+
+	EARTHQUAKE_END
+
+	CAM1 [14, 6]
+
+	EARTHQUAKE_START 0
+
+	SVAL r2 (IsPointer | mclShift11)
+	ASMC MapChangeListASMC
+
+	EARTHQUAKE_END
+
+	GOTO end
+
+LABEL not_turn5
+	SVAL r7 0
+	BNE not_turn6 r1 r7
+
+	// Turn 6 - 12 - 18 - 24...
+
+	CAM1 [4, 12]
+
+	EARTHQUAKE_START 0
+
+	SVAL r2 (IsPointer | mclShift6)
+	ASMC MapChangeListASMC
+
+	EARTHQUAKE_END
+
+	CAM1 [17, 9]
+
+	EARTHQUAKE_START 0
+
+	SVAL r2 (IsPointer | mclShift12)
+	ASMC MapChangeListASMC
+
+	EARTHQUAKE_END
+
+	GOTO end
+
+LABEL not_turn6
+LABEL end
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scOnEnemyDeath: {
+	ENUF eidEnemyDeath // Allow the next enemy to also die
+
+	CALL scIncKillCount
+	CALL scHandleKillEvents
+
+	// EA Raw is broken, there's only one argument and it's the counted id
+	// This is an increment instruction, not an addition
+	COUNTER_ADD cntKillCountTurn 0
+
+#ifdef __DEBUG__
+	// Give the amount of enemies killed as money
+	// Easy way to keep track of the number
+
+	CALL scGetKillCount
+	SADD slotsParam(r3, rC, r0)
+
+	// Gib Mone
+	GIVEITEMTOMAIN 0
+#endif // __DEBUG__
+
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scTurnMonsterReinf: {
+	SetSymbol(loop, 0)
+	SetSymbol(end,  1)
+
+	// Buff all monsters stats by 1
+
+	SVAL r2 Ch27ChrMGeneric
+	ASMC BuffAllCharactersASMC
+
+	// Do not summon/move any monster if the boss is on the field
+
+	CHECK_EVENTID eidBossSummoned
+	BNE end rC r0
+
+	// EA Raw is broken, there's only one argument and it's the counted id
+	// This is an increment instruction, not an addition
+	COUNTER_ADD cntKillCountTurn 0
+
+	COUNTER_CHECK cntKillCountTurn
+
+	SVAL r1 3
+	BLT end rC r1
+
+LABEL loop
+	CALL scGetNextMonsterIndex
+
+	SADD slotsParam(r2, rC, r0)
+	SVAL r3 (IsPointer | MonsterUnitLookup)
+
+	// ldr s2, [s3, s2, lsl #2]
+	ASMC LoadIndexedWordAMSC
+	SADD slotsParam(r2, rC, r0)
+
+	CALL scLoadReinforcements
+
+	// Because Intelligent Systems/10, The Unit map doesn't work
+	// for units that are in the fog unless it is enemy phase.
+	// To address that issue, I'm silently disabling fog for the duration
+	// of the MOVEFORCED prep & call, and restoring before the ENUN.
+
+	ASMC FogHackBeginASMC
+
+	CHECK_TURNS
+
+	SVAL r2 12
+	SMOD slotsParam(r2, rC, r2)
+
+	CALL scGetMonsterCoordsForShift
+
+	SADD slotsParam(r2, rC, r0) 
+	SVAL rB Ch27MonsterSpawnCoordsRaw
+
+	ASMC GetBestCoordsForUnitAtASMC
+
+	SVAL rD 0
+
+	SADD slotsParam(rB, rC, r0)
+	CALL scEnqueueREDAFromCoords
+
+	SVAL rB Ch27MonsterSpawnCoordsRaw
+	MOVEFORCED 0 UnitAtCoordsSlotB 0
+
+	ASMC FogHackEndASMC
+
+	ENUN
+
+	// EA Raw is broken, there's only one argument and it's the counted id
+	// This is an decrement instruction, not a substraction
+	COUNTER_SUBTRACT cntKillCountTurn 0
+	COUNTER_SUBTRACT cntKillCountTurn 0
+	COUNTER_SUBTRACT cntKillCountTurn 0
+
+	COUNTER_CHECK cntKillCountTurn
+
+	SVAL r1 3
+	BGE loop rC r1
+
+LABEL end
+	NoFade
+	ENDA
+
+ALIGN 4
+MonsterUnitLookup:
+	POIN unEnemyMonster0
+	POIN unEnemyMonster1
+	POIN unEnemyMonster2
+	POIN unEnemyMonster3
+	POIN unEnemyMonster4
+	POIN unEnemyMonster5
+	POIN unEnemyMonster6
+	POIN unEnemyMonster7
+	POIN unEnemyMonster8
+	POIN unEnemyMonster9
+	POIN unEnemyMonster10
+	POIN unEnemyMonster11
+	POIN unEnemyMonster12
+	POIN unEnemyMonster13
+	POIN unEnemyMonster14
+	POIN unEnemyMonster15
+
+}
+
+ALIGN 4
+scHandleKillEvents: {
+	SetSymbol(not_gargoyles,  0)
+	SetSymbol(not_humanreinf, 1)
+	SetSymbol(not_mogalls,    2)
+	SetSymbol(not_dracoboss,  3)
+	SetSymbol(end,            4)
+
+	CALL scGetKillCount
+
+	SVAL r1 Ch27GargoylesKillCount
+	BNE not_gargoyles rC r1
+
+	ENUF eidGargoyles
+
+	GOTO end
+
+LABEL not_gargoyles
+	SVAL r1 Ch27HumanReinfKillCount
+	BNE not_humanreinf rC r1
+
+	ENUF eidHumanReinf
+
+	GOTO end
+
+LABEL not_humanreinf
+	SVAL r1 Ch27MogallsKillCount
+	BNE not_mogalls rC r1
+
+	ENUF eidMogalls
+
+	GOTO end
+
+LABEL not_mogalls
+	SVAL r1 Ch27DracoBossKillCount
+	BNE end rC r1
+
+	ENUF eidBoss
+
+LABEL end
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scSummonGargoyles: {
+	SVAL r2 (IsPointer | unEnemyGargoyleReinf)
+	CALL scLoadReinforcements
+
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scSummonMogalls: {
+	SVAL r2 (IsPointer | unEnemyMogallReinf)
+	CALL scLoadReinforcements
+
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scHumanReinf: {
+	CAM1 [16, 2]
+
+	LOAD1 0 unEnemyHumanInitialTorcher
+	ENUN
+
+	// [20, 2]
+	SVAL rB 0x20014
+
+	ASMC TorchStaffAnimASMC
+	ASMC TorchSetASMC
+
+	STAL 20
+
+	LOAD1 0 unEnemyHumanInitialSandCleaner
+	ENUN
+
+	// TODO (polish): have mage animate and cast spell
+	// TODO (polish): play windy sound?
+
+	EARTHQUAKE_START 0
+
+	STAL 30
+
+	TILECHANGE 5
+
+	STAL 30
+
+	TILECHANGE 6
+
+	STAL 30
+
+	TILECHANGE 7
+
+	STAL 30
+
+	EARTHQUAKE_END
+
+	LOAD1 0 unEnemyHumanInitialWave
+	ENUN
+
+	ENUT eidHumanReinfActive
+
+	COUNTER_SET cntHumanCounter (Ch27TurnsBetweenHumanReinf + 1)
+
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scHumanReinfFurther: {
+	SetSymbol(end, 0)
+
+	CHECK_EVENTID eidHumanReinfActive
+	BEQ end rC r0
+
+	// EA Raw is broken, there's only one argument and it's the counted id
+	// This is an decrement instruction, not a substraction
+	COUNTER_SUBTRACT cntHumanCounter 0
+
+	COUNTER_CHECK cntHumanCounter
+	BNE end rC r0
+
+	CALL scGetNextHumanGroupIndex
+
+	SADD slotsParam(r2, rC, r0)
+	SVAL r3 (IsPointer | HumanUnitGroupLookup)
+
+	ASMC LoadIndexedWordAMSC
+	SADD slotsParam(r2, rC, r0)
+
+	CALL scLoadReinforcements
+
+	COUNTER_SET cntHumanCounter Ch27TurnsBetweenHumanReinf
+
+LABEL end
+	NoFade
+	ENDA
+
+ALIGN 4
+HumanUnitGroupLookup:
+	POIN unEnemyHumanWave0
+	POIN unEnemyHumanWave1
+	POIN unEnemyHumanWave2
+	POIN unEnemyHumanWave3
+	POIN unEnemyHumanWave4
+
+}
+
+ALIGN 4
+scBossWantsToFight: {
+	ASMC GetBestCoordsForDRAGONASMC
+	SADD slotsParam(rB, rC, r0)
+
+	SVAL rD 0
+	CALL scEnqueueREDAFromCoords
+
+	LOAD1 0 unEnemyMonsterBoss
+	MOVEFORCED 0 Ch27ChrZomboss 0
+
+	// _0x2620->CAM2? This one is the "better" camera code, because the other
+	// one likes to pan the camera outside of the map, causing muchos glitchos
+	// (CAM1 Character doesn't have that issue, only the coords variant)
+	_0x2620 0xFFFF
+
+	ENUN
+
+	// TODO (polish): Text where people are "ono a dragn"
+
+	SVAL r1 0x00010000
+	SSUB slotsParam(rB, rB, r1)
+
+	SVAL rD 0
+	CALL scEnqueueREDAFromCoords
+
+	LOAD1 0 unAllyDenis
+	MOVEFORCED 0 Ch27ChrDenis 0
+
+	ENUN
+
+	FAWI 50
+	FAWU 5
+
+	SVAL rB Ch27MonsterSpawnCoordsRaw
+
+	SVAL rD 0
+	CALL scEnqueueREDAFromCoords
+
+	MOVEFORCED 0 Ch27ChrZomboss 0
+	ENUN
+
+	// TODO (polish): Text where Denis says he scared the dragn off for now but we must defeat him
+
+	_0x2620 0xFFFF
+
+	ASMC TorchStaffAnimASMC
+	ASMC TorchSetASMC
+
+	STAL 20
+
+	// TODO (polish): Maybe be like "here he is!"
+
+	SVAL r2 (IsPointer | unEnemyMonsterDragonSupport)
+	CALL scLoadReinforcements
+
+	ENUT eidBossSummoned
+
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scYouShouldntBeHere: {
+	ASMC SendActiveUnitAwayASMC
+
+	// TODO (polish): Text box/popup saying "X was undeployed." or something
+
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scTreasureCommon: {
+	SetSymbol(not_ally, 0)
+	SetSymbol(end,      1)
+
+	CHECK_ALLEGIANCE ActiveUnit
+	BNE not_ally rC r0
+
+	GIVEITEMTO ActiveUnit
+
+	GOTO end
+
+LABEL not_ally
+	CHECK_EVENTID // wtf EA Raws (there's two of those raws with the same name that do pretty different things
+	SADD slotsParam(r2, rC, r0)
+	ENUF_SLOT2
+
+LABEL end
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scTreasure1: {
+	SVAL r3 EnergyRing
+	CALL scTreasureCommon
+
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scTreasure2: {
+	SVAL r3 Boots
+	CALL scTreasureCommon
+
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scTreasure3: {
+	SVAL r3 Dracoshield 
+	CALL scTreasureCommon
+
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scTreasure4: {
+	SVAL r3 Speedwings
+	CALL scTreasureCommon
+
+	NoFade
+	ENDA
+}
+
+ALIGN 4
+scEnding: {
+	// TODO (polish): Ending text
+
+	// move to next chapter whatever it is
+	MNCH 0x1E // Taken from VBA Ch27
+
+	ENDA
+}
+
+// Those are tile change lists to be used with the ASMC
+// I use the asmc instead of the regular TILECHANGE/TILEREVERT events
+// because I want to display the tile change fade for more than one at the time
+// otherwise it would look kind of weird (especially for Shift7, that's in 2 parts)
+
+// Format is SHORT <mapChangeId> <Bool: True => Trigger, False => Revert>
+
+mclShift1:
+	SHORT 10 False
+	SHORT 20 True
+	SHORT 21 True
+	SHORT (-1)
+
+mclShift2:
+	SHORT 20 False
+	SHORT 21 False
+	SHORT 30 True
+	SHORT (-1)
+
+mclShift3:
+	SHORT 30 False
+	SHORT 40 True
+	SHORT 41 True
+	SHORT (-1)
+
+mclShift4:
+	SHORT 40 False
+	SHORT 41 False
+	SHORT 50 True
+	SHORT 51 True
+	SHORT (-1)
+
+mclShift5:
+	SHORT 50 False
+	SHORT 51 False
+	SHORT 60 True
+	SHORT (-1)
+
+mclShift6:
+	SHORT 60 False
+	SHORT 70 True
+	SHORT 71 True
+	SHORT (-1)
+
+mclShift7:
+	SHORT 70 False
+	SHORT 71 False
+	SHORT 80 True
+	SHORT 81 True
+	SHORT (-1)
+
+mclShift8:
+	SHORT 80 False
+	SHORT 81 False
+	SHORT 90 True
+	SHORT (-1)
+
+mclShift9:
+	SHORT 90  False
+	SHORT 100 True
+	SHORT 101 True
+	SHORT (-1)
+
+mclShift10:
+	SHORT 100 False
+	SHORT 101 False
+	SHORT 110 True
+	SHORT 111 True
+	SHORT (-1)
+
+mclShift11:
+	SHORT 110 False
+	SHORT 111 False
+	SHORT 120 True
+	SHORT 121 True
+	SHORT (-1)
+
+mclShift12:
+	SHORT 120 False
+	SHORT 121 False
+	SHORT 10  True
+	SHORT (-1)
+
+ALIGN 4
+shopSecret:
+	SHLI BraveSword BraveLance BraveAxe BraveBow Fimbulvetr Purge Fortify EnergyRing Speedwings Dracoshield Talisman TorchItem
+
+// ==================
+// CHAPTER UNIT LISTS
+// ==================
+
+ALIGN 4
+unPlayerList:
+	// Feature Testing Crew
+
+	UNIT Eirika   FalcoKnight    0 Level(20, Ally, True) [17, 14] 0 0 0 0 [Sieglinde, Runesword, MemberCard]     NoAI
+	UNIT Moulder  Bishop         0 Level(20, Ally, True) [19, 15] 0 0 0 0 [Latona, Aura, Mend]                   NoAI
+	UNIT Innes    Sniper         0 Level(20, Ally, True) [17, 12] 0 0 0 0 [Nidhogg, Longbow]                     NoAI
+	UNIT LArachel MageKnight_F   0 Level(20, Ally, True) [15, 12] 0 0 0 0 [Excalibur, Heal, Vulnerary]           NoAI
+	UNIT Gilliam  General        0 Level(20, Ally, True) [18, 14] 0 0 0 0 [Garm, Javelin]                        NoAI
+	UNIT Seth     Paladin        0 Level(20, Ally, True) [16, 12] 0 0 0 0 [SilverSword, SilverLance, Elixir]     NoAI
+	UNIT Lute     Sage_F         0 Level(20, Ally, True) [16, 13] 0 0 0 0 [Ivaldi, Thunder, Warp]                NoAI
+	UNIT Tana     WyvernKnight_F 0 Level(20, Ally, True) [19, 13] 0 0 0 0 [Vidofnir, Spear, Elixir]              NoAI
+	UNIT Ewan     Summoner       0 Level(20, Ally, True) [18, 13] 0 0 0 0 [Gleipnir, Flux, Nosferatu, Rescue]    NoAI
+	UNIT Marisa   Swordmaster_F  0 Level(20, Ally, True) [16, 14] 0 0 0 0 [Audhulma, BraveSword, Shamshir]       NoAI
+	UNIT Colm     Rogue          0 Level(20, Ally, True) [20, 14] 0 0 0 0 [KillingEdge, Elixir]                  NoAI
+	UNIT Tethys   Dancer         0 Level(20, Ally, True) [15, 14] 0 0 0 0 [Elixir, PureWater]                    NoAI
+
+	UNIT // end
+
+ALIGN 4
+unAllyDenis:
+	UNIT Ch27ChrDenis Bishop 0 Level(14, Ally, False) [21, 0] 0 0 1 redaDenis [Divine, Physic, Latona] NoAI
+	UNIT // end
+
+ALIGN 4
+unEnemyInitialMonsterGroup1:
+	UNIT Ch27ChrMGeneric Wight     0 Ch27LvProm(3) [15, 17] 2 0 0 0 [BraveSword, TorchStaff] PursueWithoutHeedAI
+
+	UNIT Ch27ChrMGeneric Wight_Bow  0 Ch27LvProm(1) [16, 18] 0 0 0 0 [SilverBow]   PursueWithoutHeedAI
+	UNIT Ch27ChrMGeneric Wight      0 Ch27LvProm(1) [14, 16] 0 0 0 0 [ShortSpear]  PursueWithoutHeedAI
+	UNIT Ch27ChrMGeneric Bonewalker 0 Ch27LvBase(2) [16, 16] 0 0 0 0 [SilverSword] PursueWithoutHeedAI
+	UNIT Ch27ChrMGeneric Bonewalker 0 Ch27LvBase(2) [14, 18] 0 0 0 0 [SilverLance] PursueWithoutHeedAI
+
+	UNIT // end
+
+ALIGN 4
+unEnemyInitialMonsterGroup2:
+	UNIT Ch27ChrMGeneric Entombed 0 Ch27LvProm(3) [3, 15] 2 0 0 0 [SharpClaw, TorchItem] AttackInRangeAI
+
+	UNIT Ch27ChrMGeneric Entombed 0 Ch27LvProm(1) [2, 14] 0 0 0 0 [PoisonClaw] AttackInRangeAI
+	UNIT Ch27ChrMGeneric Entombed 0 Ch27LvProm(1) [4, 16] 0 0 0 0 [FetidClaw] AttackInRangeAI
+	UNIT Ch27ChrMGeneric Revenant 0 Ch27LvProm(1) [4, 14] 0 0 0 0 [PoisonClaw] AttackInRangeAI
+	UNIT Ch27ChrMGeneric Revenant 0 Ch27LvProm(1) [2, 16] 0 0 0 0 [FetidClaw] AttackInRangeAI
+
+	UNIT // end
+
+ALIGN 4
+unEnemyInitialMonsterGroup3:
+	UNIT Ch27ChrMGeneric Cyclops        0 Ch27LvProm(2) [8, 3] 2 0 0 0 [SilverAxe, Tomahawk] AttackInRangeAI
+
+	UNIT Ch27ChrMGeneric Bonewalker     0 Ch27LvBase(2) [7, 2] 0 0 0 0 [Lancereaver] AttackInRangeAI
+	UNIT Ch27ChrMGeneric Bonewalker_Bow 0 Ch27LvBase(2) [9, 4] 0 0 0 0 [BraveBow] AttackInRangeAI
+	UNIT Ch27ChrMGeneric Revenant       0 Ch27LvBase(2) [7, 4] 0 0 0 0 [PoisonClaw] AttackInRangeAI
+	UNIT Ch27ChrMGeneric Revenant       0 Ch27LvBase(2) [9, 2] 0 0 0 0 [SharpClaw] AttackInRangeAI
+
+	UNIT // end
+
+ALIGN 4
+unEnemyInitialMonsterGroup4:
+	UNIT Ch27ChrMGeneric Wight_Bow      0 Ch27LvProm(2) [1, 20] 2 0 0 0 [SilverBow, Longbow] AttackInRangeAI
+
+	UNIT Ch27ChrMGeneric Bonewalker     0 Ch27LvBase(2) [0, 19] 0 0 0 0 [SilverSword] AttackInRangeAI
+	UNIT Ch27ChrMGeneric Wight          0 Ch27LvProm(2) [2, 21] 0 0 0 0 [Axereaver] AttackInRangeAI
+	UNIT Ch27ChrMGeneric Revenant       0 Ch27LvBase(2) [0, 21] 0 0 0 0 [PoisonClaw] AttackInRangeAI
+	UNIT Ch27ChrMGeneric Entombed       0 Ch27LvBase(2) [2, 19] 0 0 0 0 [SharpClaw] AttackInRangeAI
+
+	UNIT // end
+
+ALIGN 4
+unEnemyGargoyleReinf:
+	UNIT Ch27ChrMGeneric Gargoyle   0 Ch27LvBase(1) Ch27MonsterSpawnCoords 0 0 1 redaMonsterBLL [SteelLance]  AttackInRangeAI
+	UNIT Ch27ChrMGeneric Gargoyle   0 Ch27LvBase(1) Ch27MonsterSpawnCoords 0 0 1 redaMonsterTRR [SteelLance]  AttackInRangeAI
+	UNIT Ch27ChrMGeneric Deathgoyle 0 Ch27LvProm(1) Ch27MonsterSpawnCoords 0 0 1 redaMonsterBBR [ShortSpear]  AttackInRangeAI
+	UNIT Ch27ChrMGeneric Deathgoyle 0 Ch27LvProm(1) Ch27MonsterSpawnCoords 0 0 1 redaMonsterTTL [SilverLance] AttackInRangeAI
+
+	UNIT // end
+
+ALIGN 4
+unEnemyMogallReinf:
+	UNIT Ch27ChrMGeneric Mogall     0 Ch27LvBase(1) Ch27MonsterSpawnCoords 0 0 1 redaMonsterBBL [EvilEye]    AttackInRangeAI
+	UNIT Ch27ChrMGeneric Mogall     0 Ch27LvBase(1) Ch27MonsterSpawnCoords 0 0 1 redaMonsterTTR [EvilEye]    AttackInRangeAI
+	UNIT Ch27ChrMGeneric ArchMogall 0 Ch27LvProm(1) Ch27MonsterSpawnCoords 0 0 1 redaMonsterBRR [CrimsonEye] AttackInRangeAI
+	UNIT Ch27ChrMGeneric ArchMogall 0 Ch27LvProm(1) Ch27MonsterSpawnCoords 0 0 1 redaMonsterTLL [CrimsonEye] AttackInRangeAI
+
+	UNIT // end
+
+ALIGN 4
+unEnemyMonster0:
+	UNIT Ch27ChrMGeneric Bonewalker 0 Ch27LvBase(1) Ch27MonsterSpawnCoords 0 0 0 0 [SilverSword] PursueWithoutHeedAI
+	UNIT // end
+
+ALIGN 4
+unEnemyMonster1:
+	UNIT Ch27ChrMGeneric Revenant 0 Ch27LvBase(1) Ch27MonsterSpawnCoords 0 0 0 0 [FetidClaw] PursueWithoutHeedAI
+	UNIT // end
+
+ALIGN 4
+unEnemyMonster2:
+	UNIT Ch27ChrMGeneric Bonewalker 0 Ch27LvBase(1) Ch27MonsterSpawnCoords 0 0 0 0 [KillingEdge] PursueWithoutHeedAI
+	UNIT // end
+
+ALIGN 4
+unEnemyMonster3:
+	UNIT Ch27ChrMGeneric Entombed 0 Ch27LvProm(1) Ch27MonsterSpawnCoords 0 0 0 0 [FetidClaw] PursueWithoutHeedAI
+	UNIT // end
+
+ALIGN 4
+unEnemyMonster4:
+	UNIT Ch27ChrMGeneric Bonewalker_Bow 0 Ch27LvBase(1) Ch27MonsterSpawnCoords 0 0 0 0 [SilverBow] PursueWithoutHeedAI
+	UNIT // end
+
+ALIGN 4
+unEnemyMonster5:
+	UNIT Ch27ChrMGeneric Wight 0 Ch27LvProm(1) Ch27MonsterSpawnCoords 0 0 0 0 [SilverSword] PursueWithoutHeedAI
+	UNIT // end
+
+ALIGN 4
+unEnemyMonster6:
+	UNIT Ch27ChrMGeneric Revenant 0 Ch27LvBase(1) Ch27MonsterSpawnCoords 0 0 0 0 [PoisonClaw] PursueWithoutHeedAI
+	UNIT // end
+
+ALIGN 4
+unEnemyMonster7:
+	UNIT Ch27ChrMGeneric Cyclops 0 Ch27LvProm(1) Ch27MonsterSpawnCoords 0 0 0 0 [SilverAxe] PursueWithoutHeedAI
+	UNIT // end
+
+ALIGN 4
+unEnemyMonster8:
+	UNIT Ch27ChrMGeneric Wight_Bow 0 Ch27LvProm(1) Ch27MonsterSpawnCoords 0 0 0 0 [SilverBow] PursueWithoutHeedAI
+	UNIT // end
+
+ALIGN 4
+unEnemyMonster9:
+	UNIT Ch27ChrMGeneric Revenant 0 Ch27LvBase(1) Ch27MonsterSpawnCoords 0 0 0 0 [PoisonClaw] PursueWithoutHeedAI
+	UNIT // end
+
+ALIGN 4
+unEnemyMonster10:
+	UNIT Ch27ChrMGeneric Entombed 0 Ch27LvProm(1) Ch27MonsterSpawnCoords 0 0 0 0 [FetidClaw] PursueWithoutHeedAI
+	UNIT // end
+
+ALIGN 4
+unEnemyMonster11:
+	UNIT Ch27ChrMGeneric Wight 0 Ch27LvProm(1) Ch27MonsterSpawnCoords 0 0 0 0 [SilverSword] PursueWithoutHeedAI
+	UNIT // end
+
+ALIGN 4
+unEnemyMonster12:
+	UNIT Ch27ChrMGeneric Cyclops 0 Ch27LvProm(1) Ch27MonsterSpawnCoords 0 0 0 0 [SilverAxe] PursueWithoutHeedAI
+	UNIT // end
+
+ALIGN 4
+unEnemyMonster13:
+	UNIT Ch27ChrMGeneric Bonewalker 0 Ch27LvBase(1) Ch27MonsterSpawnCoords 0 0 0 0 [SilverLance] PursueWithoutHeedAI
+	UNIT // end
+
+ALIGN 4
+unEnemyMonster14:
+	UNIT Ch27ChrMGeneric Bonewalker 0 Ch27LvBase(1) Ch27MonsterSpawnCoords 0 0 0 0 [Axereaver] PursueWithoutHeedAI
+	UNIT // end
+
+ALIGN 4
+unEnemyMonster15:
+	UNIT Ch27ChrMGeneric Revenant 0 Ch27LvBase(1) Ch27MonsterSpawnCoords 0 0 0 0 [PoisonClaw] PursueWithoutHeedAI
+	UNIT // end
+
+ALIGN 4
+unEnemyMonsterBoss:
+	UNIT Ch27ChrZomboss DracoZombie 0 Ch27LvBoss(3) Ch27MonsterSpawnCoords 0 0 0 0 [WretchedAir] NeverMoveAI
+	UNIT // end
+
+ALIGN 4
+unEnemyMonsterDragonSupport:
+	UNIT Ch27ChrMGeneric Wight      0 Ch27LvProm(2) Ch27MonsterSpawnCoords 0 0 1 redaMonsterBBL [BraveLance] AttackInRangeAI
+	UNIT Ch27ChrMGeneric Wight_Bow  0 Ch27LvProm(2) Ch27MonsterSpawnCoords 0 0 1 redaMonsterTTR [BraveBow]   AttackInRangeAI
+	UNIT Ch27ChrMGeneric Entombed   0 Ch27LvProm(2) Ch27MonsterSpawnCoords 0 0 1 redaMonsterBBR [SharpClaw]  AttackInRangeAI
+	UNIT Ch27ChrMGeneric Entombed   0 Ch27LvProm(2) Ch27MonsterSpawnCoords 0 0 1 redaMonsterTLL [PoisonClaw] AttackInRangeAI
+
+	UNIT Ch27ChrMGeneric ArchMogall 0 Ch27LvProm(1) Ch27MonsterSpawnCoords 0 0 1 redaMonsterBLL [EvilEye]     AttackInRangeAI
+	UNIT Ch27ChrMGeneric ArchMogall 0 Ch27LvProm(1) Ch27MonsterSpawnCoords 0 0 1 redaMonsterTRR [EvilEye]     AttackInRangeAI
+	UNIT Ch27ChrMGeneric Deathgoyle 0 Ch27LvProm(1) Ch27MonsterSpawnCoords 0 0 1 redaMonsterBRR [ShortSpear]  AttackInRangeAI
+	UNIT Ch27ChrMGeneric Deathgoyle 0 Ch27LvProm(1) Ch27MonsterSpawnCoords 0 0 1 redaMonsterTTL [SilverLance] AttackInRangeAI
+
+	UNIT // end
+
+ALIGN 4
+unEnemyHumanInitialTorcher:
+	UNIT Ch27ChrHGeneric Bishop 0 Ch27LvProm(3) [20, 0] 2 0 1 redaHumanCenterLeft [Aura, TorchStaff, Sleep] PursueWithoutHeedAI
+	UNIT // end
+
+ALIGN 4
+unEnemyHumanInitialSandCleaner:
+	UNIT Ch27ChrHGeneric Sage 0 Ch27LvProm(3) [21, 0] 0 0 1 redaHumanCenterRight [Fimbulvetr] PursueWithoutHeedAI
+	UNIT // end
+
+ALIGN 4
+unEnemyHumanInitialWave:
+	UNIT Ch27ChrHGeneric Mage 0 Ch27LvBase(3) [19, 0] 0 0 1 redaHumanBottomLeft  [Elfire] PursueWithoutHeedAI
+	UNIT Ch27ChrHGeneric Mage 0 Ch27LvBase(3) [22, 0] 0 0 1 redaHumanBottomRight [Elfire] PursueWithoutHeedAI
+
+	UNIT Ch27ChrHGeneric WyvernRider 0 Ch27LvBase(2) [20, 0] 0 0 1 redaHumanTopLeft  [SteelLance] PursueWithoutHeedAI
+	UNIT Ch27ChrHGeneric WyvernRider 0 Ch27LvBase(2) [21, 0] 0 0 1 redaHumanTopRight [ShortSpear] PursueWithoutHeedAI
+
+	UNIT Ch27ChrHGeneric WyvernKnight 0 Ch27LvProm(2) [18, 0] 0 0 1 redaHumanLeft  [SilverLance] PursueWithoutHeedAI
+	UNIT Ch27ChrHGeneric WyvernKnight 0 Ch27LvProm(2) [23, 0] 0 0 1 redaHumanRight [Spear]       PursueWithoutHeedAI
+
+	UNIT // end
+
+ALIGN 4
+unEnemyHumanWave0:
+	UNIT Ch27ChrHGeneric Mage 0 Ch27LvBase(4) [19, 0] 0 0 1 redaHumanTopLeft  [Elfire] PursueWithoutHeedAI
+	UNIT Ch27ChrHGeneric Mage 0 Ch27LvBase(4) [22, 0] 0 0 1 redaHumanTopRight [Fimbulvetr] PursueWithoutHeedAI
+
+	UNIT // end
+
+ALIGN 4
+unEnemyHumanWave1:
+	UNIT Ch27ChrHGeneric WyvernKnight 0 Ch27LvProm(3) [18, 0] 0 0 1 redaHumanLeft2  [SilverLance] PursueWithoutHeedAI
+	UNIT Ch27ChrHGeneric WyvernKnight 0 Ch27LvProm(3) [23, 0] 0 0 1 redaHumanRight2 [SilverLance] PursueWithoutHeedAI
+
+	UNIT Ch27ChrHGeneric WyvernRider 0 Ch27LvBase(3) [20, 0] 0 0 1 redaHumanBottomLeft  [SteelLance] PursueWithoutHeedAI
+	UNIT Ch27ChrHGeneric WyvernRider 0 Ch27LvBase(3) [21, 0] 0 0 1 redaHumanBottomRight [SteelLance] PursueWithoutHeedAI
+
+	UNIT // end
+
+ALIGN 4
+unEnemyHumanWave2:
+	UNIT Ch27ChrHGeneric Sage 0 Ch27LvProm(4) [20, 0] 0 0 1 redaHumanTopLeft  [Fimbulvetr] PursueWithoutHeedAI
+	UNIT Ch27ChrHGeneric Sage 0 Ch27LvProm(4) [21, 0] 0 0 1 redaHumanTopRight [Shine] PursueWithoutHeedAI
+
+	UNIT // end
+
+ALIGN 4
+unEnemyHumanWave3:
+	UNIT Ch27ChrHGeneric WyvernRider 0 Ch27LvBase(3) [20, 0] 0 0 1 redaHumanCenterLeft  [SilverLance] PursueWithoutHeedAI
+	UNIT Ch27ChrHGeneric WyvernRider 0 Ch27LvBase(3) [21, 0] 0 0 1 redaHumanCenterRight [SteelLance] PursueWithoutHeedAI
+
+	UNIT // end
+
+ALIGN 4
+unEnemyHumanWave4:
+	UNIT Ch27ChrHGeneric FalcoKnight 0 Ch27LvProm(4) [19, 0] 0 0 1 redaHumanBottomLeft  [Runesword] PursueWithoutHeedAI
+	UNIT Ch27ChrHGeneric FalcoKnight 0 Ch27LvProm(4) [22, 0] 0 0 1 redaHumanBottomRight [BraveSword] PursueWithoutHeedAI
+
+	UNIT Ch27ChrHGeneric PegasusKnight 0 Ch27LvBase(4) [18, 0] 0 0 1 redaHumanLeft2  [SilverLance] PursueWithoutHeedAI
+	UNIT Ch27ChrHGeneric PegasusKnight 0 Ch27LvBase(4) [23, 0] 0 0 1 redaHumanRight2 [ShortSpear] PursueWithoutHeedAI
+
+	UNIT // end
+
+redaMonsterBBL:
+	REDA [9, 14] 0 0 0 0
+
+redaMonsterBLL:
+	REDA [8, 13] 0 0 0 0
+
+redaMonsterFarLeft:
+	REDA [7, 10] 0 0 0 0
+
+redaMonsterTLL:
+	REDA [8, 11] 0 0 0 0
+
+redaMonsterTTL:
+	REDA [9, 10] 0 0 0 0
+
+redaMonsterFarTop:
+	REDA [10, 9] 0 0 0 0
+
+redaMonsterTTR:
+	REDA [11, 10] 0 0 0 0
+
+redaMonsterTRR:
+	REDA [12, 11] 0 0 0 0
+
+redaMonsterFarRight:
+	REDA [13, 12] 0 0 0 0
+
+redaMonsterBRR:
+	REDA [12, 13] 0 0 0 0
+
+redaMonsterBBR:
+	REDA [11, 14] 0 0 0 0
+
+redaMonsterFarBottom:
+	REDA [10, 15] 0 0 0 0
+
+redaHumanCenterLeft:
+	REDA [20, 2] 0 0 0 0
+
+redaHumanCenterRight:
+	REDA [21, 2] 0 0 0 0
+
+redaHumanBottomLeft:
+	REDA [19, 3] 0 0 0 0
+
+redaHumanBottomRight:
+	REDA [22, 3] 0 0 0 0
+
+redaHumanTopLeft:
+	REDA [19, 0] 0 0 0 0
+
+redaHumanTopRight:
+	REDA [22, 0] 0 0 0 0
+
+redaHumanLeft:
+	REDA [18, 1] 0 0 0 0
+
+redaHumanRight:
+	REDA [23, 1] 0 0 0 0
+
+redaHumanLeft2:
+	REDA [18, 2] 0 0 0 0
+
+redaHumanRight2:
+	REDA [23, 2] 0 0 0 0
+
+redaDenis:
+	REDA [21, 0] 0 0 0 0
+
+#endif // CCBLITZ_STAN_CH27

@@ -1,0 +1,666 @@
+#define Ch11Level 10
+#define LeaderID 0x56
+#define MiscID 0x57
+#define EnemyID 0x96
+#define LuAlly 0x97
+#define SLuUID Luut
+
+#define SLu_ID 0xD1 //this should be ch 11/0xB events
+EventPointerTable(SLu_ID, SLu_ThisChapter)
+
+EscapePointPointerTable(11,SweetLuutRunners)
+
+ALIGN 4
+SweetLuutRunners:
+    EscapePoint(22, 12, 01) //exit right
+    EscapePoint( 1, 10, 00) //exit left
+    TerminateEscapePoints
+
+//All Excaliburs have 20 base crit.
+//Anima: Flying effectiveness, 1 weight
+//Light: Flying, magic effectivenesses
+//Sword: Flying, Armor, Magic effectivenesses; hits res
+//Bow  : Brave, +10 crit, flying effectiveness
+//Monk, Mage, Myrmidon, Archer
+//Bishop, Sage, Mage Knight, Assassin, Swordmaster, Sniper, Ranger
+
+//Pupil, Mage, Shaman
+//Mage Knight, Sage, Summoner, Druid
+
+ALIGN 4
+SLu_ThisChapter:
+POIN SLu_TurnBasedEvents
+POIN SLu_CharacterBasedEvents
+POIN SLu_LocationBasedEvents
+POIN SLu_MiscBasedEvents
+POIN SLu_Dunno SLu_Dunno SLu_Dunno
+POIN SLu_Tutorial
+POIN SLu_Ballista SLu_Ballista
+POIN SLu_Units SLu_UnitsH
+POIN $0 $0 $0 $0 $0 $0
+POIN SLu_BeginningScene SLu_EndingScene
+
+SLu_TurnBasedEvents:
+TURN 0x0 SpawnAtSides [ 0,30] 0x0
+TURN 0x0 ThiefTop[ 8, 0] 0x0
+TURN 0x0 ThiefBot[ 4, 3] 0x0
+TURN 0x0 ThiefRgt[ 5, 0] 0x0
+TURN 0x0 ThiefTop[11, 0] 0x0
+//TURN 0x0 Label [Start, End] 0 (8 for jerk)
+END_MAIN
+
+ALIGN 32
+SLu_CharacterBasedEvents:
+CharacterEvent(0x8,SweetLu_Recruit,Vedge,Luut)
+END_MAIN
+
+ALIGN 4
+SLu_LocationBasedEvents: //TODO: New loot?
+Chest(MasterSeal,   17,  5)
+Chest(Speedwings,   19,  4)
+CHES 0x30 Wyrmslayer [19, 6] 0x14
+
+Chest(MetissTome,   21, 17)
+
+Chest(Physic,       16, 17)
+
+Chest(Berserk,      14,  9)
+CHES 0x31 DragonAxe [10,10] 0x14
+Chest(OceanSeal,     3,  6)
+Seize(9,2)
+END_MAIN
+
+ALIGN 4
+SLu_MiscBasedEvents:
+AREA  0xA SLu_Spawn         [ 4,14] [21,18]
+AREA  0xB EdwardsAttack     [ 8,10] [18,18]
+AREA    0 ThroneSpawners    [ 0, 0] [13, 8]
+AREA    0 ReinLeftIfInRight [14, 8] [22,23]
+AREA    0 ReinRightIfInLeft [ 0, 7] [10,20]
+AFEV  0xC Chesdrake_19_6 0x30
+AFEV  0xD Chesdrake_10_10 0x31
+CauseGameOverIfLordDies
+END_MAIN
+
+ALIGN 4
+SLu_Dunno:
+END_MAIN
+
+ALIGN 4
+SLu_Tutorial:
+END_MAIN
+
+ALIGN 4
+SLu_Ballista:
+END_MAIN //ENDTRAP caused a freeze and END_MAIN worked
+//so don't tell me to change this to ENDTRAP because changing it to END_MAIN stopped the hardlock I was having
+
+SLu_BeginningScene:
+VCWF 0 //make absolutely sure no fog
+LOAD2 0x1 SLu_Units
+ENUN
+LOAD1 0x1 SLu_Enemies
+ENUN
+GotoPrepScreen
+ENDA
+
+SLu_Spawn:
+ENUF 0xA
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
+    CALL SLu_Company
+LABEL 0x0
+NoFade
+ENDA
+
+ALIGN 4
+SLu_Units:
+SLu_UnitsH:
+UNIT 0x1 Paladin 0 Level(20, Ally, True) [ 8, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x2 Paladin 0 Level(20, Ally, True) [ 7, 25] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x3 Paladin 0 Level(20, Ally, True) [ 6, 25] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x4 Paladin 0 Level(20, Ally, True) [ 5, 25] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x5 Paladin 0 Level(20, Ally, True) [ 4, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x6 Valkyrie 0 Level(20, Ally, True) [5, 23] 0b 0x00 0 0x0 [Physic, Purge, Divine, Elixir] NoAI
+UNIT 0x7 Warrior 0 Level(20, Ally, True) [ 6, 23] 0b 0x00 0 0x0 [Tomahawk, Longbow, KillerAxe,  Elixir] NoAI
+UNIT 0x8 Paladin 0 Level(20, Ally, True) [ 7, 23] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT
+
+ALIGN 4
+SLu_Enemies:
+UNIT LeaderID Druid 0 Level(3, Enemy, 1) [ 9,  2] 0b 0x00 0 0x0 [Elfire, Eclipse, Physic] NeverMoveAI
+
+UNIT EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [12, 13] 0b 0x0 0 0 [Thunder] AttackInRangeAI
+UNIT EnemyID Shaman 0 Level(Ch11Level, Enemy, 1) [13, 12] 0b 0x0 0 0 [Nosferatu] AttackInRangeAI
+
+UNIT EnemyID Archer 0 Level(Ch11Level, Enemy, 1) [21,  9] 0b 0x0 0 0 [SilverBow] AttackInRangeAI
+UNIT EnemyID Knight 0 Level(Ch11Level, Enemy, 1) [20, 10] 0b 0x0 0 0 [Horseslayer] AttackInRangeAI
+
+UNIT EnemyID Monk 0 Level(Ch11Level, Enemy, 1)  [ 3, 10] 0b 0x0 0 0 [Divine] AttackInRangeAI
+UNIT EnemyID Knight 0 Level(Ch11Level, Enemy, 1) [ 5,  9] 0b 0x0 0 0 [SteelLance] GuardTileAI
+
+UNIT EnemyID Paladin LeaderID Level(1,Enemy,True)  [17, 14] 0b 0x0 0 0 [IronSword] AttackInRangeAI
+
+UNIT EnemyID Fighter 0 Level(Ch11Level, Enemy, 1) [ 6, 16] 10b 0x0 0 0 [Hammer] AttackInRangeAI
+UNIT EnemyID Cavalier 0 Level(Ch11Level, Enemy, 1)[ 4, 16] 0b 0x0 0 0 [IronSword] AttackInRangeAI
+
+UNIT EnemyID Mercenary 0 Level(Ch11Level, Enemy, 1) [20, 19] 0b 0x0 0 0 [SteelBlade] AttackInRangeAI
+UNIT EnemyID Fighter 0 Level(Ch11Level, Enemy, 1)   [20, 22] 0b 0x0 0 0 [BattleAxe] AttackInRangeAI
+
+UNIT EnemyID Manakete_2_F LeaderID Level(3, Enemy, 1) [12, 10] 0b 0x0 0 0 [Dragonshard] AttackInRangeAI
+UNIT
+
+SLu_Manakete_19_6:
+UNIT EnemyID Manakete_2_F LeaderID Level(3, Enemy, 1) [19, 6] 0b 0x00 1 REDA19R6 [Dragonshard] AttackInRangeAI
+UNIT
+
+SLu_Manakete_10_10:
+UNIT EnemyID Manakete_2_F LeaderID Level(3, Enemy, 1) [10, 10] 0b 0x00 1 REDA10R10 [Dragonshard] AttackInRangeAI
+UNIT
+
+ALIGN 4
+EdwardsAttack:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
+    LoadReinforcements(SLu_Edwards)
+    GOTO 0x1
+NoFade
+LABEL 0x0
+ENUT 0xB //Unset 0xB (Edwards didn't trigger)
+LABEL 0x1
+ENDB
+
+ALIGN 4
+SLu_Edwards:
+UNIT EnemyID Cavalier LeaderID Level(Ch11Level, Enemy, True) [ 9,  6] 0b 0x00 0 0x0 [BraveLance]    PursueWithoutHeedAI
+UNIT EnemyID Cavalier LeaderID Level(Ch11Level, Enemy, True) [ 8,  5] 0b 0x00 0 0x0 [Armorslayer]   PursueWithoutHeedAI
+UNIT EnemyID Ranger   LeaderID Level(        1, Enemy, True) [10,  5] 0b 0x00 0 0x0 [SteelBow]      PursueWithoutHeedAI
+UNIT EnemyID MageKnight LeaderID Level(      1, Enemy, True) [ 9,  4] 0b 0x00 0 0x0 [Thunder, Heal] PursueWithoutHeedAI
+UNIT
+
+ALIGN 4
+Chesdrake_10_10:
+LoadReinforcements(SLu_Manakete_10_10)
+NoFade
+ENDB
+
+ALIGN 4
+Chesdrake_19_6:
+LoadReinforcements(SLu_Manakete_19_6)
+NoFade
+ENDB
+
+ALIGN 4
+ThiefRgt:
+LoadReinforcements(RgtThief)
+NoFade
+ENDB
+
+ALIGN 4
+ThiefBot:
+LoadReinforcements(BotThief)
+NoFade
+ENDB
+
+ALIGN 4
+ThiefTop:
+LoadReinforcements(TopThief)
+NoFade
+ENDB
+
+TopThief:
+UNIT EnemyID Thief 0 Level(Ch11Level, Enemy, 1)   [19, 0] 0b 0x00 1 REDA16R0 [SilverSword, ChestKey] [0x06, 0x05]
+UNIT
+
+BotThief:
+UNIT EnemyID Thief 0 Level(Ch11Level, Enemy, 1)   [19,25] 0b 0x00 1 REDA15R25 [SilverSword, ChestKey] [0x06, 0x05]
+UNIT
+
+RgtThief:
+UNIT EnemyID Thief 0 Level(Ch11Level, Enemy, 1)   [22,12] 0b 0x00 1 REDA20R11 [SilverSword, ChestKey] [0x06, 0x05]
+UNIT
+
+ThroneMages0:
+TM0:
+UNIT EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Fire] PursueWithoutHeedAI
+UNIT EnemyID Monk 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Lightning] PursueWithoutHeedAI
+UNIT
+
+ThroneMages1:
+TM1:
+UNIT EnemyID Shaman 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Flux] PursueWithoutHeedAI
+UNIT EnemyID Monk 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Lightning] PursueWithoutHeedAI
+UNIT
+
+ThroneMages2:
+TM2:
+UNIT EnemyID Shaman 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Flux] PursueWithoutHeedAI
+UNIT EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Fire] PursueWithoutHeedAI
+UNIT
+
+ThroneMages3:
+TM3:
+UNIT EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Fire] PursueWithoutHeedAI
+UNIT EnemyID Shaman 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Flux] PursueWithoutHeedAI
+UNIT
+
+ALIGN 4
+SweetLu_Recruit:
+MUSI
+TEXTSTART
+TEXTSHOW LuutConversation
+TEXTEND
+MUSS Comrades
+TEXTCONT
+TEXTEND
+TurnAlly(Luut)
+NoFade
+ENDB
+
+ALIGN 4
+SLu_EndingScene:
+Text(PlaceholderText)
+MNC2 12
+ENDA
+
+#define Poin(x) "(x | 0x08000000)"
+
+ThroneSpawners:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
+    ENUT 0x22 //Set 0x22
+LABEL 0x0
+NoFade
+ENDA
+
+ReinLeftIfInRight:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
+    ENUT 0x20 //Set 0x20
+LABEL 0x0
+NoFade
+ENDA
+
+ReinRightIfInLeft:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
+    ENUT 0x21 //Set 0x21
+LABEL 0x0
+NoFade
+ENDA
+
+
+SpawnAtSides:
+//Left Side
+CHECK_EVENTID 0x20
+BEQ 0x0 rC r0
+ENUF 0x20
+
+    SMOV r1 Poin(LU0)
+    SMOV r2 Poin(LU1)
+    SMOV r3 Poin(LU2)
+    SMOV r4 Poin(LU3)
+    CALL LoadOneOfFour
+
+    SMOV r1 Poin(LR0)
+    SMOV r2 Poin(LR1)
+    SMOV r3 Poin(LR2)
+    SMOV r4 Poin(LR3)
+    CALL LoadOneOfFour
+
+    SMOV r1 Poin(LD0)
+    SMOV r2 Poin(LD1)
+    SMOV r3 Poin(LD2)
+    SMOV r4 Poin(LD3)
+    CALL LoadOneOfFour
+
+LABEL 0x0
+NoFade
+ENUN
+
+//Right Side
+CHECK_EVENTID 0x21
+BEQ 0x1 rC r0
+ENUF 0x21
+
+    SMOV r1 Poin(RU0)
+    SMOV r2 Poin(RU1)
+    SMOV r3 Poin(RU2)
+    SMOV r4 Poin(RU3)
+    CALL LoadOneOfFour
+
+    SMOV r1 Poin(RL0)
+    SMOV r2 Poin(RL1)
+    SMOV r3 Poin(RL2)
+    SMOV r4 Poin(RL3)
+    CALL LoadOneOfFour
+
+    SMOV r1 Poin(RD0)
+    SMOV r2 Poin(RD1)
+    SMOV r3 Poin(RD2)
+    SMOV r4 Poin(RD3)
+    CALL LoadOneOfFour
+
+LABEL 0x1
+NoFade
+ENUN
+
+//Throne space
+CHECK_EVENTID 0x22
+BEQ 0x2 rC r0
+ENUF 0x22
+    SMOV r1 Poin(TM0)
+    SMOV r2 Poin(TM1)
+    SMOV r3 Poin(TM2)
+    SMOV r4 Poin(TM3)
+    CALL LoadOneOfFour
+
+LABEL 0x2
+NoFade
+
+ENDB
+
+SLu_Company:
+ENUT 0xA
+
+    SMOV r1 Poin(SweetLu_0)
+    SMOV r2 Poin(SweetLu_1)
+    SMOV r3 Poin(SweetLu_2)
+    SMOV r4 Poin(SweetLu_3)
+    CALL LoadOneOfFour
+
+    SMOV r1 Poin(LT_a0)
+    SMOV r2 Poin(LT_a1)
+    SMOV r3 Poin(LT_a2)
+    SMOV r4 Poin(LT_a3)
+    CALL LoadOneOfFour
+
+    SMOV r1 Poin(LT_b0)
+    SMOV r2 Poin(LT_b1)
+    SMOV r3 Poin(LT_b2)
+    SMOV r4 Poin(LT_b3)
+    CALL LoadOneOfFour
+
+    SMOV r1 Poin(LT_c0)
+    SMOV r2 Poin(LT_c1)
+    SMOV r3 Poin(LT_c2)
+    SMOV r4 Poin(LT_c3)
+    CALL LoadOneOfFour
+
+    SMOV r1 Poin(LT_d0)
+    SMOV r2 Poin(LT_d1)
+    SMOV r3 Poin(LT_d2)
+    SMOV r4 Poin(LT_d3)
+    CALL LoadOneOfFour
+
+NoFade
+ENDB
+
+
+//start reading again maybe?
+SweetLu_Mage:
+SweetLu_0:
+UNIT SLuUID Mage 0 Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R1 [AnimaCalibur, Elfire, Vulnerary] NoAI
+UNIT
+
+SweetLu_Monk:
+SweetLu_1:
+UNIT SLuUID Monk 0 Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R1 [LightCalibur, Divine, Vulnerary] NoAI
+UNIT
+
+SweetLu_Myrm:
+SweetLu_2:
+UNIT SLuUID Myrmidon 0 Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R1 [SwordCalibur, KillingEdge, Vulnerary] NoAI
+UNIT
+
+SweetLu_Archer:
+SweetLu_3:
+UNIT SLuUID Archer 0 Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R1 [BowCalibur, RunicBow, Vulnerary] NoAI
+UNIT
+
+LT_a0:
+UNIT LuAlly Monk SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R2 [Purge, Lightning] NoAI
+UNIT
+
+LT_a1:
+UNIT LuAlly Mage SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R2 [Bolting, Fire] NoAI
+UNIT
+
+LT_a2:
+UNIT LuAlly Archer SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R2 [Ballista, IronBow] NoAI
+UNIT
+
+LT_a3:
+UNIT LuAlly Warrior SLuUID Level(1, NPC, 1) [22, 0] 0b 0x00 1 REDA18R2 [Longbow, IronAxe] NoAI
+UNIT
+
+LT_b0:
+UNIT LuAlly Troubadour SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Recover, Vulnerary] NoAI
+UNIT
+
+LT_b1:
+UNIT LuAlly Cleric SLuUID Level((Ch11Level+6), NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Physic, Vulnerary] NoAI
+UNIT
+
+LT_b2:
+UNIT LuAlly Druid SLuUID Level(1, NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Sleep, Heal, Vulnerary] NoAI
+UNIT
+
+LT_b3:
+UNIT LuAlly Cleric SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Fortify, Vulnerary] NoAI
+UNIT
+
+LT_c0:
+UNIT LuAlly Shaman SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 [Nosferatu] NoAI
+UNIT
+
+LT_c1:
+UNIT LuAlly Archer_F SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 [ExtraBow, Vulnerary] NoAI
+UNIT
+
+LT_c2:
+UNIT LuAlly Fighter SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 [SilverAxe, Elixir] NoAI
+UNIT
+
+LT_c3:
+UNIT LuAlly General SLuUID Level(1, NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 [ShortSpear, SteelBlade] NoAI
+UNIT
+
+LT_d0:
+UNIT LuAlly Cavalier SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R2 [SteelSword, Vulnerary] NoAI
+UNIT
+
+LT_d1:
+UNIT LuAlly Cavalier SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R2 [SteelLance, Vulnerary] NoAI
+UNIT
+
+LT_d2:
+UNIT LuAlly Tarvos SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R2 [SteelAxe, Vulnerary] NoAI
+UNIT
+
+LT_d3:
+UNIT LuAlly Ranger SLuUID Level(1, NPC, 1) [22, 0] 0b 0x00 1 REDA19R2 [SteelBow, Vulnerary] NoAI
+UNIT
+
+//REDA(X)R(Y) for reinforcement data movement pointers.
+//don't keep the ()s.
+
+MonkLeftUp:
+LU1:
+UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R9 [Divine] PursueWithoutHeedAI
+UNIT
+
+MageLeftUp:
+LU2:
+UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R9 [Elfire] PursueWithoutHeedAI
+UNIT
+
+ShamanLeftUp:
+LU3:
+UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R9 [Nosferatu] PursueWithoutHeedAI
+UNIT
+
+MiscLeftUp:
+LU0:
+UNIT EnemyID Mercenary LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R9 [Zanbato] PursueWithoutHeedAI
+UNIT
+
+
+
+MonkLeftRight:
+LR1:
+UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA2R10 [Lightning] PursueWithoutHeedAI
+UNIT
+
+MageLeftRight:
+LR2:
+UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA2R10 [Fire] PursueWithoutHeedAI
+UNIT
+
+ShamanLeftRight:
+LR3:
+UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA2R10 [Flux] PursueWithoutHeedAI
+UNIT
+
+MiscLeftRight:
+LR0:
+UNIT EnemyID PegasusKnight LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA2R10 [IronLance] PursueWithoutHeedAI
+UNIT
+
+
+
+MonkLeftDown:
+LD1:
+UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R11 [Shine] PursueWithoutHeedAI
+UNIT
+
+MageLeftDown:
+LD2:
+UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R11 [Thunder] PursueWithoutHeedAI
+UNIT
+
+ShamanLeftDown:
+LD3:
+UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R11 [Luna] PursueWithoutHeedAI
+UNIT
+
+MiscLeftDown:
+LD0:
+UNIT EnemyID Fighter LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R11 [SteelAxe] PursueWithoutHeedAI
+UNIT
+
+
+
+MonkRightUp:
+RU1:
+UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R11 [Divine] PursueWithoutHeedAI
+UNIT
+
+MageRightUp:
+RU2:
+UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R11 [Elfire] PursueWithoutHeedAI
+UNIT
+
+ShamanRightUp:
+RU3:
+UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R11 [Nosferatu] PursueWithoutHeedAI
+UNIT
+
+MiscRightUp:
+RU0:
+UNIT EnemyID Myrmidon LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R11 [Armorslayer] PursueWithoutHeedAI
+UNIT
+
+
+
+
+MonkRightLeft:
+RL1:
+UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA20R12 [Lightning] PursueWithoutHeedAI
+UNIT
+
+MageRightLeft:
+RL2:
+UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA20R12 [Fire] PursueWithoutHeedAI
+UNIT
+
+ShamanRightLeft:
+RL3:
+UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA20R12 [Flux] PursueWithoutHeedAI
+UNIT
+
+MiscRightLeft:
+RL0:
+UNIT EnemyID Pirate LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA20R12 [HandAxe] PursueWithoutHeedAI
+UNIT
+
+
+
+
+
+MonkRightDown:
+RD1:
+UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [Shine] PursueWithoutHeedAI
+UNIT
+
+MageRightDown:
+RD2:
+UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [Thunder] PursueWithoutHeedAI
+UNIT
+
+ShamanRightDown:
+RD3:
+UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [Luna] PursueWithoutHeedAI
+UNIT
+
+MiscRightDown:
+RD0:
+UNIT EnemyID Archer LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [SteelBow] PursueWithoutHeedAI
+UNIT
+
+// r1-r4 are pointers to units.
+LoadOneOfFour:
+    RANDOMNUMBER 0x4       //Sets slot C to a number from 0 to 4.
+    SMOV r5 0x0
+    BEQ 0x0 rC r5
+    SMOV r5 1
+    BEQ 0x1 rC r5
+    SMOV r5 2
+    BEQ 0x2 rC r5
+
+    SADD slotsParam(r2, r4, r0)
+    CALL $9EE274
+    GOTO 3
+
+    LABEL 0
+    SADD slotsParam(r2, r1, r0)
+    CALL $9EE274
+    GOTO 3
+
+    LABEL 1
+    CALL $9EE274
+    GOTO 3
+
+    LABEL 2
+    SADD slotsParam(r2, r3, r0)
+    CALL $9EE274
+
+    LABEL 3
+ENDA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//nah

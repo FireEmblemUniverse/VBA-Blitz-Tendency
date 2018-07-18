@@ -1,0 +1,72 @@
+EventPointerTable(Ch15_ID, Ch15_Events_Table)
+
+#define Ch15_Level1 1 //level of unpromoted enemies
+#define Ch15_Level2 1 //level of promoted enemies
+
+Ch15_Events_Table:
+POIN Ch15_TurnBasedEvents
+POIN Ch15_CharacterBasedEvents
+POIN Ch15_LocationBasedEvents
+POIN Ch15_MiscBasedEvents
+POIN Ch15_Dunno Ch15_Dunno Ch15_Dunno
+POIN Ch15_Tutorial
+POIN Ch15_TrapData Ch15_HMExtraTrapData
+POIN Ch15_Units Ch15_Units
+POIN $0 $0 $0 //these are for skirmish units (ally 1, ally 2, ally 3)
+POIN $0 $0 $0 //(enemy 1, enemy 2, enemy 3)
+POIN Ch15_BeginningScene Ch15_EndingScene
+
+Ch15_TurnBasedEvents:
+END_MAIN
+
+Ch15_CharacterBasedEvents:
+END_MAIN
+
+Ch15_LocationBasedEvents:
+END_MAIN
+
+Ch15_MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatAll(Ch15_EndingScene)
+END_MAIN
+
+Ch15_Dunno:
+END_MAIN
+
+Ch15_Tutorial:
+END_MAIN
+
+Ch15_TrapData:
+ENDTRAP
+ALIGN 4
+
+Ch15_HMExtraTrapData:
+ENDTRAP
+ALIGN 4
+
+Ch15_Units:
+UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [11,1] 0 0 0 0 [0] NoAI
+UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [13,1] 0 0 0 0 [0] NoAI
+UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [12,0] 0 0 0 0 [0] NoAI
+UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [12,2] 0 0 0 0 [0] NoAI
+UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [10,1] 0 0 0 0 [0] NoAI
+UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [9,0] 0 0 0 0 [0] NoAI
+UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [15,1] 0 0 0 0 [0] NoAI
+UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [15,2] 0 0 0 0 [0] NoAI
+UNIT
+
+Ch15_Enemies:
+UNIT Ch15_Enemy Archer 0 Level(Ch15_Level1, Enemy, 1) [8,4] 0 0 0 0 [IronBow] NoAI
+UNIT
+
+Ch15_BeginningScene:
+LOAD2 0x1 Ch15_Units		//Allies
+ENUN
+LOAD1 0x1 Ch15_Enemies
+ENUN
+GotoPrepScreen
+
+Ch15_EndingScene:
+MNCH 16
+NoFade
+ENDA

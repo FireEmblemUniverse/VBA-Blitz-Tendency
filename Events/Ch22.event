@@ -1,0 +1,191 @@
+#include EAstdlib.event
+
+EventPointerTable(0x67,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+Units:
+UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [2,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [0,18] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [4,18] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [1,15] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [5,15] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [7,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [8,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [0,12] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [2,10] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth EphraimLord 0x00 Level(1, Ally, 0) [3,12] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT
+
+
+TurnBasedEvents:
+TurnEventPlayer(0x0,EventAfterExitingPrepScreen,1)
+TurnEventEnemy(0x9,ReinforcementsArrive,3)
+TurnEventEnemy(0x0,ArenaBegone,8)
+TurnEventPlayer(0x0,LastTurn,12)
+TurnEventEnemy(0x0,TimesUp,12)
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Village(0x7,GetTheBlitzMan,24,2)
+Village(0x8,StopReinforcements,25,11)
+Door(3,16)
+Door(8,14)
+Door(9,10)
+Door(17,7)
+Door(21,4)
+Armory(Ch24Armoury,4,14)
+Vendor(Ch24Vendor,19,12)
+END_MAIN
+
+MiscBasedEvents:
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+//DO NOT TOUCH
+WORD $00
+
+Tutorial:
+//DO NOT TOUCH
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+BeginningScene:
+LOAD1 0x1 Bad
+ENUN
+LOAD1 0x1 Bad2
+ENUN
+LOAD1 0x1 Submariner
+ENUN
+Text(PlaceholderText)
+LOAD2 0x1 Units
+GotoPrepScreen
+
+EndingScene:
+Text(PlaceholderText)
+MNCH 23
+ENDA
+
+// Events
+EventAfterExitingPrepScreen:
+Text(PlaceholderText)
+ENDA
+
+GetTheBlitzMan:
+Text(SabinGet)
+LOAD1 0x1 Blitz
+DISA Kefka
+TILECHANGE 0x9
+LOAD1 0x1 Waiter
+ENDA
+
+ReinforcementsArrive:
+ReinforcementEvent(BackupBad)
+ENUF 0x9
+ENDA
+
+StopReinforcements:
+Text(ReinforcementsStopped)
+ENUT 0x9
+ENDA
+
+ArenaBegone:
+Text(ArenaDestroyed)
+TILECHANGE 0x1
+ENDA
+
+TimesUp:
+Text(TimeUp)
+GameOver
+ENDA
+
+LastTurn:
+Text(FinalPhase)
+ENDA
+
+
+// Manual Movement
+
+// Scripted Fights
+
+// Units
+Bad:
+UNIT 0xAC General Kefka Level(5, Enemy, 1) [8,13] 0x00 0x00 0x0 0x00 [ShadowKiller, SilverLance] NeverMoveAI 
+UNIT 0xAC General Kefka Level(5, Enemy, 1) [10,10] 0x00 0x00 0x0 0x00 [SilverAxe, Horseslayer] NeverMoveAI 
+UNIT 0xAC General Kefka Level(5, Enemy, 1) [18,7] 0x00 0x00 0x0 0x00 [SilverSword, Wyrmslayer] NeverMoveAI 
+UNIT 0xAC General Kefka Level(5, Enemy, 1) [20,4] 0x00 0x00 0x0 0x00 [SilverLance] NeverMoveAI 
+UNIT 0xAC Wight Kefka Level(5, Enemy, 1) [15,5] 0x00 0x00 0x0 0x00 [SilverSword] PursueWithoutHeedAI 
+UNIT 0xAC Wight Kefka Level(5, Enemy, 1) [18,5] 0x00 0x00 0x0 0x00 [SilverSword] PursueWithoutHeedAI 
+UNIT 0xAC Fleet Kefka Level(20, Enemy, 1) [6,0] 0x00 0x00 0x0 0x00 [KillerBallista] NeverMoveAI 
+UNIT 0xAC Fleet Kefka Level(20, Enemy, 1) [12,17] 0x00 0x00 0x0 0x00 [KillerBallista] NeverMoveAI 
+UNIT 0xAC Fleet Kefka Level(20, Enemy, 1) [23,18] 0x00 0x00 0x0 0x00 [KillerBallista] NeverMoveAI 
+UNIT 0xAC Fleet Kefka Level(20, Enemy, 1) [19,19] 0x00 0x00 0x0 0x00 [IronBallista] PursueWithoutHeedAI 
+UNIT 0xAC Fleet Kefka Level(20, Enemy, 1) [1,1] 0x00 0x00 0x0 0x00 [IronBallista] PursueWithoutHeedAI 
+UNIT 0xAC Fleet Kefka Level(20, Enemy, 1) [5,9] 0x00 0x00 0x0 0x00 [IronBallista] PursueWithoutHeedAI 
+UNIT 0xAC Sage Kefka Level(5, Enemy, 1) [15,10] 0x00 0x00 0x0 0x00 [Elfire] PursueWithoutHeedAI 
+UNIT 0xAC Sage Kefka Level(5, Enemy, 1) [14,11] 0x00 0x00 0x0 0x00 [Elfire] PursueWithoutHeedAI 
+UNIT 0xAC Sage Kefka Level(5, Enemy, 1) [13,12] 0x00 0x00 0x0 0x00 [Elfire] PursueWithoutHeedAI 
+UNIT
+
+Bad2:
+UNIT 0xAC Valkyrie Kefka Level(5, Enemy, 1) [28,9] 0x00 0x00 0x0 0x00 [Shine, Silence] HealUnits 
+UNIT 0xAC Valkyrie Kefka Level(5, Enemy, 1) [29,13] 0x00 0x00 0x0 0x00 [Shine, Sleep] HealUnits 
+UNIT 0xAC Valkyrie Kefka Level(5, Enemy, 1) [28,17] 0x00 0x00 0x0 0x00 [Shine, Berserk] HealUnits 
+UNIT 0xAC Bishop Kefka Level(5, Enemy, 1) [14,7] 0x00 0x00 0x0 0x00 [Aura] AttackInRangeAI 
+UNIT 0xAC Bishop Kefka Level(5, Enemy, 1) [24,0] 0x00 0x00 0x0 0x00 [Aura, Purge] NeverMoveAI 
+UNIT 0xAC Sage Kefka Level(5, Enemy, 1) [28,8] 0x00 0x00 0x0 0x00 [Bolting] NeverMoveAI 
+UNIT 0xAC MageKnight Kefka Level(8, Enemy, 1) [25,11] 0x00 0x00 0x0 0x00 [Fimbulvetr] NeverMoveAI 
+UNIT 0xAC MageKnight Kefka Level(5, Enemy, 1) [23,10] 0x00 0x00 0x0 0x00 [Fimbulvetr] ChaseOnceApproachedAI 
+UNIT 0xAC Bishop Kefka Level(5, Enemy, 1) [14,13] 0x00 0x00 0x0 0x00 [Recover] HealUnits 
+UNIT 0xAC Bishop Kefka Level(5, Enemy, 1) [16,9] 0x00 0x00 0x0 0x00 [Barrier] HealUnits 
+UNIT 0xAC Valkyrie Kefka Level(5, Enemy, 1) [27,6] 0x00 0x00 0x0 0x00 [Physic] HealUnits 
+UNIT 0xAC ArchMogall Kefka Level(5, Enemy, 1) [3,2] 0x00 0x00 0x0 0x00 [BloodyEye] PursueWithoutHeedAI 
+UNIT 0xAC ArchMogall Kefka Level(5, Enemy, 1) [8,0] 0x00 0x00 0x0 0x00 [Shadowshot] NeverMoveAI 
+UNIT 0xAC ArchMogall Kefka Level(5, Enemy, 1) [24,6] 0x00 0x00 0x0 0x00 [DemonSurge] NeverMoveAI 
+UNIT
+
+BackupBad:
+UNIT 0xAC Druid Kefka Level(5, Enemy, 1) [15,5] 0x00 0x00 0x0 0x00 [Nosferatu] PursueWithoutHeedAI 
+UNIT 0xAC Druid Kefka Level(5, Enemy, 1) [18,5] 0x00 0x00 0x0 0x00 [Luna] PursueWithoutHeedAI 
+UNIT
+
+Blitz:
+UNIT Sabin Berserker 0x00 Level(10, Ally, 1) [24,3] 0x00 0x00 0x0 0x00 [KillerAxe, HandAxe, Rapier] PursueWithoutHeedAI 
+UNIT
+
+Submariner:
+UNIT Kefka Sage 0x00 Level(15, Enemy, 1) [10,4] 0x00 0x00 0x0 0x00 [Bolting, Sleep, Berserk, Elixir] AttackInRangeAI 
+UNIT
+
+Waiter:
+UNIT Kefka Sage 0x00 Level(15, Enemy, 1) [10,4] 0x00 0x00 0x0 0x00 [Excalibur] PursueWithoutHeedAI 
+UNIT
+
+
+// Shop Data
+Ch24Armoury:
+SHLI SilverSword LightBrand Runesword SilverLance SilverAxe
+
+Ch24Vendor:
+SHLI Fimbulvetr Elfire Aura Divine Fenrir Nosferatu Recover
+
+ALIGN 4

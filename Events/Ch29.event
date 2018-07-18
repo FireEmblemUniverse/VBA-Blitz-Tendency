@@ -1,0 +1,164 @@
+EventPointerTable(0x86,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+Units:
+UNIT Eirika EphraimLord Eirika Level(1, Ally, 0) [20,18] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [19,19] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [21,19] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [10,0] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [11,2] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [8,1] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [4,13] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [6,14] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [1,21] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [22,1] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [27,0] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [2,31] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [3,30] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [10,30] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [30,12] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth Cavalier Eirika Level(1, Ally, 0) [9,20] 0x00 0x00 0x0 0x00 [0x00] NoAI
+//I want to prevent loading of more than 16 units at once.
+//UNIT Seth Cavalier Eirika Level(1, Ally, 0) [5,30] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT
+
+Bad1:
+UNIT Ch29Boss Manakete_2 0x00 Level(20, Enemy, 1) [31,29] 0x00 0x00 0x0 0x00 [WretchedAir] ChaseOnceApproachedAI
+UNIT Ch29Generic1 DracoZombie Ch29Boss Level(10, Enemy, 1) [27,23] 0x00 0x00 0x0 0x00 [WretchedAir] AttackInRangeAI
+UNIT Ch29Generic1 DracoZombie Ch29Boss Level(10, Enemy, 1) [28,25] 0x00 0x00 0x0 0x00 [WretchedAir] AttackInRangeAI
+UNIT Ch29Generic1 DracoZombie Ch29Boss Level(10, Enemy, 1) [29,31] 0x00 0x00 0x0 0x00 [WretchedAir] AttackInRangeAI
+UNIT Ch29Generic1 DracoZombie Ch29Boss Level(10, Enemy, 1) [29,28] 0x00 0x00 0x0 0x00 [WretchedAir] AttackInRangeAI
+UNIT Ch29Generic1 DracoZombie Ch29Boss Level(10, Enemy, 1) [30,26] 0x00 0x00 0x0 0x00 [WretchedAir] AttackInRangeAI
+UNIT Ch29Generic1 Swordmaster_F Ch29Boss Level(10, Enemy, 1) [13,29] 0x00 0x00 0x0 0x00 [SilverSword] DefaultAI
+UNIT Ch29Generic1 Swordmaster Ch29Boss Level(10, Enemy, 1) [0,26] 0x00 0x00 0x0 0x00 [BraveSword] PursueWithoutHeedAI
+UNIT Ch29Generic1 Hero Ch29Boss Level(10, Enemy, 1) [0,3] 0x00 0x00 0x0 0x00 [SilverAxe, KillingEdge] PursueWithoutHeedAI
+UNIT Ch29Generic1 WyvernLord Ch29Boss Level(10, Enemy, 1) [11,9] 0x00 0x00 0x0 0x00 [BraveSword, SilverLance] PursueWithoutHeedAI
+UNIT Ch29Generic1 WyvernLord Ch29Boss Level(8, Enemy, 1) [10,10] 0x00 0x00 0x0 0x00 [SilverBlade, Javelin] PursueWithoutHeedAI
+UNIT Ch29Generic1 WyvernLord Ch29Boss Level(8, Enemy, 1) [12,10] 0x00 0x00 0x0 0x00 [SilverBlade, Javelin] PursueWithoutHeedAI
+UNIT Ch29Generic1 WyvernLord Ch29Boss Level(8, Enemy, 1) [10,8] 0x00 0x00 0x0 0x00 [SilverBlade, Javelin] PursueWithoutHeedAI
+UNIT Ch29Generic1 WyvernLord Ch29Boss Level(8, Enemy, 1) [12,8] 0x00 0x00 0x0 0x00 [SilverBlade, Javelin] PursueWithoutHeedAI
+UNIT Ch29Generic1 WyvernLord Ch29Boss Level(12, Enemy, 1) [30,17] 0x00 0x00 0x0 0x00 [BraveSword, KillerLance] PursueWithoutHeedAI
+UNIT Ch29Generic1 WyvernLord Ch29Boss Level(12, Enemy, 1) [30,19] 0x00 0x00 0x0 0x00 [BraveSword, KillerLance] PursueWithoutHeedAI
+UNIT
+
+Bad2:
+UNIT Ch29Generic1 WyvernKnight_F Ch29Boss Level(12, Enemy, 1) [31,18] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI
+UNIT Ch29Generic1 General Ch29Boss Level(20, Enemy, 1) [29,5] 0x00 0x00 0x0 0x00 [Swordslayer, BraveAxe, Hammer, Halberd] ChaseOnceApproachedAI
+UNIT Ch29Generic1 Knight Ch29Boss Level(20, Enemy, 1) [28,6] 0x00 0x00 0x0 0x00 [Spear, Elixir] ChaseOnceApproachedAI
+UNIT Ch29Generic1 Knight Ch29Boss Level(20, Enemy, 1) [30,6] 0x00 0x00 0x0 0x00 [Spear, Elixir] ChaseOnceApproachedAI
+UNIT Ch29Generic1 Knight Ch29Boss Level(20, Enemy, 1) [31,5] 0x00 0x00 0x0 0x00 [Spear, Elixir] ChaseOnceApproachedAI
+UNIT Ch29Generic1 Knight Ch29Boss Level(20, Enemy, 1) [27,5] 0x00 0x00 0x0 0x00 [Spear, Elixir] ChaseOnceApproachedAI
+UNIT Ch29Generic1 Berserker Ch29Boss Level(11, Enemy, 1) [6,21] 0x00 0x00 0x0 0x00 [Tomahawk, Elixir] ChaseOnceApproachedAI
+UNIT Ch29Generic1 Berserker Ch29Boss Level(11, Enemy, 1) [9,23] 0x00 0x00 0x0 0x00 [Tomahawk, Elixir] ChaseOnceApproachedAI
+UNIT Ch29Generic1 Berserker Ch29Boss Level(11, Enemy, 1) [19,25] 0x00 0x00 0x0 0x00 [Tomahawk, Elixir] ChaseOnceApproachedAI
+UNIT Ch29Generic1 Berserker Ch29Boss Level(11, Enemy, 1) [7,4] 0x00 0x00 0x0 0x00 [Tomahawk, Elixir] ChaseOnceApproachedAI
+UNIT Ch29Generic1 Mercenary Ch29Boss Level(11, Enemy, 1) [0,4] 0x00 0x00 0x0 0x00 [SilverSword, Vulnerary] AttackInRangeAI
+UNIT Ch29Generic1 Mercenary Ch29Boss Level(11, Enemy, 1) [1,4] 0x00 0x00 0x0 0x00 [SilverSword, Vulnerary] AttackInRangeAI
+UNIT Ch29Generic1 Mercenary Ch29Boss Level(11, Enemy, 1) [1,3] 0x00 0x00 0x0 0x00 [SilverSword, Vulnerary] AttackInRangeAI
+UNIT Ch29Generic1 Bishop Ch29Boss Level(15, Enemy, 1) [31,28] 0x00 0x00 0x0 0x00 [Physic, Recover] HealUnits
+UNIT Ch29Generic1 Bishop Ch29Boss Level(15, Enemy, 1) [31,30] 0x00 0x00 0x0 0x00 [Physic, Recover] HealUnits
+UNIT Ch29Generic1 Bishop Ch29Boss Level(15, Enemy, 1) [0,15] 0x00 0x00 0x0 0x00 [Sleep, Sleep, Sleep] GuardTileAI
+UNIT
+
+Bad3:
+UNIT Ch29Generic1 WyvernRider Ch29Boss Level(15, Enemy, 1) [29,16] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI
+UNIT Ch29Generic1 WyvernRider Ch29Boss Level(15, Enemy, 1) [29,17] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI
+UNIT Ch29Generic1 WyvernRider Ch29Boss Level(15, Enemy, 1) [29,19] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI
+UNIT Ch29Generic1 WyvernRider Ch29Boss Level(15, Enemy, 1) [29,20] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI
+UNIT Ch29Generic1 WyvernRider Ch29Boss Level(15, Enemy, 1) [30,18] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI
+UNIT Ch29Generic1 WyvernRider Ch29Boss Level(15, Enemy, 1) [29,18] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI
+UNIT Ch29Generic1 General Ch29Boss Level(17, Enemy, 1) [2,13] 0x00 0x00 0x0 0x00 [Spear, Elixir] PursueWithoutHeedAI
+UNIT Ch29Generic1 General Ch29Boss Level(17, Enemy, 1) [1,17] 0x00 0x00 0x0 0x00 [Spear, Elixir] PursueWithoutHeedAI
+UNIT Ch29Generic1 Sage Ch29Boss Level(17, Enemy, 1) [0,14] 0x00 0x00 0x0 0x00 [Fimbulvetr, Physic] HealUnits
+UNIT Ch29Generic1 GreatKnight Ch29Boss Level(17, Enemy, 1) [24,3] 0x00 0x00 0x0 0x00 [Swordslayer, SilverSword] GuardTileAI
+UNIT Ch29Generic1 GreatKnight Ch29Boss Level(17, Enemy, 1) [18,1] 0x00 0x00 0x0 0x00 [BraveAxe, Runesword] GuardTileAI
+UNIT Ch29Generic1 GreatKnight Ch29Boss Level(17, Enemy, 1) [27,7] 0x00 0x00 0x0 0x00 [KillingEdge, Spear] GuardTileAI
+UNIT Ch29Generic1 Druid_F Ch29Boss Level(17, Enemy, 1) [17,8] 0x2 0x00 0x0 0x00 [Berserk, Hammerne] GuardTileAI
+UNIT Ch29Generic1 Berserker Ch29Boss Level(20, Enemy, 1) [15,15] 0x2 0x00 0x0 0x00 [Tomahawk, Gleipnir] PursueWithoutHeedAI
+UNIT Ch29Generic1 Druid Ch29Boss Level(11, Enemy, 1) [15,28] 0x00 0x00 0x0 0x00 [Nosferatu] PursueWithoutHeedAI
+UNIT Ch29Generic1 Druid Ch29Boss Level(11, Enemy, 1) [15,30] 0x00 0x00 0x0 0x00 [Nosferatu] PursueWithoutHeedAI
+UNIT
+
+Bad4:
+UNIT Ch29Generic1 Mage Ch29Boss Level(20, Enemy, 1) [16,29] 0x00 0x00 0x0 0x00 [Bolting, Elixir] AttackInRangeAI
+UNIT
+
+BabbyUnit:
+UNIT Babby Manakete_2 0x00 Level(20, NPC, 0) [25,29] 0x00 0x00 0x0 0x00 [HolyDragonStone, Elixir] GuardTileAI
+UNIT
+
+MakeBabbyAlly:
+TurnAlly(Babby)
+NoFade
+ENDA
+
+TurnBasedEvents:
+TurnEventPlayer(0,EndingScene,10)
+TurnEventPlayer(0,MakeBabbyAlly,1)
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Armory(ArmoryList, 21, 14)
+//TODO: Arena on 22, 14
+Village(0x8, LeftVillage, 2, 25)
+Village(0x9, RightVillage, 29, 5)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+//DO NOT TOUCH
+WORD $00
+
+Tutorial:
+//DO NOT TOUCH
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+// Events
+
+BeginningScene:
+LOAD1 0x1 Bad1
+LOAD1 0x1 Bad2
+LOAD1 0x1 Bad3
+LOAD1 0x1 Bad4
+LOAD1 0x1 BabbyUnit
+ENUN
+GotoPrepScreen
+
+EndingScene:
+MNC2 0x23
+NoFade
+ENDA
+
+LeftVillage:
+VillageEventItem(PlaceholderText, Village, Dracoshield)
+
+RightVillage:
+VillageEventItem(PlaceholderText, Village, Fortify)
+
+// Shop Data
+ArmoryList:
+SHLI IronSword
+
+ALIGN 4

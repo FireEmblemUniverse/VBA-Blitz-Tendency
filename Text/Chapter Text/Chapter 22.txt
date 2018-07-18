@@ -1,0 +1,27 @@
+## SabinGet
+[OpenMidLeft][LoadFace][CurrentPortrait]
+Water level receding.[N]
+Kefka now exposed.[A][X]
+
+## ReinforcementsStopped
+[OpenMidLeft][LoadFace][CurrentPortrait]
+Reinforcement spawns halted.[N]
+All ambush spawns suppressed.[A][X]
+
+## ArenaDestroyed
+[OpenMidLeft][LoadFace][0x64][0x01]
+Arena destroyed. Level grinding[N]
+is no longer possible.[A][X]
+
+## TimeUp
+[OpenMidLeft][LoadFace][0x64][0x01]
+Time's up![A][X]
+
+## FinalPhase
+[OpenMidLeft][LoadFace][0x64][0x01]
+This is your final turn. Enemy[N]
+phase will cause Game Over.[A][X]
+
+## Ch22Objective
+Kill Kefka within 12 turns,[N]
+or else he'll...[X]

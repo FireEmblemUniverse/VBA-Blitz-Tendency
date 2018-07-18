@@ -1,0 +1,191 @@
+## MariyaAppearsCh16
+[OpenMidLeft][LoadFace][0x1C][0x1]
+Hmm...[.....] This is a tricky[N]
+cave to fly through.[AN]
+I should've brought a[N]
+torch along with me.[AN][......]
+The enemy should be right[N]
+up ahead though.[AN]
+[ToggleSmile]I'm sure you've got the[N]
+vision to see ahead,[.....] Takeuchi![AN]
+Lead us onwards![A][X]
+
+## MariyaVedgeTalkCh16
+[OpenMidLeft][LoadFace][0x1C][0x1]
+[OpenMidRight][LoadFace][0x2][0x1]
+Wait a minute.[.....] Who are you?[A]
+[OpenMidLeft]
+Who,[....] me?[A]
+[OpenMidRight]
+I'm not looking at anybody else.[A]
+[OpenMidLeft]
+You could be talking to Takeuchi.[A]
+[OpenMidRight]
+Who the heck is Takeuchi?[A]
+[OpenMidLeft]
+[ToggleSmile]That's my wyvern![.....][N]
+Say hi to the man,[....] Takeuchi![A][MoveLeft]
+[ToggleSmile]Woah,[.....] calm down buddy![A]
+[OpenMidRight]
+[CloseEyes]Great.[.....][N]
+Another thing that wants me dead.[A]
+[OpenLeft]
+Hey...[......] Pink hair...[.....] Axe by your side...[.....][N]
+You ARE the man I'm looking for![A]
+[OpenMidRight]
+So are we gonna fight yet,[....] or...[A]
+[OpenLeft]
+I'm not your enemy...![.....][N]
+I've been sent to help you![A]
+[OpenMidRight]
+By who?[A]
+[OpenLeft]
+Takeuchi.[A]
+[OpenMidRight]
+Your wyvern sent you...?[A]
+[OpenLeft]
+[ToggleSmile]Yep![A]
+[OpenMidRight]
+[ToggleSmile][CloseEyes](Not even gonna question it...)[A][N]
+[OpenEyes]Fine.[.....] Let's just get moving.[A][X]
+
+## WrathBattleQ
+I soft resetted this map MANY[N]
+TIMES.[.....] So many I must create[AN]
+a savestate to save my units.[.....][N]
+This map is a NIGHTMARE!!!![AN][X]
+
+## WrathDeathQ
+God dammit![.....][N]
+I have to reset again?!?![A][X]
+
+
+
+## BeginningTextCh16
+[OpenMidRight][LoadFace][0x2][0x1]
+[OpenMidLeft][LoadFace][0x7][0x1]
+This is the Cave of Wrath.[.....][N]
+Unfortunately,[....] we have[AN]
+no choice but to use[N]
+it to get through.[A]
+
+[OpenMidRight]
+Dammit.[.....] Why's it so dark?[A]
+
+[OpenMidLeft]
+There's a group of old nomads living in this[N]
+cave.[.....] They got so mad trying to find their[AN]
+way through the darkness that they all[N]
+developed night vision and never left.[A]
+
+[OpenMidRight]
+Wow.[A]
+
+[OpenMidLeft]
+Either way,[....] we'll have to attack back should[N]
+they choose to not let us through.[AN]
+The good news is, I came prepared.[A]
+
+[OpenMidRight]
+Prepared how?[.....] Did you bring torches?[A]
+
+[OpenMidLeft]
+Nope, I brought a map. Using the START[N]
+button, we can try to get a general[AN]
+understanding of where we are in the cave.[.....][N]
+Though,[....] it may not help find any enemies...[A]
+
+[OpenMidRight]
+It's better than nothing.[.....][N]
+Let's get moving![A][X]
+
+
+
+## VedgeWinsCh16
+[OpenMidLeft][LoadFace][0x2][0x1]
+The Cave of Wrath has been cleared![.....][N]
+Everyone,[....] to the throne![A][X]
+
+
+
+## MariyaAliveCh16
+[OpenRight][LoadFace][0x2][0x1]
+[OpenFarRight][LoadFace][0x7][0x1]
+[OpenMidLeft][LoadFace][0x1C][0x1]
+[ToggleSmile]Ah,[....] good![.....][N]
+You two are still here![A]
+
+[OpenFarRight]
+[ToggleSmile]I'm sorry Vedge,[....] who is this?[A]
+
+[OpenRight]
+Her name is Mariya.[.....] Said she was[N]
+sent here by her wyvern.[A]
+
+[OpenMidLeft]
+I was![.....] [ToggleSmile]Takeuchi,[....] my liege,[....][N]
+has sent me here to help![A]
+
+[OpenFarRight]
+[ToggleSmile]Your...[......]
+
+[OpenRight]
+...liege?[A]
+
+[OpenFarRight]
+I question this woman's mental state.[AN]
+She came to help us because her[N]
+wyvern told her so...[AN]
+This must be her feeble attempt[N]
+to hide her true intentions.[A]
+
+[OpenMidLeft]
+No no![.....]
+I'm telling the truth![AN]
+My words come straight from[N]
+the heart of Nox![A]
+
+[OpenFarRight]
+Nox...[AN]
+Can't say I've heard much[N]
+of that place before.[AN]
+We can't guarantee she actually[N]
+speaks for that kingdom.[A]
+
+[OpenRight]
+Well,[....] we could use a wyvern rider.[AN]
+And she hasn't shown any signs of[N]
+possibly betraying us.[AN]
+I feel like she's hiding something,[....] but I[N]
+think we should keep her on our side.[A]
+
+[OpenFarRight]
+Very well.[A]
+Now,[....] let's move out of this
+cave before the inhabitants regroup![A][X]
+
+
+
+## MariyaDEADCh16
+[OpenMidLeft][LoadFace][0x2][0x1]
+[OpenMidRight][LoadFace][0x7][0x1]
+The throne has been captured,[.....][N]
+and the nomads have spread.[....] What now?[A]
+
+[OpenMidLeft]
+Have you seen a wyvern rider anywhere[N]
+around the grounds?[.....] I swear there was[AN]
+one with green armour flying around during[N]
+the battle...[A]
+
+[OpenMidRight]
+I'm afraid not.[A]
+
+[OpenMidLeft]
+Unfortunate.[.....] She could have been a help.[......][N]
+Besides that though,[.....] our next actions should[AN]
+be to leave soon,[....] so we can plan without the[N]
+fear of retaliation.[A]
+
+[OpenMidRight]
+Good plan.[.....] Let's move out then![A][X]

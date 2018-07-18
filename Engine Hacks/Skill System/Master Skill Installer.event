@@ -392,6 +392,11 @@ POIN SkillTester
 WORD TraceID
 POIN Skill_Getter
 
+#inctext lyn "PowerGemCritUp.elf"
+PowerGemLynLink:
+BYTE PowerGem
+ALIGN 4
+
 #include "Other Skills/RandomMugs.event"
 
 
