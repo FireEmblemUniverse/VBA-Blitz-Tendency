@@ -163,6 +163,62 @@ Deuxnids[X]
 ## descDeuxnids
 Not to be confused with Dennis.[X]
 
+## SeibahName
+Seibah[X]
+
+## SeibahDesc
+A servant looking for the[NL]
+Holy Grail.[X]
+
+
+## RinsletName
+Rinslet[X]
+
+## RinsletDesc
+A noblewoman from an[NL]
+alternate world.[X]
+
+## KamitoName
+Kamito[X]
+
+## KamitoDesc
+The incarnation of the Demon King[NL]
+from another world.[X]
+
+## ClaireName
+Claire[X]
+
+## ClaireDesc
+The Dark Priestress of the Demon[NL]
+King incarnation.[X]
+
+## MedeaName
+Medea[X]
+
+## MedeaDesc
+A Caster servant looking[NL]
+for the Holy Grail.[X]
+
+## BDName
+Blade Dance[X]
+
+## BDDesc
+One of the competitors in the[NL]
+Blade Dance tournament.[X]
+
+## SpiritName
+Fall Spirit[X]
+
+## SpiritDesc
+A spirit from the past.[X]
+
+## AnormallyName
+Annormally[X]
+
+## AnormallyDesc
+An anormally messing up the[NL]
+events of the Holy Grail war.[X]
+
 ## nameNichol
 Nichol[X]
 

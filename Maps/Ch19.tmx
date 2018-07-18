@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="23" height="23" tilewidth="16" tileheight="16" infinite="0" nextobjectid="1">
+ <tileset firstgid="1" name="FE8 - Temple - 8800898a" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="8800898a.png" trans="ffffff" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="23" height="23">
+  <properties>
+   <property name="ChapterID" value="19"/>
+   <property name="Main" value=""/>
+   <property name="MapID" value="0x58"/>
+   <property name="ObjectType" value="0x88"/>
+   <property name="PaletteID" value="0x89"/>
+   <property name="TileConfig" value="0x8A"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJy11T9OAkEUx/GdBrAg0Bl7Y21i9ALaGLUy4QAcwqOIcgtJxH8V3GBJ/IdnIFT+b/xOnAmTyZvZZXcpPlne5vFb5u1M6CZJ0hXUAvevcY4eLnCJPh4C/aHsukBnD3GDW9zhvkC25BFPeMYLXjHFWwXZ7/jAJ77wjR/8LpEdMsIY6+o/e0Mt7pXNtnOfYRNzrJl7ZbPtvJr83gOuLRXeU0WzfVLfFc/dcXQy6oHKl6P7TtViXlqeWsqW+rQGn/fN2vLU9vs1L0v3bTl9PezhkHrXrCdWT5Q879T0NUzfmTMT/4zH6raX2xb6UmcmoXMo2c6obb7N9n9LFSYm2z7b30tl1L1nhfZYFWesyuyB9y7TJdcdOqf2PLnvUvqviYmt02ZL+yiPWHaRGazq/eisI67HOMnI/gNVs5JS
+  </data>
+ </layer>
+</map>

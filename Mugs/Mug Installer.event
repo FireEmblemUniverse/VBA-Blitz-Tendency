@@ -67,6 +67,37 @@ DeuxnidsMug:
 #incext PortraitFormatter "Deuxnids.png"
 setMugEntry(0x3F,DeuxnidsMug, 2, 6, 2, 4)
 
+ALIGN 4
+Seibah_Mug:
+#incext PortraitFormatter "Seibah.png"
+setMugEntry(0x21, Seibah_Mug, 3, 6, 3, 4)
+ALIGN 4
+
+Rinslet_Mug:
+#incext PortraitFormatter "Rinslet.png"
+setMugEntry(0x22, Rinslet_Mug, 2, 6, 3, 4)
+ALIGN 4
+
+Kamito_Mug:
+#incext PortraitFormatter "Kamito.png"
+setMugEntry(0x30, Kamito_Mug, 3, 5, 3, 3)
+ALIGN 4
+
+Claire_Mug:
+#incext PortraitFormatter "Claire.png"
+setMugEntry(0x4B, Claire_Mug, 4, 6, 4, 4)
+ALIGN 4
+
+Medea_Mug:
+#incext PortraitFormatter "Medea.png"
+setMugEntry(0x72, Medea_Mug, 2, 6, 2, 4)
+ALIGN 4
+
+AssassinServant_Mug:
+#incext PortraitFormatter "AssassinServant.png"
+setMugEntry(0x73, AssassinServant_Mug, 2, 5, 3, 3)
+ALIGN 4
+
 NicholMug:
 #incext PortraitFormatter "Nichol.png"
 setMugEntry(0x1E, NicholMug, 3, 5, 3, 3)
