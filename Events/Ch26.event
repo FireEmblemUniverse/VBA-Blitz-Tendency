@@ -1,0 +1,248 @@
+#include EAstdlib.event
+
+EventPointerTable(0x75,ThisChapter26) //ch26?
+
+ALIGN 4
+
+ThisChapter26:
+POIN TurnBasedEvents26
+POIN CharacterBasedEvents26
+POIN LocationBasedEvents26
+POIN MiscBasedEvents26
+POIN Dunno26 Dunno26 Dunno26
+POIN Tutorial26
+POIN TrapData26 TrapData26
+POIN Units26 Units26
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene26 EndingScene26
+
+Units26:
+UNIT Vedge EirikaLord 0x00 Level(10, Ally, 1) [12,6] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI
+UNIT Verge Cavalier Vedge Level(10, Ally, 1) [21,15] 0x00 0x00 0x0 0x00 [SilverSword] NoAI
+UNIT Null Cavalier Vedge Level(10, Ally, 1) [22,16] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT Naught Cavalier Vedge Level(10, Ally, 1) [22,17] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT Chiva Cavalier Vedge Level(10, Ally, 1) [3,15] 0x00 0x00 0x0 0x00 [SilverSword] NoAI
+UNIT Fanni Cavalier Vedge Level(10, Ally, 1) [2,16] 0x00 0x00 0x0 0x00 [SilverSword] NoAI
+UNIT Ersatz Manakete_2_F Vedge Level(10, Ally, 1) [2,17] 0x00 0x00 0x0 0x00 [SilverSword] NoAI 
+UNIT
+
+TurnBasedEvents26:
+TurnEventPlayer(0x0,PostPrep26,1)
+TurnEventPlayer(0x0,HellMoveback26,2,50)
+END_MAIN
+
+CharacterBasedEvents26:
+END_MAIN
+
+LocationBasedEvents26:
+SecretShop(MandatorySecretShop26,2,3)
+END_MAIN
+
+MiscBasedEvents26:
+CauseGameOverIfLordDies
+DefeatBoss(EndingScene26)
+END_MAIN
+
+Dunno26:
+//do not touch
+WORD $00
+
+Tutorial26:
+//do not touch
+WORD $00
+
+TrapData26:
+ENDTRAP
+
+ALIGN 4
+
+BeginningScene26:
+ENUF 0x14
+MUSC 0x49 //lava boiling
+TILECHANGE 0x2
+TILECHANGE 0x3
+//LOAD2 0x1 VedgeScene26
+
+//load a cutscene version of Vedge at the bottom of the map to speak with
+//Dennis/Inferos, then the "real" version of Vedge (needs to be part of the Units block
+//to show up in prep screen) is trapped in the room with Inferos by the time gameplay
+//begins. I need to figure out how to make this work properly without having REPOS
+//at my disposal but that's polish.
+
+LOAD2 0x1 Units26
+LOAD1 0x1 DennisScene26
+ENUN
+CAM1 [17,13]
+
+FADU 10
+//FlashCursor(Vedge,50)
+STAL 20
+//Text(ChTwentysixOpening1)
+//MOVE 0x10 Vedge [12,17]
+FlashCursor(Dennis,50)
+MUSC 0x26 //Raid
+//Text(ChTwentysixOpening2)
+STAL 10
+MUSC 0x00
+STAL 40
+EARTHQUAKE_START 0x100
+STAL 40
+TILECHANGE 0x4
+STAL 10
+LOAD1 0x1 DZombie126
+ENUN
+SOUN 0x2f1
+STAL 30
+EARTHQUAKE_END
+MUSC 0x26 //Raid
+MOVE 0x5 0xb4 [12,16]
+TILEREVERSE 0x4
+ENUN
+STAL 10
+//Text(ChTwentysixOpening3)
+STAL 30
+MUSC 0x00
+FADI 100
+//Text(ChTwentysixEnough)
+LOAD1 0x1 HellScene26
+ENUN
+FADU 100
+MUSC 0x2d //Lost Heart
+FlashCursor(Inferos,50)
+//Text(ChTwentysixHellDennis)
+//FIGH Inferos Dennis HellDennisFight26 0
+//KILL Dennis
+//to do: find out how to kill units in FE8
+DISA Dennis
+//Text(ChTwentysixHellVoid)
+MUSC 0x00
+FADI 100
+TILEREVERSE 0x2
+TILEREVERSE 0x3
+TILECHANGE 0x0
+//Text(ChTwentysixHellTeleport)
+//DISA Vedge
+
+DISA Inferos
+//LOAD2 0x1 VedgeReal26
+CHECK_HARD
+
+IFNOTEQUAL 0x8 0xC 0x0 //if the result of this check is not 0; i.e. true
+LOAD1 0x1 Bads26H
+ELSE 0x9
+LABEL 0x8
+LOAD1 0x1 Bads26
+LABEL 0x9
+CAM1 [12,7]
+MUSC 0x47 //wind ambience
+FADU 100
+//Text(ChTwentysixHellWelcome)
+FlashCursor(Vedge,50)
+
+MUSC 0x2f //Lights in the Dark; possibly change to His World if I'm not lazy
+STAL 20
+EARTHQUAKE_START 0x100
+STAL 50
+SOUN 0x11a //bolting strike
+TILEREVERSE 0x0
+STAL 20
+EARTHQUAKE_END
+MOVE 0x10 0x1 [12,9]
+FlashCursor(Inferos,50)
+//Text(ChTwentysixHellAngry)
+
+STAL 30
+GotoPrepScreen
+ENDA
+
+EndingScene26:
+MUSC 0x32 //victory
+
+FADI 5
+MNCH 27
+ENDA
+
+// Events
+
+PostPrep26:
+Text(PlaceholderText)
+//Ersatz says something about the dzombie if he is deployed
+NoFade
+ENDA
+
+HellMoveback26:
+//if Inferos's battle quote was triggered, move him back
+//to his original place. Only Vedge can lure him out
+
+CHECK_EVENTID 0x1
+BEQ 0x2 0xC 0x1 //if the result of this check is 1; i.e. true
+
+CHECK_ACTIVEID 0x1
+BNE 0x2 0x1 0xc //if active unit is not Vedge
+MOVE 0x10 Inferos [12,5]
+ENUF 0x1 //set 0x1 to false so this event can run again
+LABEL 0x2
+//if this still isn't right I'll comment it out and do it later
+NoFade
+ENDA
+
+
+// Manual Movement
+
+// Scripted Fights
+
+//HellDennisFight26:
+//to do: figure out how to do scripted fights in FE8
+//DefenderMiss(0)
+//AttackerCritical(60,1)
+//BLDT
+
+// Units
+
+Bads26:
+UNIT Inferos EirikaMasterLord 0x00 Level(6, Enemy, 0) [12,5] 0x2 0x00 0x0 0x00 [FiendCleaver] AttackInRangeAI
+UNIT 0xb5 General_F Inferos Level(2, Enemy, 1) [8,17] 0x2 0x00 0x0 0x00 [Runesword] AttackInRangeAI
+UNIT 0xb5 General_F Inferos Level(2, Enemy, 1) [16,17] 0x2 0x00 0x0 0x00 [LightBrand] AttackInRangeAI
+UNIT 0xb5 Druid Inferos Level(2, Enemy, 1) [10,16] 0x00 0x00 0x0 0x00 [Luna, Physic] HealUnits
+UNIT 0xb5 Bishop Inferos Level(2, Enemy, 1) [14,16] 0x00 0x00 0x0 0x00 [Aura, Physic] HealUnits
+UNIT 0xb5 Ranger Inferos Level(2, Enemy, 1) [6,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI
+UNIT 0xb5 Ranger Inferos Level(2, Enemy, 1) [18,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI
+UNIT
+
+Bads26H:
+UNIT Inferos EirikaMasterLord 0x00 Level(1, Enemy, 0) [12,5] 0x2 0x00 0x0 0x00 [FiendCleaver, Swordslayer] AttackInRangeAI
+UNIT 0xb5 General_F Inferos Level(15, Enemy, 1) [8,17] 0x2 0x00 0x0 0x00 [Runesword, Tomahawk] AttackInRangeAI
+UNIT 0xb5 General_F Inferos Level(15, Enemy, 1) [16,17] 0x2 0x00 0x0 0x00 [Runesword, Spear] AttackInRangeAI
+UNIT 0xb5 Druid Inferos Level(9, Enemy, 1) [10,16] 0x00 0x00 0x0 0x00 [Luna, Physic] HealUnits
+UNIT 0xb5 Bishop Inferos Level(9, Enemy, 1) [14,16] 0x00 0x00 0x0 0x00 [Aura, Fortify] HealUnits
+UNIT 0xb5 Ranger Inferos Level(5, Enemy, 1) [6,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI
+UNIT 0xb5 Ranger Inferos Level(5, Enemy, 1) [18,17] 0x00 0x00 0x0 0x00 [RunicBow, ShadowKiller] AttackInRangeAI
+UNIT
+
+DennisScene26:
+UNIT Dennis Sage Inferos Level(10, Enemy, 1) [12,15] 0x00 0x00 0x0 0x00 [Aura, _1G] NoAI
+UNIT
+
+VedgeScene26:
+UNIT Vedge EirikaLord 0x00 Level(10, Ally, 1) [21,17] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI
+UNIT
+
+VedgeReal26:
+UNIT Vedge EirikaLord 0x00 Level(10, Ally, 1) [12,6] 0x00 0x00 0x0 0x00 [SilverSword] NoAI
+UNIT
+
+HellScene26:
+UNIT Inferos EirikaMasterLord 0x00 Level(10, Enemy, 1) [13,13] 0x00 0x00 0x1 0x0 [FiendCleaver] NoAI
+UNIT
+
+DZombie126:
+UNIT 0xb4 DracoZombie Inferos Level(10, Enemy, 1) [12,13] 0x2 0x00 0x0 0x00 [WretchedAir] AttackInRangeAI
+UNIT
+
+// Shop Data
+MandatorySecretShop26:
+SHLI SilverBlade Runesword SilverLance Spear SilverAxe Swordslayer SilverBow KillerBow Longbow Fimbulvetr Aura Fenrir Fortify MasterProof
+
+ALIGN 4
+
+//MESSAGE Events end at offset currentOffset

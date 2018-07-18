@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="19" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="50005152" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="Tiled tilesets/50005152.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Main" width="25" height="19">
+  <properties>
+   <property name="Anims1" value="0x0"/>
+   <property name="Anims2" value="0x54"/>
+   <property name="ChapterID" value="25"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="0x74"/>
+   <property name="MapID" value="0x73"/>
+   <property name="ObjectType" value="0x50"/>
+   <property name="PaletteID" value="0x51"/>
+   <property name="TileConfig" value="0x52"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJydVM1Km0EU/TLBTTGi1RfIX0tiKhbzAtpQMGLfogsXeYj8KJa2eYhi0Sj4FoXaUl3UkE3AheiioaVquzELPZc5l+/ykaDJ4nBn5t57ztyZO1OOB8EaUAEKwB7QBHIuCCaAk1hovwPXsXBs/Xkgg7wyOTYM5oEe/Mm4jylQo4fcLNZ3nbd/yf/Uefsv4pf4LdiU2avwt1hDFqjC32DMC2oI7xW5p53nz9LOUeuGehK/g7UV1rJADeFKA3X4SkEY0+O+hHeGnIvAS+AZsAQUuT5LPYmv8bxyrGWDNbwCzp1HCeM88IR1KG+WvMPGRWp8MhyT1EjwPpbjfv/qe0ONn8g5fSQkXjhWgXVzVk3q6N6F/6u5j1E1UjynitF4BxwBU8Q2+ZNjajSG9O8f53kL7LMcz25UjQywGfg7ifbvFM8rx/oS7LVx6qgHvrdeI/+XC89Le3iSdTTZa/p2H6Ojf8Jn9n+GfNvk32MtLWrpm3zOvDRh/xP9R6xP4mt8ZyWeid6B4LcL+ZN88/vMuwDfZcyPPwIfgPcDfIfO34X2b4F8af5Rsu8U51Xu5Rt1lEfmB3x3Yo+N75Bz7ason9RXp3+T/Lewfed5rcYP4IucVURDxpqjfFvkewu+/86ja2wHSAJnnHfNuth2ZL0biVfOPrXbBpZ7GbgbsK6xOu9wrvF2vWPyOybXcrcHaD7EaeOsRjsCu+eHcuyehtVwD97iBko=
+  </data>
+ </layer>
+ <layer name="HatchOpen" width="25" height="19">
+  <properties>
+   <property name="Height" value="2"/>
+   <property name="ID" value="4"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="12"/>
+   <property name="Y" value="12"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjILhCVSZaG/HGjrYMQqGPgAA4fsA1g==
+  </data>
+ </layer>
+ <layer name="WallsBeforeCracked" width="25" height="19">
+  <properties>
+   <property name="Height" value="6"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="13"/>
+   <property name="X" value="6"/>
+   <property name="Y" value="6"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4B+4DUjA8NlJgaGK0RikPpRO2hnBytQnxYTcfZoMkHUkwrUofpOM0IwiH2eEZWPzFYnw45RMAoGOwAAH7k6FQ==
+  </data>
+ </layer>
+ <layer name="Wall3" width="25" height="19">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="3"/>
+   <property name="Width" value="2"/>
+   <property name="X" value="15"/>
+   <property name="Y" value="11"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIKBBZeZGBiuMA20K0bBKKAdAADWmAGs
+  </data>
+ </layer>
+ <layer name="Wall2" width="25" height="19">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="2"/>
+   <property name="Width" value="2"/>
+   <property name="X" value="8"/>
+   <property name="Y" value="11"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjALag8tMDAxXmAbaFaNgFAwMAAAFWwGs
+  </data>
+ </layer>
+ <layer name="Wall1" width="25" height="19">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="18"/>
+   <property name="Y" value="6"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2DwAm4m2ttxjg523KCDHaNgFIyCwQsARhMBuA==
+  </data>
+ </layer>
+</map>
