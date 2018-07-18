@@ -127,6 +127,7 @@
 #define Chapter24Map 0x6F
 #define Chatper24Events 0x71
 #define Chapter24Changes 0x70
+#define Chapter25 0x3E
 #define Ch27Id 26
 #define Ch27Map 0x76
 #define Ch27MapChanges 0x77
