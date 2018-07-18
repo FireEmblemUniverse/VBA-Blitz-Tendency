@@ -33,6 +33,7 @@
 #define VedgeLord BlitzLord
 #define VoidMonster 0x3
 #define VoidMaster 0x4
+#define Witch 0x77
 
 // Unit definitions
 #define Vedge 0x1
@@ -49,10 +50,13 @@
 #define Fanni 0xD
 #define Murat 0xF
 #define Jet 0x11
+#define Splenda 0x13
+#define Zane 0x14		//teq ch15 recruitable 1
 #define Nichol 0x16
 #define Adolgi 0x17
 #define Donna 0x1A
 #define Sabin 0x1B
+#define Benny 0x1C		//teq ch15 recruitable 2, change this if already claimed
 #define Ersatz 0x1F
 #define Inafune 0x20
 #define Babby 0x21
@@ -72,17 +76,19 @@
 #define Ch27ChrZomboss 0x4D // dracozombie boss
 #define Edgelard 0x4E
 #define Dennis 0x50
-#define Kefka 0x6C
 #define Cameron 0x58
 #define Bojo 0x59
+#define Wicky 0x5C
 #define Ch17Boss 0x62
 #define DarkFact 0x64
+#define Kefka 0x6C
 #define KojimaNPC 0x76
 #define SakaguchiNPC 0x77
 #define Ch29Boss 0x78
 
-
 #define Ch5Generic 0x8A
+#define Ch14_Enemy 0x9C
+#define Ch15_Enemy 0x9D
 #define Ch17Enemies 0xA2
 #define Ch18Enemies 0xA4
 #define Ch23Enemies 0xAE
@@ -108,10 +114,12 @@
 #define Chapter5Events 0x21
 #define Chapter6 0x7
 #define Chapter7 0x8
+#define Chapter12 0xC
+#define Ch14_ID 0x41
+#define Ch15_ID 0x47
 #define C17MapID 0x4D
 #define C17MapChangesID 0x4E
 #define C17EventID 0x4F
-#define Chapter12 0xC
 #define Chapter24 24
 #define Chapter24Map 0x6F
 #define Chatper24Events 0x71

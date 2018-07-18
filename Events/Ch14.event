@@ -1,0 +1,91 @@
+EventPointerTable(Ch14_ID, Ch14_Events_Table)
+
+#define Ch14_Level1 1 //level of unpromoted enemies
+#define Ch14_Level2 1 //level of promoted enemies
+
+Ch14_Events_Table:
+POIN Ch14_TurnBasedEvents
+POIN Ch14_CharacterBasedEvents
+POIN Ch14_LocationBasedEvents
+POIN Ch14_MiscBasedEvents
+POIN Ch14_Dunno Ch14_Dunno Ch14_Dunno
+POIN Ch14_Tutorial
+POIN Ch14_TrapData Ch14_HMExtraTrapData
+POIN Ch14_Units Ch14_Units
+POIN $0 $0 $0 //these are for skirmish units (ally 1, ally 2, ally 3)
+POIN $0 $0 $0 //(enemy 1, enemy 2, enemy 3)
+POIN Ch14_BeginningScene Ch14_EndingScene
+
+Ch14_TurnBasedEvents:
+END_MAIN
+
+Ch14_CharacterBasedEvents:
+END_MAIN
+
+Ch14_LocationBasedEvents:
+END_MAIN
+
+Ch14_MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatAll(Ch14_EndingScene)
+END_MAIN
+
+Ch14_Dunno:
+END_MAIN
+
+Ch14_Tutorial:
+END_MAIN
+
+Ch14_TrapData:
+ENDTRAP
+ALIGN 4
+
+Ch14_HMExtraTrapData:
+ENDTRAP
+ALIGN 4
+
+Ch14_Units:
+UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [5,0] 0 0 0 0 [0] NoAI
+UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [4,1] 0 0 0 0 [0] NoAI
+UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [7,1] 0 0 0 0 [0] NoAI
+UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [8,0] 0 0 0 0 [0] NoAI
+UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [9,1] 0 0 0 0 [0] NoAI
+UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [2,1] 0 0 0 0 [0] NoAI
+UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [3,2] 0 0 0 0 [0] NoAI
+UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [6,2] 0 0 0 0 [0] NoAI
+UNIT
+
+Ch14_Enemies:
+UNIT Wicky Witch 0 Level(10, Enemy, 0) [6,18] 0 0 0 0 [Luna, Elfire] GuardTileAI
+UNIT Ch14_Enemy Bishop 0 Level(Ch14_Level2, Enemy, 1) [3,10] 0 0 0 0 [Physic] GuardTileAI
+UNIT Ch14_Enemy Gargoyle 0 Level(Ch14_Level1, Enemy, 1) [1,18] 0 0 0 0 [SteelLance] NoAI
+UNIT Ch14_Enemy Bonewalker_Bow 0 Level(Ch14_Level1, Enemy, 1) [10,5] 0 0 0 0 [IronBow] NoAI
+UNIT Ch14_Enemy Mercenary 0 Level(Ch14_Level1, Enemy, 1) [15, 3] 0 0 0 0 [IronBlade] NoAI
+UNIT Ch14_Enemy Mage 0 Level(Ch14_Level1, Enemy, 1) [11, 9] 0 0 0 0 [Thunder, Vulnerary] AttackInRangeAI
+UNIT Ch14_Enemy Tarvos 0 Level(Ch14_Level1, Enemy, 1) [15, 11] 0 0 0 0 [Hammer, HandAxe] AttackInRangeAI
+UNIT Ch14_Enemy Knight 0 Level(Ch14_Level1, Enemy, 1) [1, 7] 0 0 0 0 [ShortSpear, Elixir] NoAI
+UNIT Ch14_Enemy Mogall 0 Level(Ch14_Level1, Enemy, 1) [0, 12] 0 0 0 0 [Flux] NoAI
+UNIT Ch14_Enemy Revenant 0 Level(Ch14_Level1, Enemy, 1) [11, 12] 0 0 0 0 [RottenClaw] NoAI
+UNIT Ch14_Enemy Sniper 0 Level(Ch14_Level2, Enemy, 1) [9, 16] 2 0 0 0 [Longbow] AttackInRangeAI
+UNIT Ch14_Enemy Pirate 0 Level(Ch14_Level1, Enemy, 1) [7,13] 0 0 0 0 [SteelAxe] NoAI
+UNIT Ch14_Enemy Gwyllgi 0 Level(Ch14_Level2, Enemy, 1) [13, 18] 0 0 0 0 [HellFang] AttackInRangeAI
+UNIT Ch14_Enemy Monk 0 Level(Ch14_Level1, Enemy, 1) [2, 15] 2 0 0 0 [Purge, Divine] GuardTileAI
+UNIT
+
+Load_Splenda:
+UNIT Splenda Witch 0 Level(1, Ally, 0) [6,1] 0 0 0 0 [Shine, Fire] NoAI
+UNIT
+
+Ch14_BeginningScene:
+LOAD2 0x1 Ch14_Units		//Allies
+ENUN
+LOAD1 0x1 Ch14_Enemies
+ENUN
+LOAD1 0x1 Load_Splenda
+ENUN
+GotoPrepScreen
+
+Ch14_EndingScene:
+MNCH 15
+NoFade
+ENDA

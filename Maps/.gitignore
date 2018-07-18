@@ -1,5 +1,6 @@
 # Tools that should not be part of the repo.
 *.exe
+*.png
 
 # Build output
 *.event
