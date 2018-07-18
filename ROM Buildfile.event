@@ -28,6 +28,7 @@
 
     //Maps
     #include "Maps/FixedValni.event"
+    #include "Maps/Cave Tileset/Cave Tileset Installer.event"
     #include "Maps/FE6 Snow Tileset/FE6 Snow Installer.event"
     #include "Maps/Master Map Installer.event"
 

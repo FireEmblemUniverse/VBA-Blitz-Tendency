@@ -3,12 +3,12 @@
 
 
 EventPointerTable(0x5A,PointersCh19)
-EventPointerTable(0x59,TileChangesCh19) 
+EventPointerTable(0x59,TileChangesCh19)
 
 ALIGN 4
 
 PointersCh19:
-POIN Turn_eventsCh19 
+POIN Turn_eventsCh19
 POIN Character_eventsCh19
 POIN Location_eventsCh19
 POIN Misc_eventCh19
@@ -185,7 +185,7 @@ LOCA
 Misc_eventCh19:
 CauseGameOverIfLordDies
 
-AREA 0x7 SwitchPress [20, 10] [20, 10] 
+AREA 0x7 SwitchPress [20, 10] [20, 10]
 
 
 END_MAIN
@@ -234,7 +234,7 @@ REMA
 
 CAM1 [20,10]
 FlashCursor(20,10,60)
-STAL 0x10 
+STAL 0x10
 
 GotoPrepScreen
 
@@ -259,7 +259,7 @@ Text(Shrine_3, PlaceholderText)
 REMA
 
 
-MNC2 20
+MNCH 20
 ENDA
 
 
@@ -271,7 +271,7 @@ ENDTRAP
 
 
 ALIGN 4
-TileChangesCh19:     
+TileChangesCh19:
 TileMap(0x00,2,10,1,1,OpenChestTempleCh19)
 TileMap(0x01,6,10,1,1,OpenChestTempleCh19)
 TileMap(0x02,10,10,1,1,OpenChestTempleCh19)
@@ -301,4 +301,3 @@ SHORT 0x001C
 BridgeCh19:
 SHORT 0x0044
 SHORT 0x0044
-

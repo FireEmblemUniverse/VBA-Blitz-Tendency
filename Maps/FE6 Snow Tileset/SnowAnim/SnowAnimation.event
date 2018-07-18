@@ -2,7 +2,10 @@
 
 EventPointerTable(SnowAnimsID, SnowAnimation)
 
-#define tilesetAnimation(speed, size, pointer)	"BYTE speed 0; SHORT size; POIN pointer"
+#ifndef TILESET_ANIMATION_MACRO
+#define TILESET_ANIMATION_MACRO
+    #define tilesetAnimation(speed, size, pointer)    "BYTE speed 0; SHORT size; POIN pointer"
+#endif
 
 ALIGN 4
 SnowAnimation0:

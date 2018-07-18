@@ -101,3 +101,11 @@ ALIGN 4
 NicholMug:
 #incext PortraitFormatter "Nichol.png"
 setMugEntry(0x1E, NicholMug, 3, 5, 3, 3)
+
+Mariya_Mug:
+#incext PortraitFormatter "MariyaMug.png"
+setMugEntry(0x1C, Mariya_Mug, 4, 5, 4, 3)
+
+MichealP_Mug:
+#incext PortraitFormatter "MichealPMug.png"
+setMugEntry(0x26, MichealP_Mug, 4, 5, 4, 3)
