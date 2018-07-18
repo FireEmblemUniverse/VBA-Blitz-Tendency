@@ -54,25 +54,25 @@ Prologue: IT BEGINS AGAIN[X]
 17: Christmas Break[X]
 
 # 0x0172
-18: [X]
+18: Darm Tower[X]
 
 # 0x0173
-19: [X]
+19: Stay by the Night[X]
 
 # 0x0174
-20: [X]
+20: The Tempest[X]
 
 # 0x0175
 21: [X]
 
 # 0x0176
-22: [X]
+22: The Legendary Blitz[X]
 
 # 0x0177
-23: [X]
+23: Solomon Shrine[X]
 
 # 0x0178
-24: [X]
+24: Recoil River[X]
 
 # 0x019B
 25: Stud Contact[X]
@@ -81,10 +81,13 @@ Prologue: IT BEGINS AGAIN[X]
 26: ... Know Thyself[X]
 
 # 0x017A
-27: Kaga's Blessing Upon[X]
+27: [X]
 
 # 0x017B
-28: Crusader God Babby[X]
+28: Kaga's Blessing Upon[X]
 
 # 0x0182
+29: Crusader God Babby[X]
+
+# 0x0183
 Endgame: The Final Holy Blitz[X]

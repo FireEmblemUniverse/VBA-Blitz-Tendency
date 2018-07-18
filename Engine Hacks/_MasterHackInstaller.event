@@ -65,7 +65,7 @@ POP
 
   //Check if current character has the specified item: (Written for chapter 5)
   #inctext lyn "CheckItem.elf"
-
+  
   //Weapon/Staff Range Fix
   #include "Range Fix/Range Fix Install.event"
 
@@ -152,6 +152,13 @@ POP
   FreezeAllASMC:
   #incbin "ASM/freezeall.dmp"
 
+  // Chapter 27 ASMC-able functions
+  ALIGN 4
+  gChapter27FogLevel:
+    WORD Ch27FogLevel
+  
+  #include "CCBlitzChapter27Asmcs.lyn.event"
+  
   ALIGN 4
   //We are installing new descriptions/icons.
   #define __USE_ICON_MACROS__
@@ -211,6 +218,8 @@ POP
   PUSH
     ORG $59D1F8
     POIN UnitMenuTable
+    ORG $59D21C
+    POIN MainMenuTable
   POP
 
   ALIGN 4         //Insert new commands where you want them to appear in the menu
@@ -293,3 +302,17 @@ POP
 
   UM_Wait
   UM_Separator
+  
+MainMenuTable:
+  MM_Unit
+  MM_EveryOtherOneTooLazy //I'm not getting away with that one am I
+  MM_Suspend
+  #ifdef __DEBUG__
+  MenuCommand(UM_Debug, 0, GreenText, 0x4F449, DebugEffect)
+  #endif
+  MM_End
+  MM_Separator
+  
+  #ifdef __DEBUG__
+  #include "ASM\Debug.event"
+  #endif

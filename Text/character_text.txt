@@ -178,3 +178,99 @@ Mealy[X]
 ## descMealy
 Why was... okay, fine.[NL]
 I wanted one.[X]
+
+## SabinName
+Sabin[X]
+
+## SabinDesc
+A student of blitzes. Renowned for[N]
+suplexing the Phantom Train.[X]
+
+## KefkaName
+Kefka[X]
+
+## KefkaDesc
+A crazy clown from a distant land.[N]
+Remarkably fond of one-liners.[X]
+
+## AdolgiName
+Adolgi[X]
+
+## AdolgiDesc
+Dogi ate roo adol.[NL]
+When adol became a human,[NL]
+bad things happened.[X]
+
+## nameDeuxnids
+Deuxnids[X]
+
+## descDeuxnids
+Not to be confused with Dennis.[X]
+
+## nameSplenda
+Splenda[X]
+
+## nameWicky
+Wicky[X]
+
+## SeibahName
+Seibah[X]
+
+## SeibahDesc
+A servant looking for the[NL]
+Holy Grail.[X]
+
+## RinsletName
+Rinslet[X]
+
+## RinsletDesc
+A noblewoman from an[NL]
+alternate world.[X]
+
+## KamitoName
+Kamito[X]
+
+## KamitoDesc
+The incarnation of the Demon King[NL]
+from another world.[X]
+
+## ClaireName
+Claire[X]
+
+## ClaireDesc
+The Dark Priestress of the Demon[NL]
+King incarnation.[X]
+
+## MedeaName
+Medea[X]
+
+## MedeaDesc
+A Caster servant looking[NL]
+for the Holy Grail.[X]
+
+## BDName
+Blade Dance[X]
+
+## BDDesc
+One of the competitors in the[NL]
+Blade Dance tournament.[X]
+
+## SpiritName
+Fall Spirit[X]
+
+## SpiritDesc
+A spirit from the past.[X]
+
+## AnormallyName
+Annormally[X]
+
+## AnormallyDesc
+An anormally messing up the[NL]
+events of the Holy Grail war.[X]
+
+## nameNichol
+Nichol[X]
+
+## descNichol
+A ruthless man who has two fears:[N]
+Death, and a ruined Christmas.[X]

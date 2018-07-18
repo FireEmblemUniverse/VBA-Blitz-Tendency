@@ -47,6 +47,13 @@ I want to encourage as many contributions as possible. The more people we have h
 3) The team member creates a branch for the change, and commits it. They create a pull request when it passes necessary tests.
 4) An **admin** approves the pull request and the change is in the hack.
 
+For team members:
+To test the changes, you must have the project repo set up and able to build. See the `Setup` section below.
+
+# Setup
+
+Please refer to `Setup.md` for instructions on setting up the project folder and building after cloning the repo.
+
 # Technical Information
 
 Everything will be assembled with ColorzCore and the Buildfile method.

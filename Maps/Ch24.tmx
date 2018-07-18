@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="21" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="FE8 - Fields - 01000203" tilewidth="16" tileheight="16" tilecount="1024">
+  <image source="01000203.png" trans="ffffff" width="512" height="512"/>
+ </tileset>
+ <layer name="Main" width="16" height="21">
+  <properties>
+   <property name="ChapterID" value="Chapter24"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="Chapter24Changes"/>
+   <property name="MapID" value="Chapter24Map"/>
+   <property name="ObjectType1" value="0x01"/>
+   <property name="PaletteID" value="0x02"/>
+   <property name="TileConfig" value="0x03"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxtVDtrlEEUvd8MiRaBBSWiWMZ3EhUtTZddzIooa/CRxiYbzNrHFaxEBBPIA/+BbFbSmMZC/QUubLXbqL8gAUErxXSe45xhZheLw/3mzr13zn19v5zZAVDyZh3IWTN7C9SBRWAFuqZL5+vAsgXbHjAOvxPAEvDCgo62p32ISZ8F6E5ZOF9SnIim3u674N8GPgOHC7OxInG4Jh6LluLexfmB7u7prge8LgI6jAfbV5A3s1yeAhM433eJx4piMPY0fK8C+xY4PQIu6r1nbtDvHOzPAxd84hJzyvOk75OMP2u0h/McvqvADR9ql+dLjsQMvh8q5m3l8hz8KtAtQ9cAHg+99w53exZy4PeCYjOXW8A8zm+UX1W1Zu3uQPbV5zkbrE8zy5v8W8rlO+2LoIv6TeCs6sa8dt1gH+N8xFqV5ct+TWvGduXb9mmuRrL6nFT/GWNEvGjH9yuax75LfOvKN+9Z+T/zRa6s2Q/gp0v9qit+3rOW8o1xGCP2pgtZg1zP5oF2ec+uAB+Aj8AnH/p0Wb05Kh4bwEtxjTPyXjtC3RfcfQW++cShZIO7EmuQ82jAfxvyj/b4QDtNDpPQ75BLVsfyUO93lNcxH3pEyXheczal/v/jAdQyLjEP2h+H/rcL/5E4axOW+sF52NIOxb2I/Spb4sX/RmdoZrnT8Z/lpW8Aa7rvQh5CHY4AZ4qwM9yB0SL9uyaz/SXvVcXju38B3dGK8A==
+  </data>
+ </layer>
+ <layer name="Village 1 Closed" width="16" height="21">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0x1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="1"/>
+   <property name="Y" value="7"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFQx10Mw+0C0bBKBiZAAD0FACP
+  </data>
+ </layer>
+ <layer name="Village 2 Closed" width="16" height="21">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0x2"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="14"/>
+   <property name="Y" value="13"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AU0Bt0Mw+0C0YBNQAAAjwAjw==
+  </data>
+ </layer>
+ <layer name="Village 1 Destroyed" width="16" height="21">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="0x3"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="0"/>
+   <property name="Y" value="5"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFlIAOZgaGTiDuYiZP/wqgvpVAvIpM/SeA+k4C8Sky9Y+CUTAKyAcAaycGDQ==
+  </data>
+ </layer>
+ <layer name="Village 2 Destroyed" width="16" height="21">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="0x4"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="13"/>
+   <property name="Y" value="11"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2BkgQ5mBoZOIO5iJk//CqC+lUC8ikz9J4D6TgLxKTL1j4LBAwAeIQYN
+  </data>
+ </layer>
+ <layer name="Snag Bridge 1" width="16" height="21">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="0x5"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="2"/>
+   <property name="Y" value="11"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2DoAw4K9WtQqJ+HQv2jYGgCAIlgAD0=
+  </data>
+ </layer>
+ <layer name="Snag Bridge 2" width="16" height="21">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="0x6"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="12"/>
+   <property name="Y" value="8"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4B4wEGhfg0K9fNQqH8UjAJqAgCtAAA9
+  </data>
+ </layer>
+ <layer name="Snag Bridge 3" width="16" height="21">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0x7"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="8"/>
+   <property name="Y" value="1"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYKAtYAFiVSB2o7E9o2AUjIJRQG8AAB+6AHA=
+  </data>
+ </layer>
+</map>

@@ -173,20 +173,20 @@ EndingScene12:
 MUSC 0x31 //victory
 
 CHECK_ALIVE Ersatz
-BEQ 0x4 0xc 0x1 //do this if 0xc is true i.e. Ersatz is alive
-SetBackground(0x23)
-Text(ChEightEnd)
-TurnAlly(Ersatz)
-ELSE 0x5
+BEQ 0x4 rC r0 // Skip block if Ersatz is dead
+    SetBackground(0x23)
+    Text(ChEightEnd)
+    TurnAlly(Ersatz)
+    GOTO 0x5
 LABEL 0x4
-SetBackground(0x23)
-Text(ChEightEndNoErsatz)
-GiveMoney(5000)
+    SetBackground(0x23)
+    Text(ChEightEndNoErsatz)
+    GiveMoney(5000)
 LABEL 0x5
 
 CHECK_ALIVE Fanni
-BEQ 0xb 0xc 0x1 //if Fanni is alive
-TurnAlly(Fanni)
+BEQ 0xb rC r0 //Skip if Fanni is dead.
+    TurnAlly(Fanni)
 LABEL 0xb
 
 FADI 5
@@ -335,20 +335,18 @@ HasteMakesWaste12:
 //random chance that he gives you a superfluous warning.
 
 CHECK_EVENTID 0x14 //if talk not activated
-BEQ 0x1 0xC 0x0 //if the result of this check is not 1; i.e. false
+BNE 0x1 0xC 0x0 //Skip if the event id is not 0 (i.e. talk has occurred)
 
 CHECK_ALIVE Ersatz
-BEQ 0x3 0xc 0x1 //do this if 0xc is true i.e. Ersatz is alive
+BEQ 1 0xc 0x0 //Skip if Ersatz is dead.
 
 SVAL 0x2 0x8 //set 0x2 to 8
 RANDOMNUMBER 0x30 //RN btwn 0 and 30 to 0xc
-BLT 0x2 0x2 0xC //if 0x2's content is less than 0xc's contents, do label 0x2
+BLT 1 0x2 0xC //if 0x2's content is less than 0xc's contents, skip
 CAM1 Ersatz
 FlashCursor(0x1f,50)
 Text(ChEightHasty)
 
-LABEL 0x2
-LABEL 0x3
 LABEL 0x1
 NoFade
 ENDA
