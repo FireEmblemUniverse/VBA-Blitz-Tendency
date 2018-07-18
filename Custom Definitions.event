@@ -80,17 +80,14 @@
 #define Dennis 0x50
 #define Cameron 0x58
 #define Bojo 0x59
-<<<<<<< HEAD
 #define Wicky 0x5C
 #define Ch17Boss 0x62
 #define DarkFact 0x64
 #define Kefka 0x6C
-=======
-#define Wrath 0x60
+#define WrathBoss 0x60
 #define Ch17Boss 0x62
 #define DarkFact 0x64
 #define Mike 0x72
->>>>>>> added quotes and definitions for ch16 and ch25 bosses
 #define KojimaNPC 0x76
 #define SakaguchiNPC 0x77
 #define Ch29Boss 0x78
