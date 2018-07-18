@@ -126,7 +126,7 @@ GotoPrepScreen
 
 EndingScene:
 Text(Castle_Hall_3,PlaceholderText)
-MNCH 0x19
+MNC2 0x19
 ENDA
 
 Turn1Event:
