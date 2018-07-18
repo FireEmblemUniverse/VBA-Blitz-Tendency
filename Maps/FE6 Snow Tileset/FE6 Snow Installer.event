@@ -28,7 +28,7 @@ ALIGN 4
 //is replacing the tile changes, map and events of Tower of Valni 1F. You could always point it
 //elsewhere, though, as long as it's not something used by other maps or events.
 
-#define SnowTileConfig 0xCA
+#define SnowTileConfig 0xE0
 #define SnowObjectID 0xD6
 #define SnowPaletteID 0xD7
 

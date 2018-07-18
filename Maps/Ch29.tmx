@@ -5,11 +5,11 @@
  </tileset>
  <layer name="Ch29" width="32" height="32">
   <properties>
-   <property name="Anims" value="0xCB"/>
+   <property name="Anims" value="SnowAnimsID"/>
    <property name="ChapterID" value="0x22"/>
    <property name="Main" value=""/>
-   <property name="MapChangesID" value="0xB4"/>
-   <property name="MapID" value="0xB3"/>
+   <property name="MapChangesID" value="0x8F"/>
+   <property name="MapID" value="0x8E"/>
    <property name="ObjectType1" value="SnowObjectID"/>
    <property name="PaletteID" value="SnowPaletteID"/>
    <property name="TileConfig" value="SnowTileConfig"/>

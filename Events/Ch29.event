@@ -14,7 +14,6 @@ POIN BeginningScene EndingScene
 
 Units:
 UNIT Eirika EphraimLord Eirika Level(1, Ally, 0) [20,18] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT Babby Manakete_2 0x00 Level(20, Ally, 0) [25,29] 0x00 0x00 0x0 0x00 [HolyDragonStone, Elixir] GuardTileAI
 UNIT Seth Cavalier Eirika Level(1, Ally, 0) [19,19] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT Seth Cavalier Eirika Level(1, Ally, 0) [21,19] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT Seth Cavalier Eirika Level(1, Ally, 0) [10,0] 0x00 0x00 0x0 0x00 [0x00] NoAI
@@ -27,10 +26,11 @@ UNIT Seth Cavalier Eirika Level(1, Ally, 0) [22,1] 0x00 0x00 0x0 0x00 [0x00] NoA
 UNIT Seth Cavalier Eirika Level(1, Ally, 0) [27,0] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT Seth Cavalier Eirika Level(1, Ally, 0) [2,31] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT Seth Cavalier Eirika Level(1, Ally, 0) [3,30] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT Seth Cavalier Eirika Level(1, Ally, 0) [5,30] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT Seth Cavalier Eirika Level(1, Ally, 0) [10,30] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT Seth Cavalier Eirika Level(1, Ally, 0) [30,12] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT Seth Cavalier Eirika Level(1, Ally, 0) [9,20] 0x00 0x00 0x0 0x00 [0x00] NoAI
+//I want to prevent loading of more than 16 units at once.
+//UNIT Seth Cavalier Eirika Level(1, Ally, 0) [5,30] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT
 
 Bad1:
@@ -95,11 +95,17 @@ UNIT Ch29Generic1 Mage Ch29Boss Level(20, Enemy, 1) [16,29] 0x00 0x00 0x0 0x00 [
 UNIT
 
 BabbyUnit:
-UNIT Babby Manakete_2 0x00 Level(20, Ally, 0) [25,29] 0x00 0x00 0x0 0x00 [HolyDragonStone, Elixir] GuardTileAI
+UNIT Babby Manakete_2 0x00 Level(20, NPC, 0) [25,29] 0x00 0x00 0x0 0x00 [HolyDragonStone, Elixir] GuardTileAI
 UNIT
+
+MakeBabbyAlly:
+TurnAlly(Babby)
+NoFade
+ENDA
 
 TurnBasedEvents:
 TurnEventPlayer(0,EndingScene,10)
+TurnEventPlayer(0,MakeBabbyAlly,1)
 END_MAIN
 
 CharacterBasedEvents:

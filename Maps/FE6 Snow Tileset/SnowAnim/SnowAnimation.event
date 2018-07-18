@@ -1,4 +1,4 @@
-#define SnowAnimsID 0xCB
+#define SnowAnimsID 0xE1
 
 EventPointerTable(SnowAnimsID, SnowAnimation)
 

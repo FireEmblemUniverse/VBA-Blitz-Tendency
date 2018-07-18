@@ -5,7 +5,7 @@
  </tileset>
  <layer name="TheFinalHolyBlitz" width="35" height="30">
   <properties>
-   <property name="Anims" value="0xCB"/>
+   <property name="Anims" value="SnowAnimsID"/>
    <property name="ChapterID" value="0x23"/>
    <property name="Main" value=""/>
    <property name="MapChangesID" value="0xCB"/>
