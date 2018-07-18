@@ -105,6 +105,7 @@ GotoPrepScreen
 ENDA
 
 SLu_Spawn:
+ENUF 0xA
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
     CALL SLu_Company
@@ -362,6 +363,7 @@ NoFade
 ENDB
 
 SLu_Company:
+ENUT 0xA
 
     SMOV r1 Poin(SweetLu_0)
     SMOV r2 Poin(SweetLu_1)

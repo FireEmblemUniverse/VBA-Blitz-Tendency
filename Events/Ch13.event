@@ -3,6 +3,9 @@
 #define B GOTO
 #define c13Lv 13
 
+#define SimLogID 0x3B  //this should be ch 13 events
+EventPointerTable(SimLogID, SimLog_ThisChapter)
+
 ALIGN 4
 SimLog_ThisChapter:
 POIN SimLog_TurnBasedEvents
@@ -141,7 +144,7 @@ UNIT 0x6 Valkyrie 0 Level(20, Ally, True) [4, 23] 0b 0x00 0 0x0 [Physic, Purge, 
 UNIT 0x7 Warrior 0 Level(20, Ally, True) [ 4, 22] 0b 0x00 0 0x0 [Tomahawk, Longbow, KillerAxe,  ChestKey] NoAI
 UNIT 0x8 Paladin 0 Level(20, Ally, True) [ 5, 21] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
 UNIT 0x9 Paladin 0 Level(20, Ally, True) [ 5, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
-UNIT 0xA Paladin 0 Level(20, Ally, True) [ 5, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
+UNIT 0xA Paladin 0 Level(20, Ally, True) [ 5, 22] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
 UNIT
 
 DefaultEnemies:
@@ -164,8 +167,10 @@ UNIT
 ALIGN 4
 ThroneSpawners:
 CHECK_ALLEGIANCE 0xFFFF
-BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
+    BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
 ENUT 0x30
+LABEL 0x0
+NoFade
 ENDA
 
 ALIGN 4
