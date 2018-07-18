@@ -259,10 +259,8 @@ ENDB
 
 ALIGN 4
 SLu_EndingScene:
-TEXTSTART
-TEXTSHOW PlaceholderText
-TEXTEND
-MNCH 12
+Text(PlaceholderText)
+MNC2 12
 ENDA
 
 #define Poin(x) "(x | 0x08000000)"
