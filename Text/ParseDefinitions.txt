@@ -60,4 +60,9 @@
 [Hecwood] = [0x33]
 
 [LoadVedge] = [LoadFace][VedgePortrait]
+[LoadNull] = [LoadFace][0x04][0x01]
+[LoadNaught] = [LoadFace][0x05][0x01]
+[LoadChiva] = [LoadFace][0x06][0x01]
+[LoadVerge] = [LoadFace][0x07][0x01]
 [LoadXimena] = [LoadFace][0xA][0x1]
+[LoadBoo] = [LoadFace][0x23][0x01]
