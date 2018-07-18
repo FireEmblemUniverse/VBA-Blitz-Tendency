@@ -3,6 +3,7 @@
     #include "Custom Definitions.event"
 
     ORG FreeSpace
+    PROTECT EndOfFreeSpace // Prevent overflow of data.
     //Text first for Text ID definitions
     #include "Text/Install Text Data.event"
     ALIGN 4

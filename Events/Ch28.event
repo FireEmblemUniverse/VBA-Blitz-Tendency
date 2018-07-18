@@ -1,0 +1,234 @@
+#include EAstdlib.event
+
+EventPointerTable(0x7F,ThisChapter)
+
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+Units:
+UNIT Eirika EphraimMasterLord 0x00 Level(20, Ally, 1) [15,28] 0x00 0x00 0x0 0x00 [Reginleif] NoAI 
+UNIT Seth Swordmaster 0x00 Level(20, Ally, 1) [14,29] 0x00 0x00 0x0 0x00 [SilverSword] NoAI 
+UNIT Gilliam Paladin 0x00 Level(20, Ally, 1) [15,29] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
+UNIT Ross Paladin 0x00 Level(20, Ally, 1) [14,28] 0x00 0x00 0x0 0x00 [Spear] NoAI 
+UNIT Colm Sniper 0x00 Level(20, Ally, 1) [15,27] 0x00 0x00 0x0 0x00 [SilverBow] NoAI 
+UNIT Vanessa Bishop 0x00 Level(20, Ally, 1) [12,29] 0x00 0x00 0x0 0x00 [Physic, Lightning, Warp, Rescue] NoAI 
+UNIT Lute WyvernLord 0x00 Level(20, Ally, 1) [17,28] 0x00 0x00 0x0 0x00 [SilverLance, Spear, DelphiShield, ChestKey] NoAI 
+UNIT Vanessa General 0x00 Level(20, Ally, 1) [16,27] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI 
+UNIT Neimi Rogue 0x00 Level(20, Ally, 1) [17,27] 0x00 0x00 0x0 0x00 [KillingEdge] NoAI 
+UNIT Artur Hero 0x00 Level(20, Ally, 1) [16,28] 0x00 0x00 0x0 0x00 [HandAxe, Armourslayer] NoAI 
+UNIT Garcia Sage 0x00 Level(20, Ally, 1) [16,29] 0x00 0x00 0x0 0x00 [Elfire] NoAI 
+UNIT Natasha Warrior 0x00 Level(20, Ally, 1) [17,29] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI 
+UNIT
+
+
+TurnBasedEvents:
+TurnEventPlayer(0x0,EventAfterExitingPrepScreen,1)
+END_MAIN
+
+CharacterBasedEvents:
+CharacterEventBothWays(0x9,KojimaGet,Kojima,KojimaNPC)
+CharacterEventBothWays(0x9,SakaguchiGet,Sakaguchi,SakaguchiNPC)
+CharacterEventBothWays(0x9,IgaGet,Iga,IgaNPC)
+END_MAIN
+
+LocationBasedEvents:
+House(0x0,EndingScene,20,18) //Visit the throne and the chapter is complete. A mock arrive, so to say.
+Village(0x7,ChannelingXavier,29,5)
+Village(0x8,SilverAxeVillage,2,25)
+Chest(Audhulma,12,11) //the Chest of Loss, located in that random chest formation
+//give it some fancy effect later
+Armory(Ch28Armoury,21,14)
+Vendor(Ch28Vendor,22,13)
+Village(0xA,RaiseBridge,10,27)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+//DO NOT TOUCH
+WORD $00
+
+Tutorial:
+//DO NOT TOUCH
+WORD $00
+
+TrapData:
+BLST [17,7] IronBallista
+BLST [18,8] IronBallista
+BLST [18,22] Ballista
+END_MAIN
+
+ALIGN 4
+
+BeginningScene:
+
+LOAD1 0x1 MetalGear
+ENUN
+Text(PlaceholderText)
+LOAD1 0x1 FinalFantasy
+ENUN
+Text(PlaceholderText)
+LOAD1 0x1 Castlevania1
+ENUN
+LOAD1 0x1 SimonsQuest
+ENUN
+Text(PlaceholderText)
+LOAD1 0x1 Units
+ENUN
+Text(PlaceholderText)
+GotoPrepScreen
+
+EndingScene:
+Text(PlaceholderText)
+CHECK_EXISTS KojimaNPC
+BEQ  0x1 0xC 0x0
+	TurnNPC(KojimaNPC)
+	TurnNPC(SakaguchiNPC)
+	TurnNPC(IgaNPC)
+LABEL 0x1
+MNCH 29
+ENDA
+
+// Events
+EventAfterExitingPrepScreen:
+Text(PlaceholderText)
+ENDA
+
+SilverAxeVillage:
+Text(PlaceholderText)
+SVAL 0x3 SilverAxe
+GIVEITEMTO 0xFFFF
+ENDA
+
+ChannelingXavier:
+Text(PlaceholderText)
+LOAD1 0x01 XavierPeople
+REMA
+ENDA
+
+KojimaGet:
+Text(PlaceholderText)
+TurnAlly(Kojima)
+TurnNPC(KojimaNPC)
+TurnEnemy(SakaguchiNPC)
+TurnEnemy(IgaNPC)
+ENDA
+
+SakaguchiGet:
+Text(PlaceholderText)
+TurnAlly(Sakaguchi)
+TurnEnemy(KojimaNPC)
+TurnNPC(SakaguchiNPC)
+TurnEnemy(IgaNPC)
+ENDA
+
+IgaGet:
+Text(PlaceholderText)
+TurnAlly(Iga)
+TurnEnemy(KojimaNPC)
+TurnEnemy(SakaguchiNPC)
+TurnNPC(IgaNPC)
+ENDA
+
+RaiseBridge:
+Text(RaisingBridge)
+TILECHANGE 6
+ENDA
+
+
+// Manual Movement
+
+// Scripted Fights
+
+// Units
+MetalGear:
+UNIT Kojima Assassin Kojima Level(20, Enemy, 0) [18,9] 0x00 0x00 0x0 0x00 [KillingEdge, PoisonSword] NeverMoveAI
+UNIT 0xB6 Berserker Kojima Level(20, Enemy, 1) [23,10] 0x00 0x00 0x0 0x00 [PoisonAxe] ChaseOnceApproachedAI 
+UNIT 0xB6 Berserker Kojima Level(20, Enemy, 1) [11,0] 0x00 0x00 0x0 0x00 [PoisonAxe] ChaseOnceApproachedAI 
+UNIT 0xB6 WyvernLord Kojima Level(20, Enemy, 1) [12,8] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI 
+UNIT 0xB6 WyvernLord Kojima Level(20, Enemy, 1) [9,11] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI 
+UNIT 0xB6 WyvernLord Kojima Level(20, Enemy, 1) [15,11] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI 
+UNIT 0xB6 Sniper Kojima Level(20, Enemy, 1) [17,7] 0x00 0x00 0x0 0x00 [PoisonBow] AttackInRangeAI //ballistician
+UNIT 0xB6 Sniper Kojima Level(20, Enemy, 1) [18,8] 0x00 0x00 0x0 0x00 [PoisonBow] AttackInRangeAI //ballistician
+UNIT 0xB6 Rogue Kojima Level(20, Enemy, 1) [18,3] 0x00 0x00 0x0 0x00 [PoisonSword] [0x10, 0x00, 0x00, 0x00] //StealingThiefAI minus the 0x05
+UNIT 0xB6 Rogue Kojima Level(20, Enemy, 1) [25,5] 0x00 0x00 0x0 0x00 [PoisonSword] [0x10, 0x00, 0x00, 0x00] 
+UNIT 0xB6 Rogue Kojima Level(20, Enemy, 1) [29,10] 0x00 0x00 0x0 0x00 [PoisonSword] [0x10, 0x00, 0x00, 0x00] 
+UNIT Inafune Thief Kojima Level(9, Enemy, 1) [0,5] 0x00 0x00 0x0 0x00 [BodyRing, GoldGem, GoldGem, GoldGem] LootingThiefAI
+UNIT
+
+FinalFantasy:
+UNIT Sakaguchi Sage Sakaguchi Level(20, Enemy, 0) [6,16] 0x00 0x00 0x0 0x00 [Forblaze] NeverMoveAI
+UNIT 0xB7 Sage Sakaguchi Level(10, Enemy, 1) [6,14] 0x00 0x00 0x0 0x00 [Fimbulvetr] AttackInRangeAI 
+UNIT 0xB7 Sage Sakaguchi Level(10, Enemy, 1) [8,19] 0x00 0x00 0x0 0x00 [Bolting] NeverMoveAI 
+UNIT 0xB7 Paladin Sakaguchi Level(10, Enemy, 1) [0,20] 0x00 0x00 0x0 0x00 [LightBrand] ChaseOnceApproachedAI 
+UNIT 0xB7 WyvernKnight Sakaguchi Level(10, Enemy, 1) [6,21] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
+UNIT 0xB7 Summoner Sakaguchi Level(10, Enemy, 1) [2,25] 0x00 0x00 0x0 0x00 [Luna, Flux] AttackInRangeAI 
+UNIT 0xB7 Bishop Sakaguchi Level(10, Enemy, 1) [1,20] 0x00 0x00 0x0 0x00 [Fortify, Purge] HealUnits 
+UNIT 0xB7 Bard Sakaguchi Level(10, Enemy, 1) [0,1] 0x00 0x00 0x0 0x00 [0x00] DoNothing 
+UNIT 0xB7 Warrior Sakaguchi Level(10, Enemy, 1) [5,13] 0x00 0x00 0x0 0x00 [SilverAxe] PursueWithoutHeedAI 
+UNIT 0xB7 Cleric Sakaguchi Level(1, Enemy, 1) [0,5] 0x00 0x00 0x0 0x00 [Heal] HealUnits 
+UNIT 0xB7 Mage Sakaguchi Level(1, Enemy, 1) [1,5] 0x00 0x00 0x0 0x00 [Fire] PursueWithoutHeedAI 
+UNIT 0xB7 Berserker Sakaguchi Level(10, Enemy, 1) [4,17] 0x00 0x00 0x0 0x00 [Hammer] PursueWithoutHeedAI 
+UNIT 0xB7 Assassin Sakaguchi Level(10, Enemy, 1) [6,8] 0x00 0x00 0x0 0x00 [SteelSword] StealingThiefAI 
+UNIT 0xB7 Druid Sakaguchi Level(10, Enemy, 1) [3,3] 0x00 0x00 0x0 0x00 [Berserk, Flux] AttackInRangeAI 
+UNIT
+
+Castlevania1:
+UNIT Iga Hero Iga Level(20, Enemy, 0) [25,29] 0x00 0x00 0x0 0x00 [SilverAxe] NeverMoveAI
+UNIT 0x87 Entombed Iga Level(10, Enemy, 1) [27,28] 0x00 0x00 0x0 0x00 [SharpClaw] AttackInRangeAI 
+UNIT 0x87 Entombed Iga Level(10, Enemy, 1) [31,26] 0x00 0x00 0x0 0x00 [SharpClaw] AttackInRangeAI 
+UNIT 0x87 Wight_Bow Iga Level(10, Enemy, 1) [26,24] 0x00 0x00 0x0 0x00 [SilverBow] AttackInRangeAI 
+UNIT 0x87 Gwyllgi Iga Level(10, Enemy, 1) [31,26] 0x00 0x00 0x0 0x00 [HellFang] PursueWithoutHeedAI 
+UNIT 0x87 Gorgon Iga Level(10, Enemy, 1) [29,31] 0x00 0x00 0x0 0x00 [DemonSurge, Stone] PursueWithoutHeedAI 
+UNIT 0x87 Maelduin Iga Level(10, Enemy, 1) [22,31] 0x00 0x00 0x0 0x00 [SilverAxe, SilverBow] PursueWithoutHeedAI 
+UNIT 0x87 ElderBael Iga Level(10, Enemy, 1) [23,28] 0x00 0x00 0x0 0x00 [SharpClaw] PursueWithoutHeedAI 
+UNIT
+
+SimonsQuest:
+UNIT 0x87 Wight_Bow Iga Level(10, Enemy, 1) [18,22] 0x00 0x00 0x0 0x00 [Ballista] NeverMoveAI 
+UNIT 0x87 Gwyllgi Iga Level(10, Enemy, 1) [15,21] 0x00 0x00 0x0 0x00 [HellFang] PursueWithoutHeedAI 
+UNIT 0x87 Gwyllgi Iga Level(10, Enemy, 1) [10,21] 0x00 0x00 0x0 0x00 [HellFang] PursueWithoutHeedAI 
+UNIT 0x87 General Iga Level(10, Enemy, 1) [18,18] 0x00 0x00 0x0 0x00 [Tomahawk] NeverMoveAI 
+UNIT 0x87 General Iga Level(10, Enemy, 1) [14,24] 0x00 0x00 0x0 0x00 [Tomahawk] NeverMoveAI 
+UNIT 0x87 General Iga Level(10, Enemy, 1) [16,24] 0x00 0x00 0x0 0x00 [Tomahawk] NeverMoveAI 
+UNIT 0x87 General Iga Level(10, Enemy, 1) [15,24] 0x00 0x00 0x0 0x00 [Tomahawk] NeverMoveAI 
+UNIT 0x87 ArchMogall Iga Level(10, Enemy, 1) [22,23] 0x00 0x00 0x0 0x00 [BloodyEye] AttackInRangeAI 
+UNIT 0x87 ArchMogall Iga Level(10, Enemy, 1) [19,20] 0x00 0x00 0x0 0x00 [BloodyEye] AttackInRangeAI 
+UNIT 0x87 Deathgoyle Iga Level(10, Enemy, 1) [24,15] 0x00 0x00 0x0 0x00 [KillerLance] PursueWithoutHeedAI 
+UNIT 0x87 Deathgoyle Iga Level(10, Enemy, 1) [25,16] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
+UNIT 0x87 Deathgoyle Iga Level(10, Enemy, 1) [29,16] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
+UNIT
+
+
+
+XavierPeople:
+UNIT KojimaNPC Civilian 0x0 Level(1, Ally, 0) [28,6] 0x00 0x00 0x0 0x00 [0x00] [0x00 0x0B 0x00 0x00]
+//The intention was for a Xavier-style thing, but the AI setup will be a pain.
+//I'll leave it for the polish phase and make the NPCs temporary allies for the chapter.
+UNIT SakaguchiNPC Civilian 0x0 Level(1, Ally, 0) [29,6] 0x00 0x00 0x0 0x00 [0x00] [0x00 0x0B 0x00 0x00]
+UNIT IgaNPC Civilian 0x0 Level(1, Ally, 0) [30,6] 0x00 0x00 0x0 0x00 [0x00] [0x00 0x0B 0x00 0x00]
+UNIT
+
+// Shop Data
+Ch28Armoury:
+SHLI SilverSword BraveSword SilverLance BraveLance SilverAxe BraveAxe SilverBow BraveBow
+ALIGN 4
+
+Ch28Vendor:
+SHLI Elixir Physic Fortify Warp Rescue Sleep Silence Berserk
+ALIGN 4
+
+
+MESSAGE Events end at offset currentOffset

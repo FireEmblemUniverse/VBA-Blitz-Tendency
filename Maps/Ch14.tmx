@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="16" height="19" tilewidth="16" tileheight="16" infinite="0" nextobjectid="1">
+ <tileset firstgid="1" name="FE8 - Fields - 01000203" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="01000203.png" trans="ffffff" width="512" height="512"/>
+ </tileset>
+ <layer name="Main" width="16" height="19">
+  <properties>
+   <property name="Anims" value="5"/>
+   <property name="ChapterID" value="0xe"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="0x40"/>
+   <property name="MapID" value="0x3f"/>
+   <property name="ObjectType" value="1"/>
+   <property name="PaletteID" value="2"/>
+   <property name="TileConfig" value="3"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJx9U7tKQ0EQ3V0LiYoYEBG09VEp2Gp3o5UKCiHRwsZSsRA1Ee2CpYWfIMmtfIDgT/hA8hmKMegfeIadJXP3brY47N6ZOfM4czdRSiURHACHni01ShUH8rFjwjbD9yugyTY69/l+ixwGMeM4J028hxgmwL0Aapyj4fnfgEGt1EegT+olBVaBWWAtEPMNzIE/pPO1W5z/HTiN9LAB7qbu1XT2R8Qvity7ER3WvfrXiH0wtr8vZeer4nsZmDZZXeVeWoHclKMj9tTgefYC/TR55jbPXURfozo8947Hl7VvgC6wBO6zp3kBKIN7KeaZ4tNp7PSoeTXqzDkT9oLwV02WQ3OuiDon7CsFdHL9nQd07QeKGUavI2J/bs+p0NvV+4PvDrHHHEPcF5X9/6h+ifmyhy7Vge8e55O2eyLuPO4L2nJI14rp/UOJ6KGNmFd6K8A2fD+wfYpZQu9E6vSrbe0tk/fXWd9KH+2OjOV3uLbMW/b2KXP/A6fGaIE=
+  </data>
+ </layer>
+ <layer name="Snag1" width="16" height="19">
+  <properties>
+   <property name="Height" value="2"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="5"/>
+   <property name="Y" value="10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2BwAW4K9bNSxRWjYCgAACZAABE=
+  </data>
+ </layer>
+ <layer name="Snag2" width="16" height="19">
+  <properties>
+   <property name="Height" value="2"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="9"/>
+   <property name="Y" value="10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2BwAw0K9fNQxRWjYDACAG9wADU=
+  </data>
+ </layer>
+</map>

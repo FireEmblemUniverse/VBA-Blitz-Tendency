@@ -1,6 +1,7 @@
 
 
 #define FreeSpace 0xb2a610
+#define EndOfFreeSpace 0xC00000
 #define FreeSpaceBLRange 0x1c1ec0
 
 #define ChapterTileset(chapter, object, palette, config) "PUSH; ORG 0x8b0890 + (148* chapter) + 4; SHORT object; BYTE palette config; POP"
@@ -32,6 +33,7 @@
 #define VedgeLord BlitzLord
 #define VoidMonster 0x3
 #define VoidMaster 0x4
+#define Witch 0x77
 
 // Unit definitions
 #define Vedge 0x1
@@ -43,19 +45,47 @@
 #define Keanu 0x7
 #define Boo 0x8
 #define Aggie 0x9
+#define Ximena 0xA
+#define Jen 0xC
 #define Fanni 0xD
 #define Murat 0xF
+#define Jet 0x11
+#define Splenda 0x13
+#define Zane 0x14		//teq ch15 recruitable 1
+#define Nichol 0x16
+#define Adolgi 0x17
+#define Sabin 0x1B
+#define Benny 0x1C		//teq ch15 recruitable 2, change this if already claimed
 #define Ersatz 0x1F
+#define Inafune 0x20
+#define Kojima 0x23
+#define Sakaguchi 0x24
+#define Iga 0x25
+#define Deuxnids 0x26
 
 #define Jazzak 0x42
+#define IgaNPC 0x47
 #define Hecwood 0x48
 #define Elitor 0x49
-#define Dennis 0x50
-
-#define Ximena 0xA
-
 #define Grudge 0x4A
+#define Ch27ChrZomboss 0x4D // dracozombie boss
+#define Edgelard 0x4E
+#define Dennis 0x50
+#define Cameron 0x58
+#define Bojo 0x59
+#define Wicky 0x5C
+#define DarkFact 0x64
+#define Kefka 0x6C
+#define KojimaNPC 0x76
+#define SakaguchiNPC 0x77
+
 #define Ch5Generic 0x8A
+#define Ch14_Enemy 0x9C
+#define Ch15_Enemy 0x9D
+#define Ch18Enemies 0xA4
+#define Ch23Enemies 0xAE
+#define Ch27ChrMGeneric 0xC0 // Monster
+#define Ch27ChrHGeneric 0xC1 // Human
 
 //Item definitions
 #define BlitzAxe Rapier
@@ -74,7 +104,32 @@
 #define Chapter5Changes 0x20
 #define Chapter5Events 0x21
 #define Chapter6 0x7
+#define Chapter7 0x8
+#define Chapter12 0xC
+#define Ch14_ID 0x41
+#define Ch15_ID 0x47
+#define C17MapID 0x4D
+#define C17MapChangesID 0x4E
+#define C17EventID 0x4F
+#define Chapter24 24
+#define Chapter24Map 0x6F
+#define Chatper24Events 0x71
+#define Chapter24Changes 0x70
+#define Ch27Id 26
+#define Ch27Map 0x76
+#define Ch27MapChanges 0x77
+#define Ch27Events 0x78
+#define AllChapters 0xFF
 
+// Other
+#define Ch27FogLevel 5
+#define Ch27TurnsBetweenHumanReinf 2
+#define Ch27GargoylesKillCount 10
+#define Ch27HumanReinfKillCount 20
+#define Ch27MogallsKillCount 30
+#define Ch27DracoBossKillCount 40
+
+// Macros
 #define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
 #define TileChange(X,Y) "SETVAL 0xB Coords(X,Y) ; TILECHANGE 0xFFFF"
 #define Every3Turns(CondID1,CondID2,CondID3,EventID1,EventID2,Pointer) "CHECK_EVENTID EventID1;BNE CondID1 0x0 0xC;CHECK_EVENTID EventID2;BNE CondID2 0x0 0xC;CALL Pointer;ENUT EventID1;ENUT EventID2;GOTO CondID3;LABEL CondID2;ENUF EventID2;GOTO CondID3;LABEL CondID1;ENUF EventID1;LABEL CondID3"
@@ -84,9 +139,6 @@
 #define EndA2 ENDA
 #define EndUnit UNIT
 #define EndConvo "CALL $9EE2C4"
-
-//#define DeathQuote(Character,Chapter,EventID,TextID) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID 0 0"
-#define AllChapters 0xFF
 
 //Equip definitions
 #define WTYPE_SWORD    0x00
@@ -100,7 +152,3 @@
 #define WTYPE_LIGHT    0x06
 #define WTYPE_ELDER    0x07
 #define WTYPE_DARK     0x07
-
-// #define __DEBUG__ // Uncomment to get the Debug startup menu :p
-#define SpecifiedBattleConvo(Character1,Character2,Chapter,EventID,TextID) "BYTE Character1 0x0 Character2 0x0 Chapter 0x0 0x0 EventID ; SHORT TextID 0x0 0x0 0x0"
-#define UnspecifiedBattleConvo(Character,Chapter,EventID,TextID) "BYTE Character 0x0 0x0 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0 ; BYTE 0x0 0x0 Character 0x0 Chapter 0x0 EventID 0x0 ; SHORT TextID 0x0 0x0 0x0"
