@@ -122,7 +122,7 @@ ALIGN 4
 }
 ALIGN 4
 {
-//  #include "Ch30.event"
+  #include "Endgame.event"
 }
 ALIGN 4
 #include "REDAs.event"
