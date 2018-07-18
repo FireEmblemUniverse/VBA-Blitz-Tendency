@@ -213,6 +213,7 @@ ENIF 0x0
 
 
 ENUF 0x7 //sets eventID as "off"
+NoFade
 ENIF 0x1  //End of the Else
 
 ENDA
