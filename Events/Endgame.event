@@ -1,0 +1,99 @@
+#include EAstdlib.event
+
+EventPointerTable(0x87,ThisChapter)
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData1 TrapData2
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+Units:
+UNIT Vedge EphraimLord 0x00 Level(1, Ally, 0) [26,15] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Null EphraimLord 0x00 Level(1, Ally, 0) [25,16] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Naught EphraimLord 0x00 Level(1, Ally, 0) [27,16] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT
+
+
+TurnBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+#ifdef __DEBUG__
+Seize(26,15)
+#endif
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatAll(EndingScene)
+END_MAIN
+
+Dunno:
+//DO NOT TOUCH
+WORD $00
+
+Tutorial:
+//DO NOT TOUCH
+WORD $00
+
+TrapData1:
+ENDTRAP
+ALIGN 4
+
+TrapData2:
+ENDTRAP
+ALIGN 4
+
+BeginningScene:
+LOAD2 0x1 Units
+ENUN
+LOAD1 0x1 Enemies1
+ENUN
+GotoPrepScreen
+ENDA
+
+EndingScene:
+MNC4 0x0
+NoFade
+ENDA
+
+// Events
+
+// Manual Movement
+
+// Scripted Fights
+
+// Units
+Enemies1:
+UNIT Fomortiis DemonKing 0x00 Level(20, Enemy, 1) [7,27] 0x00 0x00 0x0 0x00 [DemonLight, Ravager, Nightmare] DemonKingAI
+UNIT
+
+// Shop Data
+
+PUSH
+ORG $9ea8
+SHORT 0 0 $e00a
+ORG $9ed8
+POIN EpilogueEvents
+POP
+
+EpilogueEvents:
+ASMC 0x30185 //clears map tilesets?
+EVBIT_F 0x2
+STAL 120
+ASMC 0xB8175 //turn counts display
+STAL 90
+MNTS 0x0 //return to title screen
+ENDA
