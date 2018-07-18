@@ -49,7 +49,7 @@ BYTE FlyingClasses
 BYTE 0
 
 HalfStoneBonuses:
-BYTE 6 6 0 8 10 0
+BYTE 0 6 6 0 8 10 0
 
 ALIGN 4
 

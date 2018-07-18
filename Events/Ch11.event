@@ -41,10 +41,11 @@ POIN $0 $0 $0 $0 $0 $0
 POIN SLu_BeginningScene SLu_EndingScene
 
 SLu_TurnBasedEvents:
-TURN 0x0 ThiefTop[ 5, 0] 0x0
-TURN 0x0 ThiefBot[ 3, 5] 0x0
-TURN 0x0 ThiefRgt[ 8, 0] 0x0
-TURN 0x0 ThiefTop[10, 0] 0x0
+TURN 0x0 SpawnAtSides [ 0,30] 0x0
+TURN 0x0 ThiefTop[ 8, 0] 0x0
+TURN 0x0 ThiefBot[ 4, 3] 0x0
+TURN 0x0 ThiefRgt[ 5, 0] 0x0
+TURN 0x0 ThiefTop[11, 0] 0x0
 //TURN 0x0 Label [Start, End] 0 (8 for jerk)
 END_MAIN
 
@@ -76,8 +77,8 @@ AREA  0xB EdwardsAttack     [ 8,10] [18,18]
 AREA    0 ThroneSpawners    [ 0, 0] [13, 8]
 AREA    0 ReinLeftIfInRight [14, 8] [22,23]
 AREA    0 ReinRightIfInLeft [ 0, 7] [10,20]
-AFEV    0 Chesdrake_19_6 0x30
-AFEV    0 Chesdrake_10_10 0x31
+AFEV  0xC Chesdrake_19_6 0x30
+AFEV  0xD Chesdrake_10_10 0x31
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -91,9 +92,11 @@ END_MAIN
 
 ALIGN 4
 SLu_Ballista:
-ENDTRAP
+END_MAIN //ENDTRAP caused a freeze and END_MAIN worked
+//so don't tell me to change this to ENDTRAP because changing it to END_MAIN stopped the hardlock I was having
 
 SLu_BeginningScene:
+VCWF 0 //make absolutely sure no fog
 LOAD2 0x1 SLu_Units
 ENUN
 LOAD1 0x1 SLu_Enemies
@@ -156,8 +159,14 @@ UNIT
 
 ALIGN 4
 EdwardsAttack:
-LoadReinforcements(SLu_Edwards)
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
+    LoadReinforcements(SLu_Edwards)
+    GOTO 0x1
 NoFade
+LABEL 0x0
+ENUT 0xB //Unset 0xB (Edwards didn't trigger)
+LABEL 0x1
 ENDB
 
 ALIGN 4
@@ -256,18 +265,38 @@ MNCH 12
 ENDA
 
 #define Poin(x) "(x | 0x08000000)"
-//If you like not smashing your head in, you may want to stop reading ahead.
-ThroneSpawners:
-    SMOV r1 Poin(TM0)
-    SMOV r2 Poin(TM1)
-    SMOV r3 Poin(TM2)
-    SMOV r4 Poin(TM3)
-    CALL LoadOneOfFour
 
+ThroneSpawners:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
+    ENUT 0x22 //Set 0x22
+LABEL 0x0
 NoFade
-ENDB
+ENDA
 
 ReinLeftIfInRight:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
+    ENUT 0x20 //Set 0x20
+LABEL 0x0
+NoFade
+ENDA
+
+ReinRightIfInLeft:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
+    ENUT 0x21 //Set 0x21
+LABEL 0x0
+NoFade
+ENDA
+
+
+SpawnAtSides:
+//Left Side
+CHECK_EVENTID 0x20
+BEQ 0x0 rC r0
+ENUF 0x20
+
     SMOV r1 Poin(LU0)
     SMOV r2 Poin(LU1)
     SMOV r3 Poin(LU2)
@@ -286,11 +315,15 @@ ReinLeftIfInRight:
     SMOV r4 Poin(LD3)
     CALL LoadOneOfFour
 
+LABEL 0x0
 NoFade
-ENDB
+ENUN
 
+//Right Side
+CHECK_EVENTID 0x21
+BEQ 0x1 rC r0
+ENUF 0x21
 
-ReinRightIfInLeft:
     SMOV r1 Poin(RU0)
     SMOV r2 Poin(RU1)
     SMOV r3 Poin(RU2)
@@ -309,7 +342,23 @@ ReinRightIfInLeft:
     SMOV r4 Poin(RD3)
     CALL LoadOneOfFour
 
+LABEL 0x1
 NoFade
+ENUN
+
+//Throne space
+CHECK_EVENTID 0x22
+BEQ 0x2 rC r0
+ENUF 0x22
+    SMOV r1 Poin(TM0)
+    SMOV r2 Poin(TM1)
+    SMOV r3 Poin(TM2)
+    SMOV r4 Poin(TM3)
+    CALL LoadOneOfFour
+
+LABEL 0x2
+NoFade
+
 ENDB
 
 SLu_Company:
@@ -598,3 +647,20 @@ LoadOneOfFour:
 
     LABEL 3
 ENDA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//nah

@@ -37,7 +37,7 @@ Effective against fliers.[X]
 Effective v fliers, magic.[X]
 
 ## SwordCaliburDesc
-Effective v fly, armor, magic. Targets Res.[X]
+Effective: flier/armor/mage. Hits Res.[X]
 
 ## BowCaliburDesc
 Doubles attacks. Effective v fliers.[X]

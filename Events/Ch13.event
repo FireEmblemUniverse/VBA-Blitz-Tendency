@@ -15,6 +15,7 @@ POIN SimLog_Ballista SimLog_Ballista
 POIN SimLog_Units SimLog_UnitsH
 POIN $0 $0 $0 $0 $0 $0
 POIN SimLog_BeginningScene SimLog_EndingScene
+ALIGN 4
 
 SimLog_TurnBasedEvents:
 TURN 0x0 ThiefBot[ 3, 0] 0x0
@@ -68,33 +69,33 @@ SimLog_MiscBasedEvents:
 AREA  0xA Thieves1 [ 4,10] [21,18]
 AREA    0 ThroneSpawners [ 5, 9] [15, 16]
 AREA  0xB SEFlank [11,0] [22, 13]
-AFEV    0 Evt20r1 0x10 //20, 1
-AFEV    0 Evt28r1 0x11 //28, 1
-AFEV    0 Evt13r2 0x12 //13, 2
-AFEV    0 Evt20r3 0x13 //20, 3
-AFEV    0 Evt28r3 0x14 //28, 3
-AFEV    0 Evt15r4 0x15 //15, 4
-AFEV    0 Evt5r5 0x16 // 5, 5
-AFEV    0 Evt14r7 0x17 //14, 7
-AFEV    0 Evt8r8 0x18 // 8, 8
-AFEV    0 Evt17r10 0x19 //17,10
-AFEV    0 Evt22r11 0x1A //22,11
-AFEV    0 Evt8r12 0x1B // 8,12
-AFEV    0 Evt10r12 0x1C //10,12
-AFEV    0 Evt26r12 0x1D //26,12
-AFEV    0 Evt15r13 0x1E //15,13
-AFEV    0 Evt20r14 0x1F //20,14
-AFEV    0 Evt5r15 0x20 // 5,15
-AFEV    0 Evt7r16 0x21 // 7,16; NPC
-AFEV    0 MealySpawn 0x22 //12,16; NPC
-AFEV    0 Evt25r16 0x23 //25,16
-AFEV    0 Evt17r17 0x24 //17,17
-AFEV    0 Evt4r18 0x25 // 4,18; NPC
-AFEV    0 Evt27r18 0x26 //27,18
-AFEV    0 Evt13r19 0x27 //13,19
-AFEV    0 Evt24r21 0x28 //24,21
-AFEV    0 Evt5r22 0x29 // 5,22
-AFEV    0 Evt20r23 0x2A //20,23
+AFEV 0x40 Evt20r1 0x10 //20, 1
+AFEV 0x41 Evt28r1 0x11 //28, 1
+AFEV 0x42 Evt13r2 0x12 //13, 2
+AFEV 0x43 Evt20r3 0x13 //20, 3
+AFEV 0x44 Evt28r3 0x14 //28, 3
+AFEV 0x45 Evt15r4 0x15 //15, 4
+AFEV 0x46 Evt5r5 0x16 // 5, 5
+AFEV 0x47 Evt14r7 0x17 //14, 7
+AFEV 0x48 Evt8r8 0x18 // 8, 8
+AFEV 0x49 Evt17r10 0x19 //17,10
+AFEV 0x4A Evt22r11 0x1A //22,11
+AFEV 0x4B Evt8r12 0x1B // 8,12
+AFEV 0x4C Evt10r12 0x1C //10,12
+AFEV 0x4D Evt26r12 0x1D //26,12
+AFEV 0x4E Evt15r13 0x1E //15,13
+AFEV 0x4F Evt20r14 0x1F //20,14
+AFEV 0x50 Evt5r15 0x20 // 5,15
+AFEV 0x51 Evt7r16 0x21 // 7,16; NPC
+AFEV 0x52 MealySpawn 0x22 //12,16; NPC
+AFEV 0x53 Evt25r16 0x23 //25,16
+AFEV 0x54 Evt17r17 0x24 //17,17
+AFEV 0x55 Evt4r18 0x25 // 4,18; NPC
+AFEV 0x56 Evt27r18 0x26 //27,18
+AFEV 0x57 Evt13r19 0x27 //13,19
+AFEV 0x58 Evt24r21 0x28 //24,21
+AFEV 0x59 Evt5r22 0x29 // 5,22
+AFEV 0x5A Evt20r23 0x2A //20,23
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -125,7 +126,8 @@ END_MAIN
 
 ALIGN 4
 SimLog_Ballista:
-END_MAIN
+END_MAIN //ENDTRAP caused a freeze and END_MAIN worked
+//so don't tell me to change this to ENDTRAP because changing it to END_MAIN stopped the hardlock I was having
 
 ALIGN 4
 SimLog_Units:
@@ -163,14 +165,22 @@ ALIGN 4
 ThroneSpawners:
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
-CHECK_TURNS
-SMOV r1 0x3 //If before turn 3, don't reinforce
-BLT 0x0 rC r1
-    //only reinforce if even turn
-    SMOV r1 0x1
-    SAND 0x0C1C //AND sC with s1 and store in sC 1 if odd 0 if even
-    BNE 0x0 rC 0x0
-        LoadReinforcements(ThroneStairs)
+ENUT 0x30
+ENDA
+
+ALIGN 4
+StairAttack:
+CHECK_EVENTID 0x30
+BEQ 0x0 rC r0
+    CHECK_TURNS
+    SMOV r1 0x3 //If before turn 3, don't reinforce
+    BLT 0x0 rC r1
+        //only reinforce if even turn
+        SMOV r1 0x1
+        SAND 0x0C1C //AND sC with s1 and store in sC 1 if odd 0 if even
+        BNE 0x0 rC 0x0
+            ENUF 0x30 //only unset ID when enemies get to spawn
+            LoadReinforcements(ThroneStairs)
 LABEL 0x0
 NoFade
 ENDA
