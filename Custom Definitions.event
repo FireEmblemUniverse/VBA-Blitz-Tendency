@@ -57,7 +57,11 @@
 #define Adolgi 0x17
 #define Donna 0x1A
 #define Sabin 0x1B
+<<<<<<< HEAD
 #define Benny 0x1C		//teq ch15 recruitable 2, change this if already claimed
+=======
+#define MichealP 0x1E
+>>>>>>> baseline events for ch25, text to be done in polish phase
 #define Ersatz 0x1F
 #define Inafune 0x20
 #define Babby 0x21
