@@ -1,0 +1,9 @@
+## LuutConversation
+[OpenMidLeft][LoadFace][LuutPortrait]
+[OpenMidRight][LoadFace][VedgePortrait]
+[OpenMidLeft][ToggleMouthMove]...[.][.][.][.][.][.][.][.][.][.][.][.][A][CloseSpeechSlow]
+[OpenMidRight]Hey, is someth[.][.][.][CloseSpeechSlow]
+[Event][OpenMidLeft]Help me save my sister.[NL]
+She's vanished off again...[A][NL][CloseSpeechSlow]
+[OpenMidRight]Fight alongside us.[A][CloseSpeechSlow]
+[OpenMidLeft]Sure.[A][CloseSpeechSlow][ClearFace][X]

@@ -33,7 +33,7 @@ Prologue: IT BEGINS AGAIN[X]
 10: Lakeside Lunacy[X]
 
 # 0x019a
-11: [X]
+11: Sweet and[X]
 
 # 0x016c
 12: [X]

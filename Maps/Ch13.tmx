@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="30" height="25" tilewidth="16" tileheight="16" infinite="0" nextobjectid="1">
+ <tileset firstgid="1" name="FE8 - Lava Cave - 50005152" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../../../../FEMapCreator/Tilesets/FE8 - Lava Cave - 50005152.png" trans="ffffff" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="1025" name="FE8 - Lava Cave - 50005152" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../../../../FEMapCreator/Tilesets/FE8 - Lava Cave - 50005152.png" trans="ffffff" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="2049" name="FE8 - Fort - 3c003d3e" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../../../../FEMapCreator/Tilesets/FE8 - Fort - 3c003d3e.png" trans="ffffff" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="30" height="25">
+  <properties>
+   <property name="ChapterID" value="13"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="0x3A"/>
+   <property name="MapID" value="0x42"/>
+   <property name="ObjectType" value="0x50"/>
+   <property name="PaletteID" value="0x51"/>
+   <property name="TileConfig" value="0x52"/>
+   <property name="map_changes" value="0x3A"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJyFVj2LFEEQ7ekJBAP9AWbrB7oHXiR+hLobrKCZiIaCmmmkB6ZeIBeIHNwt+Bc0Mje74PDwYG9vGZllQSOFE44zNbHKqWe/qe3F4NEzPV31ul99TI9jCBPBvmHixjdhfl5ROdQZe4bOfbF1zHe+COHInuFjvWjGC4JlwVfiZO59muvIPj+6c0zMZ0Xfu+K7J8+9MoR+mdaz3U9ZM5Nx6nzfEtyOzTfm3ikSLrn3ma07brznhPM08ep+vpvG4PXaqf3A/HZND+xpq2jW3LG1W6Ydvuvcdmi4RxTLT/J8zGyfCA6LpDMAH5XtbUzfnhuuClYMXkcd94z7yO2JdUb+cK5UpveJ2NZEOe8Kntm44uwU30qLsWC5aO/ns7zfjOksB5lz/za9u8atnNcElwVvBVcE940b9oehnVcjl4e5HBs7jWsDdNkk3hfEO6Q1ynld+AaCs+U8Z8fVxZIglPk6RY6BW/XdsHFoa5ZMkx5xjpyfnO86873OrN003DPOIa3VelTOB8a5XiS7A8rPHDf6QE2aoL/sUg5suHj9qz/Sl/NJa+dpbOcon6uK8+dG7HLxQe5qvfyK6aw+rvABe4zIxzrO5xxi5/ejPahjedQ3fpwVumlNoP+NKSY6nirzZ2I9po5TR98T9bmK82dFPe5Qf8zVss+F3F7gGz0R9cP9GmsW2Xpdc3H16znnd0OqH9hPY8pT33/ZB88ht1gbn5+c76q3ar1WtmsiV6PcFznWFc11KHfxH68y9mq7FxtuX49eY/4n+Dr0fv/+yy1ncYfI5aHq7Xt87XzzP9DfKSbOr+p4xvrQu5D6KuuPdf/rg/6uAVvUge4LdyCcd0B3l0W1hd42i23Nfa7Cju9hXkfEbpXuLhz7D6Gxv1i0/eZylv1qf+tRzzlZpP+innVN5h4LHgle0T3iR2j+t1q3LwU3ylQD3MuBiuIDzoFBbd+H9F1j9jBYPwzNHrgvol9Bi0VxZc2Zc5XQL9t5uG3nfU39AX1R724aB9yn/gCESADr
+  </data>
+ </layer>
+ <layer name="tc_20_1" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="20"/>
+   <property name="Y" value="1"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzgEJAAAIA7Bj/9CmOIJsCZb8MNcBAAAoWiGYAAM=
+  </data>
+ </layer>
+ <layer name="tc_28_1" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="2"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="28"/>
+   <property name="Y" value="1"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzjENAAAIA7AF/6IRsYODVkGTH+Y6AAAAhQUhWAAD
+  </data>
+ </layer>
+ <layer name="tc_13_2" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="3"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="13"/>
+   <property name="Y" value="2"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzjENAAAIA7AF/6KRsJODVkETmrkOAADw3gIg4AAD
+  </data>
+ </layer>
+ <layer name="tc_20_3" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="4"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="20"/>
+   <property name="Y" value="3"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzgEJAAAIA7Bj/9C2uAhbgiV8NNcBAACqFh+4AAM=
+  </data>
+ </layer>
+ <layer name="tc_28_3" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="5"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="28"/>
+   <property name="Y" value="3"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzgEJAAAIA7Bj/9CWOAiyJVjCR3MdAACgagEfeAAD
+  </data>
+ </layer>
+ <layer name="tc_15_4" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="6"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="15"/>
+   <property name="Y" value="4"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzqENAAAIA7CF/4/GTeEx7QVN4DbfAQAAagEe8AAD
+  </data>
+ </layer>
+ <layer name="tc_5_5" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="7"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="5"/>
+   <property name="Y" value="5"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzgEJAAAIA7Bj/9C2uAhbgiXQMdcBAIDHFh5QAAM=
+  </data>
+ </layer>
+ <layer name="tc_14_7" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="8"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="14"/>
+   <property name="Y" value="7"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzgEJAAAMA6Dx/qEfYww0gQnQcu0AADDjARwoAAM=
+  </data>
+ </layer>
+ <layer name="tc_8_8" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="9"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="8"/>
+   <property name="Y" value="8"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzgEJAAAIA7Bj/9CWOAiyJVgCfDXXAQCgZgEbaAAD
+  </data>
+ </layer>
+ <layer name="tc_17_10" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="10"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="17"/>
+   <property name="Y" value="10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzjENAAAIA7AF/6LxsIeDVkETgD/mOgAApQUZQAAD
+  </data>
+ </layer>
+ <layer name="tc_22_11" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="11"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="22"/>
+   <property name="Y" value="11"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzgEJAAAMA6Dx/qEfYww0gQkADdcOADDlARgoAAM=
+  </data>
+ </layer>
+ <layer name="tc_8_12" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="12"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="8"/>
+   <property name="Y" value="12"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzgEJAAAIA7Bj/9C2uAhbgiUAfDTXAQCqFheoAAM=
+  </data>
+ </layer>
+ <layer name="tc_10_12" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="13"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="10"/>
+   <property name="Y" value="12"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzgEJAAAIA7Bj/9C2uAhbgiUAfDbXAQAqFheYAAM=
+  </data>
+ </layer>
+ <layer name="tc_26_12" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="14"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="26"/>
+   <property name="Y" value="12"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzjENAAAIA7AF/6KxsI+DVkETAD6b6wAAlQUXGAAD
+  </data>
+ </layer>
+ <layer name="tc_15_13" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="15"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="15"/>
+   <property name="Y" value="13"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzgEJAAAIA7Bj/9CWOAiyJVgCAB1zHQB4bAEWgAAD
+  </data>
+ </layer>
+ <layer name="tc_20_14" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="16"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="20"/>
+   <property name="Y" value="14"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzgEJAAAIA7Bj/9CWOAiyJVgCAP/MdQCgbAEVaAAD
+  </data>
+ </layer>
+ <layer name="tc_5_15" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="17"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="5"/>
+   <property name="Y" value="15"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzqENAAAIA7CF/4/GTuAx7QVNAIA23wGAwwIU8AAD
+  </data>
+ </layer>
+ <layer name="tc_7_16" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="18"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="7"/>
+   <property name="Y" value="16"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzkERAAAMAiBv/UMvhj4gAQkAsOTaAWDSAxPwAAM=
+  </data>
+ </layer>
+ <layer name="tc_12_16" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="19"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="12"/>
+   <property name="Y" value="16"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzkERAAAMAiBv/UMvhj4gAQkAsO7aAaDuARPIAAM=
+  </data>
+ </layer>
+ <layer name="tc_25_16" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="20"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="25"/>
+   <property name="Y" value="16"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzgEJAAAIA7Bj/9CWOAiyJVgCAHw01wGgagETYAAD
+  </data>
+ </layer>
+ <layer name="tc_17_17" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="21"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="17"/>
+   <property name="Y" value="17"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzjENAAAIA7AF/6KxsI+DVkETAIDeXAfgqQUSsAAD
+  </data>
+ </layer>
+ <layer name="tc_4_18" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="22"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="4"/>
+   <property name="Y" value="18"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzgEJAAAIA7Bj/9C2uAhbgiUAAF1zHYCHFhIoAAM=
+  </data>
+ </layer>
+ <layer name="tc_27_18" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="23"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="27"/>
+   <property name="Y" value="18"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzgEJAAAIA7Bj/9CmOIJsCZYAAPwx1wEoWRFwAAM=
+  </data>
+ </layer>
+ <layer name="tc_13_19" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="24"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="13"/>
+   <property name="Y" value="19"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzqENAAAIA7CF/49GTaIx7QVNAACo+Q7AYQEQ8AAD
+  </data>
+ </layer>
+ <layer name="tc_24_21" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="25"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="24"/>
+   <property name="Y" value="21"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzjENAAAIA7AF/6KRsJODVkETAADo5jrw3AIOuAAD
+  </data>
+ </layer>
+ <layer name="tc_5_22" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="26"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="5"/>
+   <property name="Y" value="22"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzgEJAAAIA7Bj/9CWOAiyJVgCAABdcx14aAEOYAAD
+  </data>
+ </layer>
+ <layer name="tc_20_23" width="30" height="25">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="27"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="20"/>
+   <property name="Y" value="23"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzjENAAAMA6Cm/kVXws49oIAEAADod+AwDPgAAw==
+  </data>
+ </layer>
+</map>

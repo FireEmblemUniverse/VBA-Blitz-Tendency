@@ -49,6 +49,8 @@
 #define Jen 0xC
 #define Fanni 0xD
 #define Murat 0xF
+#define Luut 0x10
+#define Mealy 0x12
 #define Jet 0x11
 #define Splenda 0x13
 #define Zane 0x14		//teq ch15 recruitable 1
@@ -108,8 +110,22 @@
 #define HuntersBow 0xBD
 #define HuntersBowIconID 0xAE
 #define RunicBow 0xBE
-#define RunicBowIconID PiercingBowIconID //TODO
+#define RunicBowIconID 0xAF
 #define PowerGem BlackGem
+
+#define Dragonshard 0xC3
+#define DragonshardIconID 0xCB
+
+#define AnimaCalibur 0xBF
+#define LightCalibur 0xC0
+#define SwordCalibur 0xC1
+#define BowCalibur 0xC2
+
+#define AnimaCaliburIconID 0xCC
+#define LightCaliburIconID 0xCD
+#define SwordCaliburIconID 0xCE
+#define BowCaliburIconID 0xCF
+
 
 //Chapter definitions
 #define Chapter5 0x6

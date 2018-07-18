@@ -135,6 +135,50 @@ Anna[X]
 ## nameFaust
 Faust[X]
 
+## LuutName
+Luut[X]
+
+## LuutDesc
+Sweet. Quiet. Finding power.[X]
+
+## LuutAllyName
+Luut's Ally[X]
+
+## LuutAllyDesc
+A companion or hired fighter.[X]
+
+## nameSweetBoss
+SweetBoss[X]
+
+## nameSweetGeneric
+Keyed-in[X]
+
+## descSweetGeneric
+Uh, is that right?[X]
+
+## nameBoneGeneric
+Enemy[X]
+
+## nameBoneScary
+Scary[X]
+
+## descBoneGeneric
+An opponent of nefarious[NL]
+origin, always in the way.[X]
+
+## nameBoneBoss
+DarkManMan[X]
+
+## descBoneBoss
+King of thieves..?[X]
+
+## nameMealy
+Mealy[X]
+
+## descMealy
+Why was... okay, fine.[NL]
+I wanted one.[X]
+
 ## SabinName
 Sabin[X]
 
