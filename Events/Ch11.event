@@ -3,7 +3,7 @@
 #define MiscID 0x57
 #define EnemyID 0x96
 #define LuAlly 0x97
-#define SLuUID 0x10
+#define SLuUID Luut
 
 #define SLu_ID 0xD1 //this should be ch 11/0xB events
 EventPointerTable(SLu_ID, SLu_ThisChapter)
