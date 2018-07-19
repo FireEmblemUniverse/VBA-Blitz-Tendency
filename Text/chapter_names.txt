@@ -75,7 +75,7 @@ Prologue: IT BEGINS AGAIN[X]
 24: Recoil River[X]
 
 # 0x019B
-25: Stud Contact[X]
+25: BLOOD CONTRACT[X]
 
 # 0x0179
 26: ... Know Thyself[X]

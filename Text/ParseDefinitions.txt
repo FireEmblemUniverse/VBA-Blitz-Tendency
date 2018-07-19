@@ -61,3 +61,5 @@
 
 [LoadVedge] = [LoadFace][VedgePortrait]
 [LoadXimena] = [LoadFace][0xA][0x1]
+[LoadMariya] = [LoadFace][0x1E][0x1]
+[LoadMichealP] = [LoadFace][0x2C][0x1]
