@@ -83,7 +83,7 @@ Text(PlaceholderText)
 GotoPrepScreen
 
 EndingScene:
-MNCH 0x11
+MNCH 11
 NoFade
 ENDA
 

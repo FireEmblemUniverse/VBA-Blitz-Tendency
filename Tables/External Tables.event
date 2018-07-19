@@ -48,6 +48,10 @@ FlyingEffectiveness:
 BYTE FlyingClasses
 BYTE 0
 
+ArmorEffectiveness:
+BYTE ArmorClasses
+BYTE 0
+
 HalfStoneBonuses:
 BYTE 0 6 6 0 8 10 0
 
