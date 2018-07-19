@@ -1,4 +1,5 @@
 #include "Tools/Tool Helpers.txt"
+//#include "PortraitShiftTable.txt"
 
 Null_Mug:
 #incext PortraitFormatter "Null.png"
@@ -61,7 +62,7 @@ setMugEntry(IgaPortrait,IgaMug,3,5,3,3)
 
 SabinMug:
 #incext PortraitFormatter "Sabin.png"
-setMugEntry(0x20,SabinMug,2,6,2,4)
+setMugEntry(0x20,SabinMug,4,8,3,6)
 
 #define AdolgiPortrait 0x27
 AdolgiMug:
@@ -70,7 +71,7 @@ setMugEntry(AdolgiPortrait,AdolgiMug,2,4,2,2)
 
 KefkaMug:
 #incext PortraitFormatter "Kefka.png"
-setMugEntry(0x4A,KefkaMug,3,7,2,4)
+setMugEntry(0x4A,KefkaMug,3,8,4,6)
 
 DeuxnidsMug:
 #incext PortraitFormatter "Deuxnids.png"
