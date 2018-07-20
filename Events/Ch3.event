@@ -70,12 +70,12 @@ LOAD2 0x01 Units
 ENUN
 CAM1 Vedge
 FADU 10
-Text(Ch3Opening)
+Text(Plain,Ch3Opening)
 NoFade
 ENDA
 
 EndingScene:
-Text(Ch3Ending)
+Text(Fort_Outside,Ch3Ending)
 MNCH 4
 ENDA
 
@@ -84,7 +84,7 @@ UnitGet:
 MUSC 0x30 //recruitment
 LOAD1 0x1 NewGuy
 ENUN
-Text(Ch3RecruitingBoo)
+Text(HouseBG,Ch3RecruitingBoo)
 REMA
 NoFade
 ENDA
@@ -93,18 +93,20 @@ UpperHouse:
 CHECK_ACTIVE
 CHECK_ACTIVEID Boo
 BEQ 1 0xC 0x0
-Text(Ch3UpperHouseBoo)
+Text(HouseBG,Ch3UpperHouseBoo)
 ENUT InafuneEvent1
 GOTO 2
 LABEL 1
-Text(Ch3UpperHouse)
+Text(HouseBG,Ch3UpperHouse)
 ENUF 0x8
 LABEL 2
+NoFade
 ENDA
 
 LowerHouse:
-Text(Ch3LowerHouse)
+Text(HouseBG,Ch3LowerHouse)
 REMA
+NoFade
 ENDA
 
 // Manual Movement

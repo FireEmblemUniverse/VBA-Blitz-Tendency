@@ -274,3 +274,9 @@ Nichol[X]
 ## descNichol
 A ruthless man who has two fears:[N]
 Death, and a ruined Christmas.[X]
+
+## Ch3BossName
+Ch. 3 Boss[X]
+
+## Ch3BossDesc
+This text is a placeholder![X]
