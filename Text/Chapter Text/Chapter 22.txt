@@ -1,3 +1,43 @@
+## Ch22Opening
+Vedge's quest for the divine[N]
+Blitz of Aja continues. Hearing[N]
+rumours of a legendary Blitz,[AN]
+his party travels to a remote[N]
+town, far away from the Unnamed[N]
+Kingdom's internal turmoil.[AN]
+Tales of this Blitz's power[N]
+can be heard in the furthest[N]
+corners of the planet.[A][X]
+
+## Ch22Opening2
+[OpenMidLeft][LoadVerge]
+[OpenMidRight][LoadVedge]
+So, this is where that divine[N]
+Blitz is meant to be lurking.[AN]
+With it, perhaps I can devour[N]
+anyone fool enough to face me.[AN]
+[MidLeft]
+Milord, you're not alone in seeking[N]
+this treasure. I have word of-[A]
+[MidRight]
+Don't bother me about competitors![N]
+There's always competitors! And the[AN]
+thing about competitors... is that[N]
+they just get in my way! And the[AN]
+power of the void will make short[N]
+work of them. Any objections?[A]
+[MidLeft]
+No, milord. It's just... have you heard[N]
+any laughing coming from the distance?[A][X]
+
+## Ch22Opening3
+[MidLeft][LoadKefka]
+Hruh-huh-huh-huh! Clinging onto hope...[N]
+Like there's any hope left in this world![AN]
+And for my next trick, I will make this[N]
+town... disappear![A][X]
+
+
 ## SabinGet
 [OpenMidLeft][LoadFace][CurrentPortrait]
 Water level receding.[N]

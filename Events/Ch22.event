@@ -70,14 +70,29 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+CAM1 [15,10]
+FADU 10
+SETVAL 0xB 0xFFFFFFFF
+TUTORIALTEXTBOXSTART
+TEXTSHOW Ch22Opening
+TEXTEND
+REMA
+FADI 10
 LOAD1 0x1 Bad
 ENUN
 LOAD1 0x1 Bad2
 ENUN
 LOAD1 0x1 Submariner
 ENUN
-Text(PlaceholderText)
 LOAD2 0x1 Units
+STAL 10
+CAM1 Vedge
+FADU 10
+FlashCursor(Vedge,60)
+Text(Ch22Opening2)
+CAM1 Kefka
+FlashCursor(Kefka,60)
+Text(Ch22Opening3)
 GotoPrepScreen
 
 EndingScene:

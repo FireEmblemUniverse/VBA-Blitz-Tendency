@@ -160,6 +160,9 @@
 #define Ch27MogallsKillCount 30
 #define Ch27DracoBossKillCount 40
 
+//Crazy perma eventID stuff
+#define InafuneEvent1 0x66
+
 // Macros
 #define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
 #define TileChange(X,Y) "SETVAL 0xB Coords(X,Y) ; TILECHANGE 0xFFFF"

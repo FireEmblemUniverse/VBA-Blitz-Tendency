@@ -41,6 +41,8 @@ Village(0x7,UnitGet,8,3)
 Seize(2,2)
 Armory(Ch3Armoury,5,2)
 Vendor(Ch3Vendor,6,2)
+House(0x0,LowerHouse,4,8)
+Village(0x8,UpperHouse,0,4)
 END_MAIN
 
 MiscBasedEvents:
@@ -61,11 +63,15 @@ END_MAIN
 ALIGN 4
 
 BeginningScene:
+FADI 10
 LOAD1 0x01 Bad
 ENUN
 LOAD2 0x01 Units
 ENUN
+CAM1 Vedge
+FADU 10
 Text(Ch3Opening)
+NoFade
 ENDA
 
 EndingScene:
@@ -83,6 +89,24 @@ REMA
 NoFade
 ENDA
 
+UpperHouse:
+CHECK_ACTIVE
+CHECK_ACTIVEID Boo
+BEQ 1 0xC 0x0
+Text(Ch3UpperHouseBoo)
+ENUT InafuneEvent1
+GOTO 2
+LABEL 1
+Text(Ch3UpperHouse)
+ENUF 0x8
+LABEL 2
+ENDA
+
+LowerHouse:
+Text(Ch3LowerHouse)
+REMA
+ENDA
+
 // Manual Movement
 
 // Scripted Fights
@@ -95,7 +119,7 @@ UNIT 0x86 Knight Breguet Level(1, Enemy, 1) [7,6] 0x00 0x00 0x0 0x00 [IronLance]
 UNIT 0x86 Cavalier Breguet Level(3, Enemy, 1) [7,0] 0x00 0x00 0x0 0x00 [IronSword] AttackInRangeAI
 UNIT 0x86 Fighter Breguet Level(3, Enemy, 1) [11,5] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI
 UNIT 0x86 Fighter Breguet Level(3, Enemy, 1) [15,4] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI
-UNIT 0x86 Fighter Breguet Level(3, Enemy, 1) [13,7] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI
+UNIT 0x86 Fighter Breguet Level(3, Enemy, 1) [13,7] 0x00 0x00 0x0 0x00 [IronAxe, RedGem] PursueWithoutHeedAI
 UNIT 0x86 Soldier Breguet Level(3, Enemy, 1) [0,4] 0x00 0x00 0x0 0x00 [IronLance] ChaseOnceApproachedAI
 UNIT 0x86 Soldier Breguet Level(3, Enemy, 1) [3,6] 0x00 0x00 0x0 0x00 [IronLance] ChaseOnceApproachedAI
 UNIT 0x86 Mercenary Breguet Level(3, Enemy, 1) [8,11] 0x2 0x00 0x0 0x00 [SteelSword] AttackInRangeAI
