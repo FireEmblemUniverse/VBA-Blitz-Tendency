@@ -133,7 +133,7 @@ UNIT LeaderID Druid 0 Level(3, Enemy, 1) [ 9,  2] 0b 0x00 0 0x0 [Elfire, Eclipse
 UNIT EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [12, 13] 0b 0x0 0 0 [Thunder] AttackInRangeAI
 UNIT EnemyID Shaman 0 Level(Ch11Level, Enemy, 1) [13, 12] 0b 0x0 0 0 [Nosferatu] AttackInRangeAI
 
-UNIT EnemyID Archer 0 Level(Ch11Level, Enemy, 1) [21,  9] 0b 0x0 0 0 [SilverBow] AttackInRangeAI
+UNIT EnemyID Archer 0 Level(Ch11Level, Enemy, 1) [21,  9] 10b 0x0 0 0 [SilverBow, ChestKey] AttackInRangeAI
 UNIT EnemyID Knight 0 Level(Ch11Level, Enemy, 1) [20, 10] 0b 0x0 0 0 [Horseslayer] AttackInRangeAI
 
 UNIT EnemyID Monk 0 Level(Ch11Level, Enemy, 1)  [ 3, 10] 0b 0x0 0 0 [Divine] AttackInRangeAI
@@ -142,12 +142,12 @@ UNIT EnemyID Knight 0 Level(Ch11Level, Enemy, 1) [ 5,  9] 0b 0x0 0 0 [SteelLance
 UNIT EnemyID Paladin LeaderID Level(1,Enemy,True)  [17, 14] 0b 0x0 0 0 [IronSword] AttackInRangeAI
 
 UNIT EnemyID Fighter 0 Level(Ch11Level, Enemy, 1) [ 6, 16] 10b 0x0 0 0 [Hammer] AttackInRangeAI
-UNIT EnemyID Cavalier 0 Level(Ch11Level, Enemy, 1)[ 4, 16] 0b 0x0 0 0 [IronSword] AttackInRangeAI
+UNIT EnemyID Cavalier 0 Level(Ch11Level, Enemy, 1)[ 4, 16] 10b 0x0 0 0 [IronSword, ChestKey] AttackInRangeAI
 
 UNIT EnemyID Mercenary 0 Level(Ch11Level, Enemy, 1) [20, 19] 0b 0x0 0 0 [SteelBlade] AttackInRangeAI
 UNIT EnemyID Fighter 0 Level(Ch11Level, Enemy, 1)   [20, 22] 0b 0x0 0 0 [BattleAxe] AttackInRangeAI
 
-UNIT EnemyID Manakete_2_F LeaderID Level(3, Enemy, 1) [12, 10] 0b 0x0 0 0 [Dragonshard] AttackInRangeAI
+UNIT EnemyID Manakete_2_F LeaderID Level(3, Enemy, 1) [12, 10] 10b 0x0 0 0 [Dragonshard, ChestKey] AttackInRangeAI
 UNIT
 
 SLu_Manakete_19_6:
@@ -164,15 +164,15 @@ CHECK_ALLEGIANCE 0xFFFF
 BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
     LoadReinforcements(SLu_Edwards)
     GOTO 0x1
-NoFade
 LABEL 0x0
-ENUT 0xB //Unset 0xB (Edwards didn't trigger)
+ENUF 0xB //Unset 0xB (Edwards didn't trigger)
 LABEL 0x1
+NoFade
 ENDB
 
 ALIGN 4
 SLu_Edwards:
-UNIT EnemyID Cavalier LeaderID Level(Ch11Level, Enemy, True) [ 9,  6] 0b 0x00 0 0x0 [BraveLance]    PursueWithoutHeedAI
+UNIT EnemyID Cavalier LeaderID Level(Ch11Level, Enemy, True) [ 9,  6] 10b 0x00 0 0x0 [BraveLance, ChestKey]    PursueWithoutHeedAI
 UNIT EnemyID Cavalier LeaderID Level(Ch11Level, Enemy, True) [ 8,  5] 0b 0x00 0 0x0 [Armorslayer]   PursueWithoutHeedAI
 UNIT EnemyID Ranger   LeaderID Level(        1, Enemy, True) [10,  5] 0b 0x00 0 0x0 [SteelBow]      PursueWithoutHeedAI
 UNIT EnemyID MageKnight LeaderID Level(      1, Enemy, True) [ 9,  4] 0b 0x00 0 0x0 [Thunder, Heal] PursueWithoutHeedAI
@@ -268,6 +268,9 @@ ENDA
 ThroneSpawners:
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
+CHECK_TURNS
+SMOV r1 20
+BGT 0x0 rC r1 //If after turn 20, don't reinforce
     ENUT 0x22 //Set 0x22
 LABEL 0x0
 NoFade
@@ -276,7 +279,14 @@ ENDA
 ReinLeftIfInRight:
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
-    ENUT 0x20 //Set 0x20
+    CHECK_TURNS
+    SMOV r1 15 //If after turn 15, don't add to reinforce queue
+    BGT 0x0 rC r1
+        //only reinforce if even turn
+        SMOV r1 0x1
+        SAND 0x0C1C //AND sC with s1 and store in sC 1 if odd 0 if even
+        BNE 0x0 rC 0x0
+            ENUT 0x20 //Set 0x20
 LABEL 0x0
 NoFade
 ENDA
@@ -284,7 +294,14 @@ ENDA
 ReinRightIfInLeft:
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
-    ENUT 0x21 //Set 0x21
+    CHECK_TURNS
+    SMOV r1 15 //If after turn 15, don't add to reinforce queue
+    BGT 0x0 rC r1
+        //only reinforce if odd turn
+        SMOV r1 0x1
+        SAND 0x0C1C //AND sC with s1 and store in sC 1 if odd 0 if even
+        BEQ 0x0 rC 0x0
+            ENUT 0x21 //Set 0x21
 LABEL 0x0
 NoFade
 ENDA
@@ -294,7 +311,7 @@ SpawnAtSides:
 //Left Side
 CHECK_EVENTID 0x20
 BEQ 0x0 rC r0
-ENUF 0x20
+    ENUF 0x20
 
     SMOV r1 Poin(LU0)
     SMOV r2 Poin(LU1)
@@ -321,7 +338,7 @@ ENUN
 //Right Side
 CHECK_EVENTID 0x21
 BEQ 0x1 rC r0
-ENUF 0x21
+    ENUF 0x21
 
     SMOV r1 Poin(RU0)
     SMOV r2 Poin(RU1)
@@ -348,7 +365,7 @@ ENUN
 //Throne space
 CHECK_EVENTID 0x22
 BEQ 0x2 rC r0
-ENUF 0x22
+    ENUF 0x22
     SMOV r1 Poin(TM0)
     SMOV r2 Poin(TM1)
     SMOV r3 Poin(TM2)

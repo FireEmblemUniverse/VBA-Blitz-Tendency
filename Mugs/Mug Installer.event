@@ -133,8 +133,12 @@ NotArch_Mug:
 #incext PortraitFormatter "NotArch.png"
 setMugEntry(NotArchPortrait, NotArch_Mug, 3, 5, 3, 3)
 
+Cortez_Mug:
+#incext PortraitFormatter "lusqctz.png"
+setMugEntry(0x42, Cortez_Mug, 4, 7, 3, 4)
+ALIGN 4
+
 #define VergeinPortrait 0x74
 Vergein_Mug:
 #incext PortraitFormatter "Vergein.png"
 setMugEntry(VergeinPortrait, Vergein_Mug, 4, 5, 4, 3)
-
