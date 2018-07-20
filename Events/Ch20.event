@@ -2,8 +2,8 @@
 #include EAstdlib.event
 
 
-EventPointerTable(0x5E,PointersCh20)
-EventPointerTable(0x5D,TileChangesCh20) 
+EventPointerTable(0x5E,PointersCh20) 
+SetChapterMapChanges(20, 0x5D)
 
 ALIGN 4
 

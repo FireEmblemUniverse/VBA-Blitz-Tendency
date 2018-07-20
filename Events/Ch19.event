@@ -3,7 +3,7 @@
 
 
 EventPointerTable(0x5A,PointersCh19)
-EventPointerTable(0x59,TileChangesCh19)
+SetChapterMapChanges(19, 0x59)
 
 ALIGN 4
 
