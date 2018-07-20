@@ -24,7 +24,6 @@ prRallyStr:
 prLifeAndDeathBonus:
 	_testSkill(HeroesLifeAndDeathID,5,0)
 
-MESSAGE currentoffset lets check how this goes
 prSkillFury:
   rIfUnitHasSkill(FuryID)
     rAddConst(2)
