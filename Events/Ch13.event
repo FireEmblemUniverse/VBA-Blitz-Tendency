@@ -280,7 +280,9 @@ UNIT Mealy Hero 0 Level(5, NPC, True) [12,16] 0b 0x00 1 REDA12R16 [0x00, 0x00, 0
 UNIT
 
 MealySpawn:
-LoadReinforcements(BonePrize)
+//LoadReinforcements(BonePrize)
+LOAD1 0x0 BonePrize
+ENUN
 NoFade
 SetSkills(Mealy, DesperationID, SealSpdID, SolID, 0) //Personal is Smite (shove 2 tiles).
 ENDA
