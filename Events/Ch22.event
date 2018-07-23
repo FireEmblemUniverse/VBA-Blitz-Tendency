@@ -72,6 +72,7 @@ ALIGN 4
 BeginningScene:
 CAM1 [15,10]
 FADU 10
+MUSC Grim_Journey
 SETVAL 0xB 0xFFFFFFFF
 TUTORIALTEXTBOXSTART
 TEXTSHOW Ch22Opening
@@ -87,30 +88,52 @@ ENUN
 LOAD2 0x1 Units
 STAL 10
 CAM1 Vedge
+MUSC Tension
 FADU 10
 FlashCursor(Vedge,60)
-Text(Ch22Opening2)
+Text(Harbor,Ch22Opening2)
 CAM1 Kefka
+MUSC Raid
 FlashCursor(Kefka,60)
 Text(Ch22Opening3)
 GotoPrepScreen
 
 EndingScene:
-Text(PlaceholderText)
+MUSC Into_the_Shadow_of_Victory
+Text(Ch22Ending)
 MNCH 23
 ENDA
 
 // Events
 EventAfterExitingPrepScreen:
-Text(PlaceholderText)
+//ENUF 0x02
+MUSC Solve_the_Riddle
+CAM1 Vedge
+STAL 10
+TEXTSTART
+TEXTSHOW Ch22AfterPrepScreen
+TEXTEND
+CAM1 [21,11]
+FlashCursor(25,11,60)
+TEXTCONT
+TEXTEND
+CAM1 [24,2]
+FlashCursor(24,2,60)
+TEXTCONT
+TEXTEND
 ENDA
 
 GetTheBlitzMan:
+MUSC Comrades
 Text(SabinGet)
 LOAD1 0x1 Blitz
+CAM1 Kefka
+STAL 10
+FADI 10
 DISA Kefka
 TILECHANGE 0x9
 LOAD1 0x1 Waiter
+FADU 10
 ENDA
 
 ReinforcementsArrive:
@@ -119,17 +142,23 @@ ENUF 0x9
 ENDA
 
 StopReinforcements:
-Text(ReinforcementsStopped)
+Text(Inn,ReinforcementsStopped)
+SVAL 0x3 Talisman
+GIVEITEMTO 0xFFFF
 ENUT 0x9
 ENDA
 
 ArenaBegone:
+CAM1 [7,9]
 Text(ArenaDestroyed)
 TILECHANGE 0x1
+NoFade
 ENDA
 
 TimesUp:
+MUSC Lost_Heart
 Text(TimeUp)
+FADI 5
 GameOver
 ENDA
 
