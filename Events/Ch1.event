@@ -37,6 +37,7 @@ LocationBasedEvents:
 Chest(HandAxe,11,9)
 Village(0x7,AnnaVillage,1,1)
 Village(0x8,VillageGem,1,10)
+Village(0,YellowVillage,9,10)
 Vendor(VendorList, 4, 6)
 Armory(ArmoryList, 7, 6)
 Seize(16,2)
@@ -49,6 +50,11 @@ AnnaVillage:
 Text(Chapter1_NorthVillage)
 LOAD1 0x1 CoinChick
 ENUN
+NoFade
+ENDA
+
+YellowVillage:
+Text(HouseBG, Chapter1_House)
 NoFade
 ENDA
 

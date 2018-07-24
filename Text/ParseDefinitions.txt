@@ -59,12 +59,14 @@
 [LuutPortrait] = [0x16][0x1]
 [Luut] = [0x16]
 [Ersatz] = [0x29]
-[Dennis] = [0x70]
-[Elitor] = [0x69]
-[Hecwood] = [0x33]
+[Hecwood] = [0x31]
+[Elitor] = [0x32]
+[Dennis] = [0x34]
 
 [LoadVedge] = [LoadFace][VedgePortrait]
 [LoadVerge] = [LoadFace][0x07][0x01]
 [LoadNull] = [LoadFace][NullPortrait]
 [LoadAwakeningAnna] = [LoadFace][AwakeningAnnaPortrait]
 [LoadXimena] = [LoadFace][0xA][0x1]
+
+[LoadNotArch] = [LoadFace][0x03][0x01]
