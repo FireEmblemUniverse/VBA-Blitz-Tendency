@@ -281,3 +281,11 @@ Vergein[X]
 ## descVergein
 The less edgy, less cool rival[N]
 to Verge.[X]
+
+## nameDonateenary
+Donatenry[X]
+
+## descDonateenary
+Donateenaries, evil cultists who[N]
+worship Hex, the even more evil[N]
+manifestation of their god.[X]
