@@ -62,6 +62,7 @@
 [Hecwood] = [0x31]
 [Elitor] = [0x32]
 [Dennis] = [0x34]
+[Jazzak] = [0x36]
 
 [LoadVedge] = [LoadFace][VedgePortrait]
 [LoadVerge] = [LoadFace][0x07][0x01]
