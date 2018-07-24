@@ -1,0 +1,89 @@
+## Chapter1_Beginning
+[....v.][LoadVedge]
+[.v....][LoadVerge]
+
+[....v.]
+So the Donateenary rebels have[N]
+based themselves here.[A]
+
+[.v....]
+Indeed. In their desperation after[N]
+the fall of FEditor,[AN]
+it seems these Donateenaries have[N]
+become nothing more than a group of pirates.[AN]
+And as pirates, they have made life[N]
+a living hell for the poor,[AN]
+unnamed kingdom residents living here.[A]
+
+[....v.]
+Pitiful. For what purpose should we save[N]
+these people who cannot save themselves?[AN]
+
+[.v....]
+It is a knight's duty, milord.[A]
+
+[....v.]
+Fie on that, but as long as there[N]
+are enemies here, I may as well[AN]
+use them for training.[A][X]
+
+## Chapter1_Ending
+[....v.][LoadVedge]
+
+[....v.]
+Pitiful, if you can't pay my mother's[N]
+taxes, just get another job.[AN]
+Money is easy enough to come by.[A]
+
+[.v....][LoadNull]
+Vedge...[A]
+
+[....v.]
+What is it, Null?[A]
+
+[.v....]
+Are you not at all bothered by this?[AN]
+These people were driven to war[N]
+by your mother's oppression...[A]
+
+[....v.]
+Do you have something[N]
+to say to me, Null?[A]
+
+[.v....]
+Look Vedge, I owe your family a lot.[N]
+Your mother took me and my sister in,[AN]
+commoners no less, after our parents[N]
+were killed in the War of Blitz.[AN]
+We were raised as your siblings,[N]
+and I've never forgotten[AN]
+my gratitude to your family.[AN]
+Even so, I've also never forgotten[N]
+my heritage as a commoner.[AN]
+Even after my sister Nada[N]
+accepted your marriage proposal,[AN]
+truly making us nobility,[N]
+I have not forgotten my heritage.[A]
+
+[....v.]
+So?[N]
+
+[.v....]
+So I can't help but feel sorry[N]
+for these people.[AN]
+I knew the “Donateenary Tax”[N]
+was a massive tax, but I had[AN]
+no clue it was this bad.[N]
+These people won't be able to[AN]
+survive much longer under[N]
+these conditions[A]
+
+[....v.]
+I hear you, but it's not my problem.[AN]
+The tax only affects our sworn enemies,[N]
+the donateenaries, I'm sure if they[AN]
+renounce their faith,[N]
+the tax will no longer affect them[A]
+
+[.v....]
+Vedge...[A][X]
