@@ -274,3 +274,10 @@ Nichol[X]
 ## descNichol
 A ruthless man who has two fears:[N]
 Death, and a ruined Christmas.[X]
+
+## nameVergein
+Vergein[X]
+
+## descVergein
+The less edgy, less cool rival[N]
+to Verge.[X]

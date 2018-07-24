@@ -71,6 +71,7 @@
 #define Iga 0x25
 #define Deuxnids 0x26
 
+#define Vergein 0x40
 #define Jazzak 0x42
 #define IgaNPC 0x47
 #define Hecwood 0x48
