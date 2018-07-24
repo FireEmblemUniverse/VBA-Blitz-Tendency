@@ -46,5 +46,6 @@ Doubles attacks. Effective v fliers.[X]
 Light Rune[X]
 
 ## descLightRune
-Creates a barrier on an adjacent space,[N]
-causing it to be temporarily non-traversable.[X]
+Creates a barrier on an adjacent[N]
+space, causing it to be temporarily[N]
+non-traversable.[X]
