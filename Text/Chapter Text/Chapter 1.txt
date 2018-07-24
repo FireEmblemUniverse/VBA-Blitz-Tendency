@@ -155,3 +155,10 @@ rebellion seems to be their only[AN]
 option...[A][2NL]
 Gods, get the hell out of my house,[N]
 you knights seriously piss me off.[A][X]
+
+## Chapter1_Objective
+Put a permanent end[N]
+to Jazzak's piracy.[X]
+
+## Chapter1_Goal
+Defeat Jazzak[X]
