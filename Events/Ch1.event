@@ -54,10 +54,10 @@ Seize(16,2)
 END_MAIN
 
 VillageGem:
-VillageEventItem(PlaceholderText, Village, RedGem)
+VillageEventItem(Chapter1_SouthVillage, Village, RedGem)
 
 AnnaVillage:
-Text(PlaceholderText)
+Text(Chapter1_NorthVillage)
 LOAD1 0x1 CoinChick
 ENUN
 NoFade
@@ -138,10 +138,13 @@ LOAD2 0x1 Units1
 ENUN
 LOAD1 0x1 Bad
 ENUN
+CAM1 Vedge
+Text(Chapter1_Beginning)
 NoFade
 ENDA
 
 EndingScene:
+Text(Chapter1_Ending)
 MNCH 0x2
 NoFade
 ENDA

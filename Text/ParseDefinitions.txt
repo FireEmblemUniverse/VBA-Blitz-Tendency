@@ -53,6 +53,8 @@
 [VedgePortrait] = [0x2][0x1]
 [Null] = [0x04]
 [NullPortrait] = [Null][0x1]
+[AwakeningAnna] = [0x08]
+[AwakeningAnnaPortrait] = [0x08][0x01]
 [Fanni] = [0x11]
 [LuutPortrait] = [0x16][0x1]
 [Luut] = [0x16]
@@ -63,4 +65,5 @@
 
 [LoadVedge] = [LoadFace][VedgePortrait]
 [LoadNull] = [LoadFace][NullPortrait]
+[LoadAwakeningAnna] = [LoadFace][AwakeningAnnaPortrait]
 [LoadXimena] = [LoadFace][0xA][0x1]
