@@ -70,11 +70,13 @@ LOAD2 0x01 Units
 ENUN
 CAM1 Vedge
 FADU 10
+MUSC Advance
 Text(Plain,Ch3Opening)
 NoFade
 ENDA
 
 EndingScene:
+MUSC Victory
 Text(Fort_Outside,Ch3Ending)
 MNCH 4
 ENDA

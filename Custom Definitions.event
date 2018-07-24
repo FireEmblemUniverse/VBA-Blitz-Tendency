@@ -162,6 +162,7 @@
 
 //Crazy perma eventID stuff
 #define InafuneEvent1 0x66
+#define InafuneEvent2 0x67
 
 // Macros
 #define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"

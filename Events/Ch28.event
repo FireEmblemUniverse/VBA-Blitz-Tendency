@@ -39,6 +39,7 @@ CharacterBasedEvents:
 CharacterEventBothWays(0x9,KojimaGet,Kojima,KojimaNPC)
 CharacterEventBothWays(0x9,SakaguchiGet,Sakaguchi,SakaguchiNPC)
 CharacterEventBothWays(0x9,IgaGet,Iga,IgaNPC)
+CharacterEventBothWays(0x9,InafuneMadness,Inafune,Anna)
 END_MAIN
 
 LocationBasedEvents:
@@ -147,6 +148,35 @@ Text(RaisingBridge)
 TILECHANGE 6
 ENDA
 
+InafuneMadness:
+Text(InafuneCheck1)
+CHECK_EVENTID InafuneEvent1
+BEQ 1 0xC 0x0
+STAL 1
+Text(InafuneCheck2)
+CHECK_EVENTID InafuneEvent2
+BEQ 1 0xC 0x0
+STAL 1
+Text(InafuneCheck3)
+CHECK_EXISTS 0xB
+BEQ 1 0xC 0x0
+CHECK_CLASS 0xB
+SETVAL 0x4 FalcoKnight
+BNE 1 0xC 0x4
+STAL 1
+Text(InafuneGet)
+TurnAlly(Inafune)
+CHECK_EXISTS KojimaNPC
+BEQ 0x2 0xC 0x0
+TurnEnemy(KojimaNPC)
+TurnEnemy(SakaguchiNPC)
+TurnEnemy(IgaNPC)
+GOTO 2
+LABEL 1
+Text(InafuneFailed)
+LABEL 2
+ENDA
+
 
 // Manual Movement
 
@@ -165,7 +195,11 @@ UNIT 0xB6 Sniper Kojima Level(20, Enemy, 1) [18,8] 0x00 0x00 0x0 0x00 [PoisonBow
 UNIT 0xB6 Rogue Kojima Level(20, Enemy, 1) [18,3] 0x00 0x00 0x0 0x00 [PoisonSword] [0x10, 0x00, 0x00, 0x00] //StealingThiefAI minus the 0x05
 UNIT 0xB6 Rogue Kojima Level(20, Enemy, 1) [25,5] 0x00 0x00 0x0 0x00 [PoisonSword] [0x10, 0x00, 0x00, 0x00]
 UNIT 0xB6 Rogue Kojima Level(20, Enemy, 1) [29,10] 0x00 0x00 0x0 0x00 [PoisonSword] [0x10, 0x00, 0x00, 0x00]
+#ifdef __DEBUG__
+UNIT Inafune Thief Kojima Level(9, Enemy, 1) [15,30] 0x00 0x00 0x0 0x00 [BodyRing, GoldGem, GoldGem, GoldGem] LootingThiefAI //start near the party for ease of talking
+#else
 UNIT Inafune Thief Kojima Level(9, Enemy, 1) [0,5] 0x00 0x00 0x0 0x00 [BodyRing, GoldGem, GoldGem, GoldGem] LootingThiefAI
+#endif
 UNIT
 
 FinalFantasy:
