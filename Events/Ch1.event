@@ -34,7 +34,7 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
-Chest(SteelAxe,11,9)
+Chest(HandAxe,11,9)
 Village(0x7,AnnaVillage,1,1)
 Village(0x8,VillageGem,1,10)
 Vendor(VendorList, 4, 6)
@@ -91,7 +91,7 @@ UNIT Chiva Archer Vedge Level(1, Ally, 0) [10,1] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT
 
 CoinChick:
-UNIT Anna Thief Vedge Level(4, Ally, 0) [1,2] 0x00 0x00 0x0 0x00 [IronSword, Lockpick] NoAI
+UNIT Anna Thief Vedge Level(4, Ally, 0) [1,1] 0x00 0x00 1 REDA1R2 [IronSword, Lockpick] NoAI
 UNIT
 
 Bad:
@@ -100,8 +100,8 @@ UNIT Ch1Generic1 Pirate Jazzak Level(2, Enemy, 1) [2,7] 0x00 0x00 0x0 0x00 [Iron
 UNIT Ch1Generic1 Pirate Jazzak Level(2, Enemy, 1) [9,8] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI
 UNIT Ch1Generic1 Pirate Jazzak Level(2, Enemy, 1) [11,11] 0x00 0x00 0x0 0x00 [HandAxe] AttackInRangeAI
 UNIT Ch1Generic1 Pirate Jazzak Level(2, Enemy, 1) [14,5] 0x00 0x00 0x0 0x00 [HandAxe] GuardTileAI
-UNIT Ch1Generic1 Mercenary Jazzak Level(2, Enemy, 1) [6,3] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI
-UNIT Ch1Generic1 Mercenary Jazzak Level(2, Enemy, 1) [12,7] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI
+UNIT Ch1Generic1 Mercenary Jazzak Level(2, Enemy, 1) [6,3] 0x00 0x00 0x0 0x00 [IronSword] AttackInRangeAI
+UNIT Ch1Generic1 Mercenary Jazzak Level(2, Enemy, 1) [12,7] 0x00 0x00 0x0 0x00 [IronSword] AttackInRangeAI
 UNIT Ch1Generic1 Shaman Jazzak Level(2, Enemy, 1) [14,6] 0x00 0x00 0x0 0x00 [Flux] GuardTileAI
 UNIT Ch1Generic1 Monk Jazzak Level(2, Enemy, 1) [1,5] 0x00 0x00 0x0 0x00 [Lightning] AttackInRangeAI
 UNIT Ch1Generic1 Mage Jazzak Level(2, Enemy, 1) [5,11] 0x00 0x00 0x0 0x00 [Fire] AttackInRangeAI
@@ -110,7 +110,7 @@ UNIT Jazzak Fighter 0x00 Level(4, Enemy, 0) [16,2] 0x00 0x00 0x0 0x00 [HandAxe] 
 UNIT
 
 Wave1:
-UNIT Ch1Generic2 Brigand Jazzak Level(3, Enemy, 1) [15,9] 0x00 0x00 0x0 0x00 [SteelAxe] BrigandAI
+UNIT Ch1Generic2 Brigand Jazzak Level(3, Enemy, 1) [15,9] 0x00 0x00 0x0 0x00 [IronAxe] BrigandAI
 UNIT
 
 Wave2:
