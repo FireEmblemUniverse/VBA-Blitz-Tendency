@@ -37,33 +37,33 @@ END_MAIN
 ALIGN 4
 SimLog_LocationBasedEvents: //TODO: New loot?
 //If something is indented, that loot isn't "decided"
-CHES 0x10 Vulnerary    [20, 1] 0x14 //Nearly-impossible to get at chests, therefore really extra items for enemies
-CHES 0x11 Vulnerary    [28, 1] 0x14
+CHES 0x10 Vulnerary    [20, 1] 0x14 //Nearly-impossible to get at chests, therefore these are really extra items for enemies.
+CHES 0x11 RedGem       [28, 1] 0x14
 CHES 0x12 Vulnerary    [13, 2] 0x14
-CHES 0x13 Vulnerary    [20, 3] 0x14
+CHES 0x13 Elixir       [20, 3] 0x14
 CHES 0x14 Vulnerary    [28, 3] 0x14
-CHES 0x15 Vulnerary    [15, 4] 0x14
+CHES 0x15 Flux         [15, 4] 0x14
 CHES 0x16 Vulnerary    [ 5, 5] 0x14
-    CHES 0x17 Vulnerary    [14, 7] 0x14
-    CHES 0x18 Vulnerary    [ 8, 8] 0x14
-    CHES 0x19 Vulnerary    [17,10] 0x14
-    CHES 0x1A Vulnerary    [22,11] 0x14
-    CHES 0x1B Vulnerary    [ 8,12] 0x14
-    CHES 0x1C Vulnerary    [10,12] 0x14
-    CHES 0x1D Vulnerary    [26,12] 0x14
-    CHES 0x1E Vulnerary    [15,13] 0x14
-    CHES 0x1F Vulnerary    [20,14] 0x14
-CHES 0x20 ChestKey_5    [ 5,15] 0x14 //Starter chest
+CHES 0x17 Swordreaver  [14, 7] 0x14
+CHES 0x18 HandAxe      [ 8, 8] 0x14
+CHES 0x19 RedGem       [17,10] 0x14
+CHES 0x1A MasterSeal   [22,11] 0x14
+CHES 0x1B SteelAxe     [ 8,12] 0x14
+CHES 0x1C SteelBow     [10,12] 0x14
+CHES 0x1D Axereaver    [26,12] 0x14
+CHES 0x1E HandAxe      [15,13] 0x14
+CHES 0x1F EnergyRing   [20,14] 0x14
+CHES 0x20 ChestKey_5   [ 5,15] 0x14 //Starter chest
 CHES 0x21 Dracoshield  [ 7,16] 0x14 //Starter chest
-    CHES 0x22 SteelSword  [12,16] 0x14
-    CHES 0x23 Vulnerary  [25,16] 0x14
-    CHES 0x24 Fiendcleaver [17,17] 0x14
+CHES 0x22 MasterSeal   [12,16] 0x14
+CHES 0x23 Swordreaver  [25,16] 0x14
+CHES 0x24 Hatchet      [17,17] 0x14
 CHES 0x25 Elixir       [ 4,18] 0x14 //Starter chest
-    CHES 0x26 Fiendcleaver [27,18] 0x14
-    CHES 0x27 Fiendcleaver [13,19] 0x14
-    CHES 0x28 Fiendcleaver [24,21] 0x14
-CHES 0x29 Vulnerary    [ 5,22] 0x14 //Starter chest
-    CHES 0x2A Fiendcleaver [20,23] 0x14
+CHES 0x26 GoddessIcon  [27,18] 0x14
+CHES 0x27 BlitzAxe     [13,19] 0x14
+CHES 0x28 BeaconBow    [24,21] 0x14
+CHES 0x29 Thunder      [ 5,22] 0x14 //Starter chest
+CHES 0x2A Shine        [20,23] 0x14
 Seize(24,3)
 END_MAIN
 
@@ -148,7 +148,7 @@ UNIT 0xA Paladin 0 Level(20, Ally, True) [ 5, 22] 0b 0x00 0 0x0 [Spear, Runeswor
 UNIT
 
 DefaultEnemies:
-UNIT 0x5A Manakete_2_F 0 Level((c13Lv+5), Enemy, 1) [24, 3] 0b 0x0 0 0 [Dragonshard] NeverMoveAI
+UNIT 0x5A Manakete_2_F 0 Level((c13Lv+5), Enemy, 1) [24, 3] 10b 0x0 0 0 [Dragonshard] NeverMoveAI
 UNIT 0x9A Thief 0x5A Level(c13Lv, Enemy, 1) [22, 5] 0 0 0 0 [IronSword, ChestKey, ChestKey] [0x00, 0x04, 0x00, 0x00]
 UNIT 0x9A Soldier 0x5A Level(c13Lv, Enemy, 1) [26, 3] 0 0 0 0 [IronLance, ChestKey, ChestKey] [0x00, 0x04, 0x00, 0x00]
 UNIT 0x9A Pirate 0x5A Level(c13Lv, Enemy, 1) [12,10] 0 0 0 0 [IronAxe, ChestKey, ChestKey] [0x00, 0x04, 0x00, 0x00]
@@ -156,8 +156,8 @@ UNIT 0x9A Pirate 0x5A Level(c13Lv, Enemy, 1) [12,10] 0 0 0 0 [IronAxe, ChestKey,
 UNIT 0x9A Cavalier 0x5A Level(c13Lv, Enemy, 1) [13, 4] 10b 0 0 0 [Lancereaver] ChaseOnceApproachedAI
 UNIT 0x9A Myrmidon 0x5A Level(c13Lv, Enemy, 1) [17, 8] 0 0 0 0 [KillingEdge] AttackInRangeAI
 UNIT 0x9A Soldier 0x5A Level(c13Lv, Enemy, 1) [ 9,10] 0 0 0 0 [IronLance] PursueWithoutHeedAI
-UNIT 0x9A General 0x5A Level(1, Enemy, 1) [15,15] 0 0 0 0 [LightBrand] ChaseOnceApproachedAI
-UNIT 0x9A Mercenary 0x5A Level(c13Lv, Enemy, 1) [ 9,16] 0 0 0 0 [SteelBlade] PursueWithoutHeedAI
+UNIT 0x9A General 0x5A Level(1, Enemy, 1) [15,15] 0 0 0 0 [LightBrand, Lockpick] ChaseOnceApproachedAI
+UNIT 0x9A Mercenary 0x5A Level(c13Lv, Enemy, 1) [ 9,16] 10b 0 0 0 [SteelBlade] PursueWithoutHeedAI
 UNIT 0x9A Knight 0x5A Level(c13Lv, Enemy, 1) [10,15] 0 0 0 0 [SteelLance] ChaseOnceApproachedAI
 UNIT 0x9A Fighter 0x5A Level(c13Lv, Enemy, 1) [25,14] 0 0 0 0 [SteelAxe] ChaseOnceApproachedAI
 UNIT 0x9A Warrior 0x5A Level(c13Lv, Enemy, 1) [22,15] 0 0 0 0 [IronBow, IronAxe] AttackInRangeAI
@@ -280,6 +280,7 @@ UNIT Mealy Hero 0 Level(5, NPC, True) [12,16] 0b 0x00 1 REDA12R16 [0x00, 0x00, 0
 UNIT
 
 MealySpawn:
+writeDummy(12,16)
 //LoadReinforcements(BonePrize)
 LOAD1 0x0 BonePrize
 ENUN
@@ -297,6 +298,7 @@ NoFade
 ENDB
 
 Evt7r16:
+writeDummy(7,16)
 LoadReinforcements(Unit7r16)
 NoFade
 ENDA
@@ -305,6 +307,7 @@ UNIT 0x9A Archer 0x5A Level(c13Lv, NPC, 1) [ 7,16] 0b 0x00 1 REDA7R16 [SteelBow]
 UNIT
 
 Evt4r18:
+writeDummy(4,18)
 LoadReinforcements(Unit4r18)
 NoFade
 ENDA
@@ -313,6 +316,7 @@ UNIT 0x9A Cavalier 0x5A Level(c13Lv, NPC, 1) [ 4,18] 0b 0x00 1 REDA4R18 [SteelLa
 UNIT
 
 Evt20r23:
+writeDummy(20,23)
 LoadReinforcements(Unit20r23)
 NoFade
 ENDA
@@ -321,6 +325,7 @@ UNIT 0x9A Fighter 0x5A Level(c13Lv, Enemy, 1) [20,23] 0b 0x00 1 REDA20R23 [IronA
 UNIT
 
 Evt5r5:
+writeDummy(5,5)
 LoadReinforcements(Unit5r5)
 NoFade
 ENDA
@@ -329,6 +334,7 @@ UNIT 0x9A Mage 0x5A Level(c13Lv, Enemy, 1) [ 5, 5] 0b 0x00 1 REDA5R5 [Bolting, T
 UNIT
 
 Evt14r7:
+writeDummy(14,7)
 LoadReinforcements(Unit14r7)
 NoFade
 ENDA
@@ -337,6 +343,7 @@ UNIT 0x9A Shaman 0x5A Level(c13Lv, Enemy, 1) [ 5, 5] 0b 0x00 1 REDA14R7 [Luna] N
 UNIT
 
 Evt8r8:
+writeDummy(8,8)
 LoadReinforcements(Unit8r8)
 NoFade
 ENDA
@@ -345,6 +352,7 @@ UNIT 0x9A Archer 0x5A Level(c13Lv, Enemy, 1) [ 8, 8] 0b 0x00 1 REDA8R8 [SteelBow
 UNIT
 
 Evt17r10:
+writeDummy(17,10)
 LoadReinforcements(Unit17r10)
 NoFade
 ENDA
@@ -353,6 +361,7 @@ UNIT 0x9A Archer 0x5A Level(c13Lv, Enemy, 1) [17,10] 0b 0x00 1 REDA17R10 [SteelB
 UNIT
 
 Evt5r15:
+writeDummy(5,15)
 LoadReinforcements(Unit5r15)
 NoFade
 ENDA
@@ -361,6 +370,7 @@ UNIT 0x9A Myrmidon 0x5A Level(c13Lv, Enemy, 1) [ 5,15] 0b 0x00 1 REDA5R15 [Killi
 UNIT
 
 Evt10r12:
+writeDummy(10,12)
 LoadReinforcements(Unit10r12)
 NoFade
 ENDA
@@ -369,6 +379,7 @@ UNIT 0x9A Fighter 0x5A Level(c13Lv, Enemy, 1) [10,12] 0b 0x00 1 REDA10R12 [Hamme
 UNIT
 
 Evt22r11:
+writeDummy(22,11)
 LoadReinforcements(Unit22r11)
 NoFade
 ENDA
@@ -377,6 +388,7 @@ UNIT 0x9A Fighter 0x5A Level(c13Lv, Enemy, 1) [22,11] 0b 0x00 1 REDA22R11 [Hamme
 UNIT
 
 Evt8r12:
+writeDummy(8,12)
 LoadReinforcements(Unit8r12)
 NoFade
 ENDA
@@ -385,6 +397,7 @@ UNIT 0x9A Fighter 0x5A Level(c13Lv, Enemy, 1) [ 8,12] 0b 0x00 1 REDA8R12 [Hammer
 UNIT
 
 Evt26r12:
+writeDummy(26,12)
 LoadReinforcements(Unit26r12)
 NoFade
 ENDA
@@ -393,6 +406,7 @@ UNIT 0x9A Cavalier 0x5A Level(c13Lv, Enemy, 1) [26,12] 0b 0x00 1 REDA26R12 [Hors
 UNIT
 
 Evt15r13:
+writeDummy(15,13)
 LoadReinforcements(Unit15r13)
 NoFade
 ENDA
@@ -401,6 +415,7 @@ UNIT 0x9A GreatKnight 0x5A Level(c13Lv, Enemy, 1) [15,13] 0b 0x00 1 REDA15R13 [S
 UNIT
 
 Evt20r14:
+writeDummy(20,14)
 LoadReinforcements(Unit20r14)
 NoFade
 ENDA
@@ -409,6 +424,7 @@ UNIT 0x9A Mage 0x5A Level(c13Lv, Enemy, 1) [20,14] 0b 0x00 1 REDA20R14 [Thunder]
 UNIT
 
 Evt25r16:
+writeDummy(25,16)
 LoadReinforcements(Unit25r16)
 NoFade
 ENDA
@@ -417,6 +433,7 @@ UNIT 0x9A Mage 0x5A Level(c13Lv, Enemy, 1) [25,16] 0b 0x00 1 REDA25R16 [Fimbulve
 UNIT
 
 Evt17r17:
+writeDummy(17,17)
 LoadReinforcements(Unit17r17)
 NoFade
 ENDA
@@ -425,6 +442,7 @@ UNIT 0x9A Shaman 0x5A Level(c13Lv, Enemy, 1) [17, 17] 0b 0x00 1 REDA17R17 [Nosfe
 UNIT
 
 Evt13r19:
+writeDummy(13,19)
 LoadReinforcements(Unit13r19)
 NoFade
 ENDA
@@ -433,6 +451,7 @@ UNIT 0x9A Shaman 0x5A Level(c13Lv, Enemy, 1) [13, 19] 0b 0x00 1 REDA13R19 [Nosfe
 UNIT
 
 Evt13r2:
+writeDummy(13,2)
 LoadReinforcements(Unit13r2)
 NoFade
 ENDA
@@ -441,6 +460,7 @@ UNIT 0x9A Cavalier 0x5A Level(c13Lv, Enemy, 1) [13, 2] 0b 0x00 1 REDA13R2 [Zanba
 UNIT
 
 Evt24r21:
+writeDummy(24,21)
 LoadReinforcements(Unit24r21)
 NoFade
 ENDA
@@ -449,6 +469,7 @@ UNIT 0x9A Monk 0x5A Level(c13Lv, Enemy, 1) [13, 19] 0b 0x00 1 REDA24R21 [Purge] 
 UNIT
 
 Evt20r1:
+writeDummy(20,1)
 LoadReinforcements(Unit20r1)
 NoFade
 ENDA
@@ -457,6 +478,7 @@ UNIT 0x9A Archer 0x5A Level(c13Lv, Enemy, 1) [20, 1] 10b 0x00 1 REDA20R1 [Ballis
 UNIT
 
 Evt28r3:
+writeDummy(28,3)
 LoadReinforcements(Unit28r3)
 NoFade
 ENDA
@@ -465,6 +487,7 @@ UNIT 0x9A Cavalier 0x5A Level(c13Lv, Enemy, 1) [28, 5] 0b 0x00 1 REDA28R3 [Steel
 UNIT
 
 Evt20r3:
+writeDummy(20,3)
 LoadReinforcements(Unit20r3)
 NoFade
 ENDA
@@ -473,6 +496,7 @@ UNIT 0x9A Fighter 0x5A Level(c13Lv, Enemy, 1) [20,3] 0b 0x00 1 REDA20R3 [HandAxe
 UNIT
 
 Evt28r1:
+writeDummy(28,1)
 LoadReinforcements(Unit28r1)
 NoFade
 ENDA
@@ -481,6 +505,7 @@ UNIT 0x9A Mage 0x5A Level(c13Lv, Enemy, 1) [19, 2] 0b 0x00 1 REDA28R1 [Thunder] 
 UNIT
 
 Evt15r4:
+writeDummy(15,4)
 LoadReinforcements(Unit28r1)
 NoFade
 ENDA
@@ -489,6 +514,7 @@ UNIT 0x9A Mage 0x5A Level(c13Lv, Enemy, 1) [15, 4] 0b 0x00 1 REDA15R4 [Thunder] 
 UNIT
 
 Evt5r22:
+writeDummy(5,22)
 LoadReinforcements(Unit5r22)
 NoFade
 ENDA
@@ -497,6 +523,7 @@ UNIT 0x9A Monk 0x5A Level(c13Lv, Enemy, 1) [ 5,22] 0b 0x00 1 REDA5R22 [Aura] NoA
 UNIT
 
 Evt27r18:
+writeDummy(27,18)
 LoadReinforcements(Unit27r18)
 NoFade
 ENDA

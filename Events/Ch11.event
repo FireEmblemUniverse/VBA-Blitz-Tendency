@@ -180,12 +180,14 @@ UNIT
 
 ALIGN 4
 Chesdrake_10_10:
+writeDummy(10,10)
 LoadReinforcements(SLu_Manakete_10_10)
 NoFade
 ENDB
 
 ALIGN 4
 Chesdrake_19_6:
+writeDummy(19,6)
 LoadReinforcements(SLu_Manakete_19_6)
 NoFade
 ENDB
