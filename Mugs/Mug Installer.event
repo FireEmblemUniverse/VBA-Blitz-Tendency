@@ -1,5 +1,4 @@
 #include "Tools/Tool Helpers.txt"
-//#include "PortraitShiftTable.txt"
 
 Null_Mug:
 #incext PortraitFormatter "Null.png"
@@ -119,3 +118,4 @@ setMugEntry(0x1C, Mariya_Mug, 4, 5, 4, 3)
 MichealP_Mug:
 #incext PortraitFormatter "MichealPMug.png"
 setMugEntry(0x26, MichealP_Mug, 4, 5, 4, 3)
+

@@ -280,3 +280,27 @@ Ch. 3 Boss[X]
 
 ## Ch3BossDesc
 This text is a placeholder![X]
+
+## KojimaName
+Kojima[X]
+
+## KojimaDesc
+This text is a placeholder![X]
+
+## SakaguchiName
+Sakaguchi[X]
+
+## SakaguchiDesc
+This text is a placeholder![X]
+
+## IgaName
+Iga[X]
+
+## IgaDesc
+This text is a placeholder![X]
+
+## InafuneName
+Inafune[X]
+
+## InafuneDesc
+This text is a placeholder![X]
