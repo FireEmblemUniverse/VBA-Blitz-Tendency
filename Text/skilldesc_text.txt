@@ -638,3 +638,6 @@ Skill Activations.[X]
 ## SD_Axefaith
 Axefaith: Axes can't lose durability, and[N]
 grants +Luck*1.5 Hit when wielding axes.[X]
+
+## SD_MightyNine
+Mighty Nine: Fight during Turn 9, and...[X]
