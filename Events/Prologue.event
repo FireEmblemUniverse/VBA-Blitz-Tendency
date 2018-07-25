@@ -83,9 +83,8 @@ LOAD1 0x1 Units1 //0x0 instead of 0x1 seems to be for allies on maps with prep s
 ENUN
 LOAD1 0x1 EnemyUnits
 CAM1 Vedge
-Text(Prologue_Opening)
 ENUN
-// GotoPrepScreen
+Text(Prologue_Opening)
 ENDA
 
 EndingScene:
