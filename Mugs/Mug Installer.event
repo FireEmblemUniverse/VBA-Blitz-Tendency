@@ -14,7 +14,7 @@ setMugEntry(0x6, Chiva_Mug, 2, 5, 3, 3)
 
 Verge_Mug:
 #incext PortraitFormatter "Verge.png"
-setMugEntry(0x7, Verge_Mug, 4, 5, 4, 3)
+setMugEntry(0x7, Verge_Mug, 2, 5, 2, 3)
 
 Monkeyboy_Mug:
 #incext PortraitFormatter "HeroWarrior.png"
@@ -118,3 +118,8 @@ setMugEntry(0x1C, Mariya_Mug, 4, 5, 4, 3)
 MichealP_Mug:
 #incext PortraitFormatter "MichealPMug.png"
 setMugEntry(0x26, MichealP_Mug, 4, 5, 4, 3)
+
+#define VergeinPortrait 0x74
+Vergein_Mug:
+#incext PortraitFormatter "Vergein.png"
+setMugEntry(VergeinPortrait, Vergein_Mug, 4, 5, 4, 3)
