@@ -9,3 +9,6 @@ ALIGN 4
 
 ORG SkillIconOffset(AxefaithID)
 #incext Png2Dmp "Skill Icons\Axefaith.png"
+
+ORG SkillIconOffset(MightyNineID)
+#incext Png2Dmp "Skill Icons\MightyNine.png"
