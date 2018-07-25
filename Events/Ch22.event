@@ -31,6 +31,9 @@ UNIT
 TurnBasedEvents:
 TurnEventPlayer(0x0,EventAfterExitingPrepScreen,1)
 TurnEventEnemy(0x9,ReinforcementsArrive,3)
+TurnEventEnemy(0x9,MoreReinforcementsArrive,5)
+TurnEventEnemy(0x9,ExperienceReinforcementsArrive,7)
+TurnEventEnemy(0x9,EvenMoreReinforcementsArrive,9)
 TurnEventEnemy(0x0,ArenaBegone,8)
 TurnEventPlayer(0x0,LastTurn,12)
 TurnEventEnemy(0x0,TimesUp,12)
@@ -106,7 +109,6 @@ ENDA
 
 // Events
 EventAfterExitingPrepScreen:
-//ENUF 0x02
 MUSC Solve_the_Riddle
 CAM1 Vedge
 STAL 10
@@ -117,15 +119,17 @@ CAM1 [21,11]
 FlashCursor(25,11,60)
 TEXTCONT
 TEXTEND
-CAM1 [24,2]
+CAM1 [21,2]
 FlashCursor(24,2,60)
 TEXTCONT
 TEXTEND
+REMA
+NoFade
 ENDA
 
 GetTheBlitzMan:
 MUSC Comrades
-Text(SabinGet)
+Text(Ch22SabinGet)
 LOAD1 0x1 Blitz
 CAM1 Kefka
 STAL 10
@@ -141,8 +145,23 @@ ReinforcementEvent(BackupBad)
 ENUF 0x9
 ENDA
 
+MoreReinforcementsArrive:
+ReinforcementEvent(BackupBad2)
+ENUF 0x9
+ENDA
+
+ExperienceReinforcementsArrive:
+ReinforcementEvent(BackupBad3)
+ENUF 0x9
+ENDA
+
+EvenMoreReinforcementsArrive:
+ReinforcementEvent(BackupBad4)
+ENUF 0x9
+ENDA
+
 StopReinforcements:
-Text(Inn,ReinforcementsStopped)
+Text(Inn,Ch22ReinforcementsStopped)
 SVAL 0x3 Talisman
 GIVEITEMTO 0xFFFF
 ENUT 0x9
@@ -150,20 +169,21 @@ ENDA
 
 ArenaBegone:
 CAM1 [7,9]
-Text(ArenaDestroyed)
+Text(Ch22ArenaDestroyed)
 TILECHANGE 0x1
 NoFade
 ENDA
 
 TimesUp:
 MUSC Lost_Heart
-Text(TimeUp)
-FADI 5
+Text(Ch22TimeUp)
 GameOver
 ENDA
 
 LastTurn:
-Text(FinalPhase)
+Text(Ch22FinalPhase)
+REMA
+NoFade
 ENDA
 
 
@@ -210,6 +230,21 @@ UNIT
 BackupBad:
 UNIT 0xAC Druid Kefka Level(5, Enemy, 1) [15,5] 0x00 0x00 0x0 0x00 [Nosferatu] PursueWithoutHeedAI 
 UNIT 0xAC Druid Kefka Level(5, Enemy, 1) [18,5] 0x00 0x00 0x0 0x00 [Luna] PursueWithoutHeedAI 
+UNIT
+
+BackupBad2:
+UNIT 0xAC ElderBael Kefka Level(5, Enemy, 1) [15,5] 0x00 0x00 0x0 0x00 [SharpClaw] PursueWithoutHeedAI 
+UNIT 0xAC ElderBael Kefka Level(5, Enemy, 1) [18,5] 0x00 0x00 0x0 0x00 [LethalTalon] PursueWithoutHeedAI 
+UNIT
+
+BackupBad3:
+UNIT 0xAC Entombed Kefka Level(5, Enemy, 1) [15,5] 0x00 0x00 0x0 0x00 [SharpClaw] PursueWithoutHeedAI 
+UNIT 0xAC Entombed Kefka Level(5, Enemy, 1) [18,5] 0x00 0x00 0x0 0x00 [LethalTalon] PursueWithoutHeedAI 
+UNIT
+
+BackupBad4:
+UNIT 0xAC Gorgon Kefka Level(5, Enemy, 1) [15,5] 0x00 0x00 0x0 0x00 [DemonSurge] PursueWithoutHeedAI 
+UNIT 0xAC Gorgon Kefka Level(5, Enemy, 1) [18,5] 0x00 0x00 0x0 0x00 [Stone] PursueWithoutHeedAI 
 UNIT
 
 Blitz:

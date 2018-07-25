@@ -45,10 +45,16 @@ It's rising far faster than it should.[A]
 [MidLeft]
 Milord, there are monsters spawning[N]
 out of the ruins to our north.[AN]
+[ClearFace][MidRight][ClearFace]
 [Event]
+[OpenMidRight][LoadVedge]
+[OpenMidLeft][LoadVerge]
 First, someone needs to reach the switch[N]
 inside this bar and block reinforcements.[AN]
+[ClearFace][MidRight][ClearFace]
 [Event]
+[OpenMidRight][LoadVedge]
+[OpenMidLeft][LoadVerge]
 After that, you need to get to this house[N]
 and open the way to that... clown.[AN]
 The anti-flood defences are located there,[N]
@@ -67,7 +73,7 @@ void... I will obtain this blitz, even if[N]
 it costs me my sanity. I must. I shall.[A][X]
 
 
-## SabinGet
+## Ch22SabinGet
 [MidLeft][LoadSabin]
 THIS is the legendary Blitz? This[N]
 is no Blitz! This is an axe![AN]
@@ -92,7 +98,7 @@ for ruin! I will fight to preserve the[AN]
 world, if you'll have me along. You[N]
 will? Great, time to pummel Kefka![A][X]
 
-## ReinforcementsStopped
+## Ch22ReinforcementsStopped
 [OpenMidRight][LoadFace][CurrentPortrait]
 Well, that should take care of them.[A]
 [MidLeft][LoadFace][0x5A][0x01]
@@ -107,12 +113,12 @@ Coffee... Here, take this coffee...[AN]
 It lets you take burning coffee and[N]
 keep a hot hand... It's great![A][X]
 
-## ArenaDestroyed
+## Ch22ArenaDestroyed
 [OpenMidLeft][LoadKefka]
 A monument to war? Hmm...[N]
 I prefer a monument to nonexistence![A][X]
 
-## TimeUp
+## Ch22TimeUp
 [OpenMidLeft][LoadKefka]
 Hruh-huh-huh-huh! So long, you[N]
 sons of submariners! I hope you[AN]
@@ -122,7 +128,7 @@ enjoy the submarine life![A]
 Damn it all! I'm going to be swept[N]
 away! It's getting darker... Dark...[A][X]
 
-## FinalPhase
+## Ch22FinalPhase
 [MidLeft][LoadVerge]
 The water's starting to lap up on my[N]
 feet! Finish this, and finish it NOW![A][X]

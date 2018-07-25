@@ -92,7 +92,6 @@ NoFade
 ENDA
 
 UpperHouse:
-CHECK_ACTIVE
 CHECK_ACTIVEID Boo
 BEQ 1 0xC 0x0
 Text(HouseBG,Ch3UpperHouseBoo)
