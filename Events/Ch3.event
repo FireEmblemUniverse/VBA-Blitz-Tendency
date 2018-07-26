@@ -66,7 +66,7 @@ BeginningScene:
 FADI 10
 LOAD1 0x01 Bad
 ENUN
-LOAD2 0x01 Units
+LOAD3 0x01 Units
 ENUN
 CAM1 Vedge
 FADU 10
