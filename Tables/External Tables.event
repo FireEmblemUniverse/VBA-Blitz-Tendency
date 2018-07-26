@@ -69,10 +69,10 @@ EndMountUnmountedTable
 
 //Weapon Table
 NewManaketeAnimSet: //C9 = Already transformed Morva-dragon
-AddClassAnimation(C9, 9, 1) //unarmed
-AddClassAnimation(C9, Dragonstone, 0)
-AddClassAnimation(C9, Dragonshard, 0)
-AddClassAnimation(C9, WretchedAir, 0)
+AddClassAnimation(0xC9, 9, 1) //unarmed
+AddClassAnimation(0xC9, Dragonstone, 0)
+AddClassAnimation(0xC9, Dragonshard, 0)
+AddClassAnimation(0xC9, WretchedAir, 0)
 EndClassAnimation
 
 SetClassAnimation(Manakete_2_F, NewManaketeAnimSet)

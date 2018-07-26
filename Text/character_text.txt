@@ -39,8 +39,8 @@ he's been a bad influence.[X]
 Keanu[X]
 
 ## descMonkeyboy
-A goldhearted pious muscle mountain man that[NL]
-avoids conflict and delivers blessings.[X]
+A goldhearted pious muscle mountain man.[NL]
+Avoids conflict and delivers blessings.[X]
 
 ## nameCortez
 Cortez[X]
@@ -66,8 +66,8 @@ evil darkness in hearts and minds.[X]
 Monster[X]
 
 ## descMonsterC2
-An unstable ritual birthed this abomination,[NL]
-to fuel desires of awful evil.[X]
+An unstable ritual birthed this[NL]
+abomination, for desires of awful evil.[X]
 
 ## descMonsterBoss0x44
 A powerful monster that[NL]
@@ -160,14 +160,21 @@ Uh, is that right?[X]
 Enemy[X]
 
 ## nameBoneScary
-Scary[X]
+Swifty[X]
 
 ## descBoneGeneric
 An opponent of nefarious[NL]
 origin, always in the way.[X]
 
+## nameBoneAlly
+Ally[X]
+
+## descBoneAlly
+Once a villain, now[NL]
+just looking to stretch.[X]
+
 ## nameBoneBoss
-DarkManMan[X]
+DarkmanMan[X]
 
 ## descBoneBoss
 King of thieves..?[X]
@@ -176,8 +183,8 @@ King of thieves..?[X]
 Mealy[X]
 
 ## descMealy
-Why was... okay, fine.[NL]
-I wanted one.[X]
+Once accomplice to grand larceny,[NL]
+got stuffed in an appropriate vessel.[X]
 
 ## SabinName
 Sabin[X]
