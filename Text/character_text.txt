@@ -276,31 +276,37 @@ A ruthless man who has two fears:[N]
 Death, and a ruined Christmas.[X]
 
 ## Ch3BossName
-Ch. 3 Boss[X]
+Chien[X]
 
 ## Ch3BossDesc
-This text is a placeholder![X]
+A translator by profession. However,[N]
+his results tend to be questionable.[X]
 
 ## KojimaName
 Kojima[X]
 
 ## KojimaDesc
-This text is a placeholder![X]
+Nanomachines, son. Stressed from[N]
+continuous Metal Gear development.[X]
 
 ## SakaguchiName
 Sakaguchi[X]
 
 ## SakaguchiDesc
-This text is a placeholder![X]
+He created the Final Fantasy. Don't[N]
+ask why there's 14 more of them.[X]
 
 ## IgaName
 Iga[X]
 
 ## IgaDesc
-This text is a placeholder![X]
+Castlevania got consumed in pachinko.[N]
+As a result, he made Bloodstained.[X]
 
 ## InafuneName
 Inafune[X]
 
 ## InafuneDesc
-This text is a placeholder![X]
+Credited with Mega Man, he thinks[N]
+himself a robot master: Con Man.[N]
+His con includes a 9 obsession.[X]

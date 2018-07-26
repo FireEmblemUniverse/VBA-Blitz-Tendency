@@ -68,3 +68,4 @@
 [LoadSabin] = [LoadFace][0x20][0x01]
 [LoadBoo] = [LoadFace][0x23][0x01]
 [LoadKefka] = [LoadFace][0x4A][0x01]
+[LoadMystery] = [LoadFace][0x01][0x01]

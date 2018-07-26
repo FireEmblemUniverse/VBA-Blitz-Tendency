@@ -138,6 +138,7 @@ DISA Kefka
 TILECHANGE 0x9
 LOAD1 0x1 Waiter
 FADU 10
+NoFade
 ENDA
 
 ReinforcementsArrive:
