@@ -23,3 +23,9 @@ HATE HATE HATE HATE HATE HATE[N]
 HATE HATE HATE HATE HATE HATE[AN]
 HATE HATE HATE HATE HATE HATE[N]
 HATE HATE HATE HATE HATE YOU![A][X]
+
+
+## MealyDeath
+[OpenMidRight][LoadMystery]
+Bury me...[N]
+in the Shrine of Meals...[A][X]

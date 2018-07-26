@@ -26,17 +26,17 @@ Saleh,SpurMagID
 Ewan,AstraID
 L'Arachel,IntimidateID
 Dozla,PivotID
-0,0x0
+Sabin,CounterID
 Rennac,SpurSpdID
 Duessel,RepositionID
 Myrrh,DragonsBloodID
 Ersatz,StrongRiposteID
-Joshua,GambleID
+Inafune,MightyNineID
 Syrene,TantivyID
 Tana,LilysPoiseID
-Lyon,LunaID
-Orson,0x0
-Glen,0x0
+Kojima,LunaID
+Sakaguchi,AstraID
+Iga,AdeptID
 Selena,0x0
 Valter,CharmID
 Riev,0x0
@@ -69,7 +69,7 @@ Ch1 Boss,0x0
 Cortez Ch2,TraceID
 Monster Ch2,RenewalID
 Valter (Prologue),0x0
-Breguet (Ch 1),CounterMagicID
+Breguet (Ch 1),InspirationID
 Bone (Ch 2),AxefaireID
 Bazba (Ch 3),SwordbreakerID
 Entombed (Ch 4),0x0
@@ -107,7 +107,7 @@ Kamito,CounterID
 Claire,0x0
 Zonta (Ch 5x),0x0
 Vigarde (Ch 14B),RenewalID
-Lyon (Ch Final),0x0
+Lyon (Ch Final),FrenzyID
 Orson (Ch 16),0x0
 0,0x0
 0,0x0
