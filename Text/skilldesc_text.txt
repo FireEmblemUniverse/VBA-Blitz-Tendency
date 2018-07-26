@@ -639,5 +639,15 @@ Skill Activations.[X]
 Axefaith: Axes can't lose durability, and[N]
 grants +Luck*1.5 Hit when wielding axes.[X]
 
+## SD_ArmorMarch
+Armor March: At start of turn, if unit[N]
+is adjacent to an armor ally, unit and[N]
+adjacent armor allies gain +2 Mov.[X]
+
+## SD_VigorDance
+Inspiring Tune: Refreshing a unit grants[N]
+them +2 Pow/Def until the next turn.[X]
+
 ## SD_MightyNine
 Mighty Nine: Fight during Turn 9, and...[X]
+

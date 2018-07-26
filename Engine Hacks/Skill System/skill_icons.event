@@ -7,8 +7,18 @@ ALIGN 4
 
 #define SkillIconOffset(skillID) 16*16/2*skillID+SkillIcons
 
+PUSH
+
 ORG SkillIconOffset(AxefaithID)
 #incext Png2Dmp "Skill Icons\Axefaith.png"
 
+ORG SkillIconOffset(VigorDanceID)
+#incext Png2Dmp "Skill Icons\VigorDance.png"
+
+ORG SkillIconOffset(ArmorMarchID)
+#incext Png2Dmp "Skill Icons\ArmorMarch.png"
+
 ORG SkillIconOffset(MightyNineID)
 #incext Png2Dmp "Skill Icons\MightyNine.png"
+
+POP

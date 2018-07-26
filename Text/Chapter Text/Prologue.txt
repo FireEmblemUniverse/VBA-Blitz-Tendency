@@ -1,0 +1,73 @@
+## Prologue_Opening
+[....v.][LoadVedge]
+
+[.v....][LoadVerge]
+
+[....v.]
+We have arrived...[A]
+
+[.v....]
+Yes milord, the revels have already[N]
+formed up ranks.[AN]
+We best move forward.[A]
+
+[....v.]
+Give the order to move.[AN]
+This Donateenary trash will not[N]
+be allowed to continue to exist.[AN]
+We must seize the town they are[N]
+holding up in.[A]
+
+[.v....]
+Yes milord![A][X]
+
+## Prologue_Village
+[....v.][LoadCurrent]
+[.v....][LoadFace][0x58][0x01]
+Oh, it's the Nameless Order[N]
+of Knights! We used to support[AN]
+the Donateenary cause and[N]
+their God Hex, so we did, but[AN]
+then the great God Builda appeared,[N]
+and made our lives much easier.[AN]
+The Donateenary remnants didn't take[N]
+out side switcharooing very well,[AN]
+and took over our humble village.[N]
+We're so glad you've come![AN]
+Here, take this as a token of our[N]
+appreciation.[A][X]
+
+## Prologue_Ending
+[....v.][LoadVedge]
+[.v....][LoadVerge]
+
+[....v.]
+How pathetic.[AN]
+How did such a pathetic people ever[N]
+revive the Demon King 20 years ago?[A]
+
+[.v....]
+I assure you milord,[N]
+they were much more powerful then.[A]
+
+[....v.]
+How would you know?[N]
+You didn't fight in the war.[AN]
+You ran, coward![N]
+You let my grandparents die![A]
+
+[.v....]
+And I have spent the last 20 years[N]
+trying to atone for my cowardice,[AN]
+and in my efforts to atone I-[A]
+
+[....v.]
+Shut up, there's another rebel base[N]
+ahead we need to take.[A][X]
+
+## Prologue_Objective
+Seize the village held[N]
+by the Donateenaries.[X]
+
+## Prologue_Goal
+Seize gate[X]
