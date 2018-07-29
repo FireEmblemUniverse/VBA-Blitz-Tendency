@@ -6,8 +6,6 @@ extern const u8 gGfx_FF6Window[];
 extern const u16 gPal_FF6Window[];
 
 // FIXME (update fe8u.s)
-static const struct ProcInstruction* const gProc_ekrDragonBodyAnime = (const struct ProcInstruction*)(0x087F43D4);
-static const int(*IdkFunc)(const struct AnimationInterpreter*) = (int(*)(const struct AnimationInterpreter*))(0x806FA6C+1);
 static struct AnimationInterpreter** const gBattleAnimMainAIs = (struct AnimationInterpreter**)(0x02000000);
 static const int(*GetAISLayerId)(const struct AnimationInterpreter*) = (int(*)(const struct AnimationInterpreter*))(0x805A154+1);
 static const int(*HasEkrNamewinAppearEnded)(void) = (int(*)(void))(0x08056E60+1);
@@ -18,7 +16,7 @@ struct IBIProc {
 	short countDown;
 };
 
-static void IBIPauseAllMainAIs(struct Proc*);
+static void IBIPauseAllMainAIs(struct IBIProc*);
 static void IBIStartHideNamewin(struct Proc*);
 static void IBIWaitForNamewin(struct Proc*);
 static void IBIDrawBox(struct Proc*);
@@ -28,10 +26,10 @@ static void IBIClearBox(struct Proc*);
 static void IBIStartShowNamewin(struct Proc*);
 static void IBIUnpauseAllMainAIs(struct Proc*);
 
-const struct ProcInstruction sProc_IncorrectBlitzInputMessage[] = {
+static const struct ProcInstruction sProc_IncorrectBlitzInputMessage[] = {
 	PROC_SET_NAME("Stan:CCBlitz:IncorrectBlitzInput"),
 
-	PROC_CALL_ROUTINE(IBIPauseAllMainAIs),
+	PROC_LOOP_ROUTINE(IBIPauseAllMainAIs),
 
 	PROC_CALL_ROUTINE(IBIStartHideNamewin),
 	PROC_LOOP_ROUTINE(IBIWaitForNamewin),
@@ -89,9 +87,13 @@ static void IBIHBlankPalEffect(void) {
 	}
 }
 
-static void IBIPauseAllMainAIs(struct Proc* proc) {
+static void IBIPauseAllMainAIs(struct IBIProc* proc) {
 	for (unsigned i = 0; i < 4; ++i)
 		gBattleAnimMainAIs[i]->state = gBattleAnimMainAIs[i]->state | 0x0008;
+
+	// Hopefully we can bruteforce our way through disabling AIs with this
+	if ((--proc->countDown) <= 0)
+		BreakProcLoop((Proc*)(proc));
 }
 
 static void IBIStartHideNamewin(struct Proc* proc) {
@@ -192,27 +194,21 @@ static void IBIUnpauseAllMainAIs(struct Proc* proc) {
 		gBattleAnimMainAIs[i]->state = gBattleAnimMainAIs[i]->state &~ 0x0008;
 }
 
-void ReplacedFunc807705C(struct AnimationInterpreter* ais) {
-	// replaces FE8U:0807705C
-	// This is called each time an AIS switches "frame mode" (or whatever you anim scripters call it)
-
-	// This is probably not the best place to hook at but whatever
-
-	// Replaced stuff
-	if (IdkFunc(ais) == 2)
-		((int*)(FindProc(gProc_ekrDragonBodyAnime)))[0x15] = -1;
-
+void IBICheck(struct AnimationInterpreter* ais) {
 	if (GetAISLayerId(ais) == 1)
 		return; // back layer AIS, we don't care about those
 
-	// Start check for character & miss
+	unsigned subject = GetAISSubjectId(ais);
 
-	unsigned charId = gBattleCharacterIndices[GetAISSubjectId(ais) ^ 1];
+	unsigned charId = gBattleCharacterIndices[subject];
 	unsigned inList = FALSE;
 
 	for (const u8* it = BlitzerCharacterIndices; *it; ++it)
 		inList = inList || (*it == charId);
 
-	if (inList && IsBatteRoundTypeAMiss(ais->currentRoundType))
+	if (!inList)
+		return; // Not a Blitz man
+
+	if (IsBatteRoundTypeAMiss(GetBattleAnimRoundType((ais->nextRoundId - 1)*2 + (subject ^ 1))))
 		StartProc(sProc_IncorrectBlitzInputMessage, ROOT_PROC_3);
 }
