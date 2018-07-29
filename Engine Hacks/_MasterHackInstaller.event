@@ -163,6 +163,9 @@ POP
 
   #include "CCBlitzChapter27Asmcs.lyn.event"
 
+  // Sabin memes
+  #include "IncorrectBlitzInput/IncorrectBlitzInput.event"
+  
   ALIGN 4
   //We are installing new descriptions/icons.
   #define __USE_ICON_MACROS__

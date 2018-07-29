@@ -1,0 +1,30 @@
+#ifndef HAX_SABINMEME
+#define HAX_SABINMEME
+
+#ifndef LynJumpToHackDefined
+	#define LynJumpToHackDefined
+	#define LynJumpToHack(apHackToJumpTo) "WORD $46C04778 $E59FC000 $E12FFF1C; POIN (apHackToJumpTo)"
+#endif // LynJumpToHackDefined
+
+{
+
+PUSH; ORG $7705C
+	LynJumpToHack(ReplacedFunc807705C)
+POP
+
+#include "src/IncorrectBlitzInput.lyn.event"
+
+BlitzerCharacterIndices:
+	BYTE Sabin 0
+
+ALIGN 4
+gGfx_FF6Window:
+	#incbin "res/Window.4bpp.lz"
+
+ALIGN 4
+gPal_FF6Window:
+	#incbin "res/Window.gbapal"
+
+}
+
+#endif // HAX_SABINMEME
