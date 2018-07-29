@@ -1,3 +1,12 @@
+/*
+
+Build with libgbafe in your include path (https://github.com/StanHash/FE-CHAX/tree/master/Tools/libgbafe)
+lyn against fe8u.o (https://github.com/StanHash/FE-CHAX/blob/master/Tools/libgbafe/fe8u.s)
+
+Displays "Incorrect Blitz Input!" during Battle Animations when a character in the BlitzerCharacterIndices list misses.
+
+*/
+
 #include "gbafe.h"
 
 // <Defined in Events>
