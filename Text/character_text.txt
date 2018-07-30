@@ -275,6 +275,16 @@ Nichol[X]
 A ruthless man who has two fears:[N]
 Death, and a ruined Christmas.[X]
 
+## descAwakeningAnna
+She's all about slashing prices...[N]
+and enemies.[X]
+
+## nameCh1Pirate
+Pirate[X]
+
+## descCh1Pirate
+A pirate working under Jazzak.[X]
+
 ## Ch3BossName
 Chien[X]
 
@@ -325,3 +335,4 @@ Donatenry[X]
 Donateenaries, evil cultists who[N]
 worship Hex, the even more evil[N]
 manifestation of their god.[X]
+

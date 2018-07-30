@@ -34,6 +34,7 @@
 #define VoidMonster 0x3
 #define VoidMaster 0x4
 #define Witch 0x77
+#define Thief_F Thief //TODO!
 
 // Unit definitions
 #define Vedge 0x1
@@ -93,6 +94,8 @@
 #define SakaguchiNPC 0x77
 #define Ch29Boss 0x78
 
+#define Ch1Generic1 0x82
+#define Ch1Generic2 0x83
 #define Ch5Generic 0x8A
 #define Ch14_Enemy 0x9C
 #define Ch15_Enemy 0x9D
@@ -129,12 +132,15 @@
 
 
 //Chapter definitions
+#define Chapter1 0x1
 #define Chapter5 0x6
 #define Chapter5Map 0x1F
 #define Chapter5Changes 0x20
 #define Chapter5Events 0x21
 #define Chapter6 0x7
 #define Chapter7 0x8
+#define Chapter10 0xB
+#define Chapter11 0x3D
 #define Chapter12 0xC
 #define Ch14_ID 0x41
 #define Ch15_ID 0x47

@@ -19,16 +19,16 @@ Effective against magic users.[X]
 ## namePowerGem
 Power Gem[X]
 
+## descPowerGem
+A mysterious gem giving its[NL]
+wielder special ability. +10 crit.[X]
+
 ## nameDragonshard
 Dragonshard[X]
 
 ## descDragonshard
 A fragment full of mystical[NL]
 energies. Dragonkin prize them.[X]
-
-## descPowerGem
-A mysterious gem giving its[NL]
-wielder special ability. +10 crit.[X]
 
 ## AnimaCaliburDesc
 Effective against fliers.[X]
@@ -41,3 +41,11 @@ Effective: flier/armor/mage. Hits Res.[X]
 
 ## BowCaliburDesc
 Doubles attacks. Effective v fliers.[X]
+
+## nameLightRune
+Light Rune[X]
+
+## descLightRune
+Creates a barrier on an adjacent[N]
+space, causing it to be temporarily[N]
+non-traversable.[X]

@@ -2,7 +2,7 @@
 
 EventPointerTable(0x33, ThisChapter)
 
-EscapePointPointerTable(0x0B, Ch10EscapePoint)
+EscapePointPointerTable(Chapter10, Ch10EscapePoint)
 
 
 Ch10EscapePoint:
@@ -83,7 +83,7 @@ Text(PlaceholderText)
 GotoPrepScreen
 
 EndingScene:
-MNCH 11
+MNCH 11 //Do not change. MNCH shenanigans.
 NoFade
 ENDA
 

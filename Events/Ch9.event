@@ -110,7 +110,7 @@ GotoPrepScreen
 
 EndingScene:
 Text(PlaceholderText)
-MNCH 12
+MNCH 12 //Do not change. Since this is MNCH and not MNC2, we do not use the Chapter10 definition.
 ENDA
 
 

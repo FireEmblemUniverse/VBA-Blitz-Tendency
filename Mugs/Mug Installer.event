@@ -16,65 +16,37 @@ Verge_Mug:
 #incext PortraitFormatter "Verge.png"
 setMugEntry(0x7, Verge_Mug, 2, 5, 2, 3)
 
+FE13Anna_Mug:
+#incext PortraitFormatter "fe13anna.png"
+setMugEntry(0x8, FE13Anna_Mug, 2, 6, 2, 4)
+
 Monkeyboy_Mug:
 #incext PortraitFormatter "HeroWarrior.png"
 setMugEntry(0x9, Monkeyboy_Mug, 2, 5, 2, 3)
-
-Hecwood_Mug:
-#incext PortraitFormatter "Hecwood.png"
-setMugEntry(0x33, Hecwood_Mug, 2, 5, 3, 3)
-
-#define ElitorPortrait 0x69
-Elitor_Mug:
-#incext PortraitFormatter "Elitor.png"
-setMugEntry(ElitorPortrait, Elitor_Mug, 2, 4, 2, 2)
-
-FE3AnnaMug:
-#incext PortraitFormatter "fe3anna.png"
-setMugEntry(0x13,FE3AnnaMug,6,6,2,5)
-
-FaustMug:
-#incext PortraitFormatter "Faust.png"
-setMugEntry(0x3c,FaustMug,2,5,2,3)
 
 FanniMug:
 #incext PortraitFormatter "Fanni.png"
 setMugEntry(0x11,FanniMug,2,6,3,4)
 
-ErsatzMug:
-#incext PortraitFormatter "Ersatz.png"
-setMugEntry(0x29,ErsatzMug,2,6,2,4)
+FE3AnnaMug:
+#incext PortraitFormatter "fe3anna.png"
+setMugEntry(0x13,FE3AnnaMug,6,6,2,5)
 
 LuutMug:
 #incext PortraitFormatter "lu-by-lenh.png"
 setMugEntry(0x16,LuutMug,3,6,3,4)
 
-#define DennisPortrait 0x70
-DennisMug:
-#incext PortraitFormatter "Dennis.png"
-setMugEntry(DennisPortrait,DennisMug,2,6,2,4)
+Mariya_Mug:
+#incext PortraitFormatter "MariyaMug.png"
+setMugEntry(0x1C, Mariya_Mug, 4, 5, 4, 3)
 
-#define IgaPortrait 0x71
-IgaMug:
-#incext PortraitFormatter "Iga.png"
-setMugEntry(IgaPortrait,IgaMug,3,5,3,3)
+NicholMug:
+#incext PortraitFormatter "Nichol.png"
+setMugEntry(0x1E, NicholMug, 3, 5, 3, 3)
 
 SabinMug:
 #incext PortraitFormatter "Sabin.png"
-setMugEntry(0x20,SabinMug,4,8,3,6)
-
-#define AdolgiPortrait 0x27
-AdolgiMug:
-#incext PortraitFormatter "Adolgi.png"
-setMugEntry(AdolgiPortrait,AdolgiMug,2,4,2,2)
-
-KefkaMug:
-#incext PortraitFormatter "Kefka.png"
-setMugEntry(0x4A,KefkaMug,3,8,4,6)
-
-DeuxnidsMug:
-#incext PortraitFormatter "Deuxnids.png"
-setMugEntry(0x3F,DeuxnidsMug, 2, 6, 2, 4)
+setMugEntry(0x20,SabinMug,2,6,2,4)
 
 ALIGN 4
 Seibah_Mug:
@@ -87,39 +59,82 @@ Rinslet_Mug:
 setMugEntry(0x22, Rinslet_Mug, 2, 6, 3, 4)
 ALIGN 4
 
+MichealP_Mug:
+#incext PortraitFormatter "MichealPMug.png"
+setMugEntry(0x26, MichealP_Mug, 4, 5, 4, 3)
+
+#define AdolgiPortrait 0x27
+AdolgiMug:
+#incext PortraitFormatter "Adolgi.png"
+setMugEntry(AdolgiPortrait,AdolgiMug,2,4,2,2)
+
+ErsatzMug:
+#incext PortraitFormatter "Ersatz.png"
+setMugEntry(0x29,ErsatzMug,2,6,2,4)
+
+#define HecwoodPortrait 0x31
+Hecwood_Mug:
+#incext PortraitFormatter "Hecwood.png"
+setMugEntry(HecwoodPortrait, Hecwood_Mug, 2, 5, 3, 3)
+
+#define ElitorPortrait 0x32
+Elitor_Mug:
+#incext PortraitFormatter "Elitor.png"
+setMugEntry(ElitorPortrait, Elitor_Mug, 2, 4, 2, 2)
+
+#define FaustPortrait 0x33
+FaustMug:
+#incext PortraitFormatter "Faust.png"
+setMugEntry(FaustPortrait,FaustMug,2,5,2,3)
+
+#define DennisPortrait 0x34
+DennisMug:
+#incext PortraitFormatter "Dennis.png"
+setMugEntry(DennisPortrait,DennisMug,2,6,2,4)
+
+#define IgaPortrait 0x35
+IgaMug:
+#incext PortraitFormatter "Iga.png"
+setMugEntry(IgaPortrait,IgaMug,3,5,3,3)
+
+#define JazzakPortrait 0x36
+JazzakMug:
+#incext PortraitFormatter "Jazzak.png"
+setMugEntry(JazzakPortrait,JazzakMug,3,5,3,3)
+
+#define KamitoPortrait 0x44
 Kamito_Mug:
 #incext PortraitFormatter "Kamito.png"
-setMugEntry(0x30, Kamito_Mug, 3, 5, 3, 3)
-ALIGN 4
+setMugEntry(KamitoPortrait, Kamito_Mug, 3, 5, 3, 3)
+
+KefkaMug:
+#incext PortraitFormatter "Kefka.png"
+setMugEntry(0x4A,KefkaMug,3,8,4,6)
+
+DeuxnidsMug:
+#incext PortraitFormatter "Deuxnids.png"
+setMugEntry(0x3F,DeuxnidsMug, 2, 6, 2, 4)
 
 Claire_Mug:
 #incext PortraitFormatter "Claire.png"
 setMugEntry(0x4B, Claire_Mug, 4, 6, 4, 4)
-ALIGN 4
 
 Medea_Mug:
 #incext PortraitFormatter "Medea.png"
 setMugEntry(0x72, Medea_Mug, 2, 6, 2, 4)
-ALIGN 4
 
+#define AssassinServantPortrait 0x73
 AssassinServant_Mug:
 #incext PortraitFormatter "AssassinServant.png"
-setMugEntry(0x73, AssassinServant_Mug, 2, 5, 3, 3)
-ALIGN 4
+setMugEntry(AssassinServantPortrait, AssassinServant_Mug, 2, 5, 3, 3)
 
-NicholMug:
-#incext PortraitFormatter "Nichol.png"
-setMugEntry(0x1E, NicholMug, 3, 5, 3, 3)
-
-Mariya_Mug:
-#incext PortraitFormatter "MariyaMug.png"
-setMugEntry(0x1C, Mariya_Mug, 4, 5, 4, 3)
-
-MichealP_Mug:
-#incext PortraitFormatter "MichealPMug.png"
-setMugEntry(0x26, MichealP_Mug, 4, 5, 4, 3)
+#define NotArchPortrait 0x03
+NotArch_Mug:
+#incext PortraitFormatter "NotArch.png"
+setMugEntry(NotArchPortrait, NotArch_Mug, 3, 5, 3, 3)
 
 #define VergeinPortrait 0x74
 Vergein_Mug:
 #incext PortraitFormatter "Vergein.png"
 setMugEntry(VergeinPortrait, Vergein_Mug, 4, 5, 4, 3)
+
