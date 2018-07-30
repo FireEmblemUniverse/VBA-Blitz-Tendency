@@ -16,6 +16,10 @@ Verge_Mug:
 #incext PortraitFormatter "Verge.png"
 setMugEntry(0x7, Verge_Mug, 4, 5, 4, 3)
 
+FE13Anna_Mug:
+#incext PortraitFormatter "fe13anna.png"
+setMugEntry(0x8, FE13Anna_Mug, 2, 6, 2, 4)
+
 Monkeyboy_Mug:
 #incext PortraitFormatter "HeroWarrior.png"
 setMugEntry(0x9, Monkeyboy_Mug, 2, 5, 2, 3)
