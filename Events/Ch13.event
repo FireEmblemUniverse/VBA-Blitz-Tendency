@@ -6,10 +6,6 @@
 #define SimLogID 0x3B  //this should be ch 13 events
 EventPointerTable(SimLogID, SimLog_ThisChapter)
 
-#define Ch13Enemy 0x9A
-#define Ch13Scary 0x5B
-#define Ch13Celerity 0x5B
-#define Ch13Ally 0x9B
 
 ALIGN 4
 SimLog_ThisChapter:

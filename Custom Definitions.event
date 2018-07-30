@@ -35,6 +35,7 @@
 #define VoidMaster 0x4
 #define Witch 0x77
 #define Thief_F Thief //TODO!
+#define MautheDoog Mauthedoog
 
 // Unit definitions
 #define Vedge 0x1
@@ -81,8 +82,13 @@
 #define Ch27ChrZomboss 0x4D // dracozombie boss
 #define Edgelard 0x4E
 #define Dennis 0x50
+#define Ch11LdrID 0x56
+#define Ch11MiscID 0x57
 #define Cameron 0x58
 #define Bojo 0x59
+
+#define Ch13Scary 0x5B
+#define Ch13Celerity 0x5B
 #define Wicky 0x5C
 #define WrathBoss 0x60
 #define Ch17Boss 0x62
@@ -97,6 +103,10 @@
 #define Ch1Generic1 0x82
 #define Ch1Generic2 0x83
 #define Ch5Generic 0x8A
+#define Ch11EnemyID 0x96
+#define LuAlly 0x97
+#define Ch13Enemy 0x9A
+#define Ch13Ally 0x9B
 #define Ch14_Enemy 0x9C
 #define Ch15_Enemy 0x9D
 #define Ch17Enemies 0xA2
