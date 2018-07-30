@@ -24,10 +24,10 @@ A mysterious gem giving its[NL]
 wielder special ability. +10 crit.[X]
 
 ## nameDragonshard
-Dragonshard[X]
+Wyvernstone[X]
 
 ## descDragonshard
-A fragment full of mystical[NL]
+A crystal full of mystical[NL]
 energies. Dragonkin prize them.[X]
 
 ## AnimaCaliburDesc

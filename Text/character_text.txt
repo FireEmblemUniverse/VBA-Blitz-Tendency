@@ -150,6 +150,9 @@ A companion or hired fighter.[X]
 ## nameSweetBoss
 SweetBoss[X]
 
+## descSweetBoss
+Some sorcerer person?[X]
+
 ## nameSweetGeneric
 Keyed-in[X]
 
@@ -183,8 +186,8 @@ King of thieves..?[X]
 Mealy[X]
 
 ## descMealy
-Once accomplice to grand larceny,[NL]
-got stuffed in an appropriate vessel.[X]
+Trusted the wrong fellow, and got[NL]
+stuffed in an 'appropriate' vessel.[X]
 
 ## SabinName
 Sabin[X]

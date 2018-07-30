@@ -24,9 +24,13 @@ ORG 0x5926F4+(0x80*HuntersBowIconID)
 #incext Png2Dmp "HuntersBow.png"
 ORG 0x5926F4+(0x80*RunicBowIconID)
 #incext Png2Dmp "RunicBow.png"
+ORG 0x5926F4+(0x80*PiercingBowIconID)
+#incext Png2Dmp "PiercingBow.png"
 
+ORG 0x5926F4+(0x80*0x79)
+#incext Png2Dmp "WretchedAirN.png"
 ORG 0x5926F4+(0x80*DragonshardIconID)
-#incext Png2Dmp "Dragonshard.png"
+#incext Png2Dmp "LesserDStone.png"
 
 ORG 0x5926F4+(0x80*AnimaCaliburIconID)
 #incext Png2Dmp "AnimaCalibur.png"

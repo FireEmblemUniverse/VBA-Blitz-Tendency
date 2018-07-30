@@ -52,8 +52,13 @@ ArmorEffectiveness:
 BYTE ArmorClasses
 BYTE 0
 
+SwordCaliburBonuses:
+BYTE 0 0 7 0 0 7 7
+//0 HP, 0 str, 7 skl, 0 spd, 0 def, 7 res, 7 luk
+
 HalfStoneBonuses:
-BYTE 0 6 6 0 8 10 0
+BYTE 0 8 6 0 5 5 0
+//0 HP, 8 str, 6 skl, 0 spd, 5 def, 5 res, 0 luk
 
 ALIGN 4
 

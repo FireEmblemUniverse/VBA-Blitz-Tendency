@@ -26,6 +26,7 @@ POIN SimLog_BeginningScene SimLog_EndingScene
 ALIGN 4
 
 SimLog_TurnBasedEvents:
+TURN 0x0 StairAttack[ 0,$FF] 0x0
 TURN 0x0 ThiefBot[ 3, 0] 0x0
 TURN 0x0 ThiefRgt[ 4, 0] 0x0
 TURN 0x0 ThiefLft[ 5, 0] 0x0
@@ -36,19 +37,19 @@ END_MAIN
 
 ALIGN 32
 SimLog_CharacterBasedEvents:
-CharacterEvent(0x8,Mealy_Recruit,Vedge,Mealy)
+CharacterEvent(0x28,Mealy_Recruit,Vedge,Mealy)
 END_MAIN
 
 ALIGN 4
 SimLog_LocationBasedEvents: //TODO: New loot?
 //If something is indented, that loot isn't "decided"
-CHES 0x10 Vulnerary    [20, 1] 0x14 //Nearly-impossible to get at chests, therefore these are really extra items for enemies.
+CHES 0x10 Elixir       [20, 1] 0x14 //Nearly-impossible to get at chests, therefore these are really extra items for enemies.
 CHES 0x11 RedGem       [28, 1] 0x14
 CHES 0x12 Vulnerary    [13, 2] 0x14
-CHES 0x13 Elixir       [20, 3] 0x14
-CHES 0x14 Vulnerary    [28, 3] 0x14
+CHES 0x13 Vulnerary    [20, 3] 0x14 
+CHES 0x14 Vulnerary    [28, 3] 0x14 //Enemy loot is fun >:3c
 CHES 0x15 Flux         [15, 4] 0x14
-CHES 0x16 Vulnerary    [ 5, 5] 0x14
+CHES 0x16 Elixir       [ 5, 5] 0x14
 CHES 0x17 Swordreaver  [14, 7] 0x14
 CHES 0x18 HandAxe      [ 8, 8] 0x14
 CHES 0x19 RedGem       [17,10] 0x14
@@ -58,59 +59,65 @@ CHES 0x1C SteelBow     [10,12] 0x14
 CHES 0x1D Axereaver    [26,12] 0x14
 CHES 0x1E HandAxe      [15,13] 0x14
 CHES 0x1F EnergyRing   [20,14] 0x14
-CHES 0x20 ChestKey_5   [ 5,15] 0x14 //Starter chest
+CHES 0x20 ChestKey_5   [ 5,15] 0x14 //evulz
 CHES 0x21 Dracoshield  [ 7,16] 0x14 //Starter chest
-CHES 0x22 MasterSeal   [12,16] 0x14
+CHES 0x22 MasterSeal   [12,16] 0x14 //Mealy's chest
 CHES 0x23 Swordreaver  [25,16] 0x14
 CHES 0x24 Hatchet      [17,17] 0x14
-CHES 0x25 Elixir       [ 4,18] 0x14 //Starter chest
+CHES 0x25 HeavySpear   [ 4,18] 0x14 //Starter chest
 CHES 0x26 GoddessIcon  [27,18] 0x14
 CHES 0x27 BlitzAxe     [13,19] 0x14
-CHES 0x28 Armorslayer  [24,21] 0x14
-//CHES 0x29 Thunder      [ 5,22] 0x14 //Starter chest
-LOCA 0x29 Chest05r22 [ 5,22] 0x14
-CHES 0x2A Shine        [20,23] 0x14
+CHES  0xA Armorslayer  [24,21] 0x14
+CHES  0xB Thunder      [ 5,22] 0x14 //Starter chest
+CHES  0xD Shine        [20,23] 0x14
 Seize(24,3)
 END_MAIN
 
 ALIGN 4
 SimLog_MiscBasedEvents:
-AREA  0xA Thieves1 [ 4,10] [21,18]
-AREA    0 ThroneSpawners [ 5, 9] [15, 16]
-AREA  0xB SEFlank [11,0] [22, 13]
-AFEV 0x30 Evt20r1 0x10 //20, 1
-AFEV 0x31 Evt28r1 0x11 //28, 1
-AFEV 0x32 Evt13r2 0x12 //13, 2
-AFEV 0x33 Evt20r3 0x13 //20, 3
-AFEV 0x34 Evt28r3 0x14 //28, 3
-AFEV 0x35 Evt15r4 0x15 //15, 4
-AFEV 0x36 Evt5r5 0x16 // 5, 5
-AFEV 0x37 Evt14r7 0x17 //14, 7
-AFEV 0x38 Evt8r8 0x18 // 8, 8
-AFEV 0x39 Evt17r10 0x19 //17,10
-AFEV 0x3A Evt22r11 0x1A //22,11
-AFEV 0x3B Evt8r12 0x1B // 8,12
-AFEV 0x3C Evt10r12 0x1C //10,12
-AFEV 0x3D Evt26r12 0x1D //26,12
-AFEV 0x3E Evt15r13 0x1E //15,13
-AFEV 0x3F Evt20r14 0x1F //20,14
-AFEV 0x40 Evt5r15 0x20 // 5,15
-AFEV 0x41 Evt7r16 0x21 // 7,16; NPC
-AFEV 0x42 MealySpawn 0x22 //12,16; NPC
-AFEV 0x43 Evt25r16 0x23 //25,16
-AFEV 0x44 Evt17r17 0x24 //17,17
-AFEV 0x45 Evt4r18 0x25 // 4,18; NPC
-AFEV 0x46 Evt27r18 0x26 //27,18
-AFEV 0x47 Evt13r19 0x27 //13,19
-AFEV 0x48 Evt24r21 0x28 //24,21
-//AFEV 0x49 Evt5r22 0x29 // 5,22
-AFEV 0x4A Evt20r23 0x2A //20,23
+AREA  0x8 Thieves1       [ 2, 9] [18,18]
+AREA    0 ThroneSpawners [ 5, 9] [15,16]
+AREA  0x9 SEFlank        [11, 0] [22,13]
+AREA  0xC Thieves2       [10, 0] [29,10]
+AFEV 0  Evt20r1 0x10 //20, 1
+AFEV 0  Evt28r1 0x11 //28, 1
+AFEV 0  Evt13r2 0x12 //13, 2
+AFEV 0  Evt20r3 0x13 //20, 3
+AFEV 0  Evt28r3 0x14 //28, 3
+AFEV 0  Evt15r4 0x15 //15, 4
+AFEV 0  Evt5r5 0x16 // 5, 5
+AFEV 0  Evt14r7 0x17 //14, 7
+AFEV 0   Evt8r8 0x18 // 8, 8
+AFEV 0 Evt17r10 0x19 //17,10
+AFEV 0 Evt22r11 0x1A //22,11
+AFEV 0  Evt8r12 0x1B // 8,12
+AFEV 0 Evt10r12 0x1C //10,12
+AFEV 0 Evt26r12 0x1D //26,12
+AFEV 0 Evt15r13 0x1E //15,13
+AFEV 0 Evt20r14 0x1F //20,14
+AFEV 0 Evt5r15 0x20 // 5,15
+AFEV 0  Evt7r16 0x21 // 7,16; NPC
+AFEV 0 MealySpawn 0x22 //12,16; NPC
+AFEV 0 Evt25r16 0x23 //25,16
+AFEV 0 Evt17r17 0x24 //17,17
+AFEV 0  Evt4r18 0x25 // 4,18; NPC
+AFEV 0 Evt27r18 0x26 //27,18
+AFEV 0 Evt13r19 0x27 //13,19
+AFEV 0 Evt24r21 0xA //24,21
+AFEV 0  Evt5r22 0xB // 5,22
+AFEV 0 Evt20r23 0xD //20,23
 CauseGameOverIfLordDies
 END_MAIN
 
 ALIGN 4
 SimLog_BeginningScene:
-LOAD2 0x1 SimLog_Units
+LOAD2 0x1 SimLog_UnitsA
+ENUN
+CAM1 [2,20]
+Text(PlaceholderText)
+SVAL 0x3 ChestKey
+GIVEITEMTO Vedge
+LOAD2 0x1 SimLog_UnitsB
 ENUN
 LOAD1 0x1 DefaultEnemies
 ENUN
@@ -119,6 +126,25 @@ ENDA
 
 ALIGN 4
 SimLog_EndingScene:
+CHECK_EVENTID 0x22 //Mealy spawned
+BEQ 0x0 0xC 0x0
+    //Mealy -is- spawned
+    CHECK_EVENTID 0x28 //Mealy recruited
+    BNE 0x5 0xC 0x0
+        //Mealy spawned but not recruited
+        FlashCursor(Mealy,60)
+        Text(PlaceholderText)
+        TurnAlly(Mealy)
+        B 0x5
+LABEL 0x0
+    //Mealy is -not- spawned
+    LOAD1 0x0 BoneSecret
+    SetSkills(Mealy, FieryBloodID, HeroesDeathBlowID, SolID, 0) //Personal is Smite (shove 2 tiles).
+    STAL 10
+    FlashCursor(Mealy,60)
+    Text(PlaceholderText)
+    NoFade
+LABEL 0x5
 TEXTSTART
 TEXTSHOW PlaceholderText
 TEXTEND
@@ -139,16 +165,25 @@ END_MAIN //ENDTRAP caused a freeze and END_MAIN worked
 //so don't tell me to change this to ENDTRAP because changing it to END_MAIN stopped the hardlock I was having
 
 ALIGN 4
+SimLog_UnitsA:
+UNIT 0x1 Paladin 0 Level(20, Ally, True) [ 5, 24] 0b 0x00 1 REDA5R23 [Spear, Runesword, KillingEdge, ChestKey] NoAI
+UNIT 0x2 Paladin 0 Level(20, Ally, True) [ 5, 24] 0b 0x00 1 REDA6R22 [Spear, Runesword, KillingEdge, ChestKey] NoAI
+UNIT 0x3 Paladin 0 Level(20, Ally, True) [ 5, 24] 0b 0x00 1 REDA6R23 [Spear, Runesword, KillingEdge, ChestKey] NoAI
+UNIT Ch13Ally Knight 0 Level(c13Lv, NPC, True) [ 5, 24] 0b 0x00 1 REDA7R23 [Spear, Elixir] NoAI
+UNIT
+
+ALIGN 4
 SimLog_Units:
 SimLog_UnitsH:
 UNIT 0x1 Paladin 0 Level(20, Ally, True) [ 5, 23] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
 UNIT 0x2 Paladin 0 Level(20, Ally, True) [ 6, 22] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
 UNIT 0x3 Paladin 0 Level(20, Ally, True) [ 6, 23] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
+SimLog_UnitsB:
 UNIT 0x4 Paladin 0 Level(20, Ally, True) [ 6, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
 UNIT 0x5 Paladin 0 Level(20, Ally, True) [ 4, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
 UNIT 0x6 Valkyrie 0 Level(20, Ally, True) [4, 23] 0b 0x00 0 0x0 [Physic, Purge, Divine, ChestKey] NoAI
 UNIT 0x7 Warrior 0 Level(20, Ally, True) [ 4, 22] 0b 0x00 0 0x0 [Tomahawk, Longbow, KillerAxe,  ChestKey] NoAI
-UNIT 0x8 Paladin 0 Level(20, Ally, True) [ 5, 21] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
+UNIT 0x8 Rogue 0 Level(20, Ally, True) [ 5, 21] 0b 0x00 0 0x0 [LightBrand, Runesword, KillingEdge, Elixir] NoAI
 UNIT 0x9 Paladin 0 Level(20, Ally, True) [ 5, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
 UNIT 0xA Paladin 0 Level(20, Ally, True) [ 5, 22] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, ChestKey] NoAI
 UNIT
@@ -157,12 +192,12 @@ DefaultEnemies:
 UNIT 0x5A Manakete_2_F 0 Level((c13Lv+5), Enemy, 1) [24, 3] 10b 0x0 0 0 [Dragonshard] NeverMoveAI
 UNIT Ch13Enemy Thief 0x5A Level(c13Lv, Enemy, 1) [22, 5] 0 0 0 0 [IronSword, ChestKey, ChestKey] [0x00, 0x04, 0x00, 0x00]
 UNIT Ch13Enemy Recruit_2 0x5A Level(c13Lv, Enemy, 1) [26, 3] 0 0 0 0 [IronLance, ChestKey, ChestKey] [0x00, 0x04, 0x00, 0x00]
-UNIT Ch13Enemy Pirate 0x5A Level(c13Lv, Enemy, 1) [12,10] 0 0 0 0 [IronAxe, ChestKey, ChestKey] [0x00, 0x04, 0x00, 0x00]
+UNIT Ch13Enemy Pirate 0x5A Level(c13Lv, Enemy, 1) [12,10] 0 0 0 0 [IronAxe, ChestKey] [0x00, 0x04, 0x00, 0x00]
 
 UNIT Ch13Enemy Cavalier 0x5A Level(c13Lv, Enemy, 1) [13, 4] 10b 0 0 0 [Lancereaver] ChaseOnceApproachedAI
 UNIT Ch13Enemy Myrmidon 0x5A Level(c13Lv, Enemy, 1) [17, 8] 0 0 0 0 [KillingEdge] AttackInRangeAI
-UNIT Ch13Enemy Recruit_2 0x5A Level(c13Lv, Enemy, 1) [ 9,10] 0 0 0 0 [IronLance] PursueWithoutHeedAI
-UNIT Ch13Enemy General 0x5A Level(3, Enemy, 1) [15,15] 0 0 0 0 [LightBrand, Lockpick] ChaseOnceApproachedAI
+UNIT Ch13Enemy Recruit_2 0x5A Level(c13Lv, Enemy, 1) [ 9,10] 0 0 0 0 [IronLance, ChestKey] [0x00, 0x04, 0x00, 0x00]
+UNIT Ch13Enemy General 0x5A Level(3, Enemy, 1) [15,15] 10b 0 0 0 [LightBrand, Ballista] ChaseOnceApproachedAI
 UNIT Ch13Enemy Mercenary 0x5A Level(c13Lv, Enemy, 1) [ 9,16] 10b 0 0 0 [SteelBlade] PursueWithoutHeedAI
 UNIT Ch13Enemy Knight 0x5A Level(c13Lv, Enemy, 1) [10,15] 0 0 0 0 [SteelLance] ChaseOnceApproachedAI
 UNIT Ch13Enemy Fighter 0x5A Level(c13Lv, Enemy, 1) [25,14] 0 0 0 0 [SteelAxe] ChaseOnceApproachedAI
@@ -183,28 +218,26 @@ ALIGN 4
 StairAttack:
 CHECK_EVENTID 0xC
 BEQ 0x0 rC r0
+    //only reinforce if even turn
     CHECK_TURNS
-    SVAL r1 0x3 //If before turn 3, don't reinforce
-    BLT 0x0 rC r1
-        //only reinforce if even turn
-        SVAL r1 0x1
-        SAND 0x0C1C //AND sC with s1 and store in sC 1 if odd 0 if even
-        BNE 0x0 rC 0x0
-            ENUF 0xC //only unset ID when enemies get to spawn
-            LoadReinforcements(ThroneStairs)
+    SVAL r1 0x1
+    SAND 0x0C1C //AND sC with s1 and stores in sC: 1 if odd 0 if even
+    BNE 0x0 rC 0x0
+        ENUF 0xC //only unset ID when enemies get to spawn
+        LoadReinforcements(ThroneStairs)
 LABEL 0x0
 NoFade
 ENDA
 
 ThroneStairs:
-UNIT Ch13Enemy Pirate 0x5A Level(c13Lv, Enemy, 1) [22, 3] 0 0 1 REDA22R5 [IronAxe,   ChestKey] [0x00, 0x04, 0x00, 0x00]
-UNIT Ch13Enemy Thief  0x5A Level(c13Lv, Enemy, 1) [26, 3] 0 0 1 REDA26R5 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
+UNIT Ch13Enemy Fighter 0x5A Level(c13Lv, Enemy, 1) [22, 3] 0 0 1 REDA22R5 [IronAxe] PursueWithoutHeedAI
+UNIT Ch13Enemy Myrmidon 0x5A Level(c13Lv, Enemy, 1) [26, 3] 0 0 1 REDA26R5 [IronSword] PursueWithoutHeedAI
 UNIT 
 
 SEFlank:
 CHECK_ALLEGIANCE 0xFFFF
 BEQ 0x0 0xC 0x0 //If PC triggers goto 0
-    ENUF 0xB //Unset B so this event can trigger later.
+    ENUF 0x9 //Unset 9 so this event can trigger later.
     B 0x1
 LABEL 0x0
 LoadReinforcements(SESquad)
@@ -215,18 +248,28 @@ ENDA
 SESquad:
 UNIT Ch13Enemy Thief  0x5A Level(c13Lv, Enemy, 1) [26,24] 0 0 1 REDA26R21 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
 UNIT Ch13Enemy Pirate 0x5A Level(c13Lv, Enemy, 1) [26,24] 0 0 1 REDA23R22 [IronAxe,   ChestKey] [0x00, 0x04, 0x00, 0x00]
-UNIT Ch13Enemy Thief  0x5A Level(c13Lv, Enemy, 1) [26,24] 0 0 1 REDA25R22 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
+UNIT Ch13Enemy Myrmidon  0x5A Level(c13Lv, Enemy, 1) [26,24] 0 0 1 REDA25R22 [IronSword] PursueWithoutHeedAI
 UNIT Ch13Enemy PegasusKnight 0x5A Level(c13Lv, Enemy, 1) [26,24] 10 0 1 REDA21R23 [SteelLance, ] PursueWithoutHeedAI
 UNIT
 
 Thieves1:
 CHECK_ALLEGIANCE 0xFFFF
 BEQ 0x0 0xC 0x0 //If PC triggers goto 0
-    ENUF 0xB //Unset B so this event can trigger later.
+    ENUF 0x8 //Unset 8 so this event can trigger later.
+    B 0x1
+LABEL 0x0
+LoadReinforcements(ThiefFirstB)
+LABEL 0x1
+NoFade
+ENDA
+
+Thieves2:
+CHECK_ALLEGIANCE 0xFFFF
+BEQ 0x0 0xC 0x0
+    ENUF 0xC
     B 0x1
 LABEL 0x0
 LoadReinforcements(ThiefFirst)
-LoadReinforcements(ThiefFirstB)
 LABEL 0x1
 NoFade
 ENDA
@@ -246,7 +289,7 @@ LoadReinforcements(ThfBot)
 NoFade
 ENDA
 ThfBot:
-UNIT Ch13Scary Thief 0x5A Level(c13Lv, Enemy, 1) [9, 24] 0 0 1 REDA10R21 [IronSword, Lockpick] [0x00, 0x04, 0x00, 0x00]
+UNIT Ch13Enemy Thief 0x5A Level(c13Lv, Enemy, 1) [9, 24] 0 0 1 REDA10R21 [IronSword, Lockpick] [0x00, 0x04, 0x00, 0x00]
 UNIT
 
 ThiefRgt:
@@ -254,7 +297,7 @@ LoadReinforcements(ThfRgt)
 NoFade
 ENDA
 ThfRgt:
-UNIT Ch13Enemy Recruit_2 0x5A Level(c13Lv, Enemy, 1) [29,11] 0 0 1 REDA27R11 [IronSword, ChestKey] [0x00, 0x04, 0x00, 0x00]
+UNIT Ch13Enemy Recruit_2 0x5A Level(c13Lv, Enemy, 1) [29,11] 0 0 1 REDA27R11 [IronLance, ChestKey] [0x00, 0x04, 0x00, 0x00]
 UNIT
 
 ThiefLft:
@@ -262,7 +305,7 @@ LoadReinforcements(ThfLft)
 NoFade
 ENDA
 ThfLft:
-UNIT Ch13Scary Pirate 0x5A Level(c13Lv, Enemy, 1) [ 0,14] 0 0 1 REDA1R12 [IronAxe, ChestKey] [0x00, 0x04, 0x00, 0x00]
+UNIT Ch13Enemy Pirate 0x5A Level(c13Lv, Enemy, 1) [ 0,14] 0 0 1 REDA1R12 [IronAxe, ChestKey] [0x00, 0x04, 0x00, 0x00]
 UNIT
 
 ThiefTop:
@@ -281,25 +324,23 @@ LoadReinforcements(ThfRgt)
 NoFade
 ENDA
 
-Chest05r22:
-SVAL 0x3 Thunder
-GIVEITEMTO 0xFFFF
-//writeDummy(5,22)
-//LoadReinforcements(Unit5r22)
-//NoFade
-ENDA
-
 BonePrize:
-UNIT Mealy Hero 0 Level(5, NPC, True) [12,16] 0b 0x00 1 REDA12R16 [0x00, 0x00, 0x00, 0x00] NoAI
+UNIT Mealy Hero 0 Level(5, NPC, True) [12,16] 0b 0x00 1 REDA12R16 [KillerAxe] NoAI
+UNIT
+
+BoneSecret:
+UNIT Mealy Hero Vedge Level(5, Ally, True) [12,16] 0b 0x00 1 REDA24R3 [KillerAxe] NoAI
 UNIT
 
 MealySpawn:
+ENUF 0x22
 writeDummy(12,16)
 //LoadReinforcements(BonePrize)
 LOAD1 0x0 BonePrize
 ENUN
 NoFade
 SetSkills(Mealy, DesperationID, SealSpdID, SolID, 0) //Personal is Smite (shove 2 tiles).
+//This is a combination from Fighter and Mercenary because i like cheaty units :)
 ENDA
 
 Mealy_Recruit:
@@ -312,6 +353,7 @@ NoFade
 ENDB
 
 Evt7r16:
+ENUF 0x21
 writeDummy(7,16)
 LoadReinforcements(Unit7r16)
 NoFade
@@ -321,15 +363,17 @@ UNIT Ch13Ally Archer 0x5A Level(c13Lv, NPC, 1) [ 7,16] 0b 0x00 1 REDA7R16 [Steel
 UNIT
 
 Evt4r18:
+ENUF 0x25
 writeDummy(4,18)
 LoadReinforcements(Unit4r18)
 NoFade
 ENDA
 Unit4r18:
-UNIT Ch13Ally Cavalier 0x5A Level(c13Lv, NPC, 1) [ 4,18] 0b 0x00 1 REDA4R18 [SteelLance] NoAI
+UNIT Ch13Ally Fighter 0x5A Level(c13Lv, NPC, 1) [ 4,18] 0b 0x00 1 REDA4R18 [SteelAxe] NoAI
 UNIT
 
 Evt20r23:
+ENUF 0xD
 writeDummy(20,23)
 LoadReinforcements(Unit20r23)
 NoFade
@@ -339,15 +383,17 @@ UNIT Ch13Enemy Fighter 0x5A Level(c13Lv, Enemy, 1) [20,23] 0b 0x00 1 REDA20R23 [
 UNIT
 
 Evt5r5:
+ENUF 0x16
 writeDummy(5,5)
 LoadReinforcements(Unit5r5)
 NoFade
 ENDA
 Unit5r5:
-UNIT Ch13Enemy Mage 0x5A Level(c13Lv, Enemy, 1) [ 5, 5] 0b 0x00 1 REDA5R5 [Thunder] NoAI
+UNIT Ch13Enemy Mage 0x5A Level(c13Lv, Enemy, 1) [ 5, 5] 0b 0x00 1 REDA5R5 [Thunder, Bolting] NoAI
 UNIT
 
 Evt14r7:
+ENUF 0x17
 writeDummy(14,7)
 LoadReinforcements(Unit14r7)
 NoFade
@@ -357,6 +403,7 @@ UNIT Ch13Enemy Shaman 0x5A Level(c13Lv, Enemy, 1) [ 5, 5] 0b 0x00 1 REDA14R7 [Lu
 UNIT
 
 Evt8r8:
+ENUF 0x18
 writeDummy(8,8)
 LoadReinforcements(Unit8r8)
 NoFade
@@ -366,6 +413,7 @@ UNIT Ch13Enemy Archer 0x5A Level(c13Lv, Enemy, 1) [ 8, 8] 0b 0x00 1 REDA8R8 [Ste
 UNIT
 
 Evt17r10:
+ENUF 0x19
 writeDummy(17,10)
 LoadReinforcements(Unit17r10)
 NoFade
@@ -375,6 +423,7 @@ UNIT Ch13Enemy Archer 0x5A Level(c13Lv, Enemy, 1) [17,10] 0b 0x00 1 REDA17R10 [S
 UNIT
 
 Evt5r15:
+ENUF 0x20
 writeDummy(5,15)
 LoadReinforcements(Unit5r15)
 NoFade
@@ -384,6 +433,7 @@ UNIT Ch13Enemy Myrmidon 0x5A Level(c13Lv, Enemy, 1) [ 5,15] 0b 0x00 1 REDA5R15 [
 UNIT
 
 Evt10r12:
+ENUF 0x1C
 writeDummy(10,12)
 LoadReinforcements(Unit10r12)
 NoFade
@@ -393,6 +443,7 @@ UNIT Ch13Enemy Fighter 0x5A Level(c13Lv, Enemy, 1) [10,12] 0b 0x00 1 REDA10R12 [
 UNIT
 
 Evt22r11:
+ENUF 0x1A
 writeDummy(22,11)
 LoadReinforcements(Unit22r11)
 NoFade
@@ -402,6 +453,7 @@ UNIT Ch13Enemy Fighter 0x5A Level(c13Lv, Enemy, 1) [22,11] 0b 0x00 1 REDA22R11 [
 UNIT
 
 Evt8r12:
+ENUF 0x1B
 writeDummy(8,12)
 LoadReinforcements(Unit8r12)
 NoFade
@@ -411,6 +463,7 @@ UNIT Ch13Enemy Fighter 0x5A Level(c13Lv, Enemy, 1) [ 8,12] 10b 0x00 1 REDA8R12 [
 UNIT
 
 Evt26r12:
+ENUF 0x1D
 writeDummy(26,12)
 LoadReinforcements(Unit26r12)
 NoFade
@@ -420,15 +473,17 @@ UNIT Ch13Enemy Cavalier 0x5A Level(c13Lv, Enemy, 1) [26,12] 0b 0x00 1 REDA26R12 
 UNIT
 
 Evt15r13:
+ENUF 0x1E
 writeDummy(15,13)
 LoadReinforcements(Unit15r13)
 NoFade
 ENDA
 Unit15r13:
-UNIT Ch13Enemy GreatKnight 0x5A Level(c13Lv, Enemy, 1) [15,13] 0b 0x00 1 REDA15R13 [SteelLance] NoAI
+UNIT Ch13Enemy GreatKnight 0x5A Level(3, Enemy, 1) [15,13] 0b 0x00 1 REDA15R13 [SteelLance] NoAI
 UNIT
 
 Evt20r14:
+ENUF 0x1F
 writeDummy(20,14)
 LoadReinforcements(Unit20r14)
 NoFade
@@ -438,6 +493,7 @@ UNIT Ch13Enemy Mage 0x5A Level(c13Lv, Enemy, 1) [20,14] 0b 0x00 1 REDA20R14 [Thu
 UNIT
 
 Evt25r16:
+ENUF 0x23
 writeDummy(25,16)
 LoadReinforcements(Unit25r16)
 NoFade
@@ -447,6 +503,7 @@ UNIT Ch13Enemy Mage 0x5A Level(c13Lv, Enemy, 1) [25,16] 0b 0x00 1 REDA25R16 [Fim
 UNIT
 
 Evt17r17:
+ENUF 0x24
 writeDummy(17,17)
 LoadReinforcements(Unit17r17)
 NoFade
@@ -456,6 +513,7 @@ UNIT Ch13Enemy Shaman 0x5A Level(c13Lv, Enemy, 1) [17, 17] 0b 0x00 1 REDA17R17 [
 UNIT
 
 Evt13r19:
+ENUF 0x27
 writeDummy(13,19)
 LoadReinforcements(Unit13r19)
 NoFade
@@ -465,6 +523,7 @@ UNIT Ch13Enemy Shaman 0x5A Level(c13Lv, Enemy, 1) [13, 19] 0b 0x00 1 REDA13R19 [
 UNIT
 
 Evt13r2:
+ENUF 0x12
 writeDummy(13,2)
 LoadReinforcements(Unit13r2)
 NoFade
@@ -474,34 +533,37 @@ UNIT Ch13Enemy Cavalier 0x5A Level(c13Lv, Enemy, 1) [13, 2] 0b 0x00 1 REDA13R2 [
 UNIT
 
 Evt24r21:
+ENUF 0xA
 writeDummy(24,21)
 LoadReinforcements(Unit24r21)
 NoFade
 ENDA
 Unit24r21:
-UNIT Ch13Enemy Monk 0x5A Level(c13Lv, Enemy, 1) [13, 19] 0b 0x00 1 REDA24R21 [Purge] NoAI
+UNIT Ch13Enemy Monk 0x5A Level(c13Lv, Enemy, 1) [24, 21] 0b 0x00 1 REDA24R21 [Purge] NoAI
 UNIT
 
 Evt20r1:
+ENUF 0x10
 writeDummy(20,1)
 LoadReinforcements(Unit20r1)
 NoFade
 ENDA
 Unit20r1:
-UNIT Ch13Enemy Archer 0x5A Level(c13Lv, Enemy, 1) [20, 1] 10b 0x00 1 REDA20R1 [Ballista, Ballista, Ballista, Ballista] NoAI 
-//make sure doesn't run out i want the player to get one :O
+UNIT Ch13Enemy Archer 0x5A Level(c13Lv, Enemy, 1) [20, 1] 10b 0x00 1 REDA20R1 [Ballista] NoAI 
 UNIT
 
 Evt28r3:
+ENUF 0x14
 writeDummy(28,3)
 LoadReinforcements(Unit28r3)
 NoFade
 ENDA
 Unit28r3:
-UNIT Ch13Enemy Cavalier 0x5A Level(c13Lv, Enemy, 1) [28, 5] 0b 0x00 1 REDA28R3 [SteelLance] NoAI
+UNIT Ch13Enemy Cavalier 0x5A Level(c13Lv, Enemy, 1) [28, 3] 0b 0x00 1 REDA28R3 [SteelLance] NoAI
 UNIT
 
 Evt20r3:
+ENUF 0x13
 writeDummy(20,3)
 LoadReinforcements(Unit20r3)
 NoFade
@@ -511,15 +573,17 @@ UNIT Ch13Enemy Fighter 0x5A Level(c13Lv, Enemy, 1) [20,3] 0b 0x00 1 REDA20R3 [Ha
 UNIT
 
 Evt28r1:
+ENUF 0x11
 writeDummy(28,1)
 LoadReinforcements(Unit28r1)
 NoFade
 ENDA
 Unit28r1:
-UNIT Ch13Enemy Mage 0x5A Level(c13Lv, Enemy, 1) [19, 2] 0b 0x00 1 REDA28R1 [Thunder] NoAI
+UNIT Ch13Enemy Mage 0x5A Level(c13Lv, Enemy, 1) [28, 1] 0b 0x00 1 REDA28R1 [Thunder] NoAI
 UNIT
 
 Evt15r4:
+ENUF 0x15
 writeDummy(15,4)
 LoadReinforcements(Unit28r1)
 NoFade
@@ -529,15 +593,17 @@ UNIT Ch13Enemy Mage 0x5A Level(c13Lv, Enemy, 1) [15, 4] 0b 0x00 1 REDA15R4 [Thun
 UNIT
 
 Evt5r22:
+ENUF 0xB
 writeDummy(5,22)
 LoadReinforcements(Unit5r22)
 NoFade
 ENDA
 Unit5r22:
-UNIT Ch13Enemy Monk 0x5A Level(c13Lv, Enemy, 1) [ 5,22] 0b 0x00 1 REDA5R22 [Aura] NoAI
+UNIT Ch13Ally Sage 0x5A Level(3, NPC, 1) [ 5,22] 0b 0x00 1 REDA5R22 [Physic, Lightning] NoAI
 UNIT
 
 Evt27r18:
+ENUF 0x26
 writeDummy(27,18)
 LoadReinforcements(Unit27r18)
 NoFade
