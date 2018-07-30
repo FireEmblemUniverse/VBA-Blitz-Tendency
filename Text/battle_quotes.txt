@@ -33,3 +33,8 @@ Now I take back my freedom.[A][X]
 [OpenMidLeft][LoadFace][Jazzak][0x01]
 In truth, death could be seen[N]
 as a freedom of its own.[A][X]
+
+## MealyDeath
+[OpenMidRight][LoadMystery]
+Bury me...[N]
+in the Shrine of Meals...[A][X]

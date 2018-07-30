@@ -79,18 +79,19 @@ CHECK_TUTORIAL
 BEQ 0x0 0xC 0x0
 ENUT 0xb0 //turn on casual mode if easy
 LABEL 0x0
-//Text(Ch0IntroTalk)
 LOAD1 0x1 Units1 //0x0 instead of 0x1 seems to be for allies on maps with prep screens
 ENUN
 LOAD1 0x1 EnemyUnits
+CAM1 Vedge
 ENUN
-// GotoPrepScreen
+Text(Prologue_Opening)
 ENDA
 
 EndingScene:
+Text(Prologue_Ending)
 MNC2 0x1 //go to ch1
 NoFade
 ENDA
 
 VillageEvent:
-VillageEventItem(PlaceholderText, HouseBG, RunicBow)
+VillageEventItem(Prologue_Village, HouseBG, RunicBow)

@@ -386,6 +386,11 @@ SlowBurn:
 POIN SkillTester
 WORD SlowBurnID
 
+MightyNine:
+#incbin "Other Skills/MightyNine.dmp"
+POIN SkillTester
+WORD MightyNineID
+
 Roll1d12:
 #incbin "Other Skills/roll12.dmp"
 POIN SkillTester

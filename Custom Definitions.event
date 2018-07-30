@@ -71,6 +71,7 @@
 #define Iga 0x25
 #define Deuxnids 0x26
 
+#define Vergein 0x40
 #define Jazzak 0x42
 #define IgaNPC 0x47
 #define Hecwood 0x48
@@ -161,6 +162,10 @@
 #define Ch27HumanReinfKillCount 20
 #define Ch27MogallsKillCount 30
 #define Ch27DracoBossKillCount 40
+
+//Crazy perma eventID stuff
+#define InafuneEvent1 0x66
+#define InafuneEvent2 0x67
 
 // Macros
 #define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"

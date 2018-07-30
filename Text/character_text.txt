@@ -284,3 +284,55 @@ Pirate[X]
 
 ## descCh1Pirate
 A pirate working under Jazzak.[X]
+
+## Ch3BossName
+Chien[X]
+
+## Ch3BossDesc
+A translator by profession. However,[N]
+his results tend to be questionable.[X]
+
+## KojimaName
+Kojima[X]
+
+## KojimaDesc
+Nanomachines, son. Stressed from[N]
+continuous Metal Gear development.[X]
+
+## SakaguchiName
+Sakaguchi[X]
+
+## SakaguchiDesc
+He created the Final Fantasy. Don't[N]
+ask why there's 14 more of them.[X]
+
+## IgaName
+Iga[X]
+
+## IgaDesc
+Castlevania got consumed in pachinko.[N]
+As a result, he made Bloodstained.[X]
+
+## InafuneName
+Inafune[X]
+
+## InafuneDesc
+Credited with Mega Man, he thinks[N]
+himself a robot master: Con Man.[N]
+His con includes a 9 obsession.[X]
+
+## nameVergein
+Vergein[X]
+
+## descVergein
+The less edgy, less cool rival[N]
+to Verge.[X]
+
+## nameDonateenary
+Donatenry[X]
+
+## descDonateenary
+Donateenaries, evil cultists who[N]
+worship Hex, the even more evil[N]
+manifestation of their god.[X]
+
