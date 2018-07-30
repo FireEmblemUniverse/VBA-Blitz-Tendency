@@ -1,5 +1,13 @@
 EventPointerTable(0xa, PointerList)
 
+EscapePointPointerTable(Chapter1, Ch1EscapePoint)
+
+Ch1EscapePoint:
+EscapePoint(15, 9, NoMove)
+EscapePoint(16, 9, NoMove)
+EscapePoint(17, 9, NoMove)
+EscapePointEnd
+
 PointerList:
 POIN TurnBasedEvents
 POIN CharacterBasedEvents
@@ -97,7 +105,7 @@ UNIT Chiva Archer Vedge Level(1, Ally, 0) [10,1] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT
 
 CoinChick:
-UNIT Anna Thief Vedge Level(4, Ally, 0) [1,1] 0x00 0x00 1 REDA1R2 [IronSword, Lockpick] NoAI
+UNIT Anna Thief_F Vedge Level(4, Ally, 0) [1,1] 0x00 0x00 1 REDA1R2 [IronSword, Lockpick] NoAI
 UNIT
 
 Bad:
@@ -120,7 +128,7 @@ UNIT Ch1Generic2 Brigand Jazzak Level(3, Enemy, 1) [15,9] 0x00 0x00 0x0 0x00 [Ir
 UNIT
 
 Wave2:
-UNIT Ch1Generic2 Thief Jazzak Level(3, Enemy, 1) [17,9] 0x00 0x00 0x0 0x00 [SteelSword] LootingThiefAI
+UNIT Ch1Generic2 Thief Jazzak Level(3, Enemy, 1) [17,9] 0x00 0x00 0x0 0x00 [SteelSword, ChestKey] LootingThiefAI
 UNIT
 
 Wave3:
