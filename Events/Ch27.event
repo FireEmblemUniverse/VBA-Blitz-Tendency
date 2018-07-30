@@ -33,6 +33,8 @@ SetSymbol(scPrepScreen,         $591FD8) // no args
 SetSymbol(scNoSkipFadeOut,      $591F40) // no args
 SetSymbol(scLoadReinforcements, $9EE274) // args: s2 = pointer to UNITs
 
+SetSymbol(sfxWind, 0x122)
+
 // ==============
 // CHAPTER CONFIG
 // ==============
@@ -376,6 +378,7 @@ scShiftSands: {
 	ASMC SlideAllUnitsASMC
 
 	// TODO (polish): play windy sound?
+	SOUN sfxWind
 
 	CHECK_TURNS
 
@@ -753,7 +756,7 @@ scHumanReinf: {
 	ENUN
 
 	// TODO (polish): have mage animate and cast spell
-	// TODO (polish): play windy sound?
+	SOUN sfxWind
 
 	EARTHQUAKE_START 0
 
