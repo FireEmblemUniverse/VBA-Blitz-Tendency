@@ -14,7 +14,7 @@
    <property name="ChapterID" value="13"/>
    <property name="Main" value=""/>
    <property name="MapChangesID" value="0x3A"/>
-   <property name="MapID" value="0x42"/>
+   <property name="MapID" value="0x39"/>
    <property name="ObjectType" value="0x50"/>
    <property name="PaletteID" value="0x51"/>
    <property name="TileConfig" value="0x52"/>
