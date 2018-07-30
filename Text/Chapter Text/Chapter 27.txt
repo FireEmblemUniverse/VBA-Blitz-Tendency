@@ -1,0 +1,78 @@
+
+## textCh27StatusGoal
+
+Defeat ?? Enemies[N]
+then kill boss.
+
+[X]
+
+
+## textCh27PrePrepIntroduction
+
+[....v.][LoadVedge]
+
+hi.[A]
+
+[X]
+
+
+## textCh27PostPrepIntroduction
+
+[.v....][LoadVedge]
+
+ono winds.[A]
+
+[X]
+
+
+## textCh27Village
+
+[..v...][LoadCurrent]
+[....v.][LoadKefka]
+
+Ye thank me gib.[A]
+
+[X]
+
+
+## textCh27BossShowsUp
+
+[....v.][LoadVedge]
+
+ono a drgn![A]
+
+[X]
+
+
+## textCh27DeuxnisShowsUp
+
+[..v...][LoadDeuxnids]
+
+Et flash![A]
+
+[X]
+
+
+## textCh27DragonTorch
+
+[....v.][LoadDeuxnids]
+
+There he is! Get him![A]
+
+[X]
+
+
+## textCh27Conclusion
+
+[...v..][LoadVedge]
+
+fin.[A]
+
+[X]
+
+
+## textCh27YouShouldNotBeHere
+
+Undeployed message
+
+[X]
