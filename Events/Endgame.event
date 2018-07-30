@@ -17,9 +17,65 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 Units:
-UNIT Vedge EphraimLord 0x00 Level(1, Ally, 0) [26,15] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT Null EphraimLord 0x00 Level(1, Ally, 0) [25,16] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT Naught EphraimLord 0x00 Level(1, Ally, 0) [27,16] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Vedge EirikaLord 0x00 Level(1, Ally, 0) [7,27] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Null EphraimLord Eirika Level(1, Ally, 0) [4,27] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Naught EphraimLord Eirika Level(1, Ally, 0) [5,28] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Verge EphraimLord Eirika Level(1, Ally, 0) [6,29] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [8,29] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [9,28] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [10,27] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [4,25] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [5,24] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [6,23] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [10,25] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [9,24] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [8,23] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [9,26] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [7,24] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [5,26] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT
+
+Bad1:
+UNIT Tiki Manakete_2_F 0x00 Level(20, Enemy, 1) [0,6] 0x01 0x00 0x0 0x00 [HolyDragonStone] ChaseOnceApproachedAI
+UNIT Marf Swordmaster 0x00 Level(20, Enemy, 1) [1,5] 0x00 0x00 0x0 0x00 [Shamshir, Wyrmslayer] PursueWithoutHeedAI
+UNIT Jake MageKnight 0x00 Level(20, Enemy, 1) [14,1] 0x00 0x00 0x0 0x00 [Aircalibur, Bolting, Recover] PursueWithoutHeedAI
+UNIT Bjorn Druid 0x00 Level(20, Enemy, 1) [17,13] 0x00 0x00 0x0 0x00 [Nosferatu, Physic, Recover] HealUnits
+UNIT EvilFlorina Druid_F 0x00 Level(20, Enemy, 1) [13,4] 0x00 0x00 0x0 0x00 [Fimbulvetr, Eclipse, Silence] ChaseOnceApproachedAI
+UNIT Celica Bishop_F 0x00 Level(20, Enemy, 1) [11,12] 0x00 0x00 0x0 0x00 [Aura, Physic, Rescue] ChaseOnceApproachedAI
+UNIT Zigludo Paladin 0x00 Level(20, Enemy, 1) [23,20] 0x00 0x00 0x0 0x00 [Audomra, Elixir] PursueWithoutHeedAI
+UNIT AnnaRogue Rogue 0x00 Level(20, Enemy, 1) [17,1] 0x00 0x00 0x0 0x00 [KillingEdge, Elixir] StealingThiefAI
+UNIT Eevster Valkyrie 0x00 Level(20, Enemy, 1) [3,1] 0x00 0x00 0x0 0x00 [Purge, Physic, Silence] HealUnits
+UNIT Samson Sniper 0x00 Level(20, Enemy, 1) [14,13] 0x00 0x00 0x0 0x00 [BraveBow, Elixir] PursueWithoutHeedAI
+UNIT Prine Valkyrie 0x00 Level(20, Enemy, 1) [26,6] 0x00 0x00 0x0 0x00 [Aura, Physic, Sleep, KnightsCrest] AttackInRangeAI
+UNIT Celicia MageKnight_F 0x00 Level(20, Enemy, 1) [11,8] 0x00 0x00 0x0 0x00 [Bolting, Bolting, Fortify] ChaseOnceApproachedAI
+UNIT Nikita GreatKnight 0x00 Level(20, Enemy, 1) [3,11] 0x00 0x00 0x0 0x00 [Tomahawk, Spear, WindSword] ChaseOnceApproachedAI
+UNIT AnnaMyrm Swordmaster_F 0x00 Level(20, Enemy, 1) [15,0] 0x00 0x00 0x0 0x00 [BraveSword] AttackInRangeAI
+UNIT Roshea GreatKnight 0x00 Level(20, Enemy, 1) [16,9] 0x00 0x00 0x0 0x00 [BraveSword, BraveLance] PursueWithoutHeedAI
+UNIT Doot Sage_F 0x00 Level(20, Enemy, 1) [25,2] 0x00 0x00 0x0 0x00 [DootAura, Excalibur, Recover] PursueWithoutHeedAI //TODO
+UNIT
+
+Bad2:
+UNIT Edge Hero 0x00 Level(20, Enemy, 1) [18,21] 0x00 0x00 0x0 0x00 [KillingEdge, Swordslayer, Elixir] ChaseOnceApproachedAI
+UNIT Jerome Recruit_3 0x00 Level(20, Enemy, 1) [26,18] 0x00 0x00 0x0 0x00 [KillerLance, BraveLance, Horseslayer, Axereaver] ChaseOnceApproachedAI
+UNIT Kirsten WyvernKnight_F 0x00 Level(20, Enemy, 1) [6,2] 0x00 0x00 0x0 0x00 [Vidofnir, DelphiShield, Elixir] PursueWithoutHeedAI
+UNIT Tye General 0x00 Level(20, Enemy, 1) [20,18] 0x00 0x00 0x0 0x00 [Runesword] GuardTileAI //TODO
+UNIT Tim Hero 0x00 Level(20, Enemy, 1) [2,8] 0x00 0x00 0x0 0x00 [Garm, Elixir] PursueWithoutHeedAI
+UNIT Jay Ranger 0x00 Level(20, Enemy, 1) [1,2] 0x00 0x00 0x0 0x00 [BraveAxe, KillingEdge] PursueWithoutHeedAI
+UNIT Doowile Entombed 0x00 Level(20, Enemy, 1) [14,8] 0x00 0x00 0x0 0x00 [HolyDragonStone, Elixir] ChaseOnceApproachedAI
+UNIT Arve Summoner_F 0x00 Level(20, Enemy, 1) [26,22] 0x00 0x00 0x0 0x00 [Gleipnir, Sleep] GuardTileAI
+UNIT AnnaWyvern WyvernLord_F 0x00 Level(20, Enemy, 1) [22,0] 0x00 0x00 0x0 0x00 [BraveSword, KillerLance, Elixir] PursueWithoutHeedAI
+UNIT Tam Warrior 0x00 Level(20, Enemy, 1) [0,10] 0x00 0x00 0x0 0x00 [Nidhogg, BraveAxe, Elixir] ChaseOnceApproachedAI
+UNIT Edgeworth Civilian 0x00 Level(20, Enemy, 1) [13,10] 0x00 0x00 0x0 0x00 [Elixir] GuardTileAI
+UNIT Bob Assassin 0x00 Level(20, Enemy, 1) [27,12] 0x00 0x00 0x0 0x00 [BraveSword, Lancereaver, Elixir] ChaseOnceApproachedAI
+UNIT NotArch Sage 0x00 Level(20, Enemy, 1) [25,16] 0x00 0x00 0x0 0x00 [Ivaldi, Purge, Elixir] GuardTileAI
+UNIT Kaga Dancer 0x00 Level(20, Enemy, 1) [33,13] 0x00 0x00 0x0 0x00 [Bolting, Bolting, Fimbulvetr] AttackInRangeAI
+UNIT Bede Bishop 0x00 Level(20, Enemy, 1) [25,4] 0x00 0x00 0x0 0x00 [Stone, Berserk, Fortify, Berserk] AttackInRangeAI
+UNIT
+
+Bad3:
+UNIT Leeroy Paladin 0x00 Level(20, Enemy, 1) [26,15] 0x00 0x00 0x0 0x00 [Spear] GuardTileAI
+UNIT Mark Manakete_2 0x00 Level(20, Enemy, 1) [23,17] 0x00 0x00 0x0 0x00 [WretchedAir, Elixir] ChaseOnceApproachedAI
+UNIT Void VoidLord 0x00 Level(20, Enemy, 1) [29,27] 0x00 0x00 0x0 0x00 [SuperBlitzLance, Elixir] GuardTileAI
 UNIT
 
 
@@ -49,6 +105,7 @@ Tutorial:
 WORD $00
 
 TrapData1:
+KillerBallista(15,11)
 ENDTRAP
 ALIGN 4
 
@@ -57,9 +114,11 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
-LOAD2 0x1 Units
+LOAD3 0x1 Units
 ENUN
-LOAD1 0x1 Enemies1
+LOAD1 0x1 Bad1
+LOAD1 0x1 Bad2
+LOAD1 0x1 Bad3
 ENUN
 GotoPrepScreen
 ENDA
