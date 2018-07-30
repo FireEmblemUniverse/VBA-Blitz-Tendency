@@ -1,10 +1,10 @@
 
+## textCh27BoxGoal
+Defeat boss[X]
+
 ## textCh27StatusGoal
-
 Defeat ?? Enemies[N]
-then kill boss.
-
-[X]
+then kill boss.[X]
 
 
 ## textCh27PrePrepIntroduction
