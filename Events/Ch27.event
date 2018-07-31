@@ -862,6 +862,9 @@ scBossWantsToFight: {
 
 	Text(textCh27BossShowsUp)
 
+	CALL scNoSkipFadeOut
+	EVBIT_MODIFY 1 // Disable Start-Skip
+	
 	SVAL r1 0x00010000
 	SSUB slotsParam(rB, rB, r1)
 
@@ -884,6 +887,8 @@ scBossWantsToFight: {
 	MOVEFORCED 0 Ch27ChrZomboss 0
 	ENUN
 
+	EVBIT_MODIFY 0 // Re-enable Start-Skip
+	
 	Text(textCh27DeuxnisShowsUp)
 
 	_0x2620 0xFFFF
