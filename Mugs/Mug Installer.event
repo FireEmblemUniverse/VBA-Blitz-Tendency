@@ -72,9 +72,10 @@ KefkaMug:
 #incext PortraitFormatter "Kefka.png"
 setMugEntry(0x4A,KefkaMug,3,8,4,6)
 
+#define DeuxnidsPortrait 0x3F
 DeuxnidsMug:
 #incext PortraitFormatter "Deuxnids.png"
-setMugEntry(0x3F,DeuxnidsMug, 2, 6, 2, 4)
+setMugEntry(DeuxnidsPortrait, DeuxnidsMug, 2, 6, 2, 4)
 
 ALIGN 4
 Seibah_Mug:
