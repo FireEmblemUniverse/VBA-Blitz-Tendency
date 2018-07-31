@@ -336,10 +336,10 @@ manifestation of their god.[X]
 Monster[X]
 
 ## descCh27GenericMonster
-A Monster[X]
+A Monster.[X]
 
 ## nameCh27GenericSoldier
 Soldier[X]
 
 ## descCh27GenericSoldier
-A Soldier[X]
+A Soldier.[X]
