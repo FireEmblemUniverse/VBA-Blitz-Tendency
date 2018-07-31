@@ -12,12 +12,31 @@ then kill boss.[X]
 [....v.][LoadVedge]
 [.v....][LoadVerge]
 
-Sir, Would you please[N]
-say whatever MC wrote?[A]
+Milord, Would you please say the[N]
+few lines the writer wrote for you?[A]
 
 [....v.]
+Oh,[.4] right,[.4] yes.[A][2NL]
 
-... Nah.[A]
+"This desert always reassured[N]
+me as a kid...[AN]
+My guardian angel of sorts.[.4][N]
+And now, look at it![AN]
+It is now my greatest adversary...[N]
+I must be ready.[AN]
+Once we cross this desert, we[N]
+will be at the capital where[AN]
+the final battle awaits us!"[A]
+
+[.v....]
+... Thank you, milord.[A] We can[N]
+now proceed with the preparations.[A]
+
+[.v....][ClearFace]
+
+[....v.]
+... Why must we go through here?[AN]
+I hate sand.[A]
 
 [X]
 
@@ -29,7 +48,7 @@ say whatever MC wrote?[A]
 
 [.v....]
 Woah![A] It seems the winds are[N]
-quite strong here tonight.[A]
+quite strong here.[A]
 
 [....v.]
 Indeed, milord.[AN]
@@ -72,19 +91,8 @@ move in that direction as well.[A]
 
 ## textCh27Village
 
-[..v...][LoadCurrent]
-[....v.][LoadXimena]
-
-We're saved! Even after[N]
-the Crusader God Babby[N]
-himself betrayed the Queen[N]
-due to her terror, her Super[N]
-Blitz Lance made her on par[N]
-with the Crusader God...[N]
-We escaped to this village[N]
-to avoid the ensuing war.[N]
-Please, you must go to[N]
-the Crusader God's aid![A][2NL]
+[.v....][LoadCurrent]
+[....v.][LoadFace][0x61][0x01]
 
 "Sand dragon"?[A] Oh right,[N]
 from that one tale right?[AN]
@@ -93,7 +101,13 @@ seems to actually care about it.[AN]
 If I were you I wouldn't mind[N]
 it too much.[A][2NL]
 
-Anyway, take this.[A] Hopefully[N]
+Anyway,[AN]
+I hear you guys are coming to[N]
+the aid of the Crusader God.[AN]
+Sounds like a big deal![.6][N]
+Whoever that may be...[A][2NL]
+
+Take this.[A] Hopefully[N]
 will it help you on your way.[A]
 
 [X]
