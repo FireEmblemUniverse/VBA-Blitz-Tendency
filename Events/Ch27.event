@@ -906,10 +906,23 @@ scBossWantsToFight: {
 
 ALIGN 4
 scYouShouldntBeHere: {
+	SetSymbol(end, 0)
+
+	CHECK_ALLEGIANCE ActiveUnit
+	BNE end rC r0
+
 	ASMC SendActiveUnitAwayASMC
 
-	NOTIFY textCh27YouShouldNotBeHere 0 0
+	CenterTutorialTextBox
 
+	TUTORIALTEXTBOXSTART
+
+	TEXTSHOW textCh27YouShouldNotBeHere
+	TEXTEND
+
+	REMA
+
+LABEL end
 	NoFade
 	ENDA
 }
@@ -974,8 +987,22 @@ scTreasure4: {
 
 ALIGN 4
 scEnding: {
+	SetSymbol(deuxnids_is_dead, 0)
+
+	CAM1 Vedge
+	FlashCursor(Vedge, 60)
+
 	Text(textCh27Conclusion)
 
+	CHECK_ALIVE Ch27ChrDenis
+	BEQ deuxnids_is_dead rC r0
+
+	CAM1 Ch27ChrDenis
+	FlashCursor(Ch27ChrDenis, 60)
+
+	Text(textCh27PoorDeuxnids)
+
+LABEL deuxnids_is_dead
 	// move to next chapter whatever it is
 	MNCH 0x1E // Taken from VBA Ch27
 
@@ -1241,7 +1268,7 @@ unEnemyMonster15:
 
 ALIGN 4
 unEnemyMonsterBoss:
-	UNIT Ch27ChrZomboss DracoZombie 0 Ch27LvBoss(3) Ch27MonsterSpawnCoords 0 0 0 0 [WretchedAir] NeverMoveAI
+	UNIT Ch27ChrZomboss DracoZombie 0 Ch27LvBoss(3) Ch27MonsterSpawnCoords 0 0 1 redaMonsterMiddle [WretchedAir] NeverMoveAI
 	UNIT // end
 
 ALIGN 4
@@ -1321,6 +1348,9 @@ unEnemyHumanWave4:
 	UNIT Ch27ChrHGeneric PegasusKnight 0 Ch27LvBase(4) [23, 0] 0 0 1 redaHumanRight2 [ShortSpear] PursueWithoutHeedAI
 
 	UNIT // end
+
+redaMonsterMiddle:
+	REDA Ch27MonsterSpawnCoords 0 0 0 0
 
 redaMonsterBBL:
 	REDA [9, 14] 0 0 0 0

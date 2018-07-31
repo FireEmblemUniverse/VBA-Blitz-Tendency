@@ -10,17 +10,62 @@ then kill boss.[X]
 ## textCh27PrePrepIntroduction
 
 [....v.][LoadVedge]
+[.v....][LoadVerge]
 
-hi.[A]
+Sir, Would you please[N]
+say whatever MC wrote?[A]
+
+[....v.]
+
+... Nah.[A]
 
 [X]
 
 
 ## textCh27PostPrepIntroduction
 
+[....v.][LoadVerge]
 [.v....][LoadVedge]
 
-ono winds.[A]
+[.v....]
+Woah![A] It seems the winds are[N]
+quite strong here tonight.[A]
+
+[....v.]
+Indeed, milord.[AN]
+Unusually strong even...[A]
+
+[.v....]
+What do you think?[A]
+
+[....v.]
+Could the sand dragon's seal[N]
+have been broken?[A]
+
+[.v....]
+Wh-[.4] "Sand dragon"?[AN]
+This is the first time that[N]
+I have head of such thing.[AN]
+And what would that even[N]
+have to do with the wind?[A]
+
+[....v.]
+It's from a local legend, milord.[AN]
+An old man living nearby told me[N]
+about it.[AN]
+I'd love to share it with you, but[N]
+I'm afraid don't have the time.[A]
+
+[.v....]
+Right.[AN]
+The wind seems to go in a clockwise[N]
+rotation around the monster nest.[A]
+
+[....v.]
+Indeed.[AN]
+We'd do best following it.[AN]
+The clean ground will probably[N]
+move in that direction as well.[A]
 
 [X]
 
@@ -28,36 +73,104 @@ ono winds.[A]
 ## textCh27Village
 
 [..v...][LoadCurrent]
-[....v.][LoadKefka]
+[....v.][LoadXimena]
 
-Ye thank me gib.[A]
+We're saved! Even after[N]
+the Crusader God Babby[N]
+himself betrayed the Queen[N]
+due to her terror, her Super[N]
+Blitz Lance made her on par[N]
+with the Crusader God...[N]
+We escaped to this village[N]
+to avoid the ensuing war.[N]
+Please, you must go to[N]
+the Crusader God's aid![A][2NL]
+
+"Sand dragon"?[A] Oh right,[N]
+from that one tale right?[AN]
+Strangely only that old man[N]
+seems to actually care about it.[AN]
+If I were you I wouldn't mind[N]
+it too much.[A][2NL]
+
+Anyway, take this.[A] Hopefully[N]
+will it help you on your way.[A]
 
 [X]
 
 
 ## textCh27OnHumanReinf
 
-[....v.][LoadVedge]
+[.v....][LoadVedge]
 
-why do those people exist
+[.v....]
+Those soldiers... are they...[N]
+Who are they again?[AN]
+I really have no idea how the[N]
+lore works in all of this.[AN]
+Not that it matters. We still[N]
+need to deal with them...[A][2NL]
+
+Whoever they are.[A]
 
 [X]
 
 
 ## textCh27BossShowsUp
 
-[....v.][LoadVedge]
+[.v....][LoadVedge]
+[....v.][LoadVerge]
 
-ono a drgn![A]
+[.v....]
+Is that...[.5] The "sand dragon"?[AN]
+But Verge! This is just a[N]
+regular Zombie dragon![A]
+
+[....v.]
+Hm... Indeed it is.[AN]
+Maybe that legend was just[N]
+a legend after all...[A]
+
+[.v....]
+Ugh...[A] Still we need to defeat[N]
+it before being able to move on.[A]
 
 [X]
 
 
 ## textCh27DeuxnisShowsUp
 
-[..v...][LoadDeuxnids]
+[.v....][LoadDeuxnids]
+[....v.][LoadVedge]
 
-Et flash![A]
+[.v....]
+Et flash![A][2NL]
+
+Fear not, citoyens![.4][N]
+I, Deuxnids of <somewhere>, have[N]
+arrived to save you from the griffes[N]
+of the legendary sable dragon,[N]
+creature whose power rivals none[N]
+but the grand bishop of...[.6]
+
+[....v.]
+Yeah, sure, but isn't this just[N]
+A regular zombie dragon?[AN]
+We could have handled that[N]
+ourselves without much trouble...[AN]
+
+[.v....]
+Idiots![A][2NL]
+
+The legendaire sand dragon is[N]
+no mere zombie, but a powerful[N]
+creature invoqued by the ancient[N]
+shamans of wind and earth...[.6]
+
+[....v.]
+Okay![A] We get it![A] Whatever.[AN]
+But now that you scared it away[N]
+we will need to find him again...[A]
 
 [X]
 
@@ -65,23 +178,60 @@ Et flash![A]
 ## textCh27DragonTorch
 
 [....v.][LoadDeuxnids]
+[.v....][LoadVedge]
 
-There he is! Get him![A]
+[....v.]
+There it is![A] Run![A][2NL]
+I will stay behind[N]
+to distract it![AN]
+
+[.v....]
+Thanks...[.4] but no thanks,[N]
+we can take care of it.[AN]
+
+[....v.]
+But...[.4]
+
+[.v....]
+Everyone![A] Charge the dragon![AN]
+We will dispose of it quickly[N]
+and then move on to <somewhere>.[AN]
+
+[.v....][ClearFace]
+
+[....v.]
+Please do not...[.4]
 
 [X]
 
 
 ## textCh27Conclusion
 
-[...v..][LoadVedge]
+[.v....][LoadVedge]
 
-fin.[A]
+[.v....]
+There. We're done here.[AN]
+Now we march towards the[N]
+Capital![.4] Everyone ready?[AN]
+Because you better be! This[N]
+may as well be our final battle![A]
+
+[X]
+
+
+## textCh27PoorDeuxnids
+
+[....v.][LoadDeuxnids]
+
+[....v.]
+...[A]
 
 [X]
 
 
 ## textCh27YouShouldNotBeHere
 
-Undeployed message
+Ha! You shouldn't have been here![AN]
+Your unit has been undeployed.[A]
 
 [X]
