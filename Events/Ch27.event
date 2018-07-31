@@ -366,7 +366,7 @@ ALIGN 4
 scTurnOneIntro: {
 	CAM1 Vedge
 
-	FlashCursor(Vedge, 30)
+	FlashCursor(Vedge, 60)
 	Text(textCh27PostPrepIntroduction)
 
 	NoFade
@@ -788,6 +788,11 @@ scHumanReinf: {
 
 	LOAD1 0 unEnemyHumanInitialWave
 	ENUN
+	
+	CAM1 Vedge
+
+	FlashCursor(Vedge, 60)
+	Text(textCh27OnHumanReinf)
 
 	ENUT eidHumanReinfActive
 
