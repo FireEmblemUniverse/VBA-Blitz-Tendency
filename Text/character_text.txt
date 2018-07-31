@@ -207,6 +207,12 @@ Deuxnids[X]
 ## descDeuxnids
 Not to be confused with Dennis.[X]
 
+## nameSandy
+Sandy[X]
+
+## descSandy
+Just a regular zombie dragon.[X]
+
 ## nameSplenda
 Splenda[X]
 
@@ -325,3 +331,15 @@ Donatenry[X]
 Donateenaries, evil cultists who[N]
 worship Hex, the even more evil[N]
 manifestation of their god.[X]
+
+## nameCh27GenericMonster
+Monster[X]
+
+## descCh27GenericMonster
+A Monster[X]
+
+## nameCh27GenericSoldier
+Soldier[X]
+
+## descCh27GenericSoldier
+A Soldier[X]
