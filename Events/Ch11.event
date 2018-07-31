@@ -111,14 +111,14 @@ ENDA
 ALIGN 4
 SLu_Units:
 SLu_UnitsH:
-UNIT 0x1 Paladin 0 Level(20, Ally, True) [ 8, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
-UNIT 0x2 Paladin 0 Level(20, Ally, True) [ 7, 25] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
-UNIT 0x3 Paladin 0 Level(20, Ally, True) [ 6, 25] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
-UNIT 0x4 Paladin 0 Level(20, Ally, True) [ 5, 25] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
-UNIT 0x5 Paladin 0 Level(20, Ally, True) [ 4, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
-UNIT 0x6 Valkyrie 0 Level(20, Ally, True) [5, 23] 0b 0x00 0 0x0 [Physic, Purge, Divine, Elixir] NoAI
-UNIT 0x7 Warrior 0 Level(20, Ally, True) [ 6, 23] 0b 0x00 0 0x0 [Tomahawk, Longbow, KillerAxe,  Elixir] NoAI
-UNIT 0x8 Paladin 0 Level(20, Ally, True) [ 7, 23] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x1 Paladin 0 Level(20, Ally, True)  [ 8, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x2 Paladin 0 Level(20, Ally, True)  [ 7, 25] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x3 Paladin 0 Level(20, Ally, True)  [ 6, 25] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x4 Paladin 0 Level(20, Ally, True)  [ 5, 25] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x5 Paladin 0 Level(20, Ally, True)  [ 4, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x6 Valkyrie 0 Level(20, Ally, True) [5, 23]  0b 0x00 0 0x0 [Physic, Purge, Divine, Elixir] NoAI
+UNIT 0x7 Warrior 0 Level(20, Ally, True)  [ 6, 23] 0b 0x00 0 0x0 [Tomahawk, Longbow, KillerAxe,  Elixir] NoAI
+UNIT 0x8 Paladin 0 Level(20, Ally, True)  [ 7, 23] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
 UNIT
 
 ALIGN 4

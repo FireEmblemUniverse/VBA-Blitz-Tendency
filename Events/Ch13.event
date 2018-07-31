@@ -136,6 +136,7 @@ LABEL 0x0
     //Mealy is -not- spawned
     LOAD1 0x0 BoneSecret
     SetSkills(Mealy, FieryBloodID, HeroesDeathBlowID, SolID, 0) //Personal is Smite (shove 2 tiles).
+    CAM1 [24, 3]
     STAL 10
     FlashCursor(Mealy,60)
     Text(PlaceholderText)
