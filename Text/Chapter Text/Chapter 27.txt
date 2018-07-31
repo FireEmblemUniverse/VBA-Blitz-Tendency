@@ -16,8 +16,12 @@ Milord, Would you please say the[N]
 few lines the writer wrote for you?[A]
 
 [....v.]
-Oh,[.4] right,[.4] yes.[A][2NL]
+Oh,[.4] right,[.4] yes.[AN]
+AHEM![A][CloseSpeech]
 
+[.v....][ClearFace]
+
+[....v.]
 "This desert always reassured[N]
 me as a kid...[AN]
 My guardian angel of sorts.[.4][N]
@@ -27,6 +31,8 @@ I must be ready.[AN]
 Once we cross this desert, we[N]
 will be at the capital where[AN]
 the final battle awaits us!"[A]
+
+[.v....][LoadVerge]
 
 [.v....]
 ... Thank you, milord.[A] We can[N]
@@ -96,7 +102,7 @@ move in that direction as well.[A]
 
 "Sand dragon"?[A] Oh right,[N]
 from that one tale right?[AN]
-Strangely only that old man[N]
+Strangely only that one old man[N]
 seems to actually care about it.[AN]
 If I were you I wouldn't mind[N]
 it too much.[A][2NL]
@@ -104,8 +110,7 @@ it too much.[A][2NL]
 Anyway,[AN]
 I hear you guys are coming to[N]
 the aid of the Crusader God.[AN]
-Sounds like a big deal![.6][N]
-Whoever that may be...[A][2NL]
+Sounds like a big deal![A][2NL]
 
 Take this.[A] Hopefully[N]
 will it help you on your way.[A]
@@ -168,7 +173,7 @@ creature whose power rivals none[N]
 but the grand bishop of...[.6]
 
 [....v.]
-Yeah, sure, but isn't this just[N]
+Yeah,[.4] sure,[.4] but isn't this just[N]
 A regular zombie dragon?[AN]
 We could have handled that[N]
 ourselves without much trouble...[AN]
@@ -198,9 +203,13 @@ we will need to find him again...[A]
 There it is![A] Run![A][2NL]
 I will stay behind[N]
 to distract it![AN]
+You youngsters better be[N]
+running for your lives[N]
+before it gets to one of[N]
+you, at which point it...[N]
 
 [.v....]
-Thanks...[.4] but no thanks,[N]
+Yes![.4] Thanks![.6] ... But no thanks,[N]
 we can take care of it.[AN]
 
 [....v.]
@@ -214,7 +223,7 @@ and then move on to <somewhere>.[AN]
 [.v....][ClearFace]
 
 [....v.]
-Please do not...[.4]
+S-[.4] Be safe...[A]
 
 [X]
 
@@ -238,7 +247,7 @@ may as well be our final battle![A]
 [....v.][LoadDeuxnids]
 
 [....v.]
-...[A]
+[CloseEyes]...[A]
 
 [X]
 
