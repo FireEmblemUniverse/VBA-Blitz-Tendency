@@ -403,7 +403,7 @@ UNIT
 
 NPCUnits12:
 UNIT Fanni Knight_F 0x00 Level(6, NPC, 0) [5,8] 0x00 0x00 0x0 0x00 [IronLance, Javelin, Antidote] PursueWithoutHeedAI
-UNIT Ersatz Manakete_2_F 0x00 Level(1, NPC, 0) [4,8] 0x00 0x00 0x0 0x00 [HolyDragonStone, Vulnerary, AngelicRobe] AttackInRangeAI
+UNIT Ersatz Manakete_2_F 0x00 Level(1, NPC, 0) [4,8] 0x00 0x00 0x0 0x00 [Dragonshard, Vulnerary, AngelicRobe] AttackInRangeAI
 UNIT
 //use of manakete_2_f is intentional; just "manakete_2" is the Morva dragon zombie (and manakete doesn't load properly)
 
