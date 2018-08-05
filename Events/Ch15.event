@@ -1,7 +1,11 @@
-EventPointerTable(Ch15_ID, Ch15_Events_Table)
+#ifdef TeqTest
+	EventPointerTable(0xA, Ch15_Events_Table)
+#else
+  EventPointerTable(Ch15_ID, Ch15_Events_Table)
+#endif
 
-#define Ch15_Level1 1 //level of unpromoted enemies
-#define Ch15_Level2 1 //level of promoted enemies
+#define Ch15_Level1 13 //level of unpromoted enemies
+#define Ch15_Level2 5 //level of promoted enemies
 
 Ch15_Events_Table:
 POIN Ch15_TurnBasedEvents
@@ -17,17 +21,28 @@ POIN $0 $0 $0 //(enemy 1, enemy 2, enemy 3)
 POIN Ch15_BeginningScene Ch15_EndingScene
 
 Ch15_TurnBasedEvents:
+OpeningTurnEvent(OpeningEvent)
+TurnEventPlayer(0xB, BennyAppears2, 1, 254)
+TurnEventPlayer(0xE, BennyAppears3, 1, 254)
 END_MAIN
 
 Ch15_CharacterBasedEvents:
+CHAR 0x10 SplendaBenny [Splenda, Benny] 0
 END_MAIN
 
 Ch15_LocationBasedEvents:
+Chest(MasterSeal,0,2)
+Chest(SilverLance,13,13)
 END_MAIN
 
 Ch15_MiscBasedEvents:
 CauseGameOverIfLordDies
-DefeatAll(Ch15_EndingScene)
+AFEV 0x12 IfBennyDies 0x11
+AREA 0x9 NearBenny1 [0,0] [6,3]
+AREA 0xA Bone1 [3,0] [3,0]
+AREA 0xC NearBenny2 [10,13] [16,16]
+AREA 0xD Bone2 [13,16] [13,16]
+AREA 0xF NearBenny3 [0,11] [4,16]
 END_MAIN
 
 Ch15_Dunno:
@@ -56,17 +71,363 @@ UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [15,2] 0 0 0 0 [0] NoAI
 UNIT
 
 Ch15_Enemies:
-UNIT Ch15_Enemy Archer 0 Level(Ch15_Level1, Enemy, 1) [8,4] 0 0 0 0 [IronBow] NoAI
+UNIT Ch15_Enemy Wight_Bow 0 Level(Ch15_Level2, Enemy, 1) [8,4] 0 0 0 0 [IronBow] NoAI
+UNIT Ch15_Enemy Soldier 0 Level(Ch15_Level1, Enemy, 1) [6,0] 2 0 0 0 [Axereaver] NoAI
+UNIT Ch15_Enemy Mogall 0 Level(Ch15_Level1, Enemy, 1) [14,9] 0 0 0 0 [Flux] NoAI
+UNIT Ch15_Enemy General 0 Level(Ch15_Level2, Enemy, 1) [9,9] 0 0 0 0 [HandAxe, SilverLance] AttackInRangeAI
+UNIT Ch15_Enemy Warrior 0 Level(Ch15_Level2, Enemy, 1) [2,15] 0 0 0 0 [SteelBow, SteelAxe] NoAI
+UNIT Ch15_Enemy Tarvos 0 Level(Ch15_Level1, Enemy, 1) [11, 16] 0 2 0 0 [Swordreaver, Elixir] AttackInRangeAI
+UNIT Ch15_Enemy Mage 0 Level(Ch15_Level1-1, Enemy, 1) [2,8] 0 0 0 0 [Bolting] GuardTileAI
+UNIT Ch15_Enemy Hero 0 Level(Ch15_Level2, Enemy, 1) [6,12] 0 2 0 0 [SilverSword,Lancereaver] AttackInRangeAI
+UNIT Ch15_Enemy Monk 0 Level(Ch15_Level1, Enemy, 1) [0,1] 0 0 0 0 [Divine, Vulnerary] AttackInRangeAI
+UNIT Ch15_Enemy Deathgoyle 0 Level(Ch15_Level2, Enemy, 1) [6,15] 0 0 0 0 [ShortSpear] AttackInRangeAI
 UNIT
 
+IntroCutsceneUnits:
+UNIT Vedge EirikaLord 0 Level(1,Ally,0) [16,0] 0 0 1 VedgeREDA [0] NoAI
+UNIT Verge Swordmaster 0 Level(20,Ally,1) [16,0] 0 0 1 VergeREDA [0] NoAI
+UNIT Splenda Witch 0 Level(1,Ally, 1) [16,0] 0 0 1 SplendaREDA [0] NoAI
+UNIT
+
+VedgeREDA:
+REDA [14, 0] 0 1 0 0
+VergeREDA:
+REDA [15,1] 0 1 0 0
+SplendaREDA:
+REDA [13,1] 0 1 0 0
+
+ZaneIntro:
+UNIT Zane Wight 0 Level(3,NPC,1) [5,0] 0 0 1 ZaneREDA [ShortSpear, SilverBlade, Vulnerary] GuardTileAI
+UNIT
+
+ZaneREDA:
+REDA [12,1] 0 1 0 0
+
+BennyIntro:
+UNIT Benny Mauthedoog 0 Level(8,Enemy,1) [0,5] 0 0 1 BennyREDA [FieryFang] DoNothing
+UNIT
+
+BennyREDA:
+REDA [11,1] 0 1 0 0
+
 Ch15_BeginningScene:
-LOAD2 0x1 Ch15_Units		//Allies
+MUSC 0x24 //Advance
+CAM1 [9,5]
+STAL 30
+LOAD2 0x1 IntroCutsceneUnits
 ENUN
+STAL 60
+MUSI
+TEXTSTART
+TEXTSHOW(Ch15Intro1)
+TEXTEND
+LOAD1 0x1 ZaneIntro
+ENUN
+STAL 60
+TEXTCONT
+TEXTEND
+MOVE 0x0 Verge [16,0]
+ENUN
+INVIS Verge
+STAL 60
+TEXTCONT
+TEXTEND
+LOAD1 0x1 BennyIntro
+STAL 20 //Note the lack of ENUN; this is on purpose
+TEXTCONT
+TEXTEND
+MOVE 0x0 Benny [16,0]
+ENUN
+INVIS Benny
+TEXTCONT
+TEXTEND
 LOAD1 0x1 Ch15_Enemies
 ENUN
+TEXTCONT
+TEXTEND
+REMA
+FADI 10
+REVEAL Verge
+LOAD2 0x1 Ch15_Units
+ENUN
+ENUT 0xB //For Benny appears 2
+ENUT 0xE //For benny appears 3
+ENUT 0x10 //For Splenda talking to Benny
 GotoPrepScreen
+NoFade
+ENDA
 
+OpeningEvent:
+MUSC 0x12 //Confront the Past, idfk
+MUSI
+CAM1 Vedge
+FlashCursor(Vedge,60)
+Text(Ch15Start)
+MUNO
+CAM1 [0,0]
+STAL 40
+SETVAL 0x1 (Benny<<0x10) //x,y,char_id
+ASMC Change_Coordinates|1 //0,0
+REVEAL Benny
+MOVE 0x0 Benny [3,0]
+ENUN
+STAL 30
+FlashCursor(Benny,100)
+NoFade
+ENDA
+
+NearBenny1:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x12 0xC 0x0 //if not player unit, don't trigger event
+BYTE 0x20 0x26 3 0 
+FlashCursor(Benny,60)
+MUSI
+CHECK_ACTIVE
+SETVAL 0x3 Splenda
+BEQ 0x1 0xC 0x3 //if splenda, jump to label 1
+TEXTSTART
+TEXTSHOW(Benny1Or2NotSplenda)
+TEXTEND
+GOTO 0x2
+LABEL 0x1
+TEXTSTART
+TEXTSHOW(Benny1Or2Splenda)
+TEXTEND
+LABEL 0x2
+STAL 20
+MOVE 0x0 Benny [0,0]
+ENUN
+INVIS Benny
+STAL 20
+TEXTCONT
+TEXTEND
+REMA
+MUNO
+STAL 50
+FlashCursor(3,0,100)
+GOTO 0x13
+LABEL 0x12
+ENUF 0x9
+LABEL 0x13
+NoFade
+ENDA
+
+Bone1:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+CHECK_EVENTID 0x9
+BEQ 0x1 0xC 0x0
+MUSI
+ENUF 0xB 		//so we can trigger Benny appearing next player phase
+Text(BoneFound)
+FADI 10
+STAL 40
+SetBackground(Shrine)
+//FADU 10 		//seems FADU is built into the SetBackground? idk
+TEXTSHOW(ZaneBone1)
+TEXTEND
+REMA
+ClearBackground
+MUNO
+GOTO 0x2
+LABEL 0x1
+ENUF 0xA
+LABEL 0x2
+NoFade
+ENDA
+
+BennyAppears2:
+BYTE 0x20 0x26 14 16 //camera that doesn't go out of bounds
+STAL 40
+SETVAL 0x1 (0x10|(0x10<<0x8)|(Benny<<0x10))
+ASMC Change_Coordinates|1
+REVEAL Benny
+MOVE 0x0 Benny [13,16]
+ENUN
+FlashCursor(Benny,100)
+NoFade
+ENDA
+
+NearBenny2:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x3 0xC 0x0
+CHECK_EVENTID 0xB 	//did BennyAppears2 happen?
+BEQ 0x3 0xC 0x0		//if not, goto label3
+MUSI
+BYTE 0x20 0x26 14 16
+FlashCursor(Benny,60)
+CHECK_ACTIVE
+SETVAL 0x3 Splenda
+BEQ 0x4 0xC 0x3 //if splenda, jump to label 4
+TEXTSTART
+TEXTSHOW(Benny1Or2NotSplenda)
+TEXTEND
+GOTO 0x5
+LABEL 0x4
+TEXTSTART
+TEXTSHOW(Benny1Or2Splenda)
+TEXTEND
+LABEL 0x5
+STAL 20
+MOVE 0x0 Benny [16,16]
+ENUN
+INVIS Benny
+STAL 20
+TEXTCONT
+TEXTEND
+REMA
+MUNO
+STAL 50
+FlashCursor(13,16,100)
+GOTO 0x6
+LABEL 0x3			//bennyappears2 has not happened yet
+ENUF 0xC			//unset this event's id
+LABEL 0x6
+NoFade
+ENDA
+
+Bone2:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+CHECK_EVENTID 0xC
+BEQ 0x1 0xC 0x0
+ENUF 0xE 		//so we can trigger Benny appearing next player phase
+MUSI
+Text(BoneFound)
+FADI 10
+STAL 40
+SetBackground(Shrine)
+TEXTSHOW(ZaneBone2)
+TEXTEND
+REMA
+ClearBackground
+GOTO 0x2
+LABEL 0x1
+ENUF 0xD
+LABEL 0x2
+NoFade
+ENDA
+
+BennyAppears3:
+BYTE 0x20 0x26 0 16 //camera that doesn't go out of bounds
+STAL 40
+SETVAL 0x1 ((0x10<<0x8)|(Benny<<0x10))
+ASMC Change_Coordinates|1
+REVEAL Benny
+MOVE 0x0 Benny [1,14]
+ENUN
+FlashCursor(Benny,100)
+ENUF 0x10 				//Splenda talks to Benny
+NoFade
+ENDA
+
+NearBenny3:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x6 0xC 0x0
+CHECK_EVENTID 0xE
+BEQ 0x6 0xC 0x0
+MUSI
+BYTE 0x20 0x26 1 14
+FlashCursor(Benny,60)
+CHECK_ACTIVE
+SETVAL 0x3 Splenda
+BEQ 0x4 0xC 0x3 //if splenda, jump to label 4
+Text(Benny3NotSplenda)
+MUNO
+GOTO 0x5
+LABEL 0x4
+Text(Benny3Splenda)
+MUNO
+GOTO 0x5
+LABEL 0x6
+ENUF 0xF
+LABEL 0x5
+NoFade
+ENDA
+
+SplendaBenny:
+MUSI
+SetBackground(Shrine)
+Text(SplendaBenny1)
+EVBIT_F 0x2 //stop skipping before choice
+STAL 20
+_0x1A23
+SETVAL 0xB 0xFFFFFFFF
+TEXTSHOW SplendaBenny2
+TEXTEND
+REMA
+SETVAL 0x3 0x1
+BNE 0x10 0xC 0x3 //jump if no
+//if yes
+Text(SplendaBennyYes)
+STAL 20
+_0x1A23
+SETVAL 0xB 0xFFFFFFFF
+TEXTSHOW YesEnding1
+TEXTEND
+REMA
+STAL 60
+Text(YesEnding2)
+CUSA Zane
+GOTO 0x11
+
+LABEL 0x10 //if no
+Text(SplendaBennyNo)
+STAL 100
+Text(NoEnding1)
+STAL 100
+Text(NoEnding2)
+CUSA Benny
+
+LABEL 0x11
 Ch15_EndingScene:
+ClearBackground
 MNCH 16
 NoFade
 ENDA
+
+IfBennyDies:
+MUSI
+SetBackground(Shrine)
+Text(BennyDies1)
+STAL 100
+_0x1A23
+SETVAL 0xB 0xFFFFFFFF
+TEXTSHOW BennyDies2
+TEXTEND
+REMA
+ClearBackground
+INVIS Splenda //remove her from party
+MNCH 16
+NoFade
+ENDA
+
+ALIGN 4
+Change_Coordinates:
+BYTE $10 $B5 $07 $4C $A0 $79 $07 $49 $8E $46 $00 $F8 $00 $28 $03 $D0 $21 $79 $01 $74 $61 $79 $41 $74 $10 $BC $01 $BC $00 $47 $00 $00 $B8 $04 $00 $03 $9C $82 $01 $08
+
+/* Source
+.thumb
+
+@set slot 1 to x|(y<<8)|(char id<<0x10)
+
+push	{r4,r14}
+ldr		r4,=#0x30004B8		@slot 0
+ldrb	r0,[r4,#0x6]		@char id to look for
+ldr		r1,=#0x801829C		@return char data ptr given char id
+mov		r14,r1
+.short	0xF800
+cmp		r0,#0
+beq		GoBack
+ldrb	r1,[r4,#0x4]		@x
+strb	r1,[r0,#0x10]
+ldrb	r1,[r4,#0x5]		@y
+strb	r1,[r0,#0x11]
+GoBack:
+pop		{r4}
+pop		{r0}
+bx		r0
+
+.ltorg
+*/
+

@@ -16,18 +16,18 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 Units:
-UNIT Eirika EphraimMasterLord 0x00 Level(20, Ally, 1) [15,28] 0x00 0x00 0x0 0x00 [Reginleif] NoAI 
-UNIT Seth Swordmaster 0x00 Level(20, Ally, 1) [14,29] 0x00 0x00 0x0 0x00 [SilverSword] NoAI 
-UNIT Gilliam Paladin 0x00 Level(20, Ally, 1) [15,29] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
-UNIT Ross Paladin 0x00 Level(20, Ally, 1) [14,28] 0x00 0x00 0x0 0x00 [Spear] NoAI 
-UNIT Colm Sniper 0x00 Level(20, Ally, 1) [15,27] 0x00 0x00 0x0 0x00 [SilverBow] NoAI 
-UNIT Vanessa Bishop 0x00 Level(20, Ally, 1) [12,29] 0x00 0x00 0x0 0x00 [Physic, Lightning, Warp, Rescue] NoAI 
-UNIT Lute WyvernLord 0x00 Level(20, Ally, 1) [17,28] 0x00 0x00 0x0 0x00 [SilverLance, Spear, DelphiShield, ChestKey] NoAI 
-UNIT Vanessa General 0x00 Level(20, Ally, 1) [16,27] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI 
-UNIT Neimi Rogue 0x00 Level(20, Ally, 1) [17,27] 0x00 0x00 0x0 0x00 [KillingEdge] NoAI 
-UNIT Artur Hero 0x00 Level(20, Ally, 1) [16,28] 0x00 0x00 0x0 0x00 [HandAxe, Armourslayer] NoAI 
-UNIT Garcia Sage 0x00 Level(20, Ally, 1) [16,29] 0x00 0x00 0x0 0x00 [Elfire] NoAI 
-UNIT Natasha Warrior 0x00 Level(20, Ally, 1) [17,29] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI 
+UNIT Eirika EphraimMasterLord 0x00 Level(20, Ally, 1) [15,28] 0x00 0x00 0x0 0x00 [Reginleif] NoAI
+UNIT Seth Swordmaster 0x00 Level(20, Ally, 1) [14,29] 0x00 0x00 0x0 0x00 [SilverSword] NoAI
+UNIT Gilliam Paladin 0x00 Level(20, Ally, 1) [15,29] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT Ross Paladin 0x00 Level(20, Ally, 1) [14,28] 0x00 0x00 0x0 0x00 [Spear] NoAI
+UNIT Colm Sniper 0x00 Level(20, Ally, 1) [15,27] 0x00 0x00 0x0 0x00 [SilverBow] NoAI
+UNIT Vanessa Bishop 0x00 Level(20, Ally, 1) [12,29] 0x00 0x00 0x0 0x00 [Physic, Lightning, Warp, Rescue] NoAI
+UNIT Lute WyvernLord 0x00 Level(20, Ally, 1) [17,28] 0x00 0x00 0x0 0x00 [SilverLance, Spear, DelphiShield, ChestKey] NoAI
+UNIT Vanessa General 0x00 Level(20, Ally, 1) [16,27] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI
+UNIT Neimi Rogue 0x00 Level(20, Ally, 1) [17,27] 0x00 0x00 0x0 0x00 [KillingEdge] NoAI
+UNIT Artur Hero 0x00 Level(20, Ally, 1) [16,28] 0x00 0x00 0x0 0x00 [HandAxe, Armourslayer] NoAI
+UNIT Garcia Sage 0x00 Level(20, Ally, 1) [16,29] 0x00 0x00 0x0 0x00 [Elfire] NoAI
+UNIT Natasha Warrior 0x00 Level(20, Ally, 1) [17,29] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI
 UNIT
 
 
@@ -39,6 +39,7 @@ CharacterBasedEvents:
 CharacterEventBothWays(0x9,KojimaGet,Kojima,KojimaNPC)
 CharacterEventBothWays(0x9,SakaguchiGet,Sakaguchi,SakaguchiNPC)
 CharacterEventBothWays(0x9,IgaGet,Iga,IgaNPC)
+CharacterEventBothWays(0x9,InafuneMadness,Inafune,Anna)
 END_MAIN
 
 LocationBasedEvents:
@@ -98,7 +99,7 @@ BEQ  0x1 0xC 0x0
 	TurnNPC(SakaguchiNPC)
 	TurnNPC(IgaNPC)
 LABEL 0x1
-MNCH 29
+MNC2 Chapter29
 ENDA
 
 // Events
@@ -147,6 +148,35 @@ Text(RaisingBridge)
 TILECHANGE 6
 ENDA
 
+InafuneMadness:
+Text(InafuneCheck1)
+CHECK_EVENTID InafuneEvent1
+BEQ 1 0xC 0x0
+STAL 1
+Text(InafuneCheck2)
+CHECK_EVENTID InafuneEvent2
+BEQ 1 0xC 0x0
+STAL 1
+Text(InafuneCheck3)
+CHECK_EXISTS 0xB
+BEQ 1 0xC 0x0
+CHECK_CLASS 0xB
+SETVAL 0x4 FalcoKnight
+BNE 1 0xC 0x4
+STAL 1
+Text(InafuneGet)
+TurnAlly(Inafune)
+CHECK_EXISTS KojimaNPC
+BEQ 0x2 0xC 0x0
+TurnEnemy(KojimaNPC)
+TurnEnemy(SakaguchiNPC)
+TurnEnemy(IgaNPC)
+GOTO 2
+LABEL 1
+Text(InafuneFailed)
+LABEL 2
+ENDA
+
 
 // Manual Movement
 
@@ -155,60 +185,64 @@ ENDA
 // Units
 MetalGear:
 UNIT Kojima Assassin Kojima Level(20, Enemy, 0) [18,9] 0x00 0x00 0x0 0x00 [KillingEdge, PoisonSword] NeverMoveAI
-UNIT 0xB6 Berserker Kojima Level(20, Enemy, 1) [23,10] 0x00 0x00 0x0 0x00 [PoisonAxe] ChaseOnceApproachedAI 
-UNIT 0xB6 Berserker Kojima Level(20, Enemy, 1) [11,0] 0x00 0x00 0x0 0x00 [PoisonAxe] ChaseOnceApproachedAI 
-UNIT 0xB6 WyvernLord Kojima Level(20, Enemy, 1) [12,8] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI 
-UNIT 0xB6 WyvernLord Kojima Level(20, Enemy, 1) [9,11] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI 
-UNIT 0xB6 WyvernLord Kojima Level(20, Enemy, 1) [15,11] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI 
+UNIT 0xB6 Berserker Kojima Level(20, Enemy, 1) [23,10] 0x00 0x00 0x0 0x00 [PoisonAxe] ChaseOnceApproachedAI
+UNIT 0xB6 Berserker Kojima Level(20, Enemy, 1) [11,0] 0x00 0x00 0x0 0x00 [PoisonAxe] ChaseOnceApproachedAI
+UNIT 0xB6 WyvernLord Kojima Level(20, Enemy, 1) [12,8] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI
+UNIT 0xB6 WyvernLord Kojima Level(20, Enemy, 1) [9,11] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI
+UNIT 0xB6 WyvernLord Kojima Level(20, Enemy, 1) [15,11] 0x00 0x00 0x0 0x00 [PoisonSword] ChaseOnceApproachedAI
 UNIT 0xB6 Sniper Kojima Level(20, Enemy, 1) [17,7] 0x00 0x00 0x0 0x00 [PoisonBow] AttackInRangeAI //ballistician
 UNIT 0xB6 Sniper Kojima Level(20, Enemy, 1) [18,8] 0x00 0x00 0x0 0x00 [PoisonBow] AttackInRangeAI //ballistician
 UNIT 0xB6 Rogue Kojima Level(20, Enemy, 1) [18,3] 0x00 0x00 0x0 0x00 [PoisonSword] [0x10, 0x00, 0x00, 0x00] //StealingThiefAI minus the 0x05
-UNIT 0xB6 Rogue Kojima Level(20, Enemy, 1) [25,5] 0x00 0x00 0x0 0x00 [PoisonSword] [0x10, 0x00, 0x00, 0x00] 
-UNIT 0xB6 Rogue Kojima Level(20, Enemy, 1) [29,10] 0x00 0x00 0x0 0x00 [PoisonSword] [0x10, 0x00, 0x00, 0x00] 
-UNIT Inafune Thief Kojima Level(9, Enemy, 1) [0,5] 0x00 0x00 0x0 0x00 [BodyRing, GoldGem, GoldGem, GoldGem] LootingThiefAI
+UNIT 0xB6 Rogue Kojima Level(20, Enemy, 1) [25,5] 0x00 0x00 0x0 0x00 [PoisonSword] [0x10, 0x00, 0x00, 0x00]
+UNIT 0xB6 Rogue Kojima Level(20, Enemy, 1) [29,10] 0x00 0x00 0x0 0x00 [PoisonSword] [0x10, 0x00, 0x00, 0x00]
+#ifdef __DEBUG__
+UNIT Inafune Thief Kojima Level(9, Enemy, 0) [15,30] 0x00 0x00 0x0 0x00 [BodyRing, GoldGem, GoldGem, GoldGem] LootingThiefAI //start near the party for ease of talking
+#else
+UNIT Inafune Thief Kojima Level(9, Enemy, 0) [0,5] 0x00 0x00 0x0 0x00 [BodyRing, GoldGem, GoldGem, GoldGem] LootingThiefAI
+#endif
 UNIT
 
 FinalFantasy:
-UNIT Sakaguchi Sage Sakaguchi Level(20, Enemy, 0) [6,16] 0x00 0x00 0x0 0x00 [Forblaze] NeverMoveAI
-UNIT 0xB7 Sage Sakaguchi Level(10, Enemy, 1) [6,14] 0x00 0x00 0x0 0x00 [Fimbulvetr] AttackInRangeAI 
-UNIT 0xB7 Sage Sakaguchi Level(10, Enemy, 1) [8,19] 0x00 0x00 0x0 0x00 [Bolting] NeverMoveAI 
-UNIT 0xB7 Paladin Sakaguchi Level(10, Enemy, 1) [0,20] 0x00 0x00 0x0 0x00 [LightBrand] ChaseOnceApproachedAI 
-UNIT 0xB7 WyvernKnight Sakaguchi Level(10, Enemy, 1) [6,21] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
-UNIT 0xB7 Summoner Sakaguchi Level(10, Enemy, 1) [2,25] 0x00 0x00 0x0 0x00 [Luna, Flux] AttackInRangeAI 
-UNIT 0xB7 Bishop Sakaguchi Level(10, Enemy, 1) [1,20] 0x00 0x00 0x0 0x00 [Fortify, Purge] HealUnits 
-UNIT 0xB7 Bard Sakaguchi Level(10, Enemy, 1) [0,1] 0x00 0x00 0x0 0x00 [0x00] DoNothing 
-UNIT 0xB7 Warrior Sakaguchi Level(10, Enemy, 1) [5,13] 0x00 0x00 0x0 0x00 [SilverAxe] PursueWithoutHeedAI 
-UNIT 0xB7 Cleric Sakaguchi Level(1, Enemy, 1) [0,5] 0x00 0x00 0x0 0x00 [Heal] HealUnits 
-UNIT 0xB7 Mage Sakaguchi Level(1, Enemy, 1) [1,5] 0x00 0x00 0x0 0x00 [Fire] PursueWithoutHeedAI 
-UNIT 0xB7 Berserker Sakaguchi Level(10, Enemy, 1) [4,17] 0x00 0x00 0x0 0x00 [Hammer] PursueWithoutHeedAI 
-UNIT 0xB7 Assassin Sakaguchi Level(10, Enemy, 1) [6,8] 0x00 0x00 0x0 0x00 [SteelSword] StealingThiefAI 
-UNIT 0xB7 Druid Sakaguchi Level(10, Enemy, 1) [3,3] 0x00 0x00 0x0 0x00 [Berserk, Flux] AttackInRangeAI 
+UNIT Sakaguchi Sage Sakaguchi Level(20, Enemy, 0) [6,16] 0x00 0x00 0x0 0x00 [Excalibur] NeverMoveAI
+UNIT 0xB7 Sage Sakaguchi Level(10, Enemy, 1) [6,14] 0x00 0x00 0x0 0x00 [Fimbulvetr] AttackInRangeAI
+UNIT 0xB7 Sage Sakaguchi Level(10, Enemy, 1) [8,19] 0x00 0x00 0x0 0x00 [Bolting] NeverMoveAI
+UNIT 0xB7 Paladin Sakaguchi Level(10, Enemy, 1) [0,20] 0x00 0x00 0x0 0x00 [LightBrand] ChaseOnceApproachedAI
+UNIT 0xB7 WyvernKnight Sakaguchi Level(10, Enemy, 1) [6,21] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI
+UNIT 0xB7 Summoner Sakaguchi Level(10, Enemy, 1) [2,25] 0x00 0x00 0x0 0x00 [Luna, Flux] AttackInRangeAI
+UNIT 0xB7 Bishop Sakaguchi Level(10, Enemy, 1) [1,20] 0x00 0x00 0x0 0x00 [Fortify, Purge] HealUnits
+UNIT 0xB7 Bard Sakaguchi Level(10, Enemy, 1) [0,1] 0x00 0x00 0x0 0x00 [0x00] DoNothing
+UNIT 0xB7 Warrior Sakaguchi Level(10, Enemy, 1) [5,13] 0x00 0x00 0x0 0x00 [SilverAxe] PursueWithoutHeedAI
+UNIT 0xB7 Cleric Sakaguchi Level(1, Enemy, 1) [0,5] 0x00 0x00 0x0 0x00 [Heal] HealUnits
+UNIT 0xB7 Mage Sakaguchi Level(1, Enemy, 1) [1,5] 0x00 0x00 0x0 0x00 [Fire] PursueWithoutHeedAI
+UNIT 0xB7 Berserker Sakaguchi Level(10, Enemy, 1) [4,17] 0x00 0x00 0x0 0x00 [Hammer] PursueWithoutHeedAI
+UNIT 0xB7 Assassin Sakaguchi Level(10, Enemy, 1) [6,8] 0x00 0x00 0x0 0x00 [SteelSword] StealingThiefAI
+UNIT 0xB7 Druid Sakaguchi Level(10, Enemy, 1) [3,3] 0x00 0x00 0x0 0x00 [Berserk, Flux] AttackInRangeAI
 UNIT
 
 Castlevania1:
 UNIT Iga Hero Iga Level(20, Enemy, 0) [25,29] 0x00 0x00 0x0 0x00 [SilverAxe] NeverMoveAI
-UNIT 0x87 Entombed Iga Level(10, Enemy, 1) [27,28] 0x00 0x00 0x0 0x00 [SharpClaw] AttackInRangeAI 
-UNIT 0x87 Entombed Iga Level(10, Enemy, 1) [31,26] 0x00 0x00 0x0 0x00 [SharpClaw] AttackInRangeAI 
-UNIT 0x87 Wight_Bow Iga Level(10, Enemy, 1) [26,24] 0x00 0x00 0x0 0x00 [SilverBow] AttackInRangeAI 
-UNIT 0x87 Gwyllgi Iga Level(10, Enemy, 1) [31,26] 0x00 0x00 0x0 0x00 [HellFang] PursueWithoutHeedAI 
-UNIT 0x87 Gorgon Iga Level(10, Enemy, 1) [29,31] 0x00 0x00 0x0 0x00 [DemonSurge, Stone] PursueWithoutHeedAI 
-UNIT 0x87 Maelduin Iga Level(10, Enemy, 1) [22,31] 0x00 0x00 0x0 0x00 [SilverAxe, SilverBow] PursueWithoutHeedAI 
-UNIT 0x87 ElderBael Iga Level(10, Enemy, 1) [23,28] 0x00 0x00 0x0 0x00 [SharpClaw] PursueWithoutHeedAI 
+UNIT 0x87 Entombed Iga Level(10, Enemy, 1) [27,28] 0x00 0x00 0x0 0x00 [SharpClaw] AttackInRangeAI
+UNIT 0x87 Entombed Iga Level(10, Enemy, 1) [31,26] 0x00 0x00 0x0 0x00 [SharpClaw] AttackInRangeAI
+UNIT 0x87 Wight_Bow Iga Level(10, Enemy, 1) [26,24] 0x00 0x00 0x0 0x00 [SilverBow] AttackInRangeAI
+UNIT 0x87 Gwyllgi Iga Level(10, Enemy, 1) [31,26] 0x00 0x00 0x0 0x00 [HellFang] PursueWithoutHeedAI
+UNIT 0x87 Gorgon Iga Level(10, Enemy, 1) [29,31] 0x00 0x00 0x0 0x00 [DemonSurge, Stone] PursueWithoutHeedAI
+UNIT 0x87 Maelduin Iga Level(10, Enemy, 1) [22,31] 0x00 0x00 0x0 0x00 [SilverAxe, SilverBow] PursueWithoutHeedAI
+UNIT 0x87 ElderBael Iga Level(10, Enemy, 1) [23,28] 0x00 0x00 0x0 0x00 [SharpClaw] PursueWithoutHeedAI
 UNIT
 
 SimonsQuest:
-UNIT 0x87 Wight_Bow Iga Level(10, Enemy, 1) [18,22] 0x00 0x00 0x0 0x00 [Ballista] NeverMoveAI 
-UNIT 0x87 Gwyllgi Iga Level(10, Enemy, 1) [15,21] 0x00 0x00 0x0 0x00 [HellFang] PursueWithoutHeedAI 
-UNIT 0x87 Gwyllgi Iga Level(10, Enemy, 1) [10,21] 0x00 0x00 0x0 0x00 [HellFang] PursueWithoutHeedAI 
-UNIT 0x87 General Iga Level(10, Enemy, 1) [18,18] 0x00 0x00 0x0 0x00 [Tomahawk] NeverMoveAI 
-UNIT 0x87 General Iga Level(10, Enemy, 1) [14,24] 0x00 0x00 0x0 0x00 [Tomahawk] NeverMoveAI 
-UNIT 0x87 General Iga Level(10, Enemy, 1) [16,24] 0x00 0x00 0x0 0x00 [Tomahawk] NeverMoveAI 
-UNIT 0x87 General Iga Level(10, Enemy, 1) [15,24] 0x00 0x00 0x0 0x00 [Tomahawk] NeverMoveAI 
-UNIT 0x87 ArchMogall Iga Level(10, Enemy, 1) [22,23] 0x00 0x00 0x0 0x00 [BloodyEye] AttackInRangeAI 
-UNIT 0x87 ArchMogall Iga Level(10, Enemy, 1) [19,20] 0x00 0x00 0x0 0x00 [BloodyEye] AttackInRangeAI 
-UNIT 0x87 Deathgoyle Iga Level(10, Enemy, 1) [24,15] 0x00 0x00 0x0 0x00 [KillerLance] PursueWithoutHeedAI 
-UNIT 0x87 Deathgoyle Iga Level(10, Enemy, 1) [25,16] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
-UNIT 0x87 Deathgoyle Iga Level(10, Enemy, 1) [29,16] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
+UNIT 0x87 Wight_Bow Iga Level(10, Enemy, 1) [18,22] 0x00 0x00 0x0 0x00 [Ballista] NeverMoveAI
+UNIT 0x87 Gwyllgi Iga Level(10, Enemy, 1) [15,21] 0x00 0x00 0x0 0x00 [HellFang] PursueWithoutHeedAI
+UNIT 0x87 Gwyllgi Iga Level(10, Enemy, 1) [10,21] 0x00 0x00 0x0 0x00 [HellFang] PursueWithoutHeedAI
+UNIT 0x87 General Iga Level(10, Enemy, 1) [18,18] 0x00 0x00 0x0 0x00 [Tomahawk] NeverMoveAI
+UNIT 0x87 General Iga Level(10, Enemy, 1) [14,24] 0x00 0x00 0x0 0x00 [Tomahawk] NeverMoveAI
+UNIT 0x87 General Iga Level(10, Enemy, 1) [16,24] 0x00 0x00 0x0 0x00 [Tomahawk] NeverMoveAI
+UNIT 0x87 General Iga Level(10, Enemy, 1) [15,24] 0x00 0x00 0x0 0x00 [Tomahawk] NeverMoveAI
+UNIT 0x87 ArchMogall Iga Level(10, Enemy, 1) [22,23] 0x00 0x00 0x0 0x00 [BloodyEye] AttackInRangeAI
+UNIT 0x87 ArchMogall Iga Level(10, Enemy, 1) [19,20] 0x00 0x00 0x0 0x00 [BloodyEye] AttackInRangeAI
+UNIT 0x87 Deathgoyle Iga Level(10, Enemy, 1) [24,15] 0x00 0x00 0x0 0x00 [KillerLance] PursueWithoutHeedAI
+UNIT 0x87 Deathgoyle Iga Level(10, Enemy, 1) [25,16] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI
+UNIT 0x87 Deathgoyle Iga Level(10, Enemy, 1) [29,16] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI
 UNIT
 
 

@@ -135,6 +135,50 @@ Anna[X]
 ## nameFaust
 Faust[X]
 
+## LuutName
+Luut[X]
+
+## LuutDesc
+Sweet. Quiet. Finding power.[X]
+
+## LuutAllyName
+Luut's Ally[X]
+
+## LuutAllyDesc
+A companion or hired fighter.[X]
+
+## nameSweetBoss
+SweetBoss[X]
+
+## nameSweetGeneric
+Keyed-in[X]
+
+## descSweetGeneric
+Uh, is that right?[X]
+
+## nameBoneGeneric
+Enemy[X]
+
+## nameBoneScary
+Scary[X]
+
+## descBoneGeneric
+An opponent of nefarious[NL]
+origin, always in the way.[X]
+
+## nameBoneBoss
+DarkManMan[X]
+
+## descBoneBoss
+King of thieves..?[X]
+
+## nameMealy
+Mealy[X]
+
+## descMealy
+Why was... okay, fine.[NL]
+I wanted one.[X]
+
 ## SabinName
 Sabin[X]
 
@@ -149,10 +193,10 @@ Kefka[X]
 A crazy clown from a distant land.[N]
 Remarkably fond of one-liners.[X]
 
-##AdolgiName
+## AdolgiName
 Adolgi[X]
 
-##AdolgiDesc
+## AdolgiDesc
 Dogi ate roo adol.[NL]
 When adol became a human,[NL]
 bad things happened.[X]
@@ -166,6 +210,128 @@ Not to be confused with Dennis.[X]
 ## nameSplenda
 Splenda[X]
 
+## SeibahName
+Seibah[X]
+
+## SeibahDesc
+A servant looking for the[NL]
+Holy Grail.[X]
+
+## RinsletName
+Rinslet[X]
+
+## RinsletDesc
+A noblewoman from an[NL]
+alternate world.[X]
+
+## KamitoName
+Kamito[X]
+
+## KamitoDesc
+The incarnation of the Demon King[NL]
+from another world.[X]
+
+## ClaireName
+Claire[X]
+
+## ClaireDesc
+The Dark Priestress of the Demon[NL]
+King incarnation.[X]
+
+## MedeaName
+Medea[X]
+
+## MedeaDesc
+A Caster servant looking[NL]
+for the Holy Grail.[X]
+
+## BDName
+Blade Dance[X]
+
+## BDDesc
+One of the competitors in the[NL]
+Blade Dance tournament.[X]
+
+## SpiritName
+Fall Spirit[X]
+
+## SpiritDesc
+A spirit from the past.[X]
+
+## AnormallyName
+Annormally[X]
+
+## AnormallyDesc
+An anormally messing up the[NL]
+events of the Holy Grail war.[X]
+
+## nameNichol
+Nichol[X]
+
+## descNichol
+A ruthless man who has two fears:[N]
+Death, and a ruined Christmas.[X]
+
+## descAwakeningAnna
+She's all about slashing prices...[N]
+and enemies.[X]
+
+## nameCh1Pirate
+Pirate[X]
+
+## descCh1Pirate
+A pirate working under Jazzak.[X]
+
+## Ch3BossName
+Chien[X]
+
+## Ch3BossDesc
+A translator by profession. However,[N]
+his results tend to be questionable.[X]
+
+## KojimaName
+Kojima[X]
+
+## KojimaDesc
+Nanomachines, son. Stressed from[N]
+continuous Metal Gear development.[X]
+
+## SakaguchiName
+Sakaguchi[X]
+
+## SakaguchiDesc
+He created the Final Fantasy. Don't[N]
+ask why there's 14 more of them.[X]
+
+## IgaName
+Iga[X]
+
+## IgaDesc
+Castlevania got consumed in pachinko.[N]
+As a result, he made Bloodstained.[X]
+
+## InafuneName
+Inafune[X]
+
+## InafuneDesc
+Credited with Mega Man, he thinks[N]
+himself a robot master: Con Man.[N]
+His con includes a 9 obsession.[X]
+
+## nameVergein
+Vergein[X]
+
+## descVergein
+The less edgy, less cool rival[N]
+to Verge.[X]
+
+## nameDonateenary
+Donatenry[X]
+
+## descDonateenary
+Donateenaries, evil cultists who[N]
+worship Hex, the even more evil[N]
+manifestation of their god.[X]
 ## DescSplenda
 A good witch residing near the[N]
 Tower of the Mods. Absolute[N]

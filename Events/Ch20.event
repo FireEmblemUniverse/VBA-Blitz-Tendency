@@ -1,0 +1,322 @@
+
+#include EAstdlib.event
+
+
+EventPointerTable(0x5E,PointersCh20)
+EventPointerTable(0x5D,TileChangesCh20) 
+
+ALIGN 4
+
+PointersCh20:
+POIN Turn_eventsCh20 
+POIN Character_eventsCh20
+POIN Location_eventsCh20
+POIN Misc_eventCh20
+POIN Dunno1Ch20 Dunno2Ch20 Dunno3Ch20 TutorialCh20
+POIN Traps1Ch20 Traps2Ch20
+POIN GoodCh20 GoodCh20  //This unit group prep
+POIN $0 $0 $0
+POIN $0 $0 $0
+POIN Opening_eventCh20 Ending_eventCh20
+
+ALIGN 4
+Dunno1Ch20:
+END_MAIN
+
+ALIGN 4
+
+Dunno2Ch20:
+END_MAIN
+ALIGN 4
+
+Dunno3Ch20:
+END_MAIN
+ALIGN 4
+
+TutorialCh20:
+END_MAIN
+ALIGN 4
+
+Traps1Ch20:
+// Vein(9,23,0x0,DV1Desc) //freeze enemies
+ENDTRAP
+ALIGN 4
+
+Traps2Ch20:
+ENDTRAP
+ALIGN 4
+
+
+BadCh20:
+
+UNIT 0x68 Hero 0x0 Level(7, Enemy, False) [14,1] 0x2 0x0 0x0 0x0 [LightBrand, Runesword] NeverMoveAI
+UNIT 0x69 Sage_F 0x0 Level(3, Enemy, False) [14,2] 0x2 0x0 0x0 0x0 [Elfire] NeverMoveAI
+
+UNIT 0xC8 Hero_F 0x68 Level(5, Enemy, True) [13,3] 0x0 0x00 0x0 0x0 [SilverBlade] AttackInRangeAI
+UNIT 0xC8 0x2 0x68 Level(5, Enemy, True) [15,3] 0x0 0x00 0x0 0x0 [Rapier] AttackInRangeAI
+UNIT 0xC8 Soldier 0x68 Level(5, Enemy, True) [14,3] 0x0 0x00 0x0 0x0 [Spear] AttackInRangeAI
+
+
+
+UNIT 0xC5 Myrmidon_F 0x68 Level(15, Enemy, True) [5,4] 0x0 0x00 0x0 0x0 [BraveSword] AttackInRangeAI
+
+UNIT 0xC6 Shaman_F 0x68 Level(15, Enemy, True) [5,10] 0x0 0x00 0x0 0x0 [Flux] AttackInRangeAI
+UNIT 0xC6 Shaman_F 0x68 Level(15, Enemy, True) [6,10] 0x0 0x00 0x0 0x0 [Flux] AttackInRangeAI
+
+UNIT 0xC7 Fighter 0x68 Level(16, Enemy, True) [17,10] 0x0 0x00 0x0 0x0 [IronAxe,HandAxe] AttackInRangeAI
+UNIT 0xC7 Fighter 0x68 Level(16, Enemy, True) [17,12] 0x0 0x00 0x0 0x0 [IronAxe,HandAxe] AttackInRangeAI
+UNIT 0xC7 Fighter 0x68 Level(16, Enemy, True) [16,11] 0x0 0x00 0x0 0x0 [IronAxe,HandAxe] AttackInRangeAI
+
+UNIT 0xC7 Fighter 0x68 Level(16, Enemy, True) [15,18] 0x0 0x00 0x0 0x0 [IronAxe,HandAxe] AttackInRangeAI
+UNIT 0xC7 Fighter 0x68 Level(16, Enemy, True) [16,19] 0x0 0x00 0x0 0x0 [IronAxe,HandAxe] AttackInRangeAI
+UNIT 0xC7 Fighter 0x68 Level(16, Enemy, True) [17,18] 0x0 0x00 0x0 0x0 [IronAxe,HandAxe] AttackInRangeAI
+
+
+UNIT
+
+BadCh20Part2:
+
+UNIT 0xC5 Myrmidon_F 0x68 Level(15, Enemy, True) [15,20] 0x0 0x00 0x0 0x0 [IronSword] AttackInRangeAI
+
+UNIT 0xC6 Shaman_F 0x68 Level(15, Enemy, True) [17,20] 0x0 0x00 0x0 0x0 [Flux] AttackInRangeAI
+
+UNIT 0xC5 Myrmidon_F 0x68 Level(15, Enemy, True) [6,16] 0x0 0x00 0x0 0x0 [IronSword] AttackInRangeAI
+
+UNIT 0xC6 Shaman_F 0x68 Level(15, Enemy, True) [7,17] 0x0 0x00 0x0 0x0 [Flux] AttackInRangeAI
+
+
+UNIT 0xC7 Fighter 0x68 Level(16, Enemy, True) [2,11] 0x0 0x00 0x0 0x0 [HandAxe] AttackInRangeAI
+UNIT 0xC7 Fighter 0x68 Level(16, Enemy, True) [11,11] 0x0 0x00 0x0 0x0 [SteelAxe] AttackInRangeAI
+UNIT 0xC7 Fighter 0x68 Level(16, Enemy, True) [13,12] 0x0 0x00 0x0 0x0 [HandAxe] AttackInRangeAI
+UNIT 0xC7 Fighter 0x68 Level(16, Enemy, True) [17,21] 0x0 0x00 0x0 0x0 [SilverAxe] AttackInRangeAI
+
+
+UNIT 0xC5 Myrmidon_F 0x68 Level(15, Enemy, True) [6,22] 0x0 0x00 0x0 0x0 [IronSword] AttackInRangeAI
+UNIT 0xC6 Shaman_F 0x68 Level(15, Enemy, True) [7,22] 0x0 0x00 0x0 0x0 [Flux] AttackInRangeAI
+
+
+
+UNIT
+
+ReinforcementsCh20:
+UNIT 0xC6 Mage_F 0x68 Level(15, Enemy, True) [18,22] 0x0 0x00 0x0 0x0 [Fire] PursueWithoutHeedAI
+UNIT 0xC5 Myrmidon_F 0x68 Level(15, Enemy, True) [18,23] 0x0 0x00 0x0 0x0 [SteelBlade] PursueWithoutHeedAI
+
+UNIT
+
+Reinforcements2Ch20:
+UNIT 0xC6 Mage_F 0x68 Level(15, Enemy, True) [0,12] 0x0 0x00 0x0 0x0 [Fire] PursueWithoutHeedAI
+UNIT 0xC5 Myrmidon_F 0x68 Level(15, Enemy, True) [0,11] 0x0 0x00 0x0 0x0 [SteelBlade] PursueWithoutHeedAI
+
+UNIT
+
+ALIGN 4
+
+GoodCh20:
+UNIT Eirika 0x2 0x0 Level(15, Ally, True) [5,25] 0x0 0x0 0x0 0x0 [SteelSword,IronSword,Vulnerary] NoAI
+
+UNIT 0x2 Assassin Eirika Level(7, Ally, True) [4,26] 0x0 0x0 0x0 0x0 [KillingEdge,Elixir] NoAI
+UNIT 0x3 Cavalier Eirika Level(15, Ally, True) [5,26] 0x0 0x0 0x0 0x0 [BraveLance, IronLance] NoAI
+UNIT 0x4 Cavalier Eirika Level(15, Ally, True) [6,26] 0x0 0x0 0x0 0x0 [BraveSword, IronSword] NoAI
+
+UNIT 0x5 Bishop Eirika Level(5, Ally, True) [4,27] 0x0 0x0 0x0 0x0 [Shine,Mend] NoAI
+UNIT 0x6 PegasusKnight Eirika Level(15, Ally, True) [5,27] 0x0 0x0 0x0 0x0 [SteelLance, IronLance] NoAI
+UNIT 0x7 Pirate Eirika Level(15, Ally, True) [6,27] 0x0 0x0 0x0 0x0 [SteelAxe,IronAxe] NoAI
+
+UNIT 0x8 Archer_F Eirika Level(15, Ally, True) [4,28] 0x0 0x0 0x0 0x0 [SteelBow,IronBow] NoAI
+UNIT 0x9 Valkyrie Eirika Level(5, Ally, True) [5,28] 0x0 0x0 0x0 0x0 [Recover,Lightning,Fire] NoAI
+UNIT 0xA Dancer Eirika Level(15, Ally, True) [6,28] 0x0 0x0 0x0 0x0 [Elixir,Elixir] NoAI
+
+UNIT
+
+EndChapterUnitsCh20:
+UNIT Eirika 0x1 0x0 Level(3, Ally, False) [14,1] 0x0 0x0 0x0 0x0 [LightBrand,IronSword,Vulnerary] NoAI
+
+
+UNIT
+
+RinsletUnitCh20:
+UNIT Rinslet Sniper_F 0x0 Level(1, Ally, False) [18,23] 0x0 0x0 0x1 REDA12R23 [SilverBow,Elixir] NoAI
+UNIT
+
+
+
+ALIGN 4
+
+Turn_eventsCh20:
+TURN 0x0 RinsletJoinCh20 [1,0] 0x0
+TURN 0x0 CallRein1Ch20 [1,7] 0x0
+TURN 0x0 CallRein2Ch20 [9,20] 0x0
+TURN
+
+
+
+CallRein1Ch20:
+ReinforcementEvent(ReinforcementsCh20)
+ENDA
+
+CallRein2Ch20:
+ReinforcementEvent(Reinforcements2Ch20)
+ENDA
+
+
+
+Character_eventsCh20:
+CHAR
+
+
+RinsletJoinCh20:
+MUSC Comrades
+TEXTSHOW (PlaceholderText)
+TEXTEND
+REMA
+LOAD1 0x1 RinsletUnitCh20
+ENUN
+
+ENDA
+
+
+
+
+Location_eventsCh20:
+Seize(14,1)
+LOCA
+
+
+Misc_eventCh20:
+CauseGameOverIfLordDies
+
+AREA 0x7 SwitchPressTop [17, 11] [17, 11] 
+AREA 0x8 SwitchPressBot [16, 18] [16, 18]
+
+
+END_MAIN
+
+
+SwitchPressTop:
+
+CHECK_ALLEGIANCE 0xFFFF //Check allegiance of active character
+SETVAL 0x2 0x2//Stores 0x2 (value of enemy) to Memory slot 0x2
+IFNE 0x00 0xC 0x2 // If not enemy XD
+
+TEXTSHOW (PlaceholderText)
+TEXTEND
+REMA
+
+
+TILECHANGE 0x0//Open the right door
+STAL 0x05
+
+
+GOTO 0x1  // Else
+ENIF 0x0
+
+
+ENUF 0x7 //sets eventID as "off"
+
+ENIF 0x1  //End of the Else
+NoFade
+ENDA
+
+SwitchPressBot:
+
+CHECK_ALLEGIANCE 0xFFFF //Check allegiance of active character
+SETVAL 0x2 0x2//Stores 0x2 (value of enemy) to Memory slot 0x2
+IFNE 0x00 0xC 0x2 // If not enemy XD
+
+TEXTSHOW (PlaceholderText)
+TEXTEND
+REMA
+
+
+TILECHANGE 0x1//Open the right door
+STAL 0x05
+
+
+GOTO 0x1  // Else
+ENIF 0x0
+
+
+ENUF 0x8 //sets eventID as "off"
+ENIF 0x1  //End of the Else
+NoFade
+ENDA
+
+
+
+Opening_eventCh20:
+MUSC Advance
+LOAD1 0x1 GoodCh20
+ENUN
+LOAD1 0x1 BadCh20
+ENUN
+LOAD1 0x1 BadCh20Part2
+ENUN
+CAM1 Eirika
+Text(Shrine_3, PlaceholderText)
+REMA
+
+CAM1 [17,11]
+FlashCursor(17,11,60)
+STAL 0x10 
+CAM1 [16,18]
+FlashCursor(16,18,60)
+
+GotoPrepScreen
+
+
+
+
+
+
+Ending_eventCh20:
+MUSC Victory
+NoFade
+FADI 0x10
+CLEE 0x0
+CLEA 0x0
+LOAD2 0x1 EndChapterUnitsCh20
+ENUN
+CAM1 Eirika
+FADU 0x10
+NoFade
+Text(Shrine_3, PlaceholderText)
+REMA
+
+
+MNC2 21
+ENDA
+
+
+
+ALIGN 4
+TrapDataCh20:
+ENDTRAP
+
+
+
+ALIGN 4
+TileChangesCh20:     
+TileMap(0x00,4,6,2,4,BridgeCh20)
+TileMap(0x01,6,18,2,4,BridgeCh20)
+
+
+TileMapEnd
+ALIGN 4
+
+
+ALIGN 4
+
+
+
+BridgeCh20:
+SHORT 0x0044
+SHORT 0x0044
+SHORT 0x0044
+SHORT 0x0044
+SHORT 0x0044
+SHORT 0x0044
+SHORT 0x0044
+SHORT 0x0044
+
+

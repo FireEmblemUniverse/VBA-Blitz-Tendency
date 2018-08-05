@@ -79,7 +79,7 @@ FADU 0x5
 STAL 0x20
 Text(Ch5BattleDoneText)
 FadeOutMusic
-CAM1 [10,9]
+CAM1 [7,9]
 LOAD1 0x1 BanditMeanies
 ENUN
 Text(Ch5BanditText)
@@ -88,7 +88,7 @@ MOVE 0x0 0x80 [14,21]
 MOVE 0x0 0x81 [11,21]
 MOVE 0x0 0x82 [12,22]
 STAL 0x10
-CAM1 [10,18]
+CAM1 [7,18]
 ENUN
 STAL 0x8
 TileChange(13,19)

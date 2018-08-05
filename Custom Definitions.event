@@ -34,6 +34,7 @@
 #define VoidMonster 0x3
 #define VoidMaster 0x4
 #define Witch 0x77
+#define Thief_F Thief //TODO!
 
 // Unit definitions
 #define Vedge 0x1
@@ -49,20 +50,29 @@
 #define Jen 0xC
 #define Fanni 0xD
 #define Murat 0xF
+#define Luut 0x10
+#define Mealy 0x12
 #define Jet 0x11
 #define Splenda 0x13
 #define Zane 0x14		//teq ch15 recruitable 1
+#define Mariya 0x15
 #define Nichol 0x16
 #define Adolgi 0x17
+#define Seibah 0x18
+#define Rinslet 0x19
+#define Donna 0x1A
 #define Sabin 0x1B
 #define Benny 0x1C		//teq ch15 recruitable 2, change this if already claimed
+#define MichealP 0x1E
 #define Ersatz 0x1F
 #define Inafune 0x20
+#define Babby 0x21
 #define Kojima 0x23
 #define Sakaguchi 0x24
 #define Iga 0x25
 #define Deuxnids 0x26
 
+#define Vergein 0x40
 #define Jazzak 0x42
 #define IgaNPC 0x47
 #define Hecwood 0x48
@@ -74,18 +84,27 @@
 #define Cameron 0x58
 #define Bojo 0x59
 #define Wicky 0x5C
+#define WrathBoss 0x60
+#define Ch17Boss 0x62
 #define DarkFact 0x64
+#define Kefka 0x6C
+#define Mike 0x72
+#define Inferos 0x74
 #define Kefka 0x6C
 #define KojimaNPC 0x76
 #define SakaguchiNPC 0x77
-
+#define Ch29Boss 0x78
+#define Ch1Generic1 0x82
+#define Ch1Generic2 0x83
 #define Ch5Generic 0x8A
 #define Ch14_Enemy 0x9C
 #define Ch15_Enemy 0x9D
+#define Ch17Enemies 0xA2
 #define Ch18Enemies 0xA4
 #define Ch23Enemies 0xAE
 #define Ch27ChrMGeneric 0xC0 // Monster
 #define Ch27ChrHGeneric 0xC1 // Human
+#define Ch29Generic1 0xB8
 
 //Item definitions
 #define BlitzAxe Rapier
@@ -95,16 +114,33 @@
 #define HuntersBow 0xBD
 #define HuntersBowIconID 0xAE
 #define RunicBow 0xBE
-#define RunicBowIconID PiercingBowIconID //TODO
+#define RunicBowIconID 0xAF
 #define PowerGem BlackGem
 
+#define Dragonshard 0xC3
+#define DragonshardIconID 0xCB
+
+#define AnimaCalibur 0xBF
+#define LightCalibur 0xC0
+#define SwordCalibur 0xC1
+#define BowCalibur 0xC2
+
+#define AnimaCaliburIconID 0xCC
+#define LightCaliburIconID 0xCD
+#define SwordCaliburIconID 0xCE
+#define BowCaliburIconID 0xCF
+
+
 //Chapter definitions
+#define Chapter1 0x1
 #define Chapter5 0x6
 #define Chapter5Map 0x1F
 #define Chapter5Changes 0x20
 #define Chapter5Events 0x21
 #define Chapter6 0x7
 #define Chapter7 0x8
+#define Chapter10 0xB
+#define Chapter11 0x3D
 #define Chapter12 0xC
 #define Ch14_ID 0x41
 #define Ch15_ID 0x47
@@ -115,10 +151,12 @@
 #define Chapter24Map 0x6F
 #define Chatper24Events 0x71
 #define Chapter24Changes 0x70
+#define Chapter25 0x3E
 #define Ch27Id 26
 #define Ch27Map 0x76
 #define Ch27MapChanges 0x77
 #define Ch27Events 0x78
+#define Chapter29 0x22
 #define AllChapters 0xFF
 
 // Other
@@ -128,6 +166,10 @@
 #define Ch27HumanReinfKillCount 20
 #define Ch27MogallsKillCount 30
 #define Ch27DracoBossKillCount 40
+
+//Crazy perma eventID stuff
+#define InafuneEvent1 0x66
+#define InafuneEvent2 0x67
 
 // Macros
 #define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
