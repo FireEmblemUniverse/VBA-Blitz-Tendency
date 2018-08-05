@@ -1,7 +1,8 @@
-EventPointerTable(Ch14_ID, Ch14_Events_Table)
+EventPointerTable(0x41, Ch14_Events_Table)
 
-#define Ch14_Level1 1 //level of unpromoted enemies
-#define Ch14_Level2 1 //level of promoted enemies
+#define Ch14_Level1 12 //level of unpromoted enemies
+#define Ch14_Level2 3 //level of promoted enemies
+#define WickyWave(ReinforcementPointer,levels) "FADI 10; SOUN 0x3BF; LOAD1 0x1 ReinforcementPointer; ENUN; STAL 60; SETVAL 0x1 Wicky; SETVAL 0x2 levels; ASMC Subtract_Stats|1; FADU 10; NoFade; ENDA"
 
 Ch14_Events_Table:
 POIN Ch14_TurnBasedEvents
@@ -17,12 +18,70 @@ POIN $0 $0 $0 //(enemy 1, enemy 2, enemy 3)
 POIN Ch14_BeginningScene Ch14_EndingScene
 
 Ch14_TurnBasedEvents:
+TURN 0 Wave1 [1,1] 4
+TURN 0 Wave2 [2,2] 4
+TURN 0 Wave3 [4,4] 4
+TURN 0 Wave4 [5,5] 4
+TURN 0 Wave5 [7,7] 4
+TURN 0 Wave6 [9,9] 4
+TURN 0 Wave7 [12,12] 4
+TURN 0 Wave8 [14,14] 4
 END_MAIN
+
+Wave1:
+WickyWave(Wave1Enemies, 1)
+Wave1Enemies:
+UNIT Ch14_Enemy Revenant 0 Level((Ch14_Level1+1), Enemy, 1) [10,13] 0 0 0 0 [RottenClaw] NoAI
+UNIT Ch14_Enemy Mage 0 Level((Ch14_Level1+1), Enemy, 1) [2,13] 0 0 0 0 [Thunder] NoAI
+UNIT Ch14_Enemy Archer 0 Level((Ch14_Level1+1), Enemy, 1) [8, 16] 0 0 0 0 [Longbow] NoAI
+UNIT
+
+Wave2:
+WickyWave(Wave2Enemies, 1)
+Wave2Enemies:
+UNIT Ch14_Enemy PegasusKnight 0 Level((Ch14_Level1+2), Enemy, 1) [3,16] 0 0 0 0 [Javelin] NoAI
+UNIT Ch14_Enemy Fighter 0 Level((Ch14_Level1+2), Enemy, 1) [13,18] 0 0 0 0 [SteelAxe] NoAI
+UNIT Ch14_Enemy Myrmidon 0 Level((Ch14_Level1+2), Enemy, 1) [7, 12] 0 0 0 0 [SteelSword] NoAI
+UNIT
+
+//Rest of the units will be added later
+Wave3:
+WickyWave(Wave3Enemies, 2)
+Wave3Enemies:
+UNIT
+
+Wave4:
+WickyWave(Wave4Enemies, 1)
+Wave4Enemies:
+UNIT
+
+Wave5:
+WickyWave(Wave5Enemies, 2)
+Wave5Enemies:
+UNIT
+
+Wave6:
+WickyWave(Wave6Enemies, 1)
+Wave6Enemies:
+UNIT
+
+Wave7:
+WickyWave(Wave7Enemies, 1)
+Wave7Enemies:
+UNIT
+
+Wave8:
+WickyWave(Wave8Enemies, 2)
+Wave8Enemies:
+UNIT
 
 Ch14_CharacterBasedEvents:
 END_MAIN
 
 Ch14_LocationBasedEvents:
+#ifdef TeqTest
+	Seize(5,0)
+#endif
 END_MAIN
 
 Ch14_MiscBasedEvents:
@@ -55,8 +114,17 @@ UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [3,2] 0 0 0 0 [0] NoAI
 UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [6,2] 0 0 0 0 [0] NoAI
 UNIT
 
+Ch14_Test_Units:
+UNIT Vedge EirikaLord 0 Level(1,Ally,1) [5,0] 0 0 0 0 [IronSword] NoAI
+UNIT Verge Swordmaster 0 Level(20,Ally,1) [4,1] 0 0 0 0 [SilverSword] NoAI
+UNIT
+
+IntroCutsceneUnits:
+UNIT Vedge EirikaLord 0 Level(20,Ally,1) [1,0] 0 0 0 0 [IronSword] NoAI
+UNIT Verge Swordmaster 0 Level(20,Ally,1) [0,0] 0 0 0 0 [SilverSword] NoAI
+UNIT
+
 Ch14_Enemies:
-UNIT Wicky Witch 0 Level(10, Enemy, 0) [6,18] 0 0 0 0 [Luna, Elfire] GuardTileAI
 UNIT Ch14_Enemy Bishop 0 Level(Ch14_Level2, Enemy, 1) [3,10] 0 0 0 0 [Physic] GuardTileAI
 UNIT Ch14_Enemy Gargoyle 0 Level(Ch14_Level1, Enemy, 1) [1,18] 0 0 0 0 [SteelLance] NoAI
 UNIT Ch14_Enemy Bonewalker_Bow 0 Level(Ch14_Level1, Enemy, 1) [10,5] 0 0 0 0 [IronBow] NoAI
@@ -73,19 +141,154 @@ UNIT Ch14_Enemy Monk 0 Level(Ch14_Level1, Enemy, 1) [2, 15] 2 0 0 0 [Purge, Divi
 UNIT
 
 Load_Splenda:
-UNIT Splenda Witch 0 Level(1, Ally, 0) [6,1] 0 0 0 0 [Shine, Fire] NoAI
+#ifdef TeqTest
+	UNIT Splenda Witch 0 Level(20, NPC, 1) [6,1] 0 0 0 0 [Shine, Fire] NoAI
+#else
+	UNIT Splenda Witch 0 Level(1, NPC, 1) [6,1] 0 0 0 0 [Shine, Fire] NoAI
+#endif
+UNIT
+
+LoadWicky:
+UNIT Wicky Witch 0 Level(10, Enemy, 0) [6,18] 0 0 0 0 [Luna, Elfire] GuardTileAI
 UNIT
 
 Ch14_BeginningScene:
-LOAD2 0x1 Ch14_Units		//Allies
+STAL 30
+EVBIT_F 0x8
+MUSC 0xB //Follow Me!
+LOAD2 0x1 IntroCutsceneUnits
 ENUN
+STAL 60
+FlashCursor(Vedge,60)
+MUSI
+Text(Ch14Intro1)
+MUNO
+MOVE 0x0 Vedge [5,1]
+MOVE 0x0 Verge [4,1]
+ENUN
+STAL 100
+LOAD1 0x1 LoadSplenda
+STAL 60
+FlashCursor(Splenda,60)
+MUSI
+TEXTSTART
+TEXTSHOW(Ch14Intro2)
+TEXTEND
+MOVE 0x0 Verge [0,0]
+ENUN
+INVIS Verge
+TEXTCONT
+TEXTEND
+REMA
+STAL 30
+CAM1 [7,14]
+STAL 60
+LOAD1 0x1 LoadWicky
+ENUN
+MUSC 0x14 //Assault
+FlashCursor(Wicky,60)
+Text(Ch14Intro3)
+STAL 60
+CAM1 [6,4]
+FlashCursor(Splenda,60)
+MUSI
+Text(Ch14Intro4)
+CAM1 [6,14]
+FlashCursor(Wicky,60)
+Text(Ch14Intro5)
+FADI 10
+SOUN 0x3BF //summoning noise
 LOAD1 0x1 Ch14_Enemies
 ENUN
-LOAD1 0x1 Load_Splenda
+STAL 60
+FADU 10
+STAL 60
+CAM1 [6, 4]
+CHECK_COORDS Vedge
+SADD 0xCB
+ASMC prFogThing+1
+CHECK_COORDS Splenda
+SADD 0xCB
+ASMC prFogThing+1
+STAL 60
+FlashCursor(Splenda,60)
+//MUSC 0xC //Determination
+//MUSI
+Text(Ch14Intro6)
+MUNO
+FADI 10
+REVEAL Verge
+CUSA Splenda
+#ifdef TeqTest
+	LOAD1 0x1 Ch14_Test_Units
+#else	
+//	MOVE 0x0 Wicky [6,2]
+	LOAD2 0x1 Ch14_Units		//Allies
+#endif
 ENUN
 GotoPrepScreen
-
-Ch14_EndingScene:
-MNCH 15
 NoFade
 ENDA
+
+Ch14_EndingScene:
+MUSC 0x31 //Victory
+MUSI
+SetBackground(Plain)
+TEXTSHOW(Ch14End)
+TEXTEND
+FADI 10
+REMA
+MNCH 15
+//NoFade
+ENDA
+
+ALIGN 4
+//does the ! thing; set coordinates in slot B
+prFogThing:
+SHORT 0xB500 0x4A07 0x4B07 0x8810 0x8999 0x0100 0x1A40 0x8851 0x89DA 0x0109 0x1A89 0x4B04 0x469E 0xF800 0xBC02 0x4708 0x04E4 0x0300 0xBCB0 0x0202 0x8A14 0x0807
+
+ALIGN 4
+//Subtract the number in slot 2 from the character with char id in slot 1 (all stats except hp/con/mov)
+Subtract_Stats:
+BYTE $10 $B5 $17 $4C $60 $68 $17 $49 $8E $46 $00 $F8 $00 $28 $24 $D0 $A3 $68 $01 $7D $C9 $1A $00 $29 $00 $DA $00 $21 $01 $75 $41 $7D $C9 $1A $00 $29 $00 $DA $00 $21 $41 $75 $81 $7D $C9 $1A $00 $29 $00 $DA $00 $21 $81 $75 $C1 $7D $C9 $1A $00 $29 $00 $DA $00 $21 $C1 $75 $01 $7E $C9 $1A $00 $29 $00 $DA $00 $21 $01 $76 $41 $7E $C9 $1A $00 $29 $00 $DA $00 $21 $41 $76 $10 $BC $01 $BC $00 $47 $B8 $04 $00 $03 $9C $82 $01 $08
+
+/*Source
+.thumb
+
+@subtract number in slot 2 from all stats except hp of the character with char id in slot 1
+
+.macro subtract_stat stat_offset, label_name
+	ldrb	r1,[r0,#\stat_offset]
+	sub		r1,r3
+	cmp		r1,#0
+	bge		\label_name
+	mov		r1,#0
+	\label_name:
+	strb	r1,[r0,#\stat_offset]
+.endm
+
+push	{r4,r14}
+ldr		r4,=#0x30004B8		@memory slot 0
+ldr		r0,[r4,#0x4]		@char id
+ldr		r1,=#0x801829C		@find char data ptr from char id
+mov		r14,r1
+.short	0xF800
+cmp		r0,#0
+beq		GoBack
+ldr		r3,[r4,#0x8]		@number to levels to remove
+subtract_stat 0x14, Label1	@str
+subtract_stat 0x15, Label2	@skl
+subtract_stat 0x16, Label3	@spd
+subtract_stat 0x17, Label4	@def
+subtract_stat 0x18, Label5	@res
+subtract_stat 0x19, Label6	@luk
+
+GoBack:
+pop		{r4}
+pop		{r0}
+bx		r0
+
+.ltorg
+
+Not sure if I have the source for the fog thing; Stan made that
+*/
