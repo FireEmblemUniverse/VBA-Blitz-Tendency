@@ -131,7 +131,7 @@ UNIT Ch14_Enemy Bonewalker_Bow 0 Level(Ch14_Level1, Enemy, 1) [10,5] 0 0 0 0 [Ir
 UNIT Ch14_Enemy Mercenary 0 Level(Ch14_Level1, Enemy, 1) [15, 3] 0 0 0 0 [IronBlade] NoAI
 UNIT Ch14_Enemy Mage 0 Level(Ch14_Level1, Enemy, 1) [11, 9] 0 0 0 0 [Thunder, Vulnerary] AttackInRangeAI
 UNIT Ch14_Enemy Tarvos 0 Level(Ch14_Level1, Enemy, 1) [15, 11] 0 0 0 0 [Hammer, HandAxe] AttackInRangeAI
-UNIT Ch14_Enemy Knight 0 Level(Ch14_Level1, Enemy, 1) [1, 7] 0 0 0 0 [ShortSpear, Elixir] NoAI
+UNIT Ch14_Enemy Knight 0 Level(Ch14_Level1, Enemy, 1) [1, 7] 2 0 0 0 [ShortSpear, Elixir, Restore] NoAI
 UNIT Ch14_Enemy Mogall 0 Level(Ch14_Level1, Enemy, 1) [0, 12] 0 0 0 0 [Flux] NoAI
 UNIT Ch14_Enemy Revenant 0 Level(Ch14_Level1, Enemy, 1) [11, 12] 0 0 0 0 [RottenClaw] NoAI
 UNIT Ch14_Enemy Sniper 0 Level(Ch14_Level2, Enemy, 1) [9, 16] 2 0 0 0 [Longbow] AttackInRangeAI
