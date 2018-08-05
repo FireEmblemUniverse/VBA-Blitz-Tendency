@@ -42,10 +42,10 @@ Prologue: IT BEGINS AGAIN[X]
 13: [X]
 
 # 0x016e
-14: [X]
+14: Not In Kansas Anymore[X]
 
 # 0x016f
-15: [X]
+15: Dead Men Wag No Tails[X]
 
 # 0x0170
 16: The Grapes of Rath[X]

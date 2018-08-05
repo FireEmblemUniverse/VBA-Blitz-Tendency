@@ -166,5 +166,31 @@ Not to be confused with Dennis.[X]
 ## nameSplenda
 Splenda[X]
 
+## DescSplenda
+A good witch residing near the[N]
+Tower of the Mods. Absolute[N]
+sucker for people in need.[X]
+
 ## nameWicky
 Wicky[X]
+
+## DescWicky
+The Wicked Witch of a Non-Specific[N]
+Cardinal Direction. Raises familiars[N]
+and makes a right nuisance of herself.[X]
+
+## nameBenny
+Benny[X]
+
+## DescBenny
+A thoroughly misunderstood Good[N]
+Boy. Likes bones, especially[N]
+when still attached to someone.[X]
+
+## nameZane
+Zane[X]
+
+## DescZane
+A former adventurer and part-time[N]
+bandit who fell victim to a curse.[N]
+A smash at Halloween parties.[X]
