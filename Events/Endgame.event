@@ -36,7 +36,7 @@ UNIT Seth EphraimLord Eirika Level(1, Ally, 0) [5,26] 0x00 0x00 0x0 0x00 [0x00] 
 UNIT
 
 Bad1:
-UNIT Tiki Manakete_2_F 0x00 Level(20, Enemy, 1) [0,6] 0x01 0x00 0x0 0x00 [HolyDragonStone] ChaseOnceApproachedAI
+UNIT Tiki Manakete_2_F 0x00 Level(20, Enemy, 1) [0,6] 0x02 0x00 0x0 0x00 [HolyDragonStone] ChaseOnceApproachedAI
 UNIT Marf Swordmaster 0x00 Level(20, Enemy, 1) [1,5] 0x00 0x00 0x0 0x00 [Shamshir, Wyrmslayer] PursueWithoutHeedAI
 UNIT Jake MageKnight 0x00 Level(20, Enemy, 1) [14,1] 0x00 0x00 0x0 0x00 [Aircalibur, Bolting, Recover] PursueWithoutHeedAI
 UNIT Bjorn Druid 0x00 Level(20, Enemy, 1) [17,13] 0x00 0x00 0x0 0x00 [Nosferatu, Physic, Recover] HealUnits
@@ -65,7 +65,7 @@ UNIT Doowile Entombed 0x00 Level(20, Enemy, 1) [14,8] 0x00 0x00 0x0 0x00 [HolyDr
 UNIT Arve Summoner_F 0x00 Level(20, Enemy, 1) [26,22] 0x00 0x00 0x0 0x00 [Gleipnir, Sleep] GuardTileAI
 UNIT AnnaWyvern WyvernLord_F 0x00 Level(20, Enemy, 1) [22,0] 0x00 0x00 0x0 0x00 [BraveSword, KillerLance, Elixir] PursueWithoutHeedAI
 UNIT Tam Warrior 0x00 Level(20, Enemy, 1) [0,10] 0x00 0x00 0x0 0x00 [Nidhogg, BraveAxe, Elixir] ChaseOnceApproachedAI
-UNIT Edgeworth Civilian 0x00 Level(20, Enemy, 1) [13,10] 0x00 0x00 0x0 0x00 [Elixir] GuardTileAI
+UNIT Edgeworth Civilian 0x00 Level(20, Enemy, 1) [33,11] 0x00 0x00 0x0 0x00 [Elixir] GuardTileAI
 UNIT Bob Assassin 0x00 Level(20, Enemy, 1) [27,12] 0x00 0x00 0x0 0x00 [BraveSword, Lancereaver, Elixir] ChaseOnceApproachedAI
 UNIT NotArch Sage 0x00 Level(20, Enemy, 1) [25,16] 0x00 0x00 0x0 0x00 [Ivaldi, Purge, Elixir] GuardTileAI
 UNIT Kaga Dancer 0x00 Level(20, Enemy, 1) [33,13] 0x00 0x00 0x0 0x00 [Bolting, Bolting, Fimbulvetr] AttackInRangeAI

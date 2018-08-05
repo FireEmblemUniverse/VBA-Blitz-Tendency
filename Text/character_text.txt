@@ -336,3 +336,89 @@ Donateenaries, evil cultists who[N]
 worship Hex, the even more evil[N]
 manifestation of their god.[X]
 
+## nameTiki
+Tiki[X]
+
+## descTiki
+placeholder[X]
+
+## nameMarf
+Marf[X]
+
+## descMarf
+Not amused[X]
+
+## nameJake
+Jake[X]
+
+## descJake
+placeholder[X]
+
+## nameBjorn
+Bj[0xf6]rn[X]
+
+## descBjorn
+His raison d'[0xea]tre: na[0xef]vet[0xe9] as[N]
+a fa[0xe7]ade for doppelg[0xe4]ngers.[X]
+
+## nameEvilFlorina
+Evil Florina[X]
+
+## descEvilFlorina
+uweeheehee[X]
+
+## nameCelica
+Celica[X]
+
+## descCelica
+Princess of the Pirates.[N]
+Hails from a distant land.[X]
+
+## nameDoowile
+Doowile[X]
+
+## descDoowile
+placeholder[X]
+
+## nameVoid
+Void[X]
+
+## descVoid
+knoll much[X]
+
+## nameZigludo
+Zigludo[X]
+
+## descZigludo
+Haha Funny fire meme[N]
+wank Xdddd dab[X]
+
+## descAnnaRogue
+A girl with a familiar face.[N]
+Her love of money is REALLY strong.[X]
+
+## nameEevster
+Eevster[X]
+
+## descEevster
+The (Former) King of[N]
+the Basement.[X]
+
+## nameSamson
+Samson[X]
+
+## descSamson
+placeholder[X]
+
+## namePrine
+Prine[X]
+
+## descPrine
+onii-nyama sugoi~[X]
+
+## nameCelicia
+Celicia[X]
+
+## descCelicia
+Prone to wandering off alone,[N]
+lost in thoughts of grey waves.[X]
