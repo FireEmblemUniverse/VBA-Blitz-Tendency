@@ -27,7 +27,7 @@
    <property name="Y" value="2"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIKBAwAEhAAB
+   eJxjYBgcgGmgHTAKRsEoGBAAAAx8AAM=
   </data>
  </layer>
  <layer name="SE_Chest" width="17" height="17">
@@ -39,7 +39,7 @@
    <property name="Y" value="13"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIKBAwAEhAAB
+   eJxjYBgFo2AUDHbANNAOoCEAAAY8AAM=
   </data>
  </layer>
 </map>
