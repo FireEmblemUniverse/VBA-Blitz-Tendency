@@ -194,3 +194,18 @@ Zane[X]
 A former adventurer and part-time[N]
 bandit who fell victim to a curse.[N]
 A smash at Halloween parties.[X]
+
+## nameFamiliar
+Familiar[X]
+
+## DescFamiliar
+A creation of dark magic,[N]
+bound to Wicky's whims.[X
+
+## nameSpecter
+Specter[X]
+
+## DescSpecter
+A denizen of the Ruins of[N]
+Aquilet. Probably did something[N]
+bad at some point or other.[X]
