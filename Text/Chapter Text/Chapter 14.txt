@@ -1,6 +1,6 @@
-#0x914 Ch14Intro1
-[OMR][LF][Vedge]
-[OML][LF][Verge]
+## Ch14Intro1
+[OMR][LF][VedgePortrait]
+[OML][LF][VergePortrait]
 [OML]We've arrived, milord.[A]
 [OMR]Yes,[.4] I'd noticed.[.4] Do[N]
 you remember the plan?[A]
@@ -15,9 +15,9 @@ mercies of said trouble.[A]
 [OMR]Very good.[.4] Let's go.[A][X]
 
 ## Ch14Intro2
-[OFL][LF][Verge]
-[OL][LF][Vedge]
-[OFFR][LF][Splenda]
+[OFL][LF][VergePortrait]
+[OL][LF][VedgePortrait]
+[OFFR][LF][SplendaPortrait]
 [OFFR][MMR]
 [OMR]Why,[.4] hello there,[.4] dearies![.5] I wasn't[N]
 expecting any visitors today.[A]
@@ -86,12 +86,12 @@ high or fast so you can keep up.[A]
 she's going to fly.[.4] How lovely.[A][X]
 
 ## Ch14Intro3
-[OMR][LF][Wicky]
+[OMR][LF][WickyPortrait]
 [OMR]SPLENDA![A][X]
 
 ## Ch14Intro4
-[OMR][LF][Splenda]
-[OML][LF][Vedge]
+[OMR][LF][SplendaPortrait]
+[OML][LF][VedgePortrait]
 [OMR]Oh,[.4] dear.[A]
 [OML]Uh,[.4] Splenda?[.4] Who is that?[A]
 [OMR]That,[.4] my precious,[.4] is Wicky.[A]
@@ -128,15 +128,15 @@ I can't die now![.4] We'll fight her![A]
 she's way too strong for any of us.[A][X]
 
 ## Ch14Intro5
-[OMR][LF][Wicky]
+[OMR][LF][WickyPortrait]
 [OMR]That's right,[.4] little Splenda![.4] You and your[N]
 band of misfits can't hope to defeat me![AN]
 In fact,[.4] I'm so powerful,[.4] I think I'll[N]
 just let my familiars slaughter you![A][X]
 
 ## Ch14Intro6
-[OMR][LF][Splenda]
-[OML][LF][Vedge]
+[OMR][LF][SplendaPortrait]
+[OML][LF][VedgePortrait]
 [OMR]Oh,[.4] my[Beat][A]
 [OML]Did she make those things?[A]
 [OMR]Yes[Beat] I hadn't realized she was so[N]
@@ -154,8 +154,8 @@ going near her too quickly,[.4] however.[A]
 [OML]Right. I'll let the rest know.[A][X]
 
 ## Ch14End
-[OMR][LF][Splenda]
-[OML][LF][Vedge]
+[OMR][LF][SplendaPortrait]
+[OML][LF][VedgePortrait]
 [OML]Ding dong,[.4] the witch is dead![A]
 [OMR]Alas,[.4] poor Wicky.[.4] I knew her,[.4] Vedge,[.4] a woman[N]
 of infinite cruelty and,[.4] uh,[.4] not much else.[A]
@@ -169,3 +169,10 @@ like her.[.4] It's in the code of conduct.[A]
 [OMR]Anyway,[.4] enough mourning,[.4] darling.[N]
 Are you ready to continue onwards?[A]
 [OML]Yes.[.4] Let's go![A][X]
+
+## Ch14GoalScreen
+Defeat Wicky[X]
+
+## Ch14Objective
+Kill Wicky, assuming[N]
+you're capable of it.[X]

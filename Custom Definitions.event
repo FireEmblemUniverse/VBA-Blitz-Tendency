@@ -90,7 +90,6 @@
 #define Kefka 0x6C
 #define Mike 0x72
 #define Inferos 0x74
-#define Kefka 0x6C
 #define KojimaNPC 0x76
 #define SakaguchiNPC 0x77
 #define Ch29Boss 0x78

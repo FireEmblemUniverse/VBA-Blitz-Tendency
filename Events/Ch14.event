@@ -86,7 +86,7 @@ END_MAIN
 
 Ch14_MiscBasedEvents:
 CauseGameOverIfLordDies
-DefeatAll(Ch14_EndingScene)
+DefeatBoss(Ch14_EndingScene)
 END_MAIN
 
 Ch14_Dunno:
@@ -114,6 +114,16 @@ UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [3,2] 0 0 0 0 [0] NoAI
 UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [6,2] 0 0 0 0 [0] NoAI
 UNIT
 
+Ch14_Test_Units:
+UNIT Vedge EirikaLord 0 Level(1,Ally,1) [5,0] 0 0 0 0 [IronSword] NoAI
+UNIT Verge Swordmaster 0 Level(20,Ally,1) [4,1] 0 0 0 0 [SilverSword] NoAI
+UNIT
+
+IntroCutsceneUnits:
+UNIT Vedge EirikaLord 0 Level(20,Ally,1) [1,0] 0 0 0 0 [IronSword] NoAI
+UNIT Verge Swordmaster 0 Level(20,Ally,1) [0,0] 0 0 0 0 [SilverSword] NoAI
+UNIT
+
 Ch14_Enemies:
 UNIT Ch14_Enemy Bishop 0 Level(Ch14_Level2, Enemy, 1) [3,10] 0 0 0 0 [Physic] GuardTileAI
 UNIT Ch14_Enemy Gargoyle 0 Level(Ch14_Level1, Enemy, 1) [1,18] 0 0 0 0 [SteelLance] NoAI
@@ -130,7 +140,7 @@ UNIT Ch14_Enemy Gwyllgi 0 Level(Ch14_Level2, Enemy, 1) [13, 18] 0 0 0 0 [HellFan
 UNIT Ch14_Enemy Monk 0 Level(Ch14_Level1, Enemy, 1) [2, 15] 2 0 0 0 [Purge, Divine] GuardTileAI
 UNIT
 
-Load_Splenda:
+LoadSplenda:
 #ifdef TeqTest
 	UNIT Splenda Witch 0 Level(20, NPC, 1) [6,1] 0 0 0 0 [Shine, Fire] NoAI
 #else
@@ -166,7 +176,7 @@ TEXTSHOW(Ch14Intro2)
 TEXTEND
 MOVE 0x0 Verge [0,0]
 ENUN
-INVIS Verge
+REMU Verge
 TEXTCONT
 TEXTEND
 REMA

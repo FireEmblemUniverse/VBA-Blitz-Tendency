@@ -332,6 +332,7 @@ Donatenry[X]
 Donateenaries, evil cultists who[N]
 worship Hex, the even more evil[N]
 manifestation of their god.[X]
+
 ## DescSplenda
 A good witch residing near the[N]
 Tower of the Mods. Absolute[N]
@@ -366,7 +367,7 @@ Familiar[X]
 
 ## DescFamiliar
 A creation of dark magic,[N]
-bound to Wicky's whims.[X
+bound to Wicky's whims.[X]
 
 ## nameSpecter
 Specter[X]

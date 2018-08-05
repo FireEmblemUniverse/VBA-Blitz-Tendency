@@ -77,7 +77,7 @@ UNIT Ch15_Enemy Mogall 0 Level(Ch15_Level1, Enemy, 1) [14,9] 0 0 0 0 [Flux] NoAI
 UNIT Ch15_Enemy General 0 Level(Ch15_Level2, Enemy, 1) [9,9] 0 0 0 0 [HandAxe, SilverLance] AttackInRangeAI
 UNIT Ch15_Enemy Warrior 0 Level(Ch15_Level2, Enemy, 1) [2,15] 0 0 0 0 [SteelBow, SteelAxe] NoAI
 UNIT Ch15_Enemy Tarvos 0 Level(Ch15_Level1, Enemy, 1) [11, 16] 0 2 0 0 [Swordreaver, Elixir] AttackInRangeAI
-UNIT Ch15_Enemy Mage 0 Level(Ch15_Level1-1, Enemy, 1) [2,8] 0 0 0 0 [Bolting] GuardTileAI
+UNIT Ch15_Enemy Mage 0 Level((Ch15_Level1-1), Enemy, 1) [2,8] 0 0 0 0 [Bolting] GuardTileAI
 UNIT Ch15_Enemy Hero 0 Level(Ch15_Level2, Enemy, 1) [6,12] 0 2 0 0 [SilverSword,Lancereaver] AttackInRangeAI
 UNIT Ch15_Enemy Monk 0 Level(Ch15_Level1, Enemy, 1) [0,1] 0 0 0 0 [Divine, Vulnerary] AttackInRangeAI
 UNIT Ch15_Enemy Deathgoyle 0 Level(Ch15_Level2, Enemy, 1) [6,15] 0 0 0 0 [ShortSpear] AttackInRangeAI
@@ -104,7 +104,7 @@ ZaneREDA:
 REDA [12,1] 0 1 0 0
 
 BennyIntro:
-UNIT Benny Mauthedoog 0 Level(8,Enemy,1) [0,5] 0 0 1 BennyREDA [FieryFang] DoNothing
+UNIT Benny Mauthedoog 0 Level(8,Enemy,1) [0,5] 0 0 1 BennyREDA [FireFang] DoNothing
 UNIT
 
 BennyREDA:
@@ -128,7 +128,7 @@ TEXTCONT
 TEXTEND
 MOVE 0x0 Verge [16,0]
 ENUN
-INVIS Verge
+REMU Verge
 STAL 60
 TEXTCONT
 TEXTEND
@@ -138,7 +138,7 @@ TEXTCONT
 TEXTEND
 MOVE 0x0 Benny [16,0]
 ENUN
-INVIS Benny
+REMU Benny
 TEXTCONT
 TEXTEND
 LOAD1 0x1 Ch15_Enemies
@@ -197,7 +197,7 @@ LABEL 0x2
 STAL 20
 MOVE 0x0 Benny [0,0]
 ENUN
-INVIS Benny
+REMU Benny
 STAL 20
 TEXTCONT
 TEXTEND
@@ -251,6 +251,8 @@ ENDA
 NearBenny2:
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x3 0xC 0x0
+CHECK_EVENTID 0xA	//bone1 found
+BEQ 0x3 0xC 0x0
 CHECK_EVENTID 0xB 	//did BennyAppears2 happen?
 BEQ 0x3 0xC 0x0		//if not, goto label3
 MUSI
@@ -271,7 +273,7 @@ LABEL 0x5
 STAL 20
 MOVE 0x0 Benny [16,16]
 ENUN
-INVIS Benny
+REMU Benny
 STAL 20
 TEXTCONT
 TEXTEND
@@ -324,6 +326,8 @@ ENDA
 NearBenny3:
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x6 0xC 0x0
+CHECK_EVENTID 0xD //bone2 found
+BEQ 0x6 0xC 0x0
 CHECK_EVENTID 0xE
 BEQ 0x6 0xC 0x0
 MUSI
@@ -351,7 +355,7 @@ SetBackground(Shrine)
 Text(SplendaBenny1)
 EVBIT_F 0x2 //stop skipping before choice
 STAL 20
-_0x1A23
+TUTORIALTEXTBOXSTART
 SETVAL 0xB 0xFFFFFFFF
 TEXTSHOW SplendaBenny2
 TEXTEND
@@ -361,7 +365,7 @@ BNE 0x10 0xC 0x3 //jump if no
 //if yes
 Text(SplendaBennyYes)
 STAL 20
-_0x1A23
+TUTORIALTEXTBOXSTART
 SETVAL 0xB 0xFFFFFFFF
 TEXTSHOW YesEnding1
 TEXTEND
@@ -391,13 +395,13 @@ MUSI
 SetBackground(Shrine)
 Text(BennyDies1)
 STAL 100
-_0x1A23
+TUTORIALTEXTBOXSTART
 SETVAL 0xB 0xFFFFFFFF
 TEXTSHOW BennyDies2
 TEXTEND
 REMA
 ClearBackground
-INVIS Splenda //remove her from party
+REMU Splenda //remove her from party
 MNCH 16
 NoFade
 ENDA
