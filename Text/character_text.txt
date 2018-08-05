@@ -210,9 +210,6 @@ Not to be confused with Dennis.[X]
 ## nameSplenda
 Splenda[X]
 
-## nameWicky
-Wicky[X]
-
 ## SeibahName
 Seibah[X]
 
@@ -335,4 +332,46 @@ Donatenry[X]
 Donateenaries, evil cultists who[N]
 worship Hex, the even more evil[N]
 manifestation of their god.[X]
+## DescSplenda
+A good witch residing near the[N]
+Tower of the Mods. Absolute[N]
+sucker for people in need.[X]
 
+## nameWicky
+Wicky[X]
+
+## DescWicky
+The Wicked Witch of a Non-Specific[N]
+Cardinal Direction. Raises familiars[N]
+and makes a right nuisance of herself.[X]
+
+## nameBenny
+Benny[X]
+
+## DescBenny
+A thoroughly misunderstood Good[N]
+Boy. Likes bones, especially[N]
+when still attached to someone.[X]
+
+## nameZane
+Zane[X]
+
+## DescZane
+A former adventurer and part-time[N]
+bandit who fell victim to a curse.[N]
+A smash at Halloween parties.[X]
+
+## nameFamiliar
+Familiar[X]
+
+## DescFamiliar
+A creation of dark magic,[N]
+bound to Wicky's whims.[X
+
+## nameSpecter
+Specter[X]
+
+## DescSpecter
+A denizen of the Ruins of[N]
+Aquilet. Probably did something[N]
+bad at some point or other.[X]

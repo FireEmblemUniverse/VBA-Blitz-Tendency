@@ -1,12 +1,11 @@
 #ifdef TeqTest
 	EventPointerTable(0xA, Ch15_Events_Table)
 #else
-	EventPointerTable(0x47, Ch15_Events_Table)
+  EventPointerTable(Ch15_ID, Ch15_Events_Table)
 #endif
 
 #define Ch15_Level1 13 //level of unpromoted enemies
 #define Ch15_Level2 5 //level of promoted enemies
-
 
 Ch15_Events_Table:
 POIN Ch15_TurnBasedEvents
@@ -62,11 +61,6 @@ ALIGN 4
 
 Ch15_Units:
 UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [11,1] 0 0 0 0 [0] NoAI
-//Following are for testing
-//UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [3,3] 0 0 0 0 [0] NoAI
-//UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [9,15] 0 0 0 0 [0] NoAI
-//UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [5,15] 0 0 0 0 [0] NoAI
-//and these are not
 UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [13,1] 0 0 0 0 [0] NoAI
 UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [12,0] 0 0 0 0 [0] NoAI
 UNIT Eirika EirikaLord 0 Level(1, Ally, 0) [12,2] 0 0 0 0 [0] NoAI
@@ -436,3 +430,4 @@ bx		r0
 
 .ltorg
 */
+

@@ -15,8 +15,10 @@
 [.6] = [......]
 [.7] = [.......]
 [Beat] = [ToggleMouthMove]...[.4][ToggleMouthMove]
+[SlowBeat] = [ToggleMouthMove].[.4].[.4].[.4][ToggleMouthMove]
 [Event] = [LoadOverworldFaces]
 [CloseSpeech] = [CloseSpeechSlow][.....]
+[LF] = [LoadFace]
 
 [FarFarLeft] = [OpenFarFarLeft]
 [FarLeft] = [OpenFarLeft]
@@ -47,6 +49,24 @@
 [......v.] = [FarRight]
 [.......v] = [FarFarRight]
 
+[OFFL] = [OpenFarFarLeft]
+[OFL] = [OpenFarLeft]
+[OML] = [OpenMidLeft]
+[OL] = [OpenLeft]
+[OR] = [OpenRight]
+[OMR] = [OpenMidRight]
+[OFR] = [OpenFarRight]
+[OFFR] = [OpenFarFarRight]
+
+[MFFL] = [MoveFarFarLeft]
+[MFL] = [MoveFarLeft]
+[MML] = [MoveMidLeft]
+[ML] = [MoveLeft]
+[MR] = [MoveRight]
+[MMR] = [MoveMidRight]
+[MFR] = [MoveFarRight]
+[MFFR] = [MoveFarFarRight]
+
 [CurrentPortrait] = [0xFF][0xFF]
 [LoadCurrent] = [LoadFace][0xFF][0xFF]
 
@@ -65,6 +85,10 @@
 [Elitor] = [0x32]
 [Dennis] = [0x34]
 [Jazzak] = [0x36]
+[Splenda] = [0x1A][0x1]
+[Zane] = [0x1B][0x1]
+[Benny] = [0x24][0x1]
+[BennyBone] = [0x25][0x1]
 
 [LoadVedge] = [LoadFace][VedgePortrait]
 [LoadVerge] = [LoadFace][0x07][0x01]
