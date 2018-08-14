@@ -1,15 +1,12 @@
-
-////////////////////////////////////////////////////
-//                                                //
-// Disassembled with Nintenlord's Event Assembler //
-// Version: 11.0.0.0                              //
-// Game: FE8                                      //
-// File: FE8_clean.gba                            //
-// Offset: $9EC66C                                //
-//                                                //
-////////////////////////////////////////////////////
-
 EventPointerTable(0xa, PointerList)
+
+EscapePointPointerTable(Chapter1, Ch1EscapePoint)
+
+Ch1EscapePoint:
+EscapePoint(15, 9, NoMove)
+EscapePoint(16, 9, NoMove)
+EscapePoint(17, 9, NoMove)
+EscapePointEnd
 
 PointerList:
 POIN TurnBasedEvents
@@ -45,21 +42,27 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
-Chest(SteelAxe,11,9)
+Chest(HandAxe,11,9)
 Village(0x7,AnnaVillage,1,1)
 Village(0x8,VillageGem,1,10)
+Village(0,YellowVillage,9,10)
 Vendor(VendorList, 4, 6)
 Armory(ArmoryList, 7, 6)
 Seize(16,2)
 END_MAIN
 
 VillageGem:
-VillageEventItem(PlaceholderText, Village, RedGem)
+VillageEventItem(Chapter1_SouthVillage, Village, RedGem)
 
 AnnaVillage:
-Text(PlaceholderText)
+Text(Chapter1_NorthVillage)
 LOAD1 0x1 CoinChick
 ENUN
+NoFade
+ENDA
+
+YellowVillage:
+Text(HouseBG, Chapter1_House)
 NoFade
 ENDA
 
@@ -102,35 +105,35 @@ UNIT Chiva Archer Vedge Level(1, Ally, 0) [10,1] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT
 
 CoinChick:
-UNIT Anna Thief Vedge Level(4, Ally, 0) [1,2] 0x00 0x00 0x0 0x00 [IronSword, Lockpick] NoAI
+UNIT Anna Thief_F Vedge Level(4, Ally, 0) [1,1] 0x00 0x00 1 REDA1R2 [IronSword, Lockpick] NoAI
 UNIT
 
 Bad:
-UNIT 0x80 Pirate Jazzak Level(4, Enemy, 1) [6,2] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI
-UNIT 0x80 Pirate Jazzak Level(4, Enemy, 1) [2,7] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI
-UNIT 0x80 Pirate Jazzak Level(4, Enemy, 1) [9,8] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI
-UNIT 0x80 Pirate Jazzak Level(4, Enemy, 1) [11,11] 0x00 0x00 0x0 0x00 [HandAxe] AttackInRangeAI
-UNIT 0x80 Pirate Jazzak Level(4, Enemy, 1) [14,5] 0x00 0x00 0x0 0x00 [HandAxe] GuardTileAI
-UNIT 0x80 Mercenary Jazzak Level(4, Enemy, 1) [6,3] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI
-UNIT 0x80 Mercenary Jazzak Level(4, Enemy, 1) [12,7] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI
-UNIT 0x80 Shaman Jazzak Level(4, Enemy, 1) [14,6] 0x00 0x00 0x0 0x00 [Nosferatu] GuardTileAI
-UNIT 0x80 Shaman Jazzak Level(4, Enemy, 1) [1,5] 0x00 0x00 0x0 0x00 [Flux] AttackInRangeAI
-UNIT 0x80 Shaman Jazzak Level(4, Enemy, 1) [5,11] 0x00 0x00 0x0 0x00 [Flux] AttackInRangeAI
-UNIT 0x80 Shaman Jazzak Level(4, Enemy, 1) [16,3] 0x00 0x00 0x0 0x00 [Nosferatu] GuardTileAI
-UNIT Jazzak Fighter 0x00 Level(5, Enemy, 0) [16,2] 0x00 0x00 0x0 0x00 [HandAxe] GuardTileAI
+UNIT Ch1Generic1 Pirate Jazzak Level(2, Enemy, 1) [6,2] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI
+UNIT Ch1Generic1 Pirate Jazzak Level(2, Enemy, 1) [2,7] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI
+UNIT Ch1Generic1 Pirate Jazzak Level(2, Enemy, 1) [9,8] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI
+UNIT Ch1Generic1 Pirate Jazzak Level(2, Enemy, 1) [11,11] 0x00 0x00 0x0 0x00 [HandAxe] AttackInRangeAI
+UNIT Ch1Generic1 Pirate Jazzak Level(2, Enemy, 1) [14,5] 0x00 0x00 0x0 0x00 [HandAxe] NeverMoveAI
+UNIT Ch1Generic1 Mercenary Jazzak Level(2, Enemy, 1) [6,3] 0x00 0x00 0x0 0x00 [IronSword] AttackInRangeAI
+UNIT Ch1Generic1 Mercenary Jazzak Level(2, Enemy, 1) [12,7] 0x00 0x00 0x0 0x00 [IronSword] AttackInRangeAI
+UNIT Ch1Generic1 Shaman Jazzak Level(2, Enemy, 1) [14,6] 0x00 0x00 0x0 0x00 [Flux] NeverMoveAI
+UNIT Ch1Generic1 Monk Jazzak Level(2, Enemy, 1) [1,5] 0x00 0x00 0x0 0x00 [Lightning] AttackInRangeAI
+UNIT Ch1Generic1 Mage Jazzak Level(2, Enemy, 1) [5,11] 0x00 0x00 0x0 0x00 [Fire] AttackInRangeAI
+UNIT Ch1Generic1 Shaman Jazzak Level(2, Enemy, 1) [16,3] 0x00 0x00 0x0 0x00 [Flux] NeverMoveAI
+UNIT Jazzak Fighter 0x00 Level(4, Enemy, 0) [16,2] 0x00 0x00 0x0 0x00 [HandAxe] NeverMoveAI
 UNIT
 
 Wave1:
-UNIT 0x80 Brigand Jazzak Level(4, Enemy, 1) [15,9] 0x00 0x00 0x0 0x00 [SteelAxe] BrigandAI
+UNIT Ch1Generic2 Brigand Jazzak Level(3, Enemy, 1) [15,9] 0x00 0x00 0x0 0x00 [IronAxe] BrigandAI
 UNIT
 
 Wave2:
-UNIT 0x80 Thief Jazzak Level(4, Enemy, 1) [17,9] 0x00 0x00 0x0 0x00 [SteelSword] LootingThiefAI
+UNIT Ch1Generic2 Thief Jazzak Level(3, Enemy, 1) [17,9] 0x00 0x00 0x0 0x00 [SteelSword, ChestKey] LootingThiefAI
 UNIT
 
 Wave3:
-UNIT 0x80 WyvernRider Jazzak Level(5, Enemy, 1) [0,0] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
-UNIT 0x80 WyvernRider Jazzak Level(5, Enemy, 1) [0,3] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI
+UNIT Ch1Generic2 WyvernRider Jazzak Level(2, Enemy, 1) [0,0] 0x00 0x00 0x0 0x00 [IronLance] PursueWithoutHeedAI
+UNIT Ch1Generic2 WyvernRider Jazzak Level(2, Enemy, 1) [0,3] 0x00 0x00 0x0 0x00 [IronLance] PursueWithoutHeedAI
 UNIT
 
 BeginningScene:
@@ -138,10 +141,13 @@ LOAD2 0x1 Units1
 ENUN
 LOAD1 0x1 Bad
 ENUN
+CAM1 Vedge
+Text(Chapter1_Beginning)
 NoFade
 ENDA
 
 EndingScene:
+Text(Chapter1_Ending)
 MNCH 0x2
 NoFade
 ENDA
