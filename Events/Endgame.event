@@ -60,9 +60,9 @@ UNIT Jerome Recruit_3 0x00 Level(20, Enemy, 1) [26,18] 0x00 0x00 0x0 0x00 [Kille
 UNIT Kirsten WyvernKnight_F 0x00 Level(20, Enemy, 1) [6,2] 0x00 0x00 0x0 0x00 [Vidofnir, DelphiShield, Elixir] PursueWithoutHeedAI
 UNIT Tye General 0x00 Level(20, Enemy, 1) [20,18] 0x00 0x00 0x0 0x00 [Runesword] GuardTileAI
 UNIT Tim Hero 0x00 Level(20, Enemy, 1) [2,8] 0x00 0x00 0x0 0x00 [Garm, Elixir] PursueWithoutHeedAI
-UNIT Jay Ranger 0x00 Level(20, Enemy, 1) [1,2] 0x00 0x00 0x0 0x00 [BraveAxe, KillingEdge] PursueWithoutHeedAI
+UNIT Jay Ranger 0x00 Level(20, Enemy, 1) [1,2] 0x00 0x00 0x0 0x00 [BraveBow, KillingEdge] PursueWithoutHeedAI
 UNIT Doowile Entombed 0x00 Level(20, Enemy, 1) [14,8] 0x00 0x00 0x0 0x00 [HolyDragonStone, Elixir] ChaseOnceApproachedAI
-UNIT Arve Summoner_F 0x00 Level(20, Enemy, 1) [26,22] 0x00 0x00 0x0 0x00 [Gleipnir, Sleep] GuardTileAI
+UNIT Arve Summoner_F 0x00 Level(20, Enemy, 1) [26,22] 0x00 0x00 0x0 0x00 [Gleipnir, Divine, Sleep] GuardTileAI
 UNIT AnnaWyvern WyvernLord_F 0x00 Level(20, Enemy, 1) [22,0] 0x00 0x00 0x0 0x00 [BraveSword, KillerLance, Elixir] PursueWithoutHeedAI
 UNIT Tam Warrior 0x00 Level(20, Enemy, 1) [0,10] 0x00 0x00 0x0 0x00 [Nidhogg, BraveAxe, Elixir] ChaseOnceApproachedAI
 UNIT Edgeworth Civilian 0x00 Level(20, Enemy, 1) [33,11] 0x00 0x00 0x0 0x00 [Elixir] GuardTileAI

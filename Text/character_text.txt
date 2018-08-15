@@ -479,3 +479,66 @@ Nikita[X]
 
 ## descNikita
 Axe-focused GK[X]
+
+## nameJay
+Jay[X]
+
+## descJay
+An old veteran of the Renegade[N]
+translation era. Got the tools down.[X]
+
+## nameArve
+Arve[X]
+
+## descArve
+Elder. It's ELDER.[N]
+Not dark. E-L-D-E-R.[X]
+
+## descAnnaWyvern
+How many Annas are[N]
+there, anyway?[X]
+
+## nameBob
+Bob[X]
+
+## descBob
+placeholder[X]
+
+## nameNotArch
+Not Arch[X]
+
+## descNotArch
+His divine lightning[N]
+will pierce your face.[X]
+
+## nameKaga
+Kaga[X]
+
+## descKaga
+Our lord and savior[X]
+
+## nameBede
+Bede[X]
+
+## descBede
+sexy priest[X]
+
+## nameLeeroy
+Leeroy[X]
+
+## descLeeroy
+His father was also[N]
+named after a meme.[X]
+
+## nameMark
+Mark[X]
+
+## descMark
+A mysterious person who[N]
+claims to be a tactician.[X]
+
+## nameEdgeworth
+Edgeworth[X]
+
+## descEdgeworth
+HIS EDGE IS WORTH[X]

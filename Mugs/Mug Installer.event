@@ -19,9 +19,11 @@ Vedge_Mug:
 #incext PortraitFormatter "Vedge.png"
 setMugEntry(0x2, Vedge_Mug, 2, 6, 3, 4)
 
+// 0x3 and 0x4 are taken by VBA 1 characters
+#define NullPortrait 0x4D // "Unused Man"
 Null_Mug:
 #incext PortraitFormatter "Null.png"
-setMugEntry(0x4, Null_Mug, 3, 5, 3, 3)
+setMugEntry(NullPortrait, Null_Mug, 3, 5, 3, 3)
 
 Naught_Mug:
 #incext PortraitFormatter "Naught.png"
@@ -193,8 +195,9 @@ setMugEntry(AssassinServantPortrait, AssassinServant_Mug, 2, 5, 3, 3)
 #define MarkPortrait 0x6E
 #define RosheaPortrait 0x6F
 #define BobPortrait 0x24 // Rennac. May overlap with one of Teq's characters.
-// 0x70
-// 0x71
+#define KagaPortrait 0x70
+#define LeeroyPortrait 0x04 // Seth
+#define VoidPortrait 0x71
 
 NotArch_Mug:
 #incext PortraitFormatter "NotArch.png"
@@ -283,7 +286,7 @@ setMugEntry(AnnaWyvernPortrait, AnnaWyv_Mug, 2,6,3,4)
 
 Bede_Mug:
 #incext PortraitFormatter "Bede.png"
-setMugEntry(0x9, Bede_Mug, 3,5,2,3)
+setMugEntry(BedePortrait, Bede_Mug, 3,5,2,3)
 
 Edgeworth_Mug:
 #incext PortraitFormatter "Edgeworth.png"
@@ -296,3 +299,11 @@ setMugEntry(MarkPortrait, Mark_Mug, 4,6,2,4)
 Roshea_Mug:
 #incext PortraitFormatter "Roshea.png"
 setMugEntry(RosheaPortrait, Roshea_Mug, 2, 5, 2, 3)
+
+Kaga_Mug:
+#incext PortraitFormatter "kaga.png"
+setMugEntry(KagaPortrait, Kaga_Mug, 3, 5, 3, 3)
+
+Void_Mug:
+#incext PortraitFormatter "Void.png"
+setMugEntry(VoidPortrait, Void_Mug, 2, 5, 3, 3)
