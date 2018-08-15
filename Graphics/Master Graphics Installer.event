@@ -38,4 +38,9 @@ ORG 0x5926F4+(0x80*BowCaliburIconID)
 #incext Png2Dmp "BowCalibur.png"
 ORG 0x5926F4+(0x80*DootAuraIconID)
 #incext Png2Dmp "auraicon.png"
+
+ORG 0x5926F4+(0x80*0xB4) // SuperBlitzLanceIconID
+#incext Png2Dmp "superblitzicon.png"
+ORG 0x5926F4+(0x80*0xB0) // BlitzOfAjaIconID
+#incext Png2Dmp "blitzofaja.png"
 POP
