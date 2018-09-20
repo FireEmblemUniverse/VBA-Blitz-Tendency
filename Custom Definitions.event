@@ -29,12 +29,14 @@
 #include "Engine Hacks/Skill System/skill_definitions.event"
 
 //Class definitions
+#define VoidLord 0x1
 #define BlitzLord 0x2
 #define VedgeLord BlitzLord
 #define VoidMonster 0x3
 #define VoidMaster 0x4
 #define Witch 0x77
 #define Thief_F Thief //TODO!
+#define MautheDoog Mauthedoog
 
 // Unit definitions
 #define Vedge 0x1
@@ -81,8 +83,13 @@
 #define Ch27ChrZomboss 0x4D // dracozombie boss
 #define Edgelard 0x4E
 #define Dennis 0x50
+#define Ch11LdrID 0x56
+#define Ch11MiscID 0x57
 #define Cameron 0x58
 #define Bojo 0x59
+
+#define Ch13Scary 0x5B
+#define Ch13Celerity 0x5B
 #define Wicky 0x5C
 #define WrathBoss 0x60
 #define Ch17Boss 0x62
@@ -93,9 +100,50 @@
 #define KojimaNPC 0x76
 #define SakaguchiNPC 0x77
 #define Ch29Boss 0x78
+
+// Endgame definitions:
+#define Tiki 0x27
+#define Marf 0x28
+#define Jake 0x29
+#define Bjorn 0x2A
+#define EvilFlorina 0x2B
+#define Celica 0x2C
+#define Zigludo 0x2D
+#define AnnaRogue 0x2E
+#define Eevster 0x2F
+#define Samson 0x30
+#define Prine 0x31
+#define Celicia 0x32
+#define Nikita 0x33
+#define AnnaMyrm 0x34
+#define Roshea 0x35
+#define Doot 0x36
+#define Edge 0x37
+#define Jerome 0x38
+#define Kirsten 0x39
+#define Tye 0x3A
+#define Tim 0x3B
+#define Jay 0x3C
+#define Doowile 0x3D
+#define Arve 0x3E
+#define AnnaWyvern 0x3F
+#define Tam 0x41
+#define Edgeworth 0x43
+#define Bob 0x47
+#define NotArch 0x7A
+#define Kaga 0x7B
+#define Bede 0x7C
+#define Leeroy 0x7D
+#define Mark 0x7E
+#define Void 0x7F
+
 #define Ch1Generic1 0x82
 #define Ch1Generic2 0x83
 #define Ch5Generic 0x8A
+#define Ch11EnemyID 0x96
+#define LuAlly 0x97
+#define Ch13Enemy 0x9A
+#define Ch13Ally 0x9B
 #define Ch14_Enemy 0x9C
 #define Ch15_Enemy 0x9D
 #define Ch17Enemies 0xA2
@@ -115,6 +163,7 @@
 #define RunicBow 0xBE
 #define RunicBowIconID 0xAF
 #define PowerGem BlackGem
+#define SuperBlitzLance Siegmund
 
 #define Dragonshard 0xC3
 #define DragonshardIconID 0xCB
@@ -129,6 +178,10 @@
 #define SwordCaliburIconID 0xCE
 #define BowCaliburIconID 0xCF
 
+#define DootAura 0xC4
+#define DootAuraIconID 0xCA
+
+#define Item200G _200G
 
 //Chapter definitions
 #define Chapter1 0x1

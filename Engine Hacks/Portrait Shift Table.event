@@ -1,0 +1,29 @@
+//// Portrait Upshift Edit(or?)
+// This table determines whether or not to upshift a portrait
+// (see the topic)
+// Anything but zero means the portrait will be upwards shifted
+// (or if you prefer "zero means the portrait will be downshifted" idk)
+
+// If you use character portraits past ID 0x71 for R-selectable units,
+// you should probably feed this a free space location.
+// (and by "should probably" i mean "if you leave this inline the code
+// after it will get overwritten or be read from and give the wrong values")
+
+PUSH
+
+	ORG 0x5C24
+	BYTE $01 $49 $08 $5C $70 $47 $C0 46
+
+	//.thumb
+	//@.org 0x5C24
+	//@This routine is passed Portrait Number
+	//ldr r1, ShiftPortraitTable
+	//ldrb r0, [r1, r0]
+	//bx r14
+	//.align
+	//ShiftPortraitTable:
+
+	ALIGN 4
+	POIN PortraitShiftEdit // Moved to Mug Installer
+
+POP

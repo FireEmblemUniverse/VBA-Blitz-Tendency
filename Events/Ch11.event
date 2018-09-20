@@ -1,9 +1,4 @@
 #define Ch11Level 10
-#define LeaderID 0x56
-#define MiscID 0x57
-#define EnemyID 0x96
-#define LuAlly 0x97
-#define SLuUID Luut
 
 #define SLu_ID 0xD1 //this should be ch 11/0xB events
 EventPointerTable(SLu_ID, SLu_ThisChapter)
@@ -116,46 +111,46 @@ ENDA
 ALIGN 4
 SLu_Units:
 SLu_UnitsH:
-UNIT 0x1 Paladin 0 Level(20, Ally, True) [ 8, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
-UNIT 0x2 Paladin 0 Level(20, Ally, True) [ 7, 25] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
-UNIT 0x3 Paladin 0 Level(20, Ally, True) [ 6, 25] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
-UNIT 0x4 Paladin 0 Level(20, Ally, True) [ 5, 25] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
-UNIT 0x5 Paladin 0 Level(20, Ally, True) [ 4, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
-UNIT 0x6 Valkyrie 0 Level(20, Ally, True) [5, 23] 0b 0x00 0 0x0 [Physic, Purge, Divine, Elixir] NoAI
-UNIT 0x7 Warrior 0 Level(20, Ally, True) [ 6, 23] 0b 0x00 0 0x0 [Tomahawk, Longbow, KillerAxe,  Elixir] NoAI
-UNIT 0x8 Paladin 0 Level(20, Ally, True) [ 7, 23] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x1 Paladin 0 Level(20, Ally, True)  [ 8, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x2 Paladin 0 Level(20, Ally, True)  [ 7, 25] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x3 Paladin 0 Level(20, Ally, True)  [ 6, 25] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x4 Paladin 0 Level(20, Ally, True)  [ 5, 25] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x5 Paladin 0 Level(20, Ally, True)  [ 4, 24] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
+UNIT 0x6 Valkyrie 0 Level(20, Ally, True) [5, 23]  0b 0x00 0 0x0 [Physic, Purge, Divine, Elixir] NoAI
+UNIT 0x7 Warrior 0 Level(20, Ally, True)  [ 6, 23] 0b 0x00 0 0x0 [Tomahawk, Longbow, KillerAxe,  Elixir] NoAI
+UNIT 0x8 Paladin 0 Level(20, Ally, True)  [ 7, 23] 0b 0x00 0 0x0 [Spear, Runesword, KillingEdge, Elixir] NoAI
 UNIT
 
 ALIGN 4
 SLu_Enemies:
-UNIT LeaderID Druid 0 Level(3, Enemy, 1) [ 9,  2] 0b 0x00 0 0x0 [Elfire, Eclipse, Physic] NeverMoveAI
+UNIT Ch11LdrID Druid 0 Level(3, Enemy, 1) [ 9,  2] 0b 0x00 0 0x0 [Elfire, Eclipse, Physic] NeverMoveAI
 
-UNIT EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [12, 13] 0b 0x0 0 0 [Thunder] AttackInRangeAI
-UNIT EnemyID Shaman 0 Level(Ch11Level, Enemy, 1) [13, 12] 0b 0x0 0 0 [Nosferatu] AttackInRangeAI
+UNIT Ch11EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [12, 13] 0b 0x0 0 0 [Thunder] AttackInRangeAI
+UNIT Ch11EnemyID Shaman 0 Level(Ch11Level, Enemy, 1) [13, 12] 0b 0x0 0 0 [Nosferatu] AttackInRangeAI
 
-UNIT EnemyID Archer 0 Level(Ch11Level, Enemy, 1) [21,  9] 0b 0x0 0 0 [SilverBow] AttackInRangeAI
-UNIT EnemyID Knight 0 Level(Ch11Level, Enemy, 1) [20, 10] 0b 0x0 0 0 [Horseslayer] AttackInRangeAI
+UNIT Ch11EnemyID Archer 0 Level(Ch11Level, Enemy, 1) [21,  9] 10b 0x0 0 0 [SilverBow, ChestKey] AttackInRangeAI
+UNIT Ch11EnemyID Knight 0 Level(Ch11Level, Enemy, 1) [20, 10] 0b 0x0 0 0 [Horseslayer] AttackInRangeAI
 
-UNIT EnemyID Monk 0 Level(Ch11Level, Enemy, 1)  [ 3, 10] 0b 0x0 0 0 [Divine] AttackInRangeAI
-UNIT EnemyID Knight 0 Level(Ch11Level, Enemy, 1) [ 5,  9] 0b 0x0 0 0 [SteelLance] GuardTileAI
+UNIT Ch11EnemyID Monk 0 Level(Ch11Level, Enemy, 1)  [ 3, 10] 0b 0x0 0 0 [Divine] AttackInRangeAI
+UNIT Ch11EnemyID Knight 0 Level(Ch11Level, Enemy, 1) [ 5,  9] 0b 0x0 0 0 [SteelLance] GuardTileAI
 
-UNIT EnemyID Paladin LeaderID Level(1,Enemy,True)  [17, 14] 0b 0x0 0 0 [IronSword] AttackInRangeAI
+UNIT Ch11EnemyID Paladin Ch11LdrID Level(1,Enemy,True)  [17, 14] 0b 0x0 0 0 [IronSword] AttackInRangeAI
 
-UNIT EnemyID Fighter 0 Level(Ch11Level, Enemy, 1) [ 6, 16] 10b 0x0 0 0 [Hammer] AttackInRangeAI
-UNIT EnemyID Cavalier 0 Level(Ch11Level, Enemy, 1)[ 4, 16] 0b 0x0 0 0 [IronSword] AttackInRangeAI
+UNIT Ch11EnemyID Fighter 0 Level(Ch11Level, Enemy, 1) [ 6, 16] 10b 0x0 0 0 [Hammer] AttackInRangeAI
+UNIT Ch11EnemyID Cavalier 0 Level(Ch11Level, Enemy, 1)[ 4, 16] 10b 0x0 0 0 [IronSword, ChestKey] AttackInRangeAI
 
-UNIT EnemyID Mercenary 0 Level(Ch11Level, Enemy, 1) [20, 19] 0b 0x0 0 0 [SteelBlade] AttackInRangeAI
-UNIT EnemyID Fighter 0 Level(Ch11Level, Enemy, 1)   [20, 22] 0b 0x0 0 0 [BattleAxe] AttackInRangeAI
+UNIT Ch11EnemyID Mercenary 0 Level(Ch11Level, Enemy, 1) [20, 19] 0b 0x0 0 0 [SteelBlade] AttackInRangeAI
+UNIT Ch11EnemyID Fighter 0 Level(Ch11Level, Enemy, 1)   [20, 22] 0b 0x0 0 0 [BattleAxe] AttackInRangeAI
 
-UNIT EnemyID Manakete_2_F LeaderID Level(3, Enemy, 1) [12, 10] 0b 0x0 0 0 [Dragonshard] AttackInRangeAI
+UNIT Ch11EnemyID Manakete_2_F Ch11LdrID Level(3, Enemy, 1) [12, 10] 10b 0x0 0 0 [Dragonshard, ChestKey] AttackInRangeAI
 UNIT
 
 SLu_Manakete_19_6:
-UNIT EnemyID Manakete_2_F LeaderID Level(3, Enemy, 1) [19, 6] 0b 0x00 1 REDA19R6 [Dragonshard] AttackInRangeAI
+UNIT Ch11EnemyID Manakete_2_F Ch11LdrID Level(3, Enemy, 1) [19, 6] 0b 0x00 1 REDA19R6 [Dragonshard] AttackInRangeAI
 UNIT
 
 SLu_Manakete_10_10:
-UNIT EnemyID Manakete_2_F LeaderID Level(3, Enemy, 1) [10, 10] 0b 0x00 1 REDA10R10 [Dragonshard] AttackInRangeAI
+UNIT Ch11EnemyID Manakete_2_F Ch11LdrID Level(3, Enemy, 1) [10, 10] 0b 0x00 1 REDA10R10 [Dragonshard] AttackInRangeAI
 UNIT
 
 ALIGN 4
@@ -164,28 +159,30 @@ CHECK_ALLEGIANCE 0xFFFF
 BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
     LoadReinforcements(SLu_Edwards)
     GOTO 0x1
-NoFade
 LABEL 0x0
-ENUT 0xB //Unset 0xB (Edwards didn't trigger)
+ENUF 0xB //Unset 0xB (Edwards didn't trigger)
 LABEL 0x1
+NoFade
 ENDB
 
 ALIGN 4
 SLu_Edwards:
-UNIT EnemyID Cavalier LeaderID Level(Ch11Level, Enemy, True) [ 9,  6] 0b 0x00 0 0x0 [BraveLance]    PursueWithoutHeedAI
-UNIT EnemyID Cavalier LeaderID Level(Ch11Level, Enemy, True) [ 8,  5] 0b 0x00 0 0x0 [Armorslayer]   PursueWithoutHeedAI
-UNIT EnemyID Ranger   LeaderID Level(        1, Enemy, True) [10,  5] 0b 0x00 0 0x0 [SteelBow]      PursueWithoutHeedAI
-UNIT EnemyID MageKnight LeaderID Level(      1, Enemy, True) [ 9,  4] 0b 0x00 0 0x0 [Thunder, Heal] PursueWithoutHeedAI
+UNIT Ch11EnemyID Cavalier Ch11LdrID Level(Ch11Level, Enemy, True) [ 9,  6] 10b 0x00 0 0x0 [BraveLance, ChestKey]    PursueWithoutHeedAI
+UNIT Ch11EnemyID Cavalier Ch11LdrID Level(Ch11Level, Enemy, True) [ 8,  5] 0b 0x00 0 0x0 [Armorslayer]   PursueWithoutHeedAI
+UNIT Ch11EnemyID Ranger   Ch11LdrID Level(        1, Enemy, True) [10,  5] 0b 0x00 0 0x0 [SteelBow]      PursueWithoutHeedAI
+UNIT Ch11EnemyID MageKnight Ch11LdrID Level(      1, Enemy, True) [ 9,  4] 0b 0x00 0 0x0 [Thunder, Heal] PursueWithoutHeedAI
 UNIT
 
 ALIGN 4
 Chesdrake_10_10:
+writeDummy(10,10)
 LoadReinforcements(SLu_Manakete_10_10)
 NoFade
 ENDB
 
 ALIGN 4
 Chesdrake_19_6:
+writeDummy(19,6)
 LoadReinforcements(SLu_Manakete_19_6)
 NoFade
 ENDB
@@ -209,39 +206,39 @@ NoFade
 ENDB
 
 TopThief:
-UNIT EnemyID Thief 0 Level(Ch11Level, Enemy, 1)   [19, 0] 0b 0x00 1 REDA16R0 [SilverSword, ChestKey] [0x06, 0x05]
+UNIT Ch11EnemyID Thief 0 Level(Ch11Level, Enemy, 1)   [19, 0] 0b 0x00 1 REDA16R0 [SilverSword, ChestKey] [0x06, 0x05]
 UNIT
 
 BotThief:
-UNIT EnemyID Thief 0 Level(Ch11Level, Enemy, 1)   [19,25] 0b 0x00 1 REDA15R25 [SilverSword, ChestKey] [0x06, 0x05]
+UNIT Ch11EnemyID Thief 0 Level(Ch11Level, Enemy, 1)   [19,25] 0b 0x00 1 REDA15R25 [SilverSword, ChestKey] [0x06, 0x05]
 UNIT
 
 RgtThief:
-UNIT EnemyID Thief 0 Level(Ch11Level, Enemy, 1)   [22,12] 0b 0x00 1 REDA20R11 [SilverSword, ChestKey] [0x06, 0x05]
+UNIT Ch11EnemyID Thief 0 Level(Ch11Level, Enemy, 1)   [22,12] 0b 0x00 1 REDA20R11 [SilverSword, ChestKey] [0x06, 0x05]
 UNIT
 
 ThroneMages0:
 TM0:
-UNIT EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Fire] PursueWithoutHeedAI
-UNIT EnemyID Monk 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Lightning] PursueWithoutHeedAI
+UNIT Ch11EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Fire] PursueWithoutHeedAI
+UNIT Ch11EnemyID Monk 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Lightning] PursueWithoutHeedAI
 UNIT
 
 ThroneMages1:
 TM1:
-UNIT EnemyID Shaman 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Flux] PursueWithoutHeedAI
-UNIT EnemyID Monk 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Lightning] PursueWithoutHeedAI
+UNIT Ch11EnemyID Shaman 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Flux] PursueWithoutHeedAI
+UNIT Ch11EnemyID Monk 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Lightning] PursueWithoutHeedAI
 UNIT
 
 ThroneMages2:
 TM2:
-UNIT EnemyID Shaman 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Flux] PursueWithoutHeedAI
-UNIT EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Fire] PursueWithoutHeedAI
+UNIT Ch11EnemyID Shaman 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Flux] PursueWithoutHeedAI
+UNIT Ch11EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Fire] PursueWithoutHeedAI
 UNIT
 
 ThroneMages3:
 TM3:
-UNIT EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Fire] PursueWithoutHeedAI
-UNIT EnemyID Shaman 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Flux] PursueWithoutHeedAI
+UNIT Ch11EnemyID Mage 0 Level(Ch11Level, Enemy, 1)   [ 8, 1] 0b 0x00 1 REDA8R2 [Fire] PursueWithoutHeedAI
+UNIT Ch11EnemyID Shaman 0 Level(Ch11Level, Enemy, 1)   [10, 1] 0b 0x00 1 REDA10R2 [Flux] PursueWithoutHeedAI
 UNIT
 
 ALIGN 4
@@ -268,6 +265,9 @@ ENDA
 ThroneSpawners:
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
+CHECK_TURNS
+SMOV r1 20
+BGT 0x0 rC r1 //If after turn 20, don't reinforce
     ENUT 0x22 //Set 0x22
 LABEL 0x0
 NoFade
@@ -276,7 +276,14 @@ ENDA
 ReinLeftIfInRight:
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
-    ENUT 0x20 //Set 0x20
+    CHECK_TURNS
+    SMOV r1 15 //If after turn 15, don't add to reinforce queue
+    BGT 0x0 rC r1
+        //only reinforce if even turn
+        SMOV r1 0x1
+        SAND 0x0C1C //AND sC with s1 and store in sC 1 if odd 0 if even
+        BNE 0x0 rC 0x0
+            ENUT 0x20 //Set 0x20
 LABEL 0x0
 NoFade
 ENDA
@@ -284,7 +291,14 @@ ENDA
 ReinRightIfInLeft:
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x0 0xC 0x0 //Skip the event if not a player triggering.
-    ENUT 0x21 //Set 0x21
+    CHECK_TURNS
+    SMOV r1 15 //If after turn 15, don't add to reinforce queue
+    BGT 0x0 rC r1
+        //only reinforce if odd turn
+        SMOV r1 0x1
+        SAND 0x0C1C //AND sC with s1 and store in sC 1 if odd 0 if even
+        BEQ 0x0 rC 0x0
+            ENUT 0x21 //Set 0x21
 LABEL 0x0
 NoFade
 ENDA
@@ -294,7 +308,7 @@ SpawnAtSides:
 //Left Side
 CHECK_EVENTID 0x20
 BEQ 0x0 rC r0
-ENUF 0x20
+    ENUF 0x20
 
     SMOV r1 Poin(LU0)
     SMOV r2 Poin(LU1)
@@ -321,7 +335,7 @@ ENUN
 //Right Side
 CHECK_EVENTID 0x21
 BEQ 0x1 rC r0
-ENUF 0x21
+    ENUF 0x21
 
     SMOV r1 Poin(RU0)
     SMOV r2 Poin(RU1)
@@ -348,7 +362,7 @@ ENUN
 //Throne space
 CHECK_EVENTID 0x22
 BEQ 0x2 rC r0
-ENUF 0x22
+    ENUF 0x22
     SMOV r1 Poin(TM0)
     SMOV r2 Poin(TM1)
     SMOV r3 Poin(TM2)
@@ -400,86 +414,86 @@ ENDB
 //start reading again maybe?
 SweetLu_Mage:
 SweetLu_0:
-UNIT SLuUID Mage 0 Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R1 [AnimaCalibur, Elfire, Vulnerary] NoAI
+UNIT Luut Mage 0 Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R1 [AnimaCalibur, Elfire, Vulnerary] NoAI
 UNIT
 
 SweetLu_Monk:
 SweetLu_1:
-UNIT SLuUID Monk 0 Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R1 [LightCalibur, Divine, Vulnerary] NoAI
+UNIT Luut Monk 0 Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R1 [LightCalibur, Divine, Vulnerary] NoAI
 UNIT
 
 SweetLu_Myrm:
 SweetLu_2:
-UNIT SLuUID Myrmidon 0 Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R1 [SwordCalibur, KillingEdge, Vulnerary] NoAI
+UNIT Luut Myrmidon 0 Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R1 [SwordCalibur, KillingEdge, Vulnerary] NoAI
 UNIT
 
 SweetLu_Archer:
 SweetLu_3:
-UNIT SLuUID Archer 0 Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R1 [BowCalibur, RunicBow, Vulnerary] NoAI
+UNIT Luut Archer 0 Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R1 [BowCalibur, RunicBow, Vulnerary] NoAI
 UNIT
 
 LT_a0:
-UNIT LuAlly Monk SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R2 [Purge, Lightning] NoAI
+UNIT LuAlly Monk Luut Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R2 [Purge, Lightning] NoAI
 UNIT
 
 LT_a1:
-UNIT LuAlly Mage SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R2 [Bolting, Fire] NoAI
+UNIT LuAlly Mage Luut Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R2 [Bolting, Fire] NoAI
 UNIT
 
 LT_a2:
-UNIT LuAlly Archer SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R2 [Ballista, IronBow] NoAI
+UNIT LuAlly Archer Luut Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R2 [Ballista, IronBow] NoAI
 UNIT
 
 LT_a3:
-UNIT LuAlly Warrior SLuUID Level(1, NPC, 1) [22, 0] 0b 0x00 1 REDA18R2 [Longbow, IronAxe] NoAI
+UNIT LuAlly Warrior Luut Level(1, NPC, 1) [22, 0] 0b 0x00 1 REDA18R2 [Longbow, IronAxe] NoAI
 UNIT
 
 LT_b0:
-UNIT LuAlly Troubadour SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Recover, Vulnerary] NoAI
+UNIT LuAlly Troubadour Luut Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Recover, Vulnerary] NoAI
 UNIT
 
 LT_b1:
-UNIT LuAlly Cleric SLuUID Level((Ch11Level+6), NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Physic, Vulnerary] NoAI
+UNIT LuAlly Cleric Luut Level((Ch11Level+6), NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Physic, Vulnerary] NoAI
 UNIT
 
 LT_b2:
-UNIT LuAlly Druid SLuUID Level(1, NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Sleep, Heal, Vulnerary] NoAI
+UNIT LuAlly Druid Luut Level(1, NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Sleep, Heal, Vulnerary] NoAI
 UNIT
 
 LT_b3:
-UNIT LuAlly Cleric SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Fortify, Vulnerary] NoAI
+UNIT LuAlly Cleric Luut Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA18R0 [Fortify, Vulnerary] NoAI
 UNIT
 
 LT_c0:
-UNIT LuAlly Shaman SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 [Nosferatu] NoAI
+UNIT LuAlly Shaman Luut Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 [Nosferatu] NoAI
 UNIT
 
 LT_c1:
-UNIT LuAlly Archer_F SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 [ExtraBow, Vulnerary] NoAI
+UNIT LuAlly Archer_F Luut Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 [ExtraBow, Vulnerary] NoAI
 UNIT
 
 LT_c2:
-UNIT LuAlly Fighter SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 [SilverAxe, Elixir] NoAI
+UNIT LuAlly Fighter Luut Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 [SilverAxe, Elixir] NoAI
 UNIT
 
 LT_c3:
-UNIT LuAlly General SLuUID Level(1, NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 [ShortSpear, SteelBlade] NoAI
+UNIT LuAlly General Luut Level(1, NPC, 1) [22, 0] 0b 0x00 1 REDA19R0 [ShortSpear, SteelBlade] NoAI
 UNIT
 
 LT_d0:
-UNIT LuAlly Cavalier SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R2 [SteelSword, Vulnerary] NoAI
+UNIT LuAlly Cavalier Luut Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R2 [SteelSword, Vulnerary] NoAI
 UNIT
 
 LT_d1:
-UNIT LuAlly Cavalier SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R2 [SteelLance, Vulnerary] NoAI
+UNIT LuAlly Cavalier Luut Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R2 [SteelLance, Vulnerary] NoAI
 UNIT
 
 LT_d2:
-UNIT LuAlly Tarvos SLuUID Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R2 [SteelAxe, Vulnerary] NoAI
+UNIT LuAlly Tarvos Luut Level((Ch11Level), NPC, 1) [22, 0] 0b 0x00 1 REDA19R2 [SteelAxe, Vulnerary] NoAI
 UNIT
 
 LT_d3:
-UNIT LuAlly Ranger SLuUID Level(1, NPC, 1) [22, 0] 0b 0x00 1 REDA19R2 [SteelBow, Vulnerary] NoAI
+UNIT LuAlly Ranger Luut Level(1, NPC, 1) [22, 0] 0b 0x00 1 REDA19R2 [SteelBow, Vulnerary] NoAI
 UNIT
 
 //REDA(X)R(Y) for reinforcement data movement pointers.
@@ -487,88 +501,88 @@ UNIT
 
 MonkLeftUp:
 LU1:
-UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R9 [Divine] PursueWithoutHeedAI
+UNIT Ch11EnemyID Monk Ch11LdrID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R9 [Divine] PursueWithoutHeedAI
 UNIT
 
 MageLeftUp:
 LU2:
-UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R9 [Elfire] PursueWithoutHeedAI
+UNIT Ch11EnemyID Mage Ch11LdrID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R9 [Elfire] PursueWithoutHeedAI
 UNIT
 
 ShamanLeftUp:
 LU3:
-UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R9 [Nosferatu] PursueWithoutHeedAI
+UNIT Ch11EnemyID Shaman Ch11LdrID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R9 [Nosferatu] PursueWithoutHeedAI
 UNIT
 
 MiscLeftUp:
 LU0:
-UNIT EnemyID Mercenary LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R9 [Zanbato] PursueWithoutHeedAI
+UNIT Ch11EnemyID Mercenary Ch11LdrID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R9 [Zanbato] PursueWithoutHeedAI
 UNIT
 
 
 
 MonkLeftRight:
 LR1:
-UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA2R10 [Lightning] PursueWithoutHeedAI
+UNIT Ch11EnemyID Monk Ch11LdrID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA2R10 [Lightning] PursueWithoutHeedAI
 UNIT
 
 MageLeftRight:
 LR2:
-UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA2R10 [Fire] PursueWithoutHeedAI
+UNIT Ch11EnemyID Mage Ch11LdrID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA2R10 [Fire] PursueWithoutHeedAI
 UNIT
 
 ShamanLeftRight:
 LR3:
-UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA2R10 [Flux] PursueWithoutHeedAI
+UNIT Ch11EnemyID Shaman Ch11LdrID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA2R10 [Flux] PursueWithoutHeedAI
 UNIT
 
 MiscLeftRight:
 LR0:
-UNIT EnemyID PegasusKnight LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA2R10 [IronLance] PursueWithoutHeedAI
+UNIT Ch11EnemyID PegasusKnight Ch11LdrID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA2R10 [IronLance] PursueWithoutHeedAI
 UNIT
 
 
 
 MonkLeftDown:
 LD1:
-UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R11 [Shine] PursueWithoutHeedAI
+UNIT Ch11EnemyID Monk Ch11LdrID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R11 [Shine] PursueWithoutHeedAI
 UNIT
 
 MageLeftDown:
 LD2:
-UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R11 [Thunder] PursueWithoutHeedAI
+UNIT Ch11EnemyID Mage Ch11LdrID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R11 [Thunder] PursueWithoutHeedAI
 UNIT
 
 ShamanLeftDown:
 LD3:
-UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R11 [Luna] PursueWithoutHeedAI
+UNIT Ch11EnemyID Shaman Ch11LdrID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R11 [Luna] PursueWithoutHeedAI
 UNIT
 
 MiscLeftDown:
 LD0:
-UNIT EnemyID Fighter LeaderID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R11 [SteelAxe] PursueWithoutHeedAI
+UNIT Ch11EnemyID Fighter Ch11LdrID Level((Ch11Level), 2, 1) [0, 10] 0x00 0x00 1 REDA1R11 [SteelAxe] PursueWithoutHeedAI
 UNIT
 
 
 
 MonkRightUp:
 RU1:
-UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R11 [Divine] PursueWithoutHeedAI
+UNIT Ch11EnemyID Monk Ch11LdrID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R11 [Divine] PursueWithoutHeedAI
 UNIT
 
 MageRightUp:
 RU2:
-UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R11 [Elfire] PursueWithoutHeedAI
+UNIT Ch11EnemyID Mage Ch11LdrID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R11 [Elfire] PursueWithoutHeedAI
 UNIT
 
 ShamanRightUp:
 RU3:
-UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R11 [Nosferatu] PursueWithoutHeedAI
+UNIT Ch11EnemyID Shaman Ch11LdrID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R11 [Nosferatu] PursueWithoutHeedAI
 UNIT
 
 MiscRightUp:
 RU0:
-UNIT EnemyID Myrmidon LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R11 [Armorslayer] PursueWithoutHeedAI
+UNIT Ch11EnemyID Myrmidon Ch11LdrID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R11 [Armorslayer] PursueWithoutHeedAI
 UNIT
 
 
@@ -576,22 +590,22 @@ UNIT
 
 MonkRightLeft:
 RL1:
-UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA20R12 [Lightning] PursueWithoutHeedAI
+UNIT Ch11EnemyID Monk Ch11LdrID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA20R12 [Lightning] PursueWithoutHeedAI
 UNIT
 
 MageRightLeft:
 RL2:
-UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA20R12 [Fire] PursueWithoutHeedAI
+UNIT Ch11EnemyID Mage Ch11LdrID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA20R12 [Fire] PursueWithoutHeedAI
 UNIT
 
 ShamanRightLeft:
 RL3:
-UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA20R12 [Flux] PursueWithoutHeedAI
+UNIT Ch11EnemyID Shaman Ch11LdrID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA20R12 [Flux] PursueWithoutHeedAI
 UNIT
 
 MiscRightLeft:
 RL0:
-UNIT EnemyID Pirate LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA20R12 [HandAxe] PursueWithoutHeedAI
+UNIT Ch11EnemyID Pirate Ch11LdrID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA20R12 [HandAxe] PursueWithoutHeedAI
 UNIT
 
 
@@ -600,22 +614,22 @@ UNIT
 
 MonkRightDown:
 RD1:
-UNIT EnemyID Monk LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [Shine] PursueWithoutHeedAI
+UNIT Ch11EnemyID Monk Ch11LdrID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [Shine] PursueWithoutHeedAI
 UNIT
 
 MageRightDown:
 RD2:
-UNIT EnemyID Mage LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [Thunder] PursueWithoutHeedAI
+UNIT Ch11EnemyID Mage Ch11LdrID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [Thunder] PursueWithoutHeedAI
 UNIT
 
 ShamanRightDown:
 RD3:
-UNIT EnemyID Shaman LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [Luna] PursueWithoutHeedAI
+UNIT Ch11EnemyID Shaman Ch11LdrID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [Luna] PursueWithoutHeedAI
 UNIT
 
 MiscRightDown:
 RD0:
-UNIT EnemyID Archer LeaderID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [SteelBow] PursueWithoutHeedAI
+UNIT Ch11EnemyID Archer Ch11LdrID Level((Ch11Level), 2, 1) [22, 12] 0x00 0x00 1 REDA21R13 [SteelBow] PursueWithoutHeedAI
 UNIT
 
 // r1-r4 are pointers to units.

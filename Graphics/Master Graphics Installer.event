@@ -8,12 +8,21 @@ PUSH
   ORG $8AEFFC
   BYTE 2 //same for promo
 
+  ORG $c5830
+  POIN NewTitleScroll
+
+  ORG $aac5ac
+  #incext Png2Dmp "FE_Title.png" --lz77
+
   ORG $aac58c //clearing dragon palette to only use 1 colour
   BYTE $90 $42 $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A $EE $2A
 POP
 
 NewDifficultyButtons:
 #incext Png2Dmp "difficulty.png" --lz77
+
+NewTitleScroll:
+#incext Png2Dmp "TitleScroll.png" --lz77
 
 PUSH
 ORG 0x5926F4+(0x80*0x8)
@@ -24,9 +33,13 @@ ORG 0x5926F4+(0x80*HuntersBowIconID)
 #incext Png2Dmp "HuntersBow.png"
 ORG 0x5926F4+(0x80*RunicBowIconID)
 #incext Png2Dmp "RunicBow.png"
+ORG 0x5926F4+(0x80*PiercingBowIconID)
+#incext Png2Dmp "PiercingBow.png"
 
+ORG 0x5926F4+(0x80*0x79)
+#incext Png2Dmp "WretchedAirN.png"
 ORG 0x5926F4+(0x80*DragonshardIconID)
-#incext Png2Dmp "Dragonshard.png"
+#incext Png2Dmp "LesserDStone.png"
 
 ORG 0x5926F4+(0x80*AnimaCaliburIconID)
 #incext Png2Dmp "AnimaCalibur.png"
@@ -36,4 +49,11 @@ ORG 0x5926F4+(0x80*SwordCaliburIconID)
 #incext Png2Dmp "SwordCalibur.png"
 ORG 0x5926F4+(0x80*BowCaliburIconID)
 #incext Png2Dmp "BowCalibur.png"
+ORG 0x5926F4+(0x80*DootAuraIconID)
+#incext Png2Dmp "auraicon.png"
+
+ORG 0x5926F4+(0x80*0xB4) // SuperBlitzLanceIconID
+#incext Png2Dmp "superblitzicon.png"
+ORG 0x5926F4+(0x80*0xB0) // BlitzOfAjaIconID
+#incext Png2Dmp "blitzofaja.png"
 POP
