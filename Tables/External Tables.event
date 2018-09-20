@@ -65,3 +65,13 @@ MountedClassTable:
 //Replace this with a list of your classes, mounted and unmounted.
 MountedUnmounted(VoidMaster, VoidMonster)
 EndMountUnmountedTable
+
+ALIGN 4
+SuperBlitzStatBoosts:
+//   hp st sk sp df rs lk mv cn
+BYTE 00 10 10 00 10 20 00 00 00 00
+
+ALIGN 4
+BlitzOfAjaStatBoosts:
+//   hp st sk sp df rs lk mv cn
+BYTE 00 10 05 05 05 20 20 00 00 00

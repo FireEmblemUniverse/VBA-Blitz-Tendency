@@ -67,6 +67,12 @@ POP
 ////////////////////////////////FREE SPACE OUT OF BL RANGE
 //start of Free space
 
+  //Portrait Height fix
+  #include "Portrait Shift Table.event"
+
+  //Melee Magic Fix
+  #include "Melee_Magic_Fix_EA.txt"
+
   //Check if current character has the specified item: (Written for chapter 5)
   #inctext lyn "CheckItem.elf"
 
@@ -165,7 +171,7 @@ POP
 
   // Sabin memes
   #include "IncorrectBlitzInput/IncorrectBlitzInput.event"
-  
+
   ALIGN 4
   //We are installing new descriptions/icons.
   #define __USE_ICON_MACROS__

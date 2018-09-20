@@ -353,3 +353,210 @@ Soldier[X]
 
 ## descCh27GenericSoldier
 A Soldier.[X]
+
+## nameTiki
+Tiki[X]
+
+## descTiki
+placeholder[X]
+
+## nameMarf
+Marf[X]
+
+## descMarf
+Not amused[X]
+
+## nameJake
+Jake[X]
+
+## descJake
+placeholder[X]
+
+## nameBjorn
+Bj[0xf6]rn[X]
+
+## descBjorn
+His raison d'[0xea]tre: na[0xef]vet[0xe9] as[N]
+a fa[0xe7]ade for doppelg[0xe4]ngers.[X]
+
+## nameEvilFlorina
+Evil Florina[X]
+
+## descEvilFlorina
+uweeheehee[X]
+
+## nameCelica
+Celica[X]
+
+## descCelica
+Princess of the Pirates.[N]
+Hails from a distant land.[X]
+
+## nameDoowile
+Doowile[X]
+
+## descDoowile
+placeholder[X]
+
+## nameVoid
+Void[X]
+
+## descVoid
+knoll much[X]
+
+## nameZigludo
+Zigludo[X]
+
+## descZigludo
+Haha Funny fire meme[N]
+wank Xdddd dab[X]
+
+## descAnnaRogue
+A girl with a familiar face.[N]
+Her love of money is REALLY strong.[X]
+
+## nameEevster
+Eevster[X]
+
+## descEevster
+The (Former) King of[N]
+the Basement.[X]
+
+## nameSamson
+Samson[X]
+
+## descSamson
+placeholder[X]
+
+## namePrine
+Prine[X]
+
+## descPrine
+onii-nyama sugoi~[X]
+
+## nameCelicia
+Celicia[X]
+
+## descCelicia
+Prone to wandering off alone,[N]
+lost in thoughts of grey waves.[X]
+
+## nameRoshea
+Roshea[X]
+
+## descRoshea
+placeholder[X]
+
+## nameDoot
+Doot[X]
+
+## descDoot
+DOOT DOOT[X]
+
+## nameEdge
+Edge[X]
+
+## descEdge
+placeholder[X]
+
+## nameJerome
+Jerome[X]
+
+## descJerome
+You want a playable soldier?[X]
+
+## nameKirsten
+Kirsten[X]
+
+## descKirsten
+oy u best lisen ere m8 il giv u[N]
+a proper bashin u cheeky bruv[X]
+
+## nameTye
+Tye[X]
+
+## descTye
+placeholder[X]
+
+## nameTim
+Tim[X]
+
+## descTim
+His friends call[N]
+him Timathan.[X]
+
+## nameTam
+Tam[X]
+
+## descTam
+Secretly wishes he[N]
+was a necromancer.[X]
+
+## nameNikita
+Nikita[X]
+
+## descNikita
+Axe-focused GK[X]
+
+## nameJay
+Jay[X]
+
+## descJay
+An old veteran of the Renegade[N]
+translation era. Got the tools down.[X]
+
+## nameArve
+Arve[X]
+
+## descArve
+Elder. It's ELDER.[N]
+Not dark. E-L-D-E-R.[X]
+
+## descAnnaWyvern
+How many Annas are[N]
+there, anyway?[X]
+
+## nameBob
+Bob[X]
+
+## descBob
+placeholder[X]
+
+## nameNotArch
+Not Arch[X]
+
+## descNotArch
+His divine lightning[N]
+will pierce your face.[X]
+
+## nameKaga
+Kaga[X]
+
+## descKaga
+Our lord and savior[X]
+
+## nameBede
+Bede[X]
+
+## descBede
+sexy priest[X]
+
+## nameLeeroy
+Leeroy[X]
+
+## descLeeroy
+His father was also[N]
+named after a meme.[X]
+
+## nameMark
+Mark[X]
+
+## descMark
+A mysterious person who[N]
+claims to be a tactician.[X]
+
+## nameEdgeworth
+Edgeworth[X]
+
+## descEdgeworth
+HIS EDGE IS WORTH[X]

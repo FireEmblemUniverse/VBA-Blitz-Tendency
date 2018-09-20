@@ -1,8 +1,29 @@
 #include "Tools/Tool Helpers.txt"
 
+ALIGN 4
+PortraitShiftEdit:
+//Needs bytes of free space equal to the highest Portrait Number that you use.
+// I'm just going to give this 0x100 bytes of freespace.
+WORD 0 0 0 0 0 0 0 0
+WORD 0 0 0 0 0 0 0 0
+WORD 0 0 0 0 0 0 0 0
+WORD 0 0 0 0 0 0 0 0
+WORD 0 0 0 0 0 0 0 0
+WORD 0 0 0 0 0 0 0 0
+WORD 0 0 0 0 0 0 0 0
+WORD 0 0 0 0 0 0 0 0
+
+#define setUpshift(portraitID) "PUSH; ORG (PortraitShiftEdit+portraitID); BYTE 1; POP"
+
+Vedge_Mug:
+#incext PortraitFormatter "Vedge.png"
+setMugEntry(0x2, Vedge_Mug, 2, 6, 3, 4)
+
+// 0x3 and 0x4 are taken by VBA 1 characters
+#define NullPortrait 0x4D // "Unused Man"
 Null_Mug:
 #incext PortraitFormatter "Null.png"
-setMugEntry(0x4, Null_Mug, 3, 5, 3, 3)
+setMugEntry(NullPortrait, Null_Mug, 3, 5, 3, 3)
 
 Naught_Mug:
 #incext PortraitFormatter "Naught.png"
@@ -72,6 +93,11 @@ ErsatzMug:
 #incext PortraitFormatter "Ersatz.png"
 setMugEntry(0x29,ErsatzMug,2,6,2,4)
 
+#define VergeinPortrait 0x30
+Vergein_Mug:
+#incext PortraitFormatter "Vergein.png"
+setMugEntry(VergeinPortrait, Vergein_Mug, 4, 5, 4, 3)
+
 #define HecwoodPortrait 0x31
 Hecwood_Mug:
 #incext PortraitFormatter "Hecwood.png"
@@ -102,40 +128,187 @@ JazzakMug:
 #incext PortraitFormatter "Jazzak.png"
 setMugEntry(JazzakPortrait,JazzakMug,3,5,3,3)
 
-#define KamitoPortrait 0x44
+#define DeuxnidsPortrait 0x37
+DeuxnidsMug:
+#incext PortraitFormatter "Deuxnids.png"
+setMugEntry(DeuxnidsPortrait,DeuxnidsMug, 2, 6, 2, 4)
+setUpshift(DeuxnidsPortrait)
+
+#define KamitoPortrait 0x38
 Kamito_Mug:
 #incext PortraitFormatter "Kamito.png"
 setMugEntry(KamitoPortrait, Kamito_Mug, 3, 5, 3, 3)
 
+#define KeftaPortrait 0x39
 KefkaMug:
 #incext PortraitFormatter "Kefka.png"
-setMugEntry(0x4A,KefkaMug,3,8,4,6)
+setMugEntry(KeftaPortrait,KefkaMug,3,8,4,6)
+setUpshift(KeftaPortrait)
 
 #define DeuxnidsPortrait 0x3F
 DeuxnidsMug:
 #incext PortraitFormatter "Deuxnids.png"
 setMugEntry(DeuxnidsPortrait, DeuxnidsMug, 2, 6, 2, 4)
 
+#define ClairePortrait 0x40
 Claire_Mug:
 #incext PortraitFormatter "Claire.png"
-setMugEntry(0x4B, Claire_Mug, 4, 6, 4, 4)
+setMugEntry(ClairePortrait, Claire_Mug, 4, 6, 4, 4)
 
+#define MedeaPortrait 0x41
 Medea_Mug:
 #incext PortraitFormatter "Medea.png"
-setMugEntry(0x72, Medea_Mug, 2, 6, 2, 4)
+setMugEntry(MedeaPortrait, Medea_Mug, 2, 6, 2, 4)
 
-#define AssassinServantPortrait 0x73
+#define AssassinServantPortrait 0x42
 AssassinServant_Mug:
 #incext PortraitFormatter "AssassinServant.png"
 setMugEntry(AssassinServantPortrait, AssassinServant_Mug, 2, 5, 3, 3)
 
-#define NotArchPortrait 0x03
+
+
+// VBA 1 Mugs
+// Use all the "Eyes closed" portraits of FE8 before freespace mugs
+#define NotArchPortrait 0x3
+#define CelicaPortrait 0xB
+#define DoowilePortrait 0xD
+#define JakePortrait 0x12
+#define MarfPortrait 0x15
+#define EvilFlorinaPortrait 0x17
+#define TikiPortrait 0x1D
+#define BjornPortrait 0x1F
+#define ZigludoPortrait 0x27
+#define AnnaRoguePortrait 0x64 //Use GBA Anna
+#define EevsterPortrait 0x28
+#define SamsonPortrait 0x2D
+#define PrinePortrait 0x2E
+#define CeliciaPortrait 0x2F
+#define NikitaPortrait 0x45 //Orson
+#define AnnaMyrmPortrait 0x64 //Also GBA Anna
+#define DootPortrait 0x50
+#define EdgePortrait 0x51
+#define JeromePortrait 0x6A //Vanilla soldier
+#define KirstenPortrait 0x53
+#define TyePortrait 0x54
+#define TimPortrait 0x55
+#define JayPortrait 0xF //Vanilla Innes
+#define ArvePortrait 0x56
+#define AnnaWyvernPortrait 0x57
+#define TamPortrait 0x6B
+#define BedePortrait 0x6C
+#define EdgeworthPortrait 0x6D
+#define MarkPortrait 0x6E
+#define RosheaPortrait 0x6F
+#define BobPortrait 0x24 // Rennac. May overlap with one of Teq's characters.
+#define KagaPortrait 0x70
+#define LeeroyPortrait 0x04 // Seth
+#define VoidPortrait 0x71
+
 NotArch_Mug:
 #incext PortraitFormatter "NotArch.png"
 setMugEntry(NotArchPortrait, NotArch_Mug, 3, 5, 3, 3)
 
-#define VergeinPortrait 0x74
-Vergein_Mug:
-#incext PortraitFormatter "Vergein.png"
-setMugEntry(VergeinPortrait, Vergein_Mug, 4, 5, 4, 3)
+Celica_Mug:
+#incext PortraitFormatter "Celica.png"
+setMugEntry(CelicaPortrait, Celica_Mug, 3,6,3,4)
 
+Doowile_Mug:
+#incext PortraitFormatter "doowile.png"
+setMugEntry(DoowilePortrait, Doowile_Mug, 3,5,3,3)
+
+Jake_Mug:
+#incext PortraitFormatter "Jake.png"
+setMugEntry(JakePortrait, Jake_Mug, 2,5,3,3)
+
+MarfMug:
+#incext PortraitFormatter "Marf.png"
+setMugEntry(MarfPortrait, MarfMug, 4, 8, 4, 6)
+setUpshift(MarfPortrait)
+
+EvilFlorina_Mug:
+#incext PortraitFormatter "evilflorina.png"
+setMugEntry(EvilFlorinaPortrait, EvilFlorina_Mug, 2,6, 3,4)
+
+Tiki_Mug:
+#incext PortraitFormatter "chiki.png"
+setMugEntry(TikiPortrait, Tiki_Mug, 4,7,4,5)
+
+Bjoern_Mug:
+#incext PortraitFormatter "bjoern.png"
+setMugEntry(BjornPortrait, Bjoern_Mug, 2,5,2,3)
+
+ZigludoMug:
+#incext PortraitFormatter "sigurd2.png"
+setMugEntry(ZigludoPortrait, ZigludoMug, 4, 6, 4, 4)
+
+Eevster_Mug:
+#incext PortraitFormatter "Eev.png"
+setMugEntry(EevsterPortrait, Eevster_Mug, 3,7,3,5)
+
+Samson_Mug:
+#incext PortraitFormatter "Samson.png"
+setMugEntry(SamsonPortrait, Samson_Mug, 3,5,3,3)
+
+Prine_Mug:
+#incext PortraitFormatter "Prine.png"
+setMugEntry(PrinePortrait, Prine_Mug, 2,6,3,4)
+
+Celicia_Mug:
+#incext PortraitFormatter "celicia.png"
+setMugEntry(CeliciaPortrait, Celicia_Mug, 3,5,3,3)
+
+Doot_Mug:
+#incext PortraitFormatter "Doot.png"
+setMugEntry(DootPortrait, Doot_Mug, 4, 6, 4, 4)
+
+Edge_Mug:
+#incext PortraitFormatter "Edge.png"
+setMugEntry(EdgePortrait, Edge_Mug, 2,5,3,3)
+
+Kirsten_Mug:
+#incext PortraitFormatter "Kirsten.png"
+setMugEntry(KirstenPortrait, Kirsten_Mug, 2,6,3,4)
+
+Tye_Mug:
+#incext PortraitFormatter "Tye.png"
+setMugEntry(TyePortrait, Tye_Mug, 3,5,2,3)
+
+Tim_Mug:
+#incext PortraitFormatter "Tim.png"
+setMugEntry(TimPortrait, Tim_Mug, 2,5,2,3)
+
+Tam_Mug:
+#incext PortraitFormatter "Tam.png"
+setMugEntry(TamPortrait, Tam_Mug, 2,5,2,3)
+
+Arve_Mug:
+#incext PortraitFormatter "Arve.png"
+setMugEntry(ArvePortrait, Arve_Mug, 3,5,3,3)
+
+AnnaWyv_Mug:
+#incext PortraitFormatter "AnnaWyv.png"
+setMugEntry(AnnaWyvernPortrait, AnnaWyv_Mug, 2,6,3,4)
+
+Bede_Mug:
+#incext PortraitFormatter "Bede.png"
+setMugEntry(BedePortrait, Bede_Mug, 3,5,2,3)
+
+Edgeworth_Mug:
+#incext PortraitFormatter "Edgeworth.png"
+setMugEntry(EdgeworthPortrait, Edgeworth_Mug, 2, 4, 6, 4)
+
+Mark_Mug:
+#incext PortraitFormatter "mamkute.png"
+setMugEntry(MarkPortrait, Mark_Mug, 4,6,2,4)
+
+Roshea_Mug:
+#incext PortraitFormatter "Roshea.png"
+setMugEntry(RosheaPortrait, Roshea_Mug, 2, 5, 2, 3)
+
+Kaga_Mug:
+#incext PortraitFormatter "kaga.png"
+setMugEntry(KagaPortrait, Kaga_Mug, 3, 5, 3, 3)
+
+Void_Mug:
+#incext PortraitFormatter "Void.png"
+setMugEntry(VoidPortrait, Void_Mug, 2, 5, 3, 3)
