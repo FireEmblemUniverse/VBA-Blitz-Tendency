@@ -162,6 +162,9 @@ POP
   FreezeAllASMC:
   #incbin "ASM/freezeall.dmp"
 
+  // Ch 11/13 ASMC-able function
+  #include "writeDummyUnit.event"
+
   // Chapter 27 ASMC-able functions
   ALIGN 4
   gChapter27FogLevel:

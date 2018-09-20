@@ -145,10 +145,10 @@ KefkaMug:
 setMugEntry(KeftaPortrait,KefkaMug,3,8,4,6)
 setUpshift(KeftaPortrait)
 
-#define DeuxnidsPortrait 0x3F
-DeuxnidsMug:
-#incext PortraitFormatter "Deuxnids.png"
-setMugEntry(DeuxnidsPortrait, DeuxnidsMug, 2, 6, 2, 4)
+#define CortezPortrait 0x3F
+Cortez_Mug:
+#incext PortraitFormatter "lusqctz.png"
+setMugEntry(CortezPortrait, Cortez_Mug, 4, 7, 3, 4)
 
 #define ClairePortrait 0x40
 Claire_Mug:
@@ -164,8 +164,6 @@ setMugEntry(MedeaPortrait, Medea_Mug, 2, 6, 2, 4)
 AssassinServant_Mug:
 #incext PortraitFormatter "AssassinServant.png"
 setMugEntry(AssassinServantPortrait, AssassinServant_Mug, 2, 5, 3, 3)
-
-
 
 // VBA 1 Mugs
 // Use all the "Eyes closed" portraits of FE8 before freespace mugs
