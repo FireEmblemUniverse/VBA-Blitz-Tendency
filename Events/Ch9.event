@@ -33,7 +33,7 @@ UNIT 0x92 Mogall Carlyle Level(12, Enemy, 1) [20,13] 0x00 0x00 0x0 0x00 [EvilEye
 UNIT 0x92 Mogall Carlyle Level(12, Enemy, 1) [18,11] 0x00 0x00 0x0 0x00 [EvilEye] AttackInRangeAI
 UNIT 0x92 Gargoyle Carlyle Level(12, Enemy, 1) [4,14] 0x2 0x00 0x0 0x00 [Axereaver] AttackInRangeAI
 UNIT 0x92 Gargoyle Carlyle Level(12, Enemy, 1) [6,12] 0x00 0x00 0x0 0x00 [Javelin] AttackInRangeAI
-UNIT 0x92 Tarvos Carlyle Level(12, Enemy, 1) [5,16] 0x2 0x00 0x0 0x00 [DevilAxe] AttackInRangeAI
+UNIT 0x92 Tarvos Carlyle Level(12, Enemy, 1) [5,16] 0x2 0x00 0x0 0x00 [DevilAxe] AttackInRangeAI //Colorz said Devil Axe is nonfunctional/not to be used (?)
 UNIT
 
 NoRoof:
@@ -110,7 +110,7 @@ GotoPrepScreen
 
 EndingScene:
 Text(PlaceholderText)
-MNCH 12
+MNCH 12 //Do not change. Since this is MNCH and not MNC2, we do not use the Chapter10 definition.
 ENDA
 
 

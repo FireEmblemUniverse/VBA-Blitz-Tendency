@@ -19,16 +19,30 @@ Effective against magic users.[X]
 ## namePowerGem
 Power Gem[X]
 
-## nameDragonshard
-Dragonshard[X]
-
-## descDragonshard
-A fragment full of mystical[NL]
-energies. Dragonkin prize them.[X]
-
 ## descPowerGem
 A mysterious gem giving its[NL]
 wielder special ability. +10 crit.[X]
+
+## nameDragonshard
+Marshstone[X]
+
+## descDragonshard
+A crystal laden with some[NL]
+mystical energies.[X]
+
+## nameDarkstone
+Darkstone[X]
+
+## descDarkstone
+Power of horrid death[N]
+lays sealed within.[X]
+
+## nameGreatstone
+Greatstone[X]
+
+## descGreatstone
+A stone imbued with mysterious might.[NL]
+Cleanses foul beings.[X]
 
 ## AnimaCaliburDesc
 Effective against fliers.[X]
@@ -41,3 +55,20 @@ Effective: flier/armor/mage. Hits Res.[X]
 
 ## BowCaliburDesc
 Doubles attacks. Effective v fliers.[X]
+
+## nameLightRune
+Light Rune[X]
+
+## descLightRune
+Creates a barrier on an adjacent[N]
+space, causing it to be temporarily[N]
+non-traversable.[X]
+
+## nameBlitzOfAja
+Blitz of Aja[X]
+
+## descBlitzOfAja
+A legendary axe with an inset red stone.[X]
+
+## nameSuperBlitzLance
+Super Blitz[X]

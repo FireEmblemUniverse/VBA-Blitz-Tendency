@@ -42,10 +42,10 @@ Prologue: IT BEGINS AGAIN[X]
 13: [X]
 
 # 0x016e
-14: [X]
+14: Not In Kansas Anymore[X]
 
 # 0x016f
-15: [X]
+15: Dead Men Wag No Tails[X]
 
 # 0x0170
 16: The Grapes of Rath[X]
@@ -75,13 +75,13 @@ Prologue: IT BEGINS AGAIN[X]
 24: Recoil River[X]
 
 # 0x019B
-25: Stud Contact[X]
+25: BLOOD CONTRACT[X]
 
 # 0x0179
 26: ... Know Thyself[X]
 
 # 0x017A
-27: [X]
+27: Dancing Sand Graveyard[X]
 
 # 0x017B
 28: Kaga's Blessing Upon[X]

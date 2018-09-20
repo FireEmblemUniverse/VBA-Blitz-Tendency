@@ -23,3 +23,88 @@ HATE HATE HATE HATE HATE HATE[N]
 HATE HATE HATE HATE HATE HATE[AN]
 HATE HATE HATE HATE HATE HATE[N]
 HATE HATE HATE HATE HATE YOU![A][X]
+
+## WrathBattleQ
+I soft resetted this map MANY[N]
+TIMES.[.....] So many I must create[AN]
+a savestate to save my units.[.....][N]
+This map is a NIGHTMARE!!!![AN][X]
+
+## WrathDeathQ
+God dammit![.....][N]
+I have to reset again?!?![A][X]
+
+## MariyaDeathQ
+[OpenMidRight][LoadMariya]
+Everything comes to an end
+in due time...[A][X]
+
+## MichealPDeathQ
+[OpenMidRight][LoadMichealP]
+AAAAAAAAAAAAAAAAAAAAAAA[N]
+AAAAAAAAAAAAAAAAAAAAAAA[N]
+AAAAAAAAAAAAAAAAAAAAAAA[N]
+AAAAAAAAAAAAAAAAAAAAAAA[N]
+AAAAAAAAAAAAAAAAAAAAAAA[N]
+AAAAAAAAAAAAAAAAAAAAAAA[N]
+AAAAAAAAAAAAAAAAAAAAAAA[N]
+AAAAAAAAAAAAAAAAAAAAAAA[A][X]
+
+## JazzakCombat
+[OpenMidLeft][LoadFace][Jazzak][0x01]
+Your Queen has made this place a pit.[N]
+Now I take back my freedom.[A][X]
+
+## JazzakDeath
+[OpenMidLeft][LoadFace][Jazzak][0x01]
+In truth, death could be seen[N]
+as a freedom of its own.[A][X]
+
+## MealyDeath
+[OpenMidRight][LoadMystery]
+Bury me...[N]
+in the Shrine of Meals...[A][X]
+
+## Splenda1415DQ
+[OMR][LF][SplendaPortrait]
+[OMR]No[Beat]I can't die![.4] I must[N]
+show them[Beat][CloseEyes]the way[Beat][A][X]
+
+## SplendaNormDQ
+[OMR][LF][SplendaPortrait]
+[Beat][CloseEyes]They told me that only[N]
+the good die young.[.4] Hah[Beat][A][X]
+
+## WickyNormalBQ
+[OML][LF][WickyPortrait]
+[OML]You wish to face me,[.4] the most[N]
+wicked of wicked witches?[AN]
+Hah![.4] Let mine be the[N]
+last face you will ever see![A][X]
+
+## WickySplendaBQ
+[OML][LF][WickyPortrait]
+[OML]So[Beat]you dare face me yourself?[A][ClearFace]
+[OMR][LF][SplendaPortrait]
+[OMR]Wicky[Beat]why are you doing this?[A][ClearFace]
+[OML][LF][WickyPortrait]
+[OML]Why?[.4] WHY?[.4] I need a reason?[.4][N]
+I'm a wicked witch![.4] I do wicked[AN]
+things because they bring me[N]
+pleasure![.4] And killing you[Beat]oh,[AN]
+that'll warm my heart forever![.4][N]
+Now die;[.4] there's a good witch![A][X]
+
+## WickyDQ
+[OML][LF][WickyPortrait]
+[OML]What?[.4] No![.4] I was to be[Beat]the[N]
+greatest[Beat]witch of all[Beat][CloseEyes][A][X]
+
+## BennyDQ
+[OMR][LF][BennyPortrait]
+[OMR]Awoooo[Beat][CloseEyes][A][X]
+
+## ZaneDQ
+[OMR][LF][ZanePortrait]
+[OMR]Am I actually dead this[N]
+time?[.4] I sure hope so.[A][X]

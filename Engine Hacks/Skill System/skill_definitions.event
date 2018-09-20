@@ -158,3 +158,6 @@
 #define ForesightID 157 //DONE
 #define AxeFaithID 158 //DONE
 #define AxefaithID AxeFaithID //Alias
+#define ArmorMarchID 159 //DONE
+#define VigorDanceID 160 //DONE
+#define MightyNineID 161 //DONE
