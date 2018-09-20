@@ -49,15 +49,10 @@ Your wyvern sent you...?[A]
 [ToggleSmile][CloseEyes](Not even gonna question it...)[A][N]
 [OpenEyes]Fine.[.....] Let's just get moving.[A][X]
 
-## WrathBattleQ
-I soft resetted this map MANY[N]
-TIMES.[.....] So many I must create[AN]
-a savestate to save my units.[.....][N]
-This map is a NIGHTMARE!!!![AN][X]
+## Ch16Objective
+Seize throne from the[N]
+cave nomads[X]
 
-## WrathDeathQ
-God dammit![.....][N]
-I have to reset again?!?![A][X]
 
 
 
@@ -140,7 +135,7 @@ This must be her feeble attempt[N]
 to hide her true intentions.[A]
 
 [OpenMidLeft]
-No no![.....]
+No no![.....][N]
 I'm telling the truth![AN]
 My words come straight from[N]
 the heart of Nox![A]
@@ -160,8 +155,8 @@ I feel like she's hiding something,[....] but I[N]
 think we should keep her on our side.[A]
 
 [OpenFarRight]
-Very well.[A]
-Now,[....] let's move out of this
+Very well.[AN]
+Now,[....] let's move out of this[N]
 cave before the inhabitants regroup![A][X]
 
 

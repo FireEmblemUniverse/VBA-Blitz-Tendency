@@ -73,6 +73,8 @@
 [LoadNull] = [LoadFace][NullPortrait]
 [LoadAwakeningAnna] = [LoadFace][AwakeningAnnaPortrait]
 [LoadXimena] = [LoadFace][0xA][0x1]
+[LoadMariya] = [LoadFace][0x1E][0x1]
+[LoadMichealP] = [LoadFace][0x2C][0x1]
 [LoadNotArch] = [LoadFace][0x03][0x01]
 [LoadNull] = [LoadFace][0x04][0x01]
 [LoadNaught] = [LoadFace][0x05][0x01]

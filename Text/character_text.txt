@@ -291,6 +291,59 @@ Nichol[X]
 A ruthless man who has two fears:[N]
 Death, and a ruined Christmas.[X]
 
+## nameMariya
+Mariya[X]
+
+## descMariya
+Wyvern knight from Nox. Claims[N]
+herself a servant of her wyvern.[X]
+
+## nameMichealP
+Micheal P[X]
+
+## descMichealP
+THE GREATEST GENERAL IN NOX. HIS[N]
+CAPS LOCK KEY IS FOREVER BROKEN.[X]
+
+## nameWrathBoss
+Wrath[X]
+
+## descWrathBoss
+Once a nomad from the Kuthola,[N]
+now poisoned by madness.[X]
+
+## nameMike
+Mike[X]
+
+## descMike
+The Mignon apostle. Can[N]
+cook a killer steak.[X]
+
+## nameNox
+Nox[X]
+
+## descNox
+Soldier of Nox, the kingdom ruled[N]
+by the wyvern king, Takeuchi.[X]
+
+## nameCaveNomad
+Wrathful[X]
+
+## descCaveNomad
+Nomads that inhabit the Cave[N]
+of Wrath. Have night vision.[X]
+
+## nameMignon
+Mignon[X]
+
+## descMignon
+Highly skilled soldiers of[N]
+the Mignon apostle.[X]
+
+## descMignonPass
+Wvern riders of the Mignon[N]
+apostle, able to fly over enemies.[X]
+
 ## descAwakeningAnna
 She's all about slashing prices...[N]
 and enemies.[X]
