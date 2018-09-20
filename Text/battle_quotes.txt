@@ -35,12 +35,12 @@ God dammit![.....][N]
 I have to reset again?!?![A][X]
 
 ## MariyaDeathQ
-[OpenMidRight]][LoadMariya]
+[OpenMidRight][LoadMariya]
 Everything comes to an end
 in due time...[A][X]
 
 ## MichealPDeathQ
-[OpenMidRight]][LoadMichealP]
+[OpenMidRight][LoadMichealP]
 AAAAAAAAAAAAAAAAAAAAAAA[N]
 AAAAAAAAAAAAAAAAAAAAAAA[N]
 AAAAAAAAAAAAAAAAAAAAAAA[N]
