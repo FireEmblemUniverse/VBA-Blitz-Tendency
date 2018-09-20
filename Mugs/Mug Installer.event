@@ -145,6 +145,11 @@ KefkaMug:
 setMugEntry(KeftaPortrait,KefkaMug,3,8,4,6)
 setUpshift(KeftaPortrait)
 
+#define DeuxnidsPortrait 0x3F
+DeuxnidsMug:
+#incext PortraitFormatter "Deuxnids.png"
+setMugEntry(DeuxnidsPortrait, DeuxnidsMug, 2, 6, 2, 4)
+
 #define ClairePortrait 0x40
 Claire_Mug:
 #incext PortraitFormatter "Claire.png"
