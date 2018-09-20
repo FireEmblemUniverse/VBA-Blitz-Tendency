@@ -74,4 +74,4 @@ BYTE 00 10 10 00 10 20 00 00 00 00
 ALIGN 4
 BlitzOfAjaStatBoosts:
 //   hp st sk sp df rs lk mv cn
-BYTE 00 10 00 05 05 20 20 00 00 00
+BYTE 00 10 05 05 05 20 20 00 00 00
