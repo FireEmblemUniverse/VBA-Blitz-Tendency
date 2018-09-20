@@ -299,7 +299,7 @@ now poisoned by madness.[X]
 ## nameMike
 Mike[X]
 
-## descMikeBoss
+## descMike
 The Mignon apostle. Can[N]
 cook a killer steak.[X]
 
@@ -325,5 +325,5 @@ Highly skilled soldiers of[N]
 the Mignon apostle.[X]
 
 ## descMignonPass
-Wvern riders of the Mignon[N] 
+Wvern riders of the Mignon[N]
 apostle, able to fly over enemies.[X]
