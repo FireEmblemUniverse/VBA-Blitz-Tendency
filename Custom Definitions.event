@@ -181,6 +181,8 @@
 #define DootAura 0xC4
 #define DootAuraIconID 0xCA
 
+#define Item200G _200G
+
 //Chapter definitions
 #define Chapter1 0x1
 #define Chapter5 0x6
