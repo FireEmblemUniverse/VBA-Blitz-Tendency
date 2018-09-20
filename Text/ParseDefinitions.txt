@@ -65,6 +65,8 @@
 [Elitor] = [0x32]
 [Dennis] = [0x34]
 [Jazzak] = [0x36]
+[Deuxnids] = [0x3F]
+[DeuxnidsPortrait] = [Deuxnids][0x01]
 
 [LoadVedge] = [LoadFace][VedgePortrait]
 [LoadVerge] = [LoadFace][0x07][0x01]
@@ -79,5 +81,6 @@
 [LoadXimena] = [LoadFace][0xA][0x1]
 [LoadSabin] = [LoadFace][0x20][0x01]
 [LoadBoo] = [LoadFace][0x23][0x01]
+[LoadDeuxnids] = [LoadFace][DeuxnidsPortrait]
 [LoadKefka] = [LoadFace][0x4A][0x01]
 [LoadMystery] = [LoadFace][0x01][0x01]

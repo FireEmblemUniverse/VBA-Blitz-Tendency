@@ -63,3 +63,12 @@ Light Rune[X]
 Creates a barrier on an adjacent[N]
 space, causing it to be temporarily[N]
 non-traversable.[X]
+
+## nameBlitzOfAja
+Blitz of Aja[X]
+
+## descBlitzOfAja
+A legendary axe with an inset red stone.[X]
+
+## nameSuperBlitzLance
+Super Blitz[X]
