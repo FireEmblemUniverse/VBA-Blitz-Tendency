@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="19" height="14" tilewidth="16" tileheight="16" infinite="0" nextobjectid="1">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="14" tilewidth="16" tileheight="16" nextobjectid="1">
  <tileset firstgid="1" name="01000203" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
-  <image source="01000203.png" width="512" height="512"/>
+  <image source="../Tilesets/FE8 - Fields - 01000203.png" width="512" height="512"/>
  </tileset>
  <layer name="Tile Layer 1" width="19" height="14">
   <properties>
@@ -14,7 +14,7 @@
    <property name="TileConfig" value="3"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJy7wsTAcAWKNZgZGDSBWAuILzIhcAoDKoapX4eGtYH6dIBYF4g9gNgTiL2YMfXjwzCzvIH6fIDYF4gzgDgTiLPwmCWIQ24d1K2TGBFiyGxizELng/QjY0L6l5IYBrj8g8uP2NQRq5Zct8DiiRRz0MMB2VwQm1TzCMUZKeEF8xO6XDIR+q4wIfhLsLgH5m987lGFuvcKE3Y7SA0LmFno5pEbpgCKaGmh
+   eJxtkktOwzAURR0y4tsCaygF2gpU1oCaliLYAx0UhET3wG8CFFXsIPwmdMQeEEIggboHBsAEdQEcK+8Jx83gKE7yfHz97MGYMb8wHxqzCEuwDLOwCu/8OzJpPvg2gAc4hy5cQIn6MlQggjo0IGZODSIz6vJR5wbzmrAJbdiFPXHdQRG2HWc1zPb1ZW8HgTGdIPl2FiQeRX2XMifvufweFJgfwToseC71taX2FW4ysr1AU8Zf8O057Jr+u62rs95UkHaN897guSVOe3Zz4Wgu31liXtlx2ayPQdILi3W2MubFzjnp+6TjmWb8zLMnrg7cSx8iyR9Ln91sffGdiOtJ8vSEtpdhX/LHcv7uP+2BZqrYLFCFq2C0L3pXYjmbGanZgUOh5tw57csnz7Xwfz+6nuZZwXPL+E3q1dV17twxNQVqcjDMOHcd/5gk+0SQzlSU+3Yt6N6Hcvf9s1NyePLiOnXyqMeu3ZK9/gHIIIK9
   </data>
  </layer>
  <layer name="Village Door" width="19" height="14">

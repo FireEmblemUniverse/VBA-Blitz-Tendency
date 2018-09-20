@@ -17,6 +17,10 @@ PUSH
     ORG 0x000AD8   // this is somewhere in the startup routine
       BL(0x01C090) // Call the debug startup menu
   #endif
+
+  // Remove arrow wiggling advancing RN
+  ORG 0x1A774
+  SHORT 0x2000 0
 POP
 
 
@@ -63,9 +67,15 @@ POP
 ////////////////////////////////FREE SPACE OUT OF BL RANGE
 //start of Free space
 
+  //Portrait Height fix
+  #include "Portrait Shift Table.event"
+
+  //Melee Magic Fix
+  #include "Melee_Magic_Fix_EA.txt"
+
   //Check if current character has the specified item: (Written for chapter 5)
   #inctext lyn "CheckItem.elf"
-  
+
   //Weapon/Staff Range Fix
   #include "Range Fix/Range Fix Install.event"
 
@@ -152,13 +162,19 @@ POP
   FreezeAllASMC:
   #incbin "ASM/freezeall.dmp"
 
+  // Ch 11/13 ASMC-able function
+  #include "writeDummyUnit.event"
+
   // Chapter 27 ASMC-able functions
   ALIGN 4
   gChapter27FogLevel:
     WORD Ch27FogLevel
-  
+
   #include "CCBlitzChapter27Asmcs.lyn.event"
-  
+
+  // Sabin memes
+  #include "IncorrectBlitzInput/IncorrectBlitzInput.event"
+
   ALIGN 4
   //We are installing new descriptions/icons.
   #define __USE_ICON_MACROS__
@@ -302,7 +318,7 @@ POP
 
   UM_Wait
   UM_Separator
-  
+
 MainMenuTable:
   MM_Unit
   MM_EveryOtherOneTooLazy //I'm not getting away with that one am I
@@ -312,7 +328,7 @@ MainMenuTable:
   #endif
   MM_End
   MM_Separator
-  
+
   #ifdef __DEBUG__
   #include "ASM\Debug.event"
   #endif

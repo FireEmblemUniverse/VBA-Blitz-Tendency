@@ -1,3 +1,28 @@
 ## RaisingBridge
 [OpenMidLeft][LoadFace][CurrentPortrait]
 Raising the bridge.[A][X]
+
+## InafuneCheck1
+[MidLeft][LoadFace][0x64][0x01]
+Attempting Inafune recruitment![N]
+Check 1![A][X]
+
+## InafuneCheck2
+[MidLeft][LoadFace][0x64][0x01]
+Check 1 successful![N]
+Check 2![A][X]
+
+## InafuneCheck3
+[MidLeft][LoadFace][0x64][0x01]
+Check 2 sucessful![N]
+Check 3![A][X]
+
+## InafuneGet
+[MidLeft][LoadFace][0x64][0x01]
+Check 3 sucessful! Congratulations![N]
+You have managed to recruit Inafune![A][X]
+
+## InafuneFailed
+[MidLeft][LoadFace][0x64][0x01]
+Check failed! You do not get to recruit[N]
+Inafune. Con Man strikes again![A][X]

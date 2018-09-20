@@ -81,7 +81,7 @@ Prologue: IT BEGINS AGAIN[X]
 26: ... Know Thyself[X]
 
 # 0x017A
-27: [X]
+27: Dancing Sand Graveyard[X]
 
 # 0x017B
 28: Kaga's Blessing Upon[X]

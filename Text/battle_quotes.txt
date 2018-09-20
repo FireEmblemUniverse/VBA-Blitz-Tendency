@@ -49,3 +49,18 @@ AAAAAAAAAAAAAAAAAAAAAAA[N]
 AAAAAAAAAAAAAAAAAAAAAAA[N]
 AAAAAAAAAAAAAAAAAAAAAAA[N]
 AAAAAAAAAAAAAAAAAAAAAAA[A][X]
+
+## JazzakCombat
+[OpenMidLeft][LoadFace][Jazzak][0x01]
+Your Queen has made this place a pit.[N]
+Now I take back my freedom.[A][X]
+
+## JazzakDeath
+[OpenMidLeft][LoadFace][Jazzak][0x01]
+In truth, death could be seen[N]
+as a freedom of its own.[A][X]
+
+## MealyDeath
+[OpenMidRight][LoadMystery]
+Bury me...[N]
+in the Shrine of Meals...[A][X]

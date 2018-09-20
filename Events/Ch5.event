@@ -79,7 +79,7 @@ FADU 0x5
 STAL 0x20
 Text(Ch5BattleDoneText)
 FadeOutMusic
-CAM1 [10,9]
+CAM1 [7,9]
 LOAD1 0x1 BanditMeanies
 ENUN
 Text(Ch5BanditText)
@@ -88,7 +88,7 @@ MOVE 0x0 0x80 [14,21]
 MOVE 0x0 0x81 [11,21]
 MOVE 0x0 0x82 [12,22]
 STAL 0x10
-CAM1 [10,18]
+CAM1 [7,18]
 ENUN
 STAL 0x8
 TileChange(13,19)
@@ -193,7 +193,7 @@ UNIT Ch5Generic Mercenary Grudge Level(9,Enemy,True) [3,20] 0x00 0x00 0x00 0x00 
 UNIT Ch5Generic Fighter Grudge Level(9,Enemy,True) [5,21] 0x00 0x00 0x00 0x00 [HandAxe] NoAI
 UNIT Ch5Generic Archer Grudge Level(9,Enemy,True) [7,18] 0x00 0x00 0x00 0x00 [SteelBow] NoAI
 UNIT Ch5Generic WyvernRider Grudge Level(9,Enemy,True) [13,1] 0x00 0x00 0x00 0x00 [SteelLance] ChaseOnceApproachedAI
-UNIT Ch5Generic Pirate Grudge Level(9,Enemy,True) [9,12] 0x00 0x00 0x00 0x00 [DevilAxe] NoAI
+UNIT Ch5Generic Pirate Grudge Level(9,Enemy,True) [9,12] 0x00 0x00 0x00 0x00 [DevilAxe] NoAI //Colorz said Devil Axe is nonfunctional/not to be used (?)
 UNIT Ch5Generic Soldier Grudge Level(9,Enemy,True) [12,13] 0x00 0x00 0x00 0x00 [Axereaver] NoAI
 UNIT Ch5Generic Soldier Grudge Level(9,Enemy,True) [12,19] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
 UNIT Ch5Generic Monk Grudge Level(9,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [Lightning] AttackInRangeAI

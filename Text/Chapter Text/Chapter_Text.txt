@@ -1,4 +1,6 @@
-
+#include "Chapter Text/Prologue.txt"
+#include "Chapter Text/Chapter 1.txt"
+#include "Chapter Text/Chapter 3.txt"
 #include "Chapter Text/Chapter 5.txt"
 #include "Chapter Text/Chapter 8.txt"
 #include "Chapter Text/Chapter 11.txt"
@@ -6,4 +8,5 @@
 #include "Chapter Text/Chapter 17.txt"
 #include "Chapter Text/Chapter 22.txt"
 #include "Chapter Text/Chapter 25.txt"
+#include "Chapter Text/Chapter 27.txt"
 #include "Chapter Text/Chapter 28.txt"

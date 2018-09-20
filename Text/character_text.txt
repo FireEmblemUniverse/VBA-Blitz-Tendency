@@ -39,8 +39,8 @@ he's been a bad influence.[X]
 Keanu[X]
 
 ## descMonkeyboy
-A goldhearted pious muscle mountain man that[NL]
-avoids conflict and delivers blessings.[X]
+A goldhearted pious muscle mountain man.[NL]
+Avoids conflict and delivers blessings.[X]
 
 ## nameCortez
 Cortez[X]
@@ -66,8 +66,8 @@ evil darkness in hearts and minds.[X]
 Monster[X]
 
 ## descMonsterC2
-An unstable ritual birthed this abomination,[NL]
-to fuel desires of awful evil.[X]
+An unstable ritual birthed this[NL]
+abomination, for desires of awful evil.[X]
 
 ## descMonsterBoss0x44
 A powerful monster that[NL]
@@ -150,6 +150,9 @@ A companion or hired fighter.[X]
 ## nameSweetBoss
 SweetBoss[X]
 
+## descSweetBoss
+Some sorcerer person?[X]
+
 ## nameSweetGeneric
 Keyed-in[X]
 
@@ -160,14 +163,21 @@ Uh, is that right?[X]
 Enemy[X]
 
 ## nameBoneScary
-Scary[X]
+Swifty[X]
 
 ## descBoneGeneric
 An opponent of nefarious[NL]
 origin, always in the way.[X]
 
+## nameBoneAlly
+Ally[X]
+
+## descBoneAlly
+Once a villain, now[NL]
+just looking to stretch.[X]
+
 ## nameBoneBoss
-DarkManMan[X]
+DarkmanMan[X]
 
 ## descBoneBoss
 King of thieves..?[X]
@@ -176,8 +186,8 @@ King of thieves..?[X]
 Mealy[X]
 
 ## descMealy
-Why was... okay, fine.[NL]
-I wanted one.[X]
+Trusted the wrong fellow, and got[NL]
+stuffed in an 'appropriate' vessel.[X]
 
 ## SabinName
 Sabin[X]
@@ -206,6 +216,12 @@ Deuxnids[X]
 
 ## descDeuxnids
 Not to be confused with Dennis.[X]
+
+## nameSandy
+Sandy[X]
+
+## descSandy
+Just a regular zombie dragon.[X]
 
 ## nameSplenda
 Splenda[X]
@@ -327,3 +343,283 @@ the Mignon apostle.[X]
 ## descMignonPass
 Wvern riders of the Mignon[N]
 apostle, able to fly over enemies.[X]
+
+## descAwakeningAnna
+She's all about slashing prices...[N]
+and enemies.[X]
+
+## nameCh1Pirate
+Pirate[X]
+
+## descCh1Pirate
+A pirate working under Jazzak.[X]
+
+## Ch3BossName
+Chien[X]
+
+## Ch3BossDesc
+A translator by profession. However,[N]
+his results tend to be questionable.[X]
+
+## KojimaName
+Kojima[X]
+
+## KojimaDesc
+Nanomachines, son. Stressed from[N]
+continuous Metal Gear development.[X]
+
+## SakaguchiName
+Sakaguchi[X]
+
+## SakaguchiDesc
+He created the Final Fantasy. Don't[N]
+ask why there's 14 more of them.[X]
+
+## IgaName
+Iga[X]
+
+## IgaDesc
+Castlevania got consumed in pachinko.[N]
+As a result, he made Bloodstained.[X]
+
+## InafuneName
+Inafune[X]
+
+## InafuneDesc
+Credited with Mega Man, he thinks[N]
+himself a robot master: Con Man.[N]
+His con includes a 9 obsession.[X]
+
+## nameVergein
+Vergein[X]
+
+## descVergein
+The less edgy, less cool rival[N]
+to Verge.[X]
+
+## nameDonateenary
+Donatenry[X]
+
+## descDonateenary
+Donateenaries, evil cultists who[N]
+worship Hex, the even more evil[N]
+manifestation of their god.[X]
+
+## nameCh27GenericMonster
+Monster[X]
+
+## descCh27GenericMonster
+A Monster.[X]
+
+## nameCh27GenericSoldier
+Soldier[X]
+
+## descCh27GenericSoldier
+A Soldier.[X]
+
+## nameTiki
+Tiki[X]
+
+## descTiki
+placeholder[X]
+
+## nameMarf
+Marf[X]
+
+## descMarf
+Not amused[X]
+
+## nameJake
+Jake[X]
+
+## descJake
+placeholder[X]
+
+## nameBjorn
+Bj[0xf6]rn[X]
+
+## descBjorn
+His raison d'[0xea]tre: na[0xef]vet[0xe9] as[N]
+a fa[0xe7]ade for doppelg[0xe4]ngers.[X]
+
+## nameEvilFlorina
+Evil Florina[X]
+
+## descEvilFlorina
+uweeheehee[X]
+
+## nameCelica
+Celica[X]
+
+## descCelica
+Princess of the Pirates.[N]
+Hails from a distant land.[X]
+
+## nameDoowile
+Doowile[X]
+
+## descDoowile
+placeholder[X]
+
+## nameVoid
+Void[X]
+
+## descVoid
+knoll much[X]
+
+## nameZigludo
+Zigludo[X]
+
+## descZigludo
+Haha Funny fire meme[N]
+wank Xdddd dab[X]
+
+## descAnnaRogue
+A girl with a familiar face.[N]
+Her love of money is REALLY strong.[X]
+
+## nameEevster
+Eevster[X]
+
+## descEevster
+The (Former) King of[N]
+the Basement.[X]
+
+## nameSamson
+Samson[X]
+
+## descSamson
+placeholder[X]
+
+## namePrine
+Prine[X]
+
+## descPrine
+onii-nyama sugoi~[X]
+
+## nameCelicia
+Celicia[X]
+
+## descCelicia
+Prone to wandering off alone,[N]
+lost in thoughts of grey waves.[X]
+
+## nameRoshea
+Roshea[X]
+
+## descRoshea
+placeholder[X]
+
+## nameDoot
+Doot[X]
+
+## descDoot
+DOOT DOOT[X]
+
+## nameEdge
+Edge[X]
+
+## descEdge
+placeholder[X]
+
+## nameJerome
+Jerome[X]
+
+## descJerome
+You want a playable soldier?[X]
+
+## nameKirsten
+Kirsten[X]
+
+## descKirsten
+oy u best lisen ere m8 il giv u[N]
+a proper bashin u cheeky bruv[X]
+
+## nameTye
+Tye[X]
+
+## descTye
+placeholder[X]
+
+## nameTim
+Tim[X]
+
+## descTim
+His friends call[N]
+him Timathan.[X]
+
+## nameTam
+Tam[X]
+
+## descTam
+Secretly wishes he[N]
+was a necromancer.[X]
+
+## nameNikita
+Nikita[X]
+
+## descNikita
+Axe-focused GK[X]
+
+## nameJay
+Jay[X]
+
+## descJay
+An old veteran of the Renegade[N]
+translation era. Got the tools down.[X]
+
+## nameArve
+Arve[X]
+
+## descArve
+Elder. It's ELDER.[N]
+Not dark. E-L-D-E-R.[X]
+
+## descAnnaWyvern
+How many Annas are[N]
+there, anyway?[X]
+
+## nameBob
+Bob[X]
+
+## descBob
+placeholder[X]
+
+## nameNotArch
+Not Arch[X]
+
+## descNotArch
+His divine lightning[N]
+will pierce your face.[X]
+
+## nameKaga
+Kaga[X]
+
+## descKaga
+Our lord and savior[X]
+
+## nameBede
+Bede[X]
+
+## descBede
+sexy priest[X]
+
+## nameLeeroy
+Leeroy[X]
+
+## descLeeroy
+His father was also[N]
+named after a meme.[X]
+
+## nameMark
+Mark[X]
+
+## descMark
+A mysterious person who[N]
+claims to be a tactician.[X]
+
+## nameEdgeworth
+Edgeworth[X]
+
+## descEdgeworth
+HIS EDGE IS WORTH[X]
