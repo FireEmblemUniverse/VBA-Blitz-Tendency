@@ -52,8 +52,9 @@ AAAAAAAAAAAAAAAAAAAAAAA[A][X]
 
 ## JazzakCombat
 [OpenMidLeft][LoadFace][Jazzak][0x01]
-Your Queen has made this place a pit.[N]
-Now I take back my freedom.[A][X]
+Your Queen has made this place[N]
+a pit.[AN]
+Now, I take back my freedom.[A][X]
 
 ## JazzakDeath
 [OpenMidLeft][LoadFace][Jazzak][0x01]
