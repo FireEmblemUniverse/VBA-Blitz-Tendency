@@ -1,8 +1,13 @@
+#ifndef VBABT_DEFINITIONS
+#define VBABT_DEFINITIONS
 
+#define FreeSpace        0xB2A610
+#define FreeSpaceEnd     0xC00000
 
-#define FreeSpace 0xb2a610
-#define EndOfFreeSpace 0xC00000
-#define FreeSpaceBLRange 0x1c1ec0
+#define FreeSpace2       0xEFB2E0
+#define FreeSpace2End    0xFE0000
+
+#define FreeSpaceBLRange 0x1C1EC0
 
 #define ChapterTileset(chapter, object, palette, config) "PUSH; ORG 0x8b0890 + (148* chapter) + 4; SHORT object; BYTE palette config; POP"
 #define ChapterTileAnims(chapter, anim1, anim2) "PUSH; ORG 0x8b0890 + (148* chapter) + 9; BYTE anim1 anim2; POP"
@@ -246,3 +251,5 @@
 #define WTYPE_LIGHT    0x06
 #define WTYPE_ELDER    0x07
 #define WTYPE_DARK     0x07
+
+#endif // VBABT_DEFINITIONS
