@@ -19,6 +19,7 @@
 [Event] = [LoadOverworldFaces]
 [CloseSpeech] = [CloseSpeechSlow][.....]
 [LF] = [LoadFace]
+[SetName] = [0x80][0x23]
 
 [FarFarLeft] = [OpenFarFarLeft]
 [FarLeft] = [OpenFarLeft]
@@ -114,3 +115,6 @@
 [LoadKefka] = [LoadFace][0x4A][0x01]
 [LoadMystery] = [LoadFace][0x01][0x01]
 [LoadVoid] = [LoadFace][VoidPortrait]
+
+[ü] = [0xFC]
+[u-trema] = [ü]

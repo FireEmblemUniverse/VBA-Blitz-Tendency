@@ -1,10 +1,10 @@
 #ifdef _FE8_
     #include "EAstdlib.event"
     #include "Custom Definitions.event"
-	
+
     ORG FreeSpace
     PROTECT FreeSpaceEnd // Prevent overflow of data.
-	
+
 	// FREE SPACE #1:
 	// Text, Mugs, Tables, Wizardry, Events
 
@@ -12,7 +12,7 @@
     #include "Text/Install Text Data.event"
     ALIGN 4
     MESSAGE Used text space ends at CURRENTOFFSET
-	
+
 	// Mugs, before tables because of definitions shenanigans
     ALIGN 4
     #include "Mugs/Mug Installer.event"
@@ -24,17 +24,17 @@
     // Engine Hacks
     #include "Engine Hacks/_MasterHackInstaller.event"
     MESSAGE Used hax space ends at CURRENTOFFSET
-	
+
     // Events
     #include "Events/Master Events Installer.event"
     #include "Events/World Map Events Installer.event"
 
 	ORG FreeSpace2
 	PROTECT FreeSpace2End
-	
+
 	// FREE SPACE #2:
-	// Graphics (except mugs, see above), Maps
-	
+	// Graphics (except mugs, see above), Maps, Music
+
     // Graphics
     #include "Graphics/Master Graphics Installer.event"
     #include "Battle Palettes/Palette Setup.event"
@@ -44,6 +44,10 @@
     #include "Maps/Cave Tileset/Cave Tileset Installer.event"
     #include "Maps/FE6 Snow Tileset/FE6 Snow Installer.event"
     #include "Maps/Master Map Installer.event"
+
+    // Music
+    #include "Music and Sounds/Music Installer.event"
+
 #else
     ERROR You are not assembling FE8 events!
 #endif

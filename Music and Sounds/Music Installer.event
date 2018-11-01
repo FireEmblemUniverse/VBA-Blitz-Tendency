@@ -10,6 +10,6 @@
 #define MapMusicGroup 1
 #define SFXGroup 6
 
-#define BloodyStream 0x5D
-SongTable(BloodyStream,VBAtwobloodystream_1,MapMusicGroup)
+SongTable(0x43,VBAtwobloodystream,0) // Title screen music.
+SongTable(BloodyStream,VBAtwobloodystream,MapMusicGroup)
 #include "VBAtwobloodystream.event"

@@ -1,6 +1,8 @@
 #ifndef VBABT_DEFINITIONS
 #define VBABT_DEFINITIONS
 
+#include "EAStdlib.event"
+
 #define FreeSpace        0xB2A610
 #define FreeSpaceEnd     0xC00000
 
@@ -32,6 +34,11 @@
 #define SolarBrace SunBracelet
 
 #include "Engine Hacks/Skill System/skill_definitions.event"
+
+#define BloodyStream 0x57
+
+//If 0x35 doesn't work do 0x2C
+#define Intro(textID) "MUSC BloodyStream; ShowCG(0x35); _0x1A22; TEXTSHOW textID; TEXTEND; ClearBackground; MUSC Silent"
 
 //Class definitions
 #define VoidLord 0x1
