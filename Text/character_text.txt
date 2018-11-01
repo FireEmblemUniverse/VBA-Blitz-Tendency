@@ -42,6 +42,9 @@ Keanu[X]
 A goldhearted pious muscle mountain man.[NL]
 Avoids conflict and delivers blessings.[X]
 
+## nameAggie
+Agge[X]
+
 ## nameCortez
 Cortez[X]
 

@@ -161,4 +161,4 @@ Put a permanent end[N]
 to Jazzak's piracy.[X]
 
 ## Chapter1_Goal
-Defeat Jazzak[X]
+Seize Throne[X]
