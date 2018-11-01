@@ -5,168 +5,196 @@
 
 EventPointerTable(C17EventID, ThisChapter)
 
-
 ThisChapter:
-POIN TurnBasedEvents
-POIN CharacterBasedEvents
-POIN LocationBasedEvents
-POIN MiscBasedEvents
-POIN Dunno Dunno Dunno
-POIN Tutorial
-POIN TrapData TrapData
-POIN Units Units
-POIN $0 $0 $0 $0 $0 $0
-POIN BeginningScene EndingScene
+	POIN TurnBasedEvents
+	POIN CharacterBasedEvents
+	POIN LocationBasedEvents
+	POIN MiscBasedEvents
+	POIN Dunno Dunno Dunno
+	POIN Tutorial
+	POIN TrapData TrapData
+	POIN Units Units
+	POIN $0 $0 $0 $0 $0 $0
+	POIN BeginningScene EndingScene
 
+
+ALIGN 4
 TurnBasedEvents:
-TurnEventPlayer(0x0, ThiefSpawn, 4)
-TurnEventPlayer(0x0, Surprise, 10)
-TurnEventPlayer(0x0, EndingScene, 13)
-END_MAIN
-ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+	TurnEventPlayer(0x0, ThiefSpawn, 4)
+	TurnEventPlayer(0x0, Surprise, 10)
+	TurnEventPlayer(0x0, EndingScene, 13)
+	END_MAIN
 
+ALIGN 4
 CharacterBasedEvents:
-END_MAIN
+	END_MAIN
 
+ALIGN 4
 LocationBasedEvents:
-Door(25,3)
-Door(23,7)
-Door(10,12)
-Chest(Elixir,6,21)
-Village(0x7, EastVillage, 11,10)
-Village(0x8, WestVillage, 7,11)
-END_MAIN
+	Door(25,3)
+	Door(23,7)
+	Door(10,12)
+	Chest(Elixir,6,21)
+	Village(0x7, EastVillage, 11,10)
+	Village(0x8, WestVillage, 7,11)
+	END_MAIN
 
+ALIGN 4
 MiscBasedEvents:
-CauseGameOverIfLordDies
-DefeatBoss(EndingScene)
-END_MAIN
+	CauseGameOverIfLordDies
+	DefeatBoss(EndingScene)
+	END_MAIN
 
+ALIGN 4
 Dunno:
-END_MAIN
+	END_MAIN
 
+ALIGN 4
 Tutorial:
-END_MAIN
+	END_MAIN
 
+ALIGN 4
 TrapData:
-ENDTRAP
+	ENDTRAP
 
 ALIGN 4
 Units:
-UNIT 0x01 0x0 0x0 Level(1,Ally,0) [2,1] 0 0 0 0 [0x0] NoAI
-UNIT Nichol WyvernLord 0x0 Level(5, Ally, 1) [7,1] 0 0 0 0 [Runesword, SteelLance] NoAI
-UNIT 0x80 0x0 0x0 Level(1,Ally,0) [1,1] 0 0 0 0 [0x0] NoAI
-UNIT 0x80 0x0 0x0 Level(1,Ally,0) [3,1] 0 0 0 0 [0x0] NoAI
-UNIT 0x80 0x0 0x0 Level(1,Ally,0) [2,0] 0 0 0 0 [0x0] NoAI
-UNIT 0x80 0x0 0x0 Level(1,Ally,0) [2,2] 0 0 0 0 [0x0] NoAI
-UNIT 0x80 0x0 0x0 Level(1,Ally,0) [1,2] 0 0 0 0 [0x0] NoAI
-UNIT 0x80 0x0 0x0 Level(1,Ally,0) [26,21] 0 0 0 0 [0x0] NoAI
-UNIT 0x80 0x0 0x0 Level(1,Ally,0) [25,21] 0 0 0 0 [0x0] NoAI
-UNIT 0x80 0x0 0x0 Level(1,Ally,0) [26,20] 0 0 0 0 [0x0] NoAI
-UNIT 0x80 0x0 0x0 Level(1,Ally,0) [26,19] 0 0 0 0 [0x0] NoAI
-UNIT 0x80 0x0 0x0 Level(1,Ally,0) [25,20] 0 0 0 0 [0x0] NoAI
-UNIT 0x80 0x0 0x0 Level(1,Ally,0) [24,20] 0 0 0 0 [0x0] NoAI
-UNIT
+	UNIT 0x01 0x0 0x0 Level(1,Ally,0) [2,1] 0 0 0 0 [0x0] NoAI
+	UNIT Nichol WyvernLord 0x0 Level(5, Ally, 1) [7,1] 0 0 0 0 [Runesword, SteelLance] NoAI
+	UNIT 0x80 0x0 0x0 Level(1,Ally,0) [1,1] 0 0 0 0 [0x0] NoAI
+	UNIT 0x80 0x0 0x0 Level(1,Ally,0) [3,1] 0 0 0 0 [0x0] NoAI
+	UNIT 0x80 0x0 0x0 Level(1,Ally,0) [2,0] 0 0 0 0 [0x0] NoAI
+	UNIT 0x80 0x0 0x0 Level(1,Ally,0) [2,2] 0 0 0 0 [0x0] NoAI
+	UNIT 0x80 0x0 0x0 Level(1,Ally,0) [1,2] 0 0 0 0 [0x0] NoAI
+	UNIT 0x80 0x0 0x0 Level(1,Ally,0) [26,21] 0 0 0 0 [0x0] NoAI
+	UNIT 0x80 0x0 0x0 Level(1,Ally,0) [25,21] 0 0 0 0 [0x0] NoAI
+	UNIT 0x80 0x0 0x0 Level(1,Ally,0) [26,20] 0 0 0 0 [0x0] NoAI
+	UNIT 0x80 0x0 0x0 Level(1,Ally,0) [26,19] 0 0 0 0 [0x0] NoAI
+	UNIT 0x80 0x0 0x0 Level(1,Ally,0) [25,20] 0 0 0 0 [0x0] NoAI
+	UNIT 0x80 0x0 0x0 Level(1,Ally,0) [24,20] 0 0 0 0 [0x0] NoAI
+	UNIT
 
+ALIGN 4
 Foes:
-UNIT Ch17Boss Warrior 0x62 Level(2, Enemy, 1) [25,1] 0x2 0x00 0x0 0x00 [Tomahawk, Boots] GuardTileAI // Delete
-UNIT Ch17Enemies Archer 0x62 Level(7, Enemy, 1) [8,7] 0x00 0x00 0x0 0x00 [SteelBow] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Knight 0x62 Level(18, Enemy, 1) [19,15] 0x00 0x00 0x0 0x00 [SilverLance] GuardTileAI // Delete
-UNIT Ch17Enemies Knight 0x62 Level(18, Enemy, 1) [21,20] 0x00 0x00 0x0 0x00 [SilverLance] GuardTileAI // Delete
-UNIT Ch17Enemies Sniper 0x62 Level(3, Enemy, 1) [20,20] 0x00 0x00 0x0 0x00 [Longbow] GuardTileAI // Delete
-UNIT Ch17Enemies Sniper 0x62 Level(4, Enemy, 1) [24,5] 0x2 0x00 0x0 0x00 [SilverBow] AttackInRangeAI // Delete
-UNIT Ch17Enemies Sage 0x62 Level(1, Enemy, 1) [25,5] 0x2 0x00 0x0 0x00 [Thunder] AttackInRangeAI // Delete
-UNIT Ch17Enemies Mage 0x62 Level(12, Enemy, 1) [5,10] 0x00 0x00 0x0 0x00 [Thunder, Bolting] AttackInRangeAI // Delete
-UNIT Ch17Enemies Cavalier 0x62 Level(17, Enemy, 1) [5,15] 0x00 0x00 0x0 0x00 [Javelin, SteelLance] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Cavalier 0x62 Level(17, Enemy, 1) [4,15] 0x00 0x00 0x0 0x00 [Javelin, SteelLance] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Ranger 0x62 Level(2, Enemy, 1) [5,16] 0x2 0x00 0x0 0x00 [SteelBow, LightBrand] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies GreatKnight 0x62 Level(3, Enemy, 1) [4,16] 0x2 0x00 0x0 0x00 [Javelin, HandAxe] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Sniper 0x62 Level(3, Enemy, 1) [4,3] 0x00 0x00 0x0 0x00 [Longbow] GuardTileAI // Delete
-UNIT Ch17Enemies Pirate 0x62 Level(17, Enemy, 1) [17,21] 0x00 0x00 0x0 0x00 [SteelAxe, Vulnerary, SecretBook] BrigandAI // Delete
-UNIT Ch17Enemies Valkyrie 0x62 Level(4, Enemy, 1) [20,21] 0x00 0x00 0x0 0x00 [Divine, Sleep, Physic] GuardTileAI // Delete
-UNIT Ch17Enemies WyvernRider 0x62 Level(4, Enemy, 1) [16,17] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI // Delete
-UNIT
+	UNIT Ch17Boss Warrior 0x62 Level(2, Enemy, 1) [25,1] 0x2 0x00 0x0 0x00 [Tomahawk, Boots] GuardTileAI // Delete
+	UNIT Ch17Enemies Archer 0x62 Level(7, Enemy, 1) [8,7] 0x00 0x00 0x0 0x00 [SteelBow] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Knight 0x62 Level(18, Enemy, 1) [19,15] 0x00 0x00 0x0 0x00 [SilverLance] GuardTileAI // Delete
+	UNIT Ch17Enemies Knight 0x62 Level(18, Enemy, 1) [21,20] 0x00 0x00 0x0 0x00 [SilverLance] GuardTileAI // Delete
+	UNIT Ch17Enemies Sniper 0x62 Level(3, Enemy, 1) [20,20] 0x00 0x00 0x0 0x00 [Longbow] GuardTileAI // Delete
+	UNIT Ch17Enemies Sniper 0x62 Level(4, Enemy, 1) [24,5] 0x2 0x00 0x0 0x00 [SilverBow] AttackInRangeAI // Delete
+	UNIT Ch17Enemies Sage 0x62 Level(1, Enemy, 1) [25,5] 0x2 0x00 0x0 0x00 [Thunder] AttackInRangeAI // Delete
+	UNIT Ch17Enemies Mage 0x62 Level(12, Enemy, 1) [5,10] 0x00 0x00 0x0 0x00 [Thunder, Bolting] AttackInRangeAI // Delete
+	UNIT Ch17Enemies Cavalier 0x62 Level(17, Enemy, 1) [5,15] 0x00 0x00 0x0 0x00 [Javelin, SteelLance] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Cavalier 0x62 Level(17, Enemy, 1) [4,15] 0x00 0x00 0x0 0x00 [Javelin, SteelLance] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Ranger 0x62 Level(2, Enemy, 1) [5,16] 0x2 0x00 0x0 0x00 [SteelBow, LightBrand] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies GreatKnight 0x62 Level(3, Enemy, 1) [4,16] 0x2 0x00 0x0 0x00 [Javelin, HandAxe] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Sniper 0x62 Level(3, Enemy, 1) [4,3] 0x00 0x00 0x0 0x00 [Longbow] GuardTileAI // Delete
+	UNIT Ch17Enemies Pirate 0x62 Level(17, Enemy, 1) [17,21] 0x00 0x00 0x0 0x00 [SteelAxe, Vulnerary, SecretBook] BrigandAI // Delete
+	UNIT Ch17Enemies Valkyrie 0x62 Level(4, Enemy, 1) [20,21] 0x00 0x00 0x0 0x00 [Divine, Sleep, Physic] GuardTileAI // Delete
+	UNIT Ch17Enemies WyvernRider 0x62 Level(4, Enemy, 1) [16,17] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI // Delete
+	UNIT
 
+ALIGN 4
 Foes2:
-UNIT Ch17Enemies WyvernRider 0x62 Level(4, Enemy, 1) [14,17] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies WyvernKnight 0x62 Level(4, Enemy, 1) [15,17] 0x00 0x00 0x0 0x00 [SlimLance] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies General 0x62 Level(4, Enemy, 1) [22,1] 0x00 0x00 0x0 0x00 [Runesword, Speedwings] AttackInRangeAI // Delete
-UNIT Ch17Enemies Mercenary 0x62 Level(17, Enemy, 1) [7,8] 0x00 0x00 0x0 0x00 [SlimSword, SteelSword] AttackInRangeAI // Delete
-UNIT Ch17Enemies Knight 0x62 Level(18, Enemy, 1) [11,18] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Myrmidon 0x62 Level(18, Enemy, 1) [10,18] 0x00 0x00 0x0 0x00 [SteelBlade] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Hero 0x62 Level(1, Enemy, 1) [10,17] 0x00 0x00 0x0 0x00 [SteelBlade] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Bishop 0x62 Level(1, Enemy, 1) [10,19] 0x00 0x00 0x0 0x00 [Divine, Mend, GuidingRing] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Shaman 0x62 Level(20, Enemy, 1) [1,18] 0x00 0x00 0x0 0x00 [Flux] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Mage 0x62 Level(17, Enemy, 1) [0,18] 0x00 0x00 0x0 0x00 [Elfire] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Monk 0x62 Level(18, Enemy, 1) [2,18] 0x00 0x00 0x0 0x00 [Shine, Vulnerary] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Berserker 0x62 Level(1, Enemy, 1) [11,13] 0x2 0x00 0x0 0x00 [HandAxe, DoorKey] AttackInRangeAI // Delete
-UNIT Ch17Enemies Paladin 0x62 Level(1, Enemy, 1) [21,12] 0x00 0x00 0x0 0x00 [Javelin, SilverSword] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Knight 0x62 Level(20, Enemy, 1) [4,4] 0x2 0x00 0x0 0x00 [Javelin, ChestKey] GuardTileAI // Delete
-UNIT Ch17Enemies Knight 0x62 Level(10, Enemy, 1) [14,3] 0x2 0x00 0x0 0x00 [Spear, MasterProof] GuardTileAI // Delete
-UNIT Ch17Enemies Archer 0x62 Level(10, Enemy, 1) [14,2] 0x00 0x00 0x0 0x00 [BraveBow, Vulnerary, Longbow] GuardTileAI // Delete
-UNIT
+	UNIT Ch17Enemies WyvernRider 0x62 Level(4, Enemy, 1) [14,17] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies WyvernKnight 0x62 Level(4, Enemy, 1) [15,17] 0x00 0x00 0x0 0x00 [SlimLance] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies General 0x62 Level(4, Enemy, 1) [22,1] 0x00 0x00 0x0 0x00 [Runesword, Speedwings] AttackInRangeAI // Delete
+	UNIT Ch17Enemies Mercenary 0x62 Level(17, Enemy, 1) [7,8] 0x00 0x00 0x0 0x00 [SlimSword, SteelSword] AttackInRangeAI // Delete
+	UNIT Ch17Enemies Knight 0x62 Level(18, Enemy, 1) [11,18] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Myrmidon 0x62 Level(18, Enemy, 1) [10,18] 0x00 0x00 0x0 0x00 [SteelBlade] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Hero 0x62 Level(1, Enemy, 1) [10,17] 0x00 0x00 0x0 0x00 [SteelBlade] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Bishop 0x62 Level(1, Enemy, 1) [10,19] 0x00 0x00 0x0 0x00 [Divine, Mend, GuidingRing] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Shaman 0x62 Level(20, Enemy, 1) [1,18] 0x00 0x00 0x0 0x00 [Flux] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Mage 0x62 Level(17, Enemy, 1) [0,18] 0x00 0x00 0x0 0x00 [Elfire] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Monk 0x62 Level(18, Enemy, 1) [2,18] 0x00 0x00 0x0 0x00 [Shine, Vulnerary] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Berserker 0x62 Level(1, Enemy, 1) [11,13] 0x2 0x00 0x0 0x00 [HandAxe, DoorKey] AttackInRangeAI // Delete
+	UNIT Ch17Enemies Paladin 0x62 Level(1, Enemy, 1) [21,12] 0x00 0x00 0x0 0x00 [Javelin, SilverSword] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Knight 0x62 Level(20, Enemy, 1) [4,4] 0x2 0x00 0x0 0x00 [Javelin, ChestKey] GuardTileAI // Delete
+	UNIT Ch17Enemies Knight 0x62 Level(10, Enemy, 1) [14,3] 0x2 0x00 0x0 0x00 [Spear, MasterProof] GuardTileAI // Delete
+	UNIT Ch17Enemies Archer 0x62 Level(10, Enemy, 1) [14,2] 0x00 0x00 0x0 0x00 [BraveBow, Vulnerary, Longbow] GuardTileAI // Delete
+	UNIT
 
+ALIGN 4
 Foes3:
-UNIT Ch17Enemies Swordmaster 0x62 Level(3, Enemy, 1) [17,10] 0x00 0x00 0x0 0x00 [SteelSword, Vulnerary] AttackInRangeAI // Delete
-UNIT Ch17Enemies Hero 0x62 Level(3, Enemy, 1) [17,11] 0x00 0x00 0x0 0x00 [SilverBlade, Vulnerary] AttackInRangeAI // Delete
-UNIT Ch17Enemies Cavalier 0x62 Level(16, Enemy, 1) [22,12] 0x00 0x00 0x0 0x00 [SteelLance, Vulnerary] AttackInRangeAI // Delete
-UNIT Ch17Enemies Cavalier 0x62 Level(16, Enemy, 1) [22,11] 0x00 0x00 0x0 0x00 [Javelin, Vulnerary] AttackInRangeAI // Delete
-UNIT Ch17Enemies Paladin 0x62 Level(3, Enemy, 1) [10,3] 0x00 0x00 0x0 0x00 [Horseslayer] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Paladin 0x62 Level(3, Enemy, 1) [9,3] 0x00 0x00 0x0 0x00 [SilverSword, AngelicRobe] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Paladin 0x62 Level(3, Enemy, 1) [9,2] 0x00 0x00 0x0 0x00 [Horseslayer, Vulnerary] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Mage 0x62 Level(17, Enemy, 1) [16,6] 0x00 0x00 0x0 0x00 [Elfire, Vulnerary] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Mage 0x62 Level(17, Enemy, 1) [15,6] 0x00 0x00 0x0 0x00 [Thunder, Vulnerary] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Mage 0x62 Level(14, Enemy, 1) [13,6] 0x00 0x00 0x0 0x00 [Fimbulvetr, Vulnerary] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Shaman 0x62 Level(14, Enemy, 1) [22,9] 0x00 0x00 0x0 0x00 [Luna, Vulnerary] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Shaman 0x62 Level(17, Enemy, 1) [21,9] 0x00 0x00 0x0 0x00 [Nosferatu, Vulnerary] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Brigand 0x62 Level(17, Enemy, 1) [27,1] 0x00 0x00 0x0 0x00 [BattleAxe] BrigandAI // Delete
-UNIT Ch17Enemies Mercenary 0x62 Level(17, Enemy, 1) [18,0] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI // Delete
-UNIT Ch17Enemies Mercenary 0x62 Level(17, Enemy, 1) [19,1] 0x2 0x00 0x0 0x00 [SilverSword] AttackInRangeAI // Delete
-UNIT Ch17Enemies Mercenary 0x62 Level(17, Enemy, 1) [20,1] 0x2 0x00 0x0 0x00 [LightBrand] AttackInRangeAI // Delete
-UNIT
+	UNIT Ch17Enemies Swordmaster 0x62 Level(3, Enemy, 1) [17,10] 0x00 0x00 0x0 0x00 [SteelSword, Vulnerary] AttackInRangeAI // Delete
+	UNIT Ch17Enemies Hero 0x62 Level(3, Enemy, 1) [17,11] 0x00 0x00 0x0 0x00 [SilverBlade, Vulnerary] AttackInRangeAI // Delete
+	UNIT Ch17Enemies Cavalier 0x62 Level(16, Enemy, 1) [22,12] 0x00 0x00 0x0 0x00 [SteelLance, Vulnerary] AttackInRangeAI // Delete
+	UNIT Ch17Enemies Cavalier 0x62 Level(16, Enemy, 1) [22,11] 0x00 0x00 0x0 0x00 [Javelin, Vulnerary] AttackInRangeAI // Delete
+	UNIT Ch17Enemies Paladin 0x62 Level(3, Enemy, 1) [10,3] 0x00 0x00 0x0 0x00 [Horseslayer] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Paladin 0x62 Level(3, Enemy, 1) [9,3] 0x00 0x00 0x0 0x00 [SilverSword, AngelicRobe] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Paladin 0x62 Level(3, Enemy, 1) [9,2] 0x00 0x00 0x0 0x00 [Horseslayer, Vulnerary] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Mage 0x62 Level(17, Enemy, 1) [16,6] 0x00 0x00 0x0 0x00 [Elfire, Vulnerary] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Mage 0x62 Level(17, Enemy, 1) [15,6] 0x00 0x00 0x0 0x00 [Thunder, Vulnerary] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Mage 0x62 Level(14, Enemy, 1) [13,6] 0x00 0x00 0x0 0x00 [Fimbulvetr, Vulnerary] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Shaman 0x62 Level(14, Enemy, 1) [22,9] 0x00 0x00 0x0 0x00 [Luna, Vulnerary] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Shaman 0x62 Level(17, Enemy, 1) [21,9] 0x00 0x00 0x0 0x00 [Nosferatu, Vulnerary] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Brigand 0x62 Level(17, Enemy, 1) [27,1] 0x00 0x00 0x0 0x00 [BattleAxe] BrigandAI // Delete
+	UNIT Ch17Enemies Mercenary 0x62 Level(17, Enemy, 1) [18,0] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI // Delete
+	UNIT Ch17Enemies Mercenary 0x62 Level(17, Enemy, 1) [19,1] 0x2 0x00 0x0 0x00 [SilverSword] AttackInRangeAI // Delete
+	UNIT Ch17Enemies Mercenary 0x62 Level(17, Enemy, 1) [20,1] 0x2 0x00 0x0 0x00 [LightBrand] AttackInRangeAI // Delete
+	UNIT
 
+ALIGN 4
 Foes4:
-UNIT Ch17Enemies FalcoKnight 0x62 Level(3, Enemy, 1) [27,9] 0x2 0x00 0x0 0x00 [Javelin] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies Thief 0x62 Level(14, Enemy, 1) [2,9] 0x2 0x00 0x0 0x00 [IronSword, Lockpick] LootingThiefAI // Delete
-UNIT Ch17Enemies Druid 0x62 Level(3, Enemy, 1) [24,9] 0x2 0x00 0x0 0x00 [Nosferatu, DoorKey] GuardTileAI // Delete
-UNIT
+	UNIT Ch17Enemies FalcoKnight 0x62 Level(3, Enemy, 1) [27,9] 0x2 0x00 0x0 0x00 [Javelin] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies Thief 0x62 Level(14, Enemy, 1) [2,9] 0x2 0x00 0x0 0x00 [IronSword, Lockpick] LootingThiefAI // Delete
+	UNIT Ch17Enemies Druid 0x62 Level(3, Enemy, 1) [24,9] 0x2 0x00 0x0 0x00 [Nosferatu, DoorKey] GuardTileAI // Delete
+	UNIT
 
-ThiefSpawn:
-UNIT Ch17Enemies Thief 0x62 Level(14, Enemy, 1) [0,21] 0x2 0x00 0x0 0x00 [IronSword, Lockpick] LootingThiefAI // Delete
-UNIT
+ALIGN 4
+ThiefSpawnUnits:
+	UNIT Ch17Enemies Thief 0x62 Level(14, Enemy, 1) [0,21] 0x2 0x00 0x0 0x00 [IronSword, Lockpick] LootingThiefAI // Delete
+	UNIT
 
-Surprise:
-UNIT Ch17Enemies WyvernLord 0x62 Level(4, Enemy, 1) [6,0] 0x00 0x00 0x0 0x00 [Runesword] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies FalcoKnight 0x62 Level(4, Enemy, 1) [5,0] 0x00 0x00 0x0 0x00 [Runesword] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies GreatKnight 0x62 Level(4, Enemy, 1) [9,0] 0x00 0x00 0x0 0x00 [Tomahawk] PursueWithoutHeedAI // Delete
-UNIT Ch17Enemies GreatKnight 0x62 Level(4, Enemy, 1) [9,1] 0x00 0x00 0x0 0x00 [Tomahawk] PursueWithoutHeedAI // Delete
-UNIT
+ALIGN 4
+SurpriseUnits:
+	UNIT Ch17Enemies WyvernLord 0x62 Level(4, Enemy, 1) [6,0] 0x00 0x00 0x0 0x00 [Runesword] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies FalcoKnight 0x62 Level(4, Enemy, 1) [5,0] 0x00 0x00 0x0 0x00 [Runesword] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies GreatKnight 0x62 Level(4, Enemy, 1) [9,0] 0x00 0x00 0x0 0x00 [Tomahawk] PursueWithoutHeedAI // Delete
+	UNIT Ch17Enemies GreatKnight 0x62 Level(4, Enemy, 1) [9,1] 0x00 0x00 0x0 0x00 [Tomahawk] PursueWithoutHeedAI // Delete
+	UNIT
 
+ALIGN 4
 NicholRecruit:
-UNIT Nichol WyvernLord 0x0 Level(5, Ally, 1) [7,1] 0 0 0 0 [Runesword, SteelLance] NoAI
-UNIT
+	UNIT Nichol WyvernLord 0x0 Level(5, Ally, 1) [7,1] 0 0 0 0 [Runesword, SteelLance] NoAI
+	UNIT
 
+ALIGN 4
 EastVillage:
-VillageEventItem(PlaceholderText,HouseBG,LightBrand)
-ENDA
+	VillageEventItem(PlaceholderText,HouseBG,LightBrand)
 
+ALIGN 4
 WestVillage:
-VillageEventItem(PlaceholderText, HouseBG, Spear)
-ENDA
+	VillageEventItem(PlaceholderText, HouseBG, Spear)
 
+ALIGN 4
+ThiefSpawn:
+	ReinforcementEvent(ThiefSpawnUnits)
+
+ALIGN 4
+Surprise:
+	ReinforcementEvent(SurpriseUnits)
+
+ALIGN 4
 BeginningScene:
-LOAD1 0x1 NicholRecruit
-ENUN
-LOAD2 0x1 Foes
-ENUN
-LOAD2 0x1 Foes2
-ENUN
-LOAD2 0x1 Foes3
-ENUN
-LOAD2 0x1 Foes4
-ENUN
-GotoPrepScreen
+	LOAD1 0x1 NicholRecruit
+	ENUN
 
+	LOAD2 0x1 Foes
+	ENUN
+
+	LOAD2 0x1 Foes2
+	ENUN
+
+	LOAD2 0x1 Foes3
+	ENUN
+
+	LOAD2 0x1 Foes4
+	ENUN
+
+	GotoPrepScreen
+
+ALIGN 4
 EndingScene:
-MNCH 12 //Copied from Blitz 1
-ENDA
+	MNCH 12 //Copied from Blitz 1
+	ENDA
