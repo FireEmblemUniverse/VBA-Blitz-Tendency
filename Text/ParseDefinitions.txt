@@ -93,6 +93,7 @@
 [Deuxnids] = [0x37]
 [DeuxnidsPortrait] = [Deuxnids][0x01]
 [VoidPortrait] = [0x71][0x01]
+[Vergein] = [0x30]
 
 [LoadVedge] = [LoadFace][VedgePortrait]
 [LoadVerge] = [LoadFace][0x07][0x01]

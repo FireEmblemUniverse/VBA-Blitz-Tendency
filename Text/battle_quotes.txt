@@ -1,3 +1,13 @@
+## VergeinCombat
+[OpenMidRight][LoadFace][Vergein][0x01]
+Hmph. Nameless Knights.[N]
+Prepare to face death.[A][X]
+
+## VergeinDeath
+I lost[Beat] lost my[Beat][N]
+Ugh[Beat][A][X]
+
+
 ## ElitorDeath
 [OpenMidRight][LoadFace][Elitor][0x1]
 Mother... Father...[N]
