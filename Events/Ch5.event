@@ -64,6 +64,7 @@ GotoPrepScreen
 
 //Label EndingScene
 EndingScene:
+Text(Chapter5_Ending)
 FADI 0x5
 TILEREVERSE 0x2
 //If we didn't make the bridge, make it now

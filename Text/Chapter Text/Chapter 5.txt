@@ -154,6 +154,39 @@ Over there should do, I suppose.[A][X]
 Incredible! You should be[NL]
 able to cross now![A][X]
 
+## Chapter5_Ending
+[.v....][LoadNull]
+[.....v][LoadVerge]
+[...v..][LoadVedge]
+I[Beat] can't believe I just did that.[A]
+
+[.....v]
+Sire, we must get moving.[A]
+
+[...v..]
+Verge, everyone, why did you[N]
+continue to support me?![AN]
+You should’ve stopped me! I[Beat][A]
+
+[.v....]
+We can discuss that later![N]
+For the moment, we must fly![A]
+
+[...v..]
+Nowhere in the Nameless Kingdom[N]
+will be safe[Beat] Where should we go?[A]
+
+[.....v]
+My parents were born in[N]
+the kingdom of Kagavesta.[AN]
+They live there even today,[N]
+as advisors to the land’s king.[AN]
+Perhaps we can seek counsel[N]
+from them.[A]
+
+[...v..]
+To Kagavesta, then![A][X]
+
 ## Ch5BattleDoneText
 [OpenMidLeft][LoadVedge][OpenMidRight][LoadXimena]
 Incredible. Our legends tell of[NL]
