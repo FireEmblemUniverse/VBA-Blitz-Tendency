@@ -1,9 +1,7 @@
 
-#include EAstdlib.event
-
+#include "EAstdlib.event"
 
 EventPointerTable(0x5A,PointersCh19)
-SetChapterMapChanges(19, 0x59)
 
 ALIGN 4
 
@@ -267,37 +265,3 @@ ENDA
 ALIGN 4
 TrapDataCh19:
 ENDTRAP
-
-
-
-ALIGN 4
-TileChangesCh19:
-TileMap(0x00,2,10,1,1,OpenChestTempleCh19)
-TileMap(0x01,6,10,1,1,OpenChestTempleCh19)
-TileMap(0x02,10,10,1,1,OpenChestTempleCh19)
-
-TileMap(0x03,2,11,1,1,OpenDoorTempleCh19)
-TileMap(0x04,6,11,1,1,OpenDoorTempleCh19)
-TileMap(0x05,10,11,1,1,OpenDoorTempleCh19)
-TileMap(0x06,20,11,1,1,OpenDoorTempleCh19)
-
-TileMap(0x07,15,8,1,2,BridgeCh19)
-
-
-TileMapEnd
-ALIGN 4
-
-
-ALIGN 4
-
-
-
-OpenChestTempleCh19:
-SHORT 0x0110
-
-OpenDoorTempleCh19:
-SHORT 0x001C
-
-BridgeCh19:
-SHORT 0x0044
-SHORT 0x0044
