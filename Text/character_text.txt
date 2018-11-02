@@ -45,6 +45,11 @@ Avoids conflict and delivers blessings.[X]
 ## nameAggie
 Agge[X]
 
+## descAggie
+A healer from the town of Script.[N]
+Survivor of the Donateenaries'[N]
+Writing attack.[X]
+
 ## nameCortez
 Cortez[X]
 

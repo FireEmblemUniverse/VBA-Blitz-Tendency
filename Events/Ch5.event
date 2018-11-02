@@ -58,7 +58,7 @@ STAL 0x10
 Text(Chapter5_Beginning) //TODO: Background
 FADU 0x5
 STAL 0x20
-FlashCursor(7, 18, 30)
+FlashCursor(9, 20, 30)
 Text(Ch5OpenningText)
 GotoPrepScreen
 

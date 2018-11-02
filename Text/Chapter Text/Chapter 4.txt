@@ -2,11 +2,11 @@
 [SetName][.][.][N]
 Following Vedge's successful[N]
 pacification of the town of[AN]
-Script’s periphery, he heads[N]
+Script's periphery, he heads[N]
 deeper into the city in hopes of[AN]
 ending the rebels who attacked[N]
 his home. A great battle awaits[AN]
-him there...[A]
+him there...[A][X]
 
 ## Chapter4_Beginning
 [.v....][LoadVerge]
@@ -51,13 +51,13 @@ if I were to take it[Beat][A][X]
 ## Chapter4_Ending
 [.v....][LoadNull]
 [.....v][LoadVerge]
-[....v.][LoadVedge]
+[...v..][LoadVedge]
 [Beat] [Beat][A]
 
 [.v....]
 Vedge, are you alright?[A]
 
-[....v.]
+[...v..]
 I'm fine, Null. I just[Beat][N]
 didn't realize the discontent[AN]
 with my mother was so[N]
@@ -76,7 +76,7 @@ your mother has requested[AN]
 our presence in the region[N]
 of Dark Sanctity.[A]
 
-[....v.]
+[...v..]
 Dark Sanctity? Mother and I[N]
 used to go there for vacation[AN]
 when I was a child[Beat][N]
