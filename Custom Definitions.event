@@ -33,8 +33,6 @@
 
 #include "Engine Hacks/Skill System/skill_definitions.event"
 
-#define SetChapterMapChanges(ChapterID, MapChanges) "PUSH; ORG ChapterDataTable+(ChapterID*148)+11; BYTE MapChanges; POP"
-
 //Class definitions
 #define VoidLord 0x1
 #define BlitzLord 0x2
