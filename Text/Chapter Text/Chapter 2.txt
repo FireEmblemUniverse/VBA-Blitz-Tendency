@@ -1,3 +1,15 @@
+## Chapter2_Intro
+[SetName][.][.][N]
+Following the defeat of the[N]
+Donateenary rebels, Vedge returns[AN]
+to the Nameless Capital of the[N]
+Nameless Kingdom. Null's words sit[AN]
+in his mind, constantly nagging[N]
+at him. He is bothered; not by[AN]
+the words themselves, but by the[N]
+fact he cannot get them out of[AN]
+his mind...[A][X]
+
 ## Chapter2_Beginning
 [.v....][LoadVoid]
 [.....v][LoadNull]

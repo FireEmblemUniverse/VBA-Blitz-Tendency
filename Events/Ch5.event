@@ -48,14 +48,17 @@ ALIGN 4
 
 //Label BeginingScene
 BeginningScene:
+Intro(Chapter5_Intro)
 MUSC Into_the_Shadow_of_Victory
 LOAD1 0x1 EnemyUnits
 LOAD2 0x1 StartingPeople
 ENUN
 CAM1 [7,18]
 STAL 0x10
+Text(Chapter5_Beginning) //TODO: Background
 FADU 0x5
 STAL 0x20
+FlashCursor(7, 18, 30)
 Text(Ch5OpenningText)
 GotoPrepScreen
 

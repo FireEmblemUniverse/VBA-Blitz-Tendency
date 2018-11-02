@@ -240,6 +240,7 @@ ENUN
 LOAD2 0x1 ThrThrD_Units
 LOAD1 0x1 ThrThrD_Axeboy
 ENUN
+Intro(Chapter2_Intro)
 Text(Castle_Room, Chapter2_Beginning)
 NoFade
 ENDA

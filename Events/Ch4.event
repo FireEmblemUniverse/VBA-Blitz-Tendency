@@ -48,10 +48,10 @@ Armory(ArmoryList, 1, 5)
 END_MAIN
 
 VillageBow:
-VillageEventItem(PlaceholderText, Village, ExtraBow)
+VillageEventItem(Chapter4_LeftVillage, Village, ExtraBow)
 
 VillageBarrier:
-VillageEventItem(PlaceholderText, Village, Barrier)
+VillageEventItem(Chapter4_RightVillage, Village, Barrier)
 
 ArmoryList:
 SHLI IronSword SteelSword IronLance SteelLance IronAxe IronBow SteelBow Longbow
@@ -166,10 +166,13 @@ LOAD1 0x1 MagicalGirl
 ENUN
 LOAD1 0x1 Bad
 ENUN
+Intro(Chapter4_Intro)
+Text(Chapter4_Beginning)
 NoFade
 ENDA
 
 EndingScene:
+Text(Chapter4_Ending)
 MNCH 5
 NoFade
 ENDA

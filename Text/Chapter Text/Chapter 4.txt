@@ -1,3 +1,13 @@
+## Chapter4_Intro
+[SetName][.][.][N]
+Following Vedge's successful[N]
+pacification of the town of[AN]
+Script’s periphery, he heads[N]
+deeper into the city in hopes of[AN]
+ending the rebels who attacked[N]
+his home. A great battle awaits[AN]
+him there...[A]
+
 ## Chapter4_Beginning
 [.v....][LoadVerge]
 [....v.][LoadVedge]
