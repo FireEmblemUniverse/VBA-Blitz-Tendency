@@ -170,7 +170,7 @@ AssassinServant_Mug:
 #incext PortraitFormatter "AssassinServant.png"
 setMugEntry(AssassinServantPortrait, AssassinServant_Mug, 2, 5, 3, 3)
 
-#define WickyMug 0x43
+#define WickyPortrait 0x43
 //Have yet to insert it.
 
 // VBA 1 Mugs
