@@ -1,0 +1,59 @@
+## Chapter6_Intro
+Shaking off pursuits from his mother,[N]
+Vedge heads west, to Kagavesta and[AN]
+his destiny. The Kingdom of Kagavesta[N]
+is a small country, said to worship[AN]
+the first of the Crusader Gods and[N]
+father of all things, Kaga. Known[AN]
+for its devoutness, the kingdom’s[N]
+people sacrificed most other things[AN]
+on the altar of its faith. Could such[N]
+a place truly provide Vedge aid?[A][X]
+
+## Chapter6_Beginning
+[.v....][LoadVerge]
+[....v.][LoadVedge]
+So this is Kagavesta?[A]
+
+[.v....]
+Yes, milord, but it would appear[N]
+we have uninvited guests.[A]
+
+[....v.]
+Bandits, huh? Whatever. Let's[N]
+take care of them; should get us[AN]
+into good graces with the locals.[A][X]
+
+## Chapter6_LabVillage
+[....v.][LoadCurrent]
+Hmm[Beat] there's no one here.[AN]
+I guess they wouldn't mind if[N]
+I took this[Beat][A][X]
+
+## Chapter6_RightVillage
+[....v.][LoadCurrent]
+[.v....][LoadFace][0x58][0x01]
+The falcon is such a majestic animal,[N]
+don't you think? Ah... If I were[AN]
+cursed to turn into an animal, I'd be[N]
+a falcon. I mean, if I could choose[AN]
+which animal I became. With no choice,[N]
+I'd probably end up as some sort of[AN]
+lazy snake.[A][X]
+
+
+## Chapter6_Ending
+[.v....][LoadVerge]
+[....v.][LoadVedge]
+That deals with the bandits, but[N]
+where are Kagavesta's knights?[AN]
+Shouldn't they be here?[A]
+
+[.v....]
+Indeed, and our foes here fought[N]
+not like bandits, but almost[AN]
+like a foreign legion.[A]
+
+[....v.]
+Let's head to the castle.[N]
+I have a bad feeling about this[Beat][A][X]

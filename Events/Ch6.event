@@ -140,16 +140,20 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+  Intro(Chapter6_Intro)
   LOAD1 0x1 StartingEnemies
   ENUN
 
   LOAD1 0x0 Recruitable
   ENUN
 
+  Text(Chapter6_Beginning)
+
   GotoPrepScreen
 ENDA
 
 EndingScene:
+  Text(Chapter6_Ending)
   MNCH 0x7
   NoFade
 ENDA
@@ -163,9 +167,9 @@ SHLI Fire Thunder Lightning Shine Flux Heal Vulnerary PureWater
 ALIGN 4
 
 LabVillage:
-VillageEventItem(PlaceholderText, 0x0, KnightsCrest)
+VillageEventItem(Chapter6_LabVillage, 0x0, KnightsCrest)
 
 RightVillage:
-VillageEventMoney(PlaceholderText, 0x0, 2500)
+VillageEventMoney(Chapter6_RightVillage, 0x0, 2500)
 
 #endif // CHAPTER6_EVENTS_EVENT
