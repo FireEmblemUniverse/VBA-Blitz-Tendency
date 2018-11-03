@@ -1,0 +1,45 @@
+## Chapter7_Beginning
+[....v.][LoadEdgelard]
+Sensei, I told you so.[N]
+The chests were to blame.[AN]
+We must never allow these[N]
+chests to be opened.[A]
+
+[.v....][LF][Soldier][0x01]
+Milady, enemy reinforcements![A]
+
+[....v.]
+What?! Everyone, do not allow[N]
+the chests to be opened![AN]
+They will bring our ruin![A][X]
+
+## Chapter7_Ending
+[.v....][LoadNull]
+[....v.][LoadVedge]
+I recognized their leader[Beat][A]
+
+[.v....]
+Oh?[A]
+
+[....v.]
+She was in Edgelord school with[N]
+me when we were kids. She was[AN]
+the heir to the Dominion of General.[N]
+I understand now... The soldiers[AN]
+invading Kagavesta are knights[N]
+of General![A]
+
+[.v....]
+I wonder what their purpose here is.[A]
+
+[....v.]
+Hmm[Beat][A]
+
+[Events] # sfx: Noises
+
+[....v.][2NL]
+There's still fighting going on?![N]
+Let's go find the source of that noise![A]
+
+[.v....]
+Yes, milord![A][X]
