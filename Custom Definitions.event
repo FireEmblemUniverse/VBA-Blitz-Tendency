@@ -29,6 +29,10 @@
 #ifndef DeathQuoteTable
   #define DeathQuoteTable 0x9ECD4C
 #endif
+#ifndef SongTableOffset
+  #define SongTableOffset  0x224470
+  #define SongTable(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT Group Group; POP"
+#endif
 
 #define LunarBrace MoonBracelet
 #define SolarBrace SunBracelet
