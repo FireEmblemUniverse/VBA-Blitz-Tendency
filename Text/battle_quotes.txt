@@ -126,6 +126,17 @@ You are to be put to death.[N]
 Nothing personnel, kid.[A][X]
 
 ## GrudgeDeath
+[OMR][LoadGrudge]
 And I would have gotten away[N]
 with it too, if it weren't[AN]
 for you meddling kids[Beat][A][X]
+
+## EdgelardCombat
+[OMR][LoadEdgelard]
+This castle is my Sensei's. I will[N]
+not allow you to bar my path.[A][X]
+
+## EdgelardDeath
+[OMR][LoadEdgelard]
+YOU! YOOOOOU![N]
+]DIE DIE DIE DIE!!!!![A][X]

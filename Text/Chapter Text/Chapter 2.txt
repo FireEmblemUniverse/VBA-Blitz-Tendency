@@ -87,4 +87,4 @@ Take the thrones back from[N]
 the Donateenary scum.[X]
 
 ## Chapter2_Goal
-Occupy All Thrones[X]
+ Occupy 3 Thrones[X]

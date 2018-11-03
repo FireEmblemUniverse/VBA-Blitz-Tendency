@@ -672,3 +672,16 @@ Edgeworth[X]
 
 ## descEdgeworth
 HIS EDGE IS WORTH[X]
+
+## nameEdgelard
+Edgelard[X]
+
+## descEdgelard
+Graduated at the top of[N]
+their Edgelord academy class.[X]
+
+## nameLash
+Lash[X]
+
+## descLash
+Chaos![X]

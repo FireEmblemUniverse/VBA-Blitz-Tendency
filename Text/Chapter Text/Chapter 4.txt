@@ -86,4 +86,4 @@ Kill the local Donateenary[N]
 rebel ring leaders.[X]
 
 ## Chapter4_Goal
-Defeat Bosses[X]
+ Defeat Bosses[X]

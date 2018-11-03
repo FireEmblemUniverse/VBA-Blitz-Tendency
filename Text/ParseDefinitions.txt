@@ -88,6 +88,7 @@
 [Elitor] = [0x49]
 [Dennis] = [0x50]
 [Jazzak] = [0x42]
+[Edgelard] = [0x0]
 [ZanePortrait] = [0x1B][0x1]
 [BennyPortrait] = [0x24][0x1]
 [BennyBonePortrait] = [0x25][0x1]
@@ -95,6 +96,7 @@
 [DeuxnidsPortrait] = [Deuxnids][0x01]
 [VoidPortrait] = [0x71][0x01]
 [Vergein] = [0x30]
+[Soldier] = [0x6A]
 
 [LoadVedge] = [LoadFace][VedgePortrait]
 [LoadVerge] = [LoadFace][0x07][0x01]
@@ -113,6 +115,7 @@
 [LoadKefka] = [LoadFace][0x4A][0x01]
 [LoadMystery] = [LoadFace][0x01][0x01]
 [LoadVoid] = [LoadFace][VoidPortrait]
+[LoadEdgelard] = [LoadFace][Edgelard][0x01]
 
 [LoadGrudge] = [LoadFace][0x6A][0x01]
 

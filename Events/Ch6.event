@@ -51,6 +51,7 @@ END_MAIN
 
 ActionEvents:
   CauseGameOverIfLordDies
+  DefeatBoss(EndingScene)
 END_MAIN
 
 Dunno:
@@ -71,7 +72,7 @@ UNIT 0xB PegasusKnight Vedge Level(6, Ally, 1) [16, 3] 0 0 0 0 [IronLance, Axere
 UNIT
 
 StartingEnemies:
-UNIT 0x4C Warrior 0 Level(1, Enemy, 1) [0, 11] 0x2 0 0 0 [SteelAxe, Longbow] NeverMoveAI
+UNIT Lash Warrior 0 Level(1, Enemy, 1) [0, 11] 0x2 0 0 0 [SteelAxe, Longbow] NeverMoveAI
 UNIT 0x8D Archer 0x4C Level(9, Enemy, 1) [6, 8] 0 0 0 0 [IronBow] AttackInRangeAI
 UNIT 0x8D Fighter 0x4C Level(9, Enemy, 1) [0, 6] 0 0 0 0 [IronAxe, Vulnerary] AttackInRangeAI
 UNIT 0x8D Shaman 0x4C Level(10, Enemy, 1) [0, 2] 0 0 0 0 [Flux] AttackInRangeAI
