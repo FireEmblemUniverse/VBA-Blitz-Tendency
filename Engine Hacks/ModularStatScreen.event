@@ -5,13 +5,15 @@
 #define Trv_Icon_X 0xB8
 #define Trv_Icon_Y 0x2E
 #include "MSS/Display Growths Options/Display Growths Options.txt"
- 
+
   PUSH
   ORG 0x205b24 //24 for stat screen
   POIN MSS_page1|1 MSS_page2|1 MSS_page3|1 MSS_page4|1
 
+/* Let's not make it 4 pages.
   ORG $88690
   BYTE 4 //make 4 pages
+*/
 
   ORG $88650
   POIN NewPageNameGraphic
@@ -27,7 +29,7 @@
 
   ORG $889d0
   SHORT $e010 //Temporary r-text fix to prevent freezing
-  ORG $889f2  
+  ORG $889f2
   SHORT $BD30
   BL(RText_Page4_ladder) //this has to be in bl range somewhere
 
@@ -46,22 +48,22 @@
     ORG $8888C
     BYTE 0x82
   #endif
-  
+
   ORG $88896
   SHORT 0x46C0
   jumpToHack(Button_Branch)
-  
+
   //Remember whether we were looking at growths or stats
   ORG $8895C //Loads byte to store 1 before stat screen struct
   callHack_r1(Load_Page)
-	
+
   ORG $888BC //Stores byte to store 1 before stat screen struct
   callHack_r3(Store_Page)
-  
+
   //Display an R-button text about pressing Select, since I can't seem to fit it nicely, and make that the default
   ORG $889D8
   POIN PersonalDataRText
-  
+
   //HP name color
   ORG $86ED4
   callHack_r3(HP_Name_Color)
@@ -74,8 +76,8 @@
 
   ORG $17E98
   callHack_r3(New_Unit_Exp)
-  SHORT 0xE005  
-  
+  SHORT 0xE005
+
   POP
   ALIGN 4
   MSS_page1:
@@ -90,7 +92,7 @@
   WORD Growth_Options
   POIN Growth_Getter_Table
   POIN Get_Palette_Index
-  
+
   ALIGN 4
   MSS_page2:
   #incbin "MSS/mss_page2_original.dmp"
@@ -117,11 +119,11 @@ NewPageNamePalette:
 	ALIGN 4
 	Button_Branch:
 	#incbin "MSS/Button Branch.dmp"
-	
+
 	ALIGN 4
 	Growth_Getter_Table:
 	POIN Get_Hp_Growth Get_Str_Growth Get_Skl_Growth Get_Spd_Growth Get_Luk_Growth Get_Def_Growth Get_Res_Growth
-	
+
 	ALIGN 4
 	Get_Hp_Growth:
 	#incbin "MSS/Growth Getters/Get_Hp_Growth.dmp"
@@ -150,35 +152,35 @@ NewPageNamePalette:
 	Get_Luk_Growth:
 	#incbin "MSS/Growth Getters/Get_Luk_Growth.dmp"
 	POIN Extra_Growth_Boosts|1
-	
+
 	ALIGN 4
 	Extra_Growth_Boosts:
 	#incbin "MSS/Growth Getters/Extra_Growth_Boosts.dmp"
 	WORD Growth_Options
 	POIN ItemTable
-	
+
 	ALIGN 4
 	Load_Page:
 	#incbin "MSS/Load Page.dmp"
 	WORD Stat_Page_Ram_Loc
-	
+
 	ALIGN 4
 	Store_Page:
 	#incbin "MSS/Store Page.dmp"
 	WORD Stat_Page_Ram_Loc
 
-	
+
 	ALIGN 4
 	Rescue_Arrows:
 	#incbin "MSS/Check Rescue Arrows.dmp"
 	POIN SkillTester
 	WORD SaviorID
-	
+
 	ALIGN 4
 	Get_Palette_Index:
 	#incbin "MSS/Get_Palette_Index.dmp"
 	POIN Growth_Color_Table
-	
+
 	ALIGN 4
 	HP_Name_Color:
 	#incbin "MSS/HP Name Color.dmp"
@@ -186,27 +188,27 @@ NewPageNamePalette:
 	WORD Growth_Options
 	POIN Get_Hp_Growth
 	POIN Get_Palette_Index
-	
+
 	ALIGN 4
 	Write_Growths_To_Battle_Struct:
 	#incbin "MSS/Write_Growths_To_Battle_Struct.dmp"
 	POIN Class_Level_Cap_Table Get_Hp_Growth Get_Str_Growth Get_Skl_Growth Get_Spd_Growth Get_Def_Growth Get_Res_Growth Get_Luk_Growth
 	WORD Growth_Options
-	
+
 	ALIGN 4
 	Class_Level_Cap_Table:
 	#incbin "MSS/Display Growths Options/Class_Level_Cap_Table.dmp"
-	
+
 	ALIGN 4
 	Enemy_Autolevel:
 	#incbin "MSS/Enemy_Autolevel.dmp"
 	WORD Growth_Options
-	
+
 	ALIGN 4
 	New_Unit_Exp:
 	#incbin "MSS/New_Unit_Exp.dmp"
 	POIN Class_Level_Cap_Table
-	
+
 	Growth_Color_Table:
 	#include "MSS/Display Growths Options/Growth Colors Table.txt"
 
@@ -219,7 +221,7 @@ NewPageNamePalette:
   BYTE 0
   ALIGN 4
   setText(0x0D4B,TxtData0x0D4B)
-  
+
   /*stat screen R menu is at 8a00b38
 find by breaking on key press while R menu open
 
