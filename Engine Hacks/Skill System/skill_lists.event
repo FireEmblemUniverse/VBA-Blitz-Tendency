@@ -211,7 +211,8 @@ BYTE 00 00
 ALIGN 4
 
 BrigandSkillList:
-BYTE 10 IntimidateID
+BYTE 10 ShoveID
+BYTE 20 IntimidateID
 BYTE 00 00
 ALIGN 4
 

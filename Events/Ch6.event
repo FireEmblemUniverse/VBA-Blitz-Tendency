@@ -51,7 +51,6 @@ END_MAIN
 
 ActionEvents:
   CauseGameOverIfLordDies
-  DefeatBoss(EndingScene)
 END_MAIN
 
 Dunno:

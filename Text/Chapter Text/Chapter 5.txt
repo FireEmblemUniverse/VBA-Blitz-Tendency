@@ -210,3 +210,10 @@ sound like a good character[NL]
 for our party. What say you?[A]
 [OpenMidRight]I'm hesitent, but there's[NL]
 nothing else to do, so okay.[A][X]
+
+## Chapter5_Objective
+Defeat the knight[N]
+standing in your way.[X]
+
+## Chapter5_Goal
+ Defeat Boss[X]
