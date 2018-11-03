@@ -72,7 +72,11 @@ ENDA
 EndingScene:
 TEXTSTART
 TEXTSHOW Chapter7_Ending
-SOUN 0x6A //"Whoosh swing"
+TEXTEND
+MUSC Silent
+STAL 0x20
+SOUN 0x00AF // Wall Breaking
+STAL 0x40
 TEXTCONT
 TEXTEND
 REMA
