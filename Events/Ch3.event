@@ -99,14 +99,17 @@ ENDA
 // Events
 UnitGet:
 MUSC 0x30 //recruitment
-LOAD1 0x1 NewGuy
 ENUN
 Text(HouseBG,Ch3RecruitingBoo)
 REMA
+LOAD1 0x1 NewGuy
+ENUN
 NoFade
 ENDA
 
 UpperHouse:
+CHECK_EXISTS Boo
+BEQ 1 0xC 0x0
 CHECK_ACTIVEID Boo
 BEQ 1 0xC 0x0
 Text(HouseBG,Ch3UpperHouseBoo)
@@ -116,7 +119,11 @@ LABEL 1
 Text(HouseBG,Ch3UpperHouse)
 ENUF 0x8
 LABEL 2
+REMA
 NoFade
+//FADI 10 # purple glowy nonsense testing frustration
+//FADU 10
+//STAL 60
 ENDA
 
 LowerHouse:
@@ -146,7 +153,7 @@ UNIT 0x86 Archer Breguet Level(3, Enemy, 1) [9,0] 0x00 0x00 0x00 0x00 [IronBow] 
 UNIT
 
 NewGuy:
-UNIT Boo Knight Eirika Level(3, Ally, 0) [8,3] 0x00 0x00 0x0 0x00 [SteelLance, IronLance] NoAI
+UNIT Boo Knight Eirika Level(3, Ally, 0) [8,4] 0x00 0x00 0x0 0x00 [SteelLance, IronLance] NoAI
 UNIT
 
 
