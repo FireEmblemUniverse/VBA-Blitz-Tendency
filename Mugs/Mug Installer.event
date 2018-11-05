@@ -45,10 +45,15 @@ Monkeyboy_Mug:
 #incext PortraitFormatter "HeroWarrior.png"
 setMugEntry(0x9, Monkeyboy_Mug, 2, 5, 2, 3)
 
-#define CutePegMug 0xA
+#define CutePegPortrait 0xA
 //Not yet created
 
-//0x10, 0xC, 0xE Open
+#define JenPortrait 0x10
+Jen_Mug:
+#incext PortraitFormatter "Jen.png"
+setMugEntry(JenPortrait, Jen_Mug, 3, 6, 3, 4)
+
+//0xC, 0xE Open
 
 FanniMug:
 #incext PortraitFormatter "Fanni.png"
