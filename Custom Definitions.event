@@ -1,6 +1,8 @@
 #ifndef VBABT_DEFINITIONS
 #define VBABT_DEFINITIONS
 
+#include "EAstdlib.event"
+
 #define FreeSpace        0xB2A610
 #define FreeSpaceEnd     0xC00000
 
@@ -27,11 +29,25 @@
 #ifndef DeathQuoteTable
   #define DeathQuoteTable 0x9ECD4C
 #endif
+#ifndef SongTableOffset
+  #define SongTableOffset  0x224470
+  #define SongTable(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT Group Group; POP"
+#endif
+#ifndef AIKeyTable
+  #define AIKeyTable 0x0D8538
+  #define SetAIKeyUsability(chapter, doorKey, lockpick, antitoxin) "PUSH; ORG AIKeyTable+4*chapter; WORD (doorKey | lockpick << 1 | antitoxin << 1); POP"
+  #define SetAIKeyUsability(chapter, doorKey) "SetAIKeyUsability(chapter, doorKey, 1, 1)"
+#endif
 
 #define LunarBrace MoonBracelet
 #define SolarBrace SunBracelet
 
 #include "Engine Hacks/Skill System/skill_definitions.event"
+
+#define BloodyStream 0x57
+
+//If 0x35 doesn't work do 0x2C
+#define Intro(textID) "MUSC BloodyStream; ShowCG(0x35); _0x1A22; TEXTSHOW textID; TEXTEND; ClearBackground; MUSC Silent"
 
 //Class definitions
 #define VoidLord 0x1
@@ -85,9 +101,11 @@
 #define Hecwood 0x48
 #define Elitor 0x49
 #define Grudge 0x4A
+#define Lash 0x4C
 #define Ch27ChrZomboss 0x4D // dracozombie boss
 #define Edgelard 0x4E
 #define Dennis 0x50
+#define Faust 0x52
 #define Ch11LdrID 0x56
 #define Ch11MiscID 0x57
 #define Cameron 0x58

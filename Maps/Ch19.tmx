@@ -1,19 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="23" height="23" tilewidth="16" tileheight="16" infinite="0" nextobjectid="1">
+<map version="1.2" tiledversion="1.2.0" orientation="orthogonal" renderorder="right-down" width="23" height="23" tilewidth="16" tileheight="16" infinite="0" nextlayerid="10" nextobjectid="1">
  <tileset firstgid="1" name="FE8 - Temple - 8800898a" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
-  <image source="8800898a.png" trans="ffffff" width="512" height="512"/>
+  <image source="../../CCB_Round1/Maps/Tilesets/FE8/8800898a.png" trans="ffffff" width="512" height="512"/>
  </tileset>
- <layer name="Tile Layer 1" width="23" height="23">
+ <layer id="1" name="Main" width="23" height="23">
   <properties>
    <property name="ChapterID" value="19"/>
    <property name="Main" value=""/>
+   <property name="MapChangesID" value="0x59"/>
    <property name="MapID" value="0x58"/>
    <property name="ObjectType" value="0x88"/>
    <property name="PaletteID" value="0x89"/>
    <property name="TileConfig" value="0x8A"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJy11T9OAkEUx/GdBrAg0Bl7Y21i9ALaGLUy4QAcwqOIcgtJxH8V3GBJ/IdnIFT+b/xOnAmTyZvZZXcpPlne5vFb5u1M6CZJ0hXUAvevcY4eLnCJPh4C/aHsukBnD3GDW9zhvkC25BFPeMYLXjHFWwXZ7/jAJ77wjR/8LpEdMsIY6+o/e0Mt7pXNtnOfYRNzrJl7ZbPtvJr83gOuLRXeU0WzfVLfFc/dcXQy6oHKl6P7TtViXlqeWsqW+rQGn/fN2vLU9vs1L0v3bTl9PezhkHrXrCdWT5Q879T0NUzfmTMT/4zH6raX2xb6UmcmoXMo2c6obb7N9n9LFSYm2z7b30tl1L1nhfZYFWesyuyB9y7TJdcdOqf2PLnvUvqviYmt02ZL+yiPWHaRGazq/eisI67HOMnI/gNVs5JS
+   eJy1009OwkAUx/FOYgAXRnbGPXFtQvQCulNWJh6AQ3AUUG4BiQq40huUxL+cgbgS/LPxO6ETJpM309LWxSfta15+7UzntaMoagsqnuc36KKHK1yjj3tPvy+7KtDZt7jDCGNMcmRLnvCMF7ziDe+YlZD9iQWW+MI3fvC7QbbPAx6xp1bZ+2r9rGi22fc5GvjAdvKsaLbZrx2+95TrrvKfqbzZLqlvwHublsuUeqiy5ei+C7XeLy1LLWVLfVqN+5NkbVlqaaZM34HV18MxtqiPkvWE6qmS9zt2+jrWnrgzHqrrTm5d6IutPfHNoeQwpTb5Jtv9ljJMk2zzbvcsFVF13uU7Y2XMWJnZQ+dfxhuu2zenZp7sfynNRUhonSZbOkdZhLLz7MF//R+ddcb1HK2U7D/gn5GA
+  </data>
+ </layer>
+ <layer id="2" name="ChestA" width="23" height="23">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0x00"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="2"/>
+   <property name="Y" value="10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDFbgOtAOGAWjYBSMAjwAAEiHAEY=
+  </data>
+ </layer>
+ <layer id="3" name="ChestB" width="23" height="23">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0x01"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="6"/>
+   <property name="Y" value="10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDBXgOtAOGAWjYBSMAiQAAEQ3AEY=
+  </data>
+ </layer>
+ <layer id="4" name="ChestC" width="23" height="23">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0x02"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="10"/>
+   <property name="Y" value="10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDFXgOtAOGAWjYBSMaAAAP+cARg==
+  </data>
+ </layer>
+ <layer id="5" name="DoorA" width="23" height="23">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0x03"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="2"/>
+   <property name="Y" value="11"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjETAOdAOGAWjYBQMeQAALswACg==
+  </data>
+ </layer>
+ <layer id="6" name="DoorB" width="23" height="23">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0x04"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="6"/>
+   <property name="Y" value="11"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjAIGBs6BdsAoGAWjYMgBAC48AAo=
+  </data>
+ </layer>
+ <layer id="7" name="DoorC" width="23" height="23">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0x05"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="10"/>
+   <property name="Y" value="11"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjAJMwDnQDhgFo2AUDHoAAC2sAAo=
+  </data>
+ </layer>
+ <layer id="8" name="DoorD" width="23" height="23">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="0x06"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="20"/>
+   <property name="Y" value="11"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjALyAcdAO2AUjIJRMGAAAChEAAk=
+  </data>
+ </layer>
+ <layer id="9" name="BridgePath" width="23" height="23">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="0x07"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="15"/>
+   <property name="Y" value="8"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUYANCQ9RsNhqaPQpGwSgYBcgAANYMACs=
   </data>
  </layer>
 </map>

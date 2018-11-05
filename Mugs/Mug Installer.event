@@ -45,6 +45,11 @@ Monkeyboy_Mug:
 #incext PortraitFormatter "HeroWarrior.png"
 setMugEntry(0x9, Monkeyboy_Mug, 2, 5, 2, 3)
 
+#define CutePegMug 0xA
+//Not yet created
+
+//0x10, 0xC, 0xE Open
+
 FanniMug:
 #incext PortraitFormatter "Fanni.png"
 setMugEntry(0x11,FanniMug,2,6,3,4)
@@ -164,6 +169,9 @@ setMugEntry(MedeaPortrait, Medea_Mug, 2, 6, 2, 4)
 AssassinServant_Mug:
 #incext PortraitFormatter "AssassinServant.png"
 setMugEntry(AssassinServantPortrait, AssassinServant_Mug, 2, 5, 3, 3)
+
+#define WickyPortrait 0x43
+//Have yet to insert it.
 
 // VBA 1 Mugs
 // Use all the "Eyes closed" portraits of FE8 before freespace mugs

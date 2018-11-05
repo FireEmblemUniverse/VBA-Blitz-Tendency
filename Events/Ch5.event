@@ -48,19 +48,23 @@ ALIGN 4
 
 //Label BeginingScene
 BeginningScene:
+Intro(Chapter5_Intro)
 MUSC Into_the_Shadow_of_Victory
 LOAD1 0x1 EnemyUnits
 LOAD2 0x1 StartingPeople
 ENUN
 CAM1 [7,18]
 STAL 0x10
+Text(Chapter5_Beginning) //TODO: Background
 FADU 0x5
 STAL 0x20
+FlashCursor(9, 20, 30)
 Text(Ch5OpenningText)
 GotoPrepScreen
 
 //Label EndingScene
 EndingScene:
+Text(Chapter5_Ending)
 FADI 0x5
 TILEREVERSE 0x2
 //If we didn't make the bridge, make it now
@@ -183,9 +187,9 @@ EndUnit
 
 //Label Meanies
 EnemyUnits:
-UNIT Grudge Knight Grudge Level(9,Enemy,True) [1,1] 0x00 0x00 0x00 0x00 [Spear] GuardAI
-UNIT Ch5Generic Knight Grudge Level(9,Enemy,True) [4,20] 0x00 0x00 0x00 0x00 [Javelin] GuardAI
-UNIT Ch5Generic Knight Grudge Level(9,Enemy,True) [4,18] 0x00 0x00 0x00 0x00 [IronLance] GuardAI
+UNIT Grudge Knight Grudge Level(9,Enemy,True) [1,1] 0x00 0x00 0x00 0x00 [Spear] NeverMoveAI
+UNIT Ch5Generic Knight Grudge Level(9,Enemy,True) [4,20] 0x00 0x00 0x00 0x00 [Javelin] NeverMoveAI
+UNIT Ch5Generic Knight Grudge Level(9,Enemy,True) [4,18] 0x00 0x00 0x00 0x00 [IronLance] NeverMoveAI
 UNIT Ch5Generic Myrmidon Grudge Level(9,Enemy,True) [2,21] 0x00 0x00 0x00 0x00 [SteelSword] AttackInRangeAI
 UNIT Ch5Generic Mage Grudge Level(9,Enemy,True) [1,18] 0x00 0x00 0x00 0x00 [Thunder] AttackInRangeAI
 UNIT Ch5Generic Soldier Grudge Level(9,Enemy,True) [1,17] 0x00 0x00 0x00 0x00 [IronLance] NoAI
@@ -197,8 +201,8 @@ UNIT Ch5Generic Pirate Grudge Level(9,Enemy,True) [9,12] 0x00 0x00 0x00 0x00 [De
 UNIT Ch5Generic Soldier Grudge Level(9,Enemy,True) [12,13] 0x00 0x00 0x00 0x00 [Axereaver] NoAI
 UNIT Ch5Generic Soldier Grudge Level(9,Enemy,True) [12,19] 0x00 0x00 0x00 0x00 [SteelLance] NoAI
 UNIT Ch5Generic Monk Grudge Level(9,Enemy,True) [11,11] 0x00 0x00 0x00 0x00 [Lightning] AttackInRangeAI
-UNIT Ch5Generic Knight Grudge Level(9,Enemy,True) [8,8] 0x00 0x00 0x00 0x00 [SteelLance] GuardAI
-UNIT Ch5Generic Mercenary Grudge Level(9,Enemy,True) [5,9] 0x00 0x00 0x00 0x00 [LightBrand] GuardAI
+UNIT Ch5Generic Knight Grudge Level(9,Enemy,True) [8,8] 0x00 0x00 0x00 0x00 [SteelLance] NeverMoveAI
+UNIT Ch5Generic Mercenary Grudge Level(9,Enemy,True) [5,9] 0x00 0x00 0x00 0x00 [LightBrand] NeverMoveAI
 UNIT Ch5Generic Fighter Grudge Level(9,Enemy,True) [9,5] 0x00 0x00 0x00 0x00 [SteelAxe] AttackInRangeAI
 UNIT Ch5Generic Mage Grudge Level(9,Enemy,True) [6,4] 0x00 0x00 0x00 0x00 [Elfire] NoAI
 UNIT Ch5Generic Archer Grudge Level(9,Enemy,True) [5,6] 0x00 0x00 0x00 0x00 [IronBow] AttackInRangeAI

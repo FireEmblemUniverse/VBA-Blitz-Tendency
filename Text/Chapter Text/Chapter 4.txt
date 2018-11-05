@@ -1,0 +1,89 @@
+## Chapter4_Intro
+Following Vedge's successful[N]
+pacification of the town of[AN]
+Script's periphery, he heads[N]
+deeper into the city in hopes of[AN]
+ending the rebels who attacked[N]
+his home. A great battle awaits[AN]
+him there...[A][X]
+
+## Chapter4_Beginning
+[.v....][LoadVerge]
+[....v.][LoadVedge]
+The enemy has already taken position?[A]
+
+[.v....]
+Yes, milord. It would seem[N]
+this part of the town is[AN]
+the last stronghold of the[N]
+Donateenary clan in this city.[AN]
+Once we defeat them, our[N]
+pacification of Script[AN]
+will be complete.[A]
+
+[....v.]
+Good![N]
+Then let's free this town.[A][X]
+
+## Chapter4_LeftVillage
+[....v.][LoadCurrent]
+[.v....][LoadFace][0x5F][0x01]
+I can't believe this war[N]
+is happening. As poor a ruler[AN]
+Queen Void has been, I never[N]
+would have contemplated rebellion.[AN]
+Oh, if only the good King Abyss[N]
+were here[Beat] He was such[AN]
+a fine king. I was given this[N]
+by him before his demise at[AN]
+the hands of the Donateenaries.[N]
+Take it; having something[AN]
+signaling I support the royal[N]
+family is dangerous these days[Beat][A][X]
+
+## Chapter4_RightVillage
+[....v.][LoadCurrent]
+Hm? Who left this thing here?[AN]
+I suppose no one would mind[N]
+if I were to take it[Beat][A][X]
+
+## Chapter4_Ending
+[.v....][LoadNull]
+[.....v][LoadVerge]
+[...v..][LoadVedge]
+[Beat] [Beat][A]
+
+[.v....]
+Vedge, are you alright?[A]
+
+[...v..]
+I'm fine, Null. I just[Beat][N]
+didn't realize the discontent[AN]
+with my mother was so[N]
+widespread. Those men, they[AN]
+fought with honor despite[N]
+being rebels, and they must[AN]
+have had good reason to do so[Beat][A]
+
+[.....v]
+Sire, worry not about the[N]
+personal lives of our enemy.[AN]
+They would not show you the[N]
+same courtesy. Besides, we[AN]
+must move out posthaste:[N]
+your mother has requested[AN]
+our presence in the region[N]
+of Dark Sanctity.[A]
+
+[...v..]
+Dark Sanctity? Mother and I[N]
+used to go there for vacation[AN]
+when I was a child[Beat][N]
+Let's go.[A][X]
+
+## Chapter4_Objective
+Kill the Donateenary[N]
+rebel ring leaders.[X]
+
+## Chapter4_Goal
+ Defeat Bosses[X]

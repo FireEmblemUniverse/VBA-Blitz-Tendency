@@ -117,3 +117,10 @@ I'm a renegade hacker, after all.[A]
 [FarRight]
 That you are. That you are. Be careful[N]
 out there. Finish the job, Jay.[A][X]
+
+## Chapter3_Objective
+Liberate Script from[N]
+Donateenary scum.[X]
+
+## Chapter3_Goal
+ Seize Gate[X]
