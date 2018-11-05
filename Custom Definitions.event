@@ -33,6 +33,11 @@
   #define SongTableOffset  0x224470
   #define SongTable(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT Group Group; POP"
 #endif
+#ifndef AIKeyTable
+  #define AIKeyTable 0x0D8538
+  #define SetAIKeyUsability(chapter, doorKey, lockpick, antitoxin) "PUSH; ORG AIKeyTable+4*chapter; WORD (doorKey | lockpick << 1 | antitoxin << 1); POP"
+  #define SetAIKeyUsability(chapter, doorKey) "SetAIKeyUsability(chapter, doorKey, 1, 1)"
+#endif
 
 #define LunarBrace MoonBracelet
 #define SolarBrace SunBracelet

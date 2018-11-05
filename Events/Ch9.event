@@ -3,6 +3,7 @@
 #define LeftSwitchFlag 0
 
 EventPointerTable(0x2D,Chapter9)
+SetAIKeyUsability(9, 0)
 
 Chapter9:
 POIN TurnBasedEvents
@@ -18,8 +19,10 @@ POIN BeginningScene EndingScene
 
 PlayerUnits:
 UNIT Eirika EirikaLord Eirika Level(1, Ally, 0) [10,23] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT 0xE Mage_F	0x0 Level(12, Ally, 0) [12,23] 0x00 0x00 0x0 0x00 [Elfire] NoAI
+UNIT 0xE Mage_F	0x0 Level(10, Ally, 0) [12,23] 0x00 0x00 0x0 0x00 [Fire, Elfire] NoAI
 UNIT Seth Paladin Eirika Level(1, Ally, 0)  [14,23] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Eirika EirikaLord Eirika Level(1, Ally, 0) [9,24] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Eirika EirikaLord Eirika Level(1, Ally, 0) [15,24] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT
 
 // Units
@@ -33,14 +36,14 @@ UNIT 0x92 Mogall Carlyle Level(12, Enemy, 1) [20,13] 0x00 0x00 0x0 0x00 [EvilEye
 UNIT 0x92 Mogall Carlyle Level(12, Enemy, 1) [18,11] 0x00 0x00 0x0 0x00 [EvilEye] AttackInRangeAI
 UNIT 0x92 Gargoyle Carlyle Level(12, Enemy, 1) [4,14] 0x2 0x00 0x0 0x00 [Axereaver] AttackInRangeAI
 UNIT 0x92 Gargoyle Carlyle Level(12, Enemy, 1) [6,12] 0x00 0x00 0x0 0x00 [Javelin] AttackInRangeAI
-UNIT 0x92 Tarvos Carlyle Level(12, Enemy, 1) [5,16] 0x2 0x00 0x0 0x00 [DevilAxe] AttackInRangeAI //Colorz said Devil Axe is nonfunctional/not to be used (?)
+UNIT 0x92 Tarvos Carlyle Level(12, Enemy, 1) [5,16] 0x2 0x00 0x0 0x00 [SteelAxe] AttackInRangeAI
 UNIT
 
 NoRoof:
 UNIT 0x92 Mauthedoog Carlyle Level(13, Enemy, 1) [11,10] 0x2 0x00 0x0 0x00 [HellFang, DoorKey] AttackInRangeAI
 UNIT 0x92 Mauthedoog Carlyle Level(13, Enemy, 1) [13,13] 0x2 0x00 0x0 0x00 [FireFang, ChestKey] AttackInRangeAI
-UNIT 0x92 Bonewalker Carlyle Level(13, Enemy, 1) [14,9] 0x2 0x00 0x0 0x00 [SteelBlade, ChestKey] AttackInRangeAI
-UNIT 0x92 Gargoyle Carlyle Level(13, Enemy, 1) [10,13] 0x2 0x00 0x0 0x00 [KillerLance, DoorKey] AttackInRangeAI
+UNIT 0x92 Bonewalker Carlyle Level(13, Enemy, 1) [14,9] 0x2 0x00 0x0 0x00 [SteelSword, ChestKey] AttackInRangeAI
+UNIT 0x92 Gargoyle Carlyle Level(13, Enemy, 1) [10,13] 0x2 0x00 0x0 0x00 [SteelLance, DoorKey] AttackInRangeAI
 UNIT
 
 TopEnemy:
@@ -53,7 +56,7 @@ UNIT Carlyle Druid Carlyle Level(1, Enemy, 1) [12,2] 0x2 0x00 0x0 0x00 [Eclipse,
 UNIT
 
 NewUnit:
-UNIT 0xE Mage_F	0x0 Level(12, Ally, 0) [12,23] 0x00 0x00 0x0 0x00 [Elfire] NoAI
+UNIT 0xE Mage_F	0x0 Level(10, Ally, 0) [12,23] 0x00 0x00 0x0 0x00 [Fire, Elfire] NoAI
 UNIT
 
 TurnBasedEvents:
@@ -105,7 +108,7 @@ LOAD1 0x0 NewUnit
 ENUN
 EVBIT_T 1
 ENUN
-//Text(PlaceholderText)
+Text(PlaceholderText)
 GotoPrepScreen
 
 EndingScene:

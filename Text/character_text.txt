@@ -685,3 +685,10 @@ Lash[X]
 
 ## descLash
 Chaos![X]
+
+## nameJen
+Jen[X]
+
+## descJen
+Some chick on a horse. Has no[N]
+desire to become a paladin.[X]
