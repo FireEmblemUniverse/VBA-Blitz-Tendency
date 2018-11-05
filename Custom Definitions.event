@@ -1,7 +1,7 @@
 #ifndef VBABT_DEFINITIONS
 #define VBABT_DEFINITIONS
 
-#include "EAStdlib.event"
+#include "EAstdlib.event"
 
 #define FreeSpace        0xB2A610
 #define FreeSpaceEnd     0xC00000
