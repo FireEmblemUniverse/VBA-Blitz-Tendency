@@ -405,3 +405,10 @@ was their true motive! They-[A]
 [....v.]
 Didn't I tell you there's[N]
 no time, Null?! Come on![A][X]
+
+## Chapter8_Objective
+Defeat Dennis to[N]
+stop his attack.[X]
+
+## Chapter8_Goal
+ Defeat Boss[X]

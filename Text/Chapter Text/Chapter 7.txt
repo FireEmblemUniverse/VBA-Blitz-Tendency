@@ -45,7 +45,6 @@ Let's go find the source of that noise![A]
 [.v....]
 Yes, milord![A][X]
 
-
 ## Chapter7_Objective
 Defeat the leader of[N]
 the attacking army.[X]

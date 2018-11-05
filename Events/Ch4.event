@@ -13,7 +13,7 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TURN 0x0 WaveFirst[3,0] 0x0
+TURN 0x0 WaveFirst[4,0] 0x0
 TURN 0x0 WaveSecond[4,0] 0x0
 TURN 0x0 WaveThird[6,0] 0x0
 TURN 0x0 WaveFourth[9,0] 0x0

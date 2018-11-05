@@ -164,3 +164,10 @@ your journey, chosen hero. May you[AN]
 finally bring peace to this land...[A]
 [ToggleInvert]
 [X]
+
+## Chapter9_Objective
+Take the throne[N]
+from the Generalese.[X]
+
+## Chapter9_Goal
+ Seize Throne[X]

@@ -43,7 +43,7 @@ A goldhearted pious muscle mountain man.[NL]
 Avoids conflict and delivers blessings.[X]
 
 ## nameAggie
-Agge[X]
+Aggie[X]
 
 ## descAggie
 A healer from the town of Script.[N]
@@ -144,8 +144,8 @@ Anna[X]
 Faust[X]
 
 ## descFaust
-Royal Prince of the Dominion[N]
-of General. Yearns for light.[X]
+A noble of the Dominion of[N]
+General. Yearns for light.[X]
 
 ## LuutName
 Luut[X]
@@ -696,3 +696,14 @@ Jen[X]
 ## descJen
 Some chick on a horse. Has no[N]
 desire to become a paladin.[X]
+
+## nameNessie
+Nessie[X]
+
+## descNessie
+A pegasus rider. A[N]
+cute pegasus rider.[X]
+
+## descFE13Anna
+Her favorite spells makes[N]
+everyone want to shop more![X]

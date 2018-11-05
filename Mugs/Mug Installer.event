@@ -15,9 +15,10 @@ WORD 0 0 0 0 0 0 0 0
 
 #define setUpshift(portraitID) "PUSH; ORG (PortraitShiftEdit+portraitID); BYTE 1; POP"
 
+#define VedgePortrait 0x2
 Vedge_Mug:
 #incext PortraitFormatter "Vedge.png"
-setMugEntry(0x2, Vedge_Mug, 2, 6, 3, 4)
+setMugEntry(VedgePortrait, Vedge_Mug, 2, 6, 3, 4)
 
 // 0x3 and 0x4 are taken by VBA 1 characters
 #define NullPortrait 0x4D // "Unused Man"
@@ -25,43 +26,65 @@ Null_Mug:
 #incext PortraitFormatter "Null.png"
 setMugEntry(NullPortrait, Null_Mug, 3, 5, 3, 3)
 
+#define NaughtPortrait 0x5
 Naught_Mug:
 #incext PortraitFormatter "Naught.png"
-setMugEntry(0x5, Naught_Mug, 3, 5, 3, 3)
+setMugEntry(NaughtPortrait, Naught_Mug, 3, 5, 3, 3)
 
+#define ChivaPortrait 0x6
 Chiva_Mug:
 #incext PortraitFormatter "Chiva.png"
-setMugEntry(0x6, Chiva_Mug, 2, 5, 3, 3)
+setMugEntry(ChivaPortrait, Chiva_Mug, 2, 5, 3, 3)
 
+#define VergePortrait 0x7
 Verge_Mug:
 #incext PortraitFormatter "Verge.png"
-setMugEntry(0x7, Verge_Mug, 2, 5, 2, 3)
+setMugEntry(VergePortrait, Verge_Mug, 2, 5, 2, 3)
 
+#define AwakeningAnnaPortrait 0x8
 FE13Anna_Mug:
 #incext PortraitFormatter "fe13anna.png"
-setMugEntry(0x8, FE13Anna_Mug, 2, 6, 2, 4)
+setMugEntry(AwakeningAnnaPortrait, FE13Anna_Mug, 2, 6, 2, 4)
 
+#define KeanuPortrait 0x9
+#define MonkeyboyPortrait KeanuPortrait
 Monkeyboy_Mug:
 #incext PortraitFormatter "HeroWarrior.png"
-setMugEntry(0x9, Monkeyboy_Mug, 2, 5, 2, 3)
+setMugEntry(KeanuPortrait, Monkeyboy_Mug, 2, 5, 2, 3)
 
 #define CutePegPortrait 0xA
 //Not yet created
+
+// 0xB used by VBA1 character
+
+#define AggiePortrait 0xC
+Aggie_Mug:
+#incext PortraitFormatter "Aggie.png"
+setMugEntry(AggiePortrait, Aggie_Mug, 3, 6, 3, 4)
+
+// 0xD used by VBA1 character
+
+#define XimenaPortrait 0xE
+Ximena_Mug:
+#incext PortraitFormatter "Ximena.png"
+setMugEntry(XimenaPortrait, Ximena_Mug, 2, 6, 2, 4)
+
+// 0xF used by VBA1 character
 
 #define JenPortrait 0x10
 Jen_Mug:
 #incext PortraitFormatter "Jen.png"
 setMugEntry(JenPortrait, Jen_Mug, 3, 6, 3, 4)
 
-//0xC, 0xE Open
-
+#define FanniPortrait 0x11
 FanniMug:
 #incext PortraitFormatter "Fanni.png"
-setMugEntry(0x11,FanniMug,2,6,3,4)
+setMugEntry(FanniPortrait,FanniMug,2,6,3,4)
 
+#define FE3AnnaPortrait 0x13
 FE3AnnaMug:
 #incext PortraitFormatter "fe3anna.png"
-setMugEntry(0x13,FE3AnnaMug,6,6,2,5)
+setMugEntry(FE3AnnaPortrait,FE3AnnaMug,6,6,2,5)
 
 LuutMug:
 #incext PortraitFormatter "lu-by-lenh.png"
@@ -89,6 +112,11 @@ Rinslet_Mug:
 #incext PortraitFormatter "Rinslet.png"
 setMugEntry(0x22, Rinslet_Mug, 2, 6, 3, 4)
 ALIGN 4
+
+#define BooPortrait 0x23
+Boo_Mug:
+#incext PortraitFormatter "Boo.png"
+setMugEntry(BooPortrait, Boo_Mug, 3, 5, 3, 3)
 
 MichealP_Mug:
 #incext PortraitFormatter "MichealPMug.png"
