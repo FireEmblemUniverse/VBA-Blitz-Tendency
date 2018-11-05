@@ -240,15 +240,14 @@ ENUN
 LOAD2 0x1 ThrThrD_Units
 LOAD1 0x1 ThrThrD_Axeboy
 ENUN
-Text(PlaceholderText)
-//TODO
+Intro(Chapter2_Intro)
+Text(Castle_Room, Chapter2_Beginning)
 NoFade
 ENDA
 
 
 ThrThrD_EndingScene:
-Text(PlaceholderText)
-//TODO
+Text(Castle_Room, Chapter2_Ending)
 MNCH 0x03
 NoFade
 ENDA

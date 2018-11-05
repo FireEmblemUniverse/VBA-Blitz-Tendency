@@ -127,3 +127,4 @@ ALIGN 4
 ALIGN 4
 #include "REDAs.event"
 ALIGN 4
+#include "PrepShop.event"

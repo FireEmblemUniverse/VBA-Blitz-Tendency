@@ -42,6 +42,14 @@ Keanu[X]
 A goldhearted pious muscle mountain man.[NL]
 Avoids conflict and delivers blessings.[X]
 
+## nameAggie
+Agge[X]
+
+## descAggie
+A healer from the town of Script.[N]
+Survivor of the Donateenaries'[N]
+Writing attack.[X]
+
 ## nameCortez
 Cortez[X]
 
@@ -126,7 +134,7 @@ with exterminating manakete tribes.[X]
 Murat[X]
 
 ## MuratDesc
-Lives on the open ocean, apparently. Comes [N]
+Lives on the open ocean, apparently. Comes[N]
 ashore only to terrorize landlubbers.[X]
 
 ## nameAnna
@@ -134,6 +142,10 @@ Anna[X]
 
 ## nameFaust
 Faust[X]
+
+## descFaust
+Royal Prince of the Dominion[N]
+of General. Yearns for light.[X]
 
 ## LuutName
 Luut[X]
@@ -664,3 +676,23 @@ Edgeworth[X]
 
 ## descEdgeworth
 HIS EDGE IS WORTH[X]
+
+## nameEdgelard
+Edgelard[X]
+
+## descEdgelard
+Graduated at the top of[N]
+their Edgelord academy class.[X]
+
+## nameLash
+Lash[X]
+
+## descLash
+Chaos![X]
+
+## nameJen
+Jen[X]
+
+## descJen
+Some chick on a horse. Has no[N]
+desire to become a paladin.[X]

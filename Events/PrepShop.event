@@ -1,0 +1,16 @@
+PUSH
+ORG 0x99E64
+POIN PrepShoplist
+
+ORG 0xB5238
+//Change a division by 2 (markup by 1/2) to by 4 (markup by 1/4)
+SHORT 0x0FA0 0x1820 0x1080
+POP
+
+
+ALIGN 2
+PrepShoplist:
+SHLI IronSword IronLance IronAxe IronBow Fire Lightning Flux Heal Vulnerary AngelicRobe EnergyRing SecretBook Speedwings GoddessIcon Dracoshield Talisman MasterSeal
+
+
+ALIGN 4
