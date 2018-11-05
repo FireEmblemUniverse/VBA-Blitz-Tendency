@@ -142,6 +142,7 @@ ENUN
 LOAD1 0x1 Bad
 ENUN
 CAM1 Vedge
+Intro(Chapter1_Intro)
 Text(Chapter1_Beginning)
 NoFade
 ENDA

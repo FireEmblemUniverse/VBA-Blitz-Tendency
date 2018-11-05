@@ -89,7 +89,7 @@ made their home here. The fellow[AN]
 living near the river's a right[N]
 persistent type. He's been at it[AN]
 for years at this point. Wouldn't[N]
-be suprised if he was at it since[AN]
+be surprised if he was at it since[AN]
 the days of the Blitzarre Adventure...[N]
 Why do the press even call it that?[A][X]
 
@@ -117,3 +117,10 @@ I'm a renegade hacker, after all.[A]
 [FarRight]
 That you are. That you are. Be careful[N]
 out there. Finish the job, Jay.[A][X]
+
+## Chapter3_Objective
+Liberate Script from[N]
+Donateenary scum.[X]
+
+## Chapter3_Goal
+ Seize Gate[X]

@@ -265,4 +265,4 @@ SHLI Elixir Physic Fortify Warp Rescue Sleep Silence Berserk
 ALIGN 4
 
 
-MESSAGE Events end at offset currentOffset
+// MESSAGE Events end at offset currentOffset

@@ -1,3 +1,13 @@
+## VergeinCombat
+[OpenMidRight][LoadFace][Vergein][0x01]
+Hmph. Nameless Knights.[N]
+Prepare to face death.[A][X]
+
+## VergeinDeath
+I lost[Beat] lost my[Beat][N]
+Ugh[Beat][A][X]
+
+
 ## ElitorDeath
 [OpenMidRight][LoadFace][Elitor][0x1]
 Mother... Father...[N]
@@ -52,8 +62,9 @@ AAAAAAAAAAAAAAAAAAAAAAA[A][X]
 
 ## JazzakCombat
 [OpenMidLeft][LoadFace][Jazzak][0x01]
-Your Queen has made this place a pit.[N]
-Now I take back my freedom.[A][X]
+Your Queen has made this place[N]
+a pit.[AN]
+Now, I take back my freedom.[A][X]
 
 ## JazzakDeath
 [OpenMidLeft][LoadFace][Jazzak][0x01]
@@ -108,3 +119,35 @@ greatest[Beat]witch of all[Beat][CloseEyes][A][X]
 [OMR][LF][ZanePortrait]
 [OMR]Am I actually dead this[N]
 time?[.4] I sure hope so.[A][X]
+
+## GrudgeCombat
+[OMR][LoadGrudge]
+You are to be put to death.[N]
+Nothing personnel, kid.[A][X]
+
+## GrudgeDeath
+[OMR][LoadGrudge]
+And I would have gotten away[N]
+with it too, if it weren't[AN]
+for you meddling kids[Beat][A][X]
+
+## EdgelardCombat
+[OMR][LoadEdgelard]
+This castle is my Sensei's. I will[N]
+not allow you to bar my path.[A][X]
+
+## EdgelardDeath
+[OMR][LoadEdgelard]
+YOU! YOOOOOU![N]
+DIE DIE DIE DIE!!!!![A][X]
+
+## FaustCombat
+[OMR][LoadFaust]
+This castle is mine. Come no closer[N]
+unless you wish for death![A][X]
+
+## FaustDeath
+[OMR][LoadFaust]
+They[Beat] always said there would[N]
+be a light[Beat] Was I unable to[AN]
+earn it[Beat]?[A][X]

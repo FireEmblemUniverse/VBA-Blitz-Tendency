@@ -18,13 +18,26 @@ POIN BeginningScene EndingScene
 
 ALIGN 4
 Units:
+UNIT Vedge EirikaLord 0x00 Level(1, Ally, 0) [15,1] 0x00 0x00 0x0 0x00 [0] NoAI
+UNIT Null Cavalier Vedge Level(1, Ally, 0) [16,0] 0x00 0x00 0x0 0x00 [0] NoAI
+UNIT Naught Cavalier Vedge Level(1, Ally, 0) [14,2] 0x00 0x00 0x0 0x00 [0] NoAI
+UNIT Chiva Archer_F Vedge Level(1, Ally, 0) [13,1] 0x00 0x00 0x0 0x00 [0] NoAI
+UNIT Verge Swordmaster Vedge Level(1, Ally, 0) [14,1] 0x00 0x00 0x0 0x00 [0] NoAI
+UNIT Anna Thief Vedge Level(1, Ally, 0) [12,0] 0x00 0x00 0x0 0x00 [0] NoAI
+UNIT Keanu Brigand Vedge Level(1, Ally, 0) [16,2] 0x00 0x00 0x0 0x00 [0] NoAI
+UNIT
+
+VedgeAndVerge:
 UNIT Vedge EphraimLord 0x00 Level(1, Ally, 0) [15,1] 0x00 0x00 0x0 0x00 [Reginleif] NoAI
-UNIT Null EphraimLord Vedge Level(1, Ally, 0) [16,0] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
-UNIT Naught EphraimLord Vedge Level(1, Ally, 0) [14,2] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
-UNIT Chiva EphraimLord Vedge Level(1, Ally, 0) [13,1] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
 UNIT Verge EphraimLord Vedge Level(1, Ally, 0) [14,1] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
-UNIT Anna EphraimLord Vedge Level(1, Ally, 0) [12,0] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
-UNIT Keanu EphraimLord Vedge Level(1, Ally, 0) [16,2] 0x00 0x00 0x0 0x00 [SilverLance] NoAI
+UNIT
+
+RestOfArmy:
+UNIT Null Cavalier Vedge Level(1, Ally, 0) [15,1] 0x00 0x00 1 REDA16R0 [0] NoAI
+UNIT Naught Cavalier Vedge Level(1, Ally, 0) [15,1] 0x00 0x00 1 REDA14R2 [0] NoAI
+UNIT Chiva Archer_F Vedge Level(1, Ally, 0) [15,1] 0x00 0x00 1 REDA13R1 [0] NoAI
+UNIT Anna Thief Vedge Level(1, Ally, 0) [15,1] 0x00 0x00 1 REDA12R0 [0] NoAI
+UNIT Keanu Brigand Vedge Level(1, Ally, 0) [15,1] 0x00 0x00 1 REDA16R2 [0] NoAI
 UNIT
 
 
@@ -63,15 +76,17 @@ END_MAIN
 ALIGN 4
 
 BeginningScene:
-FADI 10
 LOAD1 0x01 Bad
-ENUN
-LOAD3 0x01 Units
-ENUN
+LOAD2 0x1 VedgeAndVerge
 CAM1 Vedge
+ENUN
 FADU 10
+STAL 10
 MUSC Advance
+FlashCursor(Vedge, 30)
 Text(Plain,Ch3Opening)
+LOAD3 0x1 Units
+ENUN
 NoFade
 ENDA
 
@@ -84,14 +99,17 @@ ENDA
 // Events
 UnitGet:
 MUSC 0x30 //recruitment
-LOAD1 0x1 NewGuy
 ENUN
 Text(HouseBG,Ch3RecruitingBoo)
 REMA
+LOAD1 0x1 NewGuy
+ENUN
 NoFade
 ENDA
 
 UpperHouse:
+CHECK_EXISTS Boo
+BEQ 1 0xC 0x0
 CHECK_ACTIVEID Boo
 BEQ 1 0xC 0x0
 Text(HouseBG,Ch3UpperHouseBoo)
@@ -101,7 +119,11 @@ LABEL 1
 Text(HouseBG,Ch3UpperHouse)
 ENUF 0x8
 LABEL 2
+REMA
 NoFade
+//FADI 10 # purple glowy nonsense testing frustration
+//FADU 10
+//STAL 60
 ENDA
 
 LowerHouse:
@@ -131,7 +153,7 @@ UNIT 0x86 Archer Breguet Level(3, Enemy, 1) [9,0] 0x00 0x00 0x00 0x00 [IronBow] 
 UNIT
 
 NewGuy:
-UNIT Boo Knight Eirika Level(3, Ally, 0) [8,3] 0x00 0x00 0x0 0x00 [SteelLance, IronLance] NoAI
+UNIT Boo Knight Eirika Level(3, Ally, 0) [8,4] 0x00 0x00 0x0 0x00 [SteelLance, IronLance] NoAI
 UNIT
 
 

@@ -63,3 +63,4 @@ Temporary Items
 *.csv#
 Maps/TMX2EA Readme.txt
 *.png
+!Mugs/*.png

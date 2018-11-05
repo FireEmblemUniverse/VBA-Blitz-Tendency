@@ -114,6 +114,8 @@ END_MAIN
 ALIGN 4
 
 BeginningScene12:
+Intro(Chapter8_Intro)
+
 ENUF 0x14
 TILECHANGE 0x1
 TILECHANGE 0x2
@@ -188,6 +190,8 @@ CHECK_ALIVE Fanni
 BEQ 0xb rC r0 //Skip if Fanni is dead.
     TurnAlly(Fanni)
 LABEL 0xb
+
+Text(Chapter8_Ending)
 
 FADI 5
 MNCH 0x9

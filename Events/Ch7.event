@@ -1,6 +1,8 @@
 EventPointerTable(0x27,ThisChapter)
 
-#define Ch7UnpromotedLevel 10
+#define Ch7UnpromotedLevel1 8
+#define Ch7UnpromotedLevel2 10
+#define Ch7UnpromotedLevel Ch7UnpromotedLevel2
 #define Ch7PromotedLevel 1
 
 ThisChapter:
@@ -34,10 +36,10 @@ END_MAIN
 
 LocationBasedEvents:
 //TODO: change chest contents
-Chest(BlueGem, 20, 2)
-Chest(GoldGem, 20, 5)
-Chest(BlackGem, 23, 2)
-Chest(RedGem, 23, 5)
+Chest(HeroCrest, 20, 2)
+Chest(KnightCrest, 20, 5)
+Chest(GuidingRing, 23, 2)
+Chest(OrionBolt, 23, 5)
 END_MAIN
 
 MiscBasedEvents:
@@ -62,13 +64,25 @@ BeginningScene:
 LOAD2 0x1 Units
 ENUN
 LOAD1 0x1 enemies
+LOAD1 0x1 enemies2
 ENUN
 LOAD1 0x1 NewUnit
 ENUN
+Text(Chapter7_Beginning)
 GotoPrepScreen
 ENDA
 
 EndingScene:
+TEXTSTART
+TEXTSHOW Chapter7_Ending
+TEXTEND
+MUSC Silent
+STAL 0x20
+SOUN 0x00AF // Wall Breaking
+STAL 0x40
+TEXTCONT
+TEXTEND
+REMA
 MNCH 0x8
 ENDA
 
@@ -80,33 +94,36 @@ ENDA
 
 // Units
 NewUnit:
-UNIT 0xC Troubadour 0x00 Level(Ch7UnpromotedLevel, Ally, 0) [11,3] 0x00 0x00 0x0 0x00 [Mend, Elixir] NoAI
+UNIT 0xC Troubadour 0x00 Level(6, Ally, 0) [11,3] 0x00 0x00 0x0 0x00 [Mend, Elixir] NoAI
 UNIT
 
 enemies:
-UNIT 0x4E Hero_F 0x00 Level(Ch7PromotedLevel, Enemy, 1) [22,9] 0x00 0x00 0x0 0x00 [KillingEdge, HandAxe] NeverMoveAI //Edgelard
-UNIT 0x8E Knight 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [6,8] 0x00 0x00 0x0 0x00 [SteelLance] GuardTileAI
-UNIT 0x8E Knight 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [6,9] 0x00 0x00 0x0 0x00 [SteelLance] GuardTileAI
-UNIT 0x8E Knight 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [17,9] 0x00 0x00 0x0 0x00 [SteelLance] GuardTileAI
-UNIT 0x8E Knight 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [17,8] 0x00 0x00 0x0 0x00 [SteelLance] GuardTileAI
-UNIT 0x8E Knight 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [20,5] 0x00 0x00 0x0 0x00 [SteelLance] GuardTileAI
-UNIT 0x8E Knight 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [20,2] 0x00 0x00 0x0 0x00 [SteelLance] GuardTileAI
-UNIT 0x8E Knight 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [23,2] 0x00 0x00 0x0 0x00 [SteelLance] GuardTileAI
-UNIT 0x8E Knight 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [23,5] 0x00 0x00 0x0 0x00 [SteelLance] GuardTileAI
+UNIT 0x4E Hero_F 0x01 Level(Ch7PromotedLevel, Enemy, 1) [22,9] 0x02 0x00 0x0 0x00 [KillingEdge, HandAxe, Lockpick] NeverMoveAI //Edgelard
+UNIT 0x8E Knight 0x00 Level(Ch7UnpromotedLevel1, Enemy, 1) [6,8] 0x00 0x00 0x0 0x00 [SteelLance] NeverMoveAI
+UNIT 0x8E Knight 0x00 Level(Ch7UnpromotedLevel1, Enemy, 1) [6,9] 0x00 0x00 0x0 0x00 [SteelLance] NeverMoveAI
+UNIT 0x8E Knight 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [17,9] 0x00 0x00 0x0 0x00 [SteelLance] NeverMoveAI
+UNIT 0x8E Knight 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [17,8] 0x00 0x00 0x0 0x00 [SteelLance] NeverMoveAI
+UNIT 0x8E Knight 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [20,5] 0x00 0x00 0x0 0x00 [SteelLance] NeverMoveAI
+UNIT 0x8E Knight 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [20,2] 0x02 0x00 0x0 0x00 [SteelLance, ChestKey] NeverMoveAI
+UNIT 0x8E Knight 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [23,2] 0x00 0x00 0x0 0x00 [SteelLance] NeverMoveAI
+UNIT 0x8E Knight 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [23,5] 0x02 0x00 0x0 0x00 [SteelLance, ChestKey] NeverMoveAI
 UNIT 0x8E Cavalier 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [15,6] 0x00 0x00 0x0 0x00 [IronSword, IronLance] ChaseOnceApproachedAI
 UNIT 0x8E Cavalier 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [16,6] 0x00 0x00 0x0 0x00 [IronSword, IronLance] ChaseOnceApproachedAI
 UNIT 0x8E Cavalier 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [3,4] 0x00 0x00 0x0 0x00 [IronSword, IronLance] ChaseOnceApproachedAI
-UNIT 0x8E Cavalier 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [14,12] 0x00 0x00 0x0 0x00 [IronSword, IronLance] ChaseOnceApproachedAI
-UNIT 0x8E Cavalier 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [10,9] 0x00 0x00 0x0 0x00 [IronSword, IronLance] ChaseOnceApproachedAI
-UNIT 0x8E Myrmidon 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [14,9] 0x00 0x00 0x0 0x00 [IronSword] ChaseOnceApproachedAI
-UNIT 0x8E Myrmidon 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [10,12] 0x00 0x00 0x0 0x00 [IronSword] ChaseOnceApproachedAI
+UNIT 0x8E Cavalier 0x00 Level(Ch7UnpromotedLevel1, Enemy, 1) [14,12] 0x00 0x00 0x0 0x00 [IronSword, IronLance] ChaseOnceApproachedAI
+UNIT 0x8E Cavalier 0x00 Level(Ch7UnpromotedLevel1, Enemy, 1) [10,9] 0x00 0x00 0x0 0x00 [IronSword, IronLance] ChaseOnceApproachedAI
+UNIT 0x8E Myrmidon 0x00 Level(Ch7UnpromotedLevel1, Enemy, 1) [14,9] 0x00 0x00 0x0 0x00 [IronSword] ChaseOnceApproachedAI
+UNIT 0x8E Myrmidon 0x00 Level(Ch7UnpromotedLevel1, Enemy, 1) [10,12] 0x00 0x00 0x0 0x00 [IronSword] ChaseOnceApproachedAI
+UNIT
+
+enemies2:
 UNIT 0x8E Myrmidon 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [15,4] 0x00 0x00 0x0 0x00 [IronSword] ChaseOnceApproachedAI
 UNIT 0x8E Myrmidon 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [3,8] 0x00 0x00 0x0 0x00 [IronSword] ChaseOnceApproachedAI
-UNIT 0x8E Soldier 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [12,11] 0x00 0x00 0x0 0x00 [Javelin] ChaseOnceApproachedAI
+UNIT 0x8E Soldier 0x00 Level(Ch7UnpromotedLevel1, Enemy, 1) [12,11] 0x00 0x00 0x0 0x00 [Javelin] ChaseOnceApproachedAI
 UNIT 0x8E Soldier 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [8,4] 0x00 0x00 0x0 0x00 [Javelin] ChaseOnceApproachedAI
 UNIT 0x8E Soldier 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [21,9] 0x00 0x00 0x0 0x00 [Javelin] ChaseOnceApproachedAI
 UNIT 0x8E Soldier 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [23,9] 0x00 0x00 0x0 0x00 [Javelin] ChaseOnceApproachedAI
-UNIT 0x8E Shaman 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [12,10] 0x00 0x00 0x0 0x00 [Flux] AttackInRangeAI
+UNIT 0x8E Shaman 0x00 Level(Ch7UnpromotedLevel1, Enemy, 1) [12,10] 0x00 0x00 0x0 0x00 [Flux] AttackInRangeAI
 UNIT 0x8E Shaman 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [21,10] 0x00 0x00 0x0 0x00 [Flux] AttackInRangeAI
 UNIT 0x8E Shaman 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [23,10] 0x00 0x00 0x0 0x00 [Flux] AttackInRangeAI
 UNIT 0x8E Shaman 0x00 Level(Ch7UnpromotedLevel, Enemy, 1) [3,6] 0x00 0x00 0x0 0x00 [Flux] AttackInRangeAI
@@ -116,4 +133,4 @@ UNIT
 
 // Shop Data
 
-MESSAGE Events end at offset currentOffset
+// MESSAGE Events end at offset currentOffset

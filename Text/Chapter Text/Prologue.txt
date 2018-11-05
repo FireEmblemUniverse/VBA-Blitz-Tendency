@@ -7,7 +7,7 @@
 We have arrived...[A]
 
 [.v....]
-Yes milord, the revels have already[N]
+Yes milord, the rebels have already[N]
 formed up ranks.[AN]
 We best move forward.[A]
 
@@ -31,7 +31,7 @@ their God Hex, so we did, but[AN]
 then the great God Builda appeared,[N]
 and made our lives much easier.[AN]
 The Donateenary remnants didn't take[N]
-out side switcharooing very well,[AN]
+our side switcharooing very well,[AN]
 and took over our humble village.[N]
 We're so glad you've come![AN]
 Here, take this as a token of our[N]

@@ -1,0 +1,90 @@
+## Chapter2_Intro
+Following the defeat of the[N]
+Donateenary rebels, Vedge returns[AN]
+to the Nameless Capital of the[N]
+Nameless Kingdom. Null's words sit[AN]
+in his mind, constantly nagging[N]
+at him. He is bothered; not by[AN]
+the words themselves, but by the[N]
+fact he cannot get them out of[AN]
+his mind...[A][X]
+
+## Chapter2_Beginning
+[.v....][LoadVoid]
+[.....v][LoadNull]
+[...v..][LoadVedge]
+Mother, I have returned.[A]
+
+[.v....]
+Ah, Vedge. How fared the[N]
+campaign against the[AN]
+Donateenary rebellion?[A]
+
+[...v..]
+It went well, mother, but...[N]
+I saw something that's been[AN]
+eating at the back of my mind[N]
+since the battle.[A]
+
+[.....v]
+[Beat][A]
+
+[.v....]
+Oh?[.4] Speak, boy, lest[N]
+I believe you to be-[A]
+[MoveLeft]
+[v.....][LoadFace][0x6A][0x01]
+Attack![AN]
+The Donateenary rebels[N]
+are attacking![AN]
+They've seized some of[N]
+the thrones![A]
+
+[..v...]
+What?! How could this be?![AN]
+Vedge, secure the northern[N]
+entrance to the castle while[AN]
+I protect the south.[N]
+My Super Blitz Lance is[AN]
+more than enough to handle[N]
+those rats.[AN]
+
+[...v..]
+Yes, Mother.[AN]
+
+[..v...][ClearFace]
+[v.....][ClearFace]
+
+[...v..]
+At least I'll get a[N]
+decent workout,[AN]
+I suppose[Beat][A][X]
+
+
+## Chapter2_Ending
+[....v.][LoadVedge]
+[.v....][LoadVoid]
+Vedge, it seems the Donateenaries[N]
+were behind this attack too.[AN]
+Your father Leeroy has traced[N]
+them to a castle in the south.[AN]
+I want you to take your forces[N]
+and deal with them now.[AN]
+
+[....v.]
+Of course, Mother,[N]
+but first-[A]
+
+[.v....]
+Insolent whelp![N]
+Did you hear my order or not?![AN]
+There's no time for your[N]
+frivolous questions.[AN]
+Now GET MOVING![A][X]
+
+## Chapter2_Objective
+Take thrones from the[N]
+Donateenary scum.[X]
+
+## Chapter2_Goal
+ Get 3 Thrones[X]

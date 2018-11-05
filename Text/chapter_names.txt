@@ -36,10 +36,10 @@ Prologue: IT BEGINS AGAIN[X]
 11: Sweet and[X]
 
 # 0x016c
-12: [X]
+12: Fort of Fight[X]
 
 # 0x016d
-13: [X]
+13: Simple Logistics[X]
 
 # 0x016e
 14: Not In Kansas Anymore[X]

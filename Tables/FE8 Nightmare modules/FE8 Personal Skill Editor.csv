@@ -6,17 +6,17 @@ Naught,SlowBurnID
 Chiva,SealDefID
 Verge,GambleID
 AwakeningAnna,LuckySevenID
-Monkeyboy/UnaddedName,AxefaithID
+Keanu,AxefaithID
 Boo,VantageID
-Colm,RallySpdID
-Garcia,ColossusID
-Innes,LightWeightID
-Lute,ParagonID
+Aggie,RallySpdID
+Ximena,ShoveID
+Nessie,LightWeightID
+Jen,ParagonID
 Fanni,CelerityID
-Cormag,RallyStrID
-Murat,LungeID
+FE3 Anna,SavageBlowID
+Murat,RepositionID
 Luut,PivotID
-Kyle,SpurStrID
+Dancer,VigorDanceID
 Mealy,SmiteID
 Artur,FocusID
 Gerik,BondID
@@ -24,7 +24,7 @@ Tethys,DemoiselleID
 Marisa,FocusID
 Saleh,SpurMagID
 Ewan,AstraID
-'L''Arachel',IntimidateID
+L''Arachel',IntimidateID
 Dozla,PivotID
 Sabin,CounterID
 Rennac,SpurSpdID
@@ -58,11 +58,11 @@ Hayden,0x0
 0,0x0
 0,0x0
 0,0x0
-'Lyon''s Summon',0x0
+Lyon''s Summon',0x0
 0,0x0
 0,0x0
-'Knoll''s Summon',0x0
-'Ewan''s Summon',0x0
+Knoll''s Summon',0x0
+Ewan''s Summon',0x0
 Vergein,WaryFighterID
 Morva (Ch 20),FrenzyID
 Jazzak,FrenzyID
@@ -77,7 +77,7 @@ Saar (Ch 5),AxebreakerID
 Novala (Ch 6),IgnisID
 Murray (Ch 7),QuickDrawID
 Tirado (Ch 8),SealDefID
-Binks (Ch 9A),BowfaireID
+Edgelard,LifetakerID
 Pablo (Ch 10A),DartingBlowID
 Dennis (Ch8),SealLukID
 Aias (Ch 13A),SavageBlowID
@@ -136,9 +136,9 @@ Generic Zealot Ch 2,FuryID
 Grado Soldier 7,0x0
 Grado Soldier 8,0x0
 Grado Soldier 9,0x0
-'Grado Soldier 10 (Duessel''s)',0x0
-'Grado Soldier 11 (Duessel''s)',0x0
-'Grado Soldier 12 (Duessel''s)',0x0
+Grado Soldier 10 (Duessel''s)',0x0
+Grado Soldier 11 (Duessel''s)',0x0
+Grado Soldier 12 (Duessel''s)',0x0
 Grado Soldier 13,0x0
 Grado Remnant 1 (Main),0x0
 Cutthroat,0x0

@@ -15,11 +15,6 @@ PUSH
     // #define UMText_DVDesc 0xd1
 #endif
 
-#ifndef SongTableOffset
-  #define SongTableOffset  0x224470
-  #define SongTable(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT Group Group; POP"
-#endif
-
 SongTable(DragonVeinSFXID,DragonVeinSFX,7) //Song Group 7 is for map sfx
 
 ORG (0x037864+4*(DragonVeinTrapID-1))
@@ -103,4 +98,3 @@ WORD $FF00FF
 
 DragonVeinWav:
 #incbin "bin/DragonVein_wav.dmp"
-  
