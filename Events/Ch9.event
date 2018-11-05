@@ -29,8 +29,8 @@ UNIT
 EnemyUnits:
 UNIT 0x92 Bonewalker Carlyle Level(12, Enemy, 1) [7,21] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI
 UNIT 0x92 Bonewalker_Bow Carlyle Level(12, Enemy, 1) [6,19] 0x00 0x00 0x0 0x00 [PoisonBow] AttackInRangeAI
-UNIT 0x92 Bael Carlyle Level(12, Enemy, 1) [16,22] 0x00 0x00 0x0 0x00 [FetidClaw] AttackInRangeAI
-UNIT 0x92 Mauthedoog Carlyle Level(13, Enemy, 1) [18,20] 0x00 0x00 0x0 0x00 [HellFang] AttackInRangeAI
+UNIT 0x92 Bael Carlyle Level(12, Enemy, 1) [16,22] 0x00 0x00 0x0 0x00 [RottenClaw] AttackInRangeAI
+UNIT 0x92 Mauthedoog Carlyle Level(13, Enemy, 1) [18,20] 0x00 0x00 0x0 0x00 [FireFang] AttackInRangeAI
 UNIT 0x92 Mogall Carlyle Level(12, Enemy, 1) [19,15] 0x00 0x00 0x0 0x00 [EvilEye] AttackInRangeAI
 UNIT 0x92 Mogall Carlyle Level(12, Enemy, 1) [20,13] 0x00 0x00 0x0 0x00 [EvilEye] AttackInRangeAI
 UNIT 0x92 Mogall Carlyle Level(12, Enemy, 1) [18,11] 0x00 0x00 0x0 0x00 [EvilEye] AttackInRangeAI
@@ -40,7 +40,7 @@ UNIT 0x92 Tarvos Carlyle Level(12, Enemy, 1) [5,16] 0x2 0x00 0x0 0x00 [SteelAxe]
 UNIT
 
 NoRoof:
-UNIT 0x92 Mauthedoog Carlyle Level(13, Enemy, 1) [11,10] 0x2 0x00 0x0 0x00 [HellFang, DoorKey] AttackInRangeAI
+UNIT 0x92 Mauthedoog Carlyle Level(13, Enemy, 1) [11,10] 0x2 0x00 0x0 0x00 [FireFang, DoorKey] AttackInRangeAI
 UNIT 0x92 Mauthedoog Carlyle Level(13, Enemy, 1) [13,13] 0x2 0x00 0x0 0x00 [FireFang, ChestKey] AttackInRangeAI
 UNIT 0x92 Bonewalker Carlyle Level(13, Enemy, 1) [14,9] 0x2 0x00 0x0 0x00 [SteelSword, ChestKey] AttackInRangeAI
 UNIT 0x92 Gargoyle Carlyle Level(13, Enemy, 1) [10,13] 0x2 0x00 0x0 0x00 [SteelLance, DoorKey] AttackInRangeAI

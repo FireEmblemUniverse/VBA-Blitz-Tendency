@@ -62,8 +62,8 @@ Let's head to the castle.[N]
 I have a bad feeling about this[Beat][A][X]
 
 ## Chapter6_Objective
-Seize the town to drive[N]
-off the bandits.[X]
+Seize the town[N]
+from the bandits.[X]
 
 ## Chapter6_Goal
- Seize Headquarters[X]
+ Seize Gate[X]

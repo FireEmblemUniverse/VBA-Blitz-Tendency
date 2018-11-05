@@ -46,8 +46,8 @@ Yes, milord![A][X]
 
 
 ## Chapter7_Objective
-Defeat the leader of the[N]
-attacking army, Edgelard.[X]
+Defeat the leader of[N]
+the attacking army.[X]
 
 ## Chapter7_Goal
  Defeat Boss[X]

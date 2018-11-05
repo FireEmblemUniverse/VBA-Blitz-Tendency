@@ -82,7 +82,7 @@ when I was a child[Beat][N]
 Let's go.[A][X]
 
 ## Chapter4_Objective
-Kill the local Donateenary[N]
+Kill the Donateenary[N]
 rebel ring leaders.[X]
 
 ## Chapter4_Goal
