@@ -118,6 +118,7 @@
 [LoadEdgelard] = [LoadFace][Edgelard][0x01]
 
 [LoadGrudge] = [LoadFace][0x6A][0x01]
+[LoadFaust] = [LoadFace][0x33][0x01]
 
 [ü] = [0xFC]
 [u-trema] = [ü]

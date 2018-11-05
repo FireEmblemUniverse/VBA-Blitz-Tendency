@@ -105,6 +105,7 @@
 #define Ch27ChrZomboss 0x4D // dracozombie boss
 #define Edgelard 0x4E
 #define Dennis 0x50
+#define Faust 0x52
 #define Ch11LdrID 0x56
 #define Ch11MiscID 0x57
 #define Cameron 0x58

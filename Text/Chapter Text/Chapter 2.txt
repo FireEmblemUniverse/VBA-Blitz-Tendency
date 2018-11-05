@@ -83,8 +83,8 @@ frivolous questions.[AN]
 Now GET MOVING![A][X]
 
 ## Chapter2_Objective
-Take the thrones back from[N]
-the Donateenary scum.[X]
+Take thrones from the[N]
+Donateenary scum.[X]
 
 ## Chapter2_Goal
- Take 3 Thrones[X]
+ Get 3 Thrones[X]

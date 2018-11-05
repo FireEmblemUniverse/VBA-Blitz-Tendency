@@ -18,45 +18,46 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 PlayerUnits:
-UNIT Eirika EirikaLord Eirika Level(1, Ally, 0) [10,23] 0x00 0x00 0x0 0x00 [0x00] NoAI
-UNIT 0xE Mage_F	0x0 Level(10, Ally, 0) [12,23] 0x00 0x00 0x0 0x00 [Fire, Elfire] NoAI
+UNIT Eirika EirikaLord Eirika Level(1, Ally, 0) [12,23] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT 0xE Mage_F	0x0 Level(10, Ally, 0) [12,24] 0x00 0x00 0x0 0x00 [Fire, Elfire] NoAI
 UNIT Seth Paladin Eirika Level(1, Ally, 0)  [14,23] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT Eirika EirikaLord Eirika Level(1, Ally, 0) [9,24] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT Eirika EirikaLord Eirika Level(1, Ally, 0) [15,24] 0x00 0x00 0x0 0x00 [0x00] NoAI
+UNIT Eirika EirikaLord Eirika Level(1, Ally, 0) [10,23] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT
 
 // Units
 EnemyUnits:
-UNIT 0x92 Bonewalker Carlyle Level(12, Enemy, 1) [7,21] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI
-UNIT 0x92 Bonewalker_Bow Carlyle Level(12, Enemy, 1) [6,19] 0x00 0x00 0x0 0x00 [PoisonBow] AttackInRangeAI
-UNIT 0x92 Bael Carlyle Level(12, Enemy, 1) [16,22] 0x00 0x00 0x0 0x00 [RottenClaw] AttackInRangeAI
-UNIT 0x92 Mauthedoog Carlyle Level(13, Enemy, 1) [18,20] 0x00 0x00 0x0 0x00 [FireFang] AttackInRangeAI
-UNIT 0x92 Mogall Carlyle Level(12, Enemy, 1) [19,15] 0x00 0x00 0x0 0x00 [EvilEye] AttackInRangeAI
-UNIT 0x92 Mogall Carlyle Level(12, Enemy, 1) [20,13] 0x00 0x00 0x0 0x00 [EvilEye] AttackInRangeAI
-UNIT 0x92 Mogall Carlyle Level(12, Enemy, 1) [18,11] 0x00 0x00 0x0 0x00 [EvilEye] AttackInRangeAI
-UNIT 0x92 Gargoyle Carlyle Level(12, Enemy, 1) [4,14] 0x2 0x00 0x0 0x00 [Axereaver] AttackInRangeAI
-UNIT 0x92 Gargoyle Carlyle Level(12, Enemy, 1) [6,12] 0x00 0x00 0x0 0x00 [Javelin] AttackInRangeAI
-UNIT 0x92 Tarvos Carlyle Level(12, Enemy, 1) [5,16] 0x2 0x00 0x0 0x00 [SteelAxe] AttackInRangeAI
+UNIT 0x92 Bonewalker Faust Level(12, Enemy, 1) [7,21] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI
+UNIT 0x92 Bonewalker_Bow Faust Level(12, Enemy, 1) [6,19] 0x00 0x00 0x0 0x00 [PoisonBow] AttackInRangeAI
+UNIT 0x92 Bael Faust Level(12, Enemy, 1) [16,22] 0x00 0x00 0x0 0x00 [RottenClaw] AttackInRangeAI
+UNIT 0x92 Mauthedoog Faust Level(13, Enemy, 1) [18,20] 0x00 0x00 0x0 0x00 [FireFang] AttackInRangeAI
+UNIT 0x92 Mogall Faust Level(12, Enemy, 1) [19,15] 0x00 0x00 0x0 0x00 [EvilEye] AttackInRangeAI
+UNIT 0x92 Mogall Faust Level(12, Enemy, 1) [20,13] 0x00 0x00 0x0 0x00 [EvilEye] AttackInRangeAI
+UNIT 0x92 Mogall Faust Level(12, Enemy, 1) [18,11] 0x00 0x00 0x0 0x00 [EvilEye] AttackInRangeAI
+UNIT 0x92 Gargoyle Faust Level(12, Enemy, 1) [4,14] 0x2 0x00 0x0 0x00 [Axereaver] AttackInRangeAI
+UNIT 0x92 Gargoyle Faust Level(12, Enemy, 1) [6,12] 0x00 0x00 0x0 0x00 [Javelin] AttackInRangeAI
+UNIT 0x92 Tarvos Faust Level(12, Enemy, 1) [5,16] 0x2 0x00 0x0 0x00 [SteelAxe] AttackInRangeAI
 UNIT
 
 NoRoof:
-UNIT 0x92 Mauthedoog Carlyle Level(13, Enemy, 1) [11,10] 0x2 0x00 0x0 0x00 [FireFang, DoorKey] AttackInRangeAI
-UNIT 0x92 Mauthedoog Carlyle Level(13, Enemy, 1) [13,13] 0x2 0x00 0x0 0x00 [FireFang, ChestKey] AttackInRangeAI
-UNIT 0x92 Bonewalker Carlyle Level(13, Enemy, 1) [14,9] 0x2 0x00 0x0 0x00 [SteelSword, ChestKey] AttackInRangeAI
-UNIT 0x92 Gargoyle Carlyle Level(13, Enemy, 1) [10,13] 0x2 0x00 0x0 0x00 [SteelLance, DoorKey] AttackInRangeAI
+UNIT 0x92 Mauthedoog Faust Level(13, Enemy, 1) [11,10] 0x2 0x00 0x0 0x00 [FireFang, DoorKey] AttackInRangeAI
+UNIT 0x92 Mauthedoog Faust Level(13, Enemy, 1) [13,13] 0x2 0x00 0x0 0x00 [FireFang, ChestKey] AttackInRangeAI
+UNIT 0x92 Bonewalker Faust Level(13, Enemy, 1) [14,9] 0x2 0x00 0x0 0x00 [SteelSword, ChestKey] AttackInRangeAI
+UNIT 0x92 Gargoyle Faust Level(13, Enemy, 1) [10,13] 0x2 0x00 0x0 0x00 [SteelLance, DoorKey] AttackInRangeAI
 UNIT
 
 TopEnemy:
-UNIT 0x92 Tarvos Carlyle Level(13, Enemy, 1) [11,4] 0x00 0x00 0x0 0x00 [HandAxe] AttackInRangeAI
-UNIT 0x92 ArchMogall Carlyle Level(1, Enemy, 1) [13,4] 0x00 0x00 0x0 0x00 [EvilEye] AttackInRangeAI
+UNIT 0x92 Tarvos Faust Level(13, Enemy, 1) [11,4] 0x00 0x00 0x0 0x00 [HandAxe] AttackInRangeAI
+UNIT 0x92 ArchMogall Faust Level(1, Enemy, 1) [13,4] 0x00 0x00 0x0 0x00 [EvilEye] AttackInRangeAI
 UNIT
 
 Boss:
-UNIT Carlyle Druid Carlyle Level(1, Enemy, 1) [12,2] 0x2 0x00 0x0 0x00 [Eclipse, Nosferatu] GuardTileAI
+UNIT Faust Druid Faust Level(1, Enemy, 1) [12,2] 0x2 0x00 0x0 0x00 [Eclipse, Nosferatu] GuardTileAI
 UNIT
 
 NewUnit:
-UNIT 0xE Mage_F	0x0 Level(10, Ally, 0) [12,23] 0x00 0x00 0x0 0x00 [Fire, Elfire] NoAI
+UNIT 0xE Mage_F	0x0 Level(10, Ally, 0) [12,24] 0x00 0x00 0x0 0x00 [Fire, Elfire] NoAI
 UNIT
 
 TurnBasedEvents:
@@ -102,17 +103,21 @@ END_MAIN
 ALIGN 4
 
 BeginningScene:
+Intro(Chapter9_Intro)
 LOAD1 0x1 EnemyUnits
 LOAD1 0x1 Boss
 LOAD1 0x0 NewUnit
+LOAD3 0x0 PlayerUnits
 ENUN
+CAM1 [10,20]
+
 EVBIT_T 1
 ENUN
-Text(PlaceholderText)
+Text(Chapter9_Beginning)
 GotoPrepScreen
 
 EndingScene:
-Text(PlaceholderText)
+Text(Chapter9_Ending)
 MNCH 12 //Do not change. Since this is MNCH and not MNC2, we do not use the Chapter10 definition.
 ENDA
 

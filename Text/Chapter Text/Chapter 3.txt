@@ -120,7 +120,7 @@ out there. Finish the job, Jay.[A][X]
 
 ## Chapter3_Objective
 Liberate Script from[N]
-the Donateenary scum.[X]
+Donateenary scum.[X]
 
 ## Chapter3_Goal
  Seize Gate[X]

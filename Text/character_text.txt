@@ -134,7 +134,7 @@ with exterminating manakete tribes.[X]
 Murat[X]
 
 ## MuratDesc
-Lives on the open ocean, apparently. Comes [N]
+Lives on the open ocean, apparently. Comes[N]
 ashore only to terrorize landlubbers.[X]
 
 ## nameAnna
@@ -142,6 +142,10 @@ Anna[X]
 
 ## nameFaust
 Faust[X]
+
+## descFaust
+Royal Prince of the Dominion[N]
+of General. Yearns for light.[X]
 
 ## LuutName
 Luut[X]

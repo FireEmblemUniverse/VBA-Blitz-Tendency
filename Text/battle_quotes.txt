@@ -139,4 +139,15 @@ not allow you to bar my path.[A][X]
 ## EdgelardDeath
 [OMR][LoadEdgelard]
 YOU! YOOOOOU![N]
-]DIE DIE DIE DIE!!!!![A][X]
+DIE DIE DIE DIE!!!!![A][X]
+
+## FaustCombat
+[OMR][LoadFaust]
+This castle is mine. Come no closer[N]
+unless you wish for death![A][X]
+
+## FaustDeath
+[OMR][LoadFaust]
+They[Beat] always said there would[N]
+be a light[Beat] Was I unable to[AN]
+earn it[Beat]?[A][X]

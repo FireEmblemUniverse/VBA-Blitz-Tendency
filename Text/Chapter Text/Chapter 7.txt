@@ -34,6 +34,7 @@ I wonder what their purpose here is.[A]
 
 [....v.]
 Hmm[Beat][A]
+[CloseSpeechSlow]
 
 [Events] # sfx: Noises
 
