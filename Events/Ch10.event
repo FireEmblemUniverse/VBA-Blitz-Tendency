@@ -196,6 +196,8 @@ NoFade
 ENDA
 
 RaftAttack:
+CAM1 [11, 12]
+STAL 0x10
 TILECHANGE GangplankID
 STAL 24
 LoadReinforcements(RaftSquad)
@@ -203,40 +205,57 @@ EVBIT_T 0x7
 ENDA
 
 FirstFlood:
+CAM1 [6, 8]
+STAL 0x10
 TILECHANGE FirstFloodID
 NoFade
 ENDA
 
 SecondFlood:
+CAM1 [16, 8]
+STAL 0x10
 TILECHANGE SecondFloodID
 NoFade
 ENDA
 
 ThirdFlood:
+CAM1 [12, 19]
+STAL 0x10
 TILECHANGE ThirdFloodID
 NoFade
 ENDA
 
 FourthFlood:
+CAM1 [12, 19]
+STAL 0x10
 TILECHANGE FourthFloodID
 NoFade
 ENDA
 
 Rising1:
+CAM1 [12, 19]
+STAL 0x10
+// Since these changes overlap, redo the third flood's changes
 TILEREVERSE FourthFloodID
+TILEREVERSE ThirdFloodID
+TILECHANGE ThirdFloodID
 CAM1 [11,8]
-STAL 12
+STAL 16
 TILEREVERSE SecondFloodID
 TILEREVERSE FirstFloodID
 NoFade
 ENDA
 
 Rising2:
+CAM1 [12, 19]
+STAL 0x10
 TILEREVERSE ThirdFloodID
 NoFade
 ENDA
 
 Rising3:
+CAM1 [11, 10]
+STAL 0x10
 TILECHANGE TideID
 NoFade
 ENDA

@@ -31,7 +31,7 @@
    eJxjYBgFo2AUjALSQDsjA0MGFHcAsQ0Qp0OxPSNCHiRHDfNjgNgOCVNq/igYBaNgFAAATzkJIg==
   </data>
  </layer>
- <layer name="TideIn" width="24" height="24">
+ <layer name="TideIn" width="24" height="24" visible="0">
   <properties>
    <property name="Height" type="int" value="19"/>
    <property name="ID" type="int" value="2"/>
@@ -40,10 +40,10 @@
    <property name="Y" type="int" value="7"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJztlEEKhDAMRVN7DL2DS8/ibq6tC3HpHXTGSRYFK5p8WhcKBp6VQl+ipCF6443nhWNqF1N5otLHe450LL84f7wOG5e8y57kyvF/Cv3sN7P+FTif47+CO/sbb/dQbv2lkUPzd9w/PdBDqX6LkR+zkT/VL17kDqN+8S0MFbE71S/nznyBCfhOzX8E2lfI/zmamVf6w3xD7tGeUI/mbzfzF5nFe7fwByMpG40=
+   eJxjYBgFo2DoAUYg1mdExTLMDAzSzKhijAz4MSHzQWb+A9L3kMwCsUFiILvINR9kdgITfr1/KXA/yPz/ROinJHyogQez+ebMhNMQpe6XJmAHPvNvAtPPLSLSELnmE8IPgMRvAvaTaz7IXGLyMLHmg8z7A8QMTKhmk2s+SB8u82D4BRH+xGc+NkxsuiImfLCVmdQ0H1a+EZOP0DHMPfjMj0Qqf4kpi9HNBmEAGZUb6w==
   </data>
  </layer>
- <layer name="Flood1" width="24" height="24">
+ <layer name="Flood1" width="24" height="24" visible="0">
   <properties>
    <property name="Height" type="int" value="7"/>
    <property name="ID" type="int" value="3"/>
@@ -55,7 +55,7 @@
    eJztkDsOwjAMhp1kY2IHboDUmZtwEyQWxF3gCjxOwMiKKIipK4IZWmHLjhJMqFjY8kuf3CaOHz9AVlZWVlbW/3V0AHMDcMB4MkzPAqwwrpENsjXhjhhg7gJjB/MqwwzlW6swzEXVIErpFZ+BZRq6c6G+J1W/7z5rp6ix7l3ePKWv7qFFtR8/1D4jV2BfltJj5Pi8iNCiHO1BzEz88L7v8Xcnc5F/tew/dryLFu1ZtnmC3CD40Qjf8lP+01u/wwTj1L57Tp50TZilbZ4XSQ1hpg==
   </data>
  </layer>
- <layer name="Flood2" width="24" height="24">
+ <layer name="Flood2" width="24" height="24" visible="0">
   <properties>
    <property name="Height" type="int" value="5"/>
    <property name="ID" type="int" value="4"/>
@@ -67,7 +67,7 @@
    eJxjYBgFo2BggAwzA8M/RgaGe0AszUx986WZINgKaPZfJtqZD3J7D/WNh5sfDjT/BA3N/w3E+ow0sGAUjIJRMAoGMQAAARAHOQ==
   </data>
  </layer>
- <layer name="Flood3" width="24" height="24">
+ <layer name="Flood3" width="24" height="24" visible="0">
   <properties>
    <property name="Height" type="int" value="4"/>
    <property name="ID" type="int" value="5"/>
@@ -79,7 +79,7 @@
    eJxjYBgFo2BoARlmBoYIIM5jpI35kUCz7zBCMC2AJY3N/8NEW/NHwSgYBaNgOAAA7QUHrg==
   </data>
  </layer>
- <layer name="Flood4" width="24" height="24">
+ <layer name="Flood4" width="24" height="24" visible="0">
   <properties>
    <property name="Height" type="int" value="6"/>
    <property name="ID" type="int" value="6"/>
@@ -91,7 +91,7 @@
    eJxjYBgFo2AUjIJRMAqGHvgIxPqMDAyXgPRFKFuGmYHhDiMmjmZiYIhhQhW7DaX/AbE0UN9TRlS8BIgFoGZaAHEEEMfgMB8XtgbaKQ3DSHaAzNRhwu1ecjHMnSB2BJrZ6G6PYSYdYzMHHyY1vGhtDjIGAEbRZl0=
   </data>
  </layer>
- <layer name="Chest1" width="24" height="24">
+ <layer name="Chest1" width="24" height="24" visible="0">
   <properties>
    <property name="Height" type="int" value="1"/>
    <property name="ID" type="int" value="7"/>
@@ -103,7 +103,7 @@
    eJxjYMAEjljERsEoGAWjYBSMglEwCoYLAABNCgBC
   </data>
  </layer>
- <layer name="Chest2" width="24" height="24">
+ <layer name="Chest2" width="24" height="24" visible="0">
   <properties>
    <property name="Height" type="int" value="1"/>
    <property name="ID" type="int" value="8"/>
@@ -115,7 +115,7 @@
    eJxjYBgFo2AUDEXgONAOGAWjYBSMgiEMAF9TAEI=
   </data>
  </layer>
- <layer name="Chest3" width="24" height="24">
+ <layer name="Chest3" width="24" height="24" visible="0">
   <properties>
    <property name="Height" type="int" value="1"/>
    <property name="ID" type="int" value="9"/>
