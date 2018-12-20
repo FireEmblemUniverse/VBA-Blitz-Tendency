@@ -4,6 +4,12 @@ EventPointerTable(0x33, ThisChapter)
 
 EscapePointPointerTable(Chapter10, Ch10EscapePoint)
 
+#define FirstFloodID 5
+#define SecondFloodID 4
+#define ThirdFloodID 3
+#define FourthFloodID 6
+#define GangplankID 1
+#define TideID 2
 
 Ch10EscapePoint:
 //EscapePoint(0, 0, MoveUp)
@@ -190,48 +196,48 @@ NoFade
 ENDA
 
 RaftAttack:
-TILECHANGE 0x6
+TILECHANGE GangplankID
 STAL 24
 LoadReinforcements(RaftSquad)
 EVBIT_T 0x7
 ENDA
 
 FirstFlood:
-TILECHANGE 0x3
+TILECHANGE FirstFloodID
 NoFade
 ENDA
 
 SecondFlood:
-TILECHANGE 0x2
+TILECHANGE SecondFloodID
 NoFade
 ENDA
 
 ThirdFlood:
-TILECHANGE 0x8
+TILECHANGE ThirdFloodID
 NoFade
 ENDA
 
 FourthFlood:
-TILECHANGE 0x9
+TILECHANGE FourthFloodID
 NoFade
 ENDA
 
 Rising1:
-TILEREVERSE 0x9
+TILEREVERSE FourthFloodID
 CAM1 [11,8]
 STAL 12
-TILEREVERSE 0x2
-TILEREVERSE 0x3
+TILEREVERSE SecondFloodID
+TILEREVERSE FirstFloodID
 NoFade
 ENDA
 
 Rising2:
-TILEREVERSE 0x8
+TILEREVERSE ThirdFloodID
 NoFade
 ENDA
 
 Rising3:
-TILECHANGE 0x4
+TILECHANGE TideID
 NoFade
 ENDA
 
