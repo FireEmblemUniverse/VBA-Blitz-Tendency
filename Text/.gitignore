@@ -3,6 +3,7 @@
 
 # Build output
 _textentries
+.TextEntries
 Install Text Data.event
 Text Definitions.event
 
