@@ -1,0 +1,40 @@
+## Ch21Narration
+Vedge has obtained the Void[N]
+Medallion. With its power in[AN]
+hand, he heads north, seeking[N]
+the divine treasure of the[AN]
+Angel Ria. This treasure, the[N]
+Blitz of Aja, was previously[AN]
+unknown to Vedge, but he feels[N]
+no reason to doubt Vesta's claims...[A][X]
+
+## Ch21Opening
+[MidRight][LoadVedge]
+[MidLeft][LoadVerge]
+Milord, trouble afoot.
+[MidRight]
+What is it now?
+[MidLeft]
+The Spritans border guard[n]
+is mobilizing, and they[an]
+have already made motion[n]
+to attack us.[a]
+[MidRight]
+Dammit, Vesta... She warped us[n]
+too close to the border to[an]
+convince them we’re on their[n]
+side. No matter! We'll seize[an]
+the blasted border if we have[n]
+to! Move![A][X]
+
+## Ch21Ending
+[MidLeft][LoadNull]
+[MidRight][LoadVedge]
+We are going to regret[n]
+this later, aren't we?[a]
+[MidLeft]
+Not if we run like hell and[n]
+leave no trace of our presence.[a]
+[MidRight]
+Then let's find this "Blitz of[n]
+Aja" and get out of here.[A][X]
