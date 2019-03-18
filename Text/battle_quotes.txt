@@ -151,3 +151,101 @@ unless you wish for death![A][X]
 They[Beat] always said there would[N]
 be a light[Beat] Was I unable to[AN]
 earn it[Beat]?[A][X]
+
+#Final chapter quotes
+#Luut vs. Doot:
+#Luut: Doot! I’ve finally found you! Snap out of it, please!
+#Doot: Snap out of what?! I’m here of my own free will, aren’t you?
+#Luut: Yes, I am. I came here to save you, because I figured you had to be brainwashed to get press-ganged into service here!
+#Doot: I can’t believe you thought I was brainwashed. That’s it! You’re going down!
+#Luut: Can you blame-
+#Doot: Who the fu-
+#Luut: LANGUAGE!
+#Doot: Whom the fu-
+#Luut: NOOOO! Time for your nap!
+#
+#Doot if defeated by someone other than Luut:
+#Doot: No no no! It can’t end… like this…
+#
+#Doot if defeated by Luut:
+#Doot: I…
+#Luut: Hold still. I have to stop the bleeding.
+#Doot: But I… I tried to kill you! Why are you trying to save me?
+#Luut: Family is family.
+#
+#Vs. Kaga
+#Kaga: Fools who do not understand my works... Prepare to meet your maker!
+#
+#
+#Kaga vs. Sakaguchi
+#Sakaguchi: Kaga, what’s happened to you?
+#Kaga: Sakaguchi, long time no see, old friend. I can’t say I expected to see you on their side.
+#Sakaguchi: It’s a long story…
+#Kaga: Save it. If you fight for them, you fight for the husk of a series Fire Emblem has become.
+#Sakaguchi: No. I fight for the legacy of your series.
+#Kaga: What “legacy”?! My series died the second they tossed a self-insert into one of my games, not to mention the atrocities of Awakening and Fates! Such horrible things deserve nothing more than death. You should know this as well as anyone. 
+#Sakaguchi: This army saved Final Fantasy... It can save Fire Emblem too!
+#Kaga: Then prove it to me in single combat!
+#Sakaguchi: Very well, old friend.
+#
+#Kaga killed:
+#Kaga: No… I’ve failed you, Tearring. I’ve… failed...
+#
+#Kaga defeated by Sakaguchi:
+#Kaga: I see your resolve, my friend.
+#Sakaguchi: Do you?
+#Kaga: I do. While I am unable to help with these wounds, I will live, and we will work to make a legacy we can be proud of together.
+#Sakaguchi: I am looking forward to it.
+#
+#Tiki Boss Quote:
+#Stay away!
+#
+#Tiki defeated quote:
+#Mar-Mar…
+#
+#Tiki defeated with FE3 Anna:
+#Tiki: Stay…
+#Anna: Poor thing! Jake told me about you. I think I’ll save you. Maybe I can squeeze a pretty penny out of Prince Marth for this...
+#
+#
+#Talk with any of the enemy Annas:
+#Anna: If you’d rather not fight me, well, have I got the deal for you! I’ll leave for a small fee of 20,000 gold. Well? What do you say?
+#(If paid, the talked-to Anna will leave the map)
+#
+#(Defeat Jay with Boo to save Jay/get Darr to write these people I do not know)
+#
+#If Evil Florina is talked to by someone carrying five staves:
+#Evil Florina: Oh?! I see you too are a fan of fancy staves. I’ll make you a deal. I’ll take the staves and leave the battlefield, and you will have one less threat to deal with. Thanks for the trade!
+#
+#Vs. Leeroy
+#If  Vedge: 
+#Leeroy: My son... Let’s end this.
+#Vedge: Father… No mercy!!
+#
+#Normal Boss Quote:
+#Leeroy: Hmph! I shall not allow anyone to quash my darling’s innermost ambitions. Die!
+#
+#Vedge vs Kaga:
+#Vedge: It... It can’t be… Even so, I will not let anyone bar my path, not even Kaga himself!
+#
+#Vs Void:
+#Void: The Donateenaries are a blight upon this world. You aim to propagate this blight, and so you must die.
+#
+#Vedge vs Void:
+#Void: I raised you, I loved you; I’ve given you weapons, endowed you with knowledge... There is nothing left for me to give you.
+#Vedge: Mother…
+#Void: I gave you all of this, and yet you betrayed me… I was going to give you the world.
+#Vedge: I don’t care. You are just causing Libel’s cycle of war to repeat! I must stop you!
+#Void: Am I? If I recall correctly, the one who started this rebellion, and by extension this whole war, was you.
+#Vedge: I would not have needed to rebel had you not been trying to starve out an entire people, killing the ones who resisted!
+#Void: Indeed, but at the end of the day, had you accepted my love and let them die with their god, this “cycle of war” would not exist. And yet here we are, your axe upon my lance… One final holy blitz.
+#Vedge: This ends now!
+#
+#Null vs Void:
+#Void: Hmph. Donateenary trash, human refuse. If I have made any mistake, it was allowing you and your sister into my son’s life.
+#Null: Where is she?
+#Void: In refusal to pay the Donateenary Tax, she committed high treason. The punishment for treason is, as you know, death.
+#Null: YOU DIE HERE!
+#
+#Void’s Death Quote:
+#Void: So ends my story... But know this: my will shall never die. As long as the Donateenaries exist, Libel will know war; war heralded by a matricidal god, whose judgement is no better than theirs and no match for mine... I know this well, Vedge. War will always return; it is our heritage, our destiny, and you know it. You... have already spoken with Vesta. You know… that more conflict will come. You know… you… have wasted… your time…

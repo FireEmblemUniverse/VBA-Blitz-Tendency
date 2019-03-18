@@ -1,9 +1,9 @@
-//Chapter 26 (Alusq)
-//There was never any actual script.
-//There are notes, so I'll	 just make something up using them.
-//The party has two roads ahead of them: one through a pleasant meadow and the other through a cave system full of lava with a foreboding temple inside it. Ersatz suddenly appears and asks to lead the party through the lava cave because the meadow is an obvious trap. (If Ersatz is not alive, Vedge goes through the meadow only for the entire party to sink in quicksand and fall into the lava cave) Vedge agrees.
-//Already written in chapter*: As Vedge draws near to the temple, he feels a force pulling him forward and wanders ahead of the party. Dennis (who is back from the dead) appears and gloats that Vedge has fallen into his trap before unveiling a dragon zombie. Inferos, a demonic version of Vedge, suddenly appears, kills Dennis, and teleports Vedge and himself into the middle of the temple. Walls appear to block Vedge's escape, but Vedge has an edgy moment and his willpower causes the walls to crack, enabling the rest of the party to come to his rescue if he is not strong enough to defeat the boss.
-//Already written end of chapter*: Vedge declares that there can be only one Vedge in this world and the party exits the lava cave.
+#Chapter 26 (Alusq)
+#There was never any actual script.
+#There are notes, so I'll	 just make something up using them.
+#The party has two roads ahead of them: one through a pleasant meadow and the other through a cave system full of lava with a foreboding temple inside it. Ersatz suddenly appears and asks to lead the party through the lava cave because the meadow is an obvious trap. (If Ersatz is not alive, Vedge goes through the meadow only for the entire party to sink in quicksand and fall into the lava cave) Vedge agrees.
+#Already written in chapter*: As Vedge draws near to the temple, he feels a force pulling him forward and wanders ahead of the party. Dennis (who is back from the dead) appears and gloats that Vedge has fallen into his trap before unveiling a dragon zombie. Inferos, a demonic version of Vedge, suddenly appears, kills Dennis, and teleports Vedge and himself into the middle of the temple. Walls appear to block Vedge's escape, but Vedge has an edgy moment and his willpower causes the walls to crack, enabling the rest of the party to come to his rescue if he is not strong enough to defeat the boss.
+#Already written end of chapter*: Vedge declares that there can be only one Vedge in this world and the party exits the lava cave.
 
 ## Ch26Opening
 {LoadMidRight][LoadVedge]
@@ -30,7 +30,7 @@ the army frolick in the[N]
 fields. It will help morale.[AN][X]
 
 ## Ch26Opening2ErsatzAlive
-//probably the only one i'll use regardless of his status, conditionals are effort
+#probably the only one i'll use regardless of his status, conditionals are effort
 {LoadMidRight][LoadVedge]
 [LoadNearLeft][LoadVerge]
 [LoadFarLeft][Load][Ersatz][0x01]
@@ -111,8 +111,8 @@ Hold it.[A][X]
 
 ## Ch26Opening5
 {LoadMidRight][LoadVedge]
-[MidLeft][LoadMystery]
-//The amount of missing portraits here is kind of astounding.
+[Invert][MidLeft][LoadMystery]
+#The amount of missing portraits here is kind of astounding.
 Kehkehkeh... I am Infernos...[N]
 I am... your worst nightmare...[AN]
 And I... am the... true heir...[N]
@@ -121,7 +121,7 @@ You... are a mere... pretender.[N]
 An usurper... and you cannot...[AN]
 get away. No... matter... what.[N]
 Do you have... any last words?[AN]
-[MidRight]
+[Invert][MidRight]
 Last words? No, demon. I don't.[N]
 This temple is not my grave.[AN]
 You may consider yourself a[N]
