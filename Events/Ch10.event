@@ -73,16 +73,18 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+Intro(Chapter10Opening)
 LOAD1 0x01 Bad
 ENUN
 LOAD2 0x00 Units
 ENUN
 STAL 10
 FlashCursor(Eirika,72)
-Text(PlaceholderText)
+Text(Chapter10Beginning)
 GotoPrepScreen
 
 EndingScene:
+Text(Chapter10Ending)
 MNCH 11 //Do not change. MNCH shenanigans.
 NoFade
 ENDA

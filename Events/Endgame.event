@@ -114,16 +114,19 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+Intro(Ch30Narration)
 LOAD3 0x1 Units
 ENUN
 LOAD1 0x1 Bad1
 LOAD1 0x1 Bad2
 LOAD1 0x1 Bad3
 ENUN
+Text(Ch30Opening)
 GotoPrepScreen
 ENDA
 
 EndingScene:
+Text(Ch30NormalEnding)
 MNC4 0x0
 NoFade
 ENDA

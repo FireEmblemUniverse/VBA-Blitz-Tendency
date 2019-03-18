@@ -5,7 +5,7 @@
 #Already written in chapter*: As Vedge draws near to the temple, he feels a force pulling him forward and wanders ahead of the party. Dennis (who is back from the dead) appears and gloats that Vedge has fallen into his trap before unveiling a dragon zombie. Inferos, a demonic version of Vedge, suddenly appears, kills Dennis, and teleports Vedge and himself into the middle of the temple. Walls appear to block Vedge's escape, but Vedge has an edgy moment and his willpower causes the walls to crack, enabling the rest of the party to come to his rescue if he is not strong enough to defeat the boss.
 #Already written end of chapter*: Vedge declares that there can be only one Vedge in this world and the party exits the lava cave.
 
-## Ch26Opening
+## Ch26Opening1
 {LoadMidRight][LoadVedge]
 [LoadNearLeft][LoadVerge]
 Sire, there seems to be two paths.[N]
@@ -81,8 +81,11 @@ and explore it thoroughly.[N]
 It's just so intriguing...[AN]
 [MidLeft][LoadFace][Dennis][0x01]
 Ahahaha... You have fallen[N]
-right into my trap![AN]
-[MidRight]
+right into my trap![AN][X]
+
+## Ch26Opening4
+[MidLeft][LoadFace][Dennis][0x01]
+{LoadMidRight][LoadVedge]
 Dennis?! I thought you were[N]
 dead! How are you still alive?![AN]
 [MidLeft]
@@ -95,7 +98,7 @@ you out. You're on your[N]
 own, Vedge... Now meet[AN]
 my pet. Draco, come![A][X]
 
-## Ch26Opening4
+## Ch26Opening5
 {LoadMidRight][LoadVedge]
 [MidLeft][LoadFace][Dennis][0x01]
 He's hungry, you know.[N]
@@ -109,7 +112,7 @@ Ahh. I'm so scared. Help.[AN]
 [FarFarLeft][Invert]
 Hold it.[A][X]
 
-## Ch26Opening5
+## Ch26Opening6
 {LoadMidRight][LoadVedge]
 [Invert][MidLeft][LoadMystery]
 #The amount of missing portraits here is kind of astounding.
@@ -120,8 +123,11 @@ to the divine... Blitz of Aja![AN]
 You... are a mere... pretender.[N]
 An usurper... and you cannot...[AN]
 get away. No... matter... what.[N]
-Do you have... any last words?[AN]
-[Invert][MidRight]
+Do you have... any last words?[AN][X]
+
+## Ch26Opening7
+[MidLeft][LoadMystery]
+[LoadMidRight][LoadVedge]
 Last words? No, demon. I don't.[N]
 This temple is not my grave.[AN]
 You may consider yourself a[N]

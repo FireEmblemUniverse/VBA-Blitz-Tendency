@@ -193,7 +193,7 @@ must have already evacuated.[a][X]
 ## Ch28Ending
 [MidRight][LoadVedge]
 [MidLeft][LoadMystery]
-//Babby's mug isn't in game yet
+#Babby's mug isn't in game yet
 So you made it.[a]
 [MidRight]
 My Lord. I thank[n]

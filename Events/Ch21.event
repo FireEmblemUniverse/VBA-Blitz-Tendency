@@ -138,9 +138,11 @@ UNIT Vigarde EphraimMasterLord 0x0 Level(20, Enemy, 0) [0,2] 0x00 0x00 0x0 0x00 
 UNIT
 
 BeginningScene:
+Intro(Ch21Narration)
 LOAD1 0x1 Bad
 LOAD1 0x1 Bad2
 ENUN
+Text(Ch21Opening)
 GotoPrepScreen
 
 GetDonna:
@@ -150,6 +152,7 @@ NoFade
 ENDA
 
 EndingScene:
+Text(Ch21Ending)
 MNC2 22
 NoFade
 ENDA

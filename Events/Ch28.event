@@ -74,7 +74,7 @@ END_MAIN
 ALIGN 4
 
 BeginningScene:
-
+Intro(Ch28Narration)
 LOAD1 0x1 MetalGear
 ENUN
 Text(PlaceholderText)
@@ -88,11 +88,11 @@ ENUN
 Text(PlaceholderText)
 LOAD1 0x1 Units
 ENUN
-Text(PlaceholderText)
+Text(Ch28Opening)
 GotoPrepScreen
 
 EndingScene:
-Text(PlaceholderText)
+Text(Ch28Ending)
 CHECK_EXISTS KojimaNPC
 BEQ  0x1 0xC 0x0
 	TurnNPC(KojimaNPC)
@@ -108,19 +108,19 @@ Text(PlaceholderText)
 ENDA
 
 SilverAxeVillage:
-Text(PlaceholderText)
+Text(Ch28SouthVillage)
 SVAL 0x3 SilverAxe
 GIVEITEMTO 0xFFFF
 ENDA
 
 ChannelingXavier:
-Text(PlaceholderText)
+Text(Ch28NorthVillage)
 LOAD1 0x01 XavierPeople
 REMA
 ENDA
 
 KojimaGet:
-Text(PlaceholderText)
+Text(Ch28RecruitingKojima)
 TurnAlly(Kojima)
 TurnNPC(KojimaNPC)
 TurnEnemy(SakaguchiNPC)
@@ -128,7 +128,7 @@ TurnEnemy(IgaNPC)
 ENDA
 
 SakaguchiGet:
-Text(PlaceholderText)
+Text(Ch28RecruitingSakaguchi)
 TurnAlly(Sakaguchi)
 TurnEnemy(KojimaNPC)
 TurnNPC(SakaguchiNPC)
@@ -136,7 +136,7 @@ TurnEnemy(IgaNPC)
 ENDA
 
 IgaGet:
-Text(PlaceholderText)
+Text(Ch28RecruitingIga)
 TurnAlly(Iga)
 TurnEnemy(KojimaNPC)
 TurnEnemy(SakaguchiNPC)
@@ -149,15 +149,15 @@ TILECHANGE 6
 ENDA
 
 InafuneMadness:
-Text(InafuneCheck1)
+//Text(InafuneCheck1)
 CHECK_EVENTID InafuneEvent1
 BEQ 1 0xC 0x0
 STAL 1
-Text(InafuneCheck2)
+//Text(InafuneCheck2)
 CHECK_EVENTID InafuneEvent2
 BEQ 1 0xC 0x0
 STAL 1
-Text(InafuneCheck3)
+//Text(InafuneCheck3)
 CHECK_EXISTS 0xB
 BEQ 1 0xC 0x0
 CHECK_CLASS 0xB

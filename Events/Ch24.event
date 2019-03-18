@@ -50,6 +50,7 @@ Seize(0,0)
 Seize(0,1)
 Seize(1,0)
 Seize(1,1)
+//Villages are not functional, though they have dialogue written.
 END_MAIN
 
 MiscBasedEvents:
@@ -71,16 +72,19 @@ END_MAIN
 ALIGN 4
 
 BeginningScene:
+	Intro(Chapter24_Opening)
 	LOAD1 0x1 Ch24Enemies
 	ENUN
 	LOAD1 0x1 Ch24Enemies2
 	ENUN
 	LOAD2 0x0 Units
 	ENUN
+	Text(Chapter24_Beginning)
 	NoFade
 GotoPrepScreen
 
 EndingScene:
+	Text(Chapter24_ChapterWon)
 	MNCH Chapter25
 ENDA
 
