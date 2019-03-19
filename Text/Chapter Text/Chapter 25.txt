@@ -14,7 +14,7 @@ gate of the castle, however,[AN]
 they find it open to them,[N]
 without a single guard outside.[AN]
 With no other options,[N]
-they head inside, confused...[A]
+they head inside, confused...[A][X]
 
 ## Ch25Beginning
 [OpenFarLeft][LoadVerge][OpenLeft][LoadVedge]

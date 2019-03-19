@@ -58,7 +58,7 @@ ALIGN 4
 
 BeginningScene26:
 Text(Ch26Opening1)
-Text(Ch26Opening2ErstazAlive)
+Text(Ch26Opening2ErsatzAlive)
 //Conditionals are effort
 ENUF 0x14
 MUSC 0x49 //lava boiling

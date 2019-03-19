@@ -164,7 +164,7 @@ CHECK_CLASS 0xB
 SETVAL 0x4 FalcoKnight
 BNE 1 0xC 0x4
 STAL 1
-Text(InafuneGet)
+Text(InafuneRecruited)
 TurnAlly(Inafune)
 CHECK_EXISTS KojimaNPC
 BEQ 0x2 0xC 0x0

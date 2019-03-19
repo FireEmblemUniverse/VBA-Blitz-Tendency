@@ -2,26 +2,26 @@
 [OpenMidLeft][LoadFace][CurrentPortrait]
 Raising the bridge.[A][X]
 
-//## InafuneCheck1
-//[MidLeft][LoadFace][0x64][0x01]
-//Attempting Inafune recruitment![N]
-//Check 1![A][X]
-//
-//## InafuneCheck2
-//[MidLeft][LoadFace][0x64][0x01]
-//Check 1 successful![N]
-//Check 2![A][X]
-//
-//## InafuneCheck3
-//[MidLeft][LoadFace][0x64][0x01]
-//Check 2 sucessful![N]
-//Check 3![A][X]
-//
-//## InafuneGet
-//[MidLeft][LoadFace][0x64][0x01]
-//Check 3 sucessful! Congratulations![N]
-//You have managed to recruit Inafune![A][X]
-//
+## InafuneCheck1
+[MidLeft][LoadFace][0x64][0x01]
+Attempting Inafune recruitment![N]
+Check 1![A][X]
+
+## InafuneCheck2
+[MidLeft][LoadFace][0x64][0x01]
+Check 1 successful![N]
+Check 2![A][X]
+
+## InafuneCheck3
+[MidLeft][LoadFace][0x64][0x01]
+Check 2 sucessful![N]
+Check 3![A][X]
+
+## InafuneRecruited
+[MidLeft][LoadFace][0x64][0x01]
+Check 3 sucessful! Congratulations![N]
+You have managed to recruit Inafune![A][X]
+
 ## InafuneFailed
 [MidLeft][LoadFace][0x64][0x01]
 You do not get to recruit Inafune.[n]
@@ -55,7 +55,7 @@ Can Vedge win?[an][X]
 
 ## Ch28Opening
 [FarLeft][LoadNull]
-[NearLeft][LoadVerge]
+[Left][LoadVerge]
 [MidRight][LoadVedge]
 The unnamed capital...[an]
 I'm coming, mother.[n]
@@ -67,7 +67,7 @@ castle is completely surrounded[n]
 by the Lords of Light and Shadow,[an]
 the castle itself is under the[a]
 control of the Crusader God Babby.[an]
-[NearLeft]
+[Left]
 It is? 
 Don't tell me we have to fight[n]
 one of the Crusader Gods?![an]
@@ -113,7 +113,7 @@ Father![a]
 [MidLeft]
 Final Fantasy! You're safe![n]
 Now I can join Vedge's army,[an]
-but... hmm… I doubt the[n]
+but... hmm... I doubt the[n]
 others will join even if[an]
 their kids are saved for[n]
 balancing reasons.[an][X]
@@ -125,7 +125,7 @@ Father![a]
 [MidLeft]
 Metal Gear! How many times have[n]
 I told you! I'm tired of working[an]
-on you! You don’t have to be my[n]
+on you! You don't have to be my[n]
 child anymore! Ugh. I guess I'll[an]
 join Vedge's army now. Not like[n]
 I have anything else to do.[a][X]
@@ -138,7 +138,7 @@ Father![a]
 Bloodstained! It is you![n]
 Now that you are safe,[an]
 I may join Lord Vedge.[n]
-It’s a shame we cannot[an]
+It's a shame we cannot[an]
 save the others.[an][X]
 
 ## Ch28SouthVillage

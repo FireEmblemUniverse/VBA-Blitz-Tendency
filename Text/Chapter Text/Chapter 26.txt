@@ -1,13 +1,6 @@
-#Chapter 26 (Alusq)
-#There was never any actual script.
-#There are notes, so I'll	 just make something up using them.
-#The party has two roads ahead of them: one through a pleasant meadow and the other through a cave system full of lava with a foreboding temple inside it. Ersatz suddenly appears and asks to lead the party through the lava cave because the meadow is an obvious trap. (If Ersatz is not alive, Vedge goes through the meadow only for the entire party to sink in quicksand and fall into the lava cave) Vedge agrees.
-#Already written in chapter*: As Vedge draws near to the temple, he feels a force pulling him forward and wanders ahead of the party. Dennis (who is back from the dead) appears and gloats that Vedge has fallen into his trap before unveiling a dragon zombie. Inferos, a demonic version of Vedge, suddenly appears, kills Dennis, and teleports Vedge and himself into the middle of the temple. Walls appear to block Vedge's escape, but Vedge has an edgy moment and his willpower causes the walls to crack, enabling the rest of the party to come to his rescue if he is not strong enough to defeat the boss.
-#Already written end of chapter*: Vedge declares that there can be only one Vedge in this world and the party exits the lava cave.
-
 ## Ch26Opening1
-{LoadMidRight][LoadVedge]
-[LoadNearLeft][LoadVerge]
+{OpenMidRight][LoadVedge]
+[OpenLeft][LoadVerge]
 Sire, there seems to be two paths.[N]
 We could take a nice relaxing[AN]
 walk through the the meadows,[N]
@@ -31,9 +24,9 @@ fields. It will help morale.[AN][X]
 
 ## Ch26Opening2ErsatzAlive
 #probably the only one i'll use regardless of his status, conditionals are effort
-{LoadMidRight][LoadVedge]
-[LoadNearLeft][LoadVerge]
-[LoadFarLeft][Load][Ersatz][0x01]
+{OpenMidRight][LoadVedge]
+[OpenLeft][LoadVerge]
+[OpenFarLeft][LoadFace][Ersatz][0x01]
 Milord! That pleasant meadow...[N]
 is nothing by a sinister trap![A]
 [MidRight]
@@ -68,13 +61,13 @@ Very well. Men! We march[N]
 through this cave![AN][X]
 
 ## Ch26Opening2ErsatzDead
-[LoadNearLeft][LoadVerge]
-{LoadMidRight][LoadVedge]
+[OpenLeft][LoadVerge]
+{OpenMidRight][LoadVedge]
 Across the plains...[N]
 Oh no![MoveMidRight] Quicksand! Ahh![AN][X]
 
 ## Ch26Opening3
-{LoadMidRight][LoadVedge]
+{OpenMidRight][LoadVedge]
 There's something about this[N]
 cave... I just have to go[AN]
 and explore it thoroughly.[N]
@@ -127,7 +120,7 @@ Do you have... any last words?[AN][X]
 
 ## Ch26Opening7
 [MidLeft][LoadMystery]
-[LoadMidRight][LoadVedge]
+[OpenMidRight][LoadVedge]
 Last words? No, demon. I don't.[N]
 This temple is not my grave.[AN]
 You may consider yourself a[N]

@@ -13,18 +13,18 @@ falls...[an][X]
 [MidRight][LoadVedge]
 Everyone! The next wave of[N]
 their assault is incoming![AN]
-Let’s move![A]
+Let's move![A]
 [MidLeft]
 My friend, we are cut off[n]
 from the Crusader God![A][X]
 
 ## Ch29Opening2
-[NearLeft][LoadMystery]
+[Left][LoadMystery]
 *Is adorable amidst the chaos*[A][X]
 
 ## Ch29Opening3
 [MidRight][LoadVedge]
-No! If he dies, it’s all over...[an]
+No! If he dies, it's all over...[an]
 Protect Babby, as well as[n]
 the castle, at all costs![a][X]
 
@@ -48,4 +48,4 @@ This text is a placeholder![A][X]
 They just keep coming![n]
 ...Screw it! Lead them[an]
 to the Forbidden Peak![n]
-We’ll settle this there.[a][X]
+We'll settle this there.[a][X]

@@ -87,7 +87,7 @@ Kill... your sister?[N]
 [OML]
 In the state she is[N]
 currently in, if you [N]
-don’t, you are already dead.[N][X]
+don't, you are already dead.[N][X]
 
 
 ## Ch11Ending

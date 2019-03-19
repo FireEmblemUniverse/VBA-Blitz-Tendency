@@ -1,7 +1,7 @@
 ## Ch20Ending
 [MidRight][LoadVedge]
 [MidLeft][LoadMystery]
-At last, you’ve made it to[N]
+At last, you've made it to[N]
 the top of the tower.[AN]
 [MidRight]
 Indeed.[N]
