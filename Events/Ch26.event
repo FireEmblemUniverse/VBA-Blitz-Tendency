@@ -57,6 +57,9 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene26:
+Text(Ch26Opening1)
+Text(Ch26Opening2ErsatzAlive)
+//Conditionals are effort
 ENUF 0x14
 MUSC 0x49 //lava boiling
 TILECHANGE 0x2
@@ -77,11 +80,11 @@ CAM1 [17,13]
 FADU 10
 //FlashCursor(Vedge,50)
 STAL 20
-//Text(ChTwentysixOpening1)
+Text(Ch26Opening3)
 //MOVE 0x10 Vedge [12,17]
 FlashCursor(Dennis,50)
 MUSC 0x26 //Raid
-//Text(ChTwentysixOpening2)
+Text(Ch26Opening4)
 STAL 10
 MUSC 0x00
 STAL 40
@@ -99,7 +102,7 @@ MOVE 0x5 0xb4 [12,16]
 TILEREVERSE 0x4
 ENUN
 STAL 10
-//Text(ChTwentysixOpening3)
+Text(Ch26Opening5)
 STAL 30
 MUSC 0x00
 FADI 100
@@ -136,7 +139,7 @@ LABEL 0x9
 CAM1 [12,7]
 MUSC 0x47 //wind ambience
 FADU 100
-//Text(ChTwentysixHellWelcome)
+Text(Ch26Opening6)
 FlashCursor(Vedge,50)
 
 MUSC 0x2f //Lights in the Dark; possibly change to His World if I'm not lazy
@@ -149,7 +152,7 @@ STAL 20
 EARTHQUAKE_END
 MOVE 0x10 0x1 [12,9]
 FlashCursor(Inferos,50)
-//Text(ChTwentysixHellAngry)
+Text(Ch26Opening7)
 
 STAL 30
 GotoPrepScreen
@@ -157,7 +160,7 @@ ENDA
 
 EndingScene26:
 MUSC 0x32 //victory
-
+Text(Ch26Ending)
 FADI 5
 MNCH 27
 ENDA

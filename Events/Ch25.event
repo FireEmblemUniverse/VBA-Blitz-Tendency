@@ -106,12 +106,13 @@ TerminateEscapePoints
 
 BeginningScene:
 //LOAD2 0x0 Units
+Intro(Ch25Opening)
 CHECK_ALIVE 0x15 //checks if mariya is alive
 BEQ 0x1400 0xC 0x0 //if not alive, send to label 1400
-Text(Castle_Hall_3,PlaceholderText)
+Text(Castle_Hall_3,Ch25Beginning)
 GOTO 0x3531
 LABEL 0x1400
-Text(Castle_Hall_3,PlaceholderText)
+Text(Castle_Hall_3,Ch25Beginning)
 LABEL 0x3531
 LOAD1 0x0 Units
 ENUN
@@ -121,11 +122,12 @@ LOAD1 0x1 Enemies2
 ENUN
 LOAD2 0x1 AlliedUnits
 ENUN
-Text(Castle_Hall_4,PlaceholderText)
+//Text(Castle_Hall_4,PlaceholderText)
 GotoPrepScreen
 
 EndingScene:
 Text(Castle_Hall_3,PlaceholderText)
+//Ending not written
 MNC2 0x19
 ENDA
 
@@ -136,7 +138,7 @@ CAM1 MichealP
 CUMO MichealP
 STAL 60
 CURE
-Text(PlaceholderText)
+Text(Ch25Turn1Event)
 FADU 16
 CALL 0x591F40
 SVAL 0x3 BlueGem

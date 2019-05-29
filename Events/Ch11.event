@@ -91,11 +91,13 @@ END_MAIN //ENDTRAP caused a freeze and END_MAIN worked
 //so don't tell me to change this to ENDTRAP because changing it to END_MAIN stopped the hardlock I was having
 
 SLu_BeginningScene:
+Intro(Ch11Narration)
 VCWF 0 //make absolutely sure no fog
 LOAD2 0x1 SLu_Units
 ENUN
 LOAD1 0x1 SLu_Enemies
 ENUN
+Text(Ch11Opening)
 GotoPrepScreen
 ENDA
 
@@ -256,7 +258,7 @@ ENDB
 
 ALIGN 4
 SLu_EndingScene:
-Text(PlaceholderText)
+Text(Ch11Ending)
 MNC2 12
 ENDA
 

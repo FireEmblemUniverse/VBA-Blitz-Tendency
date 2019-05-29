@@ -100,6 +100,7 @@ UNIT
 
 MakeBabbyAlly:
 TurnAlly(Babby)
+Text(Ch29RecruitingBabby)
 NoFade
 ENDA
 
@@ -138,24 +139,31 @@ ALIGN 4
 // Events
 
 BeginningScene:
+Intro(Ch29Narration)
 LOAD1 0x1 Bad1
 LOAD1 0x1 Bad2
 LOAD1 0x1 Bad3
 LOAD1 0x1 Bad4
 LOAD1 0x1 BabbyUnit
 ENUN
+Text(Ch29Opening1)
+//Pan camera to Babby
+Text(Ch29Opening2)
+//And pan back
+Text(Ch29Opening3)
 GotoPrepScreen
 
 EndingScene:
+Text(Ch29Ending)
 MNC2 0x23
 NoFade
 ENDA
 
 LeftVillage:
-VillageEventItem(PlaceholderText, Village, Dracoshield)
+VillageEventItem(Ch29VillageText, Village, Dracoshield)
 
 RightVillage:
-VillageEventItem(PlaceholderText, Village, Fortify)
+VillageEventItem(Ch29VillageText, Village, Fortify)
 
 // Shop Data
 ArmoryList:
