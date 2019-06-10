@@ -24,18 +24,18 @@ Erstaz: Good
 Ch9 Anna: Portrait good, description wrong
 Murat: Uses Ephraim portrait
 Luut: Good
-Jet: Entirely Kyle from name to portrait
+Jet: Portrait good, name/desc Kyle.
 Mealy: Uses Amelia's portrait
 Splenda: Uses Artur's portrait
 Zane: Uses Gerik's portrait. Is a skeleton.
 Benny: Uses Rennac's portrait. Is a dog.
 Mariya: Good.
 Nichol: Good.
-Adolgi: Uses Zigludo's portrait. Some Ys reference I don't get.
+Adolgi: Good
 Seibah: Good. Fate reference.
 Rinslet: Good. Probably another Fate reference.
 Ch21 Recruit: Dozla name, Boo portrait.
-Sabin: Incorrect frames.
+Sabin: Good
 If there's a Ch23 recruit, the chapter's too bugged to get them.
 Ch24 villages are not functional. 
 Michael P: Good.
@@ -52,11 +52,11 @@ Babby: Uses Syrene's name and portrait.
 BOSSES:
 Ch0 Vergein: Too many colours, transparency issues
 Ch1 Jazzak: Good
-Ch2 Cortez: Uses FE6 Karel portrait as placeholder
+Ch2 Cortez: Too many colours, transparency issues
 Ch3 Chien: Uses Hecwood's portrait
 Ch4 Hecwood: Good
 Ch4 Elitor: Good
-Ch5 Boss: Named Saar, uses Dennis's portrait
+Ch5 Grudge: Named Saar, uses Dennis's portrait
 Ch6 Lash: Lacks portrait. Intended to be AW2 Lash.
 Ch7 Edgelard: No portrait. References that FE16 lord.
 Ch8 Dennis: Lacks in game name, portrait is good
@@ -76,7 +76,7 @@ Ch19 Medea: Lacks portrait. A Fate character.
 Ch20 Claire: Uses Cormag portrait. Considering Ch19/20, likely a Fate reference.
 Ch20 Kamito: Good. I don't think it's the Sword Art Online guy.
 Ch21 Boss: Named Zonta. Iga portrait.
-Ch22 Kefka: Uses Lyon's portrait.
+Ch22 Kefka: Good
 Ch23 lacks a boss entirely. Throne is empty.
 Ch24 lacks a boss entirely. Some random enemy can be made into one.
 Ch25 Mike: Lacks portrait.

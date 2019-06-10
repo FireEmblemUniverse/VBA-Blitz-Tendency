@@ -103,28 +103,35 @@ FE3AnnaMug:
 #incext PortraitFormatter "fe3anna.png"
 setMugEntryRepointed(FE3AnnaPortrait,FE3AnnaMug,6,6,2,5)
 
+#define LuutPortrait 0x16
 LuutMug:
 #incext PortraitFormatter "lu-by-lenh.png"
 setMugEntryRepointed(0x16,LuutMug,3,6,3,4)
 
+#define MariyaPortrait 0x1C
 Mariya_Mug:
 #incext PortraitFormatter "MariyaMug.png"
 setMugEntryRepointed(0x1C, Mariya_Mug, 4, 5, 4, 3)
 
+#define NicholPortrait 0x1E
 NicholMug:
 #incext PortraitFormatter "Nichol.png"
 setMugEntryRepointed(0x1E, NicholMug, 3, 5, 3, 3)
 
+#define SabinPortrait 0x20
 SabinMug:
 #incext PortraitFormatter "Sabin.png"
-setMugEntryRepointed(0x20,SabinMug,2,6,2,4)
+setMugEntryRepointed(0x20,SabinMug,4,8,3,6)
+setUpshift(SabinPortrait)
 
 ALIGN 4
+#define SaberPortrait 0x21
 Seibah_Mug:
 #incext PortraitFormatter "Seibah.png"
 setMugEntryRepointed(0x21, Seibah_Mug, 3, 6, 3, 4)
 ALIGN 4
 
+#define RinsletPortrait 0x22
 Rinslet_Mug:
 #incext PortraitFormatter "Rinslet.png"
 setMugEntryRepointed(0x22, Rinslet_Mug, 2, 6, 3, 4)
@@ -135,6 +142,7 @@ Boo_Mug:
 #incext PortraitFormatter "Boo.png"
 setMugEntryRepointed(BooPortrait, Boo_Mug, 3, 5, 3, 3)
 
+#define MichaelPPortrait 0x26
 MichealP_Mug:
 #incext PortraitFormatter "MichealPMug.png"
 setMugEntryRepointed(0x26, MichealP_Mug, 4, 5, 4, 3)
@@ -142,8 +150,9 @@ setMugEntryRepointed(0x26, MichealP_Mug, 4, 5, 4, 3)
 #define AdolgiPortrait 0x27
 AdolgiMug:
 #incext PortraitFormatter "Adolgi.png"
-setMugEntryRepointed(AdolgiPortrait,AdolgiMug,2,4,2,2)
+setMugEntryRepointed(AdolgiPortrait,AdolgiMug,2,5,2,3)
 
+#define ErsatzPortrait 0x29
 ErsatzMug:
 #incext PortraitFormatter "Ersatz.png"
 setMugEntryRepointed(0x29,ErsatzMug,2,6,2,4)
@@ -194,7 +203,8 @@ Kamito_Mug:
 #incext PortraitFormatter "Kamito.png"
 setMugEntryRepointed(KamitoPortrait, Kamito_Mug, 3, 5, 3, 3)
 
-#define KeftaPortrait 0x39
+#define KefkaPortrait 0x39
+#define KeftaPortrait KefkaPortrait
 KefkaMug:
 #incext PortraitFormatter "Kefka.png"
 setMugEntryRepointed(KeftaPortrait,KefkaMug,3,8,4,6)
@@ -211,17 +221,24 @@ Claire_Mug:
 setMugEntryRepointed(ClairePortrait, Claire_Mug, 4, 6, 4, 4)
 
 #define MedeaPortrait 0x41
+//Just Idoun. Should probably get a new one.
 Medea_Mug:
 #incext PortraitFormatter "Medea.png"
 setMugEntryRepointed(MedeaPortrait, Medea_Mug, 2, 6, 2, 4)
 
 #define AssassinServantPortrait 0x42
+//Just Karel. Should probably get a new one.
 AssassinServant_Mug:
 #incext PortraitFormatter "AssassinServant.png"
 setMugEntryRepointed(AssassinServantPortrait, AssassinServant_Mug, 2, 5, 3, 3)
 
 #define WickyPortrait 0x43
 //Have yet to insert it.
+
+#define JetPortrait 0xAE
+JetMug:
+#incext PortraitFormatter "Jet.png"
+setMugEntryRepointed(JetPortrait, JetMug, 3, 5, 3, 3)
 
 // VBA 1 Mugs
 // Use all the "Eyes closed" portraits of FE8 before freespace mugs
@@ -233,13 +250,13 @@ setMugEntryRepointed(AssassinServantPortrait, AssassinServant_Mug, 2, 5, 3, 3)
 #define EvilFlorinaPortrait 0x17
 #define TikiPortrait 0x1D
 #define BjornPortrait 0x1F
-#define ZigludoPortrait 0x27
-#define AnnaRoguePortrait 0x64 //Use GBA Anna
+#define ZigludoPortrait 0xAD //clashed with Adolgi, moving into repointed space
+#define AnnaRoguePortrait 0x64 //Use GBA Anna - VBA1 used FE6 Anna here
 #define EevsterPortrait 0x28
 #define SamsonPortrait 0x2D
 #define PrinePortrait 0x2E
 #define CeliciaPortrait 0x2F
-#define NikitaPortrait 0x45 //Orson
+#define NikitaPortrait 0x45 //Orson - import VBA portrait
 #define AnnaMyrmPortrait 0x64 //Also GBA Anna
 #define DootPortrait 0x50
 #define EdgePortrait 0x51
@@ -252,12 +269,12 @@ setMugEntryRepointed(AssassinServantPortrait, AssassinServant_Mug, 2, 5, 3, 3)
 #define AnnaWyvernPortrait 0x57
 #define TamPortrait 0x6B
 #define BedePortrait 0x6C
-#define EdgeworthPortrait 0x6D
+#define EdgeworthPortrait 0x6D //if only we could give him a real portrait /s
 #define MarkPortrait 0x6E
 #define RosheaPortrait 0x6F
-#define BobPortrait 0x24 // Rennac. May overlap with one of Teq's characters.
+#define BobPortrait 0x24 // Rennac. May overlap with one of Teq's characters. Portrait import required.
 #define KagaPortrait 0x70
-#define LeeroyPortrait 0x04 // Seth
+#define LeeroyPortrait 0x04 // Seth - import VBA portrait
 #define VoidPortrait 0x71
 
 NotArch_Mug:
