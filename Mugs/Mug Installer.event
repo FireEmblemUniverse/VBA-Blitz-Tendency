@@ -235,33 +235,39 @@ setMugEntryRepointed(AssassinServantPortrait, AssassinServant_Mug, 2, 5, 3, 3)
 #define WickyPortrait 0x43
 //Have yet to insert it.
 
-#define JetPortrait 0xAE
+//#define JetPortrait 0xAE
+#define JetPortrait 0x01
 JetMug:
 #incext PortraitFormatter "Jet.png"
 setMugEntryRepointed(JetPortrait, JetMug, 3, 5, 3, 3)
 
-#define DonnaPortrait 0xAF
+//#define DonnaPortrait 0xAF
+#define DonnaPortrait 0x01
 DonnaMug:
 #incext PortraitFormatter "Donna.png"
 setMugEntryRepointed(DonnaPortrait, DonnaMug, 2, 6, 3, 4)
 
-#define BabbyPortrait 0xB0
+//#define BabbyPortrait 0xB0
+#define BabbyPortrait 0x01
 BabbyMug:
 #incext PortraitFormatter "Babby.png"
 setMugEntryRepointed(BabbyPortrait, BabbyMug, 3, 7, 3, 5)
 setUpshift(BabbyPortrait)
 
-#define CameronPortrait 0xB1
+//#define CameronPortrait 0xB1
+#define CameronPortrait 0x01
 CameronMug:
 #incext PortraitFormatter "Cameron.png"
 setMugEntryRepointed(CameronPortrait, CameronMug, 3, 5, 3, 3)
 
-#define BojoPortrait 0xB2
+//#define BojoPortrait 0xB2
+#define BojoPortrait 0x01
 BojoMug:
 #incext PortraitFormatter "Bojo.png"
 setMugEntryRepointed(BojoPortrait, BojoMug, 3, 6, 3, 4)
 
-#define GrudgePortrait 0xB3
+//#define GrudgePortrait 0xB3
+#define GrudgePortrait 0x01
 GrudgeMug:
 #incext PortraitFormatter "Grudge.png"
 setMugEntryRepointed(GrudgePortrait, GrudgeMug, 2, 4, 2, 2)
@@ -277,7 +283,8 @@ setMugEntryRepointed(GrudgePortrait, GrudgeMug, 2, 4, 2, 2)
 #define EvilFlorinaPortrait 0x17
 #define TikiPortrait 0x1D
 #define BjornPortrait 0x1F
-#define ZigludoPortrait 0xAD //clashed with Adolgi, moving into repointed space
+//#define ZigludoPortrait 0xAD //clashed with Adolgi, moving into repointed space
+#define ZigludoPortrait 0x01 //removing all repointed space for testing
 #define AnnaRoguePortrait 0x64 //Use GBA Anna - VBA1 used FE6 Anna here
 #define EevsterPortrait 0x28
 #define SamsonPortrait 0x2D
