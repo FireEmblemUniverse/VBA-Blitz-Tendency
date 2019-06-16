@@ -34,19 +34,19 @@ Nichol: Good.
 Adolgi: Good
 Seibah: Good. Fate reference.
 Rinslet: Good. Probably another Fate reference.
-Ch21 Recruit: Dozla name, Boo portrait.
+Donna: Portrait good. Dozla name.
 Sabin: Good
 If there's a Ch23 recruit, the chapter's too bugged to get them.
 Ch24 villages are not functional. 
 Michael P: Good.
 Ch26 does not have a recruit.
-Ch27 Recruit 1: Tana name and portrait. Might not actually be intended.
+Ch27 Recruit 1: Tana name and portrait. Might be meant to be in Ch24?
 Deuxnids: Good.
 Iga: Good.
 Kojima: Uses Lyon portrait.
 Sakaguchi: Uses Orson portrait.
 Inafune: Uses Joshua portrait.
-Babby: Uses Syrene's name and portrait.
+Babby: Portrait good. Uses Syrene's name.
 
 
 BOSSES:
@@ -56,15 +56,15 @@ Ch2 Cortez: Too many colours, transparency issues
 Ch3 Chien: Uses Hecwood's portrait
 Ch4 Hecwood: Good
 Ch4 Elitor: Good
-Ch5 Grudge: Named Saar, uses Dennis's portrait
+Ch5 Grudge: Portrait good. Named Saar.
 Ch6 Lash: Lacks portrait. Intended to be AW2 Lash.
 Ch7 Edgelard: No portrait. References that FE16 lord.
 Ch8 Dennis: Lacks in game name, portrait is good
 Ch9 Faust: Good
 Ch10 Boss: Entirely vanilla Pablo
 Ch11 Sweet Boss: Lacks portrait. Ideally, a sorcerer portrait, judging by the description.
-Ch12 Cameron: Lacks name and portrait. Ch12 hero.
-Ch12 Bojo: Lacks name and portrait. Ch12 druid.
+Ch12 Cameron: Lacks name. Ch12 hero.
+Ch12 Bojo: Lacks name. Ch12 druid.
 Ch13 Darkman Man: Name overflows. Gheb portrait.
 Ch14 Wicky: Uses Caellach's portrait
 Ch15: Benny is recruitable.
@@ -80,7 +80,7 @@ Ch22 Kefka: Good
 Ch23 lacks a boss entirely. Throne is empty.
 Ch24 lacks a boss entirely. Some random enemy can be made into one.
 Ch25 Mike: Lacks portrait.
-Ch26 Infernos: Lacks name and portrait.
+Ch26 Inferos: Lacks name and portrait.
 Ch27 Sandy: Dragon Zombie. No portrait required.
 Ch28: Bosses are recruitable.
 Ch29 Boss: Nameless dragon. Does not strictly require a portrait.

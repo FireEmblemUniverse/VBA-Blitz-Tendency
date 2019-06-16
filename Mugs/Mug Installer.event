@@ -240,6 +240,33 @@ JetMug:
 #incext PortraitFormatter "Jet.png"
 setMugEntryRepointed(JetPortrait, JetMug, 3, 5, 3, 3)
 
+#define DonnaPortrait 0xAF
+DonnaMug:
+#incext PortraitFormatter "Donna.png"
+setMugEntryRepointed(DonnaPortrait, DonnaMug, 2, 6, 3, 4)
+
+#define BabbyPortrait 0xB0
+BabbyMug:
+#incext PortraitFormatter "Babby.png"
+setMugEntryRepointed(BabbyPortrait, BabbyMug, 3, 7, 3, 5)
+setUpshift(BabbyPortrait)
+
+#define CameronPortrait 0xB1
+CameronMug:
+#incext PortraitFormatter "Cameron.png"
+setMugEntryRepointed(CameronPortrait, CameronMug, 3, 5, 3, 3)
+
+#define BojoPortrait 0xB2
+BojoMug:
+#incext PortraitFormatter "Bojo.png"
+setMugEntryRepointed(BojoPortrait, BojoMug, 3, 6, 3, 4)
+
+#define GrudgePortrait 0xB3
+GrudgeMug:
+#incext PortraitFormatter "Grudge.png"
+setMugEntryRepointed(GrudgePortrait, GrudgeMug, 2, 4, 2, 2)
+
+
 // VBA 1 Mugs
 // Use all the "Eyes closed" portraits of FE8 before freespace mugs
 #define NotArchPortrait 0x3
@@ -385,3 +412,15 @@ setMugEntryRepointed(KagaPortrait, Kaga_Mug, 3, 5, 3, 3)
 Void_Mug:
 #incext PortraitFormatter "Void.png"
 setMugEntryRepointed(VoidPortrait, Void_Mug, 2, 5, 3, 3)
+
+Bob_Mug:
+#incext PortraitFormatter "Bob.png"
+setMugEntryRepointed(BobPortrait, Bob_Mug, 2, 5, 2, 3)
+
+Leeroy_Mug:
+#incext PortraitFormatter "Leeroy.png"
+setMugEntryRepointed(LeeroyPortrait, Leeroy_Mug, 2, 5, 3, 3)
+
+Nikita_Mug:
+#incext PortraitFormatter "Nikita.png"
+setMugEntryRepointed(NikitaPortrait, Nikita_Mug, 2, 5, 3, 3)
