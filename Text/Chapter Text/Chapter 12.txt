@@ -14,8 +14,7 @@ However, the inhabitants of[N]
 this fort don't go easy on[AN]
 anyone who challenge it.[N]
 It's life or death.[A]
-[..v...][LoadMystery]
-#Cameron's a question-mark man
+[..v...][LoadCameron]
 Hey, I'm Cameron. I own[N]
 this fort. Wanna fight?[A]
 [...v..]
@@ -35,8 +34,7 @@ idle activities while a war[A]
 is being waged. The sooner[N]
 we get to the battle, the better.[A]
 
-[v.....][LoadMystery][Invert]
-#Bojo doesn't have a portrait
+[v.....][LoadBojo][Invert]
 ...350 million...[N]
 It's not too late...[AN]
 To save... Bre-[A]
@@ -62,10 +60,7 @@ the fight then.[A][X]
 ## Ch12AfterPrep
 #Put this post battle prep? Break the scene up a bit
 [....v.][LoadVedge]
-[.v....][LoadMystery]
-#Jet's portrait isn't inserted yet.
-
-[.v....]
+[.v....][LoadJet]
 Hold up! Don't forget me![A]
 [....v.]
 Just who might you be?[a]
@@ -89,5 +84,11 @@ this crazy party started![A][X]
 
 ## Ch12Ending
 [....v.][LoadVedge]
-Scene not yet written![N]
-THIS TEXT IS A PLACEHOLDER![A][X]
+We have fought in the Fort[N]
+of Fight. And now, we have[AN]
+won. We have secured a good[N]
+base from where we can search[AN]
+for the Tower of the Mods.[N]
+When this war is over, I can[AN]
+head back here for one of[N]
+Cameron's karaoke nights.[AN][X]
