@@ -43,12 +43,15 @@ END_MAIN
 ALIGN 4
 
 BeginningScene:
+Intro(Ch23Narration)
 LOAD1 0x1 Units
 LOAD1 0x1 Enemies
+Text(Ch23Opening)
 GotoPrepScreen
 ENDA
 
 EndingScene:
+Text(Ch23Ending)
 MNCH 24
 ENDA
 

@@ -4,6 +4,12 @@ EventPointerTable(0x33, ThisChapter)
 
 EscapePointPointerTable(Chapter10, Ch10EscapePoint)
 
+#define FirstFloodID 5
+#define SecondFloodID 4
+#define ThirdFloodID 3
+#define FourthFloodID 6
+#define GangplankID 1
+#define TideID 2
 
 Ch10EscapePoint:
 //EscapePoint(0, 0, MoveUp)
@@ -73,16 +79,18 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+Intro(Chapter10Opening)
 LOAD1 0x01 Bad
 ENUN
 LOAD2 0x00 Units
 ENUN
 STAL 10
 FlashCursor(Eirika,72)
-Text(PlaceholderText)
+Text(Chapter10Beginning)
 GotoPrepScreen
 
 EndingScene:
+Text(Chapter10Ending)
 MNCH 11 //Do not change. MNCH shenanigans.
 NoFade
 ENDA
@@ -100,32 +108,32 @@ UNIT 0x9 EphraimLord Vedge Level(1, Ally, 0) [17,22] 0x00 0x00 0x0 0x00 [SilverL
 UNIT
 
 Bad:
-UNIT Pablo_2 General Pablo_2 Level(2,Enemy,0) [2,1] 0x0 0x0 0x0 0x0 [LightBrand,SteelLance,Elixir,0] NeverMoveAI
-UNIT 0x94 Thief Pablo_2 Level(9, Enemy, 1) [23,14] DropItem 0x00 0x0 0x00 KillingEdge EnergyRing 0 0 0x6 0x0C 0x0 0x0
-UNIT 0x94 Thief Pablo_2 Level(9, Enemy, 1) [13,13] DropItem 0x00 0x0 0x00 WindSword ChestKey ShortSpear 0 0x06 0x05 0x0 0x0
+UNIT Pablo_2 General Pablo_2 Level(2,Enemy,0) [2,1] 0x0 0x0 0x0 0x0 [LightBrand,SteelLance,Elixir] NeverMoveAI
+UNIT 0x94 Thief Pablo_2 Level(9, Enemy, 1) [23,14] DropItem 0x00 0x0 0x00 [KillingEdge, EnergyRing] [0x6, 0x0C] 0x0 0x0
+UNIT 0x94 Thief Pablo_2 Level(9, Enemy, 1) [13,13] DropItem 0x00 0x0 0x00 [WindSword, ChestKey, ShortSpear] [0x06, 0x05] 0x0 0x0
 UNIT 0x94 Cavalier Pablo_2 Level(11, Enemy, 1) [23,18] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 0x0 0x0
 UNIT 0x94 Fighter Pablo_2 Level(12, Enemy, 1) [23,19] 0x00 0x00 0x0 0x00 [Halberd] NoAI
-UNIT 0x94 Pirate Pablo_2 Level(10, Enemy, 1) [19,16] 0x00 0x00 0x0 0x00 [SilverAxe] NoAI
+UNIT 0x94 Pirate Pablo_2 Level(10, Enemy, 1) [19,16] 0x00 0x00 0x0 0x00 [SteelAxe] NoAI
 UNIT 0x94 Pirate Pablo_2 Level(11, Enemy, 1) [7,19] 0x00 0x00 0x0 0x00 [SteelAxe] NoAI
 UNIT 0x94 Pirate Pablo_2 Level(11, Enemy, 1) [6,22] 0x00 0x00 0x0 0x00 [IronAxe,HandAxe] NoAI
 UNIT 0x94 Mage Pablo_2 Level(11, Enemy, 1) [18,10] DropItem 0x00 0x0 0x00 [Thunder, Elfire] AttackInRangeAI 0x4 0x0
 UNIT 0x94 Monk Pablo_2 Level(11, Enemy, 1) [20,11] 0x00 0x00 0x0 0x00 [Shine] AttackInRangeAI 0x4 0x0
 UNIT 0x94 Mercenary Pablo_2 Level(12, Enemy, 1) [16,8] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 0x4 0x0
 UNIT 0x94 Archer Pablo_2 Level(11, Enemy, 1) [22,10] 0x00 0x00 0x0 0x00 [Longbow,SteelBow] AttackInRangeAI 0x4 0x0
-UNIT 0x94 Mercenary Pablo_2 Level(10, Enemy, 1) [17,1] 0x00 0x00 0x0 0x00 [SilverSword] ChaseOnceApproachedAI 0x4 0x0
-UNIT 0x94 Knight Pablo_2 Level(12, Enemy, 1) [20,2] 0x00 0x00 0x0 0x00 [ShortSpear] ChaseOnceApproachedAI 0x4 0x0
-UNIT 0x94 Mage Pablo_2 Level(12, Enemy, 1) [11,1] 0x00 0x00 0x0 0x00 [Elfire,Elixir] ChaseOnceApproachedAI 0x4 0x0
-UNIT 0x94 Cavalier Pablo_2 Level(11, Enemy, 1) [15,2] 0x00 0x00 0x0 0x00  Armourslayer GoddessIcon 0 0 0x0C 0x03 0x01 0x00
+UNIT 0x94 Mercenary Pablo_2 Level(10, Enemy, 1) [17,1] 0x00 0x00 0x0 0x00 [SteelSword] ChaseOnceApproachedAI 0x4 0x0
+UNIT 0x94 Knight Pablo_2 Level(12, Enemy, 1) [20,2] 0x00 0x00 0x0 0x00 [Javelin] ChaseOnceApproachedAI 0x4 0x0
+UNIT 0x94 Mage Pablo_2 Level(12, Enemy, 1) [11,1] 0x00 0x00 0x0 0x00 [Thunder,Elixir] ChaseOnceApproachedAI 0x4 0x0
+UNIT 0x94 Cavalier Pablo_2 Level(11, Enemy, 1) [15,2] 0x00 0x00 0x0 0x00  [Armourslayer, GoddessIcon] [0x0C, 0x03] 0x01 0x00
 UNIT 0x94 Fighter Pablo_2 Level(12, Enemy, 1) [10,5] 0x00 0x00 0x0 0x00 [SteelAxe,Hammer,0,0] AttackInRangeAI 0x04 0x00
 UNIT 0x95 Hero Pablo_2 Level(1,Enemy,1) [3,4] DropItem 0x00 0x0 0x00 [SteelSword,0,0,0] AttackInRangeAI 0x4 0x0
-UNIT 0x94 Mage 0x95 Level(11, Enemy, 1) [7,3] 0x00 0x00 0x0 0x00 [Elfire,0,0,0] MoveWithLeaderAI 0x4 0x0
-UNIT 0x94 Soldier 0x95 Level(12,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [SilverLance,Vulnerary,0,0] MoveWithLeaderAI 0x3 0x0
+UNIT 0x94 Mage 0x95 Level(11, Enemy, 1) [7,3] 0x00 0x00 0x0 0x00 [Thunder,0,0,0] MoveWithLeaderAI 0x4 0x0
+UNIT 0x94 Soldier 0x95 Level(12,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [SteelLance,Vulnerary,0,0] MoveWithLeaderAI 0x3 0x0
 UNIT 0x94 Priest Pablo_2 Level(15,Enemy,1) [4,0] 0x0 0x0 0x0 0x0 Physic PureWater 0 0 0xE 0x3 0x4 0x0
-UNIT 0x94 WyvernRider 0x95 Level(11,Enemy,1) [0,20] 0x0 0x0 0x0 0x0 [SteelLance,ShortSpear,0,0] MoveWithLeaderAI 0x4 0x0
-UNIT 0x94 WyvernRider 0x95 Level(10,Enemy,1) [0,20] 0x0 0x0 0x0 0x0 [SilverLance,Vulnerary,0,0] MoveWithLeaderAI 0x0 0x0
+UNIT 0x94 WyvernRider 0x95 Level(11,Enemy,1) [0,20] 0x0 0x0 0x0 0x0 [SteelLance,Javelin,0,0] MoveWithLeaderAI 0x4 0x0
+UNIT 0x94 WyvernRider 0x95 Level(10,Enemy,1) [0,20] 0x0 0x0 0x0 0x0 [SteelLance,Vulnerary,0,0] MoveWithLeaderAI 0x0 0x0
 UNIT 0x94 Shaman Pablo_2 Level(12,Enemy,1) [1,1] 0x0 0x0 0x0 0x0 Nosferatu 0 0 0 0x0C 0x03 0x03 0x00
 UNIT 0x94 Mercenary 0x95 Level(11,Enemy,1) [0,11] 0x0 0x0 0x0 0x0 [Lancereaver] MoveWithLeaderAI 0x4 0x0
-UNIT 0x94 Soldier Pablo_2 Level(11,Enemy,1) [5,10] 0x0 0x0 0x0 0x0 [BraveLance] MoveWithLeaderAI 0x4 0x0
+UNIT 0x94 Soldier Pablo_2 Level(11,Enemy,1) [5,10] 0x0 0x0 0x0 0x0 [SilverLance] MoveWithLeaderAI 0x4 0x0
 UNIT 0x94 Fighter 0x95 Level(10,Enemy,1) [1,16] 0x0 0x0 0x0 0x0 SteelAxe Vulnerary 0 0 0x0 0x7 0x3 0x0
 UNIT 0x94 Archer Pablo_2 Level(12,Enemy,1) [10,12] 0x0 0x0 0x0 0x0 [SteelBow] AttackInRangeAI 0x4 0x0
 UNIT 0x94 Fighter Pablo_2 Level(10,Enemy,1) [12,11] 0x0 0x0 0x0 0x0 [Tomahawk] NoAI
@@ -136,10 +144,10 @@ UNIT Ephraim Pirate 0x00 Level(11, Ally, 0) [20,23] 0x00 0x00 0x1 PirateMove [St
 UNIT
 
 RaftSquad:
-UNIT 0x94 Fighter Pablo_2 Level(10,Enemy,1) [11,13] 0x0 0x0 0x1 Tenner0 [SilverAxe] NoAI
+UNIT 0x94 Fighter Pablo_2 Level(10,Enemy,1) [11,13] 0x0 0x0 0x1 Tenner0 [SteelAxe] NoAI
 UNIT 0x94 Knight Pablo_2 Level(11,Enemy,1) [11,13] 0x0 0x0 0x1 Tenner1 [SteelLance] NoAI
 UNIT 0x94 Knight Pablo_2 Level(11,Enemy,1) [11,13] 0x0 0x0 0x1 Tenner2 [SteelLance] NoAI
-UNIT 0x94 Cavalier Pablo_2 Level(11,Enemy,1) [11,13] 0x0 0x0 0x1 Tenner3 [SilverBlade] NoAI
+UNIT 0x94 Cavalier Pablo_2 Level(11,Enemy,1) [11,13] 0x0 0x0 0x1 Tenner3 [SilverSword] NoAI
 UNIT 0x94 Cavalier Pablo_2 Level(11,Enemy,1) [11,13] 0x0 0x0 0x1 Tenner4 [SteelLance] NoAI
 UNIT 0x94 Myrmidon Pablo_2 Level(11,Enemy,1) [11,13] 0x0 0x0 0x1 Tenner5 [SteelSword] NoAI
 UNIT
@@ -190,48 +198,67 @@ NoFade
 ENDA
 
 RaftAttack:
-TILECHANGE 0x6
+CAM1 [11, 12]
+STAL 0x10
+TILECHANGE GangplankID
 STAL 24
 LoadReinforcements(RaftSquad)
 EVBIT_T 0x7
 ENDA
 
 FirstFlood:
-TILECHANGE 0x3
+CAM1 [6, 8]
+STAL 0x10
+TILECHANGE FirstFloodID
 NoFade
 ENDA
 
 SecondFlood:
-TILECHANGE 0x2
+CAM1 [16, 8]
+STAL 0x10
+TILECHANGE SecondFloodID
 NoFade
 ENDA
 
 ThirdFlood:
-TILECHANGE 0x8
+CAM1 [12, 19]
+STAL 0x10
+TILECHANGE ThirdFloodID
 NoFade
 ENDA
 
 FourthFlood:
-TILECHANGE 0x9
+CAM1 [12, 19]
+STAL 0x10
+TILECHANGE FourthFloodID
 NoFade
 ENDA
 
 Rising1:
-TILEREVERSE 0x9
+CAM1 [12, 19]
+STAL 0x10
+// Since these changes overlap, redo the third flood's changes
+TILEREVERSE FourthFloodID
+TILEREVERSE ThirdFloodID
+TILECHANGE ThirdFloodID
 CAM1 [11,8]
-STAL 12
-TILEREVERSE 0x2
-TILEREVERSE 0x3
+STAL 16
+TILEREVERSE SecondFloodID
+TILEREVERSE FirstFloodID
 NoFade
 ENDA
 
 Rising2:
-TILEREVERSE 0x8
+CAM1 [12, 19]
+STAL 0x10
+TILEREVERSE ThirdFloodID
 NoFade
 ENDA
 
 Rising3:
-TILECHANGE 0x4
+CAM1 [11, 10]
+STAL 0x10
+TILECHANGE TideID
 NoFade
 ENDA
 
