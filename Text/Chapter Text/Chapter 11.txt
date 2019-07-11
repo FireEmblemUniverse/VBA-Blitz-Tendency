@@ -22,7 +22,7 @@ another way to reach Donator[AN]
 Island, where the Tower of[N]
 the Mods resides...[A][X]
  
-## Ch11Opening
+## Ch11Beginning
 [.v....][LoadVerge]
 [....v.][LoadVedge]
 Verge, what do you[N]

@@ -110,7 +110,7 @@ SimLog_BeginningScene:
 LOAD2 0x1 SimLog_UnitsA
 ENUN
 CAM1 [2,20]
-Text(Ch13Opening)
+Text(Ch13Beginning)
 SVAL 0x3 ChestKey
 GIVEITEMTO Vedge
 LOAD2 0x1 SimLog_UnitsB

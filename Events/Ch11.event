@@ -97,7 +97,7 @@ LOAD2 0x1 SLu_Units
 ENUN
 LOAD1 0x1 SLu_Enemies
 ENUN
-Text(Ch11Opening)
+Text(Ch11Beginning)
 GotoPrepScreen
 ENDA
 
