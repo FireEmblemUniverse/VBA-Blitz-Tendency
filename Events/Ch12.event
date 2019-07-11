@@ -167,7 +167,7 @@ BeginningScene:
 LOAD1 0x1 Bad
 LOAD1 0x1 Bad2
 ENUN
-Text(Ch12Opening)
+Text(Ch12Beginning)
 GotoPrepScreen
 
 GetJet:
