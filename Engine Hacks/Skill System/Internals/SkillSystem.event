@@ -56,8 +56,6 @@ ORG $18680
 jumpToHack(Unset_Attack_Flag_2)
 POP
 
-MESSAGE CURRENTOFFSET
-
 Skill_Getter: //gets a list of skills
 #incbin skillGetter.dmp
 POIN PersonalSkillTable
