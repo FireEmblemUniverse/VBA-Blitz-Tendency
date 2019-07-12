@@ -17,7 +17,7 @@ Keanu: Good
 Boo: Good
 Aggie: Good
 Ximena: No frames
-Nessie: Uses Neimi portrait
+Nessie: Good
 Jen: Good
 Fanni: Good
 Erstaz: Good
@@ -27,7 +27,7 @@ Luut: Good
 Jet: Portrait good, name/desc Kyle.
 Mealy: Uses Amelia's portrait
 Splenda: Uses Artur's portrait
-Zane: Uses Gerik's portrait. Is a skeleton.
+Zane: Good.
 Benny: Uses Rennac's portrait. Is a dog.
 Mariya: Good.
 Nichol: Good.

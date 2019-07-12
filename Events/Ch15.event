@@ -133,7 +133,7 @@ STAL 60
 TEXTCONT
 TEXTEND
 LOAD1 0x1 BennyIntro
-STAL 20 //Note the lack of ENUN; this is on purpose
+STAL 20 //Note the lack of ENUN; this is on purpose\
 TEXTCONT
 TEXTEND
 MOVE 0x0 Benny [16,0]

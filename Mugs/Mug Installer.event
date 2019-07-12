@@ -266,6 +266,11 @@ GrudgeMug:
 #incext PortraitFormatter "Grudge.png"
 setMugEntryRepointed(GrudgePortrait, GrudgeMug, 2, 4, 2, 2)
 
+#define ZanePortrait 0xB4
+ZaneMug:
+#incext PortraitFormatter "Zane.png"
+setMugEntryRepointed(ZanePortrait, ZaneMug, 4, 5, 4, 3)
+
 
 // VBA 1 Mugs
 // Use all the "Eyes closed" portraits of FE8 before freespace mugs
