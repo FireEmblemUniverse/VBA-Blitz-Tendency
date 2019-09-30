@@ -204,6 +204,8 @@
 #define DootAura 0xC4
 #define DootAuraIconID 0xCA
 
+#define VoidStone 0xC5
+
 #define Item200G _200G
 
 //Chapter definitions

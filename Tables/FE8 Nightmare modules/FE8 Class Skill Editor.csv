@@ -1,6 +1,6 @@
 INLINE ClassSkillTable,Skill
 0x00 Separator/Nothing,0x0
-0x01 Ephraim Lord,0x0
+0x01 Ephraim Lord,NihilID
 0x02 Eirika Lord,0x0
 0x03 Void Monster,FuryID
 0x04 Void Master,CantoPlusID

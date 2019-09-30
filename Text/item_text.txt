@@ -72,3 +72,12 @@ A legendary axe with an inset red stone.[X]
 
 ## nameSuperBlitzLance
 Super Blitz[X]
+
+## descSuperBlitzLance
+Legendary weapon of Void.[X]
+
+## nameVoidStone
+Void Stone[X]
+
+## descVoidStone
+Ancient conduit for void powers.[X]
