@@ -167,15 +167,18 @@ BeginningScene:
 LOAD1 0x1 Bad
 LOAD1 0x1 Bad2
 ENUN
+Text(Ch12Beginning)
 GotoPrepScreen
 
 GetJet:
 LOAD1 0x1 JetBlock
 FlashCursor(4, 0, 60)
+Text(Ch12AfterPrep)
 NoFade
 ENDA
 
 EndingScene:
+Text(Ch12Ending)
 MNCH 13
 NoFade
 ENDA

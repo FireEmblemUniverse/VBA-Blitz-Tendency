@@ -1,0 +1,52 @@
+## Ch29Narration
+It has been a year and a half[n]
+since Vedge returned home,[an]
+and ever since, the capital[n]
+has been a warzone. Now, with[an]
+his army scattered across the[n]
+capital, Vedge must hold out[an]
+until one of the two armies[n]
+falls...[an][X]
+
+## Ch29Opening1
+[MidLeft][LoadNull]
+[MidRight][LoadVedge]
+Everyone! The next wave of[N]
+their assault is incoming![AN]
+Let's move![A]
+[MidLeft]
+My friend, we are cut off[n]
+from the Crusader God![A][X]
+
+## Ch29Opening2
+[Left][LoadBabby]
+*Is adorable amidst the chaos*[A][X]
+
+## Ch29Opening3
+[MidRight][LoadVedge]
+No! If he dies, it's all over...[an]
+Protect Babby, as well as[n]
+the castle, at all costs![a][X]
+
+## Ch29VillageText
+[MidRight][LoadCurrent]
+No one here?... Well, I suppose[n]
+we are in the midst of a struggle[an]
+of cataclysmic proportions. The[n]
+former residents of this house[an]
+likely have far greater things[n]
+to worry about than someone[an]
+taking... hmmm... this thing![a][X]
+
+## Ch29RecruitingBabby
+[MidLeft][LoadBabby]
+[MidRight][LoadVedge]
+#I'll get Doc to write this!
+This text is a placeholder![A][X]
+
+## Ch29Ending
+[MidRight][LoadVedge]
+They just keep coming![n]
+...Screw it! Lead them[an]
+to the Forbidden Peak![n]
+We'll settle this there.[a][X]

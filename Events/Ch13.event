@@ -110,7 +110,7 @@ SimLog_BeginningScene:
 LOAD2 0x1 SimLog_UnitsA
 ENUN
 CAM1 [2,20]
-Text(PlaceholderText)
+Text(Ch13Beginning)
 SVAL 0x3 ChestKey
 GIVEITEMTO Vedge
 LOAD2 0x1 SimLog_UnitsB
@@ -129,7 +129,7 @@ BEQ 0x0 0xC 0x0
     BNE 0x5 0xC 0x0
         //Mealy spawned but not recruited
         FlashCursor(Mealy,60)
-        Text(PlaceholderText)
+        Text(Ch13RecruitingMealy)
         TurnAlly(Mealy)
         B 0x5
 LABEL 0x0
@@ -139,12 +139,10 @@ LABEL 0x0
     CAM1 [24, 3]
     STAL 10
     FlashCursor(Mealy,60)
-    Text(PlaceholderText)
+    Text(Ch13RecruitingMealy)
     NoFade
 LABEL 0x5
-TEXTSTART
-TEXTSHOW PlaceholderText
-TEXTEND
+Text(Ch13Ending)
 MNCH 14
 ENDA
 
@@ -343,7 +341,7 @@ ENDA
 Mealy_Recruit:
 MUSS Comrades
 TEXTSTART
-TEXTSHOW PlaceholderText
+TEXTSHOW Ch13RecruitingMealy
 TEXTEND
 TurnAlly(Mealy)
 NoFade

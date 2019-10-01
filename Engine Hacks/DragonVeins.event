@@ -37,7 +37,7 @@ ORG $2e444 //prevent suspend from breaking the game
 SHORT 0
 POP
 
-MESSAGE DVs installed to CURRENTOFFSET
+// MESSAGE DVs installed to CURRENTOFFSET
 
 DrawingOffset_External:
 #incbin "ASM/Dragon Vein/DrawingDragonVein_Ext_A.dmp"
