@@ -9,52 +9,52 @@ EventPointerTable(SnowAnimsID, SnowAnimation)
 
 ALIGN 4
 SnowAnimation0:
-#incext png2dmp "00 - Address 5C7914 - Interval 1C - Data Size 1000 - Map Tile to Modify 82663F4.png"
+#incext Png2Dmp "00 - Address 5C7914 - Interval 1C - Data Size 1000 - Map Tile to Modify 82663F4.png"
 ALIGN 4
 SnowAnimation1:
-#incext png2dmp "01 - Address 5C791C - Interval 1C - Data Size 1000 - Map Tile to Modify 82673F4.png"
+#incext Png2Dmp "01 - Address 5C791C - Interval 1C - Data Size 1000 - Map Tile to Modify 82673F4.png"
 ALIGN 4
 SnowAnimation2:
-#incext png2dmp "02- Address 5C7924 - Interval 1C - Data Size 1000 - Map Tile to Modify 82683F4.png"
+#incext Png2Dmp "02- Address 5C7924 - Interval 1C - Data Size 1000 - Map Tile to Modify 82683F4.png"
 ALIGN 4
 SnowAnimation3:
-#incext png2dmp "03- Address 5C792C - Interval 1C - Data Size 1000 - Map Tile to Modify 82693F4.png"
+#incext Png2Dmp "03- Address 5C792C - Interval 1C - Data Size 1000 - Map Tile to Modify 82693F4.png"
 ALIGN 4
 SnowAnimation4:
-#incext png2dmp "04- Address 5C7934 - Interval 1C - Data Size 1000 - Map Tile to Modify 826A3F4.png"
+#incext Png2Dmp "04- Address 5C7934 - Interval 1C - Data Size 1000 - Map Tile to Modify 826A3F4.png"
 ALIGN 4
 SnowAnimation5:
-#incext png2dmp "05- Address 5C793C - Interval 1C - Data Size 1000 - Map Tile to Modify 826B3F4.png"
+#incext Png2Dmp "05- Address 5C793C - Interval 1C - Data Size 1000 - Map Tile to Modify 826B3F4.png"
 ALIGN 4
 SnowAnimation6:
-#incext png2dmp "06- Address 5C7944 - Interval 1C - Data Size 1000 - Map Tile to Modify 826C3F4.png"
+#incext Png2Dmp "06- Address 5C7944 - Interval 1C - Data Size 1000 - Map Tile to Modify 826C3F4.png"
 ALIGN 4
 SnowAnimation7:
-#incext png2dmp "07- Address 5C794C - Interval 1C - Data Size 1000 - Map Tile to Modify 826D3F4.png"
+#incext Png2Dmp "07- Address 5C794C - Interval 1C - Data Size 1000 - Map Tile to Modify 826D3F4.png"
 ALIGN 4
 SnowAnimation8:
-#incext png2dmp "08- Address 5C7954 - Interval 1C - Data Size 1000 - Map Tile to Modify 826E3F4.png"
+#incext Png2Dmp "08- Address 5C7954 - Interval 1C - Data Size 1000 - Map Tile to Modify 826E3F4.png"
 ALIGN 4
 SnowAnimation9:
-#incext png2dmp "09- Address 5C795C - Interval 1C - Data Size 1000 - Map Tile to Modify 826F3F4.png"
+#incext Png2Dmp "09- Address 5C795C - Interval 1C - Data Size 1000 - Map Tile to Modify 826F3F4.png"
 ALIGN 4
 SnowAnimation10:
-#incext png2dmp "A- Address 5C7964 - Interval 1C - Data Size 1000 - Map Tile to Modify 82703F4.png"
+#incext Png2Dmp "A- Address 5C7964 - Interval 1C - Data Size 1000 - Map Tile to Modify 82703F4.png"
 ALIGN 4
 SnowAnimation11:
-#incext png2dmp "B - Address 5C796C - Interval 1C - Data Size 1000 - Map Tile to Modify 82713F4.png"
+#incext Png2Dmp "B - Address 5C796C - Interval 1C - Data Size 1000 - Map Tile to Modify 82713F4.png"
 ALIGN 4
 SnowAnimation12:
-#incext png2dmp "C - Address 5C7974 - Interval 1C - Data Size 1000 - Map Tile to Modify 82723F4.png"
+#incext Png2Dmp "C - Address 5C7974 - Interval 1C - Data Size 1000 - Map Tile to Modify 82723F4.png"
 ALIGN 4
 SnowAnimation13:
-#incext png2dmp "D - Address 5C797C - Interval 1C - Data Size 1000 - Map Tile to Modify 82733F4.png"
+#incext Png2Dmp "D - Address 5C797C - Interval 1C - Data Size 1000 - Map Tile to Modify 82733F4.png"
 ALIGN 4
 SnowAnimation14:
-#incext png2dmp "E - Address 5C7984 - Interval 1C - Data Size 1000 - Map Tile to Modify 82743F4.png"
+#incext Png2Dmp "E - Address 5C7984 - Interval 1C - Data Size 1000 - Map Tile to Modify 82743F4.png"
 ALIGN 4
 SnowAnimation15:
-#incext png2dmp "F - Address 5C798C - Interval 1C - Data Size 1000 - Map Tile to Modify 82753F4.png"
+#incext Png2Dmp "F - Address 5C798C - Interval 1C - Data Size 1000 - Map Tile to Modify 82753F4.png"
 
 ALIGN 4
 SnowAnimation:

@@ -107,7 +107,7 @@ lead us to our fathers, I'm[an]
 sure they will be very glad![an][X]
 
 ## Ch28RecruitingSakaguchi
-[MidLeft][LoadFace][0x01][0x01]
+[MidLeft][LoadMystery]
 [MidRight][LoadFace][0x50][0x01]
 Father![a]
 [MidLeft]
@@ -119,7 +119,7 @@ their kids are saved for[n]
 balancing reasons.[an][X]
 
 ## Ch28RecruitingKojima
-[MidLeft][LoadFace][0x01][0x01]
+[MidLeft][LoadMystery]
 [MidRight][LoadFace][0x50][0x01]
 Father![a]
 [MidLeft]
@@ -131,7 +131,7 @@ join Vedge's army now. Not like[n]
 I have anything else to do.[a][X]
 
 ## Ch28RecruitingIga
-[MidLeft][LoadFace][0x01][0x01]
+[MidLeft][LoadIga]
 [MidRight][LoadFace][0x50][0x01]
 Father![a]
 [MidLeft]
@@ -192,8 +192,7 @@ must have already evacuated.[a][X]
 
 ## Ch28Ending
 [MidRight][LoadVedge]
-[MidLeft][LoadMystery]
-#Babby's mug isn't in game yet
+[MidLeft][LoadBabby]
 So you made it.[a]
 [MidRight]
 My Lord. I thank[n]

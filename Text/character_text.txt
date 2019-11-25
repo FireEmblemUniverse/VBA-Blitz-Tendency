@@ -63,6 +63,13 @@ Jazzak[X]
 ## descJazzak
 A fearful pirate.[X]
 
+## nameJet
+Jet[X]
+
+## descJet
+A travelling bard. Known to[N]
+dance from time to time.[X]
+
 ## nameZealot
 Zealot[X]
 

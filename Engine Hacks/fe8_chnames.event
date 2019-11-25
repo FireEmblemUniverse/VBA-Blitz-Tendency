@@ -1,6 +1,6 @@
 //include this under free space
 
-#include eastdlib.event
+#include "EAstdlib.event"
 #include "Extensions/Hack Installation.txt"
 PUSH
 ORG $89624

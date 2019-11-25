@@ -19,7 +19,7 @@ My friend, we are cut off[n]
 from the Crusader God![A][X]
 
 ## Ch29Opening2
-[Left][LoadMystery]
+[Left][LoadBabby]
 *Is adorable amidst the chaos*[A][X]
 
 ## Ch29Opening3
@@ -39,8 +39,9 @@ to worry about than someone[an]
 taking... hmmm... this thing![a][X]
 
 ## Ch29RecruitingBabby
-[MidLeft][LoadMystery]
+[MidLeft][LoadBabby]
 [MidRight][LoadVedge]
+#I'll get Doc to write this!
 This text is a placeholder![A][X]
 
 ## Ch29Ending

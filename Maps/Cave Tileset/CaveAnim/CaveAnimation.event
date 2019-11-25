@@ -2,52 +2,52 @@ EventPointerTable(0xe8, CaveAnimation)
 
 ALIGN 4
 CaveAnimation0:
-#incext png2dmp "CaveAnim.mapanime 1_000.png"
+#incext Png2Dmp "CaveAnim.mapanime 1_000.png"
 ALIGN 4
 CaveAnimation1:
-#incext png2dmp "CaveAnim.mapanime 1_001.png"
+#incext Png2Dmp "CaveAnim.mapanime 1_001.png"
 ALIGN 4
 CaveAnimation2:
-#incext png2dmp "CaveAnim.mapanime 1_002.png"
+#incext Png2Dmp "CaveAnim.mapanime 1_002.png"
 ALIGN 4
 CaveAnimation3:
-#incext png2dmp "CaveAnim.mapanime 1_003.png"
+#incext Png2Dmp "CaveAnim.mapanime 1_003.png"
 ALIGN 4
 CaveAnimation4:
-#incext png2dmp "CaveAnim.mapanime 1_004.png"
+#incext Png2Dmp "CaveAnim.mapanime 1_004.png"
 ALIGN 4
 CaveAnimation5:
-#incext png2dmp "CaveAnim.mapanime 1_005.png"
+#incext Png2Dmp "CaveAnim.mapanime 1_005.png"
 ALIGN 4
 CaveAnimation6:
-#incext png2dmp "CaveAnim.mapanime 1_006.png"
+#incext Png2Dmp "CaveAnim.mapanime 1_006.png"
 ALIGN 4
 CaveAnimation7:
-#incext png2dmp "CaveAnim.mapanime 1_007.png"
+#incext Png2Dmp "CaveAnim.mapanime 1_007.png"
 ALIGN 4
 CaveAnimation8:
-#incext png2dmp "CaveAnim.mapanime 1_008.png"
+#incext Png2Dmp "CaveAnim.mapanime 1_008.png"
 ALIGN 4
 CaveAnimation9:
-#incext png2dmp "CaveAnim.mapanime 1_009.png"
+#incext Png2Dmp "CaveAnim.mapanime 1_009.png"
 ALIGN 4
 CaveAnimation10:
-#incext png2dmp "CaveAnim.mapanime 1_010.png"
+#incext Png2Dmp "CaveAnim.mapanime 1_010.png"
 ALIGN 4
 CaveAnimation11:
-#incext png2dmp "CaveAnim.mapanime 1_011.png"
+#incext Png2Dmp "CaveAnim.mapanime 1_011.png"
 ALIGN 4
 CaveAnimation12:
-#incext png2dmp "CaveAnim.mapanime 1_012.png"
+#incext Png2Dmp "CaveAnim.mapanime 1_012.png"
 ALIGN 4
 CaveAnimation13:
-#incext png2dmp "CaveAnim.mapanime 1_013.png"
+#incext Png2Dmp "CaveAnim.mapanime 1_013.png"
 ALIGN 4
 CaveAnimation14:
-#incext png2dmp "CaveAnim.mapanime 1_014.png"
+#incext Png2Dmp "CaveAnim.mapanime 1_014.png"
 ALIGN 4
 CaveAnimation15:
-#incext png2dmp "CaveAnim.mapanime 1_015.png"
+#incext Png2Dmp "CaveAnim.mapanime 1_015.png"
 
 ALIGN 4
 CaveAnimation:
