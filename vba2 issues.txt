@@ -1,0 +1,39 @@
+prologue:
+*glitchy enough transition between prologue opening and chapter gameplay
+*lunar brace still references eirika
+*do we *really* need a donate screen
+*can't visit starting prologue house, if we care about house visitability
+*vedge has no animation
+*village: ...didn't take "out" side... - should be "our"
+*boss has no battle or death quote
+
+chapter 1:
+*units just pop out without fog
+*everything flickers for a frame after visiting arch?
+*ch1 boss doesn't like blinking, has no death quote
+*seth randomly appears in ch1 ending instead of null, as dialogue implies
+
+chapter 2:
+*ah, good old placeholder for the opening
+*objective on both map and status screens still claims it's a rout chapter
+*of the newly added bows, only the extra bow is effective against fliers (possibly intentional as the descriptions don't allude to flier effectiveness?)
+*tarvos has tomebreaker (no mages) and a hammer (no armours). description mentions its "inherited some lunacy", possibly intentional
+*keanu's death quote is just ross's
+*cortez (boss) has countermagic, player has no mages (might just be a monk class skill though)
+*also lacks boss/death quote
+*ending's a placeholder
+
+chapter 3:
+*fades in and out several times during opening
+*generics are still grado soldiers
+*visiting village shows recruit flicker on screen before conversation starts
+*boo's portrait is simply dozla
+*screen flashes purple when boo visits the left house
+*boss has no battle/death quote
+*no objective shows up at all on the map
+
+chapter 4:
+*no text at all in the opening
+*ch3 and ch4 bosses share portraits
+*recruit is just colm, no change at all
+*VILLAGE IS UNSAVEABLE; thief always reaches it on turn two and cannot be distracted, the only hypothetical way to save it would be if the cavaliers were on the front line as they could stand directly in front of the village turn 2, but they start in the back instead
