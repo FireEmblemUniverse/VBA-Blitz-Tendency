@@ -41,10 +41,10 @@ this, milord. The tides in[an]
 this region are known to[n]
 be volatile.[a]
 [....v.]
-Then let’s capture the city[n]
-before it’s too late![A][X]
+Then let's capture the city[n]
+before it's too late![A][X]
 
-## Ch10Ending
+## Chapter10Ending
 [...v..][LoadVedge]
 How could Kagavesta be so[N]
 crippled after a single defeat?[AN]

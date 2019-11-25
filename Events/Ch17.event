@@ -161,11 +161,11 @@ NicholRecruit:
 
 ALIGN 4
 EastVillage:
-	VillageEventItem(PlaceholderText,HouseBG,LightBrand)
+	VillageEventItem(Ch17Village1,HouseBG,LightBrand)
 
 ALIGN 4
 WestVillage:
-	VillageEventItem(PlaceholderText, HouseBG, Spear)
+	VillageEventItem(Ch17Village2, HouseBG, Spear)
 
 ALIGN 4
 ThiefSpawn:
@@ -177,6 +177,8 @@ Surprise:
 
 ALIGN 4
 BeginningScene:
+	Intro(Ch17Narration)
+	
 	LOAD1 0x1 NicholRecruit
 	ENUN
 
@@ -191,10 +193,13 @@ BeginningScene:
 
 	LOAD2 0x1 Foes4
 	ENUN
+	
+	Text(Ch17Opening)
 
 	GotoPrepScreen
 
 ALIGN 4
 EndingScene:
+	Text(Ch17Ending)
 	MNCH 12 //Copied from Blitz 1
 	ENDA

@@ -44,8 +44,10 @@ END_MAIN
 ALIGN 4
 
 BeginningScene:
+Intro(Ch18Narration)
 LOAD1 0x1 Units
 LOAD1 0x1 Enemies
+Text(Ch18Opening)
 GotoPrepScreen
 ENDA
 
@@ -54,6 +56,7 @@ LOAD1 0x1 AdolgiUnit
 ENDA
 
 EndingScene:
+Text(Ch18Ending)
 MNCH 19
 ENDA
 

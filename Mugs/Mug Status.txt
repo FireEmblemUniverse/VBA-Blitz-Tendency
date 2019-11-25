@@ -1,0 +1,90 @@
+-- This file is for organisational purposes only. --
+There is no need to include it in any installers.
+
+This is just to check the quality of mugs.
+It just checks if frames are in place,
+or if they still have vanilla portraits.
+Other related issues will also be mentioned.
+
+PLAYABLE CHARACTERS:
+Vedge: Good
+Null: Good
+Naught: Good
+Chiva: Good
+Verge: Good
+Ch1 Anna: Good
+Keanu: Good
+Boo: Good
+Aggie: Good
+Ximena: No frames
+Nessie: Uses Neimi portrait
+Jen: Good
+Fanni: Good
+Erstaz: Good
+Ch9 Anna: Portrait good, description wrong
+Murat: Uses Ephraim portrait
+Luut: Good
+Jet: Portrait good, name/desc Kyle.
+Mealy: Uses Amelia's portrait
+Splenda: Uses Artur's portrait
+Zane: Uses Gerik's portrait. Is a skeleton.
+Benny: Uses Rennac's portrait. Is a dog.
+Mariya: Good.
+Nichol: Good.
+Adolgi: Good
+Seibah: Good. Fate reference.
+Rinslet: Good. Probably another Fate reference.
+Donna: Portrait good. Dozla name.
+Sabin: Good
+If there's a Ch23 recruit, the chapter's too bugged to get them.
+Ch24 villages are not functional. 
+Michael P: Good.
+Ch26 does not have a recruit.
+Ch27 Recruit 1: Tana name and portrait. Might be meant to be in Ch24?
+Deuxnids: Good.
+Iga: Good.
+Kojima: Uses Lyon portrait.
+Sakaguchi: Uses Orson portrait.
+Inafune: Uses Joshua portrait.
+Babby: Portrait good. Uses Syrene's name.
+
+
+BOSSES:
+Ch0 Vergein: Too many colours, transparency issues
+Ch1 Jazzak: Good
+Ch2 Cortez: Too many colours, transparency issues
+Ch3 Chien: Uses Hecwood's portrait
+Ch4 Hecwood: Good
+Ch4 Elitor: Good
+Ch5 Grudge: Portrait good. Named Saar.
+Ch6 Lash: Lacks portrait. Intended to be AW2 Lash.
+Ch7 Edgelard: No portrait. References that FE16 lord.
+Ch8 Dennis: Lacks in game name, portrait is good
+Ch9 Faust: Good
+Ch10 Boss: Entirely vanilla Pablo
+Ch11 Sweet Boss: Lacks portrait. Ideally, a sorcerer portrait, judging by the description.
+Ch12 Cameron: Lacks name. Ch12 hero.
+Ch12 Bojo: Lacks name. Ch12 druid.
+Ch13 Darkman Man: Name overflows. Gheb portrait.
+Ch14 Wicky: Uses Caellach's portrait
+Ch15: Benny is recruitable.
+Ch16 Wrath: Lacks portrait
+Ch17 Boss: Lacks name and portrait.
+Ch18 Boss: Lacks name and portrait.
+Ch19 Karel face: Assassin name/desc. Probably some Fate guy actually called that.
+Ch19 Medea: Lacks portrait. A Fate character.
+Ch20 Claire: Uses Cormag portrait. Considering Ch19/20, likely a Fate reference.
+Ch20 Kamito: Good. I don't think it's the Sword Art Online guy.
+Ch21 Boss: Named Zonta. Iga portrait.
+Ch22 Kefka: Good
+Ch23 lacks a boss entirely. Throne is empty.
+Ch24 lacks a boss entirely. Some random enemy can be made into one.
+Ch25 Mike: Lacks portrait.
+Ch26 Inferos: Lacks name and portrait.
+Ch27 Sandy: Dragon Zombie. No portrait required.
+Ch28: Bosses are recruitable.
+Ch29 Boss: Nameless dragon. Does not strictly require a portrait.
+
+FINAL CHAPTER ENEMIES:
+Nikita, Bob, Leeroy missing their palette swaps.
+Everyone else is good.
