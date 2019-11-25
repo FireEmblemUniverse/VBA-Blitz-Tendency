@@ -19,6 +19,7 @@
 #endif
 #ifndef DebuffTable
     #define DebuffTable 0x203F100
+	#define DebuffTableSize 0x00000900
 #endif
 #ifndef ClassTable
   #define ClassTable 0x807110
@@ -42,7 +43,7 @@
 #define LunarBrace MoonBracelet
 #define SolarBrace SunBracelet
 
-#include "Engine Hacks/Skill System/skill_definitions.event"
+#include "Engine Hacks/SkillSystem/skill_definitions.event"
 
 #define BloodyStream 0x57
 

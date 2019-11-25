@@ -1,0 +1,79 @@
+PUSH
+
+//Allow Supply to be used in Prologue/Ch6:
+  PUSH
+  ORG $23f6e //Access Supply
+  SHORT 0
+
+  ORG $31646 //send to supply
+  SHORT 0
+
+  ORG $31650 //Usable in chapter 6
+  SHORT 0x46C0
+
+//Change poison damage
+  //Set constant damage to 4
+  ORG 0x25A3E
+  SHORT 0x3304
+  //Set variable damage to 0
+  ORG 0x25A36
+  SHORT 0x2000
+
+  POP
+  
+POP
+
+
+  
+// Ch 11/13 ASMC-able function
+  #include "writeDummyUnit.event"
+  
+// Chapter 27 ASMC-able functions
+  ALIGN 4
+  gChapter27FogLevel:
+    WORD Ch27FogLevel
+
+  #include "CCBlitzChapter27Asmcs.lyn.event"
+  
+// Sabin memes
+  #include "IncorrectBlitzInput/IncorrectBlitzInput.event" 
+ 
+  ALIGN 4
+  Win_Usability:
+  #incbin "winbuttonusability.dmp"
+  
+  ALIGN 4
+  Offscreen_Levelup:
+  #incbin "autolevel.dmp"
+  
+  ALIGN 4
+  Win_Effect:
+  #incbin "winbutton.dmp"
+  POIN Offscreen_Levelup
+  
+// DismountMount hack
+  ALIGN 4
+  DismountRoutine:
+  #incbin "DismountMount Code/Dismount Routine.dmp"
+  POIN ClassTable
+  POIN MountedClassTable
+
+  ALIGN 4
+  DismountUsability:
+  #incbin "DismountMount Code/Dismount Usability Routine.dmp"
+  POIN MountedClassTable
+
+  ALIGN 4
+  MountRoutine:
+  #incbin "DismountMount Code/Mount Routine.dmp"
+  POIN ClassTable
+  POIN MountedClassTable
+
+  ALIGN 4
+  MountUsability:
+  #incbin "DismountMount Code/Mount Usability Routine.dmp"
+  POIN MountedClassTable 
+  
+//Check if current character has the specified item: (Written for chapter 5)
+  #inctext lyn "CheckItem.elf"
+  

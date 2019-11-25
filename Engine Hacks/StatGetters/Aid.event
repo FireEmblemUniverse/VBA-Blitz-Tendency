@@ -4,7 +4,10 @@
 #include "_Common.event"
 
 pAidModifiers: // Aid
-	POIN prAddUnitFinalConstitution prSubstractOne prAdjustAidIfMounted prMinZero
+	POIN prAddUnitFinalConstitution prSubstractOne prAdjustAidIfMounted
+	#ifdef DEBUFFS_MIN_ZERO
+	POIN prMinZero
+	#endif
 WORD 0
 
 prAddUnitFinalConstitution:

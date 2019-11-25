@@ -1,0 +1,6 @@
+#define writeDummy(XVal, YVal) "SVAL r1 XVal; SVAL r2 YVal; ASMC (writeDummyUnit|1)"
+
+ALIGN 4
+writeDummyUnit:
+#incbin "writeDummyUnit.dmp"
+

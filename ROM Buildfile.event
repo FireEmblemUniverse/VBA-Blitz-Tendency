@@ -25,12 +25,12 @@
     #include "Engine Hacks/_MasterHackInstaller.event"
     MESSAGE Used hax space ends at CURRENTOFFSET
 
+	ORG FreeSpace2
+	PROTECT FreeSpace2End
+
     // Events
     #include "Events/Master Events Installer.event"
     #include "Events/World Map Events Installer.event"
-
-	ORG FreeSpace2
-	PROTECT FreeSpace2End
 
 	// FREE SPACE #2:
 	// Graphics (except mugs, see above), Maps, Music
