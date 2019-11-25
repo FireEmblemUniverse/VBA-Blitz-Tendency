@@ -8,19 +8,7 @@ defWeaponDebuffs(4,0,0,4,0,4,4) //0x5: Pebble debuff.
 
 ALIGN 4
 
-// ######################################################################
-//Relating to Tequila's slayer/effectiveness rework
-//Used in the class editor and item editor tables
-//To understand how this works, check out Engine Hacks/Skill System/Teq Skills/FE8-Nullify/_README.txt
-#define ArmorType	0x01
-#define HorseType	0x02
-#define FlierType	0x04
-#define DragonType	0x08
-#define MonsterType	0x10
-#define SwordType	0x20
-#define MageType	0x40
-#define FlyingType  FlierType
-#define MagicType   MageType
+
 
 //Change existing effective items (class weaknesses are already part of the class data table)
 #define ItemEffectivenessPtr(item_id, label_to_point_to) "PUSH; ORG ItemTable + 0x24*item_id + 0x10; POIN label_to_point_to; POP"
