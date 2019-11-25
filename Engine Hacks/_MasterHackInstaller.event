@@ -332,5 +332,5 @@ MainMenuTable:
   MM_Separator
 
   #ifdef __DEBUG__
-  #include "ASM\Debug.event"
+  #include "ASM/Debug.event"
   #endif
