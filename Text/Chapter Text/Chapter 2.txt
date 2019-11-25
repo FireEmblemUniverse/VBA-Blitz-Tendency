@@ -88,3 +88,8 @@ Donateenary scum.[X]
 
 ## Chapter2_Goal
  Get 3 Thrones[X]
+
+## Chapter2_WinConExplanation
+[....v.][LoadCurrent]
+That's one. We need to be[N]
+occupying all three thrones![A][X]

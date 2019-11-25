@@ -150,6 +150,8 @@ BNE 0x10 0xC 0x0 //branch...
 CALL ThrThrD_EndingScene
 LABEL 0x10
 
+Text(Chapter2_WinConExplanation)
+
 NoFade
 ENDB
 
@@ -173,6 +175,8 @@ BNE 0x10 0xC 0x0 //branch...
 CALL ThrThrD_EndingScene
 LABEL 0x10
 
+Text(Chapter2_WinConExplanation)
+
 NoFade
 ENDB
 
@@ -195,6 +199,8 @@ BNE 0x10 0xC 0x0 //branch...
 
 CALL ThrThrD_EndingScene
 LABEL 0x10
+
+Text(Chapter2_WinConExplanation)
 
 NoFade
 ENDB
