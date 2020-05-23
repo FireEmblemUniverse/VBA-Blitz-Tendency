@@ -305,9 +305,9 @@ setMugEntryRepointed(GrudgePortrait, GrudgeMug, 2, 4, 2, 2)
 #define EdgeworthPortrait 0x6D //if only we could give him a real portrait /s
 #define MarkPortrait 0x6E
 #define RosheaPortrait 0x6F
-#define BobPortrait 0x24 // Rennac. May overlap with one of Teq's characters. Portrait import done.
+#define BobPortrait 0x24 // Rennac. May overlap with one of Teq's characters. Portrait import required.
 #define KagaPortrait 0x70
-#define LeeroyPortrait 0x04 // Seth - imported VBA portrait
+#define LeeroyPortrait 0x04 // Seth - import VBA portrait
 #define VoidPortrait 0x71
 
 NotArch_Mug:
