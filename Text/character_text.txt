@@ -714,3 +714,88 @@ cute pegasus rider.[X]
 ## descFE13Anna
 Her favorite spells makes[N]
 everyone want to shop more![X]
+
+## nameDonna
+Donna[X]
+
+## descDonna
+A great knight here[N]
+to take back some fort.[X]
+
+## nameBabby
+Babby[X]
+
+## descBabby
+The Crusader God of yore.[N]
+Distant ancestor of Vedge.[X]
+
+## nameGrudge
+Grudge[X]
+
+## descGrudge
+An Unnamed captain assigned to[N]
+patrol Dark Sanctity. Irritable.[X]
+
+## nameCh10Boss
+Ch.10 Boss[X]
+
+## descCh10Boss
+I'll put some random historical[N]
+figure here if he doesn't get a name.[X]
+
+## nameCameron
+Cameron[X]
+
+## descCameron
+The owner of the Fort of Fight.[N]
+Appreciates competent singing.[X]
+
+## nameBojo
+Bojo[X]
+
+## descBojo
+Some important guy from some[N]
+far-off kingdom. Loves leaving.[X]
+
+## nameCh17Boss
+Ch.17 Boss[X]
+
+## descCh17Boss
+Nichol's from FE14. This guy should[N]
+be whatever kid is in his gaiden.[X]
+
+
+## nameCh18Boss
+Ch.18 Boss[X]
+
+## descCh18Boss
+Isn't this some Ys map? Who's[N]
+the final boss of Ys 1?[X]
+
+## nameCh21Boss
+Ch.21 Boss[X]
+
+## descCh21Boss
+A commander of Unnamed forces in[N]
+(FORT NAME). Wants more power.[X]
+
+## nameInferos
+Inferos[X]
+
+## descInferos
+A demon serving as Vedge's mirror.[N]
+Claims the Blitz of Aja.[X]
+
+## nameDraco
+Draco[X]
+
+## descDraco
+Dennis's pet dragon zombie. Or so[N]
+he thought, at the very least.[X]
+
+## nameCh29Boss
+Ch.29 Boss[X]
+
+## descCh29Boss
+Who'd be the opposite of Babby?[N]
+Boss is a mamkute, so...[X]
