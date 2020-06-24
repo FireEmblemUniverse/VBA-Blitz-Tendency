@@ -777,7 +777,7 @@ Ch.21 Boss[X]
 
 ## descCh21Boss
 A commander of Unnamed forces in[N]
-(FORT NAME). Wants more power.[X]
+Blue Castle. Wants more power.[X]
 
 ## nameInferos
 Inferos[X]
