@@ -1,0 +1,352 @@
+#######################################################
+#
+#
+#When importing to FEEditorAdv delete # and after each line.
+#######################################################
+/// - Mode 1               #Melee Animation
+C03                               #Start attack animation; should be followed by 0x07
+C07                               #Start attack animation; should be preceeded by 0x03
+10  p- Standing.png
+4  p- Range_ata_001.png
+2  p- Range_ata_002.png
+C1B				  #Play quick "heavy step" SFE
+2  p- Range_ata_003.png
+2  p- Range_ata_004.png
+2  p- Range_ata_005.png
+2  p- Range_ata_006.png
+3  p- Range_ata_007.png
+C41				  #Play short axe swinging SFE
+4  p- Range_ata_008.png
+4  p- Range_ata_009.png
+4  p- Range_ata_010.png
+2  p- Range_ata_011.png
+2  p- Range_ata_012.png
+C1B				  #Play quick "heavy step" SFE
+C41				  #Play short axe swinging SFE
+2  p- Range_ata_013.png
+C05                               #Call spell associated with equipped weapon
+4  p- Range_ata_014.png
+4  p- Range_ata_015.png
+3  p- Range_ata_016.png
+C41				  #Play short axe swinging SFE
+2  p- Range_ata_017.png
+C43				  #Play weapon stance SFE (Clicking noise)
+2  p- Range_ata_018.png
+4  p- Range_ata_019.png
+4  p- Range_ata_020.png
+4  p- Range_ata_021.png
+4  p- Range_ata_022.png
+4  p- Range_ata_023.png
+C01                               #NOP
+4  p- Range_ata_024.png
+2  p- Range_ata_025.png
+2  p- Range_ata_026.png
+2  p- Range_ata_027.png
+3  p- Range_ata_028.png
+5  p- Range_ata_029.png
+5  p- Range_ata_030.png
+5  p- Range_ata_031.png
+5  p- Range_ata_032.png
+5  p- Range_ata_033.png
+5  p- Range_ata_034.png
+C1B				  #Play quick "heavy step" SFE
+5  p- Range_ata_035.png
+5  p- Range_ata_036.png
+5  p- Standing.png
+C06                               #Begin opponent's turn after hit.next code 0D.
+C0D                               #End of dodge animation. preceeded by 0x06
+
+~~~ - Mode 3               #Melee Critical Animation
+C03                               #Start attack animation; should be followed by 0x07
+C07                               #Start attack animation; should be preceeded by 0x03
+10  p- Standing.png
+5  p- Range_crit_001.png
+5  p- Range_crit_002.png
+5  p- Range_crit_003.png
+C41				  #Play short axe swinging SFE
+2  p- Range_crit_004.png
+4  p- Range_crit_005.png
+C38				  #Play heavy spear spinning SFE
+2  p- Range_crit_006.png
+2  p- Range_crit_007.png
+C1B				  #Play quick "heavy step" SFE
+2  p- Range_crit_008.png
+2  p- Range_crit_009.png
+C38				  #Play heavy spear spinning SFE
+2  p- Range_crit_010.png
+2  p- Range_crit_011.png
+2  p- Range_crit_012.png
+2  p- Range_crit_013.png
+2  p- Range_crit_014.png
+2  p- Range_crit_015.png
+2  p- Range_crit_016.png
+2  p- Range_crit_017.png
+C43				  #Play weapon stance SFE (Clicking noise)
+2  p- Range_crit_018.png
+2  p- Range_crit_019.png
+4  p- Range_ata_009.png
+4  p- Range_ata_010.png
+2  p- Range_ata_011.png
+2  p- Range_ata_012.png
+C1B				  #Play quick "heavy step" SFE
+C41				  #Play short axe swinging SFE
+2  p- Range_ata_013.png
+C05                               #Call spell associated with equipped weapon
+4  p- Range_ata_014.png
+4  p- Range_ata_015.png
+3  p- Range_ata_016.png
+C41				  #Play short axe swinging SFE
+2  p- Range_ata_017.png
+C43				  #Play weapon stance SFE (Clicking noise)
+2  p- Range_ata_018.png
+4  p- Range_ata_019.png
+4  p- Range_ata_020.png
+4  p- Range_ata_021.png
+4  p- Range_ata_022.png
+4  p- Range_ata_023.png
+C01                               #NOP
+4  p- Range_ata_024.png
+2  p- Range_ata_025.png
+2  p- Range_ata_026.png
+2  p- Range_ata_027.png
+3  p- Range_ata_028.png
+5  p- Range_ata_029.png
+5  p- Range_ata_030.png
+5  p- Range_ata_031.png
+5  p- Range_ata_032.png
+5  p- Range_ata_033.png
+5  p- Range_ata_034.png
+C1B				  #Play quick "heavy step" SFE
+5  p- Range_ata_035.png
+5  p- Range_ata_036.png
+5  p- Standing.png
+C06                               #Begin opponent's turn after hit.next code 0D.
+C0D                               #End of dodge animation. preceeded by 0x06                            
+
+~~~ - Mode 5               #Ranged Animation
+C03                               #Start attack animation; should be followed by 0x07
+C07                               #Start attack animation; should be preceeded by 0x03
+10  p- Standing.png
+4  p- Range_ata_001.png
+2  p- Range_ata_002.png
+C1B				  #Play quick "heavy step" SFE
+2  p- Range_ata_003.png
+2  p- Range_ata_004.png
+2  p- Range_ata_005.png
+2  p- Range_ata_006.png
+3  p- Range_ata_007.png
+C41				  #Play short axe swinging SFE
+4  p- Range_ata_008.png
+4  p- Range_ata_009.png
+4  p- Range_ata_010.png
+2  p- Range_ata_011.png
+2  p- Range_ata_012.png
+C1B				  #Play quick "heavy step" SFE
+C41				  #Play short axe swinging SFE
+2  p- Range_ata_013.png
+C05                               #Call spell associated with equipped weapon
+4  p- Range_ata_014.png
+4  p- Range_ata_015.png
+3  p- Range_ata_016.png
+C41				  #Play short axe swinging SFE
+2  p- Range_ata_017.png
+C43				  #Play weapon stance SFE (Clicking noise)
+2  p- Range_ata_018.png
+4  p- Range_ata_019.png
+4  p- Range_ata_020.png
+4  p- Range_ata_021.png
+4  p- Range_ata_022.png
+4  p- Range_ata_023.png
+C01                               #NOP
+4  p- Range_ata_024.png
+2  p- Range_ata_025.png
+2  p- Range_ata_026.png
+2  p- Range_ata_027.png
+3  p- Range_ata_028.png
+5  p- Range_ata_029.png
+5  p- Range_ata_030.png
+5  p- Range_ata_031.png
+5  p- Range_ata_032.png
+5  p- Range_ata_033.png
+5  p- Range_ata_034.png
+C1B				  #Play quick "heavy step" SFE
+5  p- Range_ata_035.png
+5  p- Range_ata_036.png
+5  p- Standing.png
+C06                               #Begin opponent's turn after hit.next code 0D.
+C0D                               #End of dodge animation. preceeded by 0x06
+
+~~~ - Mode 6               #Ranged Critical Animation
+C03                               #Start attack animation; should be followed by 0x07
+C07                               #Start attack animation; should be preceeded by 0x03
+10  p- Standing.png
+5  p- Range_crit_001.png
+5  p- Range_crit_002.png
+5  p- Range_crit_003.png
+C41				  #Play short axe swinging SFE
+2  p- Range_crit_004.png
+4  p- Range_crit_005.png
+C38				  #Play heavy spear spinning SFE
+2  p- Range_crit_006.png
+2  p- Range_crit_007.png
+C1B				  #Play quick "heavy step" SFE
+2  p- Range_crit_008.png
+2  p- Range_crit_009.png
+C38				  #Play heavy spear spinning SFE
+2  p- Range_crit_010.png
+2  p- Range_crit_011.png
+2  p- Range_crit_012.png
+2  p- Range_crit_013.png
+2  p- Range_crit_014.png
+2  p- Range_crit_015.png
+2  p- Range_crit_016.png
+2  p- Range_crit_017.png
+C43				  #Play weapon stance SFE (Clicking noise)
+2  p- Range_crit_018.png
+2  p- Range_crit_019.png
+4  p- Range_ata_009.png
+4  p- Range_ata_010.png
+2  p- Range_ata_011.png
+2  p- Range_ata_012.png
+C1B				  #Play quick "heavy step" SFE
+C41				  #Play short axe swinging SFE
+2  p- Range_ata_013.png
+C05                               #Call spell associated with equipped weapon
+4  p- Range_ata_014.png
+4  p- Range_ata_015.png
+3  p- Range_ata_016.png
+C41				  #Play short axe swinging SFE
+2  p- Range_ata_017.png
+C43				  #Play weapon stance SFE (Clicking noise)
+2  p- Range_ata_018.png
+4  p- Range_ata_019.png
+4  p- Range_ata_020.png
+4  p- Range_ata_021.png
+4  p- Range_ata_022.png
+4  p- Range_ata_023.png
+C01                               #NOP
+4  p- Range_ata_024.png
+2  p- Range_ata_025.png
+2  p- Range_ata_026.png
+2  p- Range_ata_027.png
+3  p- Range_ata_028.png
+5  p- Range_ata_029.png
+5  p- Range_ata_030.png
+5  p- Range_ata_031.png
+5  p- Range_ata_032.png
+5  p- Range_ata_033.png
+5  p- Range_ata_034.png
+C1B				  #Play quick "heavy step" SFE
+5  p- Range_ata_035.png
+5  p- Range_ata_036.png
+5  p- Standing.png
+C06                               #Begin opponent's turn after hit.next code 0D.
+C0D                               #End of dodge animation. preceeded by 0x06 
+
+~~~ - Mode 7               #Dodge Melee Attack
+C02                               #Start of dodge
+1  p- Standing.png
+4  p- Dodge_001.png
+3  p- Dodge_002.png
+C1B				  #Play quick "heavy step" SFE
+4  p- Dodge_003.png
+4  p- Dodge_004.png
+4  p- Dodge_005.png
+6  p- Dodge_003.png
+C01                               #NOP
+C1B				  #Play quick "heavy step" SFE
+3  p- Dodge_002.png
+5  p- Dodge_008.png
+5  p- Dodge_009.png
+5  p- Dodge_010.png
+5  p- Dodge_011.png
+5  p- Standing.png
+C06                               #Begin opponent's turn after hit.next code 0D.
+C0D                               #End of dodge animation. preceeded by 0x06
+
+~~~ - Mode 8               #Dodge Ranged Attack
+C02                               #Start of dodge
+1  p- Standing.png
+4  p- Dodge_001.png
+3  p- Dodge_002.png
+C1B				  #Play quick "heavy step" SFE
+4  p- Dodge_003.png
+4  p- Dodge_004.png
+4  p- Dodge_005.png
+6  p- Dodge_003.png
+C01                               #NOP
+C1B				  #Play quick "heavy step" SFE
+3  p- Dodge_002.png
+5  p- Dodge_008.png
+5  p- Dodge_009.png
+5  p- Dodge_010.png
+5  p- Dodge_011.png
+5  p- Standing.png
+C06                               #Begin opponent's turn after hit.next code 0D.
+C0D                               #End of dodge animation. preceeded by 0x06
+
+~~~ - Mode 9               #Equiped with Melee Weapon
+2  p- Standing.png
+C01                               #NOP
+
+~~~ - Mode 10               #standing motions?
+2  p- Standing.png
+C01                               #NOP
+
+~~~ - Mode 11               #Equiped with Ranged weapon
+2  p- Standing.png
+C01                               #NOP
+
+~~~ - Mode 12               #Attack Missed Animation
+C03                               #Start attack animation; should be followed by 0x07
+C07                               #Start attack animation; should be preceeded by 0x03
+10  p- Standing.png
+4  p- Range_ata_001.png
+2  p- Range_ata_002.png
+C1B				  #Play quick "heavy step" SFE
+2  p- Range_ata_003.png
+2  p- Range_ata_004.png
+2  p- Range_ata_005.png
+2  p- Range_ata_006.png
+3  p- Range_ata_007.png
+C41				  #Play short axe swinging SFE
+4  p- Range_ata_008.png
+4  p- Range_ata_009.png
+4  p- Range_ata_010.png
+2  p- Range_ata_011.png
+2  p- Range_ata_012.png
+C1B				  #Play quick "heavy step" SFE
+C41				  #Play short axe swinging SFE
+2  p- Range_ata_013.png
+C05                               #Call spell associated with equipped weapon
+4  p- Range_ata_014.png
+4  p- Range_ata_015.png
+3  p- Range_ata_016.png
+C41				  #Play short axe swinging SFE
+2  p- Range_ata_017.png
+C43				  #Play weapon stance SFE (Clicking noise)
+2  p- Range_ata_018.png
+4  p- Range_ata_019.png
+4  p- Range_ata_020.png
+4  p- Range_ata_021.png
+4  p- Range_ata_022.png
+4  p- Range_ata_023.png
+C01                               #NOP
+4  p- Range_ata_024.png
+2  p- Range_ata_025.png
+2  p- Range_ata_026.png
+2  p- Range_ata_027.png
+3  p- Range_ata_028.png
+5  p- Range_ata_029.png
+5  p- Range_ata_030.png
+5  p- Range_ata_031.png
+5  p- Range_ata_032.png
+5  p- Range_ata_033.png
+5  p- Range_ata_034.png
+C1B				  #Play quick "heavy step" SFE
+5  p- Range_ata_035.png
+5  p- Range_ata_036.png
+5  p- Standing.png
+C06                               #Begin opponent's turn after hit.next code 0D.
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~ - End Animation Data

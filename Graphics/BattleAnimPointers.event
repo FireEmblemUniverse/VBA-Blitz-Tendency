@@ -30,3 +30,12 @@ weaponAnim(Hatchet,0xe3)
 weaponTypeAnim(animNone,0xe4)
 weaponAnimEnd
 
+
+SetAnimationPointers(VoidMaster, T2VedgeAnims)
+T2VedgeAnims:
+weaponTypeAnim(animAxe, 0xe5)
+weaponAnim(HandAxe,0xe6)
+weaponAnim(Tomahawk,0xe6)
+weaponAnim(Hatchet,0xe6)
+weaponTypeAnim(animNone,0xe7)
+weaponAnimEnd
