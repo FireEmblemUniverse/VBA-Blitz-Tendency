@@ -62,5 +62,4 @@ Temporary Items
 .apdisk
 *.csv#
 Maps/TMX2EA Readme.txt
-*.png
-!Mugs/*.png
+/*.png
