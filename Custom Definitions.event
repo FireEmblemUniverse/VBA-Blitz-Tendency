@@ -180,6 +180,7 @@
 //Item definitions
 #define BlitzAxe Rapier
 #define ExtraBow ShortBow
+#define BlitzOfAja 0x85
 #define PiercingBow 0xBC
 #define PiercingBowIconID 0xAD
 #define HuntersBow 0xBD

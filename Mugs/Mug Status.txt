@@ -24,7 +24,7 @@ Erstaz: Good
 Ch9 Anna: Portrait good, description wrong
 Murat: Uses Ephraim portrait
 Luut: Good
-Jet: Portrait good, name/desc Kyle.
+Jet: Good
 Mealy: Uses Amelia's portrait
 Splenda: Uses Artur's portrait
 Zane: Good.
@@ -34,7 +34,7 @@ Nichol: Good.
 Adolgi: Good
 Seibah: Good. Fate reference.
 Rinslet: Good. Probably another Fate reference.
-Donna: Portrait good. Dozla name.
+Donna: Good
 Sabin: Good
 If there's a Ch23 recruit, the chapter's too bugged to get them.
 Ch24 villages are not functional. 
@@ -46,7 +46,7 @@ Iga: Good.
 Kojima: Uses Lyon portrait.
 Sakaguchi: Uses Orson portrait.
 Inafune: Uses Joshua portrait.
-Babby: Portrait good. Uses Syrene's name.
+Babby: Good
 
 
 BOSSES:
@@ -56,15 +56,15 @@ Ch2 Cortez: Too many colours, transparency issues
 Ch3 Chien: Uses Hecwood's portrait
 Ch4 Hecwood: Good
 Ch4 Elitor: Good
-Ch5 Grudge: Portrait good. Named Saar.
+Ch5 Grudge: Good
 Ch6 Lash: Lacks portrait. Intended to be AW2 Lash.
 Ch7 Edgelard: No portrait. References that FE16 lord.
-Ch8 Dennis: Lacks in game name, portrait is good
+Ch8 Dennis: Good
 Ch9 Faust: Good
 Ch10 Boss: Entirely vanilla Pablo
 Ch11 Sweet Boss: Lacks portrait. Ideally, a sorcerer portrait, judging by the description.
-Ch12 Cameron: Lacks name. Ch12 hero.
-Ch12 Bojo: Lacks name. Ch12 druid.
+Ch12 Cameron: Good
+Ch12 Bojo: Good
 Ch13 Darkman Man: Name overflows. Gheb portrait.
 Ch14 Wicky: Uses Caellach's portrait
 Ch15: Benny is recruitable.
@@ -74,13 +74,13 @@ Ch18 Boss: Lacks name and portrait.
 Ch19 Karel face: Assassin name/desc. Probably some Fate guy actually called that.
 Ch19 Medea: Lacks portrait. A Fate character.
 Ch20 Claire: Uses Cormag portrait. Considering Ch19/20, likely a Fate reference.
-Ch20 Kamito: Good. I don't think it's the Sword Art Online guy.
+Ch20 Kamito: Good. I don't think it's the Sword Art Online guy. 
 Ch21 Boss: Named Zonta. Iga portrait.
 Ch22 Kefka: Good
 Ch23 lacks a boss entirely. Throne is empty.
 Ch24 lacks a boss entirely. Some random enemy can be made into one.
 Ch25 Mike: Lacks portrait.
-Ch26 Inferos: Lacks name and portrait.
+Ch26 Inferos: Lacks portrait.
 Ch27 Sandy: Dragon Zombie. No portrait required.
 Ch28: Bosses are recruitable.
 Ch29 Boss: Nameless dragon. Does not strictly require a portrait.
