@@ -4,6 +4,7 @@ Hmph. Nameless Knights.[N]
 Prepare to face death.[A][X]
 
 ## VergeinDeath
+[OpenMidRight][LoadFace][Vergein][0x01]
 I lost[Beat] lost my[Beat][N]
 Ugh[Beat][A][X]
 

@@ -65,6 +65,13 @@ unit's opposite side.[X]
 Swap positions with adjacent[N]
 ally.[X]
 
+## UM_Capture
+ Capture[X]
+
+## UM_CaptureDesc
+Strike a fatal blow with reduced[N]
+stats to capture an enemy.[X]
+
 ## UMText_Win
  Win[X]
 

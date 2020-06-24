@@ -1,0 +1,62 @@
+#ifndef HAX_CONFIG
+#define HAX_CONFIG
+
+// This file holds configuration switches for all hacks shipped with the skill system
+
+// ===================================
+// = HACK INSTALLATION CONFIGURATION =
+// ===================================
+
+// If commented, slayer and effectiveness will remain the same as they are in vanilla
+// Look at Skill System/Teq Skills/FE8-Nullify/_README.txt for the full ramifications of uncommenting this
+#define ENABLE_SLAYER_AND_EFFECTIVENESS_REWORK
+
+// If uncommented, a full str/split will be implemented without replacing any stats
+// USE_SAVE_EXPANSION will be used even if commented
+// TODO: Define an item ID for Spirit Dust (Mag statbooster) in "Strmag/Str Mag Split/Installer.event". Energy Ring is used by default!
+// Item icon for Spirit Dust is included! Define your icon ID in "Strmag/_Master Asm Installer.event". Default is Green Note.
+// #define USE_STRMAG_SPLIT
+
+// If uncommented, will use a full (EMS-based) save expansion instead of the "old" suspend expansion
+// Enabling this *will* break saves, but allows for higher stats and other things.
+// #define USE_SAVE_EXPANSION
+
+// =================================
+// = SKILL BEHAVIOUR CONFIGURATION =
+// =================================
+
+// if uncommented units will be select automatically after galeforce (pressing b won't end their turn)
+// #define ENABLE_GALEFORCE_AUTOSELECT
+
+// if uncommented lethality will work like it originally did in gba
+// #define ENABLE_GBA_LETHALITY
+
+// if set to false, only the skill will work, if set to true both the skill and the ability will work
+#define ENABLE_LEGACY_CANTO False
+
+// if commented, enemies with Steal+ will steal as normal in vanilla (ie, the skill will be pretty much useless
+#define ENABLE_AI_STEAL_PLUS
+
+// if commented, Steal will no longer be a skill, but a character ability, and Steal+ will require having regular steal
+#define ENABLE_STEAL_SKILL
+
+// If commented, debuffs are allowed to take stats below zero
+#define DEBUFFS_MIN_ZERO
+
+// If true Shadowgift/Lumina will check for staff ranks when checking for highest magic rank
+#define SHADOWGIFT_VIA_STAFF_RANK False
+#define LUMINA_VIA_STAFF_RANK True
+
+// If commented, Poison Strike and Grisly Wound will not check whether no damage was dealt before applying additional damage.
+#define RESIDUAL_DAMAGE_REQUIRES_BATTLE_DAMAGE
+
+// If commented, Capture will be a global command and will not require the Capture skill.
+#define CAPTURE_SKILL_REQUIRED
+
+// If commented, Dragon Veins will be a global command and will not require the Dragon's Blood skill.
+#define DRAGON_VEIN_SKILL_REQUIRED
+
+// If uncommented, the Charge mechanic will be disabled and Moonbow will use a skill% activation rate.
+// #define DISABLE_CHARGE
+
+#endif // HAX_CONFIG

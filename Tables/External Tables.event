@@ -9,53 +9,105 @@ defWeaponDebuffs(4,0,0,4,0,4,4) //0x5: Pebble debuff.
 ALIGN 4
 
 
-#define ArmorClasses "Knight Knight_F General General_F GreatKnight GreatKnight_F"
-//#define ArmorClasses "$09 $0A $0B $0C $35 $36"
 
-#define FlyingClasses "PegasusKnight FalcoKnight WyvernRider WyvernRider_F WyvernLord WyvernLord_F WyvernKnight WyvernKnight_F Witch Gargoyle Deathgoyle"
-//#define FlyingClasses "$48 $49 $1F $20 $21 $22 $23 $24 Witch $63 $64"
+//Change existing effective items (class weaknesses are already part of the class data table)
+#define ItemEffectivenessPtr(item_id, label_to_point_to) "PUSH; ORG ItemTable + 0x24*item_id + 0x10; POIN label_to_point_to; POP"
 
-#define MonsterClasses "Revenant Entombed Bonewalker Bonewalker_Bow Wight Wight_Bow Bael ElderBael Cyclops MautheDoog Gwyllgi Tarvos Maelduin Mogall ArchMogall Gorgon GorgonEgg_2 Gargoyle Deathgoyle DracoZombie DemonKing Manakete_2 Cyclops_2 ElderBael_2 VoidMonster"
-//#define MonsterClasses "$52 $53 $54 $55 $56 $57 $58 $59 $5A $5B $5C $5D $5E $5F $60 $61 $62 $63 $64 $65 $66 $3B $7C $7D $51 VoidMonster"
+ItemEffectivenessPtr(Rapier, LordWeaponEffectiveness)
+ItemEffectivenessPtr(Armorslayer, ArmorEffectiveness)
+ItemEffectivenessPtr(Wyrmslayer, DragonEffectiveness)
+ItemEffectivenessPtr(Zanbato, HorseEffectiveness)
+ItemEffectivenessPtr(Horseslayer, HorseEffectiveness)
+ItemEffectivenessPtr(Halberd, HorseEffectiveness)
+ItemEffectivenessPtr(Hammer, ArmorEffectiveness)
+ItemEffectivenessPtr(Swordslayer, SwordEffectiveness)
+ItemEffectivenessPtr(IronBow, FlierEffectiveness)
+ItemEffectivenessPtr(SteelBow, FlierEffectiveness)
+ItemEffectivenessPtr(SilverBow, FlierEffectiveness)
+ItemEffectivenessPtr(PoisonBow, FlierEffectiveness)
+ItemEffectivenessPtr(KillerBow, FlierEffectiveness)
+ItemEffectivenessPtr(BraveBow, FlierEffectiveness)
+ItemEffectivenessPtr(ShortBow, FlierEffectiveness)
+ItemEffectivenessPtr(Longbow, FlierEffectiveness)
+ItemEffectivenessPtr(Ballista, FlierEffectiveness)
+ItemEffectivenessPtr(IronBallista, FlierEffectiveness)
+ItemEffectivenessPtr(KillerBallista, FlierEffectiveness)
+ItemEffectivenessPtr(Excalibur, SacredWeaponEffectiveness)
+ItemEffectivenessPtr(Luce, SacredWeaponEffectiveness)
+ItemEffectivenessPtr(DragonAxe, DragonEffectiveness)
+ItemEffectivenessPtr(Reginleif, LordWeaponEffectiveness)
+ItemEffectivenessPtr(ShadowKiller, MonsterEffectiveness)
+ItemEffectivenessPtr(BrightLance, MonsterEffectiveness)
+ItemEffectivenessPtr(Fiendcleaver, MonsterEffectiveness)
+ItemEffectivenessPtr(BeaconBow, FlierAndMonster1)
+ItemEffectivenessPtr(Sieglinde, SacredWeaponEffectiveness)
+ItemEffectivenessPtr(Ivaldi, SacredWeaponEffectiveness)
+ItemEffectivenessPtr(DragonSpear, DragonEffectiveness)
+ItemEffectivenessPtr(Vidofnir, SacredWeaponEffectiveness)
+ItemEffectivenessPtr(Audhulma, SacredWeaponEffectiveness)
+ItemEffectivenessPtr(Siegmund, SacredWeaponEffectiveness)
+ItemEffectivenessPtr(Garm, SacredWeaponEffectiveness)
+ItemEffectivenessPtr(Nidhogg, FlierAndMonster2)
+ItemEffectivenessPtr(HeavySpear, ArmorEffectiveness)
+ItemEffectivenessPtr(WindSword, FlierEffectiveness)
+ItemEffectivenessPtr(Dragonstone, MonsterEffectiveness)
+ItemEffectivenessPtr(Aircalibur, FlierEffectiveness)
+ItemEffectivenessPtr(PiercingBow, ArmorEffectiveness)
+ItemEffectivenessPtr(HuntersBow, HorseEffectiveness)
+ItemEffectivenessPtr(RunicBow, MageEffectiveness)
+ItemEffectivenessPtr(AnimaCalibur, FlierEffectiveness)
+ItemEffectivenessPtr(LightCalibur, FlyingMagicEffectiveness)
+ItemEffectivenessPtr(SwordCalibur, ArmorFlyingMagicEffectiveness)
+ItemEffectivenessPtr(BowCalibur, FlierEffectiveness)
+ItemEffectivenessPtr(Dragonshard, MonsterEffectiveness)
 
-#define MagicClasses "Mage Mage_F Sage Sage_F MageKnight MageKnight_F Bishop Bishop_F Shaman Shaman_F Druid Druid_F Summoner Summoner_F Pupil_1 Pupil_2 Pupil_3 Monk Priest Cleric Troubadour Valkyrie Necromancer Mogall ArchMogall Gorgon Witch"
+//Protector item (macro still works, even if it's wrongly named)
+ItemEffectivenessPtr(DelphiShield, FlierProtection)
 
-#define MountedClasses "Troubadour Valkyrie Cavalier Cavalier_F Paladin Paladin_F Ranger Ranger_F MageKnight MageKnight_F GreatKnight GreatKnight_F Tarvos Maelduin"
-//#define MountedClasses "$4B $4C $05 $06 $07 $08 $1D $1E $29 $2A $35 $36 $5D $5E"
-//Vanilla list minus Eirika/Ephraim lord
-
-
-ArmorFlyingMagicEffectiveness:
-BYTE ArmorClasses
-//Continues into flying+magic effectiveness
-FlyingMagicEffectiveness:
-BYTE FlyingClasses
-//Continues into magic effectiveness
-MagicEffectiveness:
-BYTE MagicClasses
-BYTE 0
-
-MountedArmorEffectiveness:
-BYTE ArmorClasses
-//Continues into mounted effectiveness
-MountedEffectiveness:
-BYTE MountedClasses
-BYTE 0
-
-FlyingMonsterEffectiveness:
-BYTE FlyingClasses
-//Continues into monster effectiveness.
-MonsterEffectiveness:
-BYTE MonsterClasses
-BYTE 0
-
-FlyingEffectiveness:
-BYTE FlyingClasses
-BYTE 0
-
+#define SetWeaponEffectiveness(type_list, coefficient_times_2) "BYTE 0 coefficient_times_2; SHORT type_list"
+LordWeaponEffectiveness:
+SetWeaponEffectiveness(ArmorType|SwordType, 6)
+WORD 0 //terminator
 ArmorEffectiveness:
-BYTE ArmorClasses
-BYTE 0
+SetWeaponEffectiveness(ArmorType, 6)
+WORD 0
+HorseEffectiveness:
+SetWeaponEffectiveness(HorseType, 6)
+WORD 0
+DragonEffectiveness:
+SetWeaponEffectiveness(DragonType, 6)
+WORD 0
+FlierEffectiveness:
+SetWeaponEffectiveness(FlierType, 6)
+WORD 0
+SwordEffectiveness:
+SetWeaponEffectiveness(SwordType, 6)
+WORD 0
+MonsterEffectiveness:
+SetWeaponEffectiveness(MonsterType, 6)
+WORD 0
+SacredWeaponEffectiveness:
+SetWeaponEffectiveness(MonsterType, 4)
+WORD 0
+FlierAndMonster1: //Beacon bow
+SetWeaponEffectiveness(FlierType|MonsterType, 6)
+WORD 0
+FlierAndMonster2: //Nidhogg
+SetWeaponEffectiveness(FlierType, 6)
+SetWeaponEffectiveness(MonsterType, 4)
+WORD 0
+ArmorFlyingMagicEffectiveness:
+SetWeaponEffectiveness(ArmorType, 6)
+FlyingMagicEffectiveness:
+SetWeaponEffectiveness(FlyingType, 6)
+MageEffectiveness:
+SetWeaponEffectiveness(MagicType, 6)
+WORD 0
+
+#define SetProtection(type_list) "SHORT 0 type_list"
+FlierProtection:
+SetProtection(FlierType)
+
 
 SwordCaliburBonuses:
 BYTE 0 0 7 0 0 7 7
