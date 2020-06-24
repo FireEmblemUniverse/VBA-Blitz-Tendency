@@ -27,3 +27,71 @@ Chapter 10:
 Boss lacks battle/death quote
 Chapter 11:
 Sweet Boss lacks battle/death quote
+Chapter 12:
+Cameron (named in dialogue) lacks battle quote  and death quote is a placeholder
+Bojo (named in dialogue) lacks battle quote and death quote is a placeholder
+Chapter 13:
+No map narration
+Dark Man Man lacks battle/death quote
+Chapter 14:
+No map narration
+Splenda's house is unvisitable
+Chapter 15:
+No map narration
+Zane's portrait glitches out when Verge runs off in opening
+I just realised I never attacked Benny so I dunno if he has a quote or not - not that there'd be much more than barking
+Chapter 16:
+No map narration
+Wrath has no battle quote and death quote is a placeholder
+Chapter 17:
+Unrelated but note to self: doors are bugged; key only works on the left tile
+Both villages has visitor instead of villager talk
+Boss has no battle/death quote
+Chapter 18:
+Boss has no battle/death quote
+Chapter 19:
+No map narration by design; opening is a placeholder
+Saber recruitment is a placeholder
+Switch activation is a placeholder
+Medea has no battle/death quote
+Karel-face has no battle/death quote
+Chapter 20:
+Opening is a placeholder
+Post-battle prep is a placeholder
+Switch activation is a placeholder
+Claire has no battle/death quote
+Kamito has no battle/death quote
+Chapter 21:
+Chapter is nameless
+Opening is bugged out
+Boss has no battle and placeholder death quote
+Chapter 22:
+Narration isn't the standard format
+Chapter 23:
+No boss; no quote
+Chapter 24:
+Nothing visitable, whether village or house
+Chapter 25:
+Placeholder text after the Blue Gem is obtained
+Mike has no battle quote and placeholder death quote
+Two ending scenes are placeholders
+Chapter 26:
+Opening formatting is wonky all around
+Placeholder text after battle prep
+Draco (named in dialogue) has no battle/death quote... though it is a dragon zombie
+Infernos (named in dialogue) has no battle/death quote
+Chapter 27:
+Sandy has no battle/death quote - though again, dragon zombie
+Chapter 28:
+Three pieces of placeholder text in the opening
+Placeholder text after battle prep
+Houses unvisitable
+Bottom-left village placeholder
+I never checked the game devs to see if they have battle quotes. Oops.
+Chapter 29:
+Placeholder text after battle prep
+Houses unvisitable
+Final Chapter:
+Return of the VBA roster! They probably should all have quotes written for them. Ugh, that'll take forever. Do we even have enough IDs for that? Void herself, at the very least, needs battle/death quotes. She's the final boss!
+Far house unvisitable
+No character endings. Do we need them?
