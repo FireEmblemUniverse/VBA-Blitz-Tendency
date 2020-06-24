@@ -1,0 +1,29 @@
+No need to include this. This is for organisational purposes. - Darr
+
+Prologue: All there. Boss quote on wrong side of screen.
+Chapter 1:
+Jazzack uses Karel's portrait in boss quote
+Chapter 2:
+Cortez has no battle/death quote
+Chapter 3:
+No map narration
+Chien has no battle/death quote
+Chapter 4:
+Elitor has no battle quote and death quote uses Morva's portrait
+Hecwood has no battle quote and death quote uses Riev's portrait
+Chapter 5:
+Grudge (named in table) uses generic soldier portrait and is on wrong side
+Chapter 6:
+Large amount of yellow houses unvisitable
+Lash has no battle and placeholder death quote
+Chapter 7:
+No map narration
+Edgelard lacks death quote
+Chapter 8:
+Dennis (named in dialogue) lacks battle quote
+Chapter 9:
+Faust lacks battle/death quote
+Chapter 10:
+Boss lacks battle/death quote
+Chapter 11:
+Sweet Boss lacks battle/death quote
