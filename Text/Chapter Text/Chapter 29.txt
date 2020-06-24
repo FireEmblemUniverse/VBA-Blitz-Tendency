@@ -50,3 +50,10 @@ They just keep coming![n]
 ...Screw it! Lead them[an]
 to the Forbidden Peak![n]
 We'll settle this there.[a][X]
+
+## Ch29Objective
+Hold out against[N]
+Void for 9 turns[X]
+
+## Ch29Goal
+ Defend[X]

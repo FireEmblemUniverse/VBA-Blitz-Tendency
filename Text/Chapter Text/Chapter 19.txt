@@ -146,3 +146,10 @@ obtain the Medallion.[AN]
 I'll be waiting.[AN]
 [MidRight]
 Wait![A][X]
+
+## Ch19Objective
+Climb the Tower[N]
+of the Mods[X]
+
+## Ch19Goal
+ Seize Throne[X]

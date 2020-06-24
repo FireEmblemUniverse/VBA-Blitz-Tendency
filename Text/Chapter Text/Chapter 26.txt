@@ -134,3 +134,10 @@ I can shatter these walls![AN][X]
 {LoadMidRight][LoadVedge]
 There's only room for one[N]
 Vedge in this town...[AN][X]
+
+## Ch26Objective
+Destroy Inferos,[N]
+Vedge's evil twin[X]
+
+## Ch26Goal
+ Kill Boss[X]

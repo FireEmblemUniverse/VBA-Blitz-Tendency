@@ -91,11 +91,16 @@ In the state she is[N]
 currently in, if you[AN]
 don't, you are already dead.[A][X]
 
-
-
 ## Ch11Ending
 [OMR][LoadVedge]
 Now that we've secured this[n]
 smaller fort, we can move on[AN]
 to the Fort of Fight proper.[n]
 Let's go![a][X]
+
+## Ch11Objective
+Sweet and what?[N]
+Sweet and seize?[X]
+
+## Ch11Goal
+ Seize Throne[X]

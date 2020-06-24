@@ -85,3 +85,10 @@ of the Republic. The fate of[AN]
 the world is in your hands,[N]
 Vedge; a great battle for the[AN]
 fate of all Libel awaits you.[A][X]
+
+## Ch20Objective
+Retreive the[N]
+Void Medallion[X]
+
+## Ch20Goal
+ Seize Throne[X]

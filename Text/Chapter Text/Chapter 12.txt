@@ -92,3 +92,10 @@ for the Tower of the Mods.[N]
 When this war is over, I can[AN]
 head back here for one of[N]
 Cameron's karaoke nights.[AN][X]
+
+## Ch12Objective
+Fight Cameron and[N]
+Bojo in 14 turns[X]
+
+## Ch12Goal
+ Kill Bosses[X]

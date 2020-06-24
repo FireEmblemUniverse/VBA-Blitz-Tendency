@@ -1,8 +1,9 @@
 ## Ch25Objective
-This is a placeholder![X]
+Defend for 13 turns[N]
+or kill Mike[X]
 
 ## Ch25Goal
-This is a placeholder![X]
+ Defend[X]
 
 ## Ch25Opening
 Vedge runs into the Northfort with[N]

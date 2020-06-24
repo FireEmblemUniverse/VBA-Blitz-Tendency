@@ -43,3 +43,10 @@ had I been properly informed.[a]
 [MidLeft]
 Yes, milord! It[n]
 won't happen again![A][X]
+
+## Ch23Objective
+Occupy Solomon[N]
+Shrine, okay?[X]
+
+## Ch23Goal
+ Seize Throne[X]
