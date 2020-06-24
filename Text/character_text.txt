@@ -737,11 +737,11 @@ An Unnamed captain assigned to[N]
 patrol Dark Sanctity. Irritable.[X]
 
 ## nameCh10Boss
-Ch.10 Boss[X]
+Davoust[X]
 
 ## descCh10Boss
-I'll put some random historical[N]
-figure here if he doesn't get a name.[X]
+An Unnamed general in charge of[N]
+Lakeside's occupation. Loyal.[X]
 
 ## nameCameron
 Cameron[X]
