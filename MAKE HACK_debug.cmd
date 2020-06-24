@@ -8,7 +8,7 @@ echo: | (c2ea "%~dp0FE8_clean.gba")
 
 cd "%~dp0Text"
 
-echo: | (text-process-classic text_buildfile.txt --parser-exe "%~dp0Event Assembler/Tools/ParseFile.exe")
+echo: | (textprocess_v2 text_buildfile.txt --parser-exe "%~dp0Event Assembler/Tools/ParseFile.exe")
 
 cd "%~dp0Maps"
 
