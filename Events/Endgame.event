@@ -86,6 +86,7 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Chest(IronSword, 33, 11) //TODO: Void Stone weapon for Vedge
 #ifdef __DEBUG__
 Seize(26,15)
 #endif

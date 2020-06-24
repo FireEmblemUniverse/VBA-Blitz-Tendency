@@ -1,3 +1,10 @@
+VoidLordSkillList:
+BYTE 255 BondID
+BYTE 255 RightfulKingID
+BYTE 5 RallySpectrumID
+BYTE 15 AxebreakerID
+ALIGN 4
+
 EirikaLordSkillList:
 BYTE 10 RightfulKingID
 BYTE 20 SolID

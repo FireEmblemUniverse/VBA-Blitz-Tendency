@@ -1,6 +1,6 @@
 INLINE PersonalSkillTable,Skill
 None,0x0
-Void,AetherID
+Vedge,AetherID
 Null,QuickBurnID
 Naught,SlowBurnID
 Chiva,SealDefID
@@ -37,96 +37,96 @@ Tana,LilysPoiseID
 Kojima,LunaID
 Sakaguchi,AstraID
 Iga,AdeptID
-Selena,0x0
-Valter,CharmID
-Riev,0x0
-Caellach,0x0
-Fado,0x0
-Ismaire,0x0
-Hayden,0x0
-0,0x0
-0,0x0
-0,0x0
-0,0x0
-0,0x0
-0,0x0
-0,0x0
-0,0x0
-0,0x0
-0,0x0
-0,0x0
-0,0x0
-0,0x0
-0,0x0
-Lyon''s Summon',0x0
-0,0x0
-0,0x0
-Knoll''s Summon',0x0
-Ewan''s Summon',0x0
-Vergein,WaryFighterID
-Morva (Ch 20),FrenzyID
-Jazzak,FrenzyID
-Cortez Ch2,CounterMagicID
-Monster Ch2,TomebreakerID
-Valter (Prologue),0x0
-Breguet (Ch 1),InspirationID
-Bone (Ch 2),AxefaireID
-Bazba (Ch 3),SwordbreakerID
-Entombed (Ch 4),0x0
-Saar (Ch 5),AxebreakerID
+DEUXNIDS,0x0
+Tiki,CharmID
+Marf,0x0
+Jake,0x0
+Bjorn,0x0
+Evil Florina,0x0
+Celica,0x0
+Zigludo,0x0
+AnnaRogue,0x0
+Eevster,0x0
+Samson,0x0
+Prine,0x0
+Celicia,0x0
+Nikita,0x0
+AnnaMyrm,0x0
+Roshea,0x0
+Doot,0x0
+Edge,0x0
+Jerome,0x0
+Kirsten,0x0
+Tye,0x0
+Tim,0x0
+Jay,0x0
+Doowile,0x0
+Arve,0x0
+AnnaWyvern,0x0
+Ch0 Vergein,WaryFighterID
+Tam,FrenzyID
+Ch1 Jazzak,FrenzyID
+Edgeworth,CounterMagicID
+Monster Ch 2,TomebreakerID
+Cortez Ch 2,0x0
+Ch3 Chien,InspirationID
+Bob,AxefaireID
+Ch4 Hecwood,SwordbreakerID
+Ch4 Elitor,0x0
+Ch5 Grudge,AxebreakerID
 Novala (Ch 6),IgnisID
-Murray (Ch 7),QuickDrawID
-Tirado (Ch 8),SealDefID
-Edgelard,LifetakerID
-Pablo (Ch 10A),DartingBlowID
+Ch6 Lash,QuickDrawID
+SANDY THE DRAGON (Ch27),SealDefID
+Ch7 Edgelard,LifetakerID
+Ch10 Boss,DartingBlowID
 Dennis (Ch8),SealLukID
 Aias (Ch 13A),SavageBlowID
-Carlyle (Ch 14A),SealSpdID
+Faust,SealSpdID
 Caellach (Ch 15),0x0
 Pablo (Ch 13A),0x0
-SweetBossA,0x0
-SweetBossB,0x0
-Riev (Ch 19 & 20),0x0
 0,0x0
-,0x0
+Ch11Boss,0x0
+Ch11Sub,0x0
+Ch12 Cameron,0x0
+Ch12 Bojo,0x0
 Ch13Boss,FuryID
-Ch13Scary,CelerityID
-Cyclops (Ch 12B),ColossusID
+Ch13_e2_celerity,CelerityID
+Wicky,ColossusID
 Wight (Ch 11A),0x0
 Deathgoyle (Ch 11B),0x0
 Entombed (Monster Boss),0x0
-0,0x0
-0,0x0
+Wrath (Ch16),0x0
+3-13 Archer,0x0
 0,0x0
 0,0x0
 Hunter (Ch 16),0x0
 0,0x0
 Medea,0x0
-Assassin,DeathBlowID
+Assassin(his name),DeathBlowID
 Kamito,CounterID
 Claire,0x0
 Zonta (Ch 5x),0x0
 Vigarde (Ch 14B),RenewalID
-Lyon (Ch Final),FrenzyID
+Kefka,FrenzyID
 Orson (Ch 16),0x0
 0,0x0
 0,0x0
 0,0x0
 0,0x0
+Mike (Ch25),0x0
+Nox,0x0
+Inferos,0x0
 0,0x0
 0,0x0
 0,0x0
 0,0x0
 0,0x0
-0,0x0
-0,0x0
-0,0x0
-0,0x0
-0,0x0
-0,0x0
-0,0x0
-0,0x0
-Grado Soldier (Special),0x0
+NotArch,0x0
+Kaga,0x0
+Bede,0x0
+Leeroy,0x0
+Mark,0x0
+Void,AetherID
 Grado Soldier 1 (Normal),0x0
 Grado Soldier 2,0x0
 Ch1 Generic 1,0x0

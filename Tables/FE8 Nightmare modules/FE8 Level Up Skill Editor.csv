@@ -1,6 +1,6 @@
 INLINE LevelUpSkillTable,Skill Pointer
 0x00 Separator/Nothing,0x0
-0x01 Ephraim Lord,0x0
+0x01 Ephraim Lord,VoidLordSkillList|IsPointer
 0x02 Eirika Lord,EirikaLordSkillList|IsPointer
 0x03 Ephraim Great Lord,VoidPromotionSkillList|IsPointer
 0x04 Eirika Great Lord,VoidPromotionSkillList|IsPointer
