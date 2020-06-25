@@ -78,7 +78,7 @@ right into my trap![AN][X]
 
 ## Ch26Opening4
 [MidLeft][LoadFace][Dennis][0x01]
-[LoadMidRight][LoadVedge]
+[OpenMidRight][LoadVedge]
 Dennis?! I thought you were[N]
 dead! How are you still alive?![AN]
 [MidLeft]
@@ -92,7 +92,7 @@ own, Vedge... Now meet[AN]
 my pet. Draco, come![A][X]
 
 ## Ch26Opening5
-[LoadMidRight][LoadVedge]
+[OpenMidRight][LoadVedge]
 [MidLeft][LoadFace][Dennis][0x01]
 He's hungry, you know.[N]
 That quicksand pit was my[AN]
@@ -106,7 +106,7 @@ Ahh. I'm so scared. Help.[AN]
 Hold it.[A][X]
 
 ## Ch26Opening6
-[LoadMidRight][LoadVedge]
+[OpenMidRight][LoadVedge]
 [Invert][MidLeft][LoadMystery]
 #The amount of missing portraits here is kind of astounding.
 Kehkehkeh... I am Infernos...[N]
@@ -131,7 +131,7 @@ Medallion on my side. With it,[N]
 I can shatter these walls![AN][X]
 
 ## Ch26Ending
-[LoadMidRight][LoadVedge]
+[OpenMidRight][LoadVedge]
 There's only room for one[N]
 Vedge in this town...[AN][X]
 
