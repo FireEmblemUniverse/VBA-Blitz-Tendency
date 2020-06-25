@@ -2,6 +2,9 @@
 Survive for 12 turns[NL]
 or kill boss.[X]
 
+## Chapter17Goal
+ Defend[X]
+
 ## Ch17Narration
 #Ch. 16 narration/opening moved here as it already had some written by its creator.
 Vedge has traveled far. Donator[N]

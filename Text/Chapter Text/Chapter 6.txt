@@ -44,6 +44,19 @@ which animal I became. With no choice,[N]
 I'd probably end up as some sort of[AN]
 lazy snake.[A][X]
 
+## Chapter6_UnusedVillage
+# Inafune hint
+[MR][LoadCurrent]
+[ML][LoadFace][0x59][0x01]
+There’s a popular saying here in[N]
+Kagavesta: "Only a lowlife with[AN]
+experience can convince a lowlife[N]
+of experience." If you heed its[AN]
+wisdom... Well, to be perfectly[N]
+honest, I just made that up, and[AN]
+even I'm not sure what I'm getting[N]
+at here, so it’s gotta be good, right?[A][X]
+
 
 ## Chapter6_Ending
 [.v....][LoadVerge]

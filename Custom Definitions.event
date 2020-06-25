@@ -180,6 +180,7 @@
 //Item definitions
 #define BlitzAxe Rapier
 #define ExtraBow ShortBow
+#define BlitzOfAja 0x85
 #define PiercingBow 0xBC
 #define PiercingBowIconID 0xAD
 #define HuntersBow 0xBD
@@ -188,6 +189,7 @@
 #define RunicBowIconID 0xAF
 #define PowerGem BlackGem
 #define SuperBlitzLance Siegmund
+#define VoidMedallion LunarBrace
 
 #define Dragonshard 0xC3
 #define DragonshardIconID 0xCB
@@ -244,8 +246,8 @@
 #define Ch27DracoBossKillCount 40
 
 //Crazy perma eventID stuff
-#define InafuneEvent1 0x66
-#define InafuneEvent2 0x67
+#define InafuneEvent1 0x67
+#define InafuneEvent2 0x68
 
 // Macros
 #define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"

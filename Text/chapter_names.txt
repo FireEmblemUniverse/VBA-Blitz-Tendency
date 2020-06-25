@@ -63,7 +63,7 @@ Prologue: IT BEGINS AGAIN[X]
 20: The Tempest[X]
 
 # 0x0175
-21: [X]
+21: Blue Castle Battle[X]
 
 # 0x0176
 22: The Legendary Blitz[X]

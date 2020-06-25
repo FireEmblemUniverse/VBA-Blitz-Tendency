@@ -50,3 +50,10 @@ is just ahead.[AN]
 [....v.]
 Let's go. The Tower[N]
 of the Mods awaits![A][X]
+
+## Ch13Objective
+Take throne &[N]
+get treasure![X]
+
+## Ch13Goal
+ Seize Throne[X]

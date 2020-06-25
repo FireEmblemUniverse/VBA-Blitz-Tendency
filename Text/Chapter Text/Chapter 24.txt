@@ -97,3 +97,10 @@ UGH! GET AWAY FROM ME, YOU DOGS OF WAR![A]
 [OpenMidRight][LoadVedge]
 Come on, everyone![N]
 We must continue moving![A][X]
+
+## Ch24Objective
+Escape from the[N]
+Unnamed Army[X]
+
+## Ch24Goal
+ Escape[X]

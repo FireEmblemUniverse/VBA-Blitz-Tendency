@@ -157,6 +157,7 @@ have some pizza; it'll[an]
 cheer you up. What do[n]
 you mean, it won't?[an]
 It's better than nothing,[n]
+isn't it?[A]
 [MidRight]No.[A]
 [MidLeft]
 Now listen here, you little[n]
@@ -203,3 +204,10 @@ the town proper. This battle[an]
 is not over yet.[a]
 [MidRight]
 Of course![A][X]
+
+## Ch28Objective
+Round and round[N]
+'til you arrive[X]
+
+## Ch28Goal
+ Arrive[X]

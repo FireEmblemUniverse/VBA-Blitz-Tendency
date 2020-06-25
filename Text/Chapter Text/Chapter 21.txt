@@ -31,3 +31,10 @@ leave no trace of our presence.[A]
 [OpenMidLeft]
 Then let's find this "Blitz of Aja"[N]
 and get out of here.[A][X]
+
+## Ch21Objective
+Blue, blue.[N]
+Throne, moan.[X]
+
+## Ch21Goal
+ Seize Throne[X]

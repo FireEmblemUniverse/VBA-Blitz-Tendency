@@ -1,3 +1,6 @@
+#define ClassAnimTable (0xc00008-0x20)
+
+#define AnimTableEntry(index) "ORG ClassAnimTable + (index * 0x20)"
 
 PUSH
   ORG $AC188
@@ -57,3 +60,17 @@ ORG 0x5926F4+(0x80*0xB4) // SuperBlitzLanceIconID
 ORG 0x5926F4+(0x80*0xB0) // BlitzOfAjaIconID
 #incext Png2Dmp "blitzofaja.png"
 POP
+
+#include "BattleAnimPointers.event"
+
+//Hector repalette by Temp
+#include "Hector M Lord/Axe/Axe Installer.event"
+#include "Hector M Lord/Handaxe/Handaxe Installer.event"
+#include "Hector M Lord/Disarmed/Disarmed Installer.event"
+
+//Ephraim Great Lord by Nuramon
+#include "Ephraim Great Lord (unmounted)/Axe/T2VedgeAxe Installer.event"
+
+#include "Ephraim Great Lord (unmounted)/Handaxe/T2VedgeHandAxe Installer.event"
+
+#include "Ephraim Great Lord (unmounted)/Unarmed/T2VedgeUnarmed Installer.event"

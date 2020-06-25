@@ -180,6 +180,17 @@ option...[A][2NL]
 Gods, get the hell out of my house,[N]
 you knights seriously piss me off.[A][X]
 
+## Chapter1_UnusedHouse
+#Shove this extra house dialogue somewhere else.
+[MR][LoadCurrent]
+[ML][LoadFace][0x59][0x01]
+What the blazes?! Why're you here?[N]
+My kid’s 'avin' a nap![AN]
+Can't you people take yer fightin'[N]
+somewhere else?! Gods above, the[AN]
+gall o' you outside folk![A][X]
+
+
 ## Chapter1_Objective
 Put a permanent end[N]
 to Jazzak's piracy.[X]

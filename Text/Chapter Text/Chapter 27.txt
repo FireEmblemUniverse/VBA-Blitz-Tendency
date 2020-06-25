@@ -258,3 +258,17 @@ Ha! You shouldn't have been here![AN]
 Your unit has been undeployed.[A]
 
 [X]
+
+## textCh27UnusedVillage
+#Use as the Ch28 village?
+[MR][LoadCurrent]
+[ML][LoadFace][0x5B][0x00]
+We're saved! Even after the Crusader[N]
+God Babby himself betrayed the[AN]
+Queen due to her terror, her Super[N]
+Blitz Lance made her on par with[AN]
+the Crusader God... We escaped to[N]
+this village to avoid the ensuing[AN]
+war. Please, you must go to the[N]
+Crusader God's aid! Take this.[AN]
+It will help you  on your way.[A][X]

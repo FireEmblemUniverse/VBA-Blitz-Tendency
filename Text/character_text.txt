@@ -469,13 +469,14 @@ bad at some point or other.[X]
 Monster[X]
 
 ## descCh27GenericMonster
-A Monster.[X]
+A monster residing in the desert.[X]
 
 ## nameCh27GenericSoldier
-Soldier[X]
+Unnamed[X]
 
 ## descCh27GenericSoldier
-A Soldier.[X]
+A soldier of the Unnamed Kingdom,[N]
+under the rule of Queen Void.[X]
 
 ## nameTiki
 Tiki[X]
@@ -714,3 +715,164 @@ cute pegasus rider.[X]
 ## descFE13Anna
 Her favorite spells makes[N]
 everyone want to shop more![X]
+
+## nameDonna
+Donna[X]
+
+## descDonna
+A great knight here[N]
+to take back some fort.[X]
+
+## nameBabby
+Babby[X]
+
+## descBabby
+The Crusader God of yore.[N]
+Distant ancestor of Vedge.[X]
+
+## nameGrudge
+Grudge[X]
+
+## descGrudge
+An Unnamed captain assigned to[N]
+patrol Dark Sanctity. Irritable.[X]
+
+## nameCh10Boss
+Davoust[X]
+
+## descCh10Boss
+An Unnamed general in charge of[N]
+Lakeside's occupation. Loyal.[X]
+
+## nameCameron
+Cameron[X]
+
+## descCameron
+The owner of the Fort of Fight.[N]
+Appreciates competent singing.[X]
+
+## nameBojo
+Bojo[X]
+
+## descBojo
+Some important guy from some[N]
+far-off kingdom. Loves leaving.[X]
+
+## nameCh17Boss
+Ch.17 Boss[X]
+
+## descCh17Boss
+Nichol's from FE14. This guy should[N]
+be whatever kid is in his gaiden.[X]
+
+
+## nameCh18Boss
+Ch.18 Boss[X]
+
+## descCh18Boss
+Isn't this some Ys map? Who's[N]
+the final boss of Ys 1?[X]
+
+## nameCh21Boss
+Ch.21 Boss[X]
+
+## descCh21Boss
+A commander of Spritans forces in[N]
+Blue Castle. Wants more power.[X]
+
+## nameInferos
+Inferos[X]
+
+## descInferos
+A demon serving as Vedge's mirror.[N]
+Claims the Blitz of Aja.[X]
+
+## nameDraco
+Draco[X]
+
+## descDraco
+Dennis's pet dragon zombie. Or so[N]
+he thought, at the very least.[X]
+
+## nameCh29Boss
+Ch.29 Boss[X]
+
+## descCh29Boss
+Who'd be the opposite of Babby?[N]
+Boss is a mamkute, so...[X]
+
+## nameUnnamedKingdom
+Unnamed[X]
+
+## descUnnamedKingdom
+A soldier of the Unnamed Kingdom,[N]
+under the rule of Queen Void.[X]
+
+## nameBandit
+Bandit[X]
+
+## descBandit
+A bandit staking out some turf.[X]
+
+## nameDominionOfGeneral
+General[X]
+
+## descDominionOfGeneral
+A soldier of the Dominion of General,[N]
+led by the ambitious King Faust.[X]
+
+## nameDennisSoldier
+Dennis's[X]
+
+## descDennisSoldier
+A soldier under the command of[N]
+the general Dennis.[X]
+
+## nameFortOfFight
+Fighter[X]
+
+## descFortOfFight
+A member of the Fort of Fight,[N]
+itching for a brawl.[X]
+
+## nameTowerOfTheModsGuardian
+Guardian[X]
+
+## descTowerOfTheModsGuardian
+An ancient spirit guarding the[N]
+fabled Tower of the Mods.[X]
+
+## nameRepublicOfSpritans
+Spritans[X]
+
+## descRepublicOfSpritans
+A soldier of the Republic of Spritans,[N]
+renowned for its artistic culture.[X]
+
+## nameSakaguchiSoldier
+Baron[X]
+
+## descSakaguchiSoldier
+Someone from the world of Final[N]
+Fantasy. The 4th one, here.[X]
+
+## nameKojimaSoldier
+Foxhound[X]
+
+## descKojimaSoldier
+Elite soldiers from the world[N]
+of Metal Gear. Quiet and deadly.[X]
+
+## nameIgaSoldier
+T'Vania[X]
+
+## descIgaSoldier
+A monster hailing from Transylvania,[N]
+where all these vampires come from.[X]
+
+## nameInferosGeneric
+Fiend[X]
+
+## descInferosGeneric
+A deadly figure summoned by[N]
+Inferos. They only destroy.[X]

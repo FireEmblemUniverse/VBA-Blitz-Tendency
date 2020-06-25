@@ -55,3 +55,10 @@ Why aren't they doing something?[AN]
 It's almost like the majority of[N]
 the nation has vanished[Beat][AN]
 But why?[A][X]
+
+## Ch10Objective
+Take Lakeside from[N]
+the Unnameds[X]
+
+## Ch10Goal
+ Seize Throne[X]
