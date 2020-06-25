@@ -245,8 +245,8 @@
 #define Ch27DracoBossKillCount 40
 
 //Crazy perma eventID stuff
-#define InafuneEvent1 0x66
-#define InafuneEvent2 0x67
+#define InafuneEvent1 0x67
+#define InafuneEvent2 0x68
 
 // Macros
 #define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
