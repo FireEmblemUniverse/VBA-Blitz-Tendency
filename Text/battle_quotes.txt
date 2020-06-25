@@ -39,6 +39,10 @@ Aggie died![A][X]
 [MR][LoadXimena]
 Ximena died![A][X]
 
+## NessieDeath
+[MR][LoadFace][0x0A][0x01]
+Nessie died![A][X]
+
 ## JenDeath
 [MR][LoadFace][0x10][0x1]
 Jen died![A][X]

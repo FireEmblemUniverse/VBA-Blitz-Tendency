@@ -71,8 +71,10 @@
 #define Boo 0x8
 #define Aggie 0x9
 #define Ximena 0xA
+#define Nessie 0xB
 #define Jen 0xC
 #define Fanni 0xD
+#define FE3Anna 0xE
 #define Murat 0xF
 #define Luut 0x10
 #define Mealy 0x12
