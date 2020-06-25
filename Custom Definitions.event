@@ -189,6 +189,7 @@
 #define RunicBowIconID 0xAF
 #define PowerGem BlackGem
 #define SuperBlitzLance Siegmund
+#define VoidMedallion LunarBrace
 
 #define Dragonshard 0xC3
 #define DragonshardIconID 0xCB

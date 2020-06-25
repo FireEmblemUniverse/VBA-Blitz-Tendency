@@ -469,13 +469,14 @@ bad at some point or other.[X]
 Monster[X]
 
 ## descCh27GenericMonster
-A Monster.[X]
+A monster residing in the desert.[X]
 
 ## nameCh27GenericSoldier
-Soldier[X]
+Unnamed[X]
 
 ## descCh27GenericSoldier
-A Soldier.[X]
+A soldier of the Unnamed Kingdom,[N]
+under the rule of Queen Void.[X]
 
 ## nameTiki
 Tiki[X]
@@ -776,7 +777,7 @@ the final boss of Ys 1?[X]
 Ch.21 Boss[X]
 
 ## descCh21Boss
-A commander of Unnamed forces in[N]
+A commander of Spritans forces in[N]
 Blue Castle. Wants more power.[X]
 
 ## nameInferos
@@ -799,3 +800,79 @@ Ch.29 Boss[X]
 ## descCh29Boss
 Who'd be the opposite of Babby?[N]
 Boss is a mamkute, so...[X]
+
+## nameUnnamedKingdom
+Unnamed[X]
+
+## descUnnamedKingdom
+A soldier of the Unnamed Kingdom,[N]
+under the rule of Queen Void.[X]
+
+## nameBandit
+Bandit[X]
+
+## descBandit
+A bandit staking out some turf.[X]
+
+## nameDominionOfGeneral
+General[X]
+
+## descDominionOfGeneral
+A soldier of the Dominion of General,[N]
+led by the ambitious King Faust.[X]
+
+## nameDennisSoldier
+Dennis's[X]
+
+## descDennisSoldier
+A soldier under the command of[N]
+the general Dennis.[X]
+
+## nameFortOfFight
+Fighter[X]
+
+## descFortOfFight
+A member of the Fort of Fight,[N]
+itching for a brawl.[X]
+
+## nameTowerOfTheModsGuardian
+Guardian[X]
+
+## descTowerOfTheModsGuardian
+An ancient spirit guarding the[N]
+fabled Tower of the Mods.[X]
+
+## nameRepublicOfSpritans
+Spritans[X]
+
+## descRepublicOfSpritans
+A soldier of the Republic of Spritans,[N]
+renowned for its artistic culture.[X]
+
+## nameSakaguchiSoldier
+Baron[X]
+
+## descSakaguchiSoldier
+Someone from the world of Final[N]
+Fantasy. The 4th one, here.[X]
+
+## nameKojimaSoldier
+Foxhound[X]
+
+## descKojimaSoldier
+Elite soldiers from the world[N]
+of Metal Gear. Quiet and deadly.[X]
+
+## nameIgaSoldier
+T'Vania[X]
+
+## descIgaSoldier
+A monster hailing from Transylvania,[N]
+where all these vampires come from.[X]
+
+## nameInferosGeneric
+Fiend[X]
+
+## descInferosGeneric
+A deadly figure summoned by[N]
+Inferos. They only destroy.[X]
