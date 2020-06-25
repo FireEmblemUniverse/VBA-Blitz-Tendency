@@ -51,6 +51,10 @@ Jen died![A][X]
 [MR][LoadFace][Fanni][0x1]
 Fanni died![A][X]
 
+## MageAnnaDeath
+[MR][LoadFace][0x13][0x1]
+Mage Anna died![A][X]
+
 ## MuratDeath
 [MR][LoadMystery]
 Murat died![A][X]
