@@ -1,3 +1,156 @@
+## VedgeDeath
+[MR][LoadVedge]
+Vedge died![N]
+Game Over![A][X]
+
+## VergeDeath
+[MR][LoadVerge]
+Verge died![A][X]
+
+## NullDeath
+[MR][LoadNull]
+Null died![A][X]
+
+## NaughtDeath
+[MR][LoadNaught]
+Naught died![A][X]
+
+## ChivaDeath
+[MR][LoadChiva]
+Chiva died![A][X]
+
+## ThiefAnnaDeath
+[MR][LoadAwakeningAnna]
+Thief Anna died![A][X]
+
+## KeanuDeath
+[MR][LoadFace][0x9][0x1]
+Keanu died![A][X]
+
+## BooDeath
+[MR][LoadBoo]
+Boo died![A][X]
+
+## AggieDeath
+[MR][LoadFace][0xC][0x1]
+Aggie died![A][X]
+
+## XimenaDeath
+[MR][LoadXimena]
+Ximena died![A][X]
+
+## JenDeath
+[MR][LoadFace][0x10][0x1]
+Jen died![A][X]
+
+## FanniDeath
+[MR][LoadFace][Fanni][0x1]
+Fanni died![A][X]
+
+## MuratDeath
+[MR][LoadMystery]
+Murat died![A][X]
+
+## LuutDeath
+[MR][LoadFace][Luut][0x1]
+Luut died![A][X]
+
+## JetDeath
+[MR][LoadJet]
+Jet died![A][X]
+
+## MealyDeath
+[OpenMidRight][LoadMystery]
+Bury me...[N]
+in the Shrine of Meals...[A][X]
+
+## Splenda1415DQ
+[OMR][LF][SplendaPortrait]
+[OMR]No[Beat]I can't die![.4] I must[N]
+show them[Beat][CloseEyes]the way[Beat][A][X]
+
+## SplendaNormDQ
+[OMR][LF][SplendaPortrait]
+[Beat][CloseEyes]They told me that only[N]
+the good die young.[.4] Hah[Beat][A][X]
+
+## BennyDQ
+[OMR][LF][BennyPortrait]
+[OMR]Awoooo[Beat][CloseEyes][A][X]
+
+## ZaneDQ
+[OMR][LF][ZanePortrait]
+[OMR]Am I actually dead this[N]
+time?[.4] I sure hope so.[A][X]
+
+## MariyaDeathQ
+[OpenMidRight][LoadMariya]
+Everything comes to an end
+in due time...[A][X]
+
+## NicholDeath
+[MR][LoadFace][0x1E][0x01]
+Nichol died![A][X]
+
+## AdolgiDeath
+[MR][LoadFace][0x27][0x01]
+Adolgi died![A][X]
+
+## SeibahDeath
+[MR][LoadFace][0x21][0x01]
+Seibah died![A][X]
+
+## RinsletDeath
+[MR][LoadFace][0x22][0x01]
+Rinslet died![A][X]
+
+## DonnaDeath
+[MR][LoadFace][0xAF][0x01]
+Donna died![A][X]
+
+## SabinDeath
+[MR][LoadSabin]
+Sabin died![A][X]
+
+## MichealPDeathQ
+[OpenMidRight][LoadMichealP]
+AAAAAAAAAAAAAAAAAAAAAAA[N]
+AAAAAAAAAAAAAAAAAAAAAAA[N]
+AAAAAAAAAAAAAAAAAAAAAAA[N]
+AAAAAAAAAAAAAAAAAAAAAAA[N]
+AAAAAAAAAAAAAAAAAAAAAAA[N]
+AAAAAAAAAAAAAAAAAAAAAAA[N]
+AAAAAAAAAAAAAAAAAAAAAAA[N]
+AAAAAAAAAAAAAAAAAAAAAAA[A][X]
+
+## ErsatzDeath
+[MR][LoadFace][Ersatz][0x1]
+Ersatz died![A][X]
+
+## InafuneDeath
+[MR][LoadMystery]
+Inafune died![A][X]
+
+## BabbyDeath
+[MR][LoadBabby]
+Babby died![A][X]
+
+## KojimaDeath
+[MR][LoadMystery]
+Kojima died![A][X]
+
+## SakaguchiDeath
+[MR][LoadMystery]
+Sakaguchi died![A][X]
+
+## IgaDeath
+[MR][LoadIga]
+Iga died![A][X]
+
+## DeuxnidsDeath
+[MR][LoadFace][Deuxnids][0x01]
+Deuxnids died![A][X]
+
 ## VergeinCombat
 [OpenMidRight][LoadFace][Vergein][0x01]
 Hmph. Nameless Knights.[N]
@@ -45,21 +198,7 @@ This map is a NIGHTMARE!!!![AN][X]
 God dammit![.....][N]
 I have to reset again?!?![A][X]
 
-## MariyaDeathQ
-[OpenMidRight][LoadMariya]
-Everything comes to an end
-in due time...[A][X]
 
-## MichealPDeathQ
-[OpenMidRight][LoadMichealP]
-AAAAAAAAAAAAAAAAAAAAAAA[N]
-AAAAAAAAAAAAAAAAAAAAAAA[N]
-AAAAAAAAAAAAAAAAAAAAAAA[N]
-AAAAAAAAAAAAAAAAAAAAAAA[N]
-AAAAAAAAAAAAAAAAAAAAAAA[N]
-AAAAAAAAAAAAAAAAAAAAAAA[N]
-AAAAAAAAAAAAAAAAAAAAAAA[N]
-AAAAAAAAAAAAAAAAAAAAAAA[A][X]
 
 ## JazzakCombat
 [OpenMidLeft][LoadFace][Jazzak][0x01]
@@ -72,20 +211,7 @@ Now, I take back my freedom.[A][X]
 In truth, death could be seen[N]
 as a freedom of its own.[A][X]
 
-## MealyDeath
-[OpenMidRight][LoadMystery]
-Bury me...[N]
-in the Shrine of Meals...[A][X]
 
-## Splenda1415DQ
-[OMR][LF][SplendaPortrait]
-[OMR]No[Beat]I can't die![.4] I must[N]
-show them[Beat][CloseEyes]the way[Beat][A][X]
-
-## SplendaNormDQ
-[OMR][LF][SplendaPortrait]
-[Beat][CloseEyes]They told me that only[N]
-the good die young.[.4] Hah[Beat][A][X]
 
 ## WickyNormalBQ
 [OML][LF][WickyPortrait]
@@ -111,15 +237,6 @@ Now die;[.4] there's a good witch![A][X]
 [OML][LF][WickyPortrait]
 [OML]What?[.4] No![.4] I was to be[Beat]the[N]
 greatest[Beat]witch of all[Beat][CloseEyes][A][X]
-
-## BennyDQ
-[OMR][LF][BennyPortrait]
-[OMR]Awoooo[Beat][CloseEyes][A][X]
-
-## ZaneDQ
-[OMR][LF][ZanePortrait]
-[OMR]Am I actually dead this[N]
-time?[.4] I sure hope so.[A][X]
 
 ## GrudgeCombat
 [OMR][LoadGrudge]
