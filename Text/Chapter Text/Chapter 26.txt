@@ -1,5 +1,5 @@
 ## Ch26Opening1
-{OpenMidRight][LoadVedge]
+[OpenMidRight][LoadVedge]
 [OpenLeft][LoadVerge]
 Sire, there seems to be two paths.[N]
 We could take a nice relaxing[AN]
@@ -24,7 +24,7 @@ fields. It will help morale.[AN][X]
 
 ## Ch26Opening2ErsatzAlive
 #probably the only one i'll use regardless of his status, conditionals are effort
-{OpenMidRight][LoadVedge]
+[OpenMidRight][LoadVedge]
 [OpenLeft][LoadVerge]
 [OpenFarLeft][LoadFace][Ersatz][0x01]
 Milord! That pleasant meadow...[N]
@@ -62,12 +62,12 @@ through this cave![AN][X]
 
 ## Ch26Opening2ErsatzDead
 [OpenLeft][LoadVerge]
-{OpenMidRight][LoadVedge]
+[OpenMidRight][LoadVedge]
 Across the plains...[N]
 Oh no![MoveMidRight] Quicksand! Ahh![AN][X]
 
 ## Ch26Opening3
-{OpenMidRight][LoadVedge]
+[OpenMidRight][LoadVedge]
 There's something about this[N]
 cave... I just have to go[AN]
 and explore it thoroughly.[N]
@@ -78,7 +78,7 @@ right into my trap![AN][X]
 
 ## Ch26Opening4
 [MidLeft][LoadFace][Dennis][0x01]
-{LoadMidRight][LoadVedge]
+[LoadMidRight][LoadVedge]
 Dennis?! I thought you were[N]
 dead! How are you still alive?![AN]
 [MidLeft]
@@ -92,7 +92,7 @@ own, Vedge... Now meet[AN]
 my pet. Draco, come![A][X]
 
 ## Ch26Opening5
-{LoadMidRight][LoadVedge]
+[LoadMidRight][LoadVedge]
 [MidLeft][LoadFace][Dennis][0x01]
 He's hungry, you know.[N]
 That quicksand pit was my[AN]
@@ -106,7 +106,7 @@ Ahh. I'm so scared. Help.[AN]
 Hold it.[A][X]
 
 ## Ch26Opening6
-{LoadMidRight][LoadVedge]
+[LoadMidRight][LoadVedge]
 [Invert][MidLeft][LoadMystery]
 #The amount of missing portraits here is kind of astounding.
 Kehkehkeh... I am Infernos...[N]
@@ -131,7 +131,7 @@ Medallion on my side. With it,[N]
 I can shatter these walls![AN][X]
 
 ## Ch26Ending
-{LoadMidRight][LoadVedge]
+[LoadMidRight][LoadVedge]
 There's only room for one[N]
 Vedge in this town...[AN][X]
 

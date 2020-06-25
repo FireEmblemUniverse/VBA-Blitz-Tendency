@@ -65,6 +65,21 @@ and in my efforts to atone I-[A]
 Shut up, there's another rebel base[N]
 ahead we need to take.[A][X]
 
+## Prologue_House
+[ML][LoadFace][0x5C][0x01]
+[MR][LoadCurrent]
+[ML]
+I've heard that the most esoteric[N]
+scholars of the land, who study[AN]
+the mystical language of the ancients,[N]
+stay together. It's almost like some[AN]
+sort of cul... Oh, never mind me.[N]
+I mustn't spread rumors. Besides,[AN]
+it doesn't sound like the worst idea![N]
+I wouldn't mind being welcome in[AN]
+dwellings across the land here and[N]
+there based on knowledge alone...[AN][X]
+
 ## Prologue_Objective
 Seize the village held[N]
 by the Donateenaries.[X]

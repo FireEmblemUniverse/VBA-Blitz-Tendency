@@ -211,6 +211,19 @@ for our party. What say you?[A]
 [OpenMidRight]I'm hesitent, but there's[NL]
 nothing else to do, so okay.[A][X]
 
+## Ch5UnusedVillageText
+#Reword this and put it in some other chapter?
+[MR][LoadCurrent]
+[ML][LoadFace][0x5F][0x01]
+Prince Vedge has stood up in[N]
+rebellion?! This is such great[AN]
+news! Maybe now our people[N]
+have hope for a slightly less[AN]
+tyrannical ruler... Take this;[N]
+consider it a sign of my[AN]
+support for your cause.[A][X]
+
+
 ## Chapter5_Objective
 Defeat the knight[N]
 standing in your way.[X]

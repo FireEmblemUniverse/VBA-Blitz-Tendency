@@ -32,7 +32,7 @@ of obtaining the Void Medallion...[AN][X]
 ## Ch18Opening
 [MidRight][LoadVedge]
 Finally, we've entered the[n]
-Tower of the Mods...[A]
+Tower of the Mods...[AN]
 Everyone, stay sharp! Who[n]
 knows what awaits us in here?[A][X]
 

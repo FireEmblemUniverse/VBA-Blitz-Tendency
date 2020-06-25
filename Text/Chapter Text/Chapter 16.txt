@@ -185,5 +185,25 @@ without the fear of retaliation.[A]
 [OpenMidRight]
 Good plan.[.....] Let's move out then![A][X]
 
+## Ch16UnusedEnding
+[MR][LoadNull]
+[ML][LoadVedge]
+We did it.[A]
+[MR]
+Or did we?[A]
+[ML]
+What do you mean, Null?[A]
+[MR]
+The Unnamed Kingdom has sent a[N]
+large army here. If we go into[AN]
+the tower now, we will be choked[N]
+out quickly with no hope.[A]
+[ML]
+You’re right. Tell everyone to take[N]
+defensive positions in the courtyard.[AN]
+We must hold out this siege! Retreat[N]
+is not an option![A][X]
+
+
 ## Ch16Goal
  Seize Throne[X]
